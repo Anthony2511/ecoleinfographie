@@ -21,6 +21,14 @@
           <!-- ================================================ -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 
+          <!-- Item Media Manager -->
+          <li>
+            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/elfinder') }}">
+              <i class="fa fa-files-o"></i>
+              <span>Gestionnaire de médias</span>
+            </a>
+          </li>
+
 
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
