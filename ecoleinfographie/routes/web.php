@@ -11,11 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+// HomePage
+Route::get('/', ['uses' => 'PageController@home']);
+
+// Redirect slug 'accueil' to '/'
+Route::get('/accueil', function (){
+	return redirect('/');
 });
 
-
-/** CATCH-ALL ROUTE for Backpack/PageManager **/
+// Catch-all for Backpack/PageManager
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
      ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);
+
+
