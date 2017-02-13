@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>App Name - <?php echo $page->title;?></title>
+    <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
 @section('sidebar')
