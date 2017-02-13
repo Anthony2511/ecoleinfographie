@@ -29,6 +29,21 @@
             </a>
           </li>
 
+          <!-- Item LangFileManager -->
+          <li>
+            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/language') }}">
+              <i class="fa fa-flag-o"></i>
+              <span>Languages</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/language/texts') }}">
+              <i class="fa fa-language"></i>
+              <span>Gestionnaire de langues</span>
+            </a>
+          </li>
+
+
 
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
