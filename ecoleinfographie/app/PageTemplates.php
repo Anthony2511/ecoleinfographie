@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 trait PageTemplates
 {
     /*

@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+	    Spatie\Translatable\TranslatableServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -184,7 +185,8 @@ return [
 	    Backpack\CRUD\CrudServiceProvider::class,
 	    Backpack\LangFileManager\LangFileManagerServiceProvider::class,
 	    Cviebrock\EloquentSluggable\ServiceProvider::class,
-	    Backpack\PageManager\PageManagerServiceProvider::class
+	    Backpack\PageManager\PageManagerServiceProvider::class,
+	    
 
     ],
 
