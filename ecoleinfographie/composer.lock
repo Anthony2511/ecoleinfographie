@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8dbf6a7312a3390c7d3836ebe2a5a17",
+    "content-hash": "f20ffdac5333d06a04fe012219194bce",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -107,16 +107,16 @@
         },
         {
             "name": "backpack/crud",
-            "version": "3.1.60",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "f35a3520320473cf793dff5c36119e9447eae1cd"
+                "reference": "ddc5afd4da25fc992e9142a8c117b81ae936bd98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/f35a3520320473cf793dff5c36119e9447eae1cd",
-                "reference": "f35a3520320473cf793dff5c36119e9447eae1cd",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/ddc5afd4da25fc992e9142a8c117b81ae936bd98",
+                "reference": "ddc5afd4da25fc992e9142a8c117b81ae936bd98",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,7 @@
                 "read",
                 "update"
             ],
-            "time": "2017-02-13T09:06:11+00:00"
+            "time": "2017-02-13T17:48:12+00:00"
         },
         {
             "name": "backpack/langfilemanager",
