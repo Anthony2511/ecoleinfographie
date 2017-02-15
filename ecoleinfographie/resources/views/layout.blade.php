@@ -1,12 +1,9 @@
-<html>
-<head>
-    <title>App Name - <?php echo $page->title;?></title>
-    <link rel="stylesheet" href="./css/app.css">
-</head>
-<body>
-@section('sidebar')
-    This is the master sidebar.
-@show
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+@include('partials.head')
+<body class="<?php if($page){ echo $page->slug; } ;?>">
+
+@include('partials.header')
 
 <div class="container">
     @yield('content')
