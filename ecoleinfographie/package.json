@@ -17,6 +17,7 @@
     "vue": "^2.0.1"
   },
   "dependencies": {
+    "elixir-tinypng": "^1.0.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "laravel-elixir": "^6.0.0-15"
