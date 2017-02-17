@@ -1,3 +1,149 @@
 .accueil
   .header-shawl
     background-color #0A4A61
+    .menu
+      display block
+      position relative
+      list-style none
+      margin 0
+      padding 0
+      z-index 15
+      &__item
+        list-style none
+        display inline-block
+        padding 0
+        margin 0
+        &:after
+          content ''
+          display: inline-block
+          position relative
+          right: 0
+          top: 47%
+          width 1px
+          height s(12,16)
+          background-color rgba(255,255,255,0.5)
+        &:nth-child(n+5):after
+          display: none
+      &__link
+        position relative
+        display inline-block
+        padding s(10,$sz-menu) s(20,$sz-menu)
+        border 1px solid transparent
+        Catamaran($sz-menu, 16, 400, 1)
+        letter-spacing s(0.2, $sz-menu)
+        color $cWhite
+        transition .2s ease opacity
+        &:hover
+        &:focus
+          opacity 0.75
+          transition .3s ease opacity
+        &--cta
+          margin-left s(20, $sz-menu)
+          padding s(14,$sz-menu) s(32, $sz-menu) s(21,$sz-menu)
+          background-color rgba(255,255,255,0.10)
+          Catamaran($sz-menu, 16, 500, 1)
+          letter-spacing 0.3px
+          border 1px solid $cWhite
+          border-radius s(5, $sz-menu)
+
+      &__item > a:focus,
+      &__item > a.open,
+      &__item > a.open
+        z-index 1
+    .subnav
+      position: absolute;
+      display: none;
+      top: 4.6em;
+      margin-top: -1px;
+      padding s(45,16) s(50, 16)
+      border-radius 5px
+      background-color: $cWhite
+      background url("../svg/cloud.svg") no-repeat 390px 20px, url("../svg/town.svg") no-repeat left bottom, $cWhite
+      &:before
+        content ''
+        position: absolute;
+        display: block
+        width: 12px;
+        height: 12px;
+        top: -6px;
+        left: 0
+        right: 0
+        margin-left: auto
+        margin-right: auto
+        transform: rotate(45deg);
+        border-radius: 2px 0 0 0;
+        background: $cWhite;
+        box-shadow: -3px -3px 5px rgba(82,95,127,.04);
+        will-change: transform;
+        transition-property: transform;
+        transition-duration: .25s;
+      &__group
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 1em 0 0;
+        padding: 0;
+      &__li
+        position: relative
+        display: inline-block;
+        padding-right s(14, $sz-menu)
+        color $cBlueCiel
+      &__li + li
+        padding-left s(14, $sz-menu)
+      &__li:last-child .subnav__jobs__link:after
+        display: none
+      &__group
+        display: block
+        margin-bottom s(30, 16)
+        &:last-child
+          margin-bottom 0
+      &__link-wrapper
+        margin-top s(2,16)
+        clear left
+      &__jobs
+        box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+        &__job
+          &__title
+            display: inline-block
+            Catamaran($text-L,16, 500, 1.2)
+            color $cBlueWeb
+            letter-spacing .2px
+            text-transform: uppercase
+            float left
+            &:hover
+            &:focus
+              color $cBlack
+              transition .2s ease color
+            &:hover ~ img
+              filter: grayscale(100%) contrast(200%);
+              transition .2s ease filter
+            &--DG
+              color $cPinkDG
+            &--3D
+              color $cGreen3D
+
+        &__menuicon
+          position relative
+          top s(-1,16)
+          left s(15,16)
+          &--3D
+            top s(5,16)
+        &__link
+          display: inline-block
+          Catamaran(19,$sz-menu, 400, 1.2)
+          &:after
+            content ''
+            display: inline-block
+            position absolute
+            right: 0
+            top: 46%
+            width 1px
+            height 7px
+            background-color $cGrey-lineMenu
+          &:hover
+          &:focus
+            text-decoration underline
+
+    .subnav.open
+      display: block;
+
+

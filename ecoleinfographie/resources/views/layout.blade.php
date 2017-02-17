@@ -3,7 +3,7 @@
 @include('partials.head')
 <body class="<?php if($page){ echo $page->slug; } ;?>">
 
-<header class="header-shawl">
+<header class="header header-shawl">
   @include('partials.header')
 </header>
 
