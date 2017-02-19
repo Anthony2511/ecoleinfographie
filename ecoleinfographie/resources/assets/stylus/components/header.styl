@@ -38,6 +38,7 @@
       opacity 0.75
       transition .3s ease opacity
     &--cta
+      position: relative
       margin-left s(20, $sz-menu)
       padding s(14,$sz-menu) s(32, $sz-menu) s(21,$sz-menu)
       background-color rgba(255,255,255,0.10)
@@ -45,6 +46,23 @@
       letter-spacing 0.3px
       border 1px solid $cWhite
       border-radius s(5, $sz-menu)
+      &:hover
+      &:focus
+        opacity 1
+      &:before
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255,255,255,0.2);
+        content: '';
+        position: absolute;
+        z-index: -1;
+        transition .3s width;
+      &:hover:before
+      &:focus:before
+        width 100%
+
 
   &__item > a:focus,
   &__item > a.open,
