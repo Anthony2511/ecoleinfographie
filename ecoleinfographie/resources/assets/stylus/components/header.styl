@@ -96,7 +96,7 @@
     margin-top s(2,16)
     clear left
   &__jobs
-    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+    box-shadow: 0 s(50, 16) s(100, 16) rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 s(5, 16) s(15, 16) rgba(0,0,0,.1);
     &__job
       display: inline-block
       &__title
@@ -146,29 +146,34 @@
 \************************************/
 
 .subnav
-  &__jobs
-    transform translateX(-216px) translateY(-20px)  translate3D(0,0,0) scaleX(0.93) // -216px pour centrer
-    opacity 0
-    transition .2s ease all
-  &__jobs:before
-    transform translateY(8px) rotate(45deg)
+  transform translateX(s(-216, 16)) translateY(s(-20, 16))  translate3D(0,0,0) scaleX(0.93) // -216px pour centrer
+  opacity 0
+  transition .1s ease all
+  &:before
+    transform translateY(s(8, 16)) rotate(45deg)
     transition .1s .1s ease transform
-  &__jobs.open
+  &__group
+    transform translateY(s(-20, 16))
+    transition .2s ease transform
+  &.open
     visibility visible
-    transform translateX(-216px) translateY(0px) scale(1)
+    transform translateX(s(-216, 16)) translateY(0px) scale(1)
     transition .2s ease all
     opacity 1;
     transition-property transform, opacity
-  &__jobs.open:before
-    transform translateY(0) rotate(45deg)
-    transition .1s .1s ease transform
+    &:before
+      transform translateY(0) rotate(45deg)
+      transition .1s .1s ease-in transform
+  &.open .subnav__group
+    transform translateY(0) translate3D(0,0,0)
+    transition .4s ease transform
   &__jobs__cloud
     position: absolute
-    top 20px
-    right 80px
-    transform translateX(-120px)
+    top s(20, 16)
+    right s(80, 16)
+    transform translateX(s(-80, 16))
     opacity 0
-    transition .4s ease-in all
+    transition .3s ease-in all
     transition-property transform, opacity
   &__jobs.open .subnav__jobs__cloud
     transform translateX(0px)
@@ -184,10 +189,74 @@
     z-index -1
     border-radius 5px
     & svg
-      transform translateY(120px)
+      transform translateY(s(120, 16))
       transition .5s $ease-out-quart transform
   &__jobs.open .subnav__jobs__town svg
     transform translateY(10px)
     transition .5s $ease-out-quart transform
 
+
+/************************************\
+  DROPDOWN L’ECOLE
+\************************************/
+
+.subnav
+  &__school
+    padding-right s(80, 16)
+    padding-bottom 0
+    left s(211, 16)
+    border-bottom s(14, 16) inset $cBlueGreyLight
+    & a
+      Catamaran(17, 16, 500, 1.2)
+      color $cBlueCiel
+      text-transform uppercase
+      letter-spacing 0.4
+      &:hover
+      &:focus
+        color $cBlack
+    & li
+      margin-bottom s(25, 16)
+    &__cloud
+      position absolute
+      top s(26,16)
+      right s(50,16)
+      transform translateX(s(45, 16)) scale(1.4)
+    &__svg-wrapper
+      position: absolute
+      height s(80, 16)
+      bottom: 0
+      left: 0
+      right 0
+      overflow hidden
+      z-index -1
+    &__building
+      position absolute
+      bottom 0
+      z-index -1
+      left: 0
+      transform translateX(s(-40, 16))
+    &__trees1
+    &__trees2
+      position: absolute
+      bottom: 1px
+      z-index -1
+    &__trees1
+      left s(230, 16)
+      transform translateY(s(18,16)) scale(1.4)
+    &__trees2
+      left s(180,16)
+      transform translateY(s(28,16)) scale(1.4)
+  &__school.open .subnav__school__cloud
+    transform translateX(0) scale(1.4)
+    transition .4s ease-out transform
+  &__school.open .subnav__school
+    &__building
+      transform translateX(0)
+      transition .3s $ease-out-cubic transform
+    &__trees1
+      transform translateY(0px) scale(1.4)
+      transition .5s $ease-out-quint transform
+    &__trees2
+      transform translateY(-1px) scale(1.4)
+      transition .3s ease transform
 
