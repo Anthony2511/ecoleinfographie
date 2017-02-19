@@ -1,18 +1,18 @@
 /*
-Copyright © 2013 Adobe Systems Incorporated.
+ Copyright © 2013 Adobe Systems Incorporated.
 
-Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+ Licensed under the Apache License, Version 2.0 (the “License”);
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+ http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an “AS IS” BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
 
 /**
  * See <a href="http://jquery.com">http://jquery.com</a>.
@@ -289,8 +289,8 @@ limitations under the License.
                 topli = target.closest('.' + this.settings.topNavItemClass),
                 panel = target.closest('.' + this.settings.panelClass);
             if (topli.length === 1
-                    && panel.length === 0
-                    && topli.find('.' + this.settings.panelClass).length === 1) {
+                && panel.length === 0
+                && topli.find('.' + this.settings.panelClass).length === 1) {
                 if (!target.hasClass(this.settings.openClass)) {
                     event.preventDefault();
                     event.stopPropagation();
@@ -336,8 +336,8 @@ limitations under the License.
          */
         _DOMAttrModifiedHandler = function (event) {
             if (event.originalEvent.attrName === 'aria-expanded'
-                    && event.originalEvent.newValue === 'false'
-                    && $(event.target).hasClass(this.settings.openClass)) {
+                && event.originalEvent.newValue === 'false'
+                && $(event.target).hasClass(this.settings.openClass)) {
                 event.preventDefault();
                 event.stopPropagation();
                 _togglePanel.call(this, event, true);
@@ -447,176 +447,176 @@ limitations under the License.
             }
 
             switch (keycode) {
-            case Keyboard.ESCAPE:
-                _togglePanel.call(that, event, true);
-                break;
-            case Keyboard.DOWN:
-                event.preventDefault();
-                if (isTopNavItem) {
-                    _togglePanel.call(that, event);
-                    found = (topli.find('.' + settings.panelClass + ' :tabbable:first').focus().length === 1);
-                } else {
-                    found = (tabbables.filter(':gt(' + tabbables.index(target) + '):first').focus().length === 1);
-                }
-
-                if (!found && window.opera && opera.toString() === "[object Opera]" && (event.ctrlKey || event.metaKey)) {
-                    tabbables = $(':tabbable');
-                    i = tabbables.index(target);
-                    found = ($(':tabbable:gt(' + $(':tabbable').index(target) + '):first').focus().length === 1);
-                }
-                break;
-            case Keyboard.UP:
-                event.preventDefault();
-                if (isTopNavItem && target.hasClass(settings.openClass)) {
+                case Keyboard.ESCAPE:
                     _togglePanel.call(that, event, true);
-                    next = topnavitems.filter(':lt(' + topnavitems.index(topli) + '):last');
-                    if (next.children('.' + settings.panelClass).length) {
-                        found = (next.children()
-                            .attr('aria-expanded', 'true')
-                            .addClass(settings.openClass)
-                            .filter('.' + settings.panelClass)
-                            .attr('aria-hidden', 'false')
-                            .find(':tabbable:last')
-                            .focus() === 1);
-                    }
-                } else if (!isTopNavItem) {
-                    found = (tabbables.filter(':lt(' + tabbables.index(target) + '):last').focus().length === 1);
-                }
-
-                if (!found && window.opera && opera.toString() === "[object Opera]" && (event.ctrlKey || event.metaKey)) {
-                    tabbables = $(':tabbable');
-                    i = tabbables.index(target);
-                    found = ($(':tabbable:lt(' + $(':tabbable').index(target) + '):first').focus().length === 1);
-                }
-                break;
-            case Keyboard.RIGHT:
-                event.preventDefault();
-                if (isTopNavItem) {
-                    found = (topnavitems.filter(':gt(' + topnavitems.index(topli) + '):first').find(':tabbable:first').focus().length === 1);
-                } else {
-                    if (panelGroups.length && currentPanelGroup.length) {
-                        // if the current panel contains panel groups, and we are able to focus the first tabbable element of the next panel group
-                        found = (panelGroups.filter(':gt(' + panelGroups.index(currentPanelGroup) + '):first').find(':tabbable:first').focus().length === 1);
-                    }
-
-                    if (!found) {
-                        found = (topli.find(':tabbable:first').focus().length === 1);
-                    }
-                }
-                break;
-            case Keyboard.LEFT:
-                event.preventDefault();
-                if (isTopNavItem) {
-                    found = (topnavitems.filter(':lt(' + topnavitems.index(topli) + '):last').find(':tabbable:first').focus().length === 1);
-                } else {
-                    if (panelGroups.length && currentPanelGroup.length) {
-                        // if the current panel contains panel groups, and we are able to focus the first tabbable element of the previous panel group
-                        found = (panelGroups.filter(':lt(' + panelGroups.index(currentPanelGroup) + '):last').find(':tabbable:first').focus().length === 1);
-                    }
-
-                    if (!found) {
-                        found = (topli.find(':tabbable:first').focus().length === 1);
-                    }
-                }
-                break;
-            case Keyboard.TAB:
-                i = tabbables.index(target);
-                if (event.shiftKey && isTopNavItem && target.hasClass(settings.openClass)) {
-                    _togglePanel.call(that, event, true);
-                    next = topnavitems.filter(':lt(' + topnavitems.index(topli) + '):last');
-                    if (next.children('.' + settings.panelClass).length) {
-                        found = next.children()
-                            .attr('aria-expanded', 'true')
-                            .addClass(settings.openClass)
-                            .filter('.' + settings.panelClass)
-                            .attr('aria-hidden', 'false')
-                            .find(':tabbable:last')
-                            .focus();
-                    }
-                } else if (event.shiftKey && i > 0) {
-                    found = (tabbables.filter(':lt(' + i + '):last').focus().length === 1);
-                } else if (!event.shiftKey && i < tabbables.length - 1) {
-                    found = (tabbables.filter(':gt(' + i + '):first').focus().length === 1);
-                } else if (window.opera && opera.toString() === "[object Opera]") {
-                    tabbables = $(':tabbable');
-                    i = tabbables.index(target);
-                    if (event.shiftKey) {
-                        found = ($(':tabbable:lt(' + $(':tabbable').index(target) + '):last').focus().length === 1);
+                    break;
+                case Keyboard.DOWN:
+                    event.preventDefault();
+                    if (isTopNavItem) {
+                        _togglePanel.call(that, event);
+                        found = (topli.find('.' + settings.panelClass + ' :tabbable:first').focus().length === 1);
                     } else {
+                        found = (tabbables.filter(':gt(' + tabbables.index(target) + '):first').focus().length === 1);
+                    }
+
+                    if (!found && window.opera && opera.toString() === "[object Opera]" && (event.ctrlKey || event.metaKey)) {
+                        tabbables = $(':tabbable');
+                        i = tabbables.index(target);
                         found = ($(':tabbable:gt(' + $(':tabbable').index(target) + '):first').focus().length === 1);
                     }
-                }
+                    break;
+                case Keyboard.UP:
+                    event.preventDefault();
+                    if (isTopNavItem && target.hasClass(settings.openClass)) {
+                        _togglePanel.call(that, event, true);
+                        next = topnavitems.filter(':lt(' + topnavitems.index(topli) + '):last');
+                        if (next.children('.' + settings.panelClass).length) {
+                            found = (next.children()
+                                .attr('aria-expanded', 'true')
+                                .addClass(settings.openClass)
+                                .filter('.' + settings.panelClass)
+                                .attr('aria-hidden', 'false')
+                                .find(':tabbable:last')
+                                .focus() === 1);
+                        }
+                    } else if (!isTopNavItem) {
+                        found = (tabbables.filter(':lt(' + tabbables.index(target) + '):last').focus().length === 1);
+                    }
 
-                if (found) {
+                    if (!found && window.opera && opera.toString() === "[object Opera]" && (event.ctrlKey || event.metaKey)) {
+                        tabbables = $(':tabbable');
+                        i = tabbables.index(target);
+                        found = ($(':tabbable:lt(' + $(':tabbable').index(target) + '):first').focus().length === 1);
+                    }
+                    break;
+                case Keyboard.RIGHT:
                     event.preventDefault();
-                }
-                break;
-            case Keyboard.SPACE:
-                if (isTopNavItem) {
+                    if (isTopNavItem) {
+                        found = (topnavitems.filter(':gt(' + topnavitems.index(topli) + '):first').find(':tabbable:first').focus().length === 1);
+                    } else {
+                        if (panelGroups.length && currentPanelGroup.length) {
+                            // if the current panel contains panel groups, and we are able to focus the first tabbable element of the next panel group
+                            found = (panelGroups.filter(':gt(' + panelGroups.index(currentPanelGroup) + '):first').find(':tabbable:first').focus().length === 1);
+                        }
+
+                        if (!found) {
+                            found = (topli.find(':tabbable:first').focus().length === 1);
+                        }
+                    }
+                    break;
+                case Keyboard.LEFT:
                     event.preventDefault();
-                    _clickHandler.call(that, event);
-                } else {
+                    if (isTopNavItem) {
+                        found = (topnavitems.filter(':lt(' + topnavitems.index(topli) + '):last').find(':tabbable:first').focus().length === 1);
+                    } else {
+                        if (panelGroups.length && currentPanelGroup.length) {
+                            // if the current panel contains panel groups, and we are able to focus the first tabbable element of the previous panel group
+                            found = (panelGroups.filter(':lt(' + panelGroups.index(currentPanelGroup) + '):last').find(':tabbable:first').focus().length === 1);
+                        }
+
+                        if (!found) {
+                            found = (topli.find(':tabbable:first').focus().length === 1);
+                        }
+                    }
+                    break;
+                case Keyboard.TAB:
+                    i = tabbables.index(target);
+                    if (event.shiftKey && isTopNavItem && target.hasClass(settings.openClass)) {
+                        _togglePanel.call(that, event, true);
+                        next = topnavitems.filter(':lt(' + topnavitems.index(topli) + '):last');
+                        if (next.children('.' + settings.panelClass).length) {
+                            found = next.children()
+                                .attr('aria-expanded', 'true')
+                                .addClass(settings.openClass)
+                                .filter('.' + settings.panelClass)
+                                .attr('aria-hidden', 'false')
+                                .find(':tabbable:last')
+                                .focus();
+                        }
+                    } else if (event.shiftKey && i > 0) {
+                        found = (tabbables.filter(':lt(' + i + '):last').focus().length === 1);
+                    } else if (!event.shiftKey && i < tabbables.length - 1) {
+                        found = (tabbables.filter(':gt(' + i + '):first').focus().length === 1);
+                    } else if (window.opera && opera.toString() === "[object Opera]") {
+                        tabbables = $(':tabbable');
+                        i = tabbables.index(target);
+                        if (event.shiftKey) {
+                            found = ($(':tabbable:lt(' + $(':tabbable').index(target) + '):last').focus().length === 1);
+                        } else {
+                            found = ($(':tabbable:gt(' + $(':tabbable').index(target) + '):first').focus().length === 1);
+                        }
+                    }
+
+                    if (found) {
+                        event.preventDefault();
+                    }
+                    break;
+                case Keyboard.SPACE:
+                    if (isTopNavItem) {
+                        event.preventDefault();
+                        _clickHandler.call(that, event);
+                    } else {
+                        return true;
+                    }
+                    break;
+                case Keyboard.ENTER:
                     return true;
-                }
-                break;
-            case Keyboard.ENTER:
-                return true;
-                break;
-            default:
-                // alphanumeric filter
-                clearTimeout(this.keydownTimeoutID);
+                    break;
+                default:
+                    // alphanumeric filter
+                    clearTimeout(this.keydownTimeoutID);
 
-                keydownSearchString += newString !== keydownSearchString ? newString : '';
+                    keydownSearchString += newString !== keydownSearchString ? newString : '';
 
-                if (keydownSearchString.length === 0) {
-                    return;
-                }
-
-                this.keydownTimeoutID = setTimeout(function () {
-                    keydownSearchString = '';
-                }, keydownTimeoutDuration);
-
-                if (isTopNavItem && !target.hasClass(settings.openClass)) {
-                    tabbables = tabbables.filter(':not(.' + settings.panelClass + ' :tabbable)');
-                } else {
-                    tabbables = topli.find(':tabbable');
-                }
-
-                if (event.shiftKey) {
-                    tabbables = $(tabbables.get()
-                        .reverse());
-                }
-
-                for (i = 0; i < tabbables.length; i++) {
-                    o = tabbables.eq(i);
-                    if (o.is(target)) {
-                        start = (keydownSearchString.length === 1) ? i + 1 : i;
-                        break;
+                    if (keydownSearchString.length === 0) {
+                        return;
                     }
-                }
 
-                regex = new RegExp('^' + keydownSearchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&'), 'i');
+                    this.keydownTimeoutID = setTimeout(function () {
+                        keydownSearchString = '';
+                    }, keydownTimeoutDuration);
 
-                for (i = start; i < tabbables.length; i++) {
-                    o = tabbables.eq(i);
-                    label = $.trim(o.text());
-                    if (regex.test(label)) {
-                        found = true;
-                        o.focus();
-                        break;
+                    if (isTopNavItem && !target.hasClass(settings.openClass)) {
+                        tabbables = tabbables.filter(':not(.' + settings.panelClass + ' :tabbable)');
+                    } else {
+                        tabbables = topli.find(':tabbable');
                     }
-                }
-                if (!found) {
-                    for (i = 0; i < start; i++) {
+
+                    if (event.shiftKey) {
+                        tabbables = $(tabbables.get()
+                            .reverse());
+                    }
+
+                    for (i = 0; i < tabbables.length; i++) {
+                        o = tabbables.eq(i);
+                        if (o.is(target)) {
+                            start = (keydownSearchString.length === 1) ? i + 1 : i;
+                            break;
+                        }
+                    }
+
+                    regex = new RegExp('^' + keydownSearchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&'), 'i');
+
+                    for (i = start; i < tabbables.length; i++) {
                         o = tabbables.eq(i);
                         label = $.trim(o.text());
                         if (regex.test(label)) {
+                            found = true;
                             o.focus();
                             break;
                         }
                     }
-                }
-                break;
+                    if (!found) {
+                        for (i = 0; i < start; i++) {
+                            o = tabbables.eq(i);
+                            label = $.trim(o.text());
+                            if (regex.test(label)) {
+                                o.focus();
+                                break;
+                            }
+                        }
+                    }
+                    break;
             }
             that.justFocused = false;
         };
@@ -687,7 +687,7 @@ limitations under the License.
                 $('html').on('mouseup.outside-accessible-megamenu, touchend.outside-accessible-megamenu, mspointerup.outside-accessible-megamenu,  pointerup.outside-accessible-megamenu', $.proxy(_clickOutsideHandler, this));
 
                 /* Narrator in Windows 8 automatically toggles the aria-expanded property on double tap or click.
-                   To respond to the change to collapse the panel, we must add a listener for a DOMAttrModified event. */
+                 To respond to the change to collapse the panel, we must add a listener for a DOMAttrModified event. */
                 menu.find('[aria-expanded=true].' + this.settings.panelClass).on('DOMAttrModified.accessible-megamenu', $.proxy(_DOMAttrModifiedHandler, this));
             }
         };
@@ -705,7 +705,8 @@ limitations under the License.
             init: function () {
                 var settings = this.settings,
                     nav = $(this.element),
-                    menu = nav.children().first(),
+                    /*menu = nav.children().first(),*/
+                    menu = nav.children('ul'), // Modification perso
                     topnavitems = menu.children();
                 this.start(settings, nav, menu, topnavitems);
             },
@@ -760,7 +761,7 @@ limitations under the License.
                 menu.find("hr").attr("role", "separator");
 
                 if ($(document.activeElement).closest(menu).length) {
-                  $(document.activeElement).trigger("focusin.accessible-megamenu");
+                    $(document.activeElement).trigger("focusin.accessible-megamenu");
                 }
             },
 
@@ -817,7 +818,7 @@ limitations under the License.
     }());
 
     /* lightweight plugin wrapper around the constructor,
-       to prevent against multiple instantiations */
+     to prevent against multiple instantiations */
 
     /**
      * @class accessibleMegaMenu
@@ -829,55 +830,55 @@ limitations under the License.
      * <h3>Screen Reader Accessibility</h3>
      * <p>The accessible mega menu models its use of WAI-ARIA Roles, States, and Properties after those described in the {@link http://www.w3.org/TR/wai-aria-practices/#menu|WAI-ARIA Menu or Menu bar (widget) design pattern} with some notable exceptions, so that it behaves better with screen reader user expectations for global navigation. We don't use <code class="prettyprint prettyprinted" style=""><span class="pln">role</span><span class="pun">=</span><span class="str">"menu"</span></code> for the menu container and <code class="prettyprint prettyprinted" style=""><span class="pln">role</span><span class="pun">=</span><span class="str">"menuitem"</span></code> for each of the links therein, because if we do, assistive technology will no longer interpret the links as links, but instead, as menu items, and the links in our global navigation will no longer show up when a screen reader user executes a shortcut command to bring up a list of links in the page.</p>
      * @example <h4>HTML</h4><hr/>
-&lt;nav&gt;
-    &lt;ul class=&quot;nav-menu&quot;&gt;
-        &lt;li class=&quot;nav-item&quot;&gt;
-            &lt;a href=&quot;?movie&quot;&gt;Movies&lt;/a&gt;
-            &lt;div class=&quot;sub-nav&quot;&gt;
-                &lt;ul class=&quot;sub-nav-group&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=0&quot;&gt;Action &amp;amp; Adventure&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=2&quot;&gt;Children &amp;amp; Family&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&amp;#8230;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;ul class=&quot;sub-nav-group&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=7&quot;&gt;Dramas&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=9&quot;&gt;Foreign&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&amp;#8230;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;ul class=&quot;sub-nav-group&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=14&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=15&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&amp;#8230;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;nav-item&quot;&gt;
-            &lt;a href=&quot;?tv&quot;&gt;TV Shows&lt;/a&gt;
-            &lt;div class=&quot;sub-nav&quot;&gt;
-                &lt;ul class=&quot;sub-nav-group&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=20&quot;&gt;Classic TV&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=21&quot;&gt;Crime TV&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&amp;#8230;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;ul class=&quot;sub-nav-group&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=27&quot;&gt;Reality TV&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=30&quot;&gt;TV Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&amp;#8230;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;ul class=&quot;sub-nav-group&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=33&quot;&gt;TV Dramas&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=34&quot;&gt;TV Horror&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&amp;#8230;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;
+     &lt;nav&gt;
+     &lt;ul class=&quot;nav-menu&quot;&gt;
+     &lt;li class=&quot;nav-item&quot;&gt;
+     &lt;a href=&quot;?movie&quot;&gt;Movies&lt;/a&gt;
+     &lt;div class=&quot;sub-nav&quot;&gt;
+     &lt;ul class=&quot;sub-nav-group&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=0&quot;&gt;Action &amp;amp; Adventure&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=2&quot;&gt;Children &amp;amp; Family&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&amp;#8230;&lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;ul class=&quot;sub-nav-group&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=7&quot;&gt;Dramas&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=9&quot;&gt;Foreign&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&amp;#8230;&lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;ul class=&quot;sub-nav-group&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=14&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;?movie&amp;genre=15&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&amp;#8230;&lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;/div&gt;
+     &lt;/li&gt;
+     &lt;li class=&quot;nav-item&quot;&gt;
+     &lt;a href=&quot;?tv&quot;&gt;TV Shows&lt;/a&gt;
+     &lt;div class=&quot;sub-nav&quot;&gt;
+     &lt;ul class=&quot;sub-nav-group&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=20&quot;&gt;Classic TV&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=21&quot;&gt;Crime TV&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&amp;#8230;&lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;ul class=&quot;sub-nav-group&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=27&quot;&gt;Reality TV&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=30&quot;&gt;TV Action&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&amp;#8230;&lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;ul class=&quot;sub-nav-group&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=33&quot;&gt;TV Dramas&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;?tv&amp;genre=34&quot;&gt;TV Horror&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&amp;#8230;&lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;/div&gt;
+     &lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;/nav&gt;
      * @example <h4>CSS</h4><hr/>
-&#47;* Rudimentary mega menu CSS for demonstration *&#47;
+     &#47;* Rudimentary mega menu CSS for demonstration *&#47;
 
-&#47;* mega menu list *&#47;
-.nav-menu {
+     &#47;* mega menu list *&#47;
+     .nav-menu {
     display: block;
     position: relative;
     list-style: none;
@@ -886,16 +887,16 @@ limitations under the License.
     z-index: 15;
 }
 
-&#47;* a top level navigation item in the mega menu *&#47;
-.nav-item {
+     &#47;* a top level navigation item in the mega menu *&#47;
+     .nav-item {
     list-style: none;
     display: inline-block;
     padding: 0;
     margin: 0;
 }
 
-&#47;* first descendant link within a top level navigation item *&#47;
-.nav-item &gt; a {
+     &#47;* first descendant link within a top level navigation item *&#47;
+     .nav-item &gt; a {
     position: relative;
     display: inline-block;
     padding: 0.5em 1em;
@@ -903,23 +904,23 @@ limitations under the License.
     border: 1px solid transparent;
 }
 
-&#47;* focus/open states of first descendant link within a top level
-   navigation item *&#47;
-.nav-item &gt; a:focus,
-.nav-item &gt; a.open {
+     &#47;* focus/open states of first descendant link within a top level
+     navigation item *&#47;
+     .nav-item &gt; a:focus,
+     .nav-item &gt; a.open {
     border: 1px solid #dedede;
 }
 
-&#47;* open state of first descendant link within a top level
-   navigation item *&#47;
-.nav-item &gt; a.open {
+     &#47;* open state of first descendant link within a top level
+     navigation item *&#47;
+     .nav-item &gt; a.open {
     background-color: #fff;
     border-bottom: none;
     z-index: 1;
 }
 
-&#47;* sub-navigation panel *&#47;
-.sub-nav {
+     &#47;* sub-navigation panel *&#47;
+     .sub-nav {
     position: absolute;
     display: none;
     top: 2.2em;
@@ -929,36 +930,36 @@ limitations under the License.
     background-color: #fff;
 }
 
-&#47;* sub-navigation panel open state *&#47;
-.sub-nav.open {
+     &#47;* sub-navigation panel open state *&#47;
+     .sub-nav.open {
     display: block;
 }
 
-&#47;* list of items within sub-navigation panel *&#47;
-.sub-nav ul {
+     &#47;* list of items within sub-navigation panel *&#47;
+     .sub-nav ul {
     display: inline-block;
     vertical-align: top;
     margin: 0 1em 0 0;
     padding: 0;
 }
 
-&#47;* list item within sub-navigation panel *&#47;
-.sub-nav li {
+     &#47;* list item within sub-navigation panel *&#47;
+     .sub-nav li {
     display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
      * @example <h4>JavaScript</h4><hr/>
-&lt;!-- include jquery --&gt;
-&lt;script src=&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
+     &lt;!-- include jquery --&gt;
+     &lt;script src=&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;!-- include the jquery-accessibleMegaMenu plugin script --&gt;
-&lt;script src=&quot;js/jquery-accessibleMegaMenu.js&quot;&gt;&lt;/script&gt;
+     &lt;!-- include the jquery-accessibleMegaMenu plugin script --&gt;
+     &lt;script src=&quot;js/jquery-accessibleMegaMenu.js&quot;&gt;&lt;/script&gt;
 
-&lt;!-- initialize a selector as an accessibleMegaMenu --&gt;
-&lt;script&gt;
-    $(&quot;nav:first&quot;).accessibleMegaMenu({
+     &lt;!-- initialize a selector as an accessibleMegaMenu --&gt;
+     &lt;script&gt;
+     $(&quot;nav:first&quot;).accessibleMegaMenu({
         &#47;* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby *&#47;
         uuidPrefix: &quot;accessible-megamenu&quot;,
 
@@ -983,7 +984,7 @@ limitations under the License.
         &#47;* css class for the open state *&#47;
         openClass: &quot;open&quot;
     });
-&lt;/script&gt;
+     &lt;/script&gt;
      * @param {object} [options] Mega Menu options
      * @param {string} [options.uuidPrefix=accessible-megamenu] - Prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby
      * @param {string} [options.menuClass=accessible-megamenu] - CSS class used to define the megamenu styling
@@ -1005,15 +1006,15 @@ limitations under the License.
     $.fn[pluginName].AccessibleMegaMenu = AccessibleMegaMenu;
 
     /* :focusable and :tabbable selectors from
-       https://raw.github.com/jquery/jquery-ui/master/ui/jquery.ui.core.js */
+     https://raw.github.com/jquery/jquery-ui/master/ui/jquery.ui.core.js */
 
     /**
      * @private
      */
     function visible(element) {
         return $.expr.filters.visible(element) && !$(element).parents().addBack().filter(function () {
-            return $.css(this, "visibility") === "hidden";
-        }).length;
+                return $.css(this, "visibility") === "hidden";
+            }).length;
     }
 
     /**
@@ -1033,10 +1034,10 @@ limitations under the License.
         }
         return (/input|select|textarea|button|object/.test(nodeName) ? !element.disabled :
                 "a" === nodeName ?
-                        element.href || isTabIndexNotNaN :
-                        isTabIndexNotNaN) &&
-                            // the element and all of its ancestors must be visible
-                            visible(element);
+                element.href || isTabIndexNotNaN :
+                    isTabIndexNotNaN) &&
+            // the element and all of its ancestors must be visible
+            visible(element);
     }
 
     $.extend($.expr[":"], {
@@ -1045,9 +1046,9 @@ limitations under the License.
                 return !!$.data(elem, dataName);
             };
         }) : // support: jQuery <1.8
-                function (elem, i, match) {
-                    return !!$.data(elem, match[3]);
-                },
+            function (elem, i, match) {
+                return !!$.data(elem, match[3]);
+            },
 
         focusable: function (element) {
             return focusable(element, !isNaN($.attr(element, "tabindex")));

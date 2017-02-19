@@ -3,7 +3,7 @@
 @include('partials.head')
 <body class="<?php if($page){ echo $page->slug; } ;?>">
 
-<header class="header header-shawl">
+<header class="header header-shawl" role="banner">
   @include('partials.header')
 </header>
 
@@ -17,5 +17,6 @@
 </script>
 <script src="./js/jquery-accessibleMegaMenu.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/modernizr.js"></script>
 </body>
 </html>
