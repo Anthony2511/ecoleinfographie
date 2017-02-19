@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Nos-diplômés" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1002.000000, -881.000000)" id="choice-option" fill="#69788C">
+            <g transform="translate(430.000000, 864.000000)">
+                <g id="year" transform="translate(504.000000, 7.000000)">
+                    <g id="select-arrows.1" transform="translate(68.000000, 10.000000)">
+                        <g id="Select_arrows">
+                            <path d="M4,0 L0,5.44444444 L8,5.44444444 L4,0 Z M4,14 L8,8.55555556 L0,8.55555556 L4,14 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -87,6 +87,8 @@
     padding-left s(14, $sz-menu)
   &__li:last-child .subnav__jobs__link:after
     display: none
+  &__li span
+    hidden()
   &__group
     display: block
     margin-bottom s(30, 16)
@@ -197,12 +199,12 @@
 
 
 /************************************\
-  DROPDOWN L’ECOLE
+  DROPDOWN L’ECOLE & ANIMATION
 \************************************/
 
 .subnav
   &__school
-    padding-right s(80, 16)
+    padding-right s(60, 16)
     padding-bottom 0
     left s(211, 16)
     border-bottom s(14, 16) inset $cBlueGreyLight
@@ -210,10 +212,21 @@
       Catamaran(17, 16, 500, 1.2)
       color $cBlueCiel
       text-transform uppercase
-      letter-spacing 0.4
+      letter-spacing 0.4px
+      &:after
+        display: inline-block
+        icon('arrow-right')
+        font-size s(13, 17)
+        transform translateX(8px)
+        transition .2s ease transform
       &:hover
       &:focus
         color $cBlack
+      &:hover:after
+      &:focus:after
+        transform translateX(12px)
+        transition .3s ease transform
+
     & li
       margin-bottom s(25, 16)
     &__cloud

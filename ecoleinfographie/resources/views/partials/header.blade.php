@@ -16,13 +16,13 @@
                         </li>
                         <div class="subnav__link-wrapper">
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">La formation</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en web</span></a>
                             </li>
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">Le programme</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en web</span></a>
                             </li>
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">Les anciens</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en web</span></a>
                             </li>
                         </div>
                     </ul>
@@ -39,13 +39,13 @@
                         </li>
                         <div class="subnav__link-wrapper">
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">La formation</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en design graphique</span></a>
                             </li>
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">Le programme</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en design graphique</span></a>
                             </li>
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">Les anciens</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en design graphique</span></a>
                             </li>
                         </div>
                     </ul>
@@ -62,13 +62,13 @@
                         </li>
                         <div class="subnav__link-wrapper">
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">La formation</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en 3D et audiovisuel</span></a>
                             </li>
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">Le programme</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme<span> en 3D et audiovisuel</span></a>
                             </li>
                             <li class="subnav__li">
-                                <a href="" class="subnav__jobs__link">Les anciens</a>
+                                <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens<span> en 3D et audiovisuel</span></a>
                             </li>
                         </div>
                     </ul>
@@ -123,9 +123,6 @@
                             </g>
                         </svg>
                     </div>
-
-
-
                 </div>
             </li>
             <li class="menu__item">

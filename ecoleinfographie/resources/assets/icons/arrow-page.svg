@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Articles-blog/tuto" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-877.000000, -3142.000000)" id="pagination" fill="#808080">
+            <g transform="translate(531.000000, 3126.852500)">
+                <g id="prec-copy" transform="translate(276.000000, 0.000000)">
+                    <g id="right-arrow" transform="translate(70.000000, 15.000000)">
+                        <g id="Capa_1">
+                            <path d="M11.0729806,0.758959078 C10.8120463,0.489390452 10.377764,0.489390452 10.1077062,0.758959078 C9.84677189,1.01942066 9.84677189,1.45291615 10.1077062,1.71277059 L15.0022008,6.59839837 L0.675752892,6.59839837 C0.299253306,6.59900551 1.77635684e-14,6.89771669 1.77635684e-14,7.27353421 C1.77635684e-14,7.64935173 0.299253306,7.9577771 0.675752892,7.9577771 L15.0022008,7.9577771 L10.1077062,12.8342978 C9.84677189,13.1038665 9.84677189,13.5379691 10.1077062,13.7978235 C10.377764,14.0673922 10.8126545,14.0673922 11.0729806,13.7978235 L17.1261694,7.75560063 C17.3962272,7.49513905 17.3962272,7.06164356 17.1261694,6.80178912 L11.0729806,0.758959078 Z" id="Shape" transform="translate(8.664356, 7.278391) scale(-1, 1) rotate(-180.000000) translate(-8.664356, -7.278391) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
