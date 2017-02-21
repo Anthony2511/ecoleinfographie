@@ -1,0 +1,41 @@
+.intro
+  box-sizing content-box
+  padding s(150, 16) s($paddingSideGlobal, 16) 0
+  clearfix(both)
+  &__content
+    float left
+    width col(5, $ws_iGridzColumns) + gutter(12)
+    clearfix(both)
+  &__title
+    max-width s(375, $text-bigTitleHome)
+    margin-bottom s(30, $text-bigTitleHome)
+    Catamaran($text-bigTitleHome, 16, 700, 1.1)
+    color $cBlueTitles
+    letter-spacing 1.25px
+  &__text
+    margin-bottom s(50, 16)
+    Catamaran($text-L, 16, 400, 1.6)
+  &__link
+    display: inline-block
+    margin-bottom s(16, $text-L)
+    Catamaran($text-L, 16, 600, 1.2)
+    color $cBlueCiel
+    letter-spacing 0.3px
+    transition .2s ease color
+    &:after
+      icon('arrow-right')
+      display inline-block
+      font-size s(12, $text-L)
+      margin-left  s(10, 12)
+      transition .2s ease transform
+    &:hover
+      color $cBlack
+      transition .3s ease color
+    &:hover:after
+      transform translateX(s(4, 12))
+      transition .3s ease transform
+
+  &__img
+    float right
+    max-width 100%
+    height auto

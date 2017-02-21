@@ -1,0 +1,18 @@
+linkArrowLarge()
+  display: inline-block
+  Catamaran($text-L, 16, 600, 1.2)
+  color $cBlueCiel
+  letter-spacing 0.3px
+  transition .2s ease color
+  &:after
+    icon('arrow-right')
+    display inline-block
+    font-size s(12, $text-L)
+    margin-left  s(10, 12)
+    transition .2s ease transform
+  &:hover
+    color $cBlack
+    transition .3s ease color
+  &:hover:after
+    transform translateX(s(4, 12))
+    transition .3s ease transform

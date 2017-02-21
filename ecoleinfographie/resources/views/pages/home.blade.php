@@ -12,14 +12,14 @@
                     <a href="#" class="intro__link">La formation en web</a>
                 </li>
                 <li class="intro__item">
-                    <a href="#" class="intro__link">La formation en web</a>
+                    <a href="#" class="intro__link">La formation en design graphique</a>
                 </li>
                 <li class="intro__item">
-                    <a href="#" class="intro__link">La formation en web</a>
+                    <a href="#" class="intro__link">La formation en 3D et audiovisuel</a>
                 </li>
             </ul>
         </div>
-        <img src="../img/image-infographiste.jpg" alt="#" class="intro__img">
+        <img class="intro__img" src="../img/image-infographiste.jpg" width="570" height="612" alt="Une homme à lunettes assis sur son bureau qui est entrain de lire une feuille qu’il tient dans sa main gauche en étant face à son ordinateur">
     </section>
     <section class="location">
         <h2 aria-level="2" role="heading" class="location__title">Notre Situation</h2>
