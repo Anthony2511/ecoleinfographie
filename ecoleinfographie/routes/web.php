@@ -16,7 +16,7 @@
 Route::get('/', ['uses' => 'PageController@home']);
 
 // Redirect slug 'accueil' to '/'
-Route::get('/accueil', function (){
+Route::get('/home', function (){
 	return redirect('/');
 });
 

@@ -18,7 +18,7 @@ class PageController extends Controller
 	
 	public function home()
 	{
-		$page = Page::findBySlug('accueil');
+		$page = Page::findBySlug('home');
 		if (!$page)
 		{
 			abort(404, 'Please go back to our <a href="'.url('').'">homepage</a>.');
