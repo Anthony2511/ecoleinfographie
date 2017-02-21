@@ -1,0 +1,18 @@
+body
+  overflow hidden
+
+.container
+  position: relative
+  background-color $cWhite
+  z-index 1
+  &:before
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: skewY(4deg);
+    transform-origin: 100% 0;
+    bottom: -300%;
+    background-color: $cWhite
+    z-index -1
