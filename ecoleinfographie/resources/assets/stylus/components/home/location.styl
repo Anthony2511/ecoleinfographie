@@ -35,6 +35,14 @@
   &__mail
     Catamaran($text-L, 16, 400, 1.6)
     color $cWhite
+    transition .2s ease opacity
+  &__link
+  &__tel
+  &__mail
+    &:hover
+    &:focus
+      transition .3s ease opacity
+      opacity 0.6
   &__address-wrapper
     float: left
     margin-left s(159, $text-L)
