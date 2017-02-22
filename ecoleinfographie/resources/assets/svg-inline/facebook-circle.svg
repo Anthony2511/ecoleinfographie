@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
+    <circle stroke="#FFF" stroke-width="2" fill="none" cx="17.5" cy="17.5" r="15.5"/>
+    <circle class="circle-hover" fill="#FFF" cy=".01" r=".5" transform="translate(17.5 17.5)"/>
+    <path fill="#FFF" d="M21 12.6h-2.3c-.26 0-.56.38-.56.87v1.72H21l-.43 2.43h-2.43V25h-2.7v-7.36H13V15.2h2.45v-1.45c0-2.07 1.37-3.75 3.26-3.75H21v2.6zm0 0"/>
+</svg>
