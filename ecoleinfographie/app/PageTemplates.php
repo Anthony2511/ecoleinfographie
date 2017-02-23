@@ -55,8 +55,13 @@ trait PageTemplates
         $this->crud->addField([
                         'name' => 'content',
                         'label' => 'Content',
-                        'type' => 'wysiwyg',
+                        'type' => 'simplemde',
                         'placeholder' => 'Your content here',
+                    ]);
+        $this->crud->addField([
+                        'name' => 'Ceci est un test',
+                        'label' => 'extras',
+                        'type' => 'ckeditor',
                     ]);
 	    $this->crud->addField([
 		    'name' => 'description',
