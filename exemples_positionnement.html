@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Paparazzimg</title>
+    <style>
+    html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding; 0;
+    }
+    .location{
+        margin-top: 100px;
+        position: relative;
+        z-index: 5;
+    }
+    .wrapper{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .container{
+        margin-left: 20%;
+        background: #ededed;
+        padding: 50px 0;
+    }
+    .container:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        z-index: -1;
+        background: #ededed;
+    }
+    .container:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 700px;
+        left: 50%;
+        background: #999999;
+    }
+    .inner{
+        position: relative;
+        z-index: 5;
+    }
+
+
+    .lol{
+        margin-top: 100px;
+        overflow: hidden;
+    }
+    .lol .container{
+        background: transparent;
+        position: relative;
+    }
+
+    .lol .container:before{
+        left: 0;
+        right: -99999%;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="location">
+        <div class="wrapper">
+            <div class="container">
+                <div class="inner">
+                    <h1>Un super titre</h1>
+                    <p>Mon super contenu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lol">
+        <div class="wrapper">
+            <div class="container">
+                <h1>Un super titre</h1>
+                <p>Mon super contenu</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

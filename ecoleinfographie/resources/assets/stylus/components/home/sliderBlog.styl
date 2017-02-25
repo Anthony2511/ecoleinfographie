@@ -1,0 +1,68 @@
+.home
+  .sliderBlog
+    &-section
+      &__title
+        margin-bottom s(100)
+        text-align center
+      &__title--hidden
+        hidden()
+      &__title--display
+        position: relative
+        display: inline-block
+        Catamaran($text-XXXL, 16, 700, 1)
+        color $cBlueTitles
+        &::first-letter
+          text-transform: uppercase
+        &:before
+          content ""
+          position: absolute
+          left s(-55, $text-XXXL)
+          top s(-20, $text-XXXL)
+          display inline-block
+          width s(178, $text-XXXL)
+          height s(94, $text-XXXL)
+          border 5px solid $cGreyLight
+          z-index -1
+
+.sliderBlog
+  position: relative
+  max-width col(10,12) + gutter(12) + gutter(12)
+  margin 0 auto
+  clearfix()
+  background-color $cWhite
+  box-shadow 0 0 2px 0 rgba(169,169,169,0.50);
+  margin-bottom 200px
+  &-wrapper
+    containerGridz()
+  &__imgWrapper
+    position: absolute
+    float: left
+    top 0
+    width 50%
+    height 100%
+    background-position center center
+    background-size cover
+    &__img
+      display: block
+  &__contentWrapper
+    float: right
+    max-width 50%
+    height: 100%
+    padding s(50) s(65)
+  &__category
+    CategoryStyle()
+    background-color $cBlueWeb
+    margin-bottom s(40)
+  &__title
+    Catamaran($text-XXL, 16, 700, 1.2)
+    color $cBlueTitles
+    letter-spacing 0.75px
+    margin-bottom s(33, $text-XXL)
+  &__excerpt
+    Catamaran($text-L, 16, 400, 1.6)
+  &__link
+    position: absolute;
+    cover()
+    text-indent: -9999px;
+    z-index: 13;
+
