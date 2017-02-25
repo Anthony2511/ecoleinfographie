@@ -18,5 +18,6 @@
 <script src="./js/jquery-accessibleMegaMenu.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/modernizr.js"></script>
+<script src="./js/sliderBlog.js"></script>
 </body>
 </html>

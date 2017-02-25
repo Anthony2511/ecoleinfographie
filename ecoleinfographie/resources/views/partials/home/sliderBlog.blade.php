@@ -18,15 +18,23 @@
             <a href="#" class="sliderBlog__link">Retrouvez l’article</a>
         </article>
     </div>
-    <div class="sliderBlog__dots">
-        <button class="sliderBlog__dot">
-            <span>Voir l’article #1</span>
-        </button>
-        <button class="sliderBlog__dot">
-            <span>Voir l’article #2</span>
-        </button>
-        <button class="sliderBlog__dot">
-            <span>Voir l’article #3</span>
-        </button>
+    <div class="sliderBlog__dots-wrapper">
+        <ul class="sliderBlog__dots-list">
+            <li class="sliderBlog__dots-item">
+                <button class="sliderBlog__dots-item__dot">
+                    <span>Voir l’article #1</span>
+                </button>
+            </li>
+            <li class="sliderBlog__dots-item">
+                <button class="sliderBlog__dots-item__dot">
+                    <span>Voir l’article #2</span>
+                </button>
+            </li>
+            <li class="sliderBlog__dots-item">
+                <button class="sliderBlog__dots-item__dot">
+                    <span>Voir l’article #3</span>
+                </button>
+            </li>
+        </ul>
     </div>
 </section>
