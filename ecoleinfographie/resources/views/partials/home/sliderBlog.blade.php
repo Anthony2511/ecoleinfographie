@@ -3,6 +3,14 @@
         <span class="sliderBlog-section__title--hidden">Les derniers articles de </span>
         <span class="sliderBlog-section__title--display">notre blog</span>
     </h2>
+    <div class="sliderBlog__buttons">
+        <button class="sliderBlog__right">
+            <span>Article précédent</span>
+        </button>
+        <button class="sliderBlog__left">
+            <span>Article précédent</span>
+        </button>
+    </div>
     <div class="sliderBlog-wrapper">
         <ul class="sliderBlog-list">
             <li class="sliderBlog-item sliderBlog-item--1">
@@ -67,9 +75,5 @@
                 </button>
             </li>
         </ul>
-    </div>
-    <div>
-        <button class="left">Slide précédente</button>
-        <button class="right">Slide suivante</button>
     </div>
 </section>

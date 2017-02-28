@@ -2,6 +2,7 @@
   .sliderBlog
     &-section
       containerGridz()
+      position: relative
       &__title
         margin-bottom s(100)
         text-align center
@@ -116,10 +117,11 @@
 .home
   .sliderBlog-wrapper
     position: relative
-    min-height 599px
+    min-height s(481)
     max-width col(10,12) + gutter(12) + gutter(12)
     margin: 0 auto
     overflow hidden
+    margin-bottom s(40)
   .sliderBlog-list
     position: absolute
     top: 0
@@ -138,9 +140,64 @@
     transform translateX(200%)
 
 
+// Buttons left and right
+  .sliderBlog
+    &__buttons
+      position: absolute
+      display: inline-block
+      right: s(18)
+      z-index 2
+    &__left
+    &__right
+      position: relative
+      display: block
+      width s(45)
+      height s(45)
+      border-radius 50%
+      border 2px solid rgba($cBlueCiel, .5)
+      overflow hidden
+      cursor pointer
+      transition .3s ease border
+      &:focus
+      &:hover
+        outline 0
+        border 2px solid rgba($cBlueCiel, 1)
+        background-color $cBlueCiel
+        transition .3s ease all
+        transition-property background-color, border
+      & span
+        hidden()
+    &__right
+      margin-bottom s(10)
+    &__left:before
+      icon('arrow-left')
+    &__right:before
+      icon('arrow-right')
+    &__left:before
+    &__right:before
+      color $cBlueCiel
+      transition .2s ease color
+    &__left:hover:before
+    &__left:focus:before
+    &__right:hover:before
+    &__right:focus:before
+      color $cWhite
+      transition .3s ease color
 
-
-
-
-
+// No-js
+.no-js
+  .home
+    .sliderBlog
+      &-section
+        clearfix()
+      &-wrapper
+        overflow: visible
+        min-height s(1530)
+      &-item
+        position: static
+        transform none
+      &__buttons
+        display: none
+      &__dots-wrapper
+        display: none
 
