@@ -3,6 +3,7 @@
     &-section
       containerGridz()
       position: relative
+      z-index 10
       &__title
         margin-bottom s(100)
         text-align center
@@ -70,7 +71,7 @@
   .sliderBlog
     &__dots-wrapper
       text-align: center
-      margin-bottom 100px
+      margin-bottom s(-200)
     &__dots-list
       position: relative
       display inline-block
@@ -184,7 +185,9 @@
       color $cWhite
       transition .3s ease color
 
-// No-js
+/************************************\
+		NO-JS
+\************************************/
 .no-js
   .home
     .sliderBlog
