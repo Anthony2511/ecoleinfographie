@@ -2,11 +2,15 @@
   .portfolio-home
     position: relative
     &__intro
-      position: relative
       baseShawl($cBackgroundBlueGrey, 4.5deg)
       padding-top s(350)
+      &:before
+        bottom 0
       &__wrapper
         containerGridz()
+        position: relative
+        box-sizing initial
+        padding 0 s($paddingSideGlobal)
       &__title
         Catamaran($text-XXXL, 16, 700, 1.2)
         width col(5, 12)
@@ -19,6 +23,8 @@
         margin-bottom s(30, $text-L)
       &__link
         linkArrowLarge()
+        position: relative;
+        z-index: 5;
 
 
 /************************************\
@@ -28,6 +34,33 @@
   .project
     position: relative
     display: inline-block
+    overflow hidden
+    &__container-all
+      position: relative
+      top s(-300)
+      z-index 1
+    &__wrapper
+      position: relative
+      clearfix()
+    &__wrapper-top
+      display: inline-block
+      height: 100%
+      width 31.65%
+      float: right
+    &__wrapper-top-inner
+      position: relative
+      top 1px
+      clearfix()
+    &--web
+      width 60.694444444%
+      float: right
+    &--2D
+      width 39.305555556%
+      float: left;
+      position: absolute;
+      bottom: 0;
+    &--3D
+      width 100%
     &__infos-wrapper
       position: absolute
       top: 0
@@ -42,6 +75,7 @@
       transition .3s ease all
     &__infos-container
       position: absolute
+      overflow hidden
       top 50%
       transform translateY(-58%)
       right: 0
@@ -52,6 +86,9 @@
       opacity 0
       transition .3s ease all
       transition-property opacity, transform
+    &__img
+      width 100%
+      display: block
     &__category
     &__author
       Catamaran($sz-textS, 16, 300, 1.1)
