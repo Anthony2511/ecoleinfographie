@@ -3,7 +3,7 @@
     position: relative
     top s(-301)
     box-sizing initial;
-    padding s(100) s($paddingSideGlobal)
+    padding s(150) s($paddingSideGlobal)
     background-color #FFF
     z-index 8
     &__container
@@ -20,4 +20,105 @@
       Catamaran($text-L, 16, 400, 1.6)
       text-align: center
       width 90%
+      margin: 0 auto s(100, $text-L) auto
+
+/************************************\
+		slider-pros
+\************************************/
+
+.home
+  .slider-pros
+    &__wrapper
+      position: relative
+      max-width s(861)
+      min-height s(500)
       margin: 0 auto
+      z-index 2
+    &__bg
+      min-height s(511)
+      width 67.363530778%
+      position absolute
+      top 0
+      z-index 11
+      right 0%
+      background-color $cBackgroundBlueGrey
+      min-height 500px
+    &__article
+      position absolute
+      top 0
+      right 0
+      left 0
+      margin 0
+      height 100%
+      min-height 500px
+    &__description
+      width 67.363530778%
+      float: right
+      position: relative
+      &:after
+        content ''
+        display: block
+        position: absolute
+        bottom: s(-45)
+        left: 0
+        right: 0
+        height 50px
+        z-index 13
+        background-color $cWhite
+      //z-index 12
+      &__inside
+        padding: s(75) s(50) s(80) s(132)
+        right: 0;
+        transform: translate3d(0,0,0);
+        //background $cBackgroundBlueGrey
+        &:before
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          transform: skewY(-4.5deg);
+          transform-origin: 100% 0;
+          bottom: 0;
+          background-color: $cBackgroundBlueGrey
+          z-index -1
+      &__title
+        Catamaran($text-XXL, 16, 700, 1.1)
+        color $cBlueTitles
+        letter-spacing 1px
+        margin-bottom s(5, $text-XXL)
+      &__subtitle
+        Catamaran($text-L, 16, 400, 1.1)
+        display: block
+        margin-bottom s(20, $text-L)
+        & a
+          Catamaran($text-L, $text-L, 400, 1.1)
+          color $cBlueCiel
+          &:hover
+          &:focus
+            text-decoration underline
+      &__link
+        position: absolute
+        bottom: s(-20)
+        right s(30)
+        buttonLeftToRight($sz-textSL)
+        z-index 15
+      &__excerpt
+        Catamaran($sz-textSL, 16, 400, 1.6)
+    &__image
+      width 39.256678281%
+      position: absolute
+      top: s(-20)
+      z-index 12
+      overflow: hidden
+      &:before
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        transform: skewY(4.5deg);
+        transform-origin: 100% 0;
+        bottom: s(330);
+        background-color: $cWhite
+        z-index 1

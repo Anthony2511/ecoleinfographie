@@ -26,3 +26,29 @@ CategoryStyle()
   letter-spacing 0.75px
   padding s(9, 13) s(30, 13)
   border-radius 17px 0 17px 0
+
+buttonLeftToRight($sizeFont)
+  position: absolute
+  display: inline-block
+  Catamaran($sizeFont, 16, 700, 1)
+  padding s(18, $sizeFont) s(57, $sizeFont)
+  background-color $cBlueCiel
+  color $cWhite
+  text-transform: uppercase
+  letter-spacing 1px
+  z-index 1
+  &:before
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $cBlueCiel + 15%
+    z-index: -1;
+    transition .3s width;
+  &:hover:before
+  &:focus:before
+    width 100%
+  & span
+    hidden()
