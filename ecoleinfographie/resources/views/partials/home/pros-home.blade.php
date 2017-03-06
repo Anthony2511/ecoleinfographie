@@ -9,12 +9,12 @@
     </div>
     <div class="slider-pros__wrapper">
         {{--<div class="slider-pros__bg"></div>--}}
-        <article class="slider-pros__article" id="slider-pros__article01">
+        <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article01">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
                     <h3 role="heading" aria-level="3" class="slider-pros__description__title">Toon Van den Bos</h3>
                     <span class="slider-pros__description__subtitle">Co-fondateur de
-                        <a href="#" rel="ext">WhiteCube</a>
+                        <a href="#whitecube" rel="ext">WhiteCube</a>
                     </span>
                     <p class="slider-pros__description__excerpt">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. Eletium distoc etan rafiney logitec nono darvers.</p>
                 </div>
@@ -24,5 +24,63 @@
                 <img src="./img/slider-pros__img1.jpg" width="338" height="359" alt="#">
             </figure>
         </article>
+        <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article02">
+            <div class="slider-pros__description">
+                <div class="slider-pros__description__inside">
+                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">Tristan Lilien</h3>
+                    <span class="slider-pros__description__subtitle">Spécialiste effets spéciaux chez
+                        <a href="#benuts" rel="ext">Benuts</a>
+                    </span>
+                    <p class="slider-pros__description__excerpt">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. Eletium distoc etan rafiney logitec nono darvers.</p>
+                </div>
+                <a class="slider-pros__description__link" href="#">En savoir plus sur Tristan</a>
+            </div>
+            <figure class="slider-pros__image">
+                <img src="./img/slider-pros__img2.jpg" width="338" height="359" alt="#">
+            </figure>
+        </article>
+        <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article03">
+            <div class="slider-pros__description">
+                <div class="slider-pros__description__inside">
+                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">Machin Chose</h3>
+                    <span class="slider-pros__description__subtitle">Co-fondateur de
+                        <a href="#herasimiu" rel="ext">Herasmiu</a>
+                    </span>
+                    <p class="slider-pros__description__excerpt">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. Eletium distoc etan rafiney logitec nono darvers.</p>
+                </div>
+                <a class="slider-pros__description__link" href="#">En savoir plus sur Machin</a>
+            </div>
+            <figure class="slider-pros__image">
+                <img src="./img/slider-pros__img3.jpg" width="338" height="359" alt="#">
+            </figure>
+        </article>
     </div>
+    <div class="slideButtons">
+        <button class="slideButtons__next">
+            <span>Article suivant</span>
+        </button>
+        <button class="slideButtons__prev">
+            <span>Article précédent</span>
+        </button>
+    </div>
+    <div class="dots" id="dots">
+        <ul class="dots__list">
+            <li class="dots__li sliderBlog__dots-item--1 current">
+                <button class="dots__item">
+                    <span>Voir l’article #1</span>
+                </button>
+            </li>
+            <li class="dots__li sliderBlog__dots-item--2">
+                <button class="dots__item">
+                    <span>Voir l’article #2</span>
+                </button>
+            </li>
+            <li class="dots__li sliderBlog__dots-item--3">
+                <button class="dots__item">
+                    <span>Voir l’article #3</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
 </section>

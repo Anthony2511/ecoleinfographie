@@ -19,5 +19,6 @@
 <script src="./js/main.js"></script>
 <script src="./js/modernizr.js"></script>
 <script src="./js/sliderBlog.js"></script>
+<script src="./js/sliderProsHome.js"></script>
 </body>
 </html>

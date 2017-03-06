@@ -5,7 +5,7 @@
     </h2>
     <div class="sliderBlog__buttons">
         <button class="sliderBlog__right">
-            <span>Article précédent</span>
+            <span>Article suivant</span>
         </button>
         <button class="sliderBlog__left">
             <span>Article précédent</span>
