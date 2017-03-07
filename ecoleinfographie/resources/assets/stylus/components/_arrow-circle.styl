@@ -1,0 +1,29 @@
+.arrow-circle--left
+  transform rotate(180deg)
+
+.arrow-circle-container svg .circle-hover
+  opacity 0
+  fill $cBlueCiel
+  transform translate(25px, 25px) scale(0)
+  transition .3s ease all
+  transition-property opacity, transform
+
+.arrow-circle-container svg path
+  transform scale(1)
+  transform-origin 50% 50%
+  transition .3s $ease-out-back all
+
+.arrow-circle-container:hover
+.arrow-circle-container:focus
+  & svg
+    & .circle-hover
+      opacity 1
+      fill $cBlueCiel
+      transform translate(25px, 25px) scale(47)
+      transition .3s ease all
+      transition-property opacity, transform
+    & path
+      transform scale(1.25)
+      transform-origin 50% 50%
+      fill $cWhite
+      transition .3s ease fill, .3s $ease-out-back transform

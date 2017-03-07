@@ -152,38 +152,15 @@
     &__right
       position: relative
       display: block
-      width s(45)
-      height s(45)
-      border-radius 50%
-      border 2px solid rgba($cBlueCiel, .5)
-      overflow hidden
       cursor pointer
-      transition .3s ease border
-      &:focus
-      &:hover
-        outline 0
-        border 2px solid rgba($cBlueCiel, 1)
-        background-color $cBlueCiel
-        transition .3s ease all
-        transition-property background-color, border
+      z-index 10
+      outline none
       & span
         hidden()
     &__right
       margin-bottom s(10)
-    &__left:before
-      icon('arrow-left')
-    &__right:before
-      icon('arrow-right')
-    &__left:before
-    &__right:before
-      color $cBlueCiel
-      transition .2s ease color
-    &__left:hover:before
-    &__left:focus:before
-    &__right:hover:before
-    &__right:focus:before
-      color $cWhite
-      transition .3s ease color
+
+
 
 /************************************\
 		NO-JS

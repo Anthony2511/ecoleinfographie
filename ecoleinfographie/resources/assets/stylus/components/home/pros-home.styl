@@ -105,7 +105,7 @@
         bottom: s(-20)
         right s(30)
         buttonLeftToRight($sz-textSL)
-        z-index 15
+        z-index 300
       &__excerpt
         Catamaran($sz-textSL, 16, 400, 1.6)
     &__image
@@ -132,6 +132,7 @@
   & .slider-pros__image img
     transition: transform .4s cubic-bezier(.25, .46, .45, .94)
 
+
 .slider-pros__article--active
   visibility visible
   & .slider-pros__description__inside
@@ -143,6 +144,7 @@
   & .slider-pros__image img
     transform: translate3d(0, 0, 0)
 
+
 .slider-pros__article--hidden
   visibility hidden
   & .slider-pros__description__inside
@@ -153,6 +155,7 @@
     transform translate3D(-100%,0,0)
     transition .4s cubic-bezier(.25, .46, .45, .94)
 
+
 .slider-pros__article--right
   & .slider-pros__description__inside
     opacity 0
@@ -160,6 +163,7 @@
     transition .4s ease all
   & .slider-pros__image img
     transform translate3D(100%, 0, 0)
+
 
 .slider-pros__article--left
   & .slider-pros__description__inside

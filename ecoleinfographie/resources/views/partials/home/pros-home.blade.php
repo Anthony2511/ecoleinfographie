@@ -84,3 +84,4 @@
     </div>
 
 </section>
+{!! file_get_contents(asset('svg/arrow-circle-left.svg')) !!}

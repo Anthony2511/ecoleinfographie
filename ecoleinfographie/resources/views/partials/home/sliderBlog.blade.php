@@ -4,10 +4,12 @@
         <span class="sliderBlog-section__title--display">notre blog</span>
     </h2>
     <div class="sliderBlog__buttons">
-        <button class="sliderBlog__right">
+        <button class="sliderBlog__right arrow-circle-container">
+            {!! file_get_contents(asset('svg/arrow-circle-right.svg')) !!}
             <span>Article suivant</span>
         </button>
-        <button class="sliderBlog__left">
+        <button class="sliderBlog__left arrow-circle-container">
+            {!! file_get_contents(asset('svg/arrow-circle-left.svg')) !!}
             <span>Article précédent</span>
         </button>
     </div>
@@ -77,3 +79,4 @@
         </ul>
     </div>
 </section>
+
