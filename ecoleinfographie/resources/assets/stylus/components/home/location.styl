@@ -75,6 +75,7 @@
     &__social-link
       display: inline-block
       margin-right s(5)
+      outline none
     &__social span
       hidden()
     &__social-link svg .circle-hover
@@ -83,11 +84,14 @@
       transition .3s ease all
       transition-property opacity, transform
     &__social-link:hover svg .circle-hover
+    &__social-link:focus svg .circle-hover
       opacity 1
       transform translate(17.5px, 17.5px) scale(32)
       transition .3s ease all
       transition-property opacity, transform
     &__social-link:hover svg g
+    &__social-link:focus svg g
     &__social-link:hover svg path
+    &__social-link:focus svg path
       fill $cBlueTitles
       transition .4s ease fill
