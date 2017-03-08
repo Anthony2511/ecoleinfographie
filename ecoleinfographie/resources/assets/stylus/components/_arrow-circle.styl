@@ -1,3 +1,9 @@
+.arrow-circle-container
+  cursor pointer
+  outline: none;
+  & span
+    hidden()
+
 .arrow-circle--left
   transform rotate(180deg)
 
@@ -23,7 +29,7 @@
       transition .3s ease all
       transition-property opacity, transform
     & path
-      transform scale(1.25)
+      transform scale(1)
       transform-origin 50% 50%
       fill $cWhite
       transition .3s ease fill, .3s $ease-out-back transform

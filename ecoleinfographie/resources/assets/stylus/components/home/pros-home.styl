@@ -1,10 +1,10 @@
 .home
   .pros-home
     position: relative
-    top s(-301)
     box-sizing initial;
     padding s(150) s($paddingSideGlobal)
     background-color #FFF
+    margin-top s(-300)
     z-index 8
     &__container
       max-width s(861)
@@ -25,7 +25,6 @@
 /************************************\
 		slider-pros
 \************************************/
-
 .home
   .slider-pros
     &__wrapper
@@ -126,6 +125,36 @@
         background-color: $cWhite
         z-index 1
 
+/************************************\
+  BUTTONS LEFT AND RIGHT POSITION
+\************************************/
+.slider-pros-buttons
+  position: absolute
+  top: s(50)
+  right: s(-68)
+  .slideButtons__next
+  .slideButtons__pref
+    display: block
+  .slideButtons__next
+    margin-bottom: s(4)
+
+
+/************************************\
+      DOTS POSITION
+\************************************/
+.slider-pros-dots
+  position: absolute
+  bottom: s(90)
+  left: 8.5%
+  margin-bottom: 0
+  z-index 600
+
+
+
+/************************************\
+      CORE ANIMATION
+\************************************/
+
 .slider-pros__article--anim
   & .slider-pros__description__inside
     transition: transform .2s cubic-bezier(.25, .46, .45, .94)
@@ -172,3 +201,4 @@
     transition .4s ease all
   & .slider-pros__image img
     transform translate3D(100%, 0, 0)
+

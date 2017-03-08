@@ -7,7 +7,7 @@
             Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.
         </p>
     </div>
-    <div class="slider-pros__wrapper">
+    <div class="slider-pros__wrapper" data-pos="0">
         {{--<div class="slider-pros__bg"></div>--}}
         <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article01">
             <div class="slider-pros__description">
@@ -54,34 +54,35 @@
                 <img src="./img/slider-pros__img3.jpg" width="338" height="359" alt="#">
             </figure>
         </article>
-    </div>
-    <div class="slideButtons">
-        <button class="slideButtons__next">
-            <span>Article suivant</span>
-        </button>
-        <button class="slideButtons__prev">
-            <span>Article précédent</span>
-        </button>
-    </div>
-    <div class="dots" id="dots">
-        <ul class="dots__list">
-            <li class="dots__li sliderBlog__dots-item--1 current">
-                <button class="dots__item">
-                    <span>Voir l’article #1</span>
-                </button>
-            </li>
-            <li class="dots__li sliderBlog__dots-item--2">
-                <button class="dots__item">
-                    <span>Voir l’article #2</span>
-                </button>
-            </li>
-            <li class="dots__li sliderBlog__dots-item--3">
-                <button class="dots__item">
-                    <span>Voir l’article #3</span>
-                </button>
-            </li>
-        </ul>
+        <div class="slideButtons slider-pros-buttons">
+            <button class="slideButtons__next arrow-circle-container">
+                {!! file_get_contents(asset('svg/arrow-circle-right.svg')) !!}
+                <span>Article suivant</span>
+            </button>
+            <button class="slideButtons__prev arrow-circle-container">
+                {!! file_get_contents(asset('svg/arrow-circle-left.svg')) !!}
+                <span>Article précédent</span>
+            </button>
+        </div>
+        <div class="dots slider-pros-dots" id="dots">
+            <ul class="dots__list">
+                <li class="dots__li sliderBlog__dots-item--1 current" data-pos="0">
+                    <button class="dots__item">
+                        <span>Voir l’article #1</span>
+                    </button>
+                </li>
+                <li class="dots__li sliderBlog__dots-item--2" data-pos="1">
+                    <button class="dots__item">
+                        <span>Voir l’article #2</span>
+                    </button>
+                </li>
+                <li class="dots__li sliderBlog__dots-item--3" data-pos="2">
+                    <button class="dots__item">
+                        <span>Voir l’article #3</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
 
 </section>
-{!! file_get_contents(asset('svg/arrow-circle-left.svg')) !!}
