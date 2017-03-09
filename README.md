@@ -3,7 +3,7 @@
 > Main repo for the site of the school of computer graphics of the Province of Liège
 
 * * *
-**Note:** the school where the course is given, the [HEPL](http://www.provincedeliege.be/hauteecole) from Liège, Belgium, is a french-speaking school. From this point, the instructions will be in french. Sorry.
+**Note:** the school for which the site is made, the [HEPL](http://www.provincedeliege.be/hauteecole) from Liège, Belgium, is a french-speaking school. From this point, the instructions will be in french. Sorry.
 * * *
 
 ## Présentation
