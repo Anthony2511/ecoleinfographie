@@ -1,8 +1,108 @@
 .footer__container
   background-color $cBlueTitles
+.footer__wrapper
+  clearfix()
 .footer
-  background-color $cBlueTitles
-  box-sizing content-box
+  @extend .containerGridz
   padding s(100) s($paddingSideGlobal)
+  &__header
+    position: relative
+    margin-bottom s(70)
+    padding-bottom s(25)
+    border-bottom 2px solid #718296
   & *
     color $cWhite
+  &__title
+    @extend .titleXXL
+    max-width s(380, $text-XXL)
+    line-height 1.3em
+    & span
+      @extend .hidden
+
+.footer
+  .social
+    position: absolute
+    right 0
+    bottom 0 + s(25)
+    &__link span
+        @extend .hidden
+    &__item
+      display: inline-block
+      margin-right s(16)
+      &:last-child
+        margin-right 0
+    &__link
+      display: inline-block
+    &__link svg circle + circle
+      fill #135777
+      transform translate(26px, 26px) scale(6)
+      transition .3s ease all
+      transition-property opacity, transform
+    &__link:hover svg circle + circle
+      transform translate(26px, 26px) scale(47.5)
+      fill $cBlueCiel + 15%
+      transition .3s $ease-out-back all
+      transition-property transform, fill, opacity
+
+.footer
+  .section
+    position: relative
+    width 33.3333%
+    &--contact
+      float: left
+    &--explorez
+      float: right
+      width 33.3333%
+      padding-left 11%
+    &--formations
+      margin: 0 auto
+    &__title
+      @extend .titleXL
+      color $cWhite
+      margin-bottom s(30, $text-XL)
+    &__link
+      @extend .linkArrowLarge
+      color $cGreyFooter
+      font-weight: 400
+      letter-spacing 0
+      margin-bottom s(15, $text-L)
+      &:hover
+      &:focus
+        color $cWhite
+    &__address
+      margin-bottom s(35)
+      span
+        display: block
+        font-size: s($text-L)
+        margin-bottom s(15, $text-L)
+        color $cGreyFooter
+    &__tel
+    &__contact
+      display: block
+      font-size: s($text-L)
+      margin-bottom s(15, $text-L)
+      color $cGreyFooter
+      transition .3s ease color
+      &:before
+        icon('phone')
+        font-size: 15px;
+        margin-right 10px
+      &:hover
+      &:focus
+        color $cWhite
+        transition .3s ease color
+    &__contact:before
+      icon('mail')
+      display: inline-block
+      font-size: 12px;
+      position: relative
+      top -2px
+    &__cta
+      buttonLeftToRight($sz-textS)
+      background-color transparent
+      border 2px solid $cWhite
+      position: relative
+      margin-top s(20)
+      &:before
+        background $cWhite
+        opacity 0.2
