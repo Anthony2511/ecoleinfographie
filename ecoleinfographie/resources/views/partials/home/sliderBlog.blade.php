@@ -78,5 +78,6 @@
             </li>
         </ul>
     </div>
+    {{--<a href="#allArticles" class="sliderBlog__viewAll"><span>Voir le blog</span></a>--}}
 </section>
 
