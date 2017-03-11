@@ -4,7 +4,7 @@
     containerGridz()
     box-sizing content-box
     padding 0 s($paddingSideGlobal)
-    margin-bottom s(240)
+    margin-bottom s(310)
     &__img
       position: relative
       overflow hidden
@@ -17,10 +17,10 @@
       right: s(50)
       max-width col(6,$ws_iGridzColumns)
       background-color $cBackgroundBlueGrey
-      padding s(30) s(65) s(70)
+      padding s(40) s(65) s(90)
     &__category
       CategoryStyle()
-      margin-bottom s(30, 13)
+      margin-bottom s(40, 13)
       background-color $cSchool
     &__title-wrap
       position: absolute
@@ -35,37 +35,15 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
-        Catamaran($text-XXL, 16, 700, 1.2)
+        @extend .titleXXL
         color $cBlueTitles
         letter-spacing 0.75px
     &__excerpt
-      Catamaran($text-L, 16, 400, 1.6)
-      margin-top s(145, $text-L)
+      @extend .paragraph21
+      margin-top s(155, $text-L)
       max-width s(445, $text-L)
     &__link
       position: absolute
       bottom -20px
       right -30px
-      display: inline-block
-      Catamaran($sz-menu, 16, 700, 1)
-      padding s(18, $sz-menu) s(57, $sz-menu)
-      background-color $cBlueCiel
-      color $cWhite
-      text-transform: uppercase
-      letter-spacing 1px
-      z-index 1
-      &:before
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: $cBlueCiel + 15%
-        z-index: -1;
-        transition .3s width;
-      &:hover:before
-      &:focus:before
-        width 100%
-      & span
-        hidden()
+      @extend .buttonLeftToRight

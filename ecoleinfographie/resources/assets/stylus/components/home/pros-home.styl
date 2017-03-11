@@ -10,14 +10,14 @@
       max-width s(861)
       margin: 0 auto
     &__title
-      Catamaran($text-bigTitleHome, 16, 700, 1.1)
+      @extend .title51
       width col(8,12)
       margin: 0 auto s(40, $text-bigTitleHome)
       color $cBlueTitles
       letter-spacing 1.5px
       text-align: center
     &__text
-      Catamaran($text-L, 16, 400, 1.6)
+      @extend .paragraph21
       text-align: center
       width 90%
       margin: 0 auto s(100, $text-L) auto
@@ -85,16 +85,17 @@
         transform: translate3d(0,0,0);
         //background $cBackgroundBlueGrey
       &__title
-        Catamaran($text-XXL, 16, 700, 1.1)
-        color $cBlueTitles
+        @extend .titleXXL
         letter-spacing 1px
         margin-bottom s(5, $text-XXL)
       &__subtitle
-        Catamaran($text-L, 16, 400, 1.1)
+        @extend .paragraph21
+        line-height: 1.1
         display: block
         margin-bottom s(20, $text-L)
         & a
-          Catamaran($text-L, $text-L, 400, 1.1)
+          font-size: s($text-L, $text-L)
+          line-height: 1.1
           color $cBlueCiel
           &:hover
           &:focus
@@ -106,7 +107,7 @@
         buttonLeftToRight($sz-textSL)
         z-index 300
       &__excerpt
-        Catamaran($sz-textSL, 16, 400, 1.6)
+        @extend .paragraph18
     &__image
       width 39.256678281%
       position: absolute

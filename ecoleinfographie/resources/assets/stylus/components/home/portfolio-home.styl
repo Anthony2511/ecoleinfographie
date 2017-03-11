@@ -12,14 +12,15 @@
         box-sizing initial
         padding 0 s($paddingSideGlobal)
       &__title
-        Catamaran($text-XXXL, 16, 700, 1.2)
+        @extend .titleXXXL
+        line-height: 1.2
         width col(5, 12)
         color $cBlueTitles
         letter-spacing 1px
         margin-bottom s(30, $text-XXXL)
       &__text
         width col(5, 12)
-        Catamaran($text-L, 16, 400, 1.6)
+        @extend .paragraph21
         margin-bottom s(30, $text-L)
       &__link
         @extend .linkArrowLarge
@@ -91,19 +92,21 @@
       display: block
     &__category
     &__author
-      Catamaran($sz-textS, 16, 300, 1.1)
+      font-size $sz-textS
+      font-weight 300
+      line-height 1.1
       color $cGreyLight
       letter-spacing 0.2px
     &__category
       display block
       margin-bottom s(30, $sz-textS)
     &__title
-      Catamaran($text-XXXL, 16, 700, 1.1)
+      @extend .titleXXXL
       color $cWhite
       letter-spacing 1px
       margin-bottom s(10, $text-XXXL)
     &__description
-      Catamaran($text-L, 16, 300, 1.6)
+      @extend .paragraph21
       max-width: s(410, $text-L)
       margin: 0 auto s(11, $text-L) auto
       color $cGreyLight
@@ -152,7 +155,8 @@
   .project--small
   .project--middle
     .project__title
-      Catamaran($text-XXL, 16, 700, 1.1)
+      @extend .titleXXL
+      color $cWhite
 
 
 /************************************\

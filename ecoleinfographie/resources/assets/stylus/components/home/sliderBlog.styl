@@ -12,7 +12,8 @@
       &__title--display
         position: relative
         display: inline-block
-        Catamaran($text-XXXL, 16, 700, 1)
+        @extend .titleXXXL
+        letter-spacing 0
         color $cBlueTitles
         &::first-letter
           text-transform: uppercase
@@ -55,9 +56,9 @@
     background-color $cBlueWeb
     margin-bottom s(40)
   &__title
-    Catamaran($text-XXL, 16, 700, 1.2)
-    color $cBlueTitles
+    @extend .titleXXL
     letter-spacing 0.75px
+    line-height: 1.2
     margin-bottom s(33, $text-XXL)
   &__excerpt
     Catamaran($text-L, 16, 400, 1.6)
@@ -159,10 +160,6 @@
   transition .3s ease all
   transition-property opacity, transform
 
-
-
-
-
 // Slider Position
 .home
   .sliderBlog-wrapper
@@ -189,7 +186,6 @@
   .sliderBlog-item--3
     transform translateX(200%)
 
-
 // Buttons left and right
   .sliderBlog
     &__buttons
@@ -209,8 +205,6 @@
     &__right
       margin-bottom s(10)
 
-
-
 /************************************\
 		NO-JS
 \************************************/
@@ -229,4 +223,3 @@
         display: none
       &__dots-wrapper
         display: none
-

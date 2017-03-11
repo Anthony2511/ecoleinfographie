@@ -13,12 +13,10 @@
     &__title
       max-width s(375, $text-bigTitleHome)
       margin-bottom s(30, $text-bigTitleHome)
-      Catamaran($text-bigTitleHome, 16, 700, 1.1)
-      color $cBlueTitles
-      letter-spacing 1.25px
+      @extend .title51
     &__text
       margin-bottom s(50, 16)
-      Catamaran($text-L, 16, 400, 1.6)
+      @extend .paragraph21
     &__link
       @extend .linkArrowLarge
       margin-bottom s(20, $text-L)

@@ -20,17 +20,24 @@ baseShawl(backgroundColor, skew)
   position: relative
   baseShawl($cWhite, 4.5deg)
 
+.cover
+  position absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
 
+.hidden
+  position: absolute
+  top: -99999px
+  left: -99999px
 
 .containerGridz
   max-width s($ws_sGridzTotalWidth, 16)
   margin 0 auto
   box-sizing content-box
 
-.hidden
-  position: absolute
-  top: -99999px
-  left: -99999px
+
 
 /************************************\
 		STYLES FOR TITLES
@@ -39,12 +46,12 @@ baseShawl(backgroundColor, skew)
 .title51
   font-size s(51.88)
   line-height 1.1
-  letter-spacing 1px
+  letter-spacing 1.25px
   font-weight 700
   color $cBlueTitles
 
-.title41
-  font-size s(41.5)
+.titleXXXL
+  font-size s($text-XXXL)
   line-height 1.1
   letter-spacing 1px
   font-weight 700
@@ -53,7 +60,7 @@ baseShawl(backgroundColor, skew)
 .titleXXL
   font-size s($text-XXL)
   line-height 1.1
-  letter-spacing 1px
+  letter-spacing 0.75px
   font-weight 700
   color $cBlueTitles
 
@@ -68,9 +75,12 @@ baseShawl(backgroundColor, skew)
       STYLES FOR PARAGRAPH
 \************************************/
 .paragraph21
-  font-size s(21.25)
+  font-size s($text-L)
   line-height 1.62em
 
+.paragraph18
+  font-size s($sz-textSL)
+  line-height 1.62em
 /************************************\
 		STYLE FOR LINKS
 \************************************/
@@ -100,15 +110,30 @@ baseShawl(backgroundColor, skew)
    transition .3s ease transform
 
 
-
-
-/************************************\
-		cover absolute
-\************************************/
-
-.cover
-  position absolute
-  top: 0
-  bottom: 0
-  right: 0
-  left: 0
+.buttonLeftToRight
+  position: absolute
+  display: inline-block
+  font-weight bold
+  font-size s($text-L)
+  font-weight 700
+  padding s(18, $text-L) s(57, $text-L)
+  background-color $cBlueCiel
+  color $cWhite
+  text-transform: uppercase
+  letter-spacing 1px
+  z-index 1
+  &:before
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $cBlueCiel + 15%
+    z-index: -1;
+    transition .3s width;
+  &:hover:before
+  &:focus:before
+    width 100%
+  & span
+    @extend .hidden
