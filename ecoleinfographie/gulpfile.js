@@ -5,25 +5,25 @@ var elixir = require('laravel-elixir'),
     tinypng = require('elixir-tinypng'),
     plumber = require('gulp-plumber');
 
+elixir(function (mix) {
+    mix.tinypng({
+        key: '6R3ddSeN039Qn91I3YBCUN2j7XjAV-7u',
+        sigFile: '.tinypng-sigs',
+        summarize: true,
+    });
 
-gulp.task('watch', function() {
-    gulp.watch('resources/**', ['default']);
-    elixir(function(mix) {
-        elixir(function(mix) {
-            mix.tinypng({
-                key: '6R3ddSeN039Qn91I3YBCUN2j7XjAV-7u',
-                sigFile: '.tinypng-sigs',
-                summarize: true,
-            });
-            mix.stylus('app.styl'), null, {
-                use: [autoprefixer('last 7 versions', 'ie8' )]
-            };
+    mix.copy('resources/assets/img/*.*', 'public/img/');
+    mix.copy('resources/assets/svg-inline/*.*', 'public/svg/');
+    mix.copy('resources/assets/fonts/*.*', 'public/fonts/');
 
-            mix.browserSync({
-                proxy: 'ecoleinfographie.app'
-            });
+    mix.stylus('app.styl'), {
+        use: [autoprefixer('last 7 versions', 'ie8' )]
+    };
 
-        });
-    })
-        .pipe(plumber());
-});
+    mix.scriptsIn();
+
+    mix.browserSync({
+        proxy: 'ecoleinfographie.app'
+    });
+})
+
