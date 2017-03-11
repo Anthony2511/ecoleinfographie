@@ -3,6 +3,7 @@
         <span class="header-shawl__title__strong">L’école d’infographie</span>
         <span class="header-shawl__title__small">de la Province de Liège</span>
     </h1>
+    <a href="#home" class="logo">Logo</a>
     @include('partials.navigation')
     <a href="#" class="header-shawl__gobottom-link">
         <svg class="header-shawl__gobottom" width="25" height="32" xmlns="http://www.w3.org/2000/svg">

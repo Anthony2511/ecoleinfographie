@@ -78,5 +78,4 @@
         </ul>
         <a href="#inscription" class="section__cta">S’inscrire en infographie</a>
     </section>
-
 </section>
