@@ -158,47 +158,38 @@
       &:focus
         text-decoration underline
 
-/*.subnav.open
-  display: block;*/
-
 /************************************\
   ANIMATION DU MENU & DECOR
 \************************************/
 
 .subnav
-  transform translateX(s(-216, 16)) translateY(s(-20, 16))  translate3D(0,0,0) scaleX(0.93) // -216px pour centrer
+  transform translate3D(s(-216, 16),s(-20, 16),0) // -216px pour centrer
   opacity 0
   transition .1s ease all
   &:before
     transform translateY(s(8, 16)) rotate(45deg)
     transition .1s .1s ease transform
-  &__group
-    transform translateY(s(-20, 16))
-    transition .2s ease transform
   &.open
     visibility visible
-    transform translateX(s(-216, 16)) translateY(0px) scale(1)
+    transform translate3D(s(-216, 16),0,0)
     transition .2s ease all
     opacity 1;
     transition-property transform, opacity
     &:before
-      transform translateY(0) rotate(45deg)
+      transform translate3D(0,0,0) rotate(45deg)
       transition .1s .1s ease-in transform
-  &.open .subnav__group
-    transform translateY(0) translate3D(0,0,0)
-    transition .4s ease transform
   &__jobs__cloud
     position: absolute
     top s(20, 16)
     right s(80, 16)
-    transform translateX(s(-80, 16))
+    transform translate3D(s(-80, 16), 0,0)
     opacity 0
-    transition .3s ease-in all
+    transition .2s ease-in all
     transition-property transform, opacity
   &__jobs.open .subnav__jobs__cloud
-    transform translateX(0px)
+    transform translate3D(0,0,0)
     opacity 1
-    transition .4s ease-out all
+    transition .3s ease-out all
     transition-property transform, opacity
   &__jobs__town
     overflow: hidden
@@ -209,11 +200,11 @@
     z-index -1
     border-radius 5px
     & svg
-      transform translateY(s(120, 16))
-      transition .5s $ease-out-quart transform
+      transform translate3D(0, s(120, 16), 0)
+      transition .4s $ease-out-quart transform
   &__jobs.open .subnav__jobs__town svg
-    transform translateY(10px)
-    transition .5s $ease-out-quart transform
+    transform translate3D(0, 10px, 0)
+    transition .4s $ease-out-quart transform
 
 
 /************************************\

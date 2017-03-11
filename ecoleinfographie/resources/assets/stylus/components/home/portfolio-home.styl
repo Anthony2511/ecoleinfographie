@@ -22,7 +22,7 @@
         Catamaran($text-L, 16, 400, 1.6)
         margin-bottom s(30, $text-L)
       &__link
-        linkArrowLarge()
+        @extend .linkArrowLarge
         position: relative;
         z-index: 5;
 
@@ -161,7 +161,8 @@
 
 .home
   .project:hover
-    .project
+  .project:focus
+    & .project
       &__infos-wrapper
         visibility visible
         opacity 1

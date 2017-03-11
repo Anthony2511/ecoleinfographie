@@ -90,8 +90,11 @@ baseShawl(backgroundColor, skew)
    margin-left  s(10, 12)
    transition .2s ease transform
   &:hover
+  &:focus
    color $cBlack
    transition .3s ease color
+   outline none
   &:hover:after
+  &:focus:after
    transform translateX(s(4, 12))
    transition .3s ease transform
