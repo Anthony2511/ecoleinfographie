@@ -1,0 +1,35 @@
+.breadcrumb
+  position: absolute
+  top 20%
+  &__title
+    @extend .hidden
+  &__item
+    display: inline-block
+  &__link--home
+    &:before
+      icon('house')
+      font-size 14px
+      margin-right s(10, 14)
+      color rgba(255,255,255,.75)
+      transition .2s ease color
+    &:hover:before
+    &:focus:before
+      color rgba(255,255,255,1)
+      transition .3s ease color
+
+    &:after
+      icon('chevron-right')
+      font-size 8px
+      margin-right s(10, 8)
+      color rgba(255,255,255,.75)
+    & span
+      @extend .hidden
+  &__link
+    & span
+      font-size s($sz9)
+      font-weight: 500
+      letter-spacing 0.18px
+
+.breadcrumb.breadcrumb--header
+  & .breadcrumb__link--active span
+    color $cWhite
