@@ -1,6 +1,6 @@
 <nav class="nav">
     <h2 aria-level="2" class="nav__title">
-        Menu de navigation
+        Menu de navigation principal
     </h2>
     <ul class="menu">
         <li class="menu__item">
@@ -8,7 +8,7 @@
             <div class="subnav subnav__jobs">
                 <ul class="subnav__group">
                     <li>
-                        <a href="" id="lesmetiersduweb" class="subnav__jobs__job">
+                        <a href="les-metiers-du-web" id="lesmetiersduweb" class="subnav__jobs__job">
                             <span class="subnav__jobs__job__title">Les métiers du web</span>
                             <img class="subnav__jobs__menuicon" src="../img/web-menu.png"
                                  srcset="../img/web-menu@2x.png 2x"
@@ -18,7 +18,7 @@
                     </li>
                     <div class="subnav__link-wrapper">
                         <li class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en web</span></a>
+                            <a href="#" class="subnav__jobs__link"><span>Voir </span>La formation <span>en web</span></a>
                         </li>
                         <li class="subnav__li">
                             <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en web</span></a>

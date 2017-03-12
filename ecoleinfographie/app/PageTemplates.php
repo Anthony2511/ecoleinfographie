@@ -71,14 +71,15 @@ trait PageTemplates
 		    'store_in' => 'extras',
 	    ]);
     }
-
-    private function about_us()
+	
+    
+    private function web_home()
     {
-        $this->crud->addField([
-                        'name' => 'content',
-                        'label' => 'Content',
-                        'type' => 'wysiwyg',
-                        'placeholder' => 'Your content here',
-                    ]);
+	    $this->crud->addField([
+		    'name' => 'content',
+		    'label' => 'Content',
+		    'type' => 'wysiwyg',
+		    'placeholder' => 'Your content here',
+	    ]);
     }
 }

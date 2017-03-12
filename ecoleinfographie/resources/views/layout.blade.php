@@ -2,10 +2,12 @@
 <html lang="fr" class="no-js">
 @include('partials.head')
 <body class="<?php if($page){ echo $page->slug; } ;?>">
-
-<header class="header header-shawl" role="banner">
-  @include('partials.header')
-</header>
+{{--@if($page->id == 1) <!-- If home -->
+    @include('partials.header-home')
+@elseif($page->id == 2) <!-- if web-home -->
+    @include('partials.web_home.header_web-home')
+@endif--}}
+@yield('header')
 
 <div class="container">
     @yield('content')

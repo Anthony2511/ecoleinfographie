@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('header')
+    @include('partials.header-home')
+@endsection
+
 @section('content')
     @include('partials.home.intro')
     @include('partials.home.location')
