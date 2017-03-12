@@ -6,6 +6,7 @@ var elixir = require('laravel-elixir'),
     plumber = require('gulp-plumber');
 
 elixir(function (mix) {
+
     mix.tinypng({
         key: '6R3ddSeN039Qn91I3YBCUN2j7XjAV-7u',
         sigFile: '.tinypng-sigs',
