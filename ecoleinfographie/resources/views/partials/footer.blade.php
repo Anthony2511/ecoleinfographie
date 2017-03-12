@@ -1,7 +1,7 @@
 <section class="footer__wrapper">
     <header class="footer__header">
         <h2 role="heading" aria-level="2" class="footer__title">
-            <span>Bas de page de l’</span>École d’infographie de la Province de Liège
+            <span>Bas de page de l’</span>École d’infographie<br /> de la Province de Liège
         </h2>
         <ul class="social">
             <li class="social__item">
