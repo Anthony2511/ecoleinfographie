@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li class="social__item">
-                <a href="" rel="external" title="Vers Dribble" class="social__link social__link--behance">
+                <a href="" rel="external" title="Vers Dribble" class="social__link social__link--dribble">
                     {!! file_get_contents(asset('svg/dribble.svg')) !!}
                     <span>Vers Dribble</span>
                 </a>
