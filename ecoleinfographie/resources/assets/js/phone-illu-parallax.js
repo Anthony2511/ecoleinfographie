@@ -16,7 +16,6 @@
             layer.style['-o-transform'] = translate3d;
             layer.style.transform = translate3d;
         }
-        console.log('script parallax charged');
     });
     }
 })();
