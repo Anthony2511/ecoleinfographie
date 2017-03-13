@@ -1,6 +1,4 @@
 .breadcrumb
-  position: absolute
-  top 20%
   &__title
     @extend .hidden
   &__item
@@ -31,5 +29,7 @@
       letter-spacing 0.18px
 
 .breadcrumb.breadcrumb--header
+  position: absolute
+  top 30%
   & .breadcrumb__link--active span
     color $cWhite

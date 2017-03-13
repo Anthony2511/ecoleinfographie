@@ -13,7 +13,6 @@
                             <img class="subnav__jobs__menuicon" src="../img/web-menu.png"
                                  srcset="../img/web-menu@2x.png 2x"
                                  width="30" height="30" alt="">
-
                         </a>
                     </li>
                     <div class="subnav__link-wrapper">
