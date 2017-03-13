@@ -47,8 +47,8 @@
                     <img src="./img/image-responsive.jpg" width="800" height="9438" alt="" data-type="parallax" data-depth="0.5" >
                 </div>
             </div>
-
         </div>
     </div>
     <div id="particles-js"></div>
+    <div class="background-opacity"></div>
 </header>
