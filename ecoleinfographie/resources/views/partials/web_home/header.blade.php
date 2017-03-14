@@ -49,6 +49,6 @@
             </div>
         </div>
     </div>
-    <div id="particles-js"></div>
+    <div class="particles-js" id="particles-js"></div>
     <div class="background-opacity"></div>
 </header>
