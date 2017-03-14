@@ -1,12 +1,11 @@
 <header class="header header-webhome header-trades" role="banner">
     <div class="header__wrapper">
-        <h1 role="heading" aria-level="1" class="header-trades__title">
+        <h1 role="heading" aria-level="1" class="header-trades__title isOpacity">
             Les métiers du web
         </h1>
         <a href="#home" class="logo">Logo</a>
         @include('partials.navigation')
-        <nav class="breadcrumb breadcrumb--header">
-            <h2 role="heading" aria-level="2" class="breadcrumb__title">Fil d’arianne</h2>
+        <div class="breadcrumb breadcrumb--header isOpacity">
             <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
                 <li class="breadcrumb__item" itemprop="itemListElement" itemscope
                     itemtype="http://schema.org/ListItem">
@@ -25,8 +24,8 @@
                     <meta itemprop="position" content="2" />
                 </li>
             </ol>
-        </nav>
-        <nav class="header-trades__subnav" role="navigation">
+        </div>
+        <nav class="header-trades__subnav isOpacity" role="navigation">
             <h2 role="heading" aria-level="2" class="header-trades__subnav__title">Navigation secondaire pour la page des métiers du web</h2>
             <ul class="header-trades__subnav__list">
                 <li class="header-trades__subnav__item">

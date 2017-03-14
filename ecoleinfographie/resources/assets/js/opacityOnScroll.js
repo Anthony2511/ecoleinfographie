@@ -1,17 +1,19 @@
 (function ($) {
     "use strict";
 
-    var target = $('.background-opacity'),
-        targetHeight = target.outerHeight() + 150,
+    var targetBg = $('.background-opacity'),
+        targetContent = $('.isOpacity'),
+        targetHeight = targetBg.outerHeight() + 150,
         isOpacity = $('.background-opacity');
 
     if (isOpacity.length > 0){
         $(document).scroll(function(e){
-            var scrollPercent = ((targetHeight + window.scrollY)) / targetHeight - 1;
+            var scrollPercent = ((targetHeight + window.scrollY)) / targetHeight - 1,
+                scrollOpacity = ((targetHeight - window.scrollY)) / targetHeight;
             if(scrollPercent >= 0){
-                target.css({'background-color': 'rgba(0,0,0,' + scrollPercent + ')'});
+                targetBg.css({'background-color': 'rgba(0,0,0,' + scrollPercent + ')'});
+                targetContent.css({'opacity': scrollOpacity});
             }
         });
     }
-
 })(jQuery);
