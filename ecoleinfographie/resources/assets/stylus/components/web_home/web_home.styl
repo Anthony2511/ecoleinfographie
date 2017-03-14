@@ -1,0 +1,28 @@
+.web-what
+  position relative
+  min-height s(850)
+  &__wrapper
+    position: relative
+    @extend .containerGridz
+    padding 0 s($paddingSideGlobal)
+    clearfix(right)
+    &-text
+      float: right
+      width 45%
+      margin-top s(380)
+  &__title
+    @extend .titleXXXL
+    margin-bottom s(30, $text-XXXL)
+    & span
+      @extend .hidden
+    & svg
+      position: relative
+      top s(7)
+      left s(5)
+  &__text
+    @extend .paragraph21
+  &__img
+    position: absolute
+    top: 0
+    left -250px
+

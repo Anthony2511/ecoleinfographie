@@ -99,15 +99,17 @@
     &__title
       @extend .hidden
     &__item
-      margin-bottom s(15)
+      margin-bottom s(20)
       &:last-child
         margin-bottom 0
     &__link
       @extend .linkArrowLarge
       color rgba(255,255,255,.8)
-      transform translate3D(0, 0, 0)
       transition .2s ease all
+      transform translate3D(0, 0, 0)
       transition-property color, transform
+      &:after
+        margin-left  s(15, 12)
       &:hover
       &:focus
         color rgba(255,255,255,1)
@@ -144,8 +146,7 @@
     background-color $cGreyFooter
     overflow hidden
 
-.container
-  padding-top 1000px
+
 
 .header-webhome .canvas
   display: block
@@ -153,8 +154,6 @@
 
 .header-webhome .particles-js
   @extend .cover
-
-
 
 .background-opacity
   position: absolute
