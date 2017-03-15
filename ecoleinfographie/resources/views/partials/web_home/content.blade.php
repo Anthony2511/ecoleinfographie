@@ -29,4 +29,18 @@
     </div>
 </section>
 
-
+<section class="webintegrator">
+    <div class="webintegrator__wrapper">
+        <img class="webintegrator__img" src="./img/webintegrator-desktop.png" srcset="./img/webintegrator-desktop@2x.png 2x" width="1145" height="559" alt="">
+        <img class="webintegrator__img--2" src="./img/webintegrator-ipad.png" srcset="./img/webintegrator-ipad@2x.png 2x" width="442" height="218" alt="">
+        <div class="webintegrator__wrapper-text">
+            <h2 role="heading" aria-level="2" class="webintegrator__title">
+                L’intégrateur web
+            </h2>
+            <p class="webintegrator__text">
+                Spécialiste du HTML, du CSS et du Javascript, il transforme des images fournies par le designer en vraies pages Web utilisables. La qualité pour lui, c’est de faire des sites accessibles dans un grand nombre de conditions d’utilisation, sur un téléphone, un vieil ordinateur, ou du matériel ultra-moderne.
+            </p>
+            <a href="#webintegrator" class="webintegrator__link">Voir un ancien diplômé qui est intégrateur web</a>
+        </div>
+    </div>
+</section>

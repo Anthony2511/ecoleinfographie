@@ -1,5 +1,6 @@
 .web-what
 .webdesigner
+.webintegrator
   position relative
   &__wrapper
     position: relative
@@ -38,7 +39,7 @@
 .webdesigner
   min-height s(740)
   background-color $cBackgroundBlueGrey
-  margin-bottom 300px
+  margin-bottom s(250)
   baseShawl($cBackgroundBlueGrey, 4.5deg)
   &__wrapper-text
     float: left
@@ -46,5 +47,28 @@
     margin-top s(200)
   &__img
     position: absolute
-    right: s(-170)
+    right: s(-150)
     top s(170)
+
+.webintegrator
+  min-height s(740)
+  &__wrapper-text
+    position: relative
+    float: right
+    max-width s(560)
+    margin-top s(35)
+    text-align: right
+    z-index 3
+  &__img
+    position: absolute
+    left: s(-350)
+    top s(-50)
+    z-index 1
+    max-width none
+  &__img--2
+    position: absolute
+    top s(270)
+    left s(165)
+    z-index 2
+
+
