@@ -1,28 +1,50 @@
 .web-what
+.webdesigner
   position relative
-  min-height s(850)
   &__wrapper
     position: relative
     @extend .containerGridz
     padding 0 s($paddingSideGlobal)
     clearfix(right)
+  &__title
+    @extend .titleXXXL
+    margin-bottom s(30, $text-XXXL)
+  &__text
+    @extend .paragraph21
+  &__link
+    @extend .linkArrowLarge
+    margin-top s(50, $text-L)
+
+.web-what
+  min-height s(850)
+  &__wrapper
     &-text
       float: right
       width 45%
       margin-top s(380)
   &__title
-    @extend .titleXXXL
-    margin-bottom s(30, $text-XXXL)
     & span
       @extend .hidden
     & svg
       position: relative
       top s(7)
       left s(5)
-  &__text
-    @extend .paragraph21
   &__img
     position: absolute
-    top: 0
-    left -250px
+    top: s(-50)
+    left s(-250)
+    z-index 10
 
+.webdesigner
+  min-height s(740)
+  background-color $cBackgroundBlueGrey
+  margin-bottom 300px
+  baseShawl($cBackgroundBlueGrey, 4.5deg)
+  &__wrapper-text
+    float: left
+    width 36%
+    margin-top s(200)
+  &__img
+    position: absolute
+    right: s(-170)
+    top s(170)
