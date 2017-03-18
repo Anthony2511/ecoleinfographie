@@ -2,6 +2,7 @@
 .webdesigner
 .webintegrator
 .frontend
+.devbackend
   position relative
   &__wrapper
     position: relative
@@ -75,6 +76,10 @@
 
 .frontend
   min-height s(1000)
+  padding-top s(120)
+  &:before
+    @extend .baseshawl
+    bottom s(100)
   &__overflowh
     position absolute
     top s(29)
@@ -83,6 +88,21 @@
     width 609px
     height 381px
     overflow hidden
+  &__wrapper-text
+    float: left
+    max-width 41%
+    margin-top s(51)
+  &__link
+    width 90%
+  &__wrapper
+    position absolute
+    left 0
+    right 0
+  &__anim-container
+    position absolute
+    right s(-200)
+    width s(818)
+    height 100%
   &__anim-wrapper
     position: relative
     & .anim-front

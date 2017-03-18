@@ -47,12 +47,13 @@
 
 <section class="frontend">
     <div class="frontend__wrapper">
-        <div class="frontend__anim-wrapper">
-
-            <div class="frontend__overflowh">
-                {!! file_get_contents(asset('svg/frontend.svg')) !!}
+        <div class="frontend__anim-container">
+            <div class="frontend__anim-wrapper">
+                <div class="frontend__overflowh">
+                    {!! file_get_contents(asset('svg/frontend.svg')) !!}
+                </div>
+                <img class="frontend__img" src="./img/web-frontend.png" srcset="./img/web-frontend@2x.png 2x" width="818" height="479" alt="">
             </div>
-            <img class="frontend__img" src="./img/web-frontend.png" srcset="./img/web-frontend@2x.png 2x" width="818" height="479" alt="">
         </div>
         <div class="frontend__wrapper-text">
             <h2 role="heading" aria-level="2" class="frontend__title">
@@ -62,6 +63,22 @@
                 Spécialiste du code Javascript, il anime les pages, réalise en codant des effets spectaculaires, sécurise l’expérience utilisateur. La qualité pour lui, c’est de savoir travailler pour l’avenir en écrivant du code facile à maintenir et à étendre, et pour le passé, en écrivant un code compatible. 
             </p>
             <a href="#webintegrator" class="frontend__link">Voir un ancien diplômé qui est développeur front-end</a>
+        </div>
+    </div>
+</section>
+
+<section class="devbackend">
+    <div class="devbackend__wrapper">
+        <img class="devbackend__img" src="./img/backend_imac.png" srcset="./img/backend_imac@2x.png 2x" width="1264" height="765" alt="">
+        <img class="devbackend__img--2" src="./img/backend__code.png" srcset="./img/backend__code@2x.png 2x" width="1026" height="488" alt="">
+        <div class="devbackend__wrapper-text">
+            <h2 role="heading" aria-level="2" class="devbackend__title">
+                Le développeur backend
+            </h2>
+            <p class="devbackend__text">
+                Spécialiste des serveurs, des bases de données et des API. Il fait tout ce que le grand public ne voit pas, mais qui permet aux administrateurs d’un site de gérer leur contenu sans devoir tapper une ligne de code.
+            </p>
+            <a href="#devbackend" class="devbackend__link">Voir un ancien diplômé qui est développeur backend</a>
         </div>
     </div>
 </section>
