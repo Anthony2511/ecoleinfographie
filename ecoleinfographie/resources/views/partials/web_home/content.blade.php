@@ -44,3 +44,24 @@
         </div>
     </div>
 </section>
+
+<section class="frontend">
+    <div class="frontend__wrapper">
+        <div class="frontend__anim-wrapper">
+
+            <div class="frontend__overflowh">
+                {!! file_get_contents(asset('svg/frontend.svg')) !!}
+            </div>
+            <img class="frontend__img" src="./img/web-frontend.png" srcset="./img/web-frontend@2x.png 2x" width="818" height="479" alt="">
+        </div>
+        <div class="frontend__wrapper-text">
+            <h2 role="heading" aria-level="2" class="frontend__title">
+                Le développeur front-end
+            </h2>
+            <p class="frontend__text">
+                Spécialiste du code Javascript, il anime les pages, réalise en codant des effets spectaculaires, sécurise l’expérience utilisateur. La qualité pour lui, c’est de savoir travailler pour l’avenir en écrivant du code facile à maintenir et à étendre, et pour le passé, en écrivant un code compatible. 
+            </p>
+            <a href="#webintegrator" class="frontend__link">Voir un ancien diplômé qui est développeur front-end</a>
+        </div>
+    </div>
+</section>

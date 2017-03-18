@@ -1,6 +1,7 @@
 .web-what
 .webdesigner
 .webintegrator
+.frontend
   position relative
   &__wrapper
     position: relative
@@ -71,4 +72,34 @@
     left s(165)
     z-index 2
 
+
+.frontend
+  min-height s(1000)
+  &__overflowh
+    position absolute
+    top s(29)
+    left s(105)
+    z-index 2
+    width 609px
+    height 381px
+    overflow hidden
+  &__anim-wrapper
+    position: relative
+    & .anim-front
+      position absolute
+      z-index 3
+      & .line-code
+        transform translateY(0)
+        stroke-dashoffset 0px
+      & .logojs
+        transform: translateX(915px) translateY(627px);
+        transform-origin 50% 50%
+      & .logojs ellipse
+        transform-origin 50px 50px
+      & .logojs path
+        transform-origin 50% 50%
+  &__img
+    position absolute
+    z-index 1
+    top: 0
 
