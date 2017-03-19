@@ -41,7 +41,6 @@
             targets: "#logojs path",
             translateY: 250,
             scale: [1, 0],
-            opacity: [1, 0],
             duration: 500,
             offset: '-=500',
             easing: 'easeInQuart'
@@ -53,10 +52,9 @@
                 el.setAttribute('stroke-dasharray', pathLength);
                 return [pathLength, 0]
             },
-            offset: '-=300',
             stroke: {
                 value: function(el, i) {
-                    return 'rgb(200,'+ i * 8 +',150)';
+                    return i;
                 },
                 easing: 'easeInOutBack',
                 duration: 2000,

@@ -82,3 +82,36 @@
         </div>
     </div>
 </section>
+
+<section class="webmobile">
+    <div class="webmobile__wrapper">
+        <div class="webmobile__wrapper-text">
+            <h2 role="heading" aria-level="2" class="webmobile__title">
+                Le développeur backend
+            </h2>
+            <p class="webmobile__text">
+                Spécialiste des téléphones et tablettes, il peut créer de vraies applications pour iOS ou Android en utilisant des outils généralement rencontrés dans le Web traditionnel.
+            </p>
+            <a href="#webmobile" class="webmobile__link">Voir un ancien diplômé qui est développeur mobile</a>
+        </div>
+        <img class="webmobile__img--1" src="./img/webmobile-sketch.png" srcset="./img/webmobile-sketch@2x.png 2x" width="760" height="398" alt="">
+        <img class="webmobile__img--2" src="./img/webmobile-connexiopn.png" srcset="./img/webmobile-connexion@2x.png 2x" width="760" height="398" alt="">
+        <img class="webmobile__img--3" src="./img/webmobile-padlock.png" srcset="./img/webmobile-padlock@2x.png 2x" width="760" height="398" alt="">
+        <img class="webmobile__img--4" src="./img/webmobile-code.png" srcset="./img/webmobile-code@2x.png 2x" width="760" height="398" alt="">
+    </div>
+</section>
+
+<div class="redirect">
+    <strong class="redirect__title">La formation web couvre naturellement l’ensemble des techniques et savoir-faire requis pour exercer ces métiers.</strong>
+    <ul class="redirect__list">
+        <li class="redirect__item">
+            <a href="#" class="redirect__link" title="">Voir la formation en web</a>
+        </li>
+        <li class="redirect__item">
+            <a href="#" class="redirect__link" title="">Voir le programme des cours en web</a>
+        </li>
+        <li class="redirect__item">
+            <a href="#" class="redirect__link" title="">Voir les anciens bacheliers travaillant dans le web</a>
+        </li>
+    </ul>
+</div>

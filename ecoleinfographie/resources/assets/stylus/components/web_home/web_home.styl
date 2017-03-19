@@ -3,6 +3,7 @@
 .webintegrator
 .frontend
 .devbackend
+.webmobile
   position relative
   &__wrapper
     position: relative
@@ -142,3 +143,38 @@
     top s(50)
     left s(-250)
     z-index 2
+
+.webmobile
+  min-height s(740)
+  z-index 1
+  &:before
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: skewY(4.5deg);
+    transform-origin: 100% 0;
+    bottom: -1px;
+    background-color: $cBackgroundBlueGrey
+    z-index -1
+  &__wrapper-text
+    width 38%
+    padding-top s(100)
+  &__img--1
+    position absolute
+    top s(-180)
+    right s(-70)
+  &__img--2
+    position absolute
+    top s(40)
+    right s(-320)
+  &__img--3
+    position absolute
+    top s(360)
+    right s(150)
+  &__img--4
+    position absolute
+    top s(400)
+    right s(-460)
+
