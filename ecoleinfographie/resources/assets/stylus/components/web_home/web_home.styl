@@ -19,12 +19,12 @@
     margin-top s(50, $text-L)
 
 .web-what
-  min-height s(850)
+  min-height s(950)
   &__wrapper
     &-text
       float: right
       width 45%
-      margin-top s(380)
+      margin-top s(350)
   &__title
     & span
       @extend .hidden
@@ -123,3 +123,22 @@
     z-index 1
     top: 0
 
+.devbackend
+  min-height s(740)
+  &__wrapper-text
+    position: relative
+    float: right
+    max-width s(560)
+    text-align: right
+    z-index 3
+  &__img
+    position: absolute
+    left: s(-250)
+    top s(-280)
+    z-index 1
+    max-width none
+  &__img--2
+    position: absolute
+    top s(50)
+    left s(-250)
+    z-index 2

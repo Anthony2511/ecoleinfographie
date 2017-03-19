@@ -8,7 +8,7 @@
                 {!! file_get_contents(asset('svg/question1.svg')) !!}
             </h2>
             <p class="web-what__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra eget nibh.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra eget nibh. Duis sollicitudin, dui id semper tempor, quam ante dictum justo, sit amet finibus urna ipsum sit amet tortor. Fusce sit amet tellus volutpat.
             </p>
         </div>
     </div>
