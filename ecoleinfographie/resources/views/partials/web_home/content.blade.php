@@ -87,7 +87,7 @@
     <div class="webmobile__wrapper">
         <div class="webmobile__wrapper-text">
             <h2 role="heading" aria-level="2" class="webmobile__title">
-                Le développeur backend
+                Le développeur mobile
             </h2>
             <p class="webmobile__text">
                 Spécialiste des téléphones et tablettes, il peut créer de vraies applications pour iOS ou Android en utilisant des outils généralement rencontrés dans le Web traditionnel.
