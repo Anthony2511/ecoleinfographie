@@ -2,26 +2,30 @@
     "use strict";
 
     var logoTimeline = anime.timeline(),
-        isGoodPage = document.getElementsByClassName('les-metiers-du-web');
+        isGoodPage = document.getElementsByClassName('les-metiers-du-web'),
+        counter = 0;
 
 
     // Function for check if elelment is visible
     function checkVisible( elm, evale ) {
         var evale;
         evale = evale || "object visible";
-        var viewportHeight = $(window).height(), // Viewport Height
-            scrolltop = $(window).scrollTop(), // Scroll Top
-            y = $(elm).offset().top,
-            elementHeight = $(elm).height();
+        if (isGoodPage.length > 0) {
+            var viewportHeight = $(window).height(), // Viewport Height
+                scrolltop = $(window).scrollTop(), // Scroll Top
+                y = $(elm).offset().top,
+                elementHeight = $(elm).height();
 
-        if (evale == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
-        if (evale == "above") return ((y < (viewportHeight + scrolltop)));
+            if (isGoodPage.length > 0) {
+                if (evale == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+                if (evale == "above") return ((y < (viewportHeight + scrolltop)));
+            }
+        }
     }
-    var counter = 0;
+
 
     $(window).on('scroll',function() {
-        if (counter == 0){
-            if (checkVisible($('.frontend'))) {
+            if (checkVisible($('.frontend')) && counter == 0) {
                 if (isGoodPage.length > 0){
                     logoTimeline
                         .add({
@@ -84,7 +88,5 @@
                 }
                 counter++;
             }
-        }
     });
 })();
-
