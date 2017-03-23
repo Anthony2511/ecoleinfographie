@@ -5,26 +5,7 @@
         </h1>
         <a href="#home" class="logo">Logo</a>
         @include('partials.navigation')
-        <div class="breadcrumb breadcrumb--header isOpacity">
-            <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-                <li class="breadcrumb__item" itemprop="itemListElement" itemscope
-                    itemtype="http://schema.org/ListItem">
-                    <a href="#" class="breadcrumb__link breadcrumb__link--home" itemscope itemtype="http://schema.org/Thing"
-                       itemprop="item">
-                        <span itemprop="name">Page d’accueil</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-                <li class="breadcrumb__item" itemprop="itemListElement" itemscope
-                    itemtype="http://schema.org/ListItem">
-                    <a href="#" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
-                       itemprop="item">
-                        <span itemprop="name">Les métiers du web</span>
-                    </a>
-                    <meta itemprop="position" content="2" />
-                </li>
-            </ol>
-        </div>
+        @include('partials.breadcrumb')
         <div class="header-trades__subnav isOpacity" role="navigation">
             <h2 role="heading" aria-level="2" class="header-trades__subnav__title">Navigation secondaire pour la page des métiers du web</h2>
             <ul class="header-trades__subnav__list">
