@@ -76,6 +76,13 @@ trait PageTemplates
     private function web_home()
     {
 	    $this->crud->addField([
+		    'name' => 'header_large',
+		    'label' => '<b>La page a t’elle un grand header ?</b>',
+		    'type' => 'checkbox',
+		    'fake' => true,
+		    'store_in' => 'extras',
+	    ]);
+	    $this->crud->addField([
 		    'name' => 'content',
 		    'label' => 'Content',
 		    'type' => 'wysiwyg',
