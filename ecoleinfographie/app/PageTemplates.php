@@ -47,6 +47,13 @@ trait PageTemplates
                         'fake' => true,
                         'store_in' => 'extras',
                     ]);
+	    $this->crud->addField([
+		    'name' => 'header_large',
+		    'label' => '<b>La page a t’elle un grand header ?</b>',
+		    'type' => 'checkbox',
+		    'fake' => true,
+		    'store_in' => 'extras',
+	    ]);
         $this->crud->addField([   // CustomHTML
                         'name' => 'content_separator',
                         'type' => 'custom_html',

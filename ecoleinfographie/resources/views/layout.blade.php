@@ -9,7 +9,7 @@
 @endif--}}
 @yield('header')
 
-<div class="container">
+<div class="container <?php if(isset($page->header_large) == false) echo 'container--header-min';?>">
     @yield('content')
 </div>
 <div class="footer__container">
