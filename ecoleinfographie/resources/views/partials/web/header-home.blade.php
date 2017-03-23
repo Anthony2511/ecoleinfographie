@@ -25,7 +25,7 @@
                 </li>
             </ol>
         </div>
-        <nav class="header-trades__subnav isOpacity" role="navigation">
+        <div class="header-trades__subnav isOpacity" role="navigation">
             <h2 role="heading" aria-level="2" class="header-trades__subnav__title">Navigation secondaire pour la page des métiers du web</h2>
             <ul class="header-trades__subnav__list">
                 <li class="header-trades__subnav__item">
@@ -38,7 +38,7 @@
                     <a href="" class="header-trades__subnav__link">Les anciens bacheliers du web</a>
                 </li>
             </ul>
-        </nav>
+        </div>
         <div class="phone-illu__container">
             <div class="phone-illu" data-type="parallax" data-depth="0.05">
                 <img class="phone-illu__img-container" src="./img/phoneweb.png" srcset="./img/phoneweb@2x.png 2x" width="351" height="542" alt="">

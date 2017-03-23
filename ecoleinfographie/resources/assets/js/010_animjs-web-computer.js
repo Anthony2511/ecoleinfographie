@@ -23,7 +23,6 @@
         }
     }
 
-
     $(window).on('scroll',function() {
             if (checkVisible($('.frontend')) && counter == 0) {
                 if (isGoodPage.length > 0){
