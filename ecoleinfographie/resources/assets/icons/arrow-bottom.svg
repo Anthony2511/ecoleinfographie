@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Métiers-du-web---Formation-Test" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.6">
+        <g id="Métiers-du-web---Formation" transform="translate(-1225.000000, -884.000000)" fill="#253D59">
+            <g id="web-qualité" transform="translate(625.000000, 488.000000)">
+                <g id="go-bottom-button" transform="translate(586.000000, 380.000000)">
+                    <path d="M16.9642857,14.2023677 C20.7022856,16.7601969 23.9300569,18.9624235 27.7499996,21.5580277 C27.9034853,21.662211 28.0002282,21.8448453 27.9999996,22.0300158 C28.0000282,22.3202246 27.8418282,22.3794404 27.7232282,22.5197858 C24.422114,24.8046666 20.5847427,27.3462157 16.8928571,29.911075 C16.6806,30.0513065 16.3735714,30.0220975 16.1875143,29.8487531 C16.0014571,29.6754086 15.9545429,29.3749127 16.0803714,29.15415 L20.2053713,22.0300158 C18.7907713,19.586945 17.2463142,17.1173269 16,14.6209106 C16,14.3411971 16.1032286,14.1382192 16.2857143,14.0562318 C16.5529143,13.9026582 16.7436571,14.1015242 16.9642857,14.2023677 L16.9642857,14.2023677 Z" id="Path" transform="translate(22.000000, 22.000000) rotate(-270.000000) translate(-22.000000, -22.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
