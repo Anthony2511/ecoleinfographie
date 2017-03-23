@@ -1,8 +1,9 @@
 @extends('layout')
+
 @section('header')
-    @include('partials.web.header-home')
+    @include('partials.header-min')
 @endsection
 
 @section('content')
-    @include('partials.web.content-home')
 @endsection
+

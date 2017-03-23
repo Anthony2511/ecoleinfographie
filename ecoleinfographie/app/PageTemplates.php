@@ -82,4 +82,13 @@ trait PageTemplates
 		    'placeholder' => 'Your content here',
 	    ]);
     }
+	private function web_training()
+	{
+		$this->crud->addField([
+			'name' => 'content',
+			'label' => 'Content',
+			'type' => 'wysiwyg',
+			'placeholder' => 'Your content here',
+		]);
+	}
 }
