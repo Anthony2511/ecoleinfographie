@@ -1,0 +1,170 @@
+.les-metiers-du-web-formation
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+
+.formation-intro
+  @extend .containerGridz
+  &__title *
+    display: block
+    color $cBlueTitles
+    text-transform uppercase
+  &__title
+    margin s(60) 0 s(85) col(1,12) + gutter(12)
+  &__title span
+    font-size s($sz4)
+    margin-bottom s(5, $sz4)
+  &__title strong
+    position: relative
+    display: inline-block
+    font-size s($sz2)
+    font-weight 700
+    letter-spacing 0.5px
+    &:after
+      content ''
+      display: block
+      width s(180, $sz2)
+      height s(5, $sz2)
+      margin-top s(20, $sz2)
+      background-color $cBlueTitles
+      position absolute
+      right: 0
+
+.formation-quality
+  position: relative
+  &__intro-container
+    position: absolute
+    top s(75)
+    right: 0
+    width col(7,12)
+    background-color $cWhite
+  &__container-text
+    margin 0 auto
+    padding s(50) 0 s(64)
+    width col(5,7) + gutter(7) + gutter(7)
+    clearfix()
+  &__title *
+    display: block
+    color $cBlueTitles
+    text-transform uppercase
+  &__title span
+    font-size s($sz5)
+    margin-bottom s(5, $sz5)
+  &__title strong
+    font-size s($sz4)
+    font-weight: 700
+    letter-spacing 0.5px
+    margin-bottom s(30, $sz4)
+  &__text
+    @extend .paragraph21
+    margin-bottom s(50, $sz6)
+  &__link-container
+    position: relative
+    display: block;
+    height: s(20)
+    width: 100%
+    &:after
+      position: absolute
+      bottom: -14px
+      content ''
+      display: inline-block
+      height 1px
+      width 88.5%
+      background-color $cGrey1
+  &__link
+    position absolute
+    right 0
+    &:after // Circle
+      position: absolute
+      top -12px
+      right: 0
+      content ''
+      display: inline-block
+      width 44px
+      height 44px
+      border 2px solid rgba(54,61,71,0.80)
+      border-radius 50%
+    & span
+      position: relative
+      display inline-block
+      font-size s($sz8)
+      padding-right s(60)
+      color $cBlueCiel
+      letter-spacing 0.2px
+      &:after // Arrow
+      &:before // Arrow
+        position: absolute
+        right: 0
+        icon ('arrow-bottom')
+        right 13px
+        top 5px
+        font-size:13px;
+        color rgba(36,61,89,0.60);
+      &:after // Arrow
+        transform translateY(-12px)
+        opacity 0
+        transition .3s $ease-out-quart all
+        transition-property transform, opacity
+      &:before // Arrow
+        transform translateY(0)
+        opacity 1
+        transition .3s $ease-out-quart all
+        transition-property transform, opacity
+  &__link:hover span:after // Arrow
+    transform translateY(0px)
+    opacity 1
+    color $cBlueCiel
+    transition .3s $ease-out-quart all
+    transition-property transform, opacity
+  &__link:hover span:before // Arrow
+    transform translateY(12px)
+    opacity 0
+    transition .3s $ease-out-quart all
+    transition-property transform, opacity
+
+.skills-web
+  width col(10,12) + (gutter(12) * 2)
+  margin 0 auto
+  padding s(50) 0
+  background-color $cBlue1
+  &__container
+    width 80.3738317757009%
+    margin: 0 auto
+  & *
+    color $cWhite
+  &__title
+    display: block
+    width col(3,8) - (gutter(10) * 2) + (gutter(8) * 2)
+    margin-bottom s(60, $sz5)
+    font-size s($sz5)
+    line-height: 1.3em
+    font-weight 700
+    text-transform: uppercase
+    letter-spacing 0.4px
+  &__list
+    clearfix(left)
+  &__item
+    width 26.7441860465116% // Parent = 860 -> 230/860
+    margin-right 9.8837209% // parent = 860 -> 85/860
+    margin-bottom s(60)
+    float left
+    text-align: center
+    &:nth-last-child(-n+3)
+      margin-bottom 0
+    &:nth-child(3n+3)
+      margin-right: 0
+    &:nth-child(4n+4)
+      clear left
+    & svg
+      margin-bottom s(13)
+    &__title
+      display block
+      font-size s($sz6)
+      margin-bottom s(10, $sz6)
+      font-weight 700
+      text-transform uppercase
+      letter-spacing 0.7px
+    &__text
+      font-size s($sz8)
+      line-height 1.25em
