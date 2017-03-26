@@ -4,8 +4,9 @@
     &:before
       background-color $cBackgroundGrey
 
-.formation-intro
+.formation-container-top
   @extend .containerGridz
+.formation-intro
   &__title *
     display: block
     color $cBlueTitles
@@ -125,7 +126,7 @@
 
 .skills-web
   width col(10,12) + (gutter(12) * 2)
-  margin 0 auto
+  margin s(55) auto s(200)
   padding s(50) 0
   background-color $cBlue1
   &__container
@@ -168,3 +169,68 @@
     &__text
       font-size s($sz8)
       line-height 1.25em
+
+.formation-infos
+  &__container-top
+    background #004966 url("../img/formation-web-background1.jpg") no-repeat center center/cover;
+    padding s(160) 0
+  &__title-wrap
+    @extend .containerGridz
+    position: relative
+  &__title
+    width col(5,12)
+    font-size: s($sz2)
+    font-weight: 700
+    text-transform: uppercase
+    color: $cWhite
+    letter-spacing .5px
+    line-height: 1.2
+  &__img1
+    position: absolute
+    top: s(-40)
+    right: s(40)
+  &__img2
+    position: absolute
+    top s(200)
+    right s(250) // 2 col + 2 gutter + padding-right
+  &__text1
+    @extend .containerGridz
+    margin-top s(60)
+    &__title
+      display: block
+      width col(4,12) + gutter(12)
+      margin-bottom s(10)
+      @extend .titleXXL
+      letter-spacing .3px
+    &__text
+      width col(5,12) + gutter(12)
+      @extend .paragraph21
+      margin-bottom s(120, $sz6)
+      & a
+        @extend .linkInText
+
+.formation-choice
+  @extend .containerGridz
+  &__wrapper
+    position: relative
+    background-color $cWhite
+  &__title
+    @extend .titleXXL
+    width col(3,12)
+    padding s(70, $sz4) col(1,12)
+    box-sizing content-box
+    letter-spacing 0.3px
+    line-height: 1.25
+  &__text
+    @extend .paragraph21
+    position: absolute
+    top s(80, $sz6)
+    right col(1,12)
+    width col(6,12) + (gutter(12)*2)
+    padding s(60, $sz6)
+    background $cBlue1 url("../img/formation-chairs.jpg") no-repeat center center/cover
+    color $cWhite
+    & b
+      color inherit
+      font-size inherit
+      font-weight 600

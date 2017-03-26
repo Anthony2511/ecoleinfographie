@@ -57,3 +57,29 @@
     width 100%
   & span
     @extend .hidden
+
+/************************************\
+		LINKS IN TEXT
+\************************************/
+
+.linkInText
+  position: relative
+  display: inline-block
+  font-size: inherit
+  letter-spacing inherit
+  color $cBlueCiel
+  font-weight: 600
+  &:hover:after
+  &:focus:after
+    width 100%
+    transition .2s $ease-out-quart width
+  &:after
+    content ''
+    position absolute
+    left: 0
+    bottom: 2px
+    display: inline-block
+    width 0%
+    height 2px
+    background-color $cBlueCiel
+    transition .2s $ease-out-quart width
