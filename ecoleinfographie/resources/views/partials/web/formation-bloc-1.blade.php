@@ -145,3 +145,20 @@
     </div>
 </section>
 
+<div class="redirect-container">
+    <div class="redirect">
+        <strong class="redirect__title">Si ce programme te fait envie, tu peux t’inscrire ou venir à la prochaine journée porte ouvertes ou encore t’inscrire à une de nos journée d’immersion.</strong>
+        <ul class="redirect__list">
+            <li class="redirect__item">
+                <a href="#" class="redirect__link" title="">S’incrire en infographie</a>
+            </li>
+            <li class="redirect__item">
+                <a href="#" class="redirect__link" title="">Se renseigner sur la prochaine journée porte ouverte</a>
+            </li>
+            <li class="redirect__item">
+                <a href="#" class="redirect__link" title="">S’inscrire à une journée d’immersion</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+
