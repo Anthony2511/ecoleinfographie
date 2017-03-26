@@ -2,8 +2,9 @@ var elixir = require('laravel-elixir'),
     gulp = require('gulp'),
     stylus = require('laravel-elixir-stylus'),
     autoprefixer = require('gulp-autoprefixer'),
-    tinypng = require('elixir-tinypng'),
-    plumber = require('gulp-plumber');
+    tinypng = require('elixir-tinypng');
+
+require('laravel-elixir-svg-symbols');
 
 elixir(function (mix) {
 
@@ -26,5 +27,4 @@ elixir(function (mix) {
     mix.browserSync({
         proxy: 'ecoleinfographie.app'
     });
-})
-
+});
