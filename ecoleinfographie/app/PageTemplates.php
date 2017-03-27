@@ -105,4 +105,21 @@ trait PageTemplates
 			'placeholder' => 'Your content here',
 		]);
 	}
+	private function program_courses()
+	{
+		$this->crud->addField([
+			'name' => 'header_large',
+			'label' => '<b>La page a t’elle un grand header ?</b>',
+			'type' => 'checkbox',
+			'fake' => true,
+			'store_in' => 'extras',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'content',
+			'label' => 'Content',
+			'type' => 'wysiwyg',
+			'placeholder' => 'Your content here',
+		]);
+	}
 }
