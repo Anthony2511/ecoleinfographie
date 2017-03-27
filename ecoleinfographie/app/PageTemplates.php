@@ -104,6 +104,13 @@ trait PageTemplates
 			'type' => 'wysiwyg',
 			'placeholder' => 'Your content here',
 		]);
+		$this->crud->addField([
+			'name' => 'header_large',
+			'label' => '<b>La page a t’elle un grand header ?</b>',
+			'type' => 'checkbox',
+			'fake' => true,
+			'store_in' => 'extras',
+		]);
 	}
 	private function program_courses()
 	{

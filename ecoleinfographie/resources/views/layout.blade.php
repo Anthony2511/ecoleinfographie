@@ -2,14 +2,9 @@
 <html lang="fr" class="no-js">
 @include('partials.head')
 <body class="<?php if($page){ echo $page->slug; } ;?>">
-{{--@if($page->id == 1) <!-- If home -->
-    @include('partials.header-home')
-@elseif($page->id == 2) <!-- if web-home -->
-    @include('partials.web_home.header_web-home')
-@endif--}}
 @yield('header')
 
-<div class="container <?php if(isset($page->header_large) == false) echo 'container--header-min';?>">
+<div class="container <?php if($page->header_large == false) echo 'container--header-min';?>">
     @yield('content')
 </div>
 <div class="footer__container">
