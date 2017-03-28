@@ -1,0 +1,118 @@
+.les-metiers-du-web-programme-des-cours
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+
+.program
+  &__container-top
+    @extend .containerGridz
+  &__title *
+    display: block
+    color $cBlueTitles
+    text-transform uppercase
+  &__title
+    margin s(60) 0
+  &__title span
+    font-size s($sz5)
+    margin-bottom s(5, $sz5)
+  &__title strong
+    position: relative
+    display: inline-block
+    font-size s($sz4)
+    font-weight 700
+    letter-spacing 0.5px
+    &:after
+      content ''
+      display: block
+      width 100%
+      height s(5, $sz4)
+      margin-top s(20, $sz4)
+      background-color $cBlueTitles
+
+
+/************************************\
+		REDIRECTION COURS
+\************************************/
+
+.program__redirect
+  width col(10,12) + (gutter(12)*2)
+  margin 0 auto
+  @extend .clearfix
+  &-link
+    display block
+    float left
+    width 29.439252336% // ((315/1070)*100)
+    margin-right 5.799812909%
+    &:last-child
+      margin-right: 0
+  &__figure
+    position: relative
+    overflow hidden
+  &__img
+    display: block
+    transition .3s $ease-out-expo all
+    transition-property transform, opacity
+  &__img-wrapper
+    position: relative
+    overflow hidden
+    &:before
+      icon('arrow-bottom-2')
+      position: absolute
+      display: inline-block
+      text-align: center
+      left: 0
+      right: 0
+      margin-right 0
+      margin-left 0
+      top 50%
+      font-size s(39)
+      color $cWhite
+      transform translateY(-150%)
+      opacity 0
+      transition .3s $ease-out-expo all
+      transition-property transform, opacity
+      z-index 10
+  &__figcaption
+    background-color $cWhite
+    padding s(20) 0
+    text-align: center
+    &:after
+      content ''
+      display block
+      position: absolute
+      bottom: 0
+      width 100%
+      height s(0)
+      background-color $cGreen
+      transition .2s ease height
+    & span
+      display: block
+      font-size: s($sz9)
+      color: $cBlack;
+      text-transform: uppercase
+    & strong
+      display: block
+      margin-top s(5, $sz8)
+      font-size s($sz8)
+      font-weight: 700
+      color $cBlack
+      text-transform: uppercase
+      letter-spacing 0.7px
+
+.program__redirect-link:hover
+.program__redirect-link:focus
+  & .program__redirect__figcaption
+    &:after
+      height s(5)
+      transition .2s ease height
+  & .program__redirect__img-wrapper
+    &:before
+      opacity 1
+      transform translateY(-50%)
+      transition .3s $ease-out-expo all
+      transition-property transform, opacity
+  & .program__redirect__img
+    transform scale(1.15)
+    transition .3s $ease-out-expo all
+    transition-property transform, opacity
