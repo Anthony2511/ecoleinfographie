@@ -38,7 +38,8 @@
 .program__redirect
   width col(10,12) + (gutter(12)*2)
   margin 0 auto
-  @extend .clearfix
+  &:after
+    @extend .clearfix
   &-link
     display block
     float left
@@ -116,3 +117,67 @@
     transform scale(1.15)
     transition .3s $ease-out-expo all
     transition-property transform, opacity
+
+/************************************\
+		TABLE
+\************************************/
+
+.program-bloc
+  @extend .containerGridz
+  &__wrapper
+    width col(10,12) + (gutter(12)*2)
+    margin s(125) auto 0
+  &__title
+    @extend .title4
+    display: inline-block
+    text-transform: uppercase
+    margin-bottom s(25, $sz4)
+    &:after
+      content ''
+      display: block
+      width s(40, $sz4)
+      height s(5, $sz4)
+      background-color $cBlueTitles
+      margin-top s(10, $sz4)
+  &__text
+    display: block
+    font-size s($sz8)
+    margin-bottom s(10, $sz8)
+
+.program-bloc
+  &__container
+    &:before
+      @extend .clearfix
+  &__filter
+    margin s(25) 0 0 0
+    text-align right
+  &__filter-title
+    color $cBlue2
+    font-weight 700
+    font-size s($sz10)
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    margin-right s(25, $sz10)
+  &__button
+    display: inline-block
+    margin-right s(10, $sz9)
+    font-size s($sz9)
+    text-transform: uppercase
+    letter-spacing 0.43px
+    font-weight: bold
+    color $cBlue2
+    padding s(14) s(30)
+    border 1px solid $cGrey1
+    border-radius 500px
+    background-color rgba(255,255,255,.0)
+    transition .3s ease background-color
+    &:last-child
+      margin-right: 0
+  &__button--active
+    background-color $cWhite
+    color $cGreen
+  &__button:hover
+    background-color rgba(255,255,255,.8)
+    transition .3s ease background-color
+  &__button--active:hover
+    background-color $cWhite

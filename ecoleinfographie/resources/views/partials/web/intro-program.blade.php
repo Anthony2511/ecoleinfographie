@@ -40,7 +40,72 @@
             </a>
         </div>
     </div>
-    <section class="program__bloc program__bloc--1">
 
+
+    <section class="program-bloc program-bloc--1">
+        <div class="program-bloc__wrapper">
+            <h3 role="heading" aria-level="3" class="program-bloc__title">Le premier bloc</h3>
+            <span class="program-bloc__text">Le bloc 1 est identique à toutes les options.</span>
+            <span class="program-bloc__text">Cliquez sur un cours pour avoir plus d’informations.</span>
+            <div class="probram-bloc__container">
+
+                <div class="program-bloc__filter">
+                    <span class="program-bloc__filter-title">Filtrer&nbsp;:</span>
+                    <button class="program-bloc__button" id="b1-all">Toutes les options</button>
+                    <button class="program-bloc__button program-bloc__button--active" id="b1-option">Web uniquement</button>
+                </div>
+
+                <table class="program-table">
+                    <thead class="program-table__thead">
+                        <tr>
+                            <td class="program-table__orientation">Orientation</td>
+                            <td class="program-table__course">Nom du cours</td>
+                            <td class="program-table__link">Heures</td>
+                            <td class="program-table__ects">Crédits ECTS</td>
+                            <td class="program-table__quad">Quadrimestre</td>
+                        </tr>
+                    </thead>
+                    <tbody class="program-table__tbody">
+                        <tr>
+                            <td class="program-table__orientation">Commun</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__link">
+                                    <span class="program-table__course__name">Anglais 1</span>
+                                    <span class="program-table__course__desc">Découvre ou redécouvre les bases de l’Anglais</span>
+                                </a>
+                            </td>
+                            <td class="program-table__hour">15</td>
+                            <td class="program-table__ects">1</td>
+                            <td class="program-table__quad">1</td>
+                        </tr>
+                        <tr>
+                            <td class="program-table__orientation">Commun</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__link">
+                                    <span class="program-table__course__name">Anglais 2</span>
+                                    <span class="program-table__course__desc">Approfondis les connaissances apprises en Anglais 1</span>
+                                </a>
+                            </td>
+                            <td class="program-table__hour">15</td>
+                            <td class="program-table__ects">1</td>
+                            <td class="program-table__quad">1</td>
+                        </tr>
+                        <tr>
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__link">
+                                    <span class="program-table__course__name">Créations de pages Web - CSS</span>
+                                    <span class="program-table__course__desc">Apprends le langage qui met le web en couleur</span>
+                                </a>
+                            </td>
+                            <td class="program-table__hour">15</td>
+                            <td class="program-table__ects">1</td>
+                            <td class="program-table__quad">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
     </section>
 </section>
