@@ -149,7 +149,7 @@
     &:before
       @extend .clearfix
   &__filter
-    margin s(25) 0 0 0
+    margin s(25) 0 s(30) 0
     text-align right
   &__filter-title
     color $cBlue2
@@ -181,3 +181,92 @@
     transition .3s ease background-color
   &__button--active:hover
     background-color $cWhite
+
+
+// Thead
+.program-table
+  width 100%
+  &__thead
+    background-color $cBlue1
+    border-bottom s(10) solid $cBackgroundGrey
+    & *
+      color $cWhite
+      font-size: s(17)
+      font-weight: 600
+    & tr
+      height s(50)
+    & td
+      vertical-align: middle
+      border-right 2px solid $cBlue1 - 25%
+    & .program-table
+      &__orientation
+        width percentage(147/1070)
+        text-align: center
+        padding 0 5px
+      &__course
+        width percentage(526/1070)
+        padding-left percentage(30/1070)
+      &__hour
+        width percentage(113/1070)
+        text-align center
+        padding 0 5px
+      &__ects
+        width percentage(113/1070)
+        text-align: center
+        padding 0 5px
+      &__quad
+        width percentage(163/1070)
+        text-align: center
+        padding 0 5px
+
+//Tbody
+.program-table
+  &__tbody
+    & tr
+      position: relative
+      background-color $cWhite
+      box-shadow: 1px 1px 2px 0 rgba(179,179,179,0.50);
+      border-bottom 1px solid $cGrey1;
+    & td
+      padding s(25) 0
+      vertical-align middle
+    & .program-table
+      &__orientation
+        font-size s($sz10)
+        font-weight 700
+        color $cGrey2
+        text-align: center
+        letter-spacing 1px
+        text-transform: uppercase
+      &__course
+        padding-left percentage(30/1070)
+        &__name
+          display: block
+          margin-bottom s(4, $sz7)
+          font-size s($sz7)
+          color $cBlueCiel
+          font-weight 600
+        &__desc
+          font-size s($sz9)
+          font-weight 300
+      &__hour
+      &__ects
+      &__quad
+        color $cBlack
+        font-weight: bold
+        text-align: right
+        padding-right percentage(30/1070)
+
+// hover tr
+.program-table__tbody tr
+  transition .2s ease background-color
+.program-table__tbody tr:hover
+.program-table__tbody tr:focus
+  background-color $cWhite - 3%
+  transition .3s ease background-color
+
+
+
+// js
+.link-row
+  cursor pointer
