@@ -195,29 +195,32 @@
       font-weight: 600
     & tr
       height s(50)
-    & td
+    & th
       vertical-align: middle
       border-right 2px solid $cBlue1 - 25%
+      cursor pointer
+      &:last-child
+        border-right none
     & .program-table
       &__orientation
-        width percentage(147/1070)
+      &__hour
+      &__ects
+      &__quad
         text-align: center
         padding 0 5px
+      &__orientation
+        width percentage(147/1070)
       &__course
         width percentage(526/1070)
         padding-left percentage(30/1070)
+        text-align left
       &__hour
         width percentage(113/1070)
-        text-align center
-        padding 0 5px
       &__ects
         width percentage(113/1070)
-        text-align: center
-        padding 0 5px
       &__quad
         width percentage(163/1070)
-        text-align: center
-        padding 0 5px
+        cursor auto
 
 //Tbody
 .program-table
@@ -227,6 +230,8 @@
       background-color $cWhite
       box-shadow: 1px 1px 2px 0 rgba(179,179,179,0.50);
       border-bottom 1px solid $cGrey1;
+      &:last-child
+        border none
     & td
       padding s(25) 0
       vertical-align middle
@@ -265,7 +270,40 @@
   background-color $cWhite - 3%
   transition .3s ease background-color
 
+// sorting icons
+.program-table__thead th
+  & span
+    margin-right 7px
+  &:after
+    icon('triangle-double');
+    display: inline-block
+    font-size: s(9);
+    width 7px
+    color $cBlue1 - 60%
+  &:last-child:after
+    display: none
 
+.program-table__thead th.sorting-asc:after
+  position: relative
+  top -1px
+  width 7px
+  icon('triangle');
+  font-size s(5)
+.program-table__thead th.sorting-desc:after
+  position: relative
+  top -1px
+  width 7px
+  icon('triangle');
+  font-size s(5)
+  transform rotate(180deg)
+  transform-origin 50% 50%
+
+.program-table__tbody td span
+  margin-right 5px
+.program-table__tbody td:last-child span
+  margin-right: 0
+/*.program-table__tbody td a
+  margin-left 5px*/
 
 // js
 .link-row

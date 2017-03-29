@@ -58,11 +58,11 @@
                 <table class="program-table">
                     <thead class="program-table__thead">
                         <tr>
-                            <td class="program-table__orientation">Orientation</td>
-                            <td class="program-table__course">Nom du cours</td>
-                            <td class="program-table__hour">Heures</td>
-                            <td class="program-table__ects">Crédits</td>
-                            <td class="program-table__quad">Quadrimestre</td>
+                            <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
+                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
+                            <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
+                            <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
+                            <th class="program-table__quad"><span>Quadrimestre</span></th>
                         </tr>
                     </thead>
                     <tbody class="program-table__tbody">
@@ -74,9 +74,9 @@
                                 </a>
                                 <span class="program-table__course__desc">Découvre ou redécouvre les bases de l’Anglais</span>
                             </td>
-                            <td class="program-table__hour">15</td>
-                            <td class="program-table__ects">1</td>
-                            <td class="program-table__quad">1</td>
+                            <td class="program-table__hour"><span>15</span></td>
+                            <td class="program-table__ects"><span>1</span></td>
+                            <td class="program-table__quad"><span>1</span></td>
                         </tr>
                         <tr class="link-row" data-href="#">
                             <td class="program-table__orientation">Commun</td>
@@ -86,9 +86,9 @@
                                 </a>
                                 <span class="program-table__course__desc">Approfondis les connaissances apprises en Anglais 1</span>
                             </td>
-                            <td class="program-table__hour">15</td>
-                            <td class="program-table__ects">1</td>
-                            <td class="program-table__quad">1</td>
+                            <td class="program-table__hour"><span>15</span></td>
+                            <td class="program-table__ects"><span>1</span></td>
+                            <td class="program-table__quad"><span>1</span></td>
                         </tr>
                         <tr class="link-row" data-href="#">
                             <td class="program-table__orientation">Web</td>
@@ -98,9 +98,9 @@
                                 </a>
                                 <span class="program-table__course__desc">Apprends le langage qui met le web en couleur</span>
                             </td>
-                            <td class="program-table__hour">15</td>
-                            <td class="program-table__ects">1</td>
-                            <td class="program-table__quad">1</td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
                         </tr>
                     </tbody>
                 </table>
