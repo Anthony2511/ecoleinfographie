@@ -123,6 +123,8 @@
 \************************************/
 
 .program-bloc
+  &:last-child
+    padding-bottom s(130)
   @extend .containerGridz
   &__wrapper
     width col(10,12) + (gutter(12)*2)
@@ -166,7 +168,7 @@
     letter-spacing 0.43px
     font-weight: bold
     color $cBlue2
-    padding s(14) s(30)
+    padding s(14, $sz9) s(30, $sz9)
     border 1px solid $cGrey1
     border-radius 500px
     background-color rgba(255,255,255,.0)
@@ -308,5 +310,19 @@
   margin-left 5px*/
 
 // js
+.program-table__container
+  position: relative
+.program-table
+  display none
+
+.option-visible .program-table--option
+.all-visible .program-table--all
+  display table
+
 .link-row
   cursor pointer
+
+/*
+.probram-bloc__container
+  height 300px
+*/

@@ -42,7 +42,7 @@
     </div>
 
 
-    <section class="program-bloc program-bloc--1">
+    <section class="program-bloc program-bloc--1 option-visible">
         <div class="program-bloc__wrapper">
             <h3 role="heading" aria-level="3" class="program-bloc__title">Le premier bloc</h3>
             <span class="program-bloc__text">Le bloc 1 est identique à toutes les options.</span>
@@ -51,12 +51,62 @@
 
                 <div class="program-bloc__filter">
                     <span class="program-bloc__filter-title">Filtrer&nbsp;:</span>
-                    <button class="program-bloc__button" id="b1-all">Toutes les options</button>
-                    <button class="program-bloc__button program-bloc__button--active" id="b1-option">Web uniquement</button>
+                    <button class="program-bloc__button program-bloc__button--all">Toutes les options</button>
+                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">Web uniquement</button>
                 </div>
 
-                <table class="program-table">
-                    <thead class="program-table__thead">
+                <div class="program-table__container">
+                    <table class="program-table program-table--option">
+                        <thead class="program-table__thead">
+                            <tr>
+                                <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
+                                <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
+                                <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
+                                <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
+                                <th class="program-table__quad"><span>Quadrimestre</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="program-table__tbody">
+                            <tr class="link-row" data-href="#" >
+                                <td class="program-table__orientation">Commun</td>
+                                <td class="program-table__course">
+                                    <a href="#gocourse" class="program-table__course__link">
+                                        <span class="program-table__course__name">Anglais 1</span>
+                                    </a>
+                                    <span class="program-table__course__desc">Découvre ou redécouvre les bases de l’Anglais</span>
+                                </td>
+                                <td class="program-table__hour"><span>15</span></td>
+                                <td class="program-table__ects"><span>1</span></td>
+                                <td class="program-table__quad"><span>1</span></td>
+                            </tr>
+                            <tr class="link-row" data-href="#">
+                                <td class="program-table__orientation">Commun</td>
+                                <td class="program-table__course">
+                                    <a href="#gocourse" class="program-table__course__link">
+                                        <span class="program-table__course__name">Anglais 2</span>
+                                    </a>
+                                    <span class="program-table__course__desc">Approfondis les connaissances apprises en Anglais 1</span>
+                                </td>
+                                <td class="program-table__hour"><span>15</span></td>
+                                <td class="program-table__ects"><span>1</span></td>
+                                <td class="program-table__quad"><span>1</span></td>
+                            </tr>
+                            <tr class="link-row" data-href="#">
+                                <td class="program-table__orientation">Web</td>
+                                <td class="program-table__course">
+                                    <a href="#gocourse" class="program-table__course__link">
+                                        <span class="program-table__course__name">Créations de pages Web - CSS</span>
+                                    </a>
+                                    <span class="program-table__course__desc">Apprends le langage qui met le web en couleur</span>
+                                </td>
+                                <td class="program-table__hour"><span>60</span></td>
+                                <td class="program-table__ects"><span>5</span></td>
+                                <td class="program-table__quad"><span>2</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="program-table program-table--all">
+                        <thead class="program-table__thead">
                         <tr>
                             <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
                             <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
@@ -64,15 +114,15 @@
                             <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
                             <th class="program-table__quad"><span>Quadrimestre</span></th>
                         </tr>
-                    </thead>
-                    <tbody class="program-table__tbody">
+                        </thead>
+                        <tbody class="program-table__tbody">
                         <tr class="link-row" data-href="#" >
                             <td class="program-table__orientation">Commun</td>
                             <td class="program-table__course">
                                 <a href="#gocourse" class="program-table__course__link">
-                                    <span class="program-table__course__name">Anglais 1</span>
+                                    <span class="program-table__course__name">Vidéo</span>
                                 </a>
-                                <span class="program-table__course__desc">Découvre ou redécouvre les bases de l’Anglais</span>
+                                <span class="program-table__course__desc">Les principes de la technique vidéo</span>
                             </td>
                             <td class="program-table__hour"><span>15</span></td>
                             <td class="program-table__ects"><span>1</span></td>
@@ -102,10 +152,153 @@
                             <td class="program-table__ects"><span>5</span></td>
                             <td class="program-table__quad"><span>2</span></td>
                         </tr>
-                    </tbody>
-                </table>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </div>
     </section>
+    <section class="program-bloc program-bloc--1 option-visible">
+        <div class="program-bloc__wrapper">
+            <h3 role="heading" aria-level="3" class="program-bloc__title">Le deuxième bloc</h3>
+            <span class="program-bloc__text">Le bloc 2 vous permet de choisir votre option.</span>
+            <span class="program-bloc__text">Cliquez sur un cours pour avoir plus d’informations.</span>
+            <div class="probram-bloc__container">
+
+                <div class="program-bloc__filter">
+                    <span class="program-bloc__filter-title">Filtrer&nbsp;:</span>
+                    <button class="program-bloc__button program-bloc__button--all">Toutes les options</button>
+                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">Web uniquement</button>
+                </div>
+
+                <div class="program-table__container">
+                    <table class="program-table program-table--option">
+                        <thead class="program-table__thead">
+                            <tr>
+                                <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
+                                <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
+                                <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
+                                <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
+                                <th class="program-table__quad"><span>Quadrimestre</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="program-table__tbody">
+                            <tr class="link-row" data-href="#" >
+                                <td class="program-table__orientation">Commun</td>
+                                <td class="program-table__course">
+                                    <a href="#gocourse" class="program-table__course__link">
+                                        <span class="program-table__course__name">Anglais 1</span>
+                                    </a>
+                                    <span class="program-table__course__desc">Découvre ou redécouvre les bases de l’Anglais</span>
+                                </td>
+                                <td class="program-table__hour"><span>15</span></td>
+                                <td class="program-table__ects"><span>1</span></td>
+                                <td class="program-table__quad"><span>1</span></td>
+                            </tr>
+                            <tr class="link-row" data-href="#">
+                                <td class="program-table__orientation">Commun</td>
+                                <td class="program-table__course">
+                                    <a href="#gocourse" class="program-table__course__link">
+                                        <span class="program-table__course__name">Anglais 2</span>
+                                    </a>
+                                    <span class="program-table__course__desc">Approfondis les connaissances apprises en Anglais 1</span>
+                                </td>
+                                <td class="program-table__hour"><span>15</span></td>
+                                <td class="program-table__ects"><span>1</span></td>
+                                <td class="program-table__quad"><span>1</span></td>
+                            </tr>
+                            <tr class="link-row" data-href="#">
+                                <td class="program-table__orientation">Web</td>
+                                <td class="program-table__course">
+                                    <a href="#gocourse" class="program-table__course__link">
+                                        <span class="program-table__course__name">Créations de pages Web - CSS</span>
+                                    </a>
+                                    <span class="program-table__course__desc">Apprends le langage qui met le web en couleur</span>
+                                </td>
+                                <td class="program-table__hour"><span>60</span></td>
+                                <td class="program-table__ects"><span>5</span></td>
+                                <td class="program-table__quad"><span>2</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="program-table program-table--all">
+                        <thead class="program-table__thead">
+                        <tr>
+                            <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
+                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
+                            <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
+                            <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
+                            <th class="program-table__quad"><span>Quadrimestre</span></th>
+                        </tr>
+                        </thead>
+                        <tbody class="program-table__tbody">
+                        <tr class="link-row" data-href="#" >
+                            <td class="program-table__orientation">Commun</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Vidéo</span>
+                                </a>
+                                <span class="program-table__course__desc">Les principes de la technique vidéo</span>
+                            </td>
+                            <td class="program-table__hour"><span>15</span></td>
+                            <td class="program-table__ects"><span>1</span></td>
+                            <td class="program-table__quad"><span>1</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Commun</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Anglais 2</span>
+                                </a>
+                                <span class="program-table__course__desc">Approfondis les connaissances apprises en Anglais 1</span>
+                            </td>
+                            <td class="program-table__hour"><span>15</span></td>
+                            <td class="program-table__ects"><span>1</span></td>
+                            <td class="program-table__quad"><span>1</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Créations de pages Web - CSS</span>
+                                </a>
+                                <span class="program-table__course__desc">Apprends le langage qui met le web en couleur</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 </section>
