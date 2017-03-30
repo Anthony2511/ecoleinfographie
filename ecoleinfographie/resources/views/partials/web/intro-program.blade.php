@@ -164,6 +164,103 @@
                             <td class="program-table__ects"><span>5</span></td>
                             <td class="program-table__quad"><span>2</span></td>
                         </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+                        <tr class="link-row" data-href="#">
+                            <td class="program-table__orientation">Web</td>
+                            <td class="program-table__course">
+                                <a href="#gocourse" class="program-table__course__link">
+                                    <span class="program-table__course__name">Javascript</span>
+                                </a>
+                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
+                            </td>
+                            <td class="program-table__hour"><span>60</span></td>
+                            <td class="program-table__ects"><span>5</span></td>
+                            <td class="program-table__quad"><span>2</span></td>
+                        </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -171,7 +268,7 @@
             </div>
         </div>
     </section>
-    <section class="program-bloc program-bloc--1 option-visible">
+    <section class="program-bloc program-bloc--2 option-visible">
         <div class="program-bloc__wrapper">
             <h3 role="heading" aria-level="3" class="program-bloc__title">Le deuxième bloc</h3>
             <span class="program-bloc__text">Le bloc 2 vous permet de choisir votre option.</span>

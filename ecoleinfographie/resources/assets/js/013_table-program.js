@@ -152,136 +152,21 @@
     });
 })(jQuery);
 
-/*(function ($) {
-    "use strict";
-
-    var tableFilter = {
-        oConf: {
-            container: 'program-bloc .probram-bloc__container',
-            item: 'program-bloc .program-table'
-        },
-
-        $container: null,
-        $items: null,
-        aItems: [],
-
-        init: function () {
-            this.getElements();
-            this.getItems();
-            this.setEvents();
-            this.$container.addClass(tableFilter.oConf.container + '--active');
-            this.setActive(0);
-        },
-
-        getElements: function () {
-            this.$items = $('.' + tableFilter.oConf.item);
-            this.$container = $('.' + tableFilter.oConf.container);
-        },
-
-        setEvents: function () {
-            for (var i = 0; i < tableFilter.aItems.length; i++) {
-                tableFilter.aItems[i].$link.on('click', tableFilter.e_clickLink );
-            }
-        },
-
-        // EVENTS
-        e_clickLink: function(e) {
-            e.preventDefault();
-            var id = parseInt( $(e.target).closest('.program-bloc__button').attr('data-id') );
-            $('.program-bloc__button').blur();
-
-            tableFilter.setActive( id );
-        },
-
-        // Functions
-        getItems : function () {
-            tableFilter.$items.each(function( index ) {
-                var o = {};
-                o.$el = $(this);
-                o.id = o.$el.attr("id");
-                o.$link = $('a[href="#' + o.id + '"]');
-                o.$link.attr('data-id', index );
-                o.isActive= false;
-
-                tableFilter.aItems.push(o);
-            });
-        },
-
-        setActive: function ( id ) {
-
-            tableFilter.removeActive();
-
-            if (!tableFilter.aItems[id].isActive) {
-                tableFilter.aItems[id].$el.addClass('program-table--active');
-                tableFilter.aItems[id].$link.addClass('program-bloc__button--active');
-                tableFilter.aItems[id].isActive = true;
-
-                // Resize on load
-                var heightElement = tableFilter.aItems[id].$el.height();
-                $('.program-table__container').css('height', heightElement);
-
-                // Resize on resize window and click
-                $(window).on("resize click", function () {
-                    setTimeout(function () {
-                        var heightElement = tableFilter.aItems[id].$el.height();
-                        $('.program-table__container').css('height', heightElement);
-                    }, 100);
-                });
-
-            };
-        },
-
-        removeActive: function () {
-            for (var i = 0; i < tableFilter.aItems.length; i++) {
-                if (tableFilter.aItems[i].isActive) {
-                    tableFilter.aItems[i].$el.removeClass('program-table--active');
-                    tableFilter.aItems[i].$link.removeClass('program-bloc__button--active');
-                    tableFilter.aItems[i].isActive = false;
-                }
-            }
-        },
-    };
-
-    tableFilter.init();
-
-
-})(jQuery);*/
 
 (function ($) {
     "use strict";
 
     var button = $('.program-bloc__button');
 
-
     button.click(function () {
         $(this).closest('.program-bloc__filter').find('.program-bloc__button').removeClass('program-bloc__button--active');
         $(this).addClass('program-bloc__button--active');
         if ($(this).hasClass('program-bloc__button--option')){
             $(this).closest('.program-bloc').removeClass('all-visible').addClass('option-visible');
-            var heightElement = $('.program-table--option').height();
-            $(this).closest('.program-bloc').find('.program-table__container').css('height', heightElement);
         } else {
             $(this).closest('.program-bloc').removeClass('option-visible').addClass('all-visible');
-            var heightElement = $('.program-table--all').height();
-            $(this).closest('.program-bloc').find('.program-table__container').css('height', heightElement);
         }
     });
-
-        // Resize on load
-        var heightElement = $('.program-table--option').height();
-        $('.program-table__container').css('height', heightElement);
-
-        // Resize on resize window and click
-        $(window).on("resize", function () {
-            setTimeout(function () {
-
-
-                var heightElement = $('.program-table--option').height();
-
-                $('.program-table__container').css('height', heightElement);
-            }, 100);
-        });
-
 
 })(jQuery);
 
