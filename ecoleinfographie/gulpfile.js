@@ -4,8 +4,6 @@ var elixir = require('laravel-elixir'),
     autoprefixer = require('gulp-autoprefixer'),
     tinypng = require('elixir-tinypng');
 
-require('laravel-elixir-svg-symbols');
-
 elixir(function (mix) {
 
     mix.tinypng({
