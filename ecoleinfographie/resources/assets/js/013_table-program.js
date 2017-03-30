@@ -142,7 +142,7 @@
     $("table").stupidtable();
 })(jQuery);
 
-
+// Apply link all row
 (function ($) {
     "use strict";
     jQuery(document).ready(function($) {
@@ -151,4 +151,3 @@
         });
     });
 })(jQuery);
-

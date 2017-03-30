@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" class="no-js">
 @include('partials.head')
-<body class="<?php if($page){ echo $page->slug; } ;?>">
+<body class="<?php if($page){ echo $page->slug; } ;?>" data-page="<?php if($page){ echo $page->slug; } ;?>">
 @yield('header')
 
 <div class="container <?php if($page->header_large == false) echo 'container--header-min';?>">
