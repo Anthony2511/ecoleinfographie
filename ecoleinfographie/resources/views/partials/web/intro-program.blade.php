@@ -526,5 +526,18 @@
             </div>
         </div>
     </section>
-
 </section>
+<div class="redirect">
+    <strong class="redirect__title">Ce programme t'as plus&nbsp;? N’hésites pas à t’inscrire ou à consulter le programme des autres options.</strong>
+    <ul class="redirect__list">
+        <li class="redirect__item">
+            <a href="#" class="redirect__link" title="">S’inscrire à la HEPL en infographie</a>
+        </li>
+        <li class="redirect__item">
+            <a href="#" class="redirect__link" title="">Consulter le programme des cours de la 3D et l’audiovisuel</a>
+        </li>
+        <li class="redirect__item">
+            <a href="#" class="redirect__link" title="">Consulter le programme des cours en design graphique</a>
+        </li>
+    </ul>
+</div>
