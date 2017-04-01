@@ -21,6 +21,9 @@ trait PageTemplates
     | - page slug
     */
 
+   
+  
+
     private function home()
     {
         $this->crud->addField([   // CustomHTML

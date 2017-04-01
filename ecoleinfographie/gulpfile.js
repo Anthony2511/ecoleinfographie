@@ -4,6 +4,8 @@ var elixir = require('laravel-elixir'),
     autoprefixer = require('gulp-autoprefixer'),
     tinypng = require('elixir-tinypng');
 
+require('laravel-elixir-browserify-official');
+
 elixir(function (mix) {
 
     mix.tinypng({
@@ -15,6 +17,8 @@ elixir(function (mix) {
     mix.stylus('app.styl'), {
         use: [autoprefixer('last 7 versions', 'ie8' )]
     };
+
+    mix.browserify('all.js');
 
     mix.scriptsIn();
 
