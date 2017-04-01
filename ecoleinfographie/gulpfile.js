@@ -18,7 +18,7 @@ elixir(function (mix) {
         use: [autoprefixer('last 7 versions', 'ie8' )]
     };
 
-    mix.browserify('all.js');
+    //mix.browserify('all.js');
 
     mix.scriptsIn();
 
