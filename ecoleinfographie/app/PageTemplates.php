@@ -82,7 +82,6 @@ trait PageTemplates
 	    ]);
     }
 	
-    
     private function web_home()
     {
 	    $this->crud->addField([
@@ -99,6 +98,7 @@ trait PageTemplates
 		    'placeholder' => 'Your content here',
 	    ]);
     }
+    
 	private function web_training()
 	{
 		$this->crud->addField([
@@ -115,7 +115,26 @@ trait PageTemplates
 			'store_in' => 'extras',
 		]);
 	}
+	
 	private function program_courses()
+	{
+		$this->crud->addField([
+			'name' => 'header_large',
+			'label' => '<b>La page a t’elle un grand header ?</b>',
+			'type' => 'checkbox',
+			'fake' => true,
+			'store_in' => 'extras',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'content',
+			'label' => 'Content',
+			'type' => 'wysiwyg',
+			'placeholder' => 'Your content here',
+		]);
+	}
+	
+	private function former_students()
 	{
 		$this->crud->addField([
 			'name' => 'header_large',
