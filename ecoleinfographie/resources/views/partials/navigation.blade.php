@@ -23,7 +23,7 @@
                             <a href="les-metiers-du-web-programme-des-cours" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en web</span></a>
                         </li>
                         <li class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en web</span></a>
+                            <a href="les-metiers-du-web-anciens-etudiants" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en web</span></a>
                         </li>
                     </div>
                 </ul>
