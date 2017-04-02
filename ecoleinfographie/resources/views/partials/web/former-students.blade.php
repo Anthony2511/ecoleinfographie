@@ -41,11 +41,51 @@
                 <a href="#" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                            <img class="card_student__picture" src="./img/men3.jpg" width="350" height="200" alt="#" >
                         </div>
                         <figcaption class="card_student__figcaption">
                             <strong class="card_student__name">
-                                Kévin <span>Dessouroux</span>
+                                Frank <span>Sinatra</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/men2.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Calvin <span>Wade</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/men3.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Frank <span>Sinatra</span>
                             </strong>
                             <span class="card_student__profession">
                                 Développeur front-end
@@ -81,51 +121,11 @@
                 <a href="#" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                            <img class="card_student__picture" src="./img/men2.jpg" width="350" height="200" alt="#" >
                         </div>
                         <figcaption class="card_student__figcaption">
                             <strong class="card_student__name">
-                                Kévin <span>Dessouroux</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
-            <li class="former-students__item">
-                <a href="#" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Kévin <span>Dessouroux</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
-            <li class="former-students__item">
-                <a href="#" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Kévin <span>Dessouroux</span>
+                                Calvin <span>Wade</span>
                             </strong>
                             <span class="card_student__profession">
                                 Développeur front-end
@@ -164,3 +164,15 @@
         </ul>
     </div>
 </section>
+
+<div class="redirect">
+    <div class="redirect-wrapper">
+        <strong class="redirect__title">Pour pouvoir exercer l’un de ces métiers, n’hésites pas à t’inscrire dans notre école pour y recevoir la formation nécessaire..</strong>
+        <ul class="redirect__list">
+            <li class="redirect__item">
+                <a href="#" class="redirect__link" title="">S’inscrire à la HEPL en infographie</a>
+            </li>
+        </ul>
+    </div>
+</div>
+

@@ -47,6 +47,7 @@
     display flex
     flex-wrap wrap
     justify-content space-between
+    padding-bottom s(150)
   &__item
     margin-bottom s(100)
 
@@ -65,5 +66,20 @@
     &:nth-child(3n+3)
       margin-right: 0
 
+// Redirect
+.les-metiers-du-web-anciens-etudiants
+  & .redirect
+    position: relative
+    max-width none
+    margin-top 0
+    padding-top s(75)
+    z-index 10
+    &:before
+      @extend .baseshawl
+      transform skewY(4.5deg)
+      background-color $cWhite
+      transform-origin 100% 0
+  & .redirect-wrapper
+    @extend .containerGridz
 
 
