@@ -2,6 +2,7 @@
   &__top-wrapper
     @extend .containerGridz
     position: relative
+    z-index 10
     margin-top s(80)
     &:after
       @extend .clearfix
@@ -11,6 +12,7 @@
     left: s(40)
   &__text-wrapper
     float: right
+    margin-top s(30)
     width col(7, 12)
     padding-left col(2,12)
     padding-bottom s(60)
@@ -30,5 +32,19 @@
         width s(160, $sz6)
         height 1px
         background-color $cGreyFooter
+
+
+.former-students
+  &__content
+    background-color $cBackgroundGrey
+    position: relative
+    padding s(360) 0 0
+    margin-top -220px
+    position: relative
+    z-index 5
+  &__list
+    @extend .containerGridz
+
+
 
 

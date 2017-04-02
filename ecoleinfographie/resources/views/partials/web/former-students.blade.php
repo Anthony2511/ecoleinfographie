@@ -14,4 +14,29 @@
             </p>
         </div>
     </div>
+
+    <div class="former-students__content">
+        <ul class="former-students__list">
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card-student__figure">
+                        <div class="card-student__picture-wrapper">
+                            <img class="card-student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card-student__figcaption">
+                            <strong class="card-student__name">
+                                Kévin <span>Dessouroux</span>
+                            </strong>
+                            <span class="card-student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card-student__fake-link">
+                        <span class="card-student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
 </section>
