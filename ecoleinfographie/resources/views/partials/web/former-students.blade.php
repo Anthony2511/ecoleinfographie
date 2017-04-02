@@ -19,24 +19,148 @@
         <ul class="former-students__list">
             <li class="former-students__item">
                 <a href="#" class="card_student">
-                    <figure class="card-student__figure">
-                        <div class="card-student__picture-wrapper">
-                            <img class="card-student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
                         </div>
-                        <figcaption class="card-student__figcaption">
-                            <strong class="card-student__name">
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
                                 Kévin <span>Dessouroux</span>
                             </strong>
-                            <span class="card-student__profession">
+                            <span class="card_student__profession">
                                 Développeur front-end
                             </span>
                         </figcaption>
                     </figure>
-                    <div class="card-student__fake-link">
-                        <span class="card-student__fake-link__text">Voir son parcours</span>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
                     </div>
                 </a>
             </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Kévin <span>Dessouroux</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Kévin <span>Dessouroux</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Kévin <span>Dessouroux</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Kévin <span>Dessouroux</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Kévin <span>Dessouroux</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+            <li class="former-students__item">
+                <a href="#" class="card_student">
+                    <figure class="card_student__figure">
+                        <div class="card_student__picture-wrapper">
+                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                        </div>
+                        <figcaption class="card_student__figcaption">
+                            <strong class="card_student__name">
+                                Kévin <span>Dessouroux</span>
+                            </strong>
+                            <span class="card_student__profession">
+                                Développeur front-end
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <div class="card_student__fake-link">
+                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                    </div>
+                </a>
+            </li>
+
+            <!-- TODO : En PHP, compter le nombre d’anciens étudiants avec un modulo, si le nombre de li%3 == 2, ajouter un li vide, sinon rien
+            <li class="former-students__item" style="width: 19.6875em"></li>-->
+
         </ul>
     </div>
 </section>
