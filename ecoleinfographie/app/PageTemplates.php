@@ -163,10 +163,10 @@ trait PageTemplates
 		]);
 		
 		$this->crud->addField([
-			'name' => 'content',
-			'label' => 'Content',
-			'type' => 'wysiwyg',
-			'placeholder' => 'Your content here',
+			'name' => 'class_body',
+			'label' => 'class_body',
+			'fake' => true,
+			'store_in' => 'extras',
 		]);
 	}
 }
