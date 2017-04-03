@@ -1,0 +1,104 @@
+.former-students-interview
+  background-color $cBackgroundGrey2
+  .container
+  .container:before
+    background-color $cBackgroundGrey2
+
+
+.former-interview
+  &__container
+    position: relative
+    @extend .containerGridz
+    margin-top s(100)
+  &__title
+    @extend .titleDubbleLine
+  &__question
+    width col(7,12)
+    padding s(35) s(40)
+    background-color $cWhite
+    margin-bottom s(30)
+    &:last-child
+      margin-bottom: 0
+    & h3
+      font-size s($sz6)
+      color $cBlueTitles
+      font-weight 600
+      &:after
+        content ''
+        display block
+        margin s(10, $sz6) 0 s(30, $sz6)
+        height 1px
+        width: s(60, $sz6)
+        background-color $cGrey3
+    & p
+      @extend .paragraph21
+      font-size s($sz7)
+      margin-bottom s(20, $sz7)
+      &:last-child
+        margin-bottom: 0
+
+.former-info
+  position absolute
+  top 0
+  right: s($paddingSideGlobal)
+  width 31.8181818% // 420/1324
+  padding s(50) 0
+  background-color $cWhite
+  text-align: center
+  border 1px solid $cGrey1
+  &__pics
+    display: block
+    margin: 0 auto s(35) auto
+    border-radius 100%
+  &__name
+    & *
+      display: block
+      padding 0 s(20, $sz5)
+      margin-bottom s(18, $sz5)
+      font-size s($sz5)
+      letter-spacing 0.6px
+      font-weight 700
+      line-height 1.1em
+      color $cBlueTitles
+    &--hidden
+      @extend .hidden
+  &__job
+    display: block
+    font-size: s($sz7)
+    text-transform: uppercase
+    letter-spacing 1px
+    &:after
+      content: ''
+      display: block
+      margin s(25, $sz7) auto s(25, $sz7) auto
+      width 100px
+      height 1px
+      background-color $cGrey3
+  &__diploma
+  &__company
+    font-size: s($sz6)
+    font-weight 300
+  &__diploma
+    display: block
+    margin-bottom s(18, $sz6)
+  &__company
+    display block
+    margin-bottom: s(30, $sz6)
+    & a span
+      @extend .linkInText
+      font-weight 300
+      font-size s($sz6)
+      color $cBlueCiel
+      &:after
+        bottom -3px;
+
+.former-students-interview
+  .social-list-circle
+    padding 0 s(20)
+    text-align: center
+    &__item
+      display inline-block
+      margin-right s(5)
+      &:last-child
+        margin-right: 0
+
