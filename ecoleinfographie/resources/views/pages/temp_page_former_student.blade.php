@@ -31,38 +31,40 @@
             <p>C'est seulement récemment (et d'ailleurs c'est toujours un point en constante évolution) où avec l'arrivée de nouveaux collègues pour renforcer chaque poste, que je peux me concentrer plus exclusivement au "front". Le design, je n'y touche plus (hormis par réflexions avec mes collègues, j'y reviendrai). Le back-end, il m'arrive encore régulièrement de trifouiller mais je dois avouer que c'est plus par envie/curiosité (sans perdre de temps) que par réel besoin car je peux faire appel à mes 2 collègues back-end.</p>
         </section>
     </article>
-    <aside class="former-info">
+    <aside class="former-info" itemscope itemtype="http://schema.org/Person">
         <img class="former-info__pics" src="./img/kevin-dessouroux.jpg" width="200" height="200" alt="#">
-        <h2 role="heading" aria-level="2" class="former-info__name"><span>Quelques informations sur </span>Kévin Dessouroux</h2>
-        <span class="former-info__job">Dévelopeur web</span>
+        <h2 role="heading" aria-level="2" class="former-info__name">
+            <span class="former-info__name--hidden">Quelques informations sur </span>
+            <span itemprop="name">Kévin Dessouroux</span></h2>
+        <span class="former-info__job" itemprop="jobTitle">Dévelopeur web</span>
         <span class="former-info__diploma">Diplômé en 2012 - Web</span>
         <span class="former-info__company">
-            Travaille chez <a href="#">Epic Agency</a>
+            Travaille chez <a href="http://epic.net"><span itemprop="worksFor">Epic Agency</span></a>
         </span>
         <ul class="former-info__social-list">
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
             <li class="former-info__social-item">
-                <a href="" class="former-info__social-link"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                <a href="" class="former-info__social-link former-info__social-link--personal"><span>Vers le Facebook de Kévin Dessouroux</span></a>
             </li>
         </ul>
     </aside>
