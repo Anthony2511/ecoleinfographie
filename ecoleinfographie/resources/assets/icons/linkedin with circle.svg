@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>linkedin with circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Métiers-du-web---Interview-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Métiers-du-web---Interview" transform="translate(-1245.000000, -747.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="linkedin-with-circle" transform="translate(1245.000000, 747.000000)">
+                <g id="LinkedIn_w_x2F__circle">
+                    <path d="M15,0.6 C7.047,0.6 0.6,7.047 0.6,15 C0.6,22.953 7.047,29.4 15,29.4 C22.953,29.4 29.4,22.953 29.4,15 C29.4,7.047 22.953,0.6 15,0.6 Z M11.475,20.9685 L8.559,20.9685 L8.559,11.5845 L11.475,11.5845 L11.475,20.9685 Z M9.999,10.4325 C9.078,10.4325 8.4825,9.78 8.4825,8.973 C8.4825,8.1495 9.096,7.5165 10.0365,7.5165 C10.977,7.5165 11.553,8.1495 11.571,8.973 C11.571,9.78 10.977,10.4325 9.999,10.4325 Z M22.125,20.9685 L19.209,20.9685 L19.209,15.768 C19.209,14.5575 18.786,13.7355 17.7315,13.7355 C16.926,13.7355 16.4475,14.292 16.236,14.8275 C16.158,15.018 16.1385,15.288 16.1385,15.5565 L16.1385,20.967 L13.221,20.967 L13.221,14.577 C13.221,13.4055 13.1835,12.426 13.1445,11.583 L15.678,11.583 L15.8115,12.8865 L15.87,12.8865 C16.254,12.2745 17.1945,11.3715 18.768,11.3715 C20.6865,11.3715 22.125,12.657 22.125,15.42 L22.125,20.9685 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

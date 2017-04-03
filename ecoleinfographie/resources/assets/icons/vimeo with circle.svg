@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>vimeo with circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Métiers-du-web---Interview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-778.000000, -477.000000)" id="vimeo-with-circle" fill-rule="nonzero" fill="#000000">
+            <g transform="translate(778.000000, 477.000000)">
+                <g id="Vimeo_w_x2F__circle">
+                    <path d="M12.5,0.5 C5.8725,0.5 0.5,5.8725 0.5,12.5 C0.5,19.1275 5.8725,24.5 12.5,24.5 C19.1275,24.5 24.5,19.1275 24.5,12.5 C24.5,5.8725 19.1275,0.5 12.5,0.5 Z M18.00125,10.1875 C17.36625,13.8325 13.81625,16.92125 12.75,17.62625 C11.6825,18.32875 10.7075,17.3425 10.355,16.59625 C9.95,15.74375 8.73875,11.13 8.42125,10.74625 C8.10375,10.36375 7.15125,11.13 7.15125,11.13 L6.69,10.5125 C6.69,10.5125 8.62375,8.15875 10.095,7.86625 C11.655,7.55375 11.6525,10.305 12.0275,11.83375 C12.39125,13.3125 12.635,14.1575 12.95125,14.1575 C13.26875,14.1575 13.875,13.335 14.5375,12.07 C15.2025,10.805 14.51,9.6875 13.21125,10.4825 C13.73,7.3075 18.63625,6.5425 18.00125,10.1875 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
