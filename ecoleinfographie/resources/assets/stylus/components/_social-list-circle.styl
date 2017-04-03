@@ -1,0 +1,68 @@
+.social-list-circle
+  @extend .clearfix
+  &__item
+    float: left
+  &__link span
+    @extend .hidden
+  &__link
+    display: inline-block
+    &:before
+      setIconBase()
+      font-size s(30)
+      transition .1s ease color
+  &__link:hover:before
+    transition .2s ease color
+  &__link.facebook:before
+    setIconInclude('facebook-circle');
+    color $cFacebook
+  &__link.facebook:hover:before
+  &__link.facebook:focus:before
+    color $cFacebook + 15%
+  &__link.twitter:before
+    setIconInclude('twitter-circle');
+    color $cTwitter
+  &__link.twitter:hover:before
+  &__link.twitter:focus:before
+    color $cTwitter + 15%
+  &__link.pinterest:before
+    setIconInclude('pinterest-circle');
+    color $cPinterest
+  &__link.pinterest:hover:before
+  &__link.pinterest:focus:before
+    color $cPinterest + 15%
+  &__link.behance:before
+    setIconInclude('behance-circle');
+    color $cBehance
+  &__link.behance:hover:before
+  &__link.behance:focus:before
+    color $cBehance + 15%
+  &__link.dribble:before
+    setIconInclude('dribble-circle');
+    color $cDribble
+  &__link.dribble:hover:before
+  &__link.dribble:focus:before
+    color $cDribble + 15%
+  &__link.vimeo:before
+    setIconInclude('vimeo-circle');
+    color $cVimeo
+  &__link.vimeo:hover:before
+  &__link.vimeo:focus:before
+    color $cVimeo + 15%
+  &__link.youtube:before
+    setIconInclude('youtube-circle');
+    color $cYoutube
+  &__link.youtube:hover:before
+  &__link.youtube:focus:before
+    color $cYoutube + 15%
+  &__link.linkedin:before
+    setIconInclude('linkedin-circle');
+    color $cLinkedin
+  &__link.linkedin:hover:before
+  &__link.linkedin:focus:before
+    color $cLinkedin + 15%
+  &__link.portfolio:before
+    setIconInclude('portfolio-circle');
+    color $cPortfolio
+  &__link.portfolio:hover:before
+  &__link.portfolio:focus:before
+    color $cPortfolio + 15%
