@@ -18,7 +18,7 @@
     <div class="former-students__content">
         <ul class="former-students__list">
             <li class="former-students__item">
-                <a href="#" class="card_student">
+                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li class="former-students__item">
-                <a href="#" class="card_student">
+                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="./img/men3.jpg" width="350" height="200" alt="#" >
@@ -58,7 +58,7 @@
                 </a>
             </li>
             <li class="former-students__item">
-                <a href="#" class="card_student">
+                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="./img/men2.jpg" width="350" height="200" alt="#" >
@@ -78,7 +78,7 @@
                 </a>
             </li>
             <li class="former-students__item">
-                <a href="#" class="card_student">
+                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="./img/men3.jpg" width="350" height="200" alt="#" >
@@ -98,7 +98,7 @@
                 </a>
             </li>
             <li class="former-students__item">
-                <a href="#" class="card_student">
+                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
@@ -118,7 +118,7 @@
                 </a>
             </li>
             <li class="former-students__item">
-                <a href="#" class="card_student">
+                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="./img/men2.jpg" width="350" height="200" alt="#" >
@@ -138,7 +138,7 @@
                 </a>
             </li>
             <li class="former-students__item">
-                <a href="#" class="card_student">
+                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >

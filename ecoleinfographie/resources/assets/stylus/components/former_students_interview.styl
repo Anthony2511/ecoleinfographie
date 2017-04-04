@@ -6,14 +6,19 @@
 
 
 .former-interview
+  width col(7,12)
+  float left
+  &:after
+    @extend .clearfix
   &__container
     position: relative
     @extend .containerGridz
     margin-top s(100)
+    &:after
+      @extend .clearfix
   &__title
     @extend .titleDubbleLine
   &__question
-    width col(7,12)
     padding s(35) s(40)
     background-color $cWhite
     margin-bottom s(30)
@@ -37,11 +42,12 @@
       &:last-child
         margin-bottom: 0
 
+.former-info__container
+  float right
+  width s(420)
+  margin-top s(134)
 .former-info
-  position absolute
-  top 0
-  right: s($paddingSideGlobal)
-  width 31.8181818% // 420/1324
+  width s(420) //31.8181818% // 420/1324
   padding s(50) 0
   background-color $cWhite
   text-align: center
