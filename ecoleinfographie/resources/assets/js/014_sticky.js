@@ -5,7 +5,7 @@ $(function() {
         var stickyHeight = $('#sticky-sidebar').outerHeight(); // Calculer la hauteur de la boite
         var lastElement = $('.former-interview__question').last().outerHeight();
         $(window).scroll(function() {
-            var limit = $('#footer-wrapper').offset().top + lastElement - stickyHeight - 20 ;
+            var limit = $('.former-interview__question').last().offset().top + lastElement - stickyHeight - 20 ;
             var windowTop = $(window).scrollTop(); // scrollTop = valeur du scroll en hauteur (ex: je suis à 400px de scroll)
             if (stickyTop - 20 < windowTop) {
                 el.css({
