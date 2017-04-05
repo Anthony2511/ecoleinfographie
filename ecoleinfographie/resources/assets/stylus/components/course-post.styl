@@ -7,10 +7,14 @@
 .course
   &__container-top
     @extend .containerGridz
+    &:after
+      @extend .clearfix
 
 .course-card
   position: relative
   width col(10,12)
+  float: right
+  margin-top s(100)
   background $cBlue1
   overflow hidden
   &:after
@@ -115,7 +119,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    left: 185px;
+    left: s(185)
     bottom: s(-1px);
     transform: skewY(-1.5deg) rotate(275deg);
     transform-origin: 50% 50%;
