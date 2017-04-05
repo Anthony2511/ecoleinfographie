@@ -40,6 +40,12 @@
                 </div>
 
             </div>
+            <section class="course-description">
+                <h3 role="heading" aria-level="3" class="course-description__title">Description du cours</h3>
+                <p class="course-description__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non viverra nisl. Cras bibendum euismod scelerisque. Nam ornare est pretium dignissim auctor. Integer ante risus, lobortis egestas accumsan eget, tincidunt eu nisl. Cras cursus suscipit nunc, a tempus magna accumsan quis. Suspendisse ultrices nisl iaculis pellentesque volutpat.</p>
+                <p class="course-description__paragraph">Vestibulum feugiat nibh et egestas dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur fringilla vel elit quis interdum. Suspendisse sed rutrum orci. In lacus metus, blandit condimentum dictum eget, varius at arcu. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eveniet illum inventore ipsum iure! Ab accusantium alias corporis eveniet ex expedita impedit, odio optio porro possimus qui rem sit vel.</p>
+
+            </section>
         </div>
     </section>
 

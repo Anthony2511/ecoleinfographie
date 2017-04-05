@@ -125,3 +125,24 @@
     transform-origin: 50% 50%;
     background-color: $cBlue1
     z-index: -1;
+
+/************************************\
+		DESCRIPTION DU COURS
+\************************************/
+
+.course-description
+  position: relative
+  top s(-40)
+  clear right
+  width col(9,12)
+  padding s(90) col(1,12)
+  background-color $cWhite
+  z-index 10
+  &__title
+    @extend .titleOneLine
+  &__paragraph
+    font-size s($sz7)
+    line-height: 1.62em
+    margin-bottom s(20, $sz7)
+    &:last-child
+      margin-bottom: 0
