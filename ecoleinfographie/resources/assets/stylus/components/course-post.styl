@@ -1,0 +1,123 @@
+.course-post
+  background-color $cBackgroundGrey2
+  .container
+  .container:before
+    background-color $cBackgroundGrey2
+
+.course
+  &__container-top
+    @extend .containerGridz
+
+.course-card
+  position: relative
+  width col(10,12)
+  background $cBlue1
+  overflow hidden
+  &:after
+    @extend .clearfix
+  & *
+    color $cWhite
+  &__content
+    position: relative
+    z-index 5
+    padding s(45) s(70) s(70) 41%
+    float: left
+    overflow hidden
+  &__title
+    margin-bottom s(10, $sz4)
+    font-size s($sz4)
+    font-weight: 700
+    letter-spacing 0.5px
+    & *
+      font-size: inherit
+  &__hour
+  &__credits
+    display: inline-block
+    font-weight 300
+    font-size s($sz8)
+    &:before
+      setIconBase()
+      position: relative
+      top 2px
+      margin-right s(10, $sz8)
+  &__hour:before
+    setIconInclude('hourglass')
+  &__credits:before
+    setIconInclude('checked')
+  &__credits
+    margin 0 0 s(30, $sz8) s(30, $sz8)
+  &__org
+    margin-bottom s(20)
+    &__item
+      position: relative
+    &__text
+      display: inline-block
+      font-size s($sz8)
+      font-weight: 300
+      margin-bottom s(10, $sz8)
+      &:before
+      &:after
+        content ''
+        display: inline-block
+      &:before
+        position: relative
+        top -1px
+        margin-right: 12px
+        width: 9px
+        height: 9px
+        border-radius 50%
+        background-color $cWhite
+      &:after
+        position absolute
+        left 4px
+        top 9px
+        width 1px
+        height 30px
+        background: rgba(255,255,255,0.60);
+    &__item:last-child .course-card__org__text:after
+      display: none
+
+.course-card
+  &__eval-title
+    display: inline-block
+    font-size s($sz8)
+    font-weight 600
+    margin-bottom s(10, $sz8)
+  &__eval
+    margin-bottom s(20)
+  &__eval__item
+    margin-bottom s(5, $sz8)
+    &:before
+      content '– '
+  &__eval__item:last-child
+    margin-bottom: 0
+
+.course-card__bloc
+  display: block
+  font-size s($sz8)
+  margin-bottom s(10, $sz8)
+.test
+  position: relative
+.course-card
+  &__image-container
+    overflow hidden
+    width s(360) //35%
+    float left
+    position absolute
+    left 0
+    top 0
+    bottom 0
+    background url('../img/course-img.jpg') no-repeat center center/cover
+
+.course-card
+  &__content:before
+    content ''
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 185px;
+    bottom: s(-1px);
+    transform: skewY(-1.5deg) rotate(275deg);
+    transform-origin: 50% 50%;
+    background-color: $cBlue1
+    z-index: -1;

@@ -10,8 +10,11 @@
     <section class="course">
         <div class="course__container-top">
             <div class="course-card">
+                <div class="course-card__image-container">
+                    {{--<img class="course-card__image" src="./img/course-img.jpg" width="1000" height="500" alt="Image de lignes de code CSS">--}}
+                </div>
                 <div class="course-card__content">
-                    <h2 role="heading" aria-level="2" class="course__title">Créations de pages web - <abbr title="Cascading Styles Sheet">CSS</abbr></h2>
+                    <h2 role="heading" aria-level="2" class="course-card__title">Créations de pages web - <abbr title="Cascading Styles Sheet">CSS</abbr></h2>
 
                     <span class="course-card__hour">60 heures</span>
                     <span class="course-card__credits">5 credits <abbr title="Système européen de transfert et d’accumulation de crédits">ECTS</abbr></span>
@@ -32,11 +35,8 @@
                         <li class="course-card__eval__item">Évaluation continue</li>
                     </ul>
 
-                    <span class="course-card__bloc">Cours du bloc 1<small>(première année)</small></span>
-                    <span class="course-card__bloc">Dispensé en 1<sup>er</sup> quadrimestre<small>(de septembre à décembre)</small></span>
-                </div>
-                <div class="course-card__image-container">
-                    <img class="course-card__image" src="./img/course-img.jpg" width="1000" height="500" alt="Image de lignes de code CSS">
+                    <span class="course-card__bloc">Cours du bloc 1<small> (première année)</small></span>
+                    <span class="course-card__bloc">Dispensé en 1<sup>er</sup> quadrimestre<small> (de septembre à décembre)</small></span>
                 </div>
 
             </div>
