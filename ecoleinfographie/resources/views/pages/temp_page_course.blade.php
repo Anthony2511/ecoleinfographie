@@ -47,6 +47,17 @@
 
             </section>
         </div>
+        <section class="course-obj">
+            <div class="course-obj__wrapper">
+                <h3 role="heading" aria-level="3" class="course-obj__title">Objectifs du cours</h3>
+                <ul class="course-obj__list">
+                    <li class="course-obj__item">Apprendre les outils et les techniques de programmation intervenant dans la réalisation de sites Web dynamiques (côté client). </li>
+                    <li class="course-obj__item">Être capable d’écrire des feuilles de style pour des pages HTML.</li>
+                    <li class="course-obj__item">Comprendre les fondements du rendu des CSS par un moteur de rendu.</li>
+                    <li class="course-obj__item">Maîtriser les concepts de base des CSS.</li>
+                </ul>
+            </div>
+        </section>
     </section>
 
 
