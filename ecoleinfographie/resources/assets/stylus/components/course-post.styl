@@ -187,3 +187,34 @@
       background #5A92A5
   &__item:last-child:after
     display: none
+
+/************************************\
+		COURSE TEACHERS
+\************************************/
+
+.course-post
+  .course-teachers
+    @extend .containerGridz
+    margin s(80) auto 0
+    &__title
+      @extend .titleOneLine
+    &__list
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+    &__item
+      margin-bottom s(100)
+      &:last-child
+        margin-bottom: 0
+
+.no-flexbox
+  .course-teachers__list
+    display: block
+    &:after
+      @extend .clearfix
+  .course-teachers__item
+    float: left
+    margin-right 11.7%
+    margin-bottom s(100)
+    &:nth-child(3n+3)
+      margin-right: 0

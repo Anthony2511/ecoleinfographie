@@ -58,6 +58,96 @@
                 </ul>
             </div>
         </section>
+        <section class="course-teachers">
+            <h3 role="heading" aria-level="3" class="course-teachers__title">Les professeurs</h3>
+            <ul class="course-teachers__list">
+                <li class="course-teachers__item">
+                    <a href="#" class="card_student">
+                        <figure class="card_student__figure">
+                            <div class="card_student__picture-wrapper">
+                                <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                            </div>
+                            <figcaption class="card_student__figcaption">
+                                <strong class="card_student__name">
+                                    Dominique <span>Vilain</span>
+                                </strong>
+                                <span class="card_student__profession">
+                                    Professeur en web
+                                </span>
+                            </figcaption>
+                        </figure>
+                        <div class="card_student__fake-link">
+                            <span class="card_student__fake-link__text">Voir sa fiche</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="course-teachers__item">
+                    <a href="#" class="card_student">
+                        <figure class="card_student__figure">
+                            <div class="card_student__picture-wrapper">
+                                <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                            </div>
+                            <figcaption class="card_student__figcaption">
+                                <strong class="card_student__name">
+                                    Dominique <span>Vilain</span>
+                                </strong>
+                                <span class="card_student__profession">
+                                    Professeur en web
+                                </span>
+                            </figcaption>
+                        </figure>
+                        <div class="card_student__fake-link">
+                            <span class="card_student__fake-link__text">Voir sa fiche</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="course-teachers__item">
+                    <a href="#" class="card_student">
+                        <figure class="card_student__figure">
+                            <div class="card_student__picture-wrapper">
+                                <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                            </div>
+                            <figcaption class="card_student__figcaption">
+                                <strong class="card_student__name">
+                                    Dominique <span>Vilain</span>
+                                </strong>
+                                <span class="card_student__profession">
+                                    Professeur en web
+                                </span>
+                            </figcaption>
+                        </figure>
+                        <div class="card_student__fake-link">
+                            <span class="card_student__fake-link__text">Voir sa fiche</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="course-teachers__item">
+                    <a href="#" class="card_student">
+                        <figure class="card_student__figure">
+                            <div class="card_student__picture-wrapper">
+                                <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                            </div>
+                            <figcaption class="card_student__figcaption">
+                                <strong class="card_student__name">
+                                    Dominique <span>Vilain</span>
+                                </strong>
+                                <span class="card_student__profession">
+                                    Professeur en web
+                                </span>
+                            </figcaption>
+                        </figure>
+                        <div class="card_student__fake-link">
+                            <span class="card_student__fake-link__text">Voir sa fiche</span>
+                        </div>
+                    </a>
+                </li>
+
+
+                <!-- TODO : En PHP, compter le nombre d’anciens étudiants avec un modulo, si le nombre de li%3 == 2, ajouter un li vide, sinon rien
+                <li class="former-students__item" style="width: 19.6875em"></li>-->
+
+            </ul>
+        </section>
     </section>
 
 
