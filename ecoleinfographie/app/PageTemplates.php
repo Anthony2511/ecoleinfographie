@@ -187,4 +187,22 @@ trait PageTemplates
 			'store_in' => 'extras',
 		]);
 	}
+	
+	private function realisations()
+	{
+		$this->crud->addField([
+			'name' => 'header_large',
+			'label' => '<b>La page a t’elle un grand header ?</b>',
+			'type' => 'checkbox',
+			'fake' => true,
+			'store_in' => 'extras',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'class_body',
+			'label' => 'class_body',
+			'fake' => true,
+			'store_in' => 'extras',
+		]);
+	}
 }
