@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-    @include('partials.breadcrumb')
     @include('partials.realisations.index-realisations')
 @endsection
 
