@@ -4,6 +4,9 @@
     background: linear-gradient(135deg, rgba(38,120,113,1) 0%, rgba(31,114,122,1) 40%, rgba(25,111,130,1) 58%, rgba(19,106,138,1) 100%);
   .header__wrapper
     position relative
+  .breadcrumb.breadcrumb--header
+    top 0
+    margin-top s(192)
 
   .header-rea
     margin-top s(210)
@@ -19,15 +22,15 @@
       max-width s(630)
     &__tablet
       position: absolute
-      top: 280px
-      right: -244px
+      top: s(280)
+      right: s(-244)
       z-index 1
       transform translateX(100px) translateY(-50px) rotate(-5deg)
       animation .7s ease rea-tablet forwards
     &__phone
       position: absolute
-      top 340px
-      right -30px
+      top s(340)
+      right s(-30)
       z-index 2
       transform translateX(60px) translateY(-30px) rotate(3deg)
       animation .7s ease rea-phone forwards
@@ -35,7 +38,7 @@
 .rea-printer-wrapper
   position relative
   position: absolute
-  bottom: -170px
+  bottom: s(-170)
   left: 54%
   transform: translateY(60px);
   animation .7s ease rea-printer forwards
