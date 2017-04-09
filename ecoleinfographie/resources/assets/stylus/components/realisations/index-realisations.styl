@@ -1,0 +1,85 @@
+.index-rea
+  &__container
+    @extend .containerGridz
+
+/************************************\
+		TABULATION
+\************************************/
+.index-rea
+  &__filter
+    position: relative
+    padding-top s(80)
+    padding-bottom s(100)
+    text-align: center
+    &__item
+      position: relative
+      display: inline-block
+    &__link
+      display: inline-block
+      font-size s($sz8)
+      font-weight 900
+      letter-spacing 1.2px
+      text-transform: uppercase
+      padding s(16, $sz8) s(28, $sz8)
+
+    .index-rea__filter__link:hover
+    .index-rea__filter__link:focus
+      color $cBlueCiel
+      transition .3s ease color
+
+    .index-rea__filter__item:before
+    .index-rea__filter__item:after
+    .index-rea__filter__link:before
+    .index-rea__filter__link:after
+      content: ''
+      position: absolute
+      background: $cBlueCiel
+      transition: transform 0.2s
+
+    .index-rea__filter__item:before
+    .index-rea__filter__item:after
+      top: 0
+      width: 2px
+      height: 100%
+      transform: scale3d(1, 0, 1)
+
+    .index-rea__filter__item:before
+      left: 0
+      transform-origin: 50% 100%
+
+    .index-rea__filter__item:after
+      right: 0
+      transform-origin: 50% 0%
+
+    .index-rea__filter__link:before
+    .index-rea__filter__link:after
+      left: 0
+      width: 100%
+      height: 2px
+      transform: scale3d(0, 1, 1)
+
+    .index-rea__filter__link:before
+      top: 0
+      transform-origin: 0 50%
+
+    .index-rea__filter__link:after
+      bottom: 0
+      transform-origin: 100% 50%
+
+    &__item.active
+      position: relative
+      & .index-rea__filter__link
+        position: relative
+        color $cBlueCiel
+        transition .3s ease color
+      & .index-rea__filter__link:hover
+      & .index-rea__filter__link:focus
+        color $cBlueCiel
+        transition .3s ease color
+      &:before
+      &:after
+      & .index-rea__filter__link:before
+      & .index-rea__filter__link:after
+        transform: scale3d(1, 1, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.4s;
