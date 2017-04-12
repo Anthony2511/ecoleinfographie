@@ -16,6 +16,7 @@ var w = {
             //w.mobileMenu.init();
             w.loadPage();
             w.isLoaded = true;
+            console.log('front.js charged');
       },
       loadPage: function () {
             if (w.sCurrent) w[w.sCurrent].init();
