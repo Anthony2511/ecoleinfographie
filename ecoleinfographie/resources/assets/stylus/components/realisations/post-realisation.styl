@@ -34,3 +34,26 @@
     &:after
       bottom -4px
 
+
+.rSlider
+  &:after
+    @extend .clearfix
+  &__container
+    width col(9,12) + gutter(12)
+    overflow hidden
+  &__item
+    position relative
+    display: block
+    float: left
+    cursor grab
+    background:url('http://www.smuggs.com/pages/resort_welcome/images/universal/page/gallery-loading.gif') no-repeat scroll center center transparent;
+    &--withIframe
+      cursor pointer
+  &__img
+    display: block
+    height s(531)
+    object-fit cover
+    object-position center
+
+.rSlider li.hasIframe img
+  display: none
