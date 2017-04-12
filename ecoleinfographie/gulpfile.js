@@ -24,6 +24,7 @@ elixir(function (mix) {
 
         './resources/assets/js/vendor/*.js',
         './resources/assets/js/front.js',
+        './resources/assets/js/class/*.js',
         './resources/assets/js/pages/*.js',
 
         ])
