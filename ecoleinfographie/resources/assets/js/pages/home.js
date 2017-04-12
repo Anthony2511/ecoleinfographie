@@ -2,17 +2,16 @@ w.home = {
       oConf: {},
 
       init: function () {
-        this.getElements();
-        this.setEvents();
         console.log('home charged');
+        w.sliderBlogHome.init();
       },
 
-      getElements: function () {
+      // getElements: function () {
 
-      },
-      setEvents: function () {
+      // },
+      // setEvents: function () {
 
-      },
+      // },
 
       // EVENTS
 
