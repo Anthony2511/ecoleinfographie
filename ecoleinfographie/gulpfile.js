@@ -20,7 +20,15 @@ elixir(function (mix) {
 
     //mix.browserify('all.js');
 
-    mix.scriptsIn();
+    mix.scripts([
+
+        './resources/assets/js/vendor/*.js',
+        './resources/assets/js/front.js',
+        './resources/assets/js/pages/*.js',
+
+        ])
+
+    //mix.scriptsIn();
 
     //mix.copy('resources/assets/img/*.*', 'public/img/');
     mix.copy('resources/assets/svg-inline/*.*', 'public/svg/');
