@@ -14,6 +14,7 @@ var w = {
             w.getElements();
             w.sCurrent = w.getCurrentPage();
             //w.mobileMenu.init();
+            w.accessibleMenuConfig.init(); // Charge config Accessible Menu
             w.loadPage();
             w.isLoaded = true;
             console.log('front.js charged');
