@@ -1,0 +1,36 @@
+.oneRea
+  background-color $cBackgroundGrey
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+
+.rea
+  &__container
+    @extend .containerGridz
+    margin-top s(100)
+  &__name
+    @extend .title51
+    text-align: center
+    &:after
+      content ''
+      height s(30, $sz2)
+      width 1px
+      display: block
+      margin s(30, $sz2) auto
+      background $cGrey-lineMenu
+  &__author
+    display: block
+    text-align: center
+    margin-bottom s(80)
+    font-weight 300
+    font-size s($sz6)
+    letter-spacing 0.5px
+  &__link
+    display: inline-block
+    font-size: s($sz6, $sz6);
+    @extend .linkInText
+    font-weight 300
+    &:after
+      bottom -4px
+
