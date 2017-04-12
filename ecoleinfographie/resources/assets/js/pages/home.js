@@ -4,6 +4,7 @@ w.home = {
       init: function () {
         console.log('home charged');
         w.sliderBlogHome.init();
+        w.sliderProsHome.init();
       },
 
       // getElements: function () {

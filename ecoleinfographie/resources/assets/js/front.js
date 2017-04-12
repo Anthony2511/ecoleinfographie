@@ -30,6 +30,7 @@ var w = {
 
       getCurrentPage: function () {
             if (w.$body.hasClass('home')) return 'home';
+            if (w.$body.hasClass('les-metiers-du-web')) return 'metiersDuWeb';
 
             return false;
       }
