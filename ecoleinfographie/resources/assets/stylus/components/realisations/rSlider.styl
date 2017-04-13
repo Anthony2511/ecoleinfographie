@@ -1,0 +1,165 @@
+.rSlider
+  &:after
+    @extend .clearfix
+  &__container
+    width col(9,12) + gutter(12)
+    overflow hidden
+  &__item
+    position relative
+    display: block
+    float: left
+    cursor grab
+    background:url('http://www.smuggs.com/pages/resort_welcome/images/universal/page/gallery-loading.gif') no-repeat scroll center center transparent;
+    &--withIframe
+      position: relative
+      cursor pointer
+  &__img
+    display: block
+    height s(531)
+    object-fit cover
+    object-position center
+
+.rSlider li.hasIframe img
+.rSlider li.hasIframe svg
+  display: none
+.rSlider li.hasIframe:before
+  display none
+
+.rSlider__item--withIframe
+  &:before
+    content ''
+    display: block
+    width 100%
+    background rgba(15,15,15,0.35)
+    @extend .cover
+    transition .15s ease background
+  &:hover:before
+    background rgba(15,15,15,0.20)
+    transition .25s ease background
+  .inline-play-button
+    position absolute
+    width s(100)
+    height auto
+    top: 50%
+    transform translateY(-50%)
+    left 0
+    right 0
+    margin 0 auto
+
+.lSGallery li
+  position: relative
+  cursor pointer
+  &:before
+    content ''
+    height 100%
+    width 100%
+    display block
+    background rgba(15,15,15,0.50)
+    transition .15s ease background
+    @extend .cover
+  & button
+    outline none
+  & img
+    display: block
+
+.lSGallery li:hover:before
+  background rgba(15,15,15,0)
+  transition .25s ease background
+
+.lSGallery li.active:before
+  background rgba(15,15,15,0)
+
+// anim play button
+.inline-play-button
+  .circle
+    transition .15s $ease-in-out-quad stroke-width
+  .play
+    transform-origin 50% 50%
+    transition .2s $ease-in-out-quad transform
+
+.inline-play-button:hover
+  .circle
+    stroke-width 4
+    transition .25s $ease-in-out-quad stroke-width
+  .play
+    transform scale(1.2)
+    transform-origin 50% 50%
+    transition .3s $ease-in-out-quad transform
+
+// Hack lightSlider
+.rSlider__container
+  & .lSSlideOuter
+    & .lSGallery
+      &__container
+        width 81.164021164% !important // 767/945*100
+        overflow hidden
+        margin-top s(25)
+      & li
+        float left
+        &:last-child
+          margin-right 0 !important
+      &:after
+        @extend .clearfix
+
+.label-gallery
+  @extend .hidden
+
+@keyframes rightEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes leftEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes bottomEnd {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: -15px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+
+.lSSlideOuter .rightEnd
+  -webkit-animation: rightEnd 0.3s;
+  animation: rightEnd 0.3s;
+  position: relative;
+
+.lSSlideOuter .leftEnd
+  -webkit-animation: leftEnd 0.3s;
+  animation: leftEnd 0.3s;
+  position: relative;
+
+
+.lSSlideWrapper .lSSlide
+  transform: translate(0px, 0px)
+  transition-property: transform, height
+  transition-duration: inherit
+  -webkit-transition-timing-function: inherit
+  transition-timing-function: inherit
