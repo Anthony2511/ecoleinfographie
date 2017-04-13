@@ -58,7 +58,27 @@
 .rSlider li.hasIframe img
   display: none
 
+.lSGallery li
+  position: relative
+  &:before
+    content ''
+    height 100%
+    width 100%
+    display block
+    background rgba(15,15,15,0.60)
+    transition .15s ease background
+    @extend .cover
+  & button
+    outline none
+  & img
+    display: block
 
+.lSGallery li:hover:before
+  background rgba(15,15,15,0)
+  transition .25s ease background
+
+.lSGallery li.active:before
+  background rgba(15,15,15,0)
 
 
 // Hack lightSlider

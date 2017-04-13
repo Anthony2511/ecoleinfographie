@@ -30,8 +30,7 @@
                 <li class="rSlider__item" data-thumb="./img/rea-five.png">
                     <img class="rSlider__img" src="./img/rea-five.png" width="947" height="532" alt="#alt">
                 </li>
-                <li class="rSlider__item" data-thumb="">
-                </li>
+                <li class="rSlider__item" data-thumb=""></li>
             </ul>
         </div>
 
