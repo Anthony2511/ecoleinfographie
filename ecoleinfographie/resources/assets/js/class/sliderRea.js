@@ -24,14 +24,20 @@ w.sliderRea = {
 
             onAfterSlide: function () {
                 $('.rSlider iframe').remove();
-                $('.rSlider li').removeClass('hasIframe');
+                $('.rSlider__item--withIframe').removeClass('hasIframe');
             }
         });
     },
 
     runIframe: function () {
         $('.rSlider__item--withIframe').on('click', function () {
-                $(this).addClass('hasIframe').append('<iframe width="945" height="531" src="' + $(this).attr('data-iframe') + '" frameborder="0" allowfullscreen></iframe>')
+
+
+            if($(this).hasClass('hasIframe')){
+                // nothing
+            } else {
+                $(this).addClass('hasIframe').append('<iframe width="945" height="531" src="' + $(this).attr('data-iframe') + '" frameborder="0" allowfullscreen></iframe>');
+            }
         });
     },
 
