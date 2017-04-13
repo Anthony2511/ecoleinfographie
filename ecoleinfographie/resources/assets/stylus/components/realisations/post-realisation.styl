@@ -60,18 +60,20 @@
 
 .lSGallery li
   position: relative
+  cursor pointer
   &:before
     content ''
     height 100%
     width 100%
     display block
-    background rgba(15,15,15,0.60)
+    background rgba(15,15,15,0.50)
     transition .15s ease background
     @extend .cover
   & button
     outline none
   & img
     display: block
+
 
 .lSGallery li:hover:before
   background rgba(15,15,15,0)
