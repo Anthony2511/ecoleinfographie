@@ -75,4 +75,61 @@
       &:after
         @extend .clearfix
 
+@keyframes rightEnd {
+  0% {
+    left: 0;
+  }
 
+  50% {
+    left: -15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+
+@keyframes leftEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes bottomEnd {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: -15px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+.lSSlideOuter .rightEnd
+  -webkit-animation: rightEnd 0.3s;
+  animation: rightEnd 0.3s;
+  position: relative;
+
+.lSSlideOuter .leftEnd
+  -webkit-animation: leftEnd 0.3s;
+  animation: leftEnd 0.3s;
+  position: relative;
+
+
+.lSSlideWrapper .lSSlide
+  transform: translate(0px, 0px)
+  transition-property: transform, height
+  transition-duration: inherit
+  -webkit-transition-timing-function: inherit
+  transition-timing-function: inherit

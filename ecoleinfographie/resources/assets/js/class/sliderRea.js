@@ -18,6 +18,9 @@ w.sliderRea = {
             thumbItem:5,
             galleryMargin: 0,
             thumbMargin: 15,
+            useCSS: true,
+            cssEasing: 'ease',
+            speed: '400',
 
             onAfterSlide: function () {
                 $('.rSlider iframe').remove();
