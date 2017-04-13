@@ -57,3 +57,22 @@
 
 .rSlider li.hasIframe img
   display: none
+
+// Hack lightSlider
+.rSlider__container
+  & .lSSlideOuter
+    & .lSGallery
+      &__container
+        width 81.164021164% !important // 767/945*100
+        overflow hidden
+        margin-top s(25)
+      & li
+        float left
+        //width 17.47133758% !important // (145/785)*100
+        //width 145px !important // (145/785)*100
+        &:last-child
+          margin-right 0 !important
+      &:after
+        @extend .clearfix
+
+

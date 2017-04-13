@@ -5,20 +5,32 @@
 
         <div class="rSlider__container">
             <ul class="rSlider">
-                <li class="rSlider__item rSlider__item--withIframe" data-iframe="https://sketchfab.com/models/ba2674954ebb4c1eb4c2d8687b2013f0/embed?autostart=1">
+                <li class="rSlider__item rSlider__item--withIframe" data-iframe="https://sketchfab.com/models/ba2674954ebb4c1eb4c2d8687b2013f0/embed?autostart=1" data-thumb="./img/rea-three.png">
                     <img class="rSlider__img" src="./img/rea-one.png" width="947" height="532" alt="#alt">
                 </li>
-                <li class="rSlider__item rSlider__item--withIframe" data-iframe="//www.youtube.com/embed/c0asJgSyxcY?autoplay=1">
-                    <img class="rSlider__img" src="./img/rea-two.png" width="947" height="532" alt="#alt">
+                <li class="rSlider__item rSlider__item--withIframe" data-iframe="//www.youtube.com/embed/c0asJgSyxcY?autoplay=1" data-thumb="https://img.youtube.com/vi/shU6mXrlB4g/maxresdefault.jpg" >
+                    <img class="rSlider__img" src="https://img.youtube.com/vi/shU6mXrlB4g/maxresdefault.jpg
+" width="947" height="532" alt="#alt">
                 </li>
-                <li class="rSlider__item">
+                <li class="rSlider__item" data-thumb="./img/rea-three.png">
                     <img class="rSlider__img" src="./img/rea-three.png" width="947" height="532" alt="#alt">
                 </li>
-                <li class="rSlider__item">
+                <li class="rSlider__item" data-thumb="./img/rea-four.png">
                     <img class="rSlider__img" src="./img/rea-four.png" width="947" height="532" alt="#alt">
                 </li>
-                <li class="rSlider__item">
+                <li class="rSlider__item" data-thumb="./img/rea-five.png">
                     <img class="rSlider__img" src="./img/rea-five.png" width="947" height="532" alt="#alt">
+                </li>
+                <li class="rSlider__item" data-thumb="./img/rea-five.png">
+                    <img class="rSlider__img" src="./img/rea-five.png" width="947" height="532" alt="#alt">
+                </li>
+                <li class="rSlider__item" data-thumb="./img/rea-five.png">
+                    <img class="rSlider__img" src="./img/rea-five.png" width="947" height="532" alt="#alt">
+                </li>
+                <li class="rSlider__item" data-thumb="./img/rea-five.png">
+                    <img class="rSlider__img" src="./img/rea-five.png" width="947" height="532" alt="#alt">
+                </li>
+                <li class="rSlider__item" data-thumb="">
                 </li>
             </ul>
         </div>
