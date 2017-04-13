@@ -48,6 +48,7 @@
     cursor grab
     background:url('http://www.smuggs.com/pages/resort_welcome/images/universal/page/gallery-loading.gif') no-repeat scroll center center transparent;
     &--withIframe
+      position: relative
       cursor pointer
   &__img
     display: block
@@ -56,7 +57,31 @@
     object-position center
 
 .rSlider li.hasIframe img
+.rSlider li.hasIframe svg
   display: none
+.rSlider li.hasIframe:before
+  display none
+
+.rSlider__item--withIframe
+  &:before
+    content ''
+    display: block
+    width 100%
+    background rgba(15,15,15,0.35)
+    @extend .cover
+    transition .15s ease background
+  &:hover:before
+    background rgba(15,15,15,0.20)
+    transition .25s ease background
+  .inline-play-button
+    position absolute
+    width s(100)
+    height auto
+    top: 50%
+    transform translateY(-50%)
+    left 0
+    right 0
+    margin 0 auto
 
 .lSGallery li
   position: relative
@@ -82,6 +107,22 @@
 .lSGallery li.active:before
   background rgba(15,15,15,0)
 
+// anim play button
+.inline-play-button
+  .circle
+    transition .15s $ease-in-out-quad stroke-width
+  .play
+    transform-origin 50% 50%
+    transition .2s $ease-in-out-quad transform
+
+.inline-play-button:hover
+  .circle
+    stroke-width 4
+    transition .25s $ease-in-out-quad stroke-width
+  .play
+    transform scale(1.2)
+    transform-origin 50% 50%
+    transition .3s $ease-in-out-quad transform
 
 // Hack lightSlider
 .rSlider__container
