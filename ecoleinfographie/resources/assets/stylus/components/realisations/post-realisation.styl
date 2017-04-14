@@ -45,7 +45,7 @@
   position absolute
   top s(45)
   right: 0
-  max-width s(420)
+  width s(420)
   background $cWhite
   padding-bottom s(35)
   box-shadow: 0 0 6px 0 rgba(185,185,185,0.50);
@@ -94,3 +94,25 @@
 
 .rea-infos.rea-infos--with-button
   padding-bottom s(85)
+
+/************************************\
+		BUTTONS FOR REA-INFOS
+\************************************/
+.rea-button__wrapper
+  position: absolute
+  bottom s(-25)
+  left 0
+  right: 0
+  text-align: center
+.rea-button
+  @extend .buttonLeftToRightBlack
+  &__label
+    position: relative
+    top -5px
+  &:after
+    icon('portfolio-circle');
+    font-size 25px
+    position: relative
+    margin-left 10px
+  &__hidden
+    @extend .hidden

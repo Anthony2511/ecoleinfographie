@@ -64,6 +64,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="rea-button__wrapper">
+                    <a href="#goLink" class="rea-button">
+                        <span class="rea-button__label">Voir le site web du projet <span class="rea-button__hidden">« Sur un Baobab »</span></span>
+                    </a>
+                </div>
             </aside>
 
         </div>

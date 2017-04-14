@@ -83,3 +83,32 @@
     height 2px
     background-color $cBlueCiel
     transition .2s $ease-out-quart width
+
+.buttonLeftToRightBlack
+  position: relative
+  display: inline-block
+  font-weight 900
+  font-size s($sz10)
+  padding s(25, $sz10) s(45, $sz10)
+  background-color $cBlueCiel
+  color $cWhite
+  text-transform: uppercase
+  letter-spacing 1.15px
+  z-index: 1
+  & span
+    display: inline-block
+    color $cWhite
+  &:before
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $cBlueCiel + 15%
+    z-index: -1;
+    transition .3s width;
+  &:hover:before
+  &:focus:before
+    width 100%
+
