@@ -37,7 +37,7 @@
                 </ul>
             </div>
 
-            <aside class="rea-infos">
+            <aside class="rea-infos rea-infos--with-button">
                 <h3 role="heading" aria-level="3" class="rea-infos__title">Détails sur le projet</h3>
                 <dl class="rea-infos__list">
                     <dt class="rea-infos__term">Orentation</dt>
