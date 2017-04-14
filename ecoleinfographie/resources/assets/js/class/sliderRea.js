@@ -6,10 +6,10 @@ w.sliderRea = {
         this.config();
         this.runIframe();
         this.addWrapper();
+        this.addClassToGallery();
     },
 
     config: function () {
-        console.log('sliderRea charged');
         $('.rSlider').lightSlider({
             gallery: true,
             item: 1,
@@ -43,5 +43,16 @@ w.sliderRea = {
 
     addWrapper: function () {
         $('.rSlider__container .lSGallery').wrap("<div class='lSGallery__container'></div>");
+    },
+
+    addClassToGallery: function () {
+        $(document).ready(function(){
+            $(".rSlider li").each(function(idx, li) {
+                if($(li).hasClass("rSlider__item--withIframe")){
+                    var li = $(".lSGallery li")[idx];
+                    $(li).addClass("with-iframe");
+                }
+            });
+        });
     }
 }
