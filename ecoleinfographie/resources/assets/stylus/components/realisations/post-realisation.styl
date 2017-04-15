@@ -11,6 +11,7 @@
     margin-top s(100)
   &__wrapper-top
     position: relative
+    margin-bottom s(150)
     &:after
       @extend .clearfix
   &__name
@@ -116,3 +117,71 @@
     margin-left 10px
   &__hidden
     @extend .hidden
+
+/************************************\
+		DESC & PROF
+\************************************/
+
+.rea-content
+  position: relative
+  &:after
+    @extend .clearfix
+  &__desc
+    background $cWhite
+    width col(8,12) + gutter(12)
+    padding s(60) s(70) s(60) 14%
+    & .rea-content__title
+      color $cBlueTitles
+  &__prof
+    background $cBlue1
+    width col(5,12) + gutter(12)
+    padding s(60) s(50)
+    & .rea-content__title
+      color $cWhite
+    & p
+      color $cWhite
+  &__title
+    font-size: s($sz6);
+    font-weight 900
+    letter-spacing 1.63px
+    text-transform: uppercase
+    margin-bottom s(30, $sz6)
+    &:after
+      content ''
+      display: block
+      width s(45, $sz6)
+      height s(5, $sz6)
+      background $cBorderTitles
+      margin-top s(11, $sz6)
+  &__prof
+  &__desc
+    & p
+      font-size: s($sz7)
+      line-height 1.62em
+      margin-bottom s(20, $sz7)
+      &:last-child
+        margin-bottom: 0
+  &__desc
+    float: right
+  &__prof
+    position: absolute
+    top s(100)
+    z-index 2
+.rea-content__button
+  position: absolute
+  right 40px
+  bottom -45px
+  @extend .buttonLeftToRightBlack
+  background $cGithub
+  vertical-align middle
+  &:before
+    background $cGithub + 15%
+  &:after
+    icon('github-btn');
+    float: left
+    font-size s(28, $sz10)
+    margin-right s(15, 28)
+  & span
+    padding-top s(6, $sz10)
+
+

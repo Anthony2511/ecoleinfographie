@@ -73,6 +73,23 @@
 
         </div>
 
+        <div class="rea-content">
+            <section class="rea-content__desc">
+                <h3 role="heading" aria-level="3" class="rea-content__title">Description du projet</h3>
+                <p>Aliquam urna risus, suscipit et augue vitae, accumsan eleifend ex. Suspendisse potenti. Curabitur vel ultrices urna. Donec iaculis scelerisque dolor nec aliquet. Nam eget metus tellus. Quisque at congue massa. Nunc semper sem convallis velit faucibus, non egestas eros gravida. Aliquam euismod dui ipsum, quis placerat elit ullamcorper eget. Cras et lectus ex. Phasellus placerat consectetur metus. Curabitur at mauris orci.</p>
+                <p>Etiam sed sem eget mi suscipit lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus orci dui, eleifend eu sapien quis, fermentum facilisis eros. Nulla dignissim mi vel dictum pharetra. Nunc suscipit ornare tellus a gravida. Aenean dictum massa nec nisi porttitor, a porta felis dignissim. Sed at eros lacus. Aenean gravida aliquam elit, id maximus lorem fermentum ut. Sed tristique nibh pellentesque ex vulputate, at fringilla libero ornare. Suspendisse in magna mollis, ultrices arcu in, suscipit leo.
+                </p>
+            </section>
+            <section class="rea-content__prof">
+                <h3 role="heading" aria-level="3" class="rea-content__title">Le mot des profs</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh dui, sollicitudin sed mollis vitae, luctus a risus. Quisque velit est, pulvinar in sem eget, maximus consectetur enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean finibus ligula at eleifend pretium. Fusce luctus maximus dui, sit amet tincidunt justo pharetra quis. Cras cursus nisl ac dui sodales maximus. In sed leo id risus dignissim consectetur in eget mauris.</p>
+            </section>
+            <a href="#github" class="rea-content__button" title="Vers Github">
+                <span>Code source disponible</span>
+            </a>
+
+        </div>
+
 
 
     </section>
