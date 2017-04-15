@@ -1,0 +1,69 @@
+.blog-home
+  background-color $cBackgroundGrey
+  .header-shawl
+    background: #2980b9; /* fallback for old browsers */
+    background linear-gradient(41deg, #2980B9 0%, #2B465D 88%, #2C3E50 100%);
+
+  .header__wrapper
+    position relative
+  .breadcrumb.breadcrumb--header
+    top 0
+    margin-top s(192)
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+
+  .header-home
+    margin-top s(210)
+    &__title
+      @extend .title51
+      display: block
+      color $cWhite
+      text-shadow: 0 1px 1px rgba(0,0,0,0.50);
+      margin-bottom s(30, $sz2)
+    &__intro
+      @extend .paragraph21
+      color $cWhite
+      max-width s(570, $sz6)
+
+.blog-home-img
+  position relative
+  @extend .containerGridz
+  .blog-svg
+    position absolute
+    right s($paddingSideGlobal)
+    top 10px
+    width 600px
+    height auto
+  .page-centre
+    transform translateX(141px) translateY(85px)
+    animation animPageCentre .6s ease forwards
+  .page-gauche
+    transform translateX(145px) translateY(47px)
+    opacity 0
+    animation animPageGauche .4s .6s ease forwards
+  .page-droite
+    transform translateX(145px) translateY(77px)
+    opacity 0
+    animation animPageDroite .4s .6s ease forwards
+
+@keyframes animPageCentre
+  0%
+    transform translateX(141px) translateY(85px)
+  100%
+    transform translateX(141px) translateY(10px)
+@keyframes animPageGauche
+  0%
+    transform translateX(145px) translateY(47px)
+    opacity 0
+  100%
+    transform translateX(7px) translateY(47px)
+    opacity 1
+@keyframes animPageDroite
+  0%
+    transform translateX(145px) translateY(77px)
+    opacity 0
+  100%
+    transform translateX(362px) translateY(77px)
+    opacity 1
