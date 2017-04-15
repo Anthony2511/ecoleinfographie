@@ -24,6 +24,8 @@
       display: block
       margin s(30, $sz2) auto
       background $cGrey-lineMenu
+      animation lineAnimation .8s ease forwards
+      transform-origin 100% 0%
   &__author
     display: block
     text-align: center
@@ -31,6 +33,9 @@
     font-weight 300
     font-size s($sz6)
     letter-spacing 0.5px
+    transform translateY(-20px)
+    opacity 0
+    animation authorAnimation .5s .7s ease forwards
   &__link
     display: inline-block
     font-size: s($sz6, $sz6);
@@ -39,6 +44,22 @@
     &:after
       bottom -4px
 
+
+
+
+@keyframes lineAnimation
+  0%
+    transform scaleY(0)
+  100%
+    transform scaleY(1)
+
+@keyframes authorAnimation
+  0%
+    transform translateY(-20px)
+    opacity 0
+  100%
+    transform translateY(0px)
+    opacity 1
 /************************************\
 		INFOS REA
 \************************************/
