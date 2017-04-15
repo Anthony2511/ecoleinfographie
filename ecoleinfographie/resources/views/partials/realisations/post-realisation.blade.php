@@ -1,5 +1,5 @@
 <div class="rea__container">
-    <section class="rea">
+    <article class="rea">
         <h2 role="heading" aria-level="2" class="rea__name">Sur un Baobab</h2>
         <span class="rea__author">Par <a href="#jimmyletecheur" class="rea__link" rel="author" title="Voir les autre projets de Jimmy Letecheur">Jimmy Letecheur</a></span>
 
@@ -87,11 +87,72 @@
             <a href="#github" class="rea-content__button" title="Vers Github">
                 <span>Code source disponible</span>
             </a>
-
         </div>
-
-
-
+    </article>
+    <section class="rea-others">
+        <h2 role="heading" aria-level="2" class="rea-others__title">Découvrir d’autre projets</h2>
+        <ul class="reas">
+            <li class="reas__item">
+                <a href="#reas" class="reas__link">
+                    <figure class="reas__figure">
+                        <img class="reas__img" src="./img/reas-test.png" width="940" height="938" alt="">
+                        <figcaption class="reas__figcaption">
+                            <div class="reas__section">
+                                <span class="reas__section__name">
+                                    <span class="reas__section__name-text">Web</span>
+                                </span>
+                            </div>
+                            <div class="reas__desc">
+                                <div class="reas__desc-wrapper">
+                                    <strong class="reas__desc__name">Sur un Baobab</strong>
+                                    <span class="reas__desc__author">Par Jimmy Letecheur</span>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li><!--
+                --><li class="reas__item">
+                <a href="#reas" class="reas__link">
+                    <figure class="reas__figure">
+                        <img class="reas__img" src="./img/reas-test3.png" width="671" height="662" alt="">
+                        <figcaption class="reas__figcaption">
+                            <div class="reas__section">
+                                <span class="reas__section__name">
+                                    <span class="reas__section__name-text">Design graphique</span>
+                                </span>
+                            </div>
+                            <div class="reas__desc">
+                                <div class="reas__desc-wrapper">
+                                    <strong class="reas__desc__name">Sur un Baobab</strong>
+                                    <span class="reas__desc__author">Par Jimmy Letecheur</span>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li><!--
+                --><li class="reas__item">
+                <a href="#reas" class="reas__link">
+                    <figure class="reas__figure">
+                        <img class="reas__img" src="./img/reas-test7.png" width="805" height="770" alt="">
+                        <figcaption class="reas__figcaption">
+                            <div class="reas__section">
+                                <span class="reas__section__name">
+                                    <span class="reas__section__name-text">3D et audiovisuel</span>
+                                </span>
+                            </div>
+                            <div class="reas__desc">
+                                <div class="reas__desc-wrapper">
+                                    <strong class="reas__desc__name">Lorem ipsum dolor sit amet aspilicuita</strong>
+                                    <span class="reas__desc__author">Par Henri Dalum et Jessica Daufel</span>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
     </section>
 
 
