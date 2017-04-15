@@ -17,7 +17,7 @@
         <h2 role="heading" aria-level="2" class="reas-wrapper__title">La liste des travaux de nos étudiants</h2>
         <ul class="reas">
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test.png" width="940" height="938" alt="">
                         <figcaption class="reas__figcaption">
@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test2.png" width="1211" height="812" alt="">
                         <figcaption class="reas__figcaption">
@@ -57,7 +57,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test3.png" width="671" height="662" alt="">
                         <figcaption class="reas__figcaption">
@@ -77,7 +77,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test4.png" width="864" height="851" alt="">
                         <figcaption class="reas__figcaption">
@@ -97,7 +97,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test5.png" width="868" height="926" alt="">
                         <figcaption class="reas__figcaption">
@@ -117,7 +117,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test6.png" width="1299" height="950" alt="">
                         <figcaption class="reas__figcaption">
@@ -137,7 +137,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test7.png" width="805" height="770" alt="">
                         <figcaption class="reas__figcaption">
@@ -157,7 +157,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test8.png" width="670" height="864" alt="">
                         <figcaption class="reas__figcaption">
@@ -177,7 +177,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test9.png" width="525" height="345" alt="">
                         <figcaption class="reas__figcaption">
@@ -197,7 +197,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test10.png" width="650" height="345" alt="">
                         <figcaption class="reas__figcaption">
@@ -217,7 +217,7 @@
                 </a>
             </li>
             <li class="reas__item">
-                <a href="#reas" class="reas__link">
+                <a href="une-realisation" class="reas__link">
                     <figure class="reas__figure">
                         <img class="reas__img" src="./img/reas-test11.png" width="899" height="616" alt="">
                         <figcaption class="reas__figcaption">
