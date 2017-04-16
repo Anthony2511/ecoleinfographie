@@ -75,7 +75,7 @@
     margin s(10, $sz4) 0 s(40, $sz4)
     background-color $cBorderTitles;
 
-.titleExtraBold
+.titleExtraBold // 21px
   font-size: s($sz6);
   font-weight 900
   letter-spacing 1.63px
@@ -88,3 +88,17 @@
     height s(5, $sz6)
     background $cBorderTitles
     margin-top s(11, $sz6)
+
+.titleExtraBold26 // 26px
+  font-size: s($sz5);
+  font-weight 900
+  letter-spacing 1.63px
+  text-transform: uppercase
+  margin-bottom s(30, $sz5)
+  &:after
+    content ''
+    display: block
+    width s(45, $sz5)
+    height s(5, $sz5)
+    background $cBorderTitles
+    margin-top s(11, $sz5)

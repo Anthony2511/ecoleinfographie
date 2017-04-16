@@ -5,6 +5,6 @@
 @endsection
 
 @section('content')
-    @include('partials.realisations.index-realisations')
+    @include('partials.blog.blog-index')
 @endsection
 
