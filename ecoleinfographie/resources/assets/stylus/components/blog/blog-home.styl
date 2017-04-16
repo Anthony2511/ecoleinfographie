@@ -2,4 +2,24 @@
   @extend .containerGridz
 
 .blog-list
-  width col(3.5, 12) + col(3.5, 12) + col(1, 12) + (gutter(12)*2)
+  max-width 801px
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  &__title
+    @extend .titleExtraBold26
+    color $cBlueTitles
+    padding s(50, $sz5) 0 s(30, $sz5)
+  & .blog-card
+    margin-bottom s(85)
+
+
+.no-flexbox
+  .blog-list
+    &:after
+      @extend .clearfix
+    .blog-card
+      float left
+      margin-right s(85)
+      &:nth-child(2n +2 )
+        margin-right: 0
