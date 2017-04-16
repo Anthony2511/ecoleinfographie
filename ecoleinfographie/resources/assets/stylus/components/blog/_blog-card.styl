@@ -1,6 +1,8 @@
 .blog-card
   position: relative
   width 357.5px
+  height s(435)
+  overflow hidden
   background $cWhite
   box-shadow 0 0 2px 0 rgba(169,169,169,0.50)
   &__header
@@ -14,10 +16,24 @@
     z-index 20
     &:before
       background $cBlueWeb + 15%
+    &--web
+      background $cBlueWeb
+      &:before
+        background $cBlueWeb + 15%
+    &--2D
+      background $cPinkDG
+      &:before
+        background $cPinkDG + 15%
+    &--3D
+      background $cGreen3D
+      &:before
+        background $cGreen3D + 15%
   &__img
     display block
   &__title
     position: relative
+    height s(100, $sz6)
+    overflow hidden
     font-size s($sz6)
     font-weight 600
     color $cBlueTitles
