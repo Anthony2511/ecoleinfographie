@@ -1,0 +1,159 @@
+.blog-card
+  position: relative
+  width 357.5px
+  background $cWhite
+  box-shadow 0 0 2px 0 rgba(169,169,169,0.50)
+  &__header
+    position: relative
+  &__category
+    position: absolute
+    bottom -18px
+    left s(34)
+    @extend .categoryLink
+    background $cBlueWeb
+    z-index 20
+    &:before
+      background $cBlueWeb + 15%
+  &__img
+    display block
+  &__title
+    position: relative
+    font-size s($sz6)
+    font-weight 600
+    color $cBlueTitles
+    line-height: 1.2em
+    padding s(30, $sz6) s(34, $sz6) s(20, $sz6)
+    z-index 2
+    &:before
+      @extend .baseshawl
+      background $cWhite
+      transform: skewY(-1.5deg);
+  &__footer
+    position relative
+    padding s(20) s(34)
+    border-top 1px solid $cGrey-lineMenu2
+    &:after
+      @extend .clearfix
+  &__author
+    position: relative
+    display: inline-block
+    z-index 20
+    &__img
+      display: inline-block
+      margin-right s(8)
+      border-radius 50%
+      vertical-align middle
+    &__name
+      display: inline-block
+      font-size s($sz10)
+      color $cBlue2
+      &--name
+        position relative
+        display: inline-block
+        font-size s($sz10, $sz10)
+        color $cBlueCiel
+      &--hidden
+        @extend .hidden
+  &__comments
+    position: relative
+    float: right
+    z-index 20
+    &__hidden
+      @extend .hidden
+    &__number
+      font-size s($sz10)
+      color $cBlueCiel
+      &:after
+        position relative
+        top 1px
+        icon('bullet')
+        color $cBlue2
+        font-size 10px
+        margin-left 3px
+        vertical-align middle
+  &__go-article
+    @extend .cover
+    z-index 10
+    & span
+      @extend .hidden
+
+
+/************************************\
+		HOVER AUTHOR
+\************************************/
+.blog-card__author .blog-card__author__name--name:after
+  content ''
+  position absolute
+  left: 0
+  bottom: -3px
+  display: inline-block
+  width 0%
+  height 2px
+  background-color $cBlueCiel
+  transition .2s $ease-out-quart width
+
+.blog-card__author:hover .blog-card__author__name--name:after
+.blog-card__author:focus .blog-card__author__name--name:after
+  width 100%
+  transition .2s $ease-out-quart width
+
+/************************************\
+		HOVER COMMENTS
+\************************************/
+.blog-card__comments:hover .blog-card__comments__number
+.blog-card__comments:focus .blog-card__comments__number
+.blog-card__comments:hover .blog-card__comments__number:after
+.blog-card__comments:focus .blog-card__comments__number:after
+  color $cBlack
+  transition .3s ease color
+
+/************************************\
+		HOVER CARD
+\************************************/
+
+.blog-card__header
+  &:before
+    content ''
+    display: block
+    @extend .cover
+    opacity 0
+    background-image: linear-gradient(333deg,rgba(0, 0, 0, 0.95) 0%,rgba(39, 39, 39, 0.95) 22.2%,rgba(88, 88, 88, 0.95) 73.5%,rgba(88, 88, 88, 0.95) 100%);
+    transition .3s ease all
+    transition-property opacity, background-image
+  &:after
+    position: absolute
+    display: inline-block
+    top 50%
+    transform translateY(-100%)
+    left: 0
+    right: 0
+    text-align: center
+    icon('blog');
+    font-size s(36)
+    color #D8D8D8
+    opacity 0
+    transition .3s ease all
+    transition-property transform, opacity
+
+
+// Hover carte reste au survol des autres liens
+/*.blog-card:hover
+  & .blog-card__header:before
+    opacity 1
+    transition .3s ease opacity
+  & .blog-card__header:after
+    transform translateY(-50%)
+    opacity 1
+    transition .3s ease all
+    transition-property transform, opacity*/
+
+// Hover carte disparait au survol des autres liens
+.blog-card__go-article:hover
+  & ~ .blog-card__header:before
+    opacity 1
+    transition .3s ease opacity
+  & ~ .blog-card__header:after
+    transform translateY(-50%)
+    opacity 1
+    transition .3s ease all
+    transition-property transform, opacity

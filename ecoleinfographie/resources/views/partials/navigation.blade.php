@@ -133,7 +133,7 @@
             <a href="#4" class="menu__link">Nos diplômés</a>
         </li>
         <li class="menu__item" >
-            <a href="#5" class="menu__link">Blog</a>
+            <a href="blog" class="menu__link">Blog</a>
         </li>
         <li class="menu__item">
             <a href="#6" class="menu__link menu__link--cta">Je veux m’inscrire</a>

@@ -112,3 +112,29 @@
   &:focus:before
     width 100%
 
+/************************************\
+		CATEGORY STYLE
+\************************************/
+.categoryLink
+  display: inline-block
+  font-size s(13)
+  font-weight 600
+  color $cWhite
+  text-transform: uppercase
+  letter-spacing 0.75px
+  padding s(9, 13) s(30, 13)
+  border-radius 17px 0 17px 0
+  overflow hidden
+  &:before
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: red + 15%
+    z-index: -1;
+    transition .3s width;
+  &:hover:before
+  &:focus:before
+    width 100%
