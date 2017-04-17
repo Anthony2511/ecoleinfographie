@@ -6,7 +6,6 @@ w.asideBlog = {
         this.blogSearch();
         this.categoryTrigger();
         this.allTags();
-        console.log('asideJs charged')
     },
 
 

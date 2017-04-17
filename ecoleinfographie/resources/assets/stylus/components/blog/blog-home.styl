@@ -1,11 +1,16 @@
 .blog__container
   @extend .containerGridz
+  &:after
+    @extend .clearfix
 
 .blog-list
-  max-width 801px
   display flex
   flex-wrap wrap
   justify-content space-between
+  &__container
+    float: left
+    max-width 64.596774194% // 801/1240*100
+
   &__title
     @extend .titleExtraBold26
     color $cBlueTitles
@@ -30,6 +35,8 @@
 
 .blog-aside
   width s(354)
+  float: right
+  margin-top s(152)
   &__title
     @extend .hidden
   & section
