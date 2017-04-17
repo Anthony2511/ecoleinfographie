@@ -160,4 +160,106 @@
 
     </section>
 
+    <aside class="blog-aside">
+        <h2 role="heading" aria-level="2" class="blog-aside__title">Actions et autre articles</h2>
+        <section class="blog-search">
+            <h3 role="heading" aria-level="3" class="blog-search__title">Chercher un article</h3>
+            <form action="#" class="blog-search__form">
+                <label for="search-blog" class="blog-search__label">Je recherche...</label>
+                <input type="search" class="blog-search__input" name="search-blog" id="search-blog">
+            </form>
+        </section>
+
+        <section class="blog-category">
+            <h3 role="heading" aria-level="3" class="blog-category__title">Catégories</h3>
+            <ul class="blog-category__list">
+                <li class="blog-category__main-item blog-category__main-item--web">Web</li>
+                <ul class="blog-category__sublist">
+                    <li class="blog-category__subitem">Tutoriels</li>
+                    <li class="blog-category__subitem">Articles de veille</li>
+                    <li class="blog-category__subitem">Cours</li>
+                    <li class="blog-category__subitem">Tous les articles</li>
+                </ul>
+            </ul>
+            <ul class="blog-category__list">
+                <li class="blog-category__main-item blog-category__main-item--2D">Design graphique</li>
+                <ul class="blog-category__sublist">
+                    <li class="blog-category__subitem">Tutoriels</li>
+                    <li class="blog-category__subitem">Articles de veille</li>
+                    <li class="blog-category__subitem">Cours</li>
+                    <li class="blog-category__subitem">Tous les articles</li>
+                </ul>
+            </ul>
+            <ul class="blog-category__list">
+                <li class="blog-category__main-item blog-category__main-item--3D">3D/Vidéo</li>
+                <ul class="blog-category__sublist">
+                    <li class="blog-category__subitem">Tutoriels</li>
+                    <li class="blog-category__subitem">Articles de veille</li>
+                    <li class="blog-category__subitem">Cours</li>
+                    <li class="blog-category__subitem">Tous les articles</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section class="blog-popular">
+            <h3 role="heading" aria-level="3" class="blog-popular__title">Sujets populaire</h3>
+            <ul class="blog-popular__list">
+                <li class="blog-popular__item">
+                    <figure class="blog-poular__figure">
+                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                        <figcaption class="blog-popular__figcaption">95% des intégrateurs écrivent mal leurs titres</figcaption>
+                    </figure>
+                </li>
+                <li class="blog-popular__item">
+                    <figure class="blog-poular__figure">
+                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                        <figcaption class="blog-popular__figcaption">Apprenez à maîtriser les brushs</figcaption>
+                    </figure>
+                </li>
+                <li class="blog-popular__item">
+                    <figure class="blog-poular__figure">
+                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                        <figcaption class="blog-popular__figcaption">Les futures propriétés de CSS4</figcaption>
+                    </figure>
+                </li>
+                <li class="blog-popular__item">
+                    <figure class="blog-poular__figure">
+                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                        <figcaption class="blog-popular__figcaption">Tutoriel Maya : Apprennez à appliquer des textures t…</figcaption>
+                    </figure>
+                </li>
+                <li class="blog-popular__item">
+                    <figure class="blog-poular__figure">
+                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                        <figcaption class="blog-popular__figcaption">Apprenez à faire des caricatures avec Photosh…</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <section class="blog-tags">
+            <h3 role="heading" aria-level="3" class="blog-tags__title">Tags populaire</h3>
+            <ul class="blog-tags__list">
+                <li class="blog-tags__item">HTML</li>
+                <li class="blog-tags__item">Photoshop</li>
+                <li class="blog-tags__item">CSS</li>
+                <li class="blog-tags__item">Hover</li>
+                <li class="blog-tags__item">Illustrator</li>
+                <li class="blog-tags__item">Tutoriel</li>
+                <li class="blog-tags__item">Lorem</li>
+                <li class="blog-tags__item">Ipsum</li>
+                <li class="blog-tags__item">Dolor</li>
+                <li class="blog-tags__item">Sit</li>
+                <li class="blog-tags__item">Amet</li>
+                <li class="blog-tags__item">Creation</li>
+                <li class="blog-tags__item">Framework</li>
+                <li class="blog-tags__item">Creative</li>
+                <li class="blog-tags__item">Beautiful</li>
+                <li class="blog-tags__item">Technique</li>
+            </ul>
+            <button class="blog-tags__button">Voir tous les tags</button>
+        </section>
+
+    </aside>
+
 </div>
