@@ -4,6 +4,7 @@ w.asideBlog = {
 
     init: function () {
         this.blogSearch();
+        this.categoryTrigger();
         console.log('asideJs charged')
     },
 
@@ -29,7 +30,20 @@ w.asideBlog = {
         }));
     },
 
+    categoryTrigger: function () {
+        var buttonCat = $('.blog-category__list'),
+            sublistCat = $('.blog-category__sublist'),
+            totalHeight = buttonCat.outerHeight() + sublistCat.outerHeight();
 
-
+        buttonCat.click(function () {
+            if($(this).hasClass('triggerOpen')){
+                $(this).removeClass('triggerOpen');
+                $(this).css('height', '69px');
+            } else{
+                $(this).addClass('triggerOpen');
+                $(this).css('height', totalHeight);
+            }
+        });
+    },
     
 }
