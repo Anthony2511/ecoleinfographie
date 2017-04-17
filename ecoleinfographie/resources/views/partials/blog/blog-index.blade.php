@@ -176,30 +176,30 @@
         <section class="blog-category">
             <h3 role="heading" aria-level="3" class="blog-category__title">Catégories</h3>
             <ul class="blog-category__list">
-                <li class="blog-category__main-item blog-category__main-item--web">Web</li>
+                <li class="blog-category__main-item blog-category__main-item--web"><span>Web</span></li>
                 <ul class="blog-category__sublist">
-                    <li class="blog-category__subitem">Tutoriels</li>
-                    <li class="blog-category__subitem">Articles de veille</li>
-                    <li class="blog-category__subitem">Cours</li>
-                    <li class="blog-category__subitem">Tous les articles</li>
+                    <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Tous les articles</li></a>
                 </ul>
             </ul>
             <ul class="blog-category__list">
                 <li class="blog-category__main-item blog-category__main-item--2D">Design graphique</li>
                 <ul class="blog-category__sublist">
-                    <li class="blog-category__subitem">Tutoriels</li>
-                    <li class="blog-category__subitem">Articles de veille</li>
-                    <li class="blog-category__subitem">Cours</li>
-                    <li class="blog-category__subitem">Tous les articles</li>
+                    <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Tous les articles</li></a>
                 </ul>
             </ul>
             <ul class="blog-category__list">
                 <li class="blog-category__main-item blog-category__main-item--3D">3D/Vidéo</li>
                 <ul class="blog-category__sublist">
-                    <li class="blog-category__subitem">Tutoriels</li>
-                    <li class="blog-category__subitem">Articles de veille</li>
-                    <li class="blog-category__subitem">Cours</li>
-                    <li class="blog-category__subitem">Tous les articles</li>
+                    <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
+                    <a href="#subitem"><li class="blog-category__subitem">Tous les articles</li></a>
                 </ul>
             </ul>
         </section>
