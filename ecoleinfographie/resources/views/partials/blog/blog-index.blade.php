@@ -208,34 +208,39 @@
             <h3 role="heading" aria-level="3" class="blog-popular__title">Sujets populaire</h3>
             <ul class="blog-popular__list">
                 <li class="blog-popular__item">
-                    <figure class="blog-poular__figure">
-                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                    <figure class="blog-popular__figure">
+                        <img src="./img/blog-popular-1.jpg" width="56" height="54" alt="" class="blog-popular__img">
                         <figcaption class="blog-popular__figcaption">95% des intégrateurs écrivent mal leurs titres</figcaption>
                     </figure>
+                    <a href="#goPopular" class="blog-popular__link"><span>Vers l’article populaire « NOM ARTICLE »</span></a>
                 </li>
                 <li class="blog-popular__item">
-                    <figure class="blog-poular__figure">
-                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                    <figure class="blog-popular__figure">
+                        <img src="./img/blog-popular-2.jpg" width="56" height="54" alt="" class="blog-popular__img">
                         <figcaption class="blog-popular__figcaption">Apprenez à maîtriser les brushs</figcaption>
                     </figure>
+                    <a href="#goPopular" class="blog-popular__link"><span>Vers l’article populaire « NOM ARTICLE »</span></a>
                 </li>
                 <li class="blog-popular__item">
-                    <figure class="blog-poular__figure">
-                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                    <figure class="blog-popular__figure">
+                        <img src="./img/blog-popular-3.jpg" width="56" height="54" alt="" class="blog-popular__img">
                         <figcaption class="blog-popular__figcaption">Les futures propriétés de CSS4</figcaption>
                     </figure>
+                    <a href="#goPopular" class="blog-popular__link"><span>Vers l’article populaire « NOM ARTICLE »</span></a>
                 </li>
                 <li class="blog-popular__item">
-                    <figure class="blog-poular__figure">
-                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                    <figure class="blog-popular__figure">
+                        <img src="./img/blog-popular-4.jpg" width="56" height="54" alt="" class="blog-popular__img">
                         <figcaption class="blog-popular__figcaption">Tutoriel Maya : Apprennez à appliquer des textures t…</figcaption>
                     </figure>
+                    <a href="#goPopular" class="blog-popular__link"><span>Vers l’article populaire « NOM ARTICLE »</span></a>
                 </li>
                 <li class="blog-popular__item">
-                    <figure class="blog-poular__figure">
-                        <img src="" width="56" height="54" alt="" class="blog-popular__img">
+                    <figure class="blog-popular__figure">
+                        <img src="./img/blog-popular-5.jpg" width="56" height="54" alt="" class="blog-popular__img">
                         <figcaption class="blog-popular__figcaption">Apprenez à faire des caricatures avec Photosh…</figcaption>
                     </figure>
+                    <a href="#goPopular" class="blog-popular__link"><span>Vers l’article populaire « NOM ARTICLE »</span></a>
                 </li>
             </ul>
         </section>

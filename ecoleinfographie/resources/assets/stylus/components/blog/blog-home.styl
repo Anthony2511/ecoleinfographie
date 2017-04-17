@@ -48,7 +48,10 @@
   letter-spacing 1.31px
   text-transform uppercase
 
-// Search
+
+/************************************\
+		SEARCH BAR
+\************************************/
 .blog-search
   background $cWhite
   &__title
@@ -116,7 +119,9 @@
     padding-top s(12)
     line-height 0;
 
-// Category
+/************************************\
+  CATEGORY
+\************************************/
 .blog-category
   background $cWhite
   &__title
@@ -189,7 +194,6 @@
   content ''
   transform: rotate(45deg)
 
-
 .blog-category
   &__sublist
     padding-bottom s(25)
@@ -213,3 +217,41 @@
       color $cBlack
       transition .2s ease all
       transition-property transform, color
+
+/************************************\
+      SUJETS POP
+\************************************/
+
+.blog-popular
+  background $cWhite
+  &__title
+    @extend .title-section-aside
+  &__item
+    position: relative
+    padding s(25) s(30)
+    border-bottom 1px solid $cGrey-lineMenu2
+    transition .3s ease background
+    &:last-child
+      border-bottom none
+    &:hover
+    &:focus
+      background $cGrey4
+      transition .3s ease background
+  &__figure
+    position: relative
+  &__figure:after
+    @extend .clearfix
+  &__figcaption
+    font-size s($sz8)
+    padding-top s(5, $sz8)
+    font-weight 500
+    color $cBlueTitles
+    line-height 1.3em
+  &__img
+    display: block
+    float: left
+    margin-right s(13)
+  &__link span
+    @extend .hidden
+  &__link
+    @extend .cover
