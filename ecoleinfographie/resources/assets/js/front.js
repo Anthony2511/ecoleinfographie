@@ -34,6 +34,7 @@ var w = {
             if (w.$body.hasClass('les-metiers-du-web-programme-des-cours')) return 'programCourses';
             if (w.$body.hasClass('former-students-interview')) return 'oneFormerStudent';
             if (w.$body.hasClass('oneRea')) return 'oneRea';
+            if (w.$body.hasClass('blog')) return 'blog';
 
             return false;
       }
