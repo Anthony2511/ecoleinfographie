@@ -6,7 +6,7 @@
         <div class="blog-list">
 
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--web">Web</a>
                     <img src="./img/blog-img-min1.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -31,7 +31,7 @@
 
             </article>
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--2D">Design graphique</a>
                     <img src="./img/blog-img-min2.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -56,7 +56,7 @@
 
             </article>
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--3D">3D/Vidéo</a>
                     <img src="./img/blog-img-min3.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -81,7 +81,7 @@
 
             </article>
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--web">Web</a>
                     <img src="./img/blog-img-min1.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -106,7 +106,7 @@
 
             </article>
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--web">Web</a>
                     <img src="./img/blog-img-min1.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -131,7 +131,7 @@
 
             </article>
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--2D">Design graphique</a>
                     <img src="./img/blog-img-min2.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -156,7 +156,7 @@
 
             </article>
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--3D">3D/Vidéo</a>
                     <img src="./img/blog-img-min3.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -181,7 +181,7 @@
 
             </article>
             <article class="blog-card">
-                <a href="#goArticle" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
+                <a href="un-article-de-blog" class="blog-card__go-article"><span>Lire l’article NOM ARTICLE</span></a>
                 <header class="blog-card__header">
                     <a href="#category" class="blog-card__category blog-card__category--2D">Design graphique</a>
                     <img src="./img/blog-img-min2.jpg" width="358" height="264" alt="" class="blog-card__img">
@@ -341,8 +341,6 @@
         --><li class="blog-pagination__item"><a href="#number" class="blog-pagination__link">9</a></li><!--
         --><li class="blog-pagination__item"><a href="#number" class="blog-pagination__link">10</a></li>
         </ul>
-
-
     </div>
 
 </div>
