@@ -1,0 +1,95 @@
+.blog-pagination
+  clear both
+  background $cWhite
+  max-width 64.596774194% // 801/1240*100
+  height s(68)
+  box-shadow 0 0 2px 0 rgba(169,169,169,0.50)
+  &:after
+    @extend .clearfix
+  &__button
+    position: relative
+    display: inline-block
+    height s(68)
+    width 23.220973783% //186/801*100
+    text-align center
+    z-index 2
+    & span
+      font-size s($sz9)
+      font-weight: 900
+      letter-spacing 1.13px
+      text-transform: uppercase
+      color $cBlueCiel
+      line-height s(68, $sz9)
+    &--hidden
+      @extend .hidden
+    &--prev:before
+    &--next:after
+      display: inline-block
+      position: relative
+      top 1px
+      color $cBlueCiel
+      setIconBase()
+    &--prev:after
+    &--next:before
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      background: $cGrey4 - 3%
+      z-index: -1;
+      transition .3s width;
+    &--prev
+      float left
+      border-right 1px solid $cGrey-lineMenu2
+      &:before
+        setIconInclude('chevron-right')
+        margin-right 20px
+        transform rotate(180deg)
+      &:after
+        right 0
+      &:hover:after
+      &:focus:after
+        width 100%
+    &--next
+      position: relative
+      float right
+      border-left 1px solid $cGrey-lineMenu2
+      &:after
+        setIconInclude('chevron-right')
+        margin-left 20px
+        top 4px
+      &:before
+        left: 0
+      &:hover:before
+      &:focus:before
+        width 100%
+    &--noclick
+      cursor not-allowed
+      & span
+        color #BFBFBF
+      &:before
+        color #BFBFBF
+      &:after
+        display: none
+  &__list
+    display: block
+    text-align: center
+    margin: 0 auto
+    line-height s(68)
+  &__item
+    display: inline-block
+    margin-right s(16)
+    &:last-child
+      margin-right: 0
+  &__link
+    font-size s($sz6)
+    transition .2s ease color
+    &:hover
+    &:focus
+      color $cBlueCiel
+      transition .2s ease color
+    &--active
+      font-weight 700
+      color $cBlack
+
