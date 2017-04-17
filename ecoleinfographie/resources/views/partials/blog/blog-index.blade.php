@@ -185,7 +185,7 @@
                 </ul>
             </ul>
             <ul class="blog-category__list">
-                <li class="blog-category__main-item blog-category__main-item--2D">Design graphique</li>
+                <li class="blog-category__main-item blog-category__main-item--2D"><span>Design graphique</span></li>
                 <ul class="blog-category__sublist">
                     <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
                     <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
@@ -194,7 +194,7 @@
                 </ul>
             </ul>
             <ul class="blog-category__list">
-                <li class="blog-category__main-item blog-category__main-item--3D">3D/Vidéo</li>
+                <li class="blog-category__main-item blog-category__main-item--3D"><span>3D/Vidéo</span></li>
                 <ul class="blog-category__sublist">
                     <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
                     <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>

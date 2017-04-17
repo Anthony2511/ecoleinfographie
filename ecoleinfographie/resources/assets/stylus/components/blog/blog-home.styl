@@ -29,26 +29,28 @@
 \************************************/
 
 .blog-aside
+  width s(354)
   &__title
     @extend .hidden
+  & section
+    margin-bottom s(50)
+    box-shadow 0 0 2px 0 rgba(169,169,169,0.50);
+
+
+
 // Generic
-
-.box-section-aside
-  width s(354)
-  background $cWhite
-
 .title-section-aside
   padding s(25) s(30)
   border-bottom 1px solid $cGrey-lineMenu2
   color $cBlueTitles
-  font-size $sz8
+  font-size s($sz8)
   font-weight 900
   letter-spacing 1.31px
-  text-transform: uppercase
+  text-transform uppercase
 
 // Search
 .blog-search
-  @extend .box-section-aside
+  background $cWhite
   &__title
     @extend .title-section-aside
   &__container-form
@@ -113,3 +115,101 @@
   .blog-search__input
     padding-top s(12)
     line-height 0;
+
+// Category
+.blog-category
+  background $cWhite
+  &__title
+    @extend .title-section-aside
+  &__list
+    height s(69)
+    padding s(25) s(30)
+    overflow hidden
+    border-bottom 1px solid $cGrey-lineMenu2
+    cursor pointer
+    transition .3s ease height
+  &__main-item
+    position: relative
+    display: block
+    margin-bottom s(25, $sz10)
+    font-size s($sz10)
+    font-weight: 700
+    color $cBlue1
+    text-transform: uppercase
+    letter-spacing 1px
+    & span
+      position: relative
+      color $cBlue1
+      &:before
+      &:after
+        content ''
+        position: absolute
+        right: -23px
+        top: 51%
+        height: 2px
+        width: 9px
+        background: $cBlueTitles
+        backface-visibility: hidden
+        transition-property: transform
+        transition-duration: 0.2s
+      &:before
+        transform: rotate(45deg);
+        right: -18px;
+      &:after
+        transform: rotate(-45deg);
+    &:before
+      content ''
+      position: relative
+      top -1px
+      display: inline-block
+      width s(8, $sz10)
+      height s(8, $sz10)
+      margin-right s(7, $sz10)
+      border-radius 50%
+      background grey
+    &--web:before
+      background $cBlueWeb
+    &--2D:before
+      background $cPinkDG
+    &--3D:before
+      background $cGreen3D
+
+.blog-category__list:hover
+.blog-category__list:focus
+  background $cGrey4
+  transition .3s ease all
+.blog-category__list.triggerOpen:hover
+.blog-category__list.triggerOpen:focus
+  background $cWhite
+
+.triggerOpen .blog-category__main-item span:before
+  content ''
+  transform: rotate(-45deg)
+.triggerOpen .blog-category__main-item span:after
+  content ''
+  transform: rotate(45deg)
+
+
+.blog-category
+  &__sublist
+    padding-bottom s(25)
+  &__subitem
+    display: block
+    margin-bottom s(10)
+    color $cBlueCiel
+    margin-left s(15)
+    transition .25s ease transform
+    transition .2s ease all
+    transition-property transform, color
+    &:before
+      position: relative
+      top -1px
+      icon('arrow-right');
+      font-size 10px
+      margin-right s(8, 10)
+    &:hover
+    &:focus
+      transform translateX(4px)
+      color $cBlack
+      transition .2s ease all
+      transition-property transform, color
