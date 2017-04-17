@@ -318,5 +318,16 @@
     &:focus
       background $cGrey4 - 5%
       transition .3s ease background
+      outline none
 
+.blog-tags__list
+  height 192px
+  overflow hidden
+.blog-tags__item:nth-child(10)
+  margin-bottom 100px
+
+.blog-tags__list.show-all-tags
+  height auto
+  .blog-tags__item:nth-child(10)
+    margin-bottom: 0
 

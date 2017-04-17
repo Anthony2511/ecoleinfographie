@@ -5,6 +5,7 @@ w.asideBlog = {
     init: function () {
         this.blogSearch();
         this.categoryTrigger();
+        this.allTags();
         console.log('asideJs charged')
     },
 
@@ -45,5 +46,19 @@ w.asideBlog = {
             }
         });
     },
+    
+    allTags: function () {
+        var listTags = $('.blog-tags__list'),
+            buttonTags = $('.blog-tags__button');
+
+        buttonTags.click(function () {
+            if(listTags.hasClass('show-all-tags')){
+                listTags.removeClass('show-all-tags');
+                buttonTags.text('Voir tous les tags');
+            } else {
+                listTags.addClass('show-all-tags');
+                buttonTags.text('Masquer une partie des tags');
+        }});
+    }
     
 }
