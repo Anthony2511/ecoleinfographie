@@ -77,8 +77,50 @@
                         Aliquam sollicitudin, justo in iaculis porttitor, libero ante eleifend ante, et luctus enim elit quis magna. Nullam hendrerit est purus, quis porttitor neque consectetur eget. Ut faucibus nunc vitae est porta rhoncus. Morbi a quam sed sapien facilisis sagittis.
                     </p>
                 </section>
-
             </div>
+
+            <footer class="footerArticle">
+                <div class="footerArticle__author">
+                    <img src="./img/blog-author-30x30.jpg" width="63" height="63" alt="">
+                    <span class="footerArticle__author__name">Écrit par <a href="#goAuthor">Dominique Vilain</a></span>
+                    <small class="footerArticle__author__role">Professeur en web</small>
+
+                    <div class="footerArticle__follow">
+                        <span class="footerArticle__follow__label">Suivre sur&nbsp;: </span>
+                        <ul class="footerArticle__follow__list">
+                            <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--facebook"><span>Facebook</span></a></li>
+                            <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--twitter"><span>Twitter</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footerArticle__sharer">
+                    <span class="footerArticle__sharer__label-top">Cet article t’as plût&nbsp;?</span>
+                    <strong class="footerArticle__sharer__label-bottom">Partages-le&nbsp;!</strong>
+                    <ul class="footerArticle__sharer__list">
+                        <li class="footerArticle__sharer__item"><a href="#social" class="footerArticle__sharer__link footerArticle__sharer__link--facebook"><span>Partager sur Facebook</span></a></li>
+                        <li class="footerArticle__sharer__item"><a href="#social" class="footerArticle__sharer__link footerArticle__sharer__link--twitter"><span>Partager sur Twitter</span></a></li>
+                        <li class="footerArticle__sharer__item"><a href="#social" class="footerArticle__sharer__link footerArticle__sharer__link--pinterest"><span>Partager sur Pinterest</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footerArticle__like">
+                    <a href="#" class="fav" id="fav">
+                        <svg class="stableHeart" viewBox="-1 0 18 15">
+                            <defs>
+                                <path d="M16 4.872c0-4.9-6.894-5.8-8 .695C6.81-.928 0-.027 0 5.25c0 5.274 8 9.697 8 9.697s8-5.177 8-10.075z" id="heartPath"></path>
+                            </defs>
+                            <use xlink:href="#heartPath" />
+                        </svg>
+                        <svg class="floatHeart" viewBox="-1 0 18 15">
+                            <use xlink:href="#heartPath" />
+                        </svg>
+                    </a>
+                    <span class="footerArticle__like__counter">14 j’aime</span>
+                </div>
+
+
+            </footer>
 
 
 
