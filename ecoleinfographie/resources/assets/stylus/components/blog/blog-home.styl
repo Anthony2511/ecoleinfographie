@@ -255,3 +255,68 @@
     @extend .hidden
   &__link
     @extend .cover
+
+/************************************\
+		BLOG TAGS
+\************************************/
+
+.blog-tags
+  background $cWhite
+  &__title
+    @extend .title-section-aside
+  &__list
+    padding s(25) s(30)
+  &__item
+    position: relative
+    display: inline-block
+    & a
+      position: relative
+      display: inline-block
+      padding s(5, $sz9) s(16, $sz9)
+      font-size s($sz9, $sz9)
+      margin 0 s(15, $sz9) s(15, $sz9) 0
+      font-size s($sz9)
+      font-weight 700
+      letter-spacing .2px
+      color $cBlueTitles
+      background $cGrey4
+      text-transform: uppercase
+      border-radius 17px 0 17px 0
+      box-shadow: 0 1px 2px 0 rgba(159,159,159,0.50);
+      z-index 20
+      overflow hidden
+      transition .3s ease color
+      &:before
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $cBlueCiel
+        z-index: -1;
+        transition .2s width
+      &:hover
+      &:focus
+        color $cWhite
+        transition .2s ease color
+      &:hover:before
+      &:focus:before
+        width 100%
+  &__button
+    display: block
+    width 100%
+    font-size s($sz10)
+    font-weight 900
+    color $cBlueTitles
+    letter-spacing 1.15px
+    background $cGrey4
+    text-transform: uppercase
+    padding s(25) 0
+    transition .3s ease background
+    &:hover
+    &:focus
+      background $cGrey4 - 5%
+      transition .3s ease background
+
+
