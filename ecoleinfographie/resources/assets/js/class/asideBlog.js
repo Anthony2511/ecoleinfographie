@@ -15,18 +15,18 @@ w.asideBlog = {
             var singleInput = $(this);
             //check if user is filling one of the form fields
             checkVal(singleInput);
-            singleInput.on('change keyup click', function(){
+            singleInput.on('change keyup click focus', function(){
                 checkVal(singleInput);
             });
         });
 
-        inputFields.click(function () {
-            $(this).parent().addClass('float');
-        });
 
         function checkVal(inputField) {
             ( inputField.val() == '' ) ? inputField.parent().removeClass('float') : inputField.parent().addClass('float');
         };
+        inputFields.on('click', (function () {
+            $(this).parent().addClass('float');
+        }));
     },
 
 

@@ -164,10 +164,13 @@
         <h2 role="heading" aria-level="2" class="blog-aside__title">Actions et autre articles</h2>
         <section class="blog-search">
             <h3 role="heading" aria-level="3" class="blog-search__title">Chercher un article</h3>
-            <form action="#" class="blog-search__form">
-                <label for="search-blog" class="blog-search__label">Je recherche...</label>
-                <input type="search" class="blog-search__input" name="search-blog" id="search-blog">
-            </form>
+            <div class="blog-search__container-form">
+                <form action="#" class="blog-search__form">
+                    <label for="search-blog" class="blog-search__label">Je recherche...</label>
+                    <input type="search" class="blog-search__input" name="search-blog" id="search-blog">
+                    <button class="blog-search__submit"><span>Lancer la recherche</span></button>
+                </form>
+            </div>
         </section>
 
         <section class="blog-category">
