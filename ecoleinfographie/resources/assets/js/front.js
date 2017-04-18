@@ -35,6 +35,7 @@ var w = {
             if (w.$body.hasClass('former-students-interview')) return 'oneFormerStudent';
             if (w.$body.hasClass('oneRea')) return 'oneRea';
             if (w.$body.hasClass('blog')) return 'blog';
+            if (w.$body.hasClass('postBlog')) return 'postBlog';
 
             return false;
       }
