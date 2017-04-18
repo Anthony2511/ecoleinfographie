@@ -1,11 +1,67 @@
+/************************************\
+		MAIN TITLE
+\************************************/
 .blogArticle__title
+  margin-bottom s(20, $sz5)
   font-size s($sz5)
   font-weight 900
   text-transform: uppercase
   letter-spacing 1px
+  line-height: 1.15em
   color $cBlueTitles
   &:after
     content ''
     display: block
-    width s(60)
-    height s(5)
+    width s(60, $sz5)
+    height s(5, $sz5)
+    margin-top s(5)
+    background $cBorderTitles
+
+/************************************\
+      BLOC INFORMATION HEADER
+\************************************/
+
+.blogArticle__informations
+  margin-bottom s(30)
+  & *
+    font-size s($sz8)
+    line-height 30px
+
+.blogArticle__author
+  display: inline-block
+  &:after
+    @extend .clearfix
+  &__img
+    float: left
+    margin-right s(10, $sz8)
+    border-radius 50%
+  &__name
+    position: relative
+    display: inline-block
+    color $cBlueCiel
+    font-weight: 400
+    &:after
+      content ''
+      position absolute
+      left: 0
+      bottom: 2px
+      display: inline-block
+      width 0%
+      height 2px
+      background-color $cBlueCiel
+      transition .2s $ease-out-quart width
+
+.blogArticle__author:hover .blogArticle__author__name:after
+.blogArticle__author:focus .blogArticle__author__name:after
+  width 100%
+  transition .2s $ease-out-quart width
+
+.blogArticle__category a
+  @extend .blogArticle__author__name
+
+
+.blogArticle__category a:hover:after
+.blogArticle__category a:focus:after
+  width 100%
+  transition .2s $ease-out-quart width
+

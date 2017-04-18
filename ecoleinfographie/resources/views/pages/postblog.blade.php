@@ -17,11 +17,11 @@
                 <h2 role="heading" aria-level="2" class="blogArticle__title" itemprop="headline">Automatisez votre workflow avec Grunt</h2>
 
                 <div class="blogArticle__informations">
-                    <span class="blogArticle__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="./img/blog-author-30x30.jpg" width="30" height="30" alt="" class="blogArticle__author-img">
+                    <a href="#goAuthor" class="blogArticle__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img src="./img/blog-author-30x30.jpg" width="30" height="30" alt="" class="blogArticle__author__img">
                         <span class="preposition">Par</span>
-                        <a href="#goAuthor" class="name" itemprop="name url">Dominique Vilain</a>
-                    </span>
+                        <span  class="blogArticle__author__name" itemprop="name url">Dominique Vilain</span>
+                    </a>
 
                     <span class="blogArticle__pubdate">
                         <span class="preposition"> le</span>
@@ -39,7 +39,7 @@
 
             <div class="blogArticle__body" itemprop="articleBody">
                 <section class="blogArticle__section">
-                    <h3 role="heading" aria-level="3" class="blogArticle__title">Sous-titre de l’article</h3>
+                    <h3 role="heading" aria-level="3" class="blogArticle__subtitle">Sous-titre de l’article</h3>
                     <p class="blogArticle__paragraph">Vous avez sûrement déjà entendu parler de Grunt à droite à gauche, en conférence, voire votre boite l'utilise déjà mais vous ne savez toujours pas trop ce qui se cache derrière ce terme saugrenu digne d'un personnage de Warcraft. Soit, ce n'est pas bien grave.
                     </p>
                     <p class="blogArticle__paragraph">Vous est-il déjà arrivé de devoir régulièrement lancer, lancer et relancer des processus tels que Sass, LESS, uglify - en somme des préprocesseurs ou des minifiers - régulièrement à la main ? N'est-ce pas pénible ? N'est-ce pas aussi pénible de devoir indiquer à tous ses collègues comment ils doivent bosser pour que vous soyez tous cohérents ? Oui ? Grunt permet de résoudre ce genre de choses : respecter un putain de workflow en s'assurant que le parcours soit le même pour tout le monde et d'exécuter tout ça en lançant une seule commande. N'est-ce pas fucking aweeeeesome dude ? Bref
@@ -59,7 +59,7 @@
                 </section>
 
                 <section class="blogArticle__section">
-                    <h3 role="heading" aria-level="3" class="blogArticle__title">Sous-titre de l’article</h3>
+                    <h3 role="heading" aria-level="3" class="blogArticle__subtitle">Sous-titre de l’article</h3>
                     <p class="blogArticle__paragraph">
                         Duis elementum lorem id quam hendrerit lobortis. Aliquam iaculis dictum sagittis. Quisque molestie orci ut quam maximus placerat. Donec diam ante, venenatis non elit eu, mollis interdum lectus. Quisque semper tincidunt ante, in fringilla tortor aliquet a. Nam blandit, elit eget fringilla commodo, purus quam vulputate leo, eget euismod ligula lectus at velit. Cras faucibus accumsan pharetra. Mauris eros lacus, porttitor non pulvinar vel, rhoncus et velit. Phasellus egestas tortor lacus, ut blandit magna iaculis sed.
                     </p>
