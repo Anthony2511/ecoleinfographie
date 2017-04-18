@@ -13,7 +13,7 @@
             <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage">
 
 
-            <header>
+            <header class="blogArticle__header">
                 <h2 role="heading" aria-level="2" class="blogArticle__title" itemprop="headline">Automatisez votre workflow avec Grunt</h2>
 
                 <div class="blogArticle__informations">
@@ -42,9 +42,15 @@
                     <h3 role="heading" aria-level="3" class="blogArticle__subtitle">Sous-titre de l’article</h3>
                     <p class="blogArticle__paragraph">Vous avez sûrement déjà entendu parler de Grunt à droite à gauche, en conférence, voire votre boite l'utilise déjà mais vous ne savez toujours pas trop ce qui se cache derrière ce terme saugrenu digne d'un personnage de Warcraft. Soit, ce n'est pas bien grave.
                     </p>
-                    <p class="blogArticle__paragraph">Vous est-il déjà arrivé de devoir régulièrement lancer, lancer et relancer des processus tels que Sass, LESS, uglify - en somme des préprocesseurs ou des minifiers - régulièrement à la main ? N'est-ce pas pénible ? N'est-ce pas aussi pénible de devoir indiquer à tous ses collègues comment ils doivent bosser pour que vous soyez tous cohérents ? Oui ? Grunt permet de résoudre ce genre de choses : respecter un putain de workflow en s'assurant que le parcours soit le même pour tout le monde et d'exécuter tout ça en lançant une seule commande. N'est-ce pas fucking aweeeeesome dude ? Bref
-                    </p>
-                    <p class="blogArticle__paragraph">Nulla ut nibh quis ligula consequat porta. Suspendisse auctor orci urna, sit amet pulvinar magna mattis pellentesque. Cras vitae iaculis mi. In elit leo, vestibulum eu leo vel, tincidunt hendrerit erat. Cras commodo, urna sed consequat consectetur, lacus orci congue ante, ac fringilla mi lorem ac lectus. Donec vestibulum tempor velit sit amet lacinia. In non est pharetra, porta erat vitae, fermentum erat. Sed gravida, est vel hendrerit facilisis, libero orci varius massa, vel viverra nisl purus accumsan justo.
+                    <p class="blogArticle__paragraph">Vous est-il déjà arrivé de devoir régulièrement lancer, lancer et relancer des processus tels que <a class="blogArticle__link">Sass</a>, <a class="blogArticle__link">LESS</a>, <a class="blogArticle__link">uglify</a> - <i>en somme des préprocesseurs ou des minifiers</i> - régulièrement à la main ? N'est-ce pas pénible ? N'est-ce pas aussi pénible de devoir indiquer à tous ses collègues comment ils doivent bosser pour que vous soyez tous cohérents ? Oui ? <b>Grunt permet de résoudre ce genre de choses</b> :</p>
+
+                    <ul>
+                        <li>Respecter un putain de workflow en s'assurant que le parcours soit le même pour tout le monde et vice-versa.</li>
+                        <li>Exécuter tout ça en lançant une seule commande.</li>
+                    </ul>
+
+                    <p class="blogArticle__paragraph">N'est-ce pas fucking aweeeeesome dude ? Bref</p>
+                    <p class="blogArticle__paragraph">Nulla ut nibh quis ligula consequat porta. Suspendisse auctor orci urna, sit amet pulvinar magna mattis pellentesque. Cras vitae iaculis mi. <i>In elit leo, vestibulum eu leo vel, tincidunt hendrerit erat</i>. Cras commodo, urna sed consequat consectetur, lacus orci congue ante, ac fringilla mi lorem ac lectus. Donec vestibulum tempor velit sit amet lacinia. In non est pharetra, porta erat vitae, fermentum erat. Sed gravida, est vel hendrerit facilisis, libero orci varius massa, vel viverra nisl purus accumsan justo.
                     </p>
 
                     <figure class="blogArticle__figure">
@@ -54,18 +60,18 @@
                         </figcaption>
                     </figure>
 
-                    <p class="blogArticle__paragraph">Nulla ut nibh quis ligula consequat porta. Suspendisse auctor orci urna, sit amet pulvinar magna mattis pellentesque. Cras vitae iaculis mi. In elit leo, vestibulum eu leo vel, tincidunt hendrerit erat. Cras commodo, urna sed consequat consectetur, lacus orci congue ante, ac fringilla mi lorem ac lectus. Donec vestibulum tempor velit sit amet lacinia. In non est pharetra, porta erat vitae, fermentum erat. Sed gravida, est vel hendrerit facilisis, libero orci varius massa, vel viverra nisl purus accumsan justo.
+                    <p class="blogArticle__paragraph">Nulla ut nibh quis ligula consequat porta. Suspendisse auctor orci urna, sit amet pulvinar magna mattis pellentesque. Cras vitae iaculis mi. In elit leo, vestibulum eu leo vel, tincidunt hendrerit erat. <a class="blogArticle__link">Cras commodo, urna sed consequat</a> consectetur, lacus orci congue ante, ac fringilla mi lorem ac lectus. Donec vestibulum tempor velit sit amet lacinia. In non est pharetra, porta erat vitae, fermentum erat. Sed gravida, est vel hendrerit facilisis, libero orci varius massa, vel viverra nisl purus accumsan justo.
                     </p>
                 </section>
 
                 <section class="blogArticle__section">
                     <h3 role="heading" aria-level="3" class="blogArticle__subtitle">Sous-titre de l’article</h3>
                     <p class="blogArticle__paragraph">
-                        Duis elementum lorem id quam hendrerit lobortis. Aliquam iaculis dictum sagittis. Quisque molestie orci ut quam maximus placerat. Donec diam ante, venenatis non elit eu, mollis interdum lectus. Quisque semper tincidunt ante, in fringilla tortor aliquet a. Nam blandit, elit eget fringilla commodo, purus quam vulputate leo, eget euismod ligula lectus at velit. Cras faucibus accumsan pharetra. Mauris eros lacus, porttitor non pulvinar vel, rhoncus et velit. Phasellus egestas tortor lacus, ut blandit magna iaculis sed.
+                        Duis elementum lorem id quam hendrerit lobortis. Aliquam iaculis dictum sagittis. Quisque molestie orci ut quam maximus placerat. Donec diam ante, venenatis non elit eu, mollis interdum lectus. Quisque semper tincidunt ante, in fringilla tortor <b>aliquet a. Nam blandit, elit eget fringilla commodo, purus quam vulputate leo, eget euismod ligula lectus at velit</b>. Cras faucibus accumsan pharetra. Mauris eros lacus, porttitor non pulvinar vel, rhoncus et velit. Phasellus egestas tortor lacus, ut blandit magna iaculis sed.
                     </p>
 
                     <blockquote class="blogArticle__blockquote">
-                        <div class="blogArticle__blockquote__text">Cras pharetra leo nisi, eget facilisis odio rhoncus nec. Vestibulum pretium, erat finibus maximus rutrum, lectus orci iaculis sapien, at fermentum leo felis.</div>
+                        <p class="blogArticle__blockquote__text">Cras pharetra leo nisi, eget facilisis odio rhoncus nec. Vestibulum pretium, erat finibus maximus rutrum, lectus orci iaculis sapien, at fermentum leo felis.</p>
                     </blockquote>
 
                     <p class="blogArticle__paragraph">
@@ -80,7 +86,7 @@
 
             <footer class="footerArticle">
                 <div class="footerArticle__author">
-                    <img src="./img/blog-author-30x30.jpg" width="63" height="63" alt="">
+                    <img src="./img/blog-author-30x30.jpg" width="63" height="63" alt="" class="footerArticle__author__img">
                     <span class="footerArticle__author__name">Écrit par <a href="#goAuthor">Dominique Vilain</a></span>
                     <small class="footerArticle__author__role">Professeur en web</small>
 

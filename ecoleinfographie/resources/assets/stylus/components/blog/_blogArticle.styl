@@ -1,7 +1,42 @@
+// Global
+$paddLArticle = 52
+
+.blogArticle
+  i
+    font-style italic
+    font-size inherit
+  b
+    font-weight 700
+    font-size inherit
+  a.blogArticle__link
+    @extend .linkInText
+  ul
+    padding-left s($paddLArticle)
+    li
+      font-size s($sz7)
+      line-height 1.6em
+      margin-bottom s(10, $sz7)
+      &:before
+        content ''
+        display inline-block
+        width 8px
+        height 8px
+        border-radius 50%
+        margin-right 14px
+        background $cBlack
+
+
+/************************************\
+		HEADER ARTICLE
+\************************************/
+.blogArticle__header
+  margin-bottom s(40, $sz7)
 /************************************\
 		MAIN TITLE
 \************************************/
 .blogArticle__title
+  width 110%
+  padding-left s($paddLArticle, $sz5)
   margin-bottom s(20, $sz5)
   font-size s($sz5)
   font-weight 900
@@ -23,6 +58,7 @@
 
 .blogArticle__informations
   margin-bottom s(30)
+  padding-left s($paddLArticle)
   & *
     font-size s($sz8)
     line-height 30px
@@ -64,4 +100,96 @@
 .blogArticle__category a:focus:after
   width 100%
   transition .2s $ease-out-quart width
+
+/************************************\
+    DESCRIPTION - TEXT D’INTRO
+\************************************/
+.blogArticle__description
+  padding-left s($paddLArticle, $sz7)
+  font-size s($sz7)
+  font-weight 600
+  color $cBlack
+  line-height: 1.4em
+
+/************************************\
+    ARTICLE SECTION
+\************************************/
+.blogArticle__section
+  margin s(40) 0
+
+/************************************\
+    ARTICLE SUBTITLE
+\************************************/
+.blogArticle__subtitle
+  margin-bottom s(20, $sz7)
+  padding-left s($paddLArticle, $sz7)
+  font-size s($sz7)
+  font-weight 900
+  color $cBlueTitles
+  text-transform: uppercase
+  letter-spacing 1.38px
+  &:after
+    content ''
+    display: block
+    width s(30, $sz7)
+    height s(5, $sz7)
+    margin-top s(5)
+    background $cBorderTitles
+
+/************************************\
+      PARAGRAPH
+\************************************/
+.blogArticle__paragraph
+  font-size inherit
+  margin s(20, $sz7) 0
+  padding-left s($paddLArticle, $sz7)
+  font-size s($sz7)
+  line-height 1.62em
+
+/************************************\
+      FIGURE
+\************************************/
+.blogArticle__figure
+  position: relative
+  margin s(30) 0
+ /* &:after
+    @extend .clearfix*/ // Pas nécessaire, comportement voulu
+
+.blogArticle__figcaption
+  position: relative
+  float: right
+  top s(-20, $sz10)
+  right s(-20, $sz10)
+  width 90%
+  padding s(15, $sz10) s(25, $sz10)
+  background $cWhite
+  font-size s($sz10)
+  font-weight 300
+  color $cBlack
+  line-height 1.5em
+  box-shadow 0 0 2px 0 rgba(169,169,169,0.5)
+
+/************************************\
+      BLOCKQUOTE
+\************************************/
+.blogArticle__blockquote
+  position: relative
+  padding-left s($paddLArticle)
+  margin s(30) 0
+  &:after
+    @extend .clearfix
+  &:before
+    float: left
+    display: block
+    margin s(10, 51) s(20, 51) 0 0
+    icon('blockquote');
+    font-size s(51)
+  &__text
+    position: absolute
+    margin-left s(82, $sz7)
+    font-size s($sz7)
+    font-weight 600
+    color $cBlack
+    line-height: 1.62em
+
 
