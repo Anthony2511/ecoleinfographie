@@ -1,0 +1,28 @@
+.postBlog
+  background-color $cBackgroundGrey
+  .header__wrapper
+    position relative
+  .breadcrumb.breadcrumb--header
+    top 0
+    margin-top s(192)
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+
+
+
+.postBlog
+  .blog-aside
+    margin-top s(100)
+
+.blogArticle__container
+  @extend .containerGridz
+  &:after
+    @extend .clearfix
+
+.blogArticle
+  float: left
+  width col(7,12) + gutter(12)
+  margin-top s(100)
+
