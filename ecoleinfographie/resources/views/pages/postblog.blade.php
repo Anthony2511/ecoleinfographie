@@ -8,11 +8,10 @@
     @include('partials.breadcrumb')
 
 
-    <p class="blogArticle__container">
+    <div class="blogArticle__container">
         <article class="blogArticle" itemscope itemtype="http://schema.org/BlogPosting">
             <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage">
-            <meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00"/>
-            <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>
+
 
             <header>
                 <h2 role="heading" aria-level="2" class="blogArticle__title" itemprop="headline">Automatisez votre workflow avec Grunt</h2>
@@ -119,14 +118,15 @@
                     <span class="footerArticle__like__counter">14 j’aime</span>
                 </div>
 
-
             </footer>
 
-
-
-
+            <meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00"/>
+            <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>
         </article>
+
+        @include('partials.blog.aside');
     </div>
+
 
 
 
