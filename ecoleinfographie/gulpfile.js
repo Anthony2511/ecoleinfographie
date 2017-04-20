@@ -2,7 +2,8 @@ var elixir = require('laravel-elixir'),
     gulp = require('gulp'),
     stylus = require('laravel-elixir-stylus'),
     autoprefixer = require('gulp-autoprefixer'),
-    tinypng = require('elixir-tinypng');
+    tinypng = require('elixir-tinypng'),
+    cleanCSS = require('gulp-clean-css');
 
 require('laravel-elixir-browserify-official');
 
@@ -39,3 +40,12 @@ elixir(function (mix) {
         proxy: 'ecoleinfographie.app'
     });
 });
+
+
+/*
+gulp.task('clean-css', function () {
+    return gulp.src('./public/css/!**.css')
+        .pipe(cleanCSS({compatibility: 'ie8', level: 2 }))
+        .pipe(gulp.dest('./public/css/cleancss'));
+})
+*/
