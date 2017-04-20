@@ -44,9 +44,9 @@
                     </p>
                     <p class="blogArticle__paragraph">Vous est-il déjà arrivé de devoir régulièrement lancer, lancer et relancer des processus tels que <a class="blogArticle__link">Sass</a>, <a class="blogArticle__link">LESS</a>, <a class="blogArticle__link">uglify</a> - <i>en somme des préprocesseurs ou des minifiers</i> - régulièrement à la main ? N'est-ce pas pénible ? N'est-ce pas aussi pénible de devoir indiquer à tous ses collègues comment ils doivent bosser pour que vous soyez tous cohérents ? Oui ? <b>Grunt permet de résoudre ce genre de choses</b> :</p>
 
-                    <ul>
-                        <li>Respecter un putain de workflow en s'assurant que le parcours soit le même pour tout le monde et vice-versa.</li>
-                        <li>Exécuter tout ça en lançant une seule commande.</li>
+                    <ul class="blogArticle__list">
+                        <li class="blogArticle__item">Respecter un putain de workflow en s'assurant que le parcours soit le même pour tout le monde et vice-versa.</li>
+                        <li class="blogArticle__item">Exécuter tout ça en lançant une seule commande.</li>
                     </ul>
 
                     <p class="blogArticle__paragraph">N'est-ce pas fucking aweeeeesome dude ? Bref</p>
@@ -86,42 +86,67 @@
 
             <footer class="footerArticle">
                 <div class="footerArticle__author">
-                    <img src="./img/blog-author-30x30.jpg" width="63" height="63" alt="" class="footerArticle__author__img">
-                    <span class="footerArticle__author__name">Écrit par <a href="#goAuthor">Dominique Vilain</a></span>
-                    <small class="footerArticle__author__role">Professeur en web</small>
-
-                    <div class="footerArticle__follow">
-                        <span class="footerArticle__follow__label">Suivre sur&nbsp;: </span>
-                        <ul class="footerArticle__follow__list">
-                            <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--facebook"><span>Facebook</span></a></li>
-                            <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--twitter"><span>Twitter</span></a></li>
-                        </ul>
+                    <div class="footerArticle__author__wrapper">
+                        <a href="#author" class="footerArticle__author__link">
+                            <img src="./img/blog-author-30x30.jpg" width="60" height="60" alt="" class="footerArticle__author__img">
+                            <span class="footerArticle__author__name"><span class="hidden">Écrit par&nbsp;:</span>Dominique Vilain</span>
+                        </a>
+                        <div class="footerArticle__follow">
+                            <ul class="footerArticle__follow__list">
+                                <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--facebook"><span>Facebook</span></a></li>
+                                <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--twitter"><span>Twitter</span></a></li>
+                                {{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--behance"><span>Behance</span></a></li>--}}
+                                {{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--dribble"><span>Dribble</span></a></li>--}}
+                                <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--linkedin"><span>Linkedin</span></a></li>
+                                {{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--pinterest"><span>Pinterest</span></a></li>--}}
+                                {{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--vimeo"><span>Vimeo</span></a></li>--}}
+                                <li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--youtube"><span>Youtube</span></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <div class="footerArticle__sharer">
-                    <span class="footerArticle__sharer__label-top">Cet article t’as plût&nbsp;?</span>
-                    <strong class="footerArticle__sharer__label-bottom">Partages-le&nbsp;!</strong>
-                    <ul class="footerArticle__sharer__list">
-                        <li class="footerArticle__sharer__item"><a href="#social" class="footerArticle__sharer__link footerArticle__sharer__link--facebook"><span>Partager sur Facebook</span></a></li>
-                        <li class="footerArticle__sharer__item"><a href="#social" class="footerArticle__sharer__link footerArticle__sharer__link--twitter"><span>Partager sur Twitter</span></a></li>
-                        <li class="footerArticle__sharer__item"><a href="#social" class="footerArticle__sharer__link footerArticle__sharer__link--pinterest"><span>Partager sur Pinterest</span></a></li>
-                    </ul>
+                    <div class="footerArticle__sharer__wrapper">
+                        <span class="footerArticle__sharer__label-top">Cet article t’as plût&nbsp;?</span>
+                        <strong class="footerArticle__sharer__label-bottom">Partages-le&nbsp;!</strong>
+                        <ul class="social-list-circle">
+                            <li class="social-list-circle__item">
+                                <a href="" class="social-list-circle__link facebook" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                            </li><!--
+                    --><li class="social-list-circle__item">
+                                <a href="" class="social-list-circle__link twitter" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                            </li><!--
+                    --><li class="social-list-circle__item">
+                                <a href="" class="social-list-circle__link pinterest" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                            </li><!--
+                    --><li class="social-list-circle__item">
+                                <a href="" class="social-list-circle__link behance" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                            </li><!--
+                    --><li class="social-list-circle__item">
+                                <a href="" class="social-list-circle__link dribble" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="footerArticle__like">
-                    <a href="#" class="fav" id="fav">
-                        <svg class="stableHeart" viewBox="-1 0 18 15">
-                            <defs>
-                                <path d="M16 4.872c0-4.9-6.894-5.8-8 .695C6.81-.928 0-.027 0 5.25c0 5.274 8 9.697 8 9.697s8-5.177 8-10.075z" id="heartPath"></path>
-                            </defs>
-                            <use xlink:href="#heartPath" />
-                        </svg>
-                        <svg class="floatHeart" viewBox="-1 0 18 15">
-                            <use xlink:href="#heartPath" />
-                        </svg>
-                    </a>
-                    <span class="footerArticle__like__counter">14 j’aime</span>
+                    <div class="footerArticle__like">
+                        {{--<form action="">--}}
+                        <div class="footerArticle__like-wrapper">
+                        <button type="submit" class="fav" id="fav">
+                            <svg class="stableHeart" viewBox="-1 0 18 15">
+                                <defs>
+                                    <path d="M16 4.872c0-4.9-6.894-5.8-8 .695C6.81-.928 0-.027 0 5.25c0 5.274 8 9.697 8 9.697s8-5.177 8-10.075z" id="heartPath"></path>
+                                </defs>
+                                <use xlink:href="#heartPath" />
+                            </svg>
+                            <svg class="floatHeart" viewBox="-1 0 18 15">
+                                <use xlink:href="#heartPath" />
+                            </svg>
+                        </button>
+                        {{--</form>--}}
+                        <span class="footerArticle__like__counter">14 j’aime</span>
+                        </div>
                 </div>
 
             </footer>

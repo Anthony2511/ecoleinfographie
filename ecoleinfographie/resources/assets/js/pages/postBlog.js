@@ -3,6 +3,7 @@ w.postBlog = {
 
     init: function () {
         w.asideBlog.init();
+        w.articleBlog.init();
     },
 
     // getElements: function () {
