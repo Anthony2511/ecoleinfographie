@@ -9,3 +9,121 @@
     transform-origin 100% 0
   &__wrapper
     @extend .containerGridz
+  &__header
+    width col(8,12)
+    margin: 0 auto s(60) auto
+    &:after
+      @extend .clearfix
+  &__count
+    float: left
+    width s(237)
+    &:after
+      @extend .clearfix
+    &__title
+      float: left
+      font-size s($sz6)
+      font-weight: 900
+      text-transform: uppercase
+      color $cBlueTitles
+      letter-spacing 1.67px
+    &__number
+      float: right
+      position: relative
+      top -5px
+      display: inline-block
+      background-color #F64851
+      font-weight: 700
+      min-width 34px
+      min-height 34px
+      border-radius 50%
+      & span
+        font-size s($sz8)
+        color $cWhite
+        text-align: center
+        line-height: 30px
+        display: block
+
+.comments__share
+  position: relative
+  top -6px
+  float: right
+  display: flex
+  align-items center
+  &__title
+    font-weight: 700
+    color $cBlueTitles
+    font-size s($sz8)
+    margin-right s(15)
+  & .social-list-circle
+    display: inline-block
+    &__item
+      display: inline-block
+      margin-right s(8)
+      &:last-child
+        margin-right: 0
+    &__link:before
+      font-size 34px
+
+/************************************\
+		COMMENT
+\************************************/
+
+.comments__container
+  width col(8,12)
+  margin 0 auto
+  padding-bottom s(200)
+
+.comment
+  &__header
+    position: relative
+    max-height s(30)
+    &:after
+      @extend .clearfix
+  &__img
+    float: left
+    display: block
+    border-radius 50%
+    margin-right: s(30)
+  &__name
+    display: inline-block
+    color $cBlack
+    font-size s($sz8)
+    text-transform: uppercase
+    font-weight: 700
+  &__date
+    float: right;
+    display: inline-block
+    margin-left auto
+    color $cGrey2
+    font-size s($sz10)
+  &__text
+    max-width s(715, $sz7)
+    margin 0 0 s(10, $sz7) s(95, $sz7)
+    font-size s($sz7)
+    line-height: 1.35em
+  &__footer
+    margin 0 0 s(35) s(95)
+    &__respond
+      font-size s($sz9)
+      &:before
+        display: inline-block
+        margin-right s(10, $sz9)
+        icon('response');
+
+
+.comment--withoutImg
+  & .comment
+    &__header
+      margin-bottom s(15)
+    &__text
+    &__footer
+      margin-left: 0
+
+.comment--2
+  margin-left s(95)
+
+.comment--3
+  margin-left s(190)
+
+.comment--3.comment--withoutImg
+  margin-left s(285)

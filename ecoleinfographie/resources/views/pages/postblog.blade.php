@@ -164,7 +164,7 @@
         <div class="comments__header">
             <div class="comments__count">
                 <h2 role="heading" aria-level="2" class="comments__count__title">Commentaires</h2>
-                <strong class="comments__count__number">5</strong>
+                <strong class="comments__count__number"><span>9</span></strong>
             </div>
 
             <div class="comments__share">
@@ -190,7 +190,7 @@
         </div>
 
         <div class="comments__container">
-            <div class="comment comment--1">
+            <div class="comment comment--1 {{--comment--withoutImg--}}">
                 <div class="comment__header">
                     <img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
                     <strong class="comment__name">Dominique Vilain</strong>
@@ -207,7 +207,18 @@
                     <strong class="comment__name">Toon Van den Bos</strong>
                     <time datetime="#" class="comment__date">Il y a un jour</time>
                 </div>
-                <p class="comment__text">Man's technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously raising more children, as infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy.</p>
+                <p class="comment__text">Infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy. The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms.</p>
+                <footer class="comment__footer">
+                    <a href="#rep" class="comment__footer__respond">Répondre</a>
+                </footer>
+            </div>
+            <div class="comment comment--3 {{--comment--withoutImg--}}">
+                <div class="comment__header">
+                    <img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
+                    <strong class="comment__name">Toon Van den Bos</strong>
+                    <time datetime="#" class="comment__date">Il y a un jour</time>
+                </div>
+                <p class="comment__text">Infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy. The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms.</p>
                 <footer class="comment__footer">
                     <a href="#rep" class="comment__footer__respond">Répondre</a>
                 </footer>
