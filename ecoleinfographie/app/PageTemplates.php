@@ -80,6 +80,19 @@ trait PageTemplates
 		    'fake' => true,
 		    'store_in' => 'extras',
 	    ]);
+
+	    $this->crud->addField([ // image
+    'label' => "Profile Image",
+    'name' => "image",
+    'type' => 'image',
+    'upload' => false,
+    'crop' => true, // set to true to allow cropping, false to disable
+    'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
+    'fake' => true,
+    'store_in' => 'extras',
+]);
+
+
     }
 	
     private function web_home()

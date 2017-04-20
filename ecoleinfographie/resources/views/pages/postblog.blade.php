@@ -159,6 +159,74 @@
     </div>
 
 
+    <section class="comments">
+        <div class="comments__wrapper">
+        <div class="comments__header">
+            <div class="comments__count">
+                <h2 role="heading" aria-level="2" class="comments__count__title">Commentaires</h2>
+                <strong class="comments__count__number">5</strong>
+            </div>
+
+            <div class="comments__share">
+                <span class="comments__share__title">Partager&nbsp;:</span>
+                <ul class="social-list-circle">
+                    <li class="social-list-circle__item">
+                        <a href="" class="social-list-circle__link facebook" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                    </li><!--
+                    --><li class="social-list-circle__item">
+                        <a href="" class="social-list-circle__link twitter" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                    </li><!--
+                    --><li class="social-list-circle__item">
+                        <a href="" class="social-list-circle__link pinterest" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                    </li><!--
+                    --><li class="social-list-circle__item">
+                        <a href="" class="social-list-circle__link behance" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                    </li><!--
+                    --><li class="social-list-circle__item">
+                        <a href="" class="social-list-circle__link dribble" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="comments__container">
+            <div class="comment comment--1">
+                <div class="comment__header">
+                    <img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
+                    <strong class="comment__name">Dominique Vilain</strong>
+                    <time datetime="#" class="comment__date">Il y a un jour</time>
+                </div>
+                <p class="comment__text">Man's technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously raising more children, as infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy.</p>
+                <footer class="comment__footer">
+                    <a href="#rep" class="comment__footer__respond">Répondre</a>
+                </footer>
+            </div>
+            <div class="comment comment--2">
+                <div class="comment__header">
+                    <img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
+                    <strong class="comment__name">Toon Van den Bos</strong>
+                    <time datetime="#" class="comment__date">Il y a un jour</time>
+                </div>
+                <p class="comment__text">Man's technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously raising more children, as infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy.</p>
+                <footer class="comment__footer">
+                    <a href="#rep" class="comment__footer__respond">Répondre</a>
+                </footer>
+            </div>
+            <div class="comment comment--1">
+                <div class="comment__header">
+                    <img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
+                    <strong class="comment__name">Jérémy Dubois</strong>
+                    <time datetime="#" class="comment__date">Il y a un jour</time>
+                </div>
+                <p class="comment__text">Man's technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously raising more children, as infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy.</p>
+                <footer class="comment__footer">
+                    <a href="#rep" class="comment__footer__respond">Répondre</a>
+                </footer>
+            </div>
+        </div>
+        </div>
+
+    </section>
 
 
 
