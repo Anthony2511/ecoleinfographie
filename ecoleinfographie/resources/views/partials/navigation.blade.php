@@ -130,7 +130,7 @@
             <a href="realisations" class="menu__link">Réalisations</a>
         </li>
         <li class="menu__item">
-            <a href="#4" class="menu__link">Nos diplômés</a>
+            <a href="nos-diplomes" class="menu__link">Nos diplômés</a>
         </li>
         <li class="menu__item" >
             <a href="blog" class="menu__link">Blog</a>

@@ -1,0 +1,27 @@
+.graduate
+  background-color $cBackgroundGrey
+  .header__wrapper
+    position relative
+  .breadcrumb.breadcrumb--header
+    top 0
+    margin-top s(192)
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+
+.graduateList
+  max-width s(1070)
+  margin: s(100) auto 0 auto
+  padding 0 s($paddingSideGlobal)
+  box-sizing content-box
+  &__title
+    @extend .titleExtraBold26
+    color $cBlueTitles
+  & .index-rea__filter
+    padding-top: 3em
+    padding-bottom: 5em
+  & .former-students__list
+    padding 0
+  & .former-students__item
+    margin-bottom: s(63)

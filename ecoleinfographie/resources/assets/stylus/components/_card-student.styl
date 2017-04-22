@@ -41,7 +41,15 @@
       letter-spacing 0.5px
       margin-top: 3px
   &__profession
+    display: block
     font-size s($sz7)
+  &__year
+    display: inline-block
+    font-size s($sz7)
+    margin s(10, $sz7) 0 s(15, $sz7)
+    color $cBlueCiel
+    &:before
+      icon('hat')
   &__fake-link
     position: relative
     text-align: center
@@ -90,3 +98,9 @@
     height 100%
     transition .3s ease height
 
+div.card_student:hover
+  & .card_student__picture
+  & .card_student__fake-link__text
+  & .card_student__fake-link:after
+    transition 0s ease all
+    transform scale(1)
