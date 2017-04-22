@@ -3,7 +3,7 @@
         <h1 role="heading" aria-level="1" class="header-trades__title isOpacity">
             Les métiers du web
         </h1>
-        <a href="#home" class="logo">Logo</a>
+        <a href="/" class="logo">Logo</a>
         @include('partials.navigation')
         @include('partials.breadcrumb')
         <div class="header-trades__subnav isOpacity" role="navigation">

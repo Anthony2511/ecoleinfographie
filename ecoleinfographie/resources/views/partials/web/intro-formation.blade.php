@@ -24,7 +24,7 @@
             </div>
             <div class="skills-web">
                 <div class="skills-web__container">
-                    <span class="skills-web__title">Des produits qui réponde à des critères tel que&nbsp;:</span>
+                    <span class="skills-web__title">Des produits qui répondent à des critères tels que&nbsp;:</span>
                     <ul class="skills-web__list">
                         <li class="skills-web__item">
                             {!! file_get_contents(asset('svg/performance.svg')) !!}
@@ -33,7 +33,7 @@
                         </li>
                         <li class="skills-web__item">
                             {!! file_get_contents(asset('svg/effective.svg')) !!}
-                            <span class="skills-web__item__title">Éfficaces</span>
+                            <span class="skills-web__item__title">Efficaces</span>
                             <p class="skills-web__item__text">Qui répondent à leur cahier de charge avec succès.</p>
                         </li>
                         <li class="skills-web__item">
@@ -78,7 +78,7 @@
     <section class="formation-choice">
         <div class="formation-choice__wrapper">
             <h2 role="heading" aria-level="2" class="formation-choice__title">
-                Dés le bloc 2, tu vas pouvoir choisir ton option et te spécialisé
+                Dès le bloc 2, tu vas pouvoir choisir ton option et te spécialiser
             </h2>
             <p class="formation-choice__text">
                 Pour que la formation ait du sens, il faut choisir des cours qui vont ensemble et des cours pour lesquels on a acquis certaines compétences préalables. C’est ce qu’on appelle les <b>pré-requis </b>et les <b>co-requis</b>. Pas de quoi te casser la tête, le tout est très logique et tes profs pourront t’aider à construire un programme valable au besoin.
