@@ -1,0 +1,168 @@
+.inscription
+  background-color $cBackgroundGrey
+  .header__wrapper
+    position relative
+  .breadcrumb.breadcrumb--header
+    top 0
+    margin-top s(192)
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+  & .footer__container
+    margin-top: 0
+
+// Intro
+.insIntro
+  &__wrapper
+    position: relative
+    @extend .containerGridz
+    margin-top s(50)
+    padding-bottom s(60)
+    &:after
+      @extend .clearfix
+  &__textWrapper
+    width col(6,12)
+  &__title
+    @extend .titleExtraBold26
+    color $cBlueTitles
+  &__paragraph
+    font-size s($sz7)
+    line-height 1.62em
+  &__figure
+    position: absolute
+    top 0
+    right s($paddingSideGlobal)
+  
+// location
+.insLocation
+  background $cWhite
+  padding s(60) 0 s(120) 0
+  &__wrapper
+    @extend .containerGridz
+  &__title
+    @extend .hidden
+  &__paragraph
+    font-size s($sz7)
+    line-height: 1.62em
+    margin-bottom s(20, $sz7)
+    &:last-child
+      margin-bottom: 0
+  &__when
+    margin-bottom s(75)
+    &__title
+      display: block
+      @extend .titleExtraBold26
+      margin-bottom s(25, $sz5)
+      color $cBlueTitles
+    & .insLocation__paragraph
+      width col(6,12)
+  &__where
+    width col(9,12) + (gutter(12)*2)
+    margin-left col(1,12)
+    &:after
+      @extend .containerGridz
+    &__textWrapper
+      float: right
+      width 35.233160622%  // 340/965*100
+    &__title
+      display: block
+      @extend .titleExtraBold26
+      margin-bottom s(25, $sz5)
+      color $cBlueTitles
+    & b
+      font-weight: 700
+      font-size inherit
+    &__addressWrapper
+      &:after
+        @extend .clearfix
+      & svg
+        width s(22)
+        float: left
+        margin-right s(20)
+        position: relative
+        top s(8)
+    &__address
+      display: inline-block
+      font-size s($sz7)
+      line-height: 1.62em
+
+//insBottom
+.insBottom
+  position: relative
+  &__title
+    @extend .hidden
+
+.insDossier
+  @extend .containerGridz
+  position: relative
+  &:after
+    @extend .clearfix
+  &__wrapper
+    max-width s(610)
+    float: left
+    padding s(60) 0
+  &__title
+    display: block
+    @extend .titleExtraBold26
+    margin-bottom s(25, $sz5)
+    color $cBlueTitles
+    line-height: 1.1em
+  &__paragraph
+    font-size s($sz7)
+    line-height: 1.62em
+    margin-bottom s(20, $sz7)
+    &:last-child
+      margin-bottom: 0
+    & *
+      font-size inherit
+    & b
+      font-weight bold
+
+.insHelp
+  position: absolute
+  top: 0
+  right: 0
+  height: 100%
+  width s(505)
+  background $cBlue1
+  padding s(60) s(50)
+  &__title
+    display: block
+    @extend .titleExtraBold26
+    margin-bottom s(25, $sz5)
+    color $cWhite
+    &:after
+      background $cWhite
+  &__paragraph
+    color $cWhite
+    font-size s($sz7)
+    line-height: 1.62em
+    & a
+      font-size: inherit;
+      font-weight: 700
+  &__tel
+    margin s(15) 0
+  &__tel
+  &__email
+    color $cWhite
+    font-size s($sz7)
+    display: block
+    &:before
+      setIconBase()
+      margin-right s(10,$sz7)
+      font-size s(12)
+  &__tel:before
+    setIconInclude('phone')
+  &__email:before
+    setIconInclude('mail')
+  &__subtitle
+    display: block
+    @extend .titleExtraBold26
+    color $cWhite
+    margin s(45, $sz5) 0 s(25, $sz5)
+    &:after
+      background $cWhite
+
+
+
