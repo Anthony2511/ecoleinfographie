@@ -62,7 +62,7 @@
             <h3 role="heading" aria-level="3" class="course-teachers__title">Les professeurs</h3>
             <ul class="course-teachers__list">
                 <li class="course-teachers__item">
-                    <a href="#" class="card_student">
+                    <a href="dominique-vilain" class="card_student">
                         <figure class="card_student__figure">
                             <div class="card_student__picture-wrapper">
                                 <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
@@ -82,7 +82,7 @@
                     </a>
                 </li>
                 <li class="course-teachers__item">
-                    <a href="#" class="card_student">
+                    <a href="dominique-vilain" class="card_student">
                         <figure class="card_student__figure">
                             <div class="card_student__picture-wrapper">
                                 <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
@@ -102,7 +102,7 @@
                     </a>
                 </li>
                 <li class="course-teachers__item">
-                    <a href="#" class="card_student">
+                    <a href="dominique-vilain" class="card_student">
                         <figure class="card_student__figure">
                             <div class="card_student__picture-wrapper">
                                 <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
@@ -122,7 +122,7 @@
                     </a>
                 </li>
                 <li class="course-teachers__item">
-                    <a href="#" class="card_student">
+                    <a href="dominique-vilain" class="card_student">
                         <figure class="card_student__figure">
                             <div class="card_student__picture-wrapper">
                                 <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
