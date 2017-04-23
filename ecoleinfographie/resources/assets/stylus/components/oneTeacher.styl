@@ -1,0 +1,181 @@
+.oneTeacher
+  background $cBackgroundGrey
+
+.prof
+  &__container
+    margin-top s(100)
+    @extend .containerGridz
+/*
+.oneTeacher
+  background-color $cBackgroundGrey
+  .header__wrapper
+    position relative
+  .breadcrumb.breadcrumb--header
+    top 0
+    margin-top s(192)
+  .container
+    background-color $cBackgroundGrey
+    &:before
+      background-color $cBackgroundGrey
+*/
+
+.oneTeacher
+  .container
+    position: relative
+    &:after
+      content ''
+      position: absolute
+      left: 0
+      top s(275)
+      display: block
+      width 100%
+      height 97%
+      z-index 1
+      background $cBackgroundGrey
+
+.prof
+  &__top-container
+    position: relative
+    margin: 0 auto
+    max-width s(860)
+    z-index 2
+    &:after
+      @extend .clearfix
+  &__title
+    @extend .titleExtraBold33
+    color $cBlueTitles
+    display: inline-block
+    margin-bottom s(15, $sz4)
+    margin-top s(20, $sz4)
+    &:after
+      display: none
+    & span
+      @extend .hidden
+
+
+.prof
+  &__img
+    width 295px
+    height 281px
+  &__email
+    position: relative
+    display: block
+    margin-top s(15)
+    position: relative
+    width s(295)
+    padding s(20) 0
+    background-color $cBlueCiel
+    z-index 1
+    &:before
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $cBlueCiel + 15%
+      z-index: -1;
+      transition .3s width;
+    &:hover:before
+    &:focus:before
+      width 100%
+    &__label
+      display: block
+      text-align: center
+      font-size s($sz9)
+      font-weight: 900
+      letter-spacing 0
+      color $cWhite
+      text-transform: uppercase
+      &:before
+        icon('mail')
+        font-size s(10, $sz9)
+        margin-right s(10, 10)
+    &__hidden
+      @extend .hidden
+
+.prof__left
+  width: s(295)
+  float: left
+  & .social-list-circle
+    text-align: center
+    margin-top s(15)
+  & .social-list-circle__item
+    display: inline-block
+    margin-right s(10)
+    &:last-child
+      margin-right: 0
+  & .social-list-circle__link:before
+    font-size s(30)
+
+
+.prof__right
+  float: left
+  width 59.8% // 525/860
+  margin-left s(50)
+
+.prof
+  &__role
+    display: block
+    font-size s($sz8)
+    margin-bottom s(50, $sz8)
+
+    &:before
+      icon('teacher')
+      margin-right s(10, $sz8)
+      position: relative
+      top 2px
+  &__description
+    @extend .paragraph21
+
+
+/************************************\
+		PROF COURSE
+\************************************/
+.profCourse
+  position: relative
+  z-index: 2
+  max-width s(860)
+  margin: s(70) auto 0 auto
+  &__title
+    color $cBlueTitles
+    @extend .titleExtraBold26
+  &__list
+    margin-top s(40)
+  &__item
+    margin-bottom s(15)
+    &:before
+      content: '';
+      position: relative
+      top s(-3)
+      display: inline-block
+      width s(6)
+      height s(6)
+      margin-right s(5)
+      border-radius 50%
+      background $cBlueTitles
+  &__link
+    @extend .linkArrowLarge
+
+/************************************\
+		PROF ARTICLES
+\************************************/
+.profArticles
+  position: relative
+  max-width s(860)
+  margin: 0 auto
+  z-index 2
+  &:after
+    @extend .clearfix
+  &__title
+    @extend .titleExtraBold26
+    margin s(70, $sz5) 0 s(50, $sz5) 0
+    color $cBlueTitles
+  & .blog-card
+    float: left
+    margin-right s(100)
+    margin-bottom s(80)
+    &:nth-child(2n + 1)
+      margin-right: 0
+    &:nth-last-of-type(-n+2)
+      margin-bottom 0
