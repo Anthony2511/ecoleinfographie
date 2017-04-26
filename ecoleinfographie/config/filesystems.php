@@ -60,6 +60,11 @@ return [
 	        'root' => public_path('uploads'),
         ],
 
+        'public_folder' => [
+            'driver' => 'local',
+            'root' => public_path(),
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_KEY'),
