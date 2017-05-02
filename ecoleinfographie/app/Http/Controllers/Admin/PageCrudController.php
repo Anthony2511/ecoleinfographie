@@ -46,6 +46,11 @@ class PageCrudController extends OriginalPageCrudController
     {
         //parent::addDefaultPageFields($template);
         $options = 'Paramètres';
+        $seo = 'S.E.O';
+        
+        /*
+         * Fields pour les paramètres de la page
+         */
         
         $this->crud->addField
         ([
@@ -91,7 +96,7 @@ class PageCrudController extends OriginalPageCrudController
     
         $this->crud->addField
         ([
-            'name' => 'class_body',
+            'name' => 'classBody',
             'label' => 'Définir une classe sur le body pour la page',
             'fake' => 'true',
             'store_in' => 'extras',
@@ -100,15 +105,36 @@ class PageCrudController extends OriginalPageCrudController
         
         $this->crud->addField
         ([
-            'name' => 'header_large',
-            'label' => 'La page dispose t’elle d’un \'grand\' header ?',
+            'name' => 'headerLarge',
+            'label' => '<b>La page dispose t’elle d’un « grand » header ?</b>',
             'type' => 'checkbox',
             'fake' => true,
             'store_in' => 'extras',
-            'tab' => $options,
+            'tab' => $options
         ]);
-        
-        
+    
+        /*
+         * Fields pour les metas
+         */
+    
+        $this->crud->addField
+        ([
+            'name' => 'metaDescription',
+            'label' => 'Meta description',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'tab' => $seo
+        ]);
+    
+        $this->crud->addField
+        ([
+            'name' => 'metaKeywords',
+            'type' => 'textarea',
+            'label' => 'Meta Keywords',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => $seo
+        ]);
     }
     
     public function useTemplate($template_name = false)
