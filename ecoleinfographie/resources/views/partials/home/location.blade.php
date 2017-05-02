@@ -13,7 +13,7 @@
             <a href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="location__tel">{{ Config::get('settings.contact_tel') }}</a>
             <a href="#contact" class="location__mail">Nous contacter</a>
             <div class="location__social">
-                <a href="#facebook" rel="external" class="location__social-link location__social-facebook">
+                <a href="{{ Config::get('settings.social_fb') }}" rel="external" class="location__social-link location__social-facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
                         <circle stroke="#FFF" stroke-width="2" fill="none" cx="17.5" cy="17.5" r="15.5"/>
                         <circle class="circle-hover" fill="#FFF" cy=".01" r=".5" transform="translate(17.5 17.5)"/>
@@ -21,7 +21,7 @@
                     </svg>
                     <span>Vers Facebook</span>
                 </a>
-                <a href="#twitter" rel="external" class="location__social-link location__social-twitter">
+                <a href="{{ Config::get('settings.social_tw') }}" rel="external" class="location__social-link location__social-twitter">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
                         <circle stroke="#FFF" stroke-width="2" fill="none" cx="17.5" cy="17.5" r="15.5"/>
                         <circle class="circle-hover" fill="#FFF" r=".5" transform="translate(17.5 17.5)"/>
@@ -29,7 +29,7 @@
                     </svg>
                     <span>Vers Twitter</span>
                 </a>
-                <a href="#pinterest" rel="external" class="location__social-link location__social-pinterest">
+                <a href="{{ Config::get('settings.social_pinterest') }}" rel="external" class="location__social-link location__social-pinterest">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
                         <circle stroke="#FFF" stroke-width="2" fill="none" cx="17.5" cy="17.5" r="15.5"/>
                         <circle class="circle-hover" fill="#FFF" cy=".01" r=".5" transform="translate(17.5 17.5)"/>
@@ -37,7 +37,7 @@
                     </svg>
                     <span>Vers Pinterest</span>
                 </a>
-                <a href="#behance" rel="external" class="location__social-link location__social-behance">
+                <a href="{{ Config::get('settings.social_behance') }}" rel="external" class="location__social-link location__social-behance">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
                         <circle stroke="#FFF" stroke-width="2" fill="none" cx="17.5" cy="17.5" r="15.5"/>
                         <circle class="circle-hover" fill="#FFF" cx="-0" cy=".01" r=".5" transform="translate(17.5 17.49)"/>
@@ -48,7 +48,7 @@
                     </svg>
                     <span>Vers Behance</span>
                 </a>
-                <a href="#dribble" rel="external" class="location__social-link location__social-dribble">
+                <a href="{{ Config::get('settings.social_dribble') }}" rel="external" class="location__social-link location__social-dribble">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
                         <circle stroke="#FFF" stroke-width="2" fill="none" cx="17.5" cy="17.5" r="15.5"/>
                         <circle class="circle-hover" fill="#FFF" cy=".01" r=".5" transform="translate(17.5 17.5)"/>
