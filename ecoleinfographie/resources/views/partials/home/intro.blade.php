@@ -6,7 +6,7 @@
         </p>
         <ul class="intro__list">
             <li class="intro__item">
-                <a href="#" class="intro__link">La formation en web</a>
+                <a href="{{ $page->linkDesc }}" class="intro__link">La formation en web</a>
             </li>
             <li class="intro__item">
                 <a href="#" class="intro__link">La formation en design graphique</a>

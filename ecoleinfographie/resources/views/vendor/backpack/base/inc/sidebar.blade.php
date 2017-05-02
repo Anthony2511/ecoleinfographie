@@ -49,6 +49,10 @@
           <!-- item MenuCRUD -->
           <li><a href="{{ url('admin/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
 
+          <!-- settings website -->
+          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}"><i class="fa fa-cog"></i> <span>Options</span></a></li>
+
+
 
 
 
