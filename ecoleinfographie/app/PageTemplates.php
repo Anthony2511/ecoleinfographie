@@ -67,13 +67,13 @@ trait PageTemplates
         // Réalisation n°1
         $this->crud->addField
         ([
-            'name'  => 'metas_separator',
+            'name'  => 'metas_separator1',
             'type'  => 'custom_html',
         	'value' => '<br><h3><b>Réalisation n°1</b></h3><p>Celle en haut à droite</p><hr>',
         ]);
         $this->crud->addField
         ([
-        	'name' => 'p3D_option',
+        	'name' => 'p1_option',
         	'label' => 'L’option du projet',
         	'type' => 'select_from_array',
             'options' => ['web' => 'web', '3D' => '3D', '2D' => '2D'],
@@ -83,7 +83,7 @@ trait PageTemplates
         ]);
         $this->crud->addField
         ([
-        	'name' => 'p3D_image',
+        	'name' => 'p1_image',
         	'label' => 'Image de la réalisation',
         	'type' => 'browse',
             'fake' => 'true',
@@ -94,7 +94,7 @@ trait PageTemplates
         ]);
         $this->crud->addField
         ([
-            'name' => 'p3D_image_metaDesc',
+            'name' => 'p1_image_metaDesc',
             'label' => 'Meta description de l’image',
             'type' => 'text',
             'fake' => 'true',
@@ -105,7 +105,7 @@ trait PageTemplates
         ]);
         $this->crud->addField
         ([
-        	'name' => 'p3D_name',
+        	'name' => 'p1_name',
         	'label' => 'Nom de la réalisation',
         	'type' => 'text',
             'fake' => 'true',
@@ -113,7 +113,7 @@ trait PageTemplates
         ]);
         $this->crud->addField
         ([
-            'name' => 'p3D_desc',
+            'name' => 'p1_desc',
             'label' => 'Courte description de la réalisation',
             'type' => 'text',
             'fake' => 'true',
@@ -121,7 +121,135 @@ trait PageTemplates
         ]);
         $this->crud->addField
         ([
-            'name' => 'p3D_author',
+            'name' => 'p1_author',
+            'label' => 'Auteur de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+    
+        // Réalisation n°2
+        $this->crud->addField
+        ([
+            'name'  => 'metas_separator2',
+            'type'  => 'custom_html',
+            'value' => '<br><h3><b>Réalisation n°2</b></h3><p>Celle en bas à droite</p><hr>',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p2_option',
+            'label' => 'L’option du projet',
+            'type' => 'select_from_array',
+            'options' => ['web' => 'web', '3D' => '3D', '2D' => '2D'],
+            'allows_null' => false,
+            'fake' => 'true',
+            'store_in' => 'extras'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p2_image',
+            'label' => 'Image de la réalisation',
+            'type' => 'browse',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p2_image_metaDesc',
+            'label' => 'Meta description de l’image',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p2_name',
+            'label' => 'Nom de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p2_desc',
+            'label' => 'Courte description de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p2_author',
+            'label' => 'Auteur de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+    
+        // Réalisation n°3
+        $this->crud->addField
+        ([
+            'name'  => 'metas_separator3',
+            'type'  => 'custom_html',
+            'value' => '<br><h3><b>Réalisation n°3</b></h3><p>Celle en bas à gauche</p><hr>',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3_option',
+            'label' => 'L’option du projet',
+            'type' => 'select_from_array',
+            'options' => ['web' => 'web', '3D' => '3D', '2D' => '2D'],
+            'allows_null' => false,
+            'fake' => 'true',
+            'store_in' => 'extras'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3_image',
+            'label' => 'Image de la réalisation',
+            'type' => 'browse',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3_image_metaDesc',
+            'label' => 'Meta description de l’image',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3_name',
+            'label' => 'Nom de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3_desc',
+            'label' => 'Courte description de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3_author',
             'label' => 'Auteur de la réalisation',
             'type' => 'text',
             'fake' => 'true',
