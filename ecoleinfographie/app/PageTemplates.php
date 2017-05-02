@@ -20,64 +20,20 @@ trait PageTemplates
     | - page title
     | - page slug
     */
-
-   
+    
     
 
     private function home()
     {
-        $this->crud->addField([   // CustomHTML
-                        'name' => 'metas_separator',
-                        'type' => 'custom_html',
-                        'value' => '<br><h2>Metas</h2><hr>',
-                    ]);
-        $this->crud->addField([
-                        'name' => 'meta_title',
-                        'label' => 'Meta Title',
-                        'fake' => true,
-                        'store_in' => 'extras',
-                    ]);
-	    $this->crud->addField([
-		    'name' => 'header_large',
-		    'label' => '<b>La page a t’elle un grand header ?</b>',
-		    'type' => 'checkbox',
-		    'fake' => true,
-		    'store_in' => 'extras',
-	    ]);
-        $this->crud->addField([   // CustomHTML
-                        'name' => 'content_separator',
-                        'type' => 'custom_html',
-                        'value' => '<br><h2>Content</h2><hr>',
-                    ]);
+	    
 	    $this->crud->addField([
 		    'name' => 'description',
 		    'label' => 'Description du champ',
 		    'type' => 'ckeditor',
 		    'fake' => true,
 		    'store_in' => 'extras',
+            'tab' => 'contenu'
 	    ]);
-
-
-    	/*$this->crud->addField([ // image
-		    'label' => "Profile Image",
-		    'name' => "contentImage",
-		    'fake' => 'true',
-		    'store_in' => 'extras',
-		    'type' => 'image',
-		    'upload' => true,
-		    'crop' => false, // set to true to allow cropping, false to disable
-		]);*/
-
-		/*$this->crud->addField([ // image
-		    'label' => "Profile Image",
-		    'name' => "content",
-		    'type' => 'image',
-		    'upload' => true,
-		    'crop' => false, // set to true to allow cropping, false to disable
-		]);*/
-
- 
-
     }
 	
     private function web_home()
