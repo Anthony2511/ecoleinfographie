@@ -25,15 +25,108 @@ trait PageTemplates
 
     private function home()
     {
-	    
-	    $this->crud->addField([
-		    'name' => 'description',
-		    'label' => 'Description du champ',
-		    'type' => 'ckeditor',
+	    $this->crud->addField
+        ([
+		    'name' => 'titleIntro',
+		    'label' => 'Titre de l’introduction',
+		    'type' => 'text',
 		    'fake' => true,
 		    'store_in' => 'extras',
-            'tab' => 'contenu'
+            'tab' => 'Introduction'
 	    ]);
+	    $this->crud->addField
+        ([
+            'name' => 'descIntro',
+            'label' => 'Titre de l’introduction',
+            'type' => 'textarea',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Introduction'
+        ]);
+	    
+	    // PortfolioHome
+        $this->crud->addField
+        ([
+        	'name' => 'titlePortfolioHome',
+        	'label' => 'Le titre de la section Portfolio sur la page d’accueil',
+        	'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'tab' => 'Section Portfolio'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'descPortfolioHome',
+            'label' => 'La description de la section Portfolio sur la page d’accueil',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'tab' => 'Section Portfolio'
+        ]);
+        
+        // Réalisation n°1
+        $this->crud->addField
+        ([
+            'name'  => 'metas_separator',
+            'type'  => 'custom_html',
+        	'value' => '<br><h3><b>Réalisation n°1</b></h3><p>Celle en haut à droite</p><hr>',
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'p3D_option',
+        	'label' => 'L’option du projet',
+        	'type' => 'select_from_array',
+            'options' => ['web' => 'web', '3D' => '3D', '2D' => '2D'],
+            'allows_null' => false,
+            'fake' => 'true',
+            'store_in' => 'extras'
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'p3D_image',
+        	'label' => 'Image de la réalisation',
+        	'type' => 'browse',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3D_image_metaDesc',
+            'label' => 'Meta description de l’image',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'p3D_name',
+        	'label' => 'Nom de la réalisation',
+        	'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3D_desc',
+            'label' => 'Courte description de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'p3D_author',
+            'label' => 'Auteur de la réalisation',
+            'type' => 'text',
+            'fake' => 'true',
+            'store_in' => 'extras',
+        ]);
     }
 	
     private function web_home()
