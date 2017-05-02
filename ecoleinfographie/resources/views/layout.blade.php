@@ -4,7 +4,7 @@
 <body class="<?php if($page){ echo $page->slug; } ;?> <?php if ($page->class_body) echo $page->class_body; ?>">
 @yield('header')
 
-<div class="container <?php if($page->header_large == false) echo 'container--header-min ';?>">
+<div class="container {{ $page->headerLarge == false ? 'container--header-min' : '' }}">
     @yield('content')
 </div>
 <div class="footer__container">
