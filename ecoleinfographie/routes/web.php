@@ -24,4 +24,8 @@ Route::get('/home', function (){
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
      ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);
 
-
+// MenuCrud
+Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function () {
+    // Backpack\MenuCRUD
+    CRUD::resource('menu-item', 'MenuItemCrudController');
+});
