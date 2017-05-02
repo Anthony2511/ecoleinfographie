@@ -1,8 +1,8 @@
 <section class="intro">
     <div class="intro__content">
-        <h2 aria-level="2" role="heading" class="intro__title">Tu veux devenir un infographiste&nbsp;?</h2>
+        <h2 aria-level="2" role="heading" class="intro__title">{{ $page->titleIntro }}</h2>
         <p class="intro__text">
-            In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place for at one and the same time.
+            {{ $page->descIntro }}
         </p>
         <ul class="intro__list">
             <li class="intro__item">
