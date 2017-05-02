@@ -22,7 +22,7 @@ trait PageTemplates
     */
 
    
-  
+    
 
     private function home()
     {
@@ -62,36 +62,34 @@ trait PageTemplates
                         'type' => 'custom_html',
                         'value' => '<br><h2>Content</h2><hr>',
                     ]);
-        $this->crud->addField([
-                        'name' => 'content',
-                        'label' => 'Content',
-                        'type' => 'simplemde',
-                        'placeholder' => 'Your content here',
-                    ]);
-        $this->crud->addField([
-                        'name' => 'Ceci est un test',
-                        'label' => 'extras',
-                        'type' => 'ckeditor',
-                    ]);
 	    $this->crud->addField([
 		    'name' => 'description',
-		    'label' => 'Description',
-		    'type' => 'wysiwyg',
+		    'label' => 'Description du champ',
+		    'type' => 'ckeditor',
 		    'fake' => true,
 		    'store_in' => 'extras',
 	    ]);
 
-	    $this->crud->addField([ // image
-    'label' => "Profile Image",
-    'name' => "image",
-    'type' => 'image',
-    'upload' => false,
-    'crop' => true, // set to true to allow cropping, false to disable
-    'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
-    'fake' => true,
-    'store_in' => 'extras',
-]);
 
+    	/*$this->crud->addField([ // image
+		    'label' => "Profile Image",
+		    'name' => "contentImage",
+		    'fake' => 'true',
+		    'store_in' => 'extras',
+		    'type' => 'image',
+		    'upload' => true,
+		    'crop' => false, // set to true to allow cropping, false to disable
+		]);*/
+
+		/*$this->crud->addField([ // image
+		    'label' => "Profile Image",
+		    'name' => "content",
+		    'type' => 'image',
+		    'upload' => true,
+		    'crop' => false, // set to true to allow cropping, false to disable
+		]);*/
+
+ 
 
     }
 	
