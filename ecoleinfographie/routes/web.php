@@ -29,3 +29,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     // Backpack\MenuCRUD
     CRUD::resource('menu-item', 'MenuItemCrudController');
 });
+
+// Admin articles blog
+Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function()
+{
+    // Backpack\NewsManager routes
+    CRUD::resource('article', 'ArticleCrudController');
+    CRUD::resource('category', 'CategoryCrudController');
+    CRUD::resource('tag', 'TagCrudController');
+});
