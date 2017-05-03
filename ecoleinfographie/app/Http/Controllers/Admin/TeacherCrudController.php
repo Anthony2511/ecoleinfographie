@@ -100,7 +100,8 @@ class TeacherCrudController extends CrudController
         	'type' => 'table',
             'entity_singular' => 'Ajouter un lien',
             'columns' => [
-                'link' => 'Lien'
+                'link' => 'Lien',
+                'name' => 'Nom du réseau social',
             ],
             'min' => 0,
         ]);
