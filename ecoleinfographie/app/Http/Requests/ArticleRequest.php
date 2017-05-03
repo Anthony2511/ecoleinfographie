@@ -25,11 +25,11 @@ class ArticleRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:2|max:255',
-            'slug' => 'unique:articles,slug,'.\Request::get('id'),
-            'content' => 'required|min:2',
-            'date' => 'required|date',
-            'status' => 'required',
+            'title'       => 'required|min:2|max:255',
+            'slug'        => 'unique:articles,slug,' . \Request::get('id'),
+            'content'     => 'required|min:2',
+            'date'        => 'required|date',
+            'status'      => 'required',
             'category_id' => 'required',
         ];
     }
