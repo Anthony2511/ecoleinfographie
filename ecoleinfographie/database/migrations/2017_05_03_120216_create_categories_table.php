@@ -20,6 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->integer('rgt')->unsigned()->nullable();
             $table->integer('depth')->unsigned()->nullable();
             $table->string('name');
+            $table->string('slug')->unique();
             $table->timestamps();
             $table->softDeletes();
         });
