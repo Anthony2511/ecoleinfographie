@@ -50,6 +50,10 @@
           <li>
             <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/teacher') }}"><i class="fa fa-address-card"></i><span>Professeurs</span></a></li>
 
+          <!-- professeurs -->
+          <li>
+            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/cours') }}"><i class="fa fa-puzzle-piece"></i><span>Liste des cours</span></a></li>
+
 
           <!-- item MenuCRUD -->
           <li><a href="{{ url('admin/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
