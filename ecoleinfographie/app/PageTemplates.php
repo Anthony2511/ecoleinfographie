@@ -48,7 +48,7 @@ trait PageTemplates
         $this->crud->addField
         ([
         	'name' => 'titlePortfolioHome',
-        	'label' => 'Le titre de la section Portfolio sur la page d’accueil',
+        	'label' => 'Le titre de la section Portfolio',
         	'type' => 'text',
             'fake' => 'true',
             'store_in' => 'extras',
@@ -57,8 +57,8 @@ trait PageTemplates
         $this->crud->addField
         ([
             'name' => 'descPortfolioHome',
-            'label' => 'La description de la section Portfolio sur la page d’accueil',
-            'type' => 'text',
+            'label' => 'La description de la section Portfolio',
+            'type' => 'textarea',
             'fake' => 'true',
             'store_in' => 'extras',
             'tab' => 'Section Portfolio'
