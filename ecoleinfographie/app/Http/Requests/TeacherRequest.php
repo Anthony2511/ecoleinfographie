@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class ArticleRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
+class TeacherRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,15 +23,14 @@ class ArticleRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            'title'       => 'required|min:2|max:255',
             'slug'        => 'unique:articles,slug,' . \Request::get('id'),
             'lastname'    => 'required|min:2|max:255',
             'firstname'   => 'required|min:2|max:255',
             'role'        => 'required',
-            'picture'     => 'dimensions:min_width=250,min_height=250',
+            //'picture'     => 'dimensions:min_width=250,min_height=250',
             'description' => 'required|min:2',
-            'email'       => 'email',
-            'status'      => 'required',
+            'email'       => 'nullable|email',
+            'status'      => 'nullable',
         ];
     }
     
