@@ -46,11 +46,17 @@
             </a>
           </li>
 
+          <!-- professeurs -->
+          <li>
+            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/teacher') }}"><i class="fa fa-address-card"></i><span>Professeurs</span></a></li>
+
+
           <!-- item MenuCRUD -->
           <li><a href="{{ url('admin/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
 
           <!-- settings website -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}"><i class="fa fa-cog"></i> <span>Options</span></a></li>
+
 
           <!-- blog -->
           <li class="treeview">
