@@ -63,7 +63,7 @@ class PageCrudController extends OriginalPageCrudController
             'tab' => $options,
             'wrapperAttributes' => [
                 'class' => 'form-group col-md-6',
-                ]
+            ]
         ]);
         
         $this->crud->addField
@@ -79,12 +79,12 @@ class PageCrudController extends OriginalPageCrudController
         
         $this->crud->addField
         ([
-           'name' => 'title',
+            'name' => 'title',
             'label' => 'Titre de la page',
             'type' => 'text',
             'tab' => $options,
         ]);
-    
+        
         $this->crud->addField
         ([
             'name' => 'slug',
@@ -93,7 +93,7 @@ class PageCrudController extends OriginalPageCrudController
             'hint' => 'Automatiquement généré à partir du titre de la page si le champ n’est pas rempli',
             'tab' => $options,
         ]);
-    
+        
         $this->crud->addField
         ([
             'name' => 'classBody',
@@ -112,11 +112,11 @@ class PageCrudController extends OriginalPageCrudController
             'store_in' => 'extras',
             'tab' => $options
         ]);
-    
+        
         /*
          * Fields pour les metas
          */
-    
+        
         $this->crud->addField
         ([
             'name' => 'metaDescription',
@@ -125,7 +125,7 @@ class PageCrudController extends OriginalPageCrudController
             'store_in' => 'extras',
             'tab' => $seo
         ]);
-    
+        
         $this->crud->addField
         ([
             'name' => 'metaKeywords',

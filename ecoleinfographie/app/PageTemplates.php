@@ -95,7 +95,7 @@ trait PageTemplates
         $this->crud->addField
         ([
             'name' => 'p1_image_metaDesc',
-            'label' => 'Meta description de l’image',
+            'label' => 'Attribut ALT de l’image',
             'type' => 'text',
             'fake' => 'true',
             'store_in' => 'extras',
@@ -159,7 +159,7 @@ trait PageTemplates
         $this->crud->addField
         ([
             'name' => 'p2_image_metaDesc',
-            'label' => 'Meta description de l’image',
+            'label' => 'Attribut ALT de l’imageimage',
             'type' => 'text',
             'fake' => 'true',
             'store_in' => 'extras',
@@ -223,7 +223,7 @@ trait PageTemplates
         $this->crud->addField
         ([
             'name' => 'p3_image_metaDesc',
-            'label' => 'Meta description de l’image',
+            'label' => 'Attribut ALT de l’image',
             'type' => 'text',
             'fake' => 'true',
             'store_in' => 'extras',
