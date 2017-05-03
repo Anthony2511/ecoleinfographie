@@ -40,6 +40,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     // Teacher routes
     CRUD::resource('teacher', 'TeacherCrudController');
     // Courses routes
-    CRUD::resource('courses', 'CourseCrudController');
+    CRUD::resource('cours', 'CourseCrudController');
 });
 
