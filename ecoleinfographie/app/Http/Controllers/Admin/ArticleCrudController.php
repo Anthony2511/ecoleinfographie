@@ -43,12 +43,6 @@ class ArticleCrudController extends CrudController {
             'label' => "Title"
         ]);
         $this->crud->addColumn([
-            'name' => 'featured',
-            'label' => "Featured",
-            'type' => "model_function",
-            'function_name' => 'getFeaturedColumn'
-        ]);
-        $this->crud->addColumn([
             'label' => "Category",
             'type' => 'select',
             'name' => 'category_id',
@@ -116,11 +110,6 @@ class ArticleCrudController extends CrudController {
             'name' => 'status',
             'label' => "Status",
             'type' => 'enum'
-        ]);
-        $this->crud->addField([    // CHECKBOX
-            'name' => 'featured',
-            'label' => "Featured item",
-            'type' => 'checkbox'
         ]);
     }
     
