@@ -27,7 +27,25 @@ class CourseCrudController extends CrudController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
-        
+        // ------ CRUD COLUMNS
+        $this->crud->addColumn([
+            'name' => 'name',
+            'label' => "Nom du cours"
+        ]);
+        $this->crud->addColumn([
+            'name' => 'orientation',
+            'label' => "Orientation"
+        ]);
+        $this->crud->addColumn
+        ([
+        	'name' => 'ects',
+        	'label' => 'Crédits ECTS',
+        ]);
+        $this->crud->addColumn
+        ([
+        	'name' => 'ratio',
+        	'label' => 'Durée',
+        ]);
 
         
     }
