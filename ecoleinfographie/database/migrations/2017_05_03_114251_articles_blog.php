@@ -34,6 +34,6 @@ class CreateArticlesBlogTable extends Migration
      */
     public function down()
     {
-        Schema::drop('articles');
+        Schema::drop('articles_blog');
     }
 }
