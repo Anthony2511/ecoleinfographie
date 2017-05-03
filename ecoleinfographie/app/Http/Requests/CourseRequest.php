@@ -16,7 +16,7 @@ class CourseRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
         // only allow updates if the user is logged in
         return \Auth::check();
     }
-
+    
     /**
      * Get the validation rules that apply to the request.
      *
@@ -25,10 +25,19 @@ class CourseRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name'             => 'required|min:2|max:255',
+            'slug'             => 'unique:articles,slug,' . \Request::get('id'),
+            'orientation'      => 'required',
+            'duration'         => 'required',
+            'ects'             => 'required',
+            'bloc'             => 'required',
+            'quadrimester'     => 'required',
+            'shortdescription' => 'required|min:2|max:180',
+            'description'      => 'required',
+            'objectives'       => 'required',
         ];
     }
-
+    
     /**
      * Get the validation attributes that apply to the request.
      *
@@ -40,7 +49,7 @@ class CourseRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             //
         ];
     }
-
+    
     /**
      * Get the validation messages that apply to the request.
      *
