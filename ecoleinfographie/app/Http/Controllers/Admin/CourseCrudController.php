@@ -46,7 +46,110 @@ class CourseCrudController extends CrudController
         	'name' => 'ratio',
         	'label' => 'Durée',
         ]);
-
+        
+        // ------ CRUD FIELDS
+        $this->crud->addField
+        ([
+            'name' => 'name',
+            'label' => 'Nom du cours',
+            'type' => 'text'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'slug',
+            'label' => "Slug (URL)",
+            'type' => 'text',
+            'hint' => 'Automatiquement généré à partir du nom si vide.'
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'orientation',
+        	'label' => 'Orientation',
+        	'type' => 'select_from_array',
+            'options' => ["all" => "Commun", "2D" => "Design graphique", "3D" => "3D/Vidéo", "web" => "Web"],
+            'allows_null' => false
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'duration',
+            'label' => 'Durée du cours en heure',
+            'type' => 'number',
+            'attributes' => ["step" => "5"],
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'ects',
+        	'label' => 'Nombre de crédits ECTS',
+        	'type' => 'number',
+            'attributes' => ["step" => "5"],
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'ratio',
+        	'label' => 'Les différentes partie du cours',
+        	'type' => 'table',
+            'hint' => 'Par exemple "Travaux dirigés", "Travaux pratique", "Théorie", etc…',
+            'entity_singular' => 'une partie de cours',
+            'columns' => [
+                'type' => 'Type',
+                'hour' => 'Nombre d’heures (uniquement le nombre, pas de lettre)'
+            ]
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'evaluation',
+            'label' => 'La manière dont est évalué le cours',
+            'type' => 'table',
+            'entity_singular' => 'une partie de cours',
+            'columns' => [
+                'type' => 'Type de l’évaluation (ex: Examen écrit, Examen pratique,… '
+            ]
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'bloc',
+        	'label' => 'L’année (bloc) dans lequel est dispensé le cours',
+        	'type' => 'number',
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'quadrimester',
+        	'label' => 'Dans quel quadrimèstre le cours est-il donné ?',
+            'type' => 'select_from_array',
+            'options' => ["q1" => "1", "q2" => "2", "all" => "Toute l’année"],
+            'allows_null' => false
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'shortdescription',
+        	'label' => 'Description courte (max 180 charactères)',
+            'hint' => 'La description qui apparait dans le tableau des cours',
+        	'type' => 'text',
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'description',
+        	'label' => 'Description complète',
+            'hint' => 'La description qui décrit le cours de manière complète',
+        	'type' => 'textarea',
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'objectives',
+        	'label' => 'Les objectifs du cours',
+        	'type' => 'table',
+            'hint' => 'Indiquez les objectifs que vise à acquérir le cours',
+            'entity_singular' => 'un objectif',
+            'columns' => [
+                'text' => 'Objectif'
+            ]
+        ]);
+        
+        
+        
+        
+        
+        
         
     }
 
