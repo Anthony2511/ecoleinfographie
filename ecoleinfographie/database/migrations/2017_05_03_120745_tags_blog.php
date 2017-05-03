@@ -28,6 +28,6 @@ class CreateTagsBlogTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('tags_blog');
     }
 }
