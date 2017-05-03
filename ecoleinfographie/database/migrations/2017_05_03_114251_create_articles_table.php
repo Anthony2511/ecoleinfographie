@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->string('slug')->default('');
             $table->text('content');
             $table->string('image')->nullable();
-            $table->enum('status', ['PUBLIÉ', 'BROUILLON'])->default('PUBLISHED');
+            $table->enum('status', ['PUBLIÉ', 'BROUILLON'])->default('BROUILLON');
             $table->date('date');
             $table->timestamps();
             $table->softDeletes();
