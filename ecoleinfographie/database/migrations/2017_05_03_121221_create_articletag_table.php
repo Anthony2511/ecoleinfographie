@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticleblogTagblogTable extends Migration
+class CreateArticleTagTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateArticleblogTagblogTable extends Migration
      */
     public function up()
     {
-        Schema::create('articleblog_tagblog', function (Blueprint $table) {
+        Schema::create('article_tag', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('article_id')->unsigned();
             $table->integer('tag_id')->unsigned();

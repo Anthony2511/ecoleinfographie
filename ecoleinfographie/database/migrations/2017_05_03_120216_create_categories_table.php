@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesBlogTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCategoriesBlogTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories_blog', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('parent_id')->default(0)->nullable();
             $table->integer('lft')->unsigned()->nullable();
@@ -32,6 +32,6 @@ class CreateCategoriesBlogTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categories_blog');
+        Schema::drop('categories');
     }
 }
