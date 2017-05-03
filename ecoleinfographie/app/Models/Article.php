@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
@@ -25,8 +25,8 @@ class Article extends Model
     // protected $hidden = [];
     // protected $dates = [];
     protected $casts = [
-        'featured'  => 'boolean',
-        'date'      => 'date',
+        'featured' => 'boolean',
+        'date'     => 'date',
     ];
     
     /**
