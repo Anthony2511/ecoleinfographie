@@ -21,7 +21,7 @@ class TeacherCrudController extends CrudController
 		*/
         $this->crud->setModel("App\Models\Teacher");
         $this->crud->setRoute("admin/teacher");
-        $this->crud->setEntityNameStrings('teacher', 'teachers');
+        $this->crud->setEntityNameStrings('professeur', 'professeurs');
         
     
         /*
@@ -43,38 +43,49 @@ class TeacherCrudController extends CrudController
         ]);
     
         // ------ CRUD FIELDS
-        $this->crud->addField([
+        $this->crud->addField
+        ([
+        	'name' => 'firstname',
+        	'label' => 'Prénom',
+        	'type' => 'text',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
+        ]);
+        $this->crud->addField
+        ([
             'name' => 'lastname',
             'label' => 'Nom',
             'type' => 'text',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
         ]);
-        $this->crud->addField([
-            'name' => 'firstname',
-            'label' => 'Prénom',
+        $this->crud->addField
+        ([
+            'name' => 'role',
+            'label' => 'Rôle',
             'type' => 'text',
+            'hint' => 'Par exemple, Professeur ou Professeur-invité,…',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
         ]);
         $this->crud->addField([
             'name' => 'slug',
             'label' => "Slug (URL)",
             'type' => 'text',
-            'hint' => 'Est automatiquement généré à partir du nom-prénom si pas remplit.'
+            'hint' => 'Est automatiquement généré à partir du prénom-nom si pas remplit.',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ]
         ]);
-        $this->crud->addField([
-            'name' => 'role',
-            'label' => 'Rôle',
-            'type' => 'text',
-            'hint' => 'Par exemple, Professeur ou Professeur-invité,…'
-        ]);
+        
         $this->crud->addField([
             'name' => 'description',
             'label' => 'Description',
             'type' => 'textarea',
             'hint' => 'Description du professeur qui apparaîtra sur son profile',
-        ]);
-        $this->crud->addField([
-            'name' => 'picture',
-            'label' => 'Photo du professeur',
-            'type' => 'browse',
         ]);
         $this->crud->addField
         ([
@@ -93,12 +104,19 @@ class TeacherCrudController extends CrudController
             ],
             'min' => 0,
         ]);
+        $this->crud->addField([
+            'name' => 'picture',
+            'label' => 'Photo du professeur',
+            'type' => 'image',
+            'upload' => true,
+            'crop' => true
+        ]);
         $this->crud->addField
         ([
         	'name' => 'status',
         	'label' => 'Statut',
         	'type' => 'enum',
-            'hint' => 'Si le professeur n’est plus dans l’école, vous pouvez le masquer sans le supprimer'
+            'hint' => 'Si le professeur n’est plus dans l’école, vous pouvez le masquer sans le supprimer',
         ]);
     }
     
