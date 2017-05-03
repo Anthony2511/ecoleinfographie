@@ -83,7 +83,10 @@ class Teacher extends Model
             return $this->slug;
         }
         
-        return $this->title;
+        $lastname = $this->lastname;
+        $firstname = $this->firstname;
+        
+        return $firstname . '-' . $lastname;
     }
     
     /*
