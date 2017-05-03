@@ -17,6 +17,41 @@ class Teacher extends Model
     |--------------------------------------------------------------------------
     */
     
+    protected $table = 'teachers';
+    protected $primaryKey = 'id';
+    public $timestamps = true;
+    // protected $guarded = ['id'];
+    protected $fillable = [
+        'slug',
+        'lastname',
+        'firstname',
+        'role',
+        'description',
+        'picture',
+        'email',
+        'social',
+        'status'
+    ];
+    // protected $hidden = [];
+    // protected $dates = [];
+    protected $casts = [
+        'status' => 'boolean'
+    ];
+    
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'slug_or_title',
+            ],
+        ];
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
@@ -40,6 +75,16 @@ class Teacher extends Model
     | ACCESORS
     |--------------------------------------------------------------------------
     */
+    
+    // The slug is created automatically from the "title" field if no slug exists.
+    public function getSlugOrTitleAttribute()
+    {
+        if ($this->slug != '') {
+            return $this->slug;
+        }
+        
+        return $this->title;
+    }
     
     /*
     |--------------------------------------------------------------------------
