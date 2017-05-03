@@ -30,7 +30,7 @@ class TeacherRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             //'picture'     => 'dimensions:min_width=250,min_height=250',
             'description' => 'required|min:2',
             'email'       => 'nullable|email',
-            'status'      => 'nullable',
+            'status'      => 'required',
         ];
     }
     
