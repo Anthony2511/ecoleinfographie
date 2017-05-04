@@ -26,6 +26,7 @@ class TeacherRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'slug'        => 'unique:articles,slug,' . \Request::get('id'),
             'lastname'    => 'required|min:2|max:255',
             'firstname'   => 'required|min:2|max:255',
+            //'fullname'   => 'required|min:2|max:255',
             'role'        => 'required',
             //'picture'     => 'dimensions:min_width=250,min_height=250',
             'description' => 'required|min:2',

@@ -12,6 +12,7 @@ class CreateTeachersTable extends Migration {
 			$table->string('slug', 255);
 			$table->string('lastname', 255);
 			$table->string('firstname', 255);
+			$table->string('fullname', 255);
 			$table->string('role', 255);
 			$table->text('description');
 			$table->string('picture', 255)->nullable();

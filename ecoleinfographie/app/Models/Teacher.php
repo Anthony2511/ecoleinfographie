@@ -25,6 +25,7 @@ class Teacher extends Model
         'slug',
         'lastname',
         'firstname',
+        'fullname',
         'role',
         'description',
         'picture',
@@ -93,6 +94,7 @@ class Teacher extends Model
         
         return $firstname . '-' . $lastname;
     }
+     
     
     /*
     |--------------------------------------------------------------------------

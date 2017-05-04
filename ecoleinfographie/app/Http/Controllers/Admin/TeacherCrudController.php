@@ -63,6 +63,13 @@ class TeacherCrudController extends CrudController
         ]);
         $this->crud->addField
         ([
+            'name' => 'fullname',
+            'label' => 'Nom complet',
+            'type' => 'text',
+            'hint' => 'Indiquez ici votre nom et prénom',
+        ]);
+        $this->crud->addField
+        ([
             'name' => 'role',
             'label' => 'Rôle',
             'type' => 'text',

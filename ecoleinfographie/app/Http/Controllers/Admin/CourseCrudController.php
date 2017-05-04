@@ -43,8 +43,8 @@ class CourseCrudController extends CrudController
         ]);
         $this->crud->addColumn
         ([
-        	'name' => 'ratio',
-        	'label' => 'Durée',
+        	'name' => 'duration',
+        	'label' => 'Durée (heures)',
         ]);
         
         // ------ CRUD FIELDS
@@ -143,6 +143,25 @@ class CourseCrudController extends CrudController
             'columns' => [
                 'text' => 'Objectif'
             ]
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'teachers',
+            'label' => 'Les cours du prof',
+            'type' => 'select2_multiple',
+            'entity' => 'teachers',
+            'pivot' => true,
+            'attribute' => 'course_id'
+        ]);
+        $this->crud->addField
+        ([
+            'label' => 'Ajouter des professeurs aux cours',
+            'type' => 'select2_multiple',
+            'name' => 'teachers',
+            'entity' => 'teachers',
+            'attribute' => 'fullname',
+            'model' => "App\Models\Teacher",
+            'pivot' => true,
         ]);
         
         
