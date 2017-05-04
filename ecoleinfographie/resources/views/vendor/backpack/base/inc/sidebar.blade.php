@@ -46,11 +46,21 @@
             </a>
           </li>
 
+          <!-- blog -->
+          <li class="treeview">
+            <a href="#"><i class="fa fa-newspaper-o"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a href="{{ url('admin/article') }}"><i class="fa fa-newspaper-o"></i> <span>Articles</span></a></li>
+              <li><a href="{{ url('admin/category') }}"><i class="fa fa-list"></i> <span>Categories</span></a></li>
+              <li><a href="{{ url('admin/tag') }}"><i class="fa fa-tag"></i> <span>Tags</span></a></li>
+            </ul>
+          </li>
+
           <!-- professeurs -->
           <li>
             <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/teacher') }}"><i class="fa fa-address-card"></i><span>Professeurs</span></a></li>
 
-          <!-- professeurs -->
+          <!-- cours -->
           <li>
             <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/cours') }}"><i class="fa fa-puzzle-piece"></i><span>Liste des cours</span></a></li>
 
@@ -61,16 +71,19 @@
           <!-- settings website -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}"><i class="fa fa-cog"></i> <span>Options</span></a></li>
 
-
-          <!-- blog -->
+          <!-- Users, Roles Permissions -->
           <li class="treeview">
-            <a href="#"><i class="fa fa-newspaper-o"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <a href="#"><i class="fa fa-group"></i> <span>Users, Roles, Permissions</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
-              <li><a href="{{ url('admin/article') }}"><i class="fa fa-newspaper-o"></i> <span>Articles</span></a></li>
-              <li><a href="{{ url('admin/category') }}"><i class="fa fa-list"></i> <span>Categories</span></a></li>
-              <li><a href="{{ url('admin/tag') }}"><i class="fa fa-tag"></i> <span>Tags</span></a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/user') }}"><i class="fa fa-user"></i> <span>Users</span></a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/role') }}"><i class="fa fa-group"></i> <span>Roles</span></a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
             </ul>
           </li>
+
+
+
+
 
 
 
