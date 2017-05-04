@@ -120,7 +120,7 @@ class CourseCrudController extends CrudController
         	'name' => 'quadrimester',
         	'label' => 'Dans quel quadrimèstre le cours est-il donné ?',
             'type' => 'select_from_array',
-            'options' => ["q1" => "1", "q2" => "2", "all" => "Toute l’année"],
+            'options' => ["1" => "1er quadrimestre", "2" => "2e quadrimestre", "Toute l’année" => "Toute l’année"],
             'allows_null' => false,
             'tab' => $content
         ]);

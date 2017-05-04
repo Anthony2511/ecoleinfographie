@@ -15,6 +15,6 @@ class CoursesTableSeeder extends Seeder
         /*factory(App\Models\Course::class, 50)->create()->each(function ($u){
             $u->save(factory(App\Models\Course::class)->make());
         });*/
-        factory('App\Models\Course', 50)->create();
+        factory('App\Models\Course', 1)->create();
     }
 }

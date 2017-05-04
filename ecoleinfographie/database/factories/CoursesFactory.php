@@ -14,25 +14,19 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Models\Course::class, function (Faker\Generator $faker) {
     
+    //$aEval = array('1, 2, Toute l’année');
+    
     return [
-        'name' => $faker->text($maxNbChars = 30),
+        'title' => $faker->text($maxNbChars = 30),
         'orientation' => $faker->randomElement($array = array('Web', '3D/Vidéo', 'Design graphique', 'Commun')),
-        'duration' => $faker->numberBetween($min = 15, $max = 200),
+        'duration' => $faker->numberBetween($min = 15, $max = 120),
         'ects' => $faker->numberBetween($min = 1, $max = 20),
-        'ratio' => $faker->randomElements($array = array(
-            'Travaux pratique' => $faker->numberBetween($min = 15, $max = "60"),
-            'Travaux dirigés' => $faker->numberBetween($min = 15, $max = "60"),
-            'Théorie' => $faker->numberBetween($min = 15, $max = "60"))
-        ),
-        'evaluation' => $faker->randomElement($array = array(
-            'Examen écrit', 'Examen orale', 'Travail pratique'
-        )),
+        'ratio' => '[{"type":"Travaux dirigés","hour":"15"},{"type":"Travaux pratique","hour":"30"}]',
+        'evaluation' => '[{"type":"Examen écrit"},{"type":"Examen oral"}]',
         'bloc' => $faker->numberBetween($min = 1, $max = 3),
-        'quadrimester' => $faker->randomElement($array = array(
-            '1', '2', 'Toute l’année'
-        )),
+        'quadrimester' => $faker->randomElement($array = array('1', '2', 'Toute l’année')),
         'shortdescription' => $faker->sentences($nbWords = 1, $variableNbWords = true),
-        'description' => $faker->paragraph($nbSentences = 20, $variableNbSentences = true),
-        'objectives' => $faker->sentences($nb = 7, $variableNbSentences = true),
+        'description' => $faker->paragraph($nbSentences = 12, $variableNbSentences = true),
+        'objectives' => '[{"text":"Lorem ipsum dolor sit amet aspilicueta."},{"text":"Donec eu imperdiet tellus. Proin mauris lacus, fermentum vitae quam id, tincidunt faucibus metus."},{"text":"Sed eget sem ac est sagittis scelerisque. Morbi dapibus lorem."},{"text":"Nunc aliquam mi ultricies ligula tincidunt, efficitur laoreet purus efficitur. Morbi tortor orci, tempor vel feugiat ut, sagittis at leo."}]',
     ];
 });
