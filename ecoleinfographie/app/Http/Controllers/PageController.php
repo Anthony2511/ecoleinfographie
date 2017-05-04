@@ -20,7 +20,7 @@ class PageController extends Controller
 		return view('pages.home', $this->data);
 	}
 	
-	public function index($slug)
+	/*public function index($slug)
 	{
 		$page = Page::findBySlug($slug);
 		
@@ -33,5 +33,7 @@ class PageController extends Controller
 		$this->data['page'] = $page->withFakes();
 		
 		return view('pages.'.$page->template, $this->data);
-	}
+	}*/
+    
+    
 }
