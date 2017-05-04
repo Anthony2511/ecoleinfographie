@@ -15,6 +15,9 @@
 // HomePage
 Route::get('/', ['uses' => 'PageController@home']);
 
+// Web program
+Route::get('programme-des-cours-web', 'ProgramCourseController@showPageWeb')->name('Programme métiers du web');
+
 // Redirect slug 'accueil' to '/'
 Route::get('/home', function (){
 	return redirect('/');
@@ -42,4 +45,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     // Courses routes
     CRUD::resource('cours', 'CourseCrudController');
 });
+
 
