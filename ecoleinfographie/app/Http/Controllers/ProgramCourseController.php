@@ -19,7 +19,8 @@ class ProgramCourseController extends PageController
         $this->data['page']  = $page->withFakes();
         
         return view('pages.program_courses', [
-            'courses' => $this->getAllCourses()
+            'allCourses' => $this->getAllCourses(),
+            'webCourses' => $this->getWebCourses(),
         ], $this->data);
     }
     
@@ -28,5 +29,12 @@ class ProgramCourseController extends PageController
         $courses = Course::get();
         
         return $courses;
+    }
+    
+    public function getWebCourses()
+    {
+        $webCourses = Course::where('orientation', 'web')->OrderBy('name','ASC')->get();
+        
+        return $webCourses;
     }
 }
