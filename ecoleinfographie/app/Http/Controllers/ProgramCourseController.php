@@ -25,7 +25,10 @@ class ProgramCourseController extends PageController
         ], $this->data);
     }
     
-    public function getAllCoursesBloc1()
+    /*
+     * Queries for get all courses
+     */
+    protected function getAllCoursesBloc1()
     {
         $courses = Course::where('bloc', 1)
                          ->OrderBy('name', 'ASC')
@@ -34,7 +37,7 @@ class ProgramCourseController extends PageController
         return $courses;
     }
     
-    public function getAllCoursesBloc2()
+    protected function getAllCoursesBloc2()
     {
         $courses = Course::where('bloc', 2)
                          ->OrderBy('name', 'ASC')
@@ -43,7 +46,7 @@ class ProgramCourseController extends PageController
         return $courses;
     }
     
-    public function getAllCoursesBloc3()
+    protected function getAllCoursesBloc3()
     {
         $courses = Course::where('bloc', 3)
                          ->OrderBy('name', 'ASC')

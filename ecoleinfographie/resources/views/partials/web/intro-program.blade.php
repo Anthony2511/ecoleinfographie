@@ -1,8 +1,8 @@
 <section class="program">
     <div class="program__container-top">
         <h2 role="heading" aria-level="2" class="program__title">
-            <span>Découvre </span>
-            <strong>le programme des cours</strong>
+            <span>@lang('programCourse.discover') </span>
+            <strong>@lang('programCourse.title')</strong>
         </h2>
         <div class="program__redirect">
             <a href="#b1" class="program__redirect-link">
@@ -11,8 +11,8 @@
                         <img class="program__redirect__img" src="./img/program-redirect--1.jpg" width="315" height="202" alt="Bureau vue de haut contenant des images en rapport avec l’infographie (smartphone, livre, brochures, crayons,…)">
                     </div>
                     <figcaption class="program__redirect__figcaption">
-                        <span>Le programme </span>
-                        <strong>du premier bloc</strong>
+                        <span>@lang('programCourse.theProgram') </span>
+                        <strong>@lang('programCourse.firstbloc')</strong>
                     </figcaption>
                 </figure>
             </a>
@@ -22,8 +22,8 @@
                         <img class="program__redirect__img" src="./img/program-redirect--2.jpg" width="315" height="202" alt="Un groupe de personne réunit autour d’une table qui contient des éléments en rapport avec l’infographie (smartphone, crayons, ordinateur,…)">
                     </div>
                     <figcaption class="program__redirect__figcaption">
-                        <span>Le programme </span>
-                        <strong>du deuxième bloc</strong>
+                        <span>@lang('programCourse.theProgram') </span>
+                        <strong>@lang('programCourse.secondbloc')</strong>
                     </figcaption>
                 </figure>
             </a>
@@ -33,8 +33,8 @@
                         <img class="program__redirect__img" src="./img/program-redirect--3.jpg" width="315" height="202" alt="Deux personnes travaillant ensemble sur un visuel sur un ordinateur">
                     </div>
                     <figcaption class="program__redirect__figcaption">
-                        <span>Le programme </span>
-                        <strong>du troisième bloc</strong>
+                        <span>@lang('programCourse.theProgram') </span>
+                        <strong>@lang('programCourse.thirdbloc')</strong>
                     </figcaption>
                 </figure>
             </a>
@@ -44,27 +44,27 @@
 
     <section class="program-bloc program-bloc--1 option-visible">
         <div class="program-bloc__wrapper">
-            <h3 role="heading" aria-level="3" class="program-bloc__title">Le premier bloc</h3>
-            <span class="program-bloc__text">Le bloc 1 est identique à toutes les options.</span>
-            <span class="program-bloc__text">Cliquez sur un cours pour avoir plus d’informations.</span>
+            <h3 role="heading" aria-level="3" class="program-bloc__title">@lang('programCourse.thefirstbloc')</h3>
+            <span class="program-bloc__text">@lang('programCourse.thefirstblocintro')</span>
+            <span class="program-bloc__text">@lang('programCourse.clicOnCourseInfo')</span>
             <div class="probram-bloc__container">
 
                 <div class="program-bloc__filter">
-                    <span class="program-bloc__filter-title">Filtrer&nbsp;:</span>
-                    <button class="program-bloc__button program-bloc__button--all">Toutes les options</button>
-                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">Web uniquement</button>
+                    <span class="program-bloc__filter-title">@lang('programCourse.filter')</span>
+                    <button class="program-bloc__button program-bloc__button--all">@lang('programCourse.allCourses')</button>
+                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">@lang('programCourse.webOnly')</button>
                 </div>
 
                 <div class="program-table__container">
                     <table class="program-table program-table--option">
                         <thead class="program-table__thead">
-                            <tr>
-                                <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
-                                <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
-                                <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
-                                <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
-                                <th class="program-table__quad"><span>Quadrimestre</span></th>
-                            </tr>
+                        <tr>
+                            <th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
+                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>@lang('programCourse.nameOfCourse')</span></th>
+                            <th class="program-table__hour" data-sort="int"><span>@lang('programCourse.hours')</span></th>
+                            <th class="program-table__ects" data-sort="int"><span>@lang('programCourse.credits')</span></th>
+                            <th class="program-table__quad"><span>@lang('programCourse.quadrimester')</span></th>
+                        </tr>
                         </thead>
                         <tbody class="program-table__tbody">
 
@@ -88,12 +88,13 @@
 
                     <table class="program-table program-table--all">
                         <thead class="program-table__thead">
+                        <thead class="program-table__thead">
                         <tr>
-                            <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
-                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
-                            <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
-                            <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
-                            <th class="program-table__quad"><span>Quadrimestre</span></th>
+                            <th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
+                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>@lang('programCourse.nameOfCourse')</span></th>
+                            <th class="program-table__hour" data-sort="int"><span>@lang('programCourse.hours')</span></th>
+                            <th class="program-table__ects" data-sort="int"><span>@lang('programCourse.credits')</span></th>
+                            <th class="program-table__quad"><span>@lang('programCourse.quadrimester')</span></th>
                         </tr>
                         </thead>
                         <tbody class="program-table__tbody">
@@ -121,26 +122,26 @@
     </section>
     <section class="program-bloc program-bloc--2 option-visible">
         <div class="program-bloc__wrapper">
-            <h3 role="heading" aria-level="3" class="program-bloc__title">Le deuxième bloc</h3>
-            <span class="program-bloc__text">Le bloc 2 vous permet de choisir votre option.</span>
-            <span class="program-bloc__text">Cliquez sur un cours pour avoir plus d’informations.</span>
+            <h3 role="heading" aria-level="3" class="program-bloc__title">@lang('programCourse.thesecondbloc')</h3>
+            <span class="program-bloc__text">@lang('programCourse.thesecondblocintro')</span>
+            <span class="program-bloc__text">@lang('programCourse.clicOnCourseInfo')</span>
             <div class="probram-bloc__container">
 
                 <div class="program-bloc__filter">
-                    <span class="program-bloc__filter-title">Filtrer&nbsp;:</span>
-                    <button class="program-bloc__button program-bloc__button--all">Toutes les options</button>
-                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">Web uniquement</button>
+                    <span class="program-bloc__filter-title">@lang('programCourse.filter')</span>
+                    <button class="program-bloc__button program-bloc__button--all">@lang('programCourse.allCourses')</button>
+                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">@lang('programCourse.webOnly')</button>
                 </div>
 
                 <div class="program-table__container">
                     <table class="program-table program-table--option">
                         <thead class="program-table__thead">
                             <tr>
-                                <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
-                                <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
-                                <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
-                                <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
-                                <th class="program-table__quad"><span>Quadrimestre</span></th>
+                                <th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
+                                <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>@lang('programCourse.nameOfCourse')</span></th>
+                                <th class="program-table__hour" data-sort="int"><span>@lang('programCourse.hours')</span></th>
+                                <th class="program-table__ects" data-sort="int"><span>@lang('programCourse.credits')</span></th>
+                                <th class="program-table__quad"><span>@lang('programCourse.quadrimester')</span></th>
                             </tr>
                         </thead>
                         <tbody class="program-table__tbody">
@@ -163,11 +164,11 @@
                     <table class="program-table program-table--all">
                         <thead class="program-table__thead">
                         <tr>
-                            <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
-                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
-                            <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
-                            <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
-                            <th class="program-table__quad"><span>Quadrimestre</span></th>
+                            <th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
+                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>@lang('programCourse.nameOfCourse')</span></th>
+                            <th class="program-table__hour" data-sort="int"><span>@lang('programCourse.hours')</span></th>
+                            <th class="program-table__ects" data-sort="int"><span>@lang('programCourse.credits')</span></th>
+                            <th class="program-table__quad"><span>@lang('programCourse.quadrimester')</span></th>
                         </tr>
                         </thead>
                         <tbody class="program-table__tbody">
@@ -194,27 +195,27 @@
     </section>
     <section class="program-bloc program-bloc--3 option-visible">
         <div class="program-bloc__wrapper">
-            <h3 role="heading" aria-level="3" class="program-bloc__title">Le troisième bloc</h3>
-            <span class="program-bloc__text">Le bloc 3 vous permet de lorem ipsum plus souvent.</span>
-            <span class="program-bloc__text">Cliquez sur un cours pour avoir plus d’informations.</span>
+            <h3 role="heading" aria-level="3" class="program-bloc__title">@lang('programCourse.thethirdbloc')</h3>
+            <span class="program-bloc__text">@lang('programCourse.thethirdblocintro')</span>
+            <span class="program-bloc__text">@lang('programCourse.clicOnCourseInfo')</span>
             <div class="probram-bloc__container">
 
                 <div class="program-bloc__filter">
-                    <span class="program-bloc__filter-title">Filtrer&nbsp;:</span>
-                    <button class="program-bloc__button program-bloc__button--all">Toutes les options</button>
-                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">Web uniquement</button>
+                    <span class="program-bloc__filter-title">@lang('programCourse.filter')</span>
+                    <button class="program-bloc__button program-bloc__button--all">@lang('programCourse.allCourses')</button>
+                    <button class="program-bloc__button program-bloc__button--option program-bloc__button--active">@lang('programCourse.webOnly')</button>
                 </div>
 
                 <div class="program-table__container">
                     <table class="program-table program-table--option">
                         <thead class="program-table__thead">
-                            <tr>
-                                <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
-                                <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
-                                <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
-                                <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
-                                <th class="program-table__quad"><span>Quadrimestre</span></th>
-                            </tr>
+                        <tr>
+                            <th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
+                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>@lang('programCourse.nameOfCourse')</span></th>
+                            <th class="program-table__hour" data-sort="int"><span>@lang('programCourse.hours')</span></th>
+                            <th class="program-table__ects" data-sort="int"><span>@lang('programCourse.credits')</span></th>
+                            <th class="program-table__quad"><span>@lang('programCourse.quadrimester')</span></th>
+                        </tr>
                         </thead>
                         <tbody class="program-table__tbody">
                         @foreach($getWebCoursesBloc3 as $key => $course)
@@ -236,11 +237,11 @@
                     <table class="program-table program-table--all">
                         <thead class="program-table__thead">
                         <tr>
-                            <th class="program-table__orientation" data-sort="string"><span>Orientation</span></th>
-                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>Nom du cours</span></th>
-                            <th class="program-table__hour" data-sort="int"><span>Heures</span></th>
-                            <th class="program-table__ects" data-sort="int"><span>Crédits</span></th>
-                            <th class="program-table__quad"><span>Quadrimestre</span></th>
+                            <th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
+                            <th class="program-table__course" data-sort="string" data-sort-default="desc"><span>@lang('programCourse.nameOfCourse')</span></th>
+                            <th class="program-table__hour" data-sort="int"><span>@lang('programCourse.hours')</span></th>
+                            <th class="program-table__ects" data-sort="int"><span>@lang('programCourse.credits')</span></th>
+                            <th class="program-table__quad"><span>@lang('programCourse.quadrimester')</span></th>
                         </tr>
                         </thead>
                         <tbody class="program-table__tbody">
