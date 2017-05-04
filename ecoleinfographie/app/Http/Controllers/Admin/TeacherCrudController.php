@@ -119,6 +119,16 @@ class TeacherCrudController extends CrudController
         	'type' => 'enum',
             'hint' => 'Si le professeur n’est plus dans l’école, vous pouvez le masquer sans le supprimer',
         ]);
+        $this->crud->addField
+        ([
+            'label' => 'Sélectionnez les cours du prof',
+            'type' => 'select2_multiple',
+            'name' => 'courses',
+            'entity' => 'courses',
+            'attribute' => 'name',
+            'model' => "App\Models\Course",
+            'pivot' => true,
+        ]);
     }
     
     public function store(StoreRequest $request)
