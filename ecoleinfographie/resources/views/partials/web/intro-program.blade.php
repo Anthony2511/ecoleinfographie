@@ -67,44 +67,25 @@
                             </tr>
                         </thead>
                         <tbody class="program-table__tbody">
+
+                        @foreach($getWebCoursesBloc1 as $key => $course)
                             <tr class="link-row" data-href="temp-page-cours" >
-                                <td class="program-table__orientation">Commun</td>
+                                <td class="program-table__orientation">{{ $course->orientation }}</td>
                                 <td class="program-table__course">
                                     <a href="temp-page-cours" class="program-table__course__link">
-                                        <span class="program-table__course__name">Anglais 1</span>
+                                        <span class="program-table__course__name">{{ $course->name }}</span>
                                     </a>
-                                    <span class="program-table__course__desc">Découvre ou redécouvre les bases de l’Anglais</span>
+                                    <span class="program-table__course__desc">{{ $course->shortdescription }}</span>
                                 </td>
-                                <td class="program-table__hour"><span>15</span></td>
-                                <td class="program-table__ects"><span>1</span></td>
-                                <td class="program-table__quad"><span>1</span></td>
+                                <td class="program-table__hour"><span>{{ $course->duration }}</span></td>
+                                <td class="program-table__ects"><span>{{ $course->ects }}</span></td>
+                                <td class="program-table__quad"><span>{{ $course->quadrimester }}</span></td>
                             </tr>
-                            <tr class="link-row" data-href="temp-page-cours">
-                                <td class="program-table__orientation">Commun</td>
-                                <td class="program-table__course">
-                                    <a href="temp-page-cours" class="program-table__course__link">
-                                        <span class="program-table__course__name">Anglais 2</span>
-                                    </a>
-                                    <span class="program-table__course__desc">Approfondis les connaissances apprises en Anglais 1</span>
-                                </td>
-                                <td class="program-table__hour"><span>15</span></td>
-                                <td class="program-table__ects"><span>1</span></td>
-                                <td class="program-table__quad"><span>1</span></td>
-                            </tr>
-                            <tr class="link-row" data-href="temp-page-cours">
-                                <td class="program-table__orientation">Web</td>
-                                <td class="program-table__course">
-                                    <a href="temp-page-cours" class="program-table__course__link">
-                                        <span class="program-table__course__name">Créations de pages Web - CSS</span>
-                                    </a>
-                                    <span class="program-table__course__desc">Apprends le langage qui met le web en couleur</span>
-                                </td>
-                                <td class="program-table__hour"><span>60</span></td>
-                                <td class="program-table__ects"><span>5</span></td>
-                                <td class="program-table__quad"><span>2</span></td>
-                            </tr>
+                        @endforeach
+
                         </tbody>
                     </table>
+
                     <table class="program-table program-table--all">
                         <thead class="program-table__thead">
                         <tr>
@@ -116,153 +97,23 @@
                         </tr>
                         </thead>
                         <tbody class="program-table__tbody">
-                        <tr class="link-row" data-href="temp-page-cours" >
-                            <td class="program-table__orientation">Commun</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Vidéo</span>
-                                </a>
-                                <span class="program-table__course__desc">Les principes de la technique vidéo</span>
-                            </td>
-                            <td class="program-table__hour"><span>15</span></td>
-                            <td class="program-table__ects"><span>1</span></td>
-                            <td class="program-table__quad"><span>1</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Commun</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Anglais 2</span>
-                                </a>
-                                <span class="program-table__course__desc">Approfondis les connaissances apprises en Anglais 1</span>
-                            </td>
-                            <td class="program-table__hour"><span>15</span></td>
-                            <td class="program-table__ects"><span>1</span></td>
-                            <td class="program-table__quad"><span>1</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Créations de pages Web - CSS</span>
-                                </a>
-                                <span class="program-table__course__desc">Apprends le langage qui met le web en couleur</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-                        <tr class="link-row" data-href="temp-page-cours">
-                            <td class="program-table__orientation">Web</td>
-                            <td class="program-table__course">
-                                <a href="temp-page-cours" class="program-table__course__link">
-                                    <span class="program-table__course__name">Javascript</span>
-                                </a>
-                                <span class="program-table__course__desc">Découvre le pouvoir de la progra</span>
-                            </td>
-                            <td class="program-table__hour"><span>60</span></td>
-                            <td class="program-table__ects"><span>5</span></td>
-                            <td class="program-table__quad"><span>2</span></td>
-                        </tr>
-
+                        @foreach($getAllCoursesBloc1 as $key => $course)
+                            <tr class="link-row" data-href="temp-page-cours" >
+                                <td class="program-table__orientation">{{ $course->orientation }}</td>
+                                <td class="program-table__course">
+                                    <a href="temp-page-cours" class="program-table__course__link">
+                                        <span class="program-table__course__name">{{ $course->name }}</span>
+                                    </a>
+                                    <span class="program-table__course__desc">{{ $course->shortdescription }}</span>
+                                </td>
+                                <td class="program-table__hour"><span>{{ $course->duration }}</span></td>
+                                <td class="program-table__ects"><span>{{ $course->ects }}</span></td>
+                                <td class="program-table__quad"><span>{{ $course->quadrimester }}</span></td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
+
                 </div>
 
             </div>
