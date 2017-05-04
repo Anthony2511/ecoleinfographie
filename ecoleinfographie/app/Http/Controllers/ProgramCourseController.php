@@ -17,6 +17,8 @@ class ProgramCourseController extends PageController
         
         return view('pages.program_courses', [
             'getAllCoursesBloc1' => $this->getAllCoursesBloc1(),
+            'getAllCoursesBloc2' => $this->getAllCoursesBloc1(),
+            'getAllCoursesBloc3' => $this->getAllCoursesBloc1(),
             'getWebCoursesBloc1' => $this->getWebCoursesBloc1(),
         ], $this->data);
     }
@@ -24,8 +26,26 @@ class ProgramCourseController extends PageController
     public function getAllCoursesBloc1()
     {
         $courses = Course::where('bloc', 1)
-            ->OrderBy('name', 'ASC')
-            ->get();
+                         ->OrderBy('name', 'ASC')
+                         ->get();
+        
+        return $courses;
+    }
+    
+    public function getAllCoursesBloc2()
+    {
+        $courses = Course::where('bloc', 2)
+                         ->OrderBy('name', 'ASC')
+                         ->get();
+        
+        return $courses;
+    }
+    
+    public function getAllCoursesBloc3()
+    {
+        $courses = Course::where('bloc', 3)
+                         ->OrderBy('name', 'ASC')
+                         ->get();
         
         return $courses;
     }
@@ -33,9 +53,9 @@ class ProgramCourseController extends PageController
     protected function getWebCoursesBloc1()
     {
         $courses = Course::where('orientation', 'web')
-            ->where('bloc', '1')
-            ->OrderBy('name', 'ASC')
-            ->get();
+                         ->where('bloc', '1')
+                         ->OrderBy('name', 'ASC')
+                         ->get();
         
         return $courses;
     }
