@@ -64,6 +64,11 @@ class Course extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function teachers()
+    {
+        return $this->belongsToMany('App\Models\Teacher');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
