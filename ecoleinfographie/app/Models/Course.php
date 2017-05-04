@@ -23,7 +23,7 @@ class Course extends Model
     // protected $guarded = ['id'];
     protected $fillable = [
         'slug',
-        'name',
+        'title',
         'orientation',
         'duration',
         'ects',
@@ -97,7 +97,7 @@ class Course extends Model
             return $this->slug;
         }
         
-        return $this->name;
+        return $this->title;
     }
     
     /*

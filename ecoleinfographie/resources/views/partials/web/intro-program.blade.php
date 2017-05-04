@@ -72,7 +72,7 @@
                             <tr class="link-row" data-href="temp-page-cours" >
                                 <td class="program-table__orientation">{{ $course->orientation }}</td>
                                 <td class="program-table__course">
-                                    <a href="temp-page-cours" class="program-table__course__link">
+                                    <a href="{{ $course->slug }}" class="program-table__course__link">
                                         <span class="program-table__course__name">{{ $course->name }}</span>
                                     </a>
                                     <span class="program-table__course__desc">{{ $course->shortdescription }}</span>

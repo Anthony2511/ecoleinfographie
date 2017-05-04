@@ -54,17 +54,9 @@ class CourseCrudController extends CrudController
         // ------ CRUD FIELDS
         $this->crud->addField
         ([
-            'name' => 'name',
+            'name' => 'title',
             'label' => 'Nom du cours',
             'type' => 'text',
-            'tab' => $content
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'slug',
-            'label' => "Slug (URL)",
-            'type' => 'text',
-            'hint' => 'Automatiquement généré à partir du nom si vide.',
             'tab' => $content
         ]);
         $this->crud->addField
@@ -214,10 +206,10 @@ class CourseCrudController extends CrudController
         $this->crud->addField
         ([
             'name' => 'slug',
-            'label' => 'L’URL de la page',
+            'label' => "Slug (URL)",
             'type' => 'text',
-            'hint' => 'Automatiquement généré à partir du titre de la page si le champ n’est pas rempli',
-            'tab' => $options,
+            'hint' => 'Automatiquement généré à partir du nom si vide.',
+            'tab' => $options
         ]);
         
         

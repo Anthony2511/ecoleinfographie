@@ -25,19 +25,18 @@ class Teacher extends Model
         'slug',
         'lastname',
         'firstname',
-        'fullname',
+        'title',
         'role',
         'description',
         'picture',
         'email',
         'social',
-        'status'
+        'status',
+        'extras'
     ];
     // protected $hidden = [];
     // protected $dates = [];
-    protected $casts = [
-        'status' => 'boolean'
-    ];
+    protected $fakeColumns = ['extras'];
     
     /**
      * Return the sluggable configuration array for this model.
