@@ -6,6 +6,7 @@
 
 @section('content')
     @include('partials.breadcrumb')
-    @include('partials.web.intro-program')
+		@include('partials.courses.introProgram')
+    @include('partials.courses.listCourses')
 @endsection
 
