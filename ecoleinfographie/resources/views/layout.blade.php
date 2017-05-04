@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr" class="no-js">
 @include('partials.head')
-<body class="<?php if(isset($page)){echo $page->slug; }?>  <?php if (isset($page->classBody)) echo $page->classBody; ?>">
+<body class="<?php if (isset($page->classBody)) echo $page->classBody; ?>">
+
 @yield('header')
 
-<div class="container {{ isset($page->headerLarge) == true ? 'container--header-min' : '' }}">
     @yield('content')
 </div>
+
 <div class="footer__container">
     <footer class="footer">
         @include('partials.footer')

@@ -8,3 +8,5 @@
         @include('partials.navigation')
     </div>
 </header>
+
+<div class="container container--header-min">

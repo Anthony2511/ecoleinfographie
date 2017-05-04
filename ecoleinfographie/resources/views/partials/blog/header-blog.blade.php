@@ -15,3 +15,5 @@
         {!! file_get_contents(public_path('svg/blog.svg')) !!}
     </div>
 </header>
+
+<div class="container">

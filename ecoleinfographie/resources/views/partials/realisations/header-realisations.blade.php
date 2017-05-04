@@ -20,3 +20,5 @@
         <img src="./img/rea-printer.png" width="500" height="471" alt="" class="header-rea__printer" srcset="./img/rea-printer@2x.png 2x">
     </div>
 </header>
+
+<div class="container">
