@@ -33,10 +33,12 @@ class Course extends Model
         'quadrimester',
         'shortdescription',
         'description',
-        'objectives'
+        'objectives',
+        'extras'
     ];
     // protected $hidden = [];
     // protected $dates = [];
+    protected $fakeColumns = ['extras'];
     
     /**
      * Return the sluggable configuration array for this model.
