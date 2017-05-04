@@ -31,7 +31,7 @@ class ProgramCourseController extends PageController
         return $courses;
     }
     
-    public function getWebCourses()
+    protected function getWebCourses()
     {
         $webCourses = Course::where('orientation', 'web')->OrderBy('name','ASC')->get();
         
