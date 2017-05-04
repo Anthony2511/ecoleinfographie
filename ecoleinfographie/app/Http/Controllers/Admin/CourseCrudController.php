@@ -27,14 +27,18 @@ class CourseCrudController extends CrudController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
+        $content = 'La fiche du cours';
+        $seo = 'S.E.O';
+        $options = 'Paramètres';
+        
         // ------ CRUD COLUMNS
         $this->crud->addColumn([
             'name' => 'name',
-            'label' => "Nom du cours"
+            'label' => "Nom du cours",
         ]);
         $this->crud->addColumn([
             'name' => 'orientation',
-            'label' => "Orientation"
+            'label' => "Orientation",
         ]);
         $this->crud->addColumn
         ([
@@ -52,14 +56,16 @@ class CourseCrudController extends CrudController
         ([
             'name' => 'name',
             'label' => 'Nom du cours',
-            'type' => 'text'
+            'type' => 'text',
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
             'name' => 'slug',
             'label' => "Slug (URL)",
             'type' => 'text',
-            'hint' => 'Automatiquement généré à partir du nom si vide.'
+            'hint' => 'Automatiquement généré à partir du nom si vide.',
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -67,7 +73,8 @@ class CourseCrudController extends CrudController
         	'label' => 'Orientation',
         	'type' => 'select_from_array',
             'options' => ["all" => "Commun", "2D" => "Design graphique", "3D" => "3D/Vidéo", "web" => "Web"],
-            'allows_null' => false
+            'allows_null' => false,
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -75,6 +82,7 @@ class CourseCrudController extends CrudController
             'label' => 'Durée du cours en heure',
             'type' => 'number',
             'attributes' => ["step" => "5"],
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -82,6 +90,7 @@ class CourseCrudController extends CrudController
         	'label' => 'Nombre de crédits ECTS',
         	'type' => 'number',
             'attributes' => ["step" => "5"],
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -93,7 +102,8 @@ class CourseCrudController extends CrudController
             'columns' => [
                 'type' => 'Type',
                 'hour' => 'Nombre d’heures (uniquement le nombre, pas de lettre)'
-            ]
+            ],
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -103,13 +113,15 @@ class CourseCrudController extends CrudController
             'entity_singular' => 'une partie de cours',
             'columns' => [
                 'type' => 'Type de l’évaluation (ex: Examen écrit, Examen pratique,… '
-            ]
+            ],
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
         	'name' => 'bloc',
         	'label' => 'L’année (bloc) dans lequel est dispensé le cours',
         	'type' => 'number',
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -117,7 +129,8 @@ class CourseCrudController extends CrudController
         	'label' => 'Dans quel quadrimèstre le cours est-il donné ?',
             'type' => 'select_from_array',
             'options' => ["q1" => "1", "q2" => "2", "all" => "Toute l’année"],
-            'allows_null' => false
+            'allows_null' => false,
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -125,6 +138,7 @@ class CourseCrudController extends CrudController
         	'label' => 'Description courte (max 180 charactères)',
             'hint' => 'La description qui apparait dans le tableau des cours',
         	'type' => 'text',
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -132,6 +146,7 @@ class CourseCrudController extends CrudController
         	'label' => 'Description complète',
             'hint' => 'La description qui décrit le cours de manière complète',
         	'type' => 'textarea',
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -142,7 +157,8 @@ class CourseCrudController extends CrudController
             'entity_singular' => 'un objectif',
             'columns' => [
                 'text' => 'Objectif'
-            ]
+            ],
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -151,7 +167,8 @@ class CourseCrudController extends CrudController
             'type' => 'select2_multiple',
             'entity' => 'teachers',
             'pivot' => true,
-            'attribute' => 'course_id'
+            'attribute' => 'course_id',
+            'tab' => $content
         ]);
         $this->crud->addField
         ([
@@ -162,10 +179,46 @@ class CourseCrudController extends CrudController
             'attribute' => 'fullname',
             'model' => "App\Models\Teacher",
             'pivot' => true,
+            'tab' => $content
         ]);
-        
-        
-        
+    
+    
+    
+    
+        /*
+          * Fields pour les metas
+          */
+    
+        $this->crud->addField
+        ([
+            'name' => 'metaDescription',
+            'label' => 'Meta description',
+            'fake' => 'true',
+            'store_in' => 'extras',
+            'tab' => $seo
+        ]);
+    
+        $this->crud->addField
+        ([
+            'name' => 'metaKeywords',
+            'type' => 'textarea',
+            'label' => 'Meta Keywords',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => $seo
+        ]);
+    
+        /*
+         * Fields pour les paramètres
+         */
+        $this->crud->addField
+        ([
+            'name' => 'slug',
+            'label' => 'L’URL de la page',
+            'type' => 'text',
+            'hint' => 'Automatiquement généré à partir du titre de la page si le champ n’est pas rempli',
+            'tab' => $options,
+        ]);
         
         
         
