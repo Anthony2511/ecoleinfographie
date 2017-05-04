@@ -10,7 +10,7 @@ class CreateCoursesTable extends Migration {
 		Schema::create('courses', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('slug', 255);
-			$table->string('name', 255);
+			$table->string('title', 255);
 			$table->string('orientation', 255);
 			$table->integer('duration');
 			$table->integer('ects');
@@ -21,6 +21,7 @@ class CreateCoursesTable extends Migration {
 			$table->string('shortdescription', 255);
 			$table->text('description');
 			$table->text('objectives');
+            $table->text('extras')->nullable();
 			$table->softDeletes();
 			$table->timestamps();
 		});
