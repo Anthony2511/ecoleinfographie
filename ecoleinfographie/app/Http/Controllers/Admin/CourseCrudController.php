@@ -137,7 +137,7 @@ class CourseCrudController extends CrudController
         	'name' => 'description',
         	'label' => 'Description complète',
             'hint' => 'La description qui décrit le cours de manière complète',
-        	'type' => 'textarea',
+        	'type' => 'ckeditor',
             'tab' => $content
         ]);
         $this->crud->addField

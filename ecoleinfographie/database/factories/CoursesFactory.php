@@ -26,7 +26,7 @@ $factory->define(App\Models\Course::class, function (Faker\Generator $faker) {
         'bloc' => $faker->numberBetween($min = 1, $max = 3),
         'quadrimester' => $faker->randomElement($array = array('1', '2', 'Toute l’année')),
         'shortdescription' => $faker->sentences($nbWords = 1, $variableNbWords = true),
-        'description' => $faker->paragraph($nbSentences = 12, $variableNbSentences = true),
+        'description' => '<p>' . $faker->paragraph($nbSentences = 8, $variableNbSentences = true) . '</p>',
         'objectives' => '[{"text":"Lorem ipsum dolor sit amet aspilicueta."},{"text":"Donec eu imperdiet tellus. Proin mauris lacus, fermentum vitae quam id, tincidunt faucibus metus."},{"text":"Sed eget sem ac est sagittis scelerisque. Morbi dapibus lorem."},{"text":"Nunc aliquam mi ultricies ligula tincidunt, efficitur laoreet purus efficitur. Morbi tortor orci, tempor vel feugiat ut, sagittis at leo."}]',
         'extras' => '{"metaDescription":"Test meta","metaKeywords":"lorem ipsum dolor sit amet"}'
     ];
