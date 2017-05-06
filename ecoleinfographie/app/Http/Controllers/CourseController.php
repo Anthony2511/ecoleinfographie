@@ -29,13 +29,14 @@ class CourseController extends Controller
     protected function show($slug)
     {
         $course = Course::where('slug', $slug)->firstOrFail();
-        SEO::setTitle($course->title);
-        
-        return view('pages.temp_page_course', [
-            'page' => $this->getOneCourse($slug),
-        ]);
     
+        SEO::setTitle($course->title);
+        $orientation = ($course->orientation == 'Commun') ? '.' : ' dans l’orientation ' . $course->orientation . '.';
+        SEO::setDescription('Le cours de ' . $course->title . ' est dispensé à la Haute École de la Province de Liège lors du bloc ' . $course->bloc . $orientation);
         
+        return view('posts.postCourse', [
+            'page' => $this->getOneCourse($slug)
+        ]);
     }
     
     public function getOneCourse($slug)
@@ -43,6 +44,8 @@ class CourseController extends Controller
         $course = Course::where('slug', $slug)->first();
         return $course;
     }
+    
+    
     
     
     /*

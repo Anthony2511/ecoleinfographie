@@ -33,7 +33,7 @@ class CourseCrudController extends CrudController
         
         // ------ CRUD COLUMNS
         $this->crud->addColumn([
-            'name' => 'name',
+            'name' => 'title',
             'label' => "Nom du cours",
         ]);
         $this->crud->addColumn([
@@ -209,6 +209,16 @@ class CourseCrudController extends CrudController
             'label' => "Slug (URL)",
             'type' => 'text',
             'hint' => 'Automatiquement généré à partir du nom si vide.',
+            'tab' => $options
+        ]);
+    
+        $this->crud->addField
+        ([
+            'name' => 'classBody',
+            'label' => 'Définir une classe sur le body pour la page',
+            'default' => 'course-post',
+            'fake' => 'true',
+            'store_in' => 'extras',
             'tab' => $options
         ]);
         

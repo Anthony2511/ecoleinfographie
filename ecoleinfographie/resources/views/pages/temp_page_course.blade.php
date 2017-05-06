@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title', $page->title)
+
 @section('header')
     @include('partials.header-min')
 @endsection

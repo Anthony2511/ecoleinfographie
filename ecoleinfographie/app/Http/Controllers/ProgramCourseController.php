@@ -31,7 +31,7 @@ class ProgramCourseController extends PageController
     protected function getAllCoursesBloc1()
     {
         $courses = Course::where('bloc', 1)
-                         ->OrderBy('name', 'ASC')
+                         ->OrderBy('title', 'ASC')
                          ->get();
         
         return $courses;
@@ -40,7 +40,7 @@ class ProgramCourseController extends PageController
     protected function getAllCoursesBloc2()
     {
         $courses = Course::where('bloc', 2)
-                         ->OrderBy('name', 'ASC')
+                         ->OrderBy('title', 'ASC')
                          ->get();
         
         return $courses;
@@ -49,7 +49,7 @@ class ProgramCourseController extends PageController
     protected function getAllCoursesBloc3()
     {
         $courses = Course::where('bloc', 3)
-                         ->OrderBy('name', 'ASC')
+                         ->OrderBy('title', 'ASC')
                          ->get();
         
         return $courses;
@@ -62,7 +62,7 @@ class ProgramCourseController extends PageController
     {
         $courses = Course::where('orientation', 'web')
                          ->where('bloc', '1')
-                         ->OrderBy('name', 'ASC')
+                         ->OrderBy('title', 'ASC')
                          ->get();
         
         return $courses;
@@ -72,7 +72,7 @@ class ProgramCourseController extends PageController
     {
         $courses = Course::where('orientation', 'web')
                          ->where('bloc', '2')
-                         ->OrderBy('name', 'ASC')
+                         ->OrderBy('title', 'ASC')
                          ->get();
         
         return $courses;
@@ -82,7 +82,7 @@ class ProgramCourseController extends PageController
     {
         $courses = Course::where('orientation', 'web')
                          ->where('bloc', '3')
-                         ->OrderBy('name', 'ASC')
+                         ->OrderBy('title', 'ASC')
                          ->get();
         
         return $courses;

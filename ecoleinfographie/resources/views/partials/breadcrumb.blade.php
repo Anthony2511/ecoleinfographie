@@ -1,4 +1,4 @@
-<div class="breadcrumb <?php if(isset($page->header_large) == true) echo 'breadcrumb--header isOpacity'; ?>">
+<div class="breadcrumb <?php if(isset($page->headerLarge) == true) echo 'breadcrumb--header isOpacity'; ?>">
     <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
         <li class="breadcrumb__item" itemprop="itemListElement" itemscope
             itemtype="http://schema.org/ListItem">

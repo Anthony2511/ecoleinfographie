@@ -28,5 +28,6 @@ $factory->define(App\Models\Course::class, function (Faker\Generator $faker) {
         'shortdescription' => $faker->sentences($nbWords = 1, $variableNbWords = true),
         'description' => $faker->paragraph($nbSentences = 12, $variableNbSentences = true),
         'objectives' => '[{"text":"Lorem ipsum dolor sit amet aspilicueta."},{"text":"Donec eu imperdiet tellus. Proin mauris lacus, fermentum vitae quam id, tincidunt faucibus metus."},{"text":"Sed eget sem ac est sagittis scelerisque. Morbi dapibus lorem."},{"text":"Nunc aliquam mi ultricies ligula tincidunt, efficitur laoreet purus efficitur. Morbi tortor orci, tempor vel feugiat ut, sagittis at leo."}]',
+        'extras' => '{"metaDescription":"Test meta","metaKeywords":"lorem ipsum dolor sit amet"}'
     ];
 });
