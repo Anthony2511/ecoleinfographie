@@ -16,7 +16,7 @@
 Route::get('/', ['uses' => 'PageController@home']);
 
 // Web program
-Route::get('programme-des-cours-web', 'ProgramCourseController@showPageWeb');
+Route::get('web/programme-des-cours', 'CourseController@indexWeb');
 Route::get('cours/{slug}', 'CourseController@show');
 
 // Redirect slug 'accueil' to '/'
