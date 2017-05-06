@@ -35,7 +35,7 @@ class CourseController extends Controller
         SEO::setDescription('Le cours de ' . $course->title . ' est dispensé à la Haute École de la Province de Liège lors du bloc ' . $course->bloc . $orientation);
         
         return view('posts.postCourse', [
-            'page' => $this->getOneCourse($slug)
+            'course' => $this->getOneCourse($slug)
         ]);
     }
     
