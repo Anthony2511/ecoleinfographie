@@ -50,7 +50,8 @@ class TeacherCrudController extends CrudController
         	'type' => 'text',
             'wrapperAttributes' => [
                 'class' => 'form-group col-md-6',
-            ]
+            ],
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField
         ([
@@ -59,7 +60,8 @@ class TeacherCrudController extends CrudController
             'type' => 'text',
             'wrapperAttributes' => [
                 'class' => 'form-group col-md-6',
-            ]
+            ],
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField
         ([
@@ -67,6 +69,7 @@ class TeacherCrudController extends CrudController
             'label' => 'Nom complet',
             'type' => 'text',
             'hint' => 'Indiquez ici votre nom et prénom',
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField
         ([
@@ -76,18 +79,9 @@ class TeacherCrudController extends CrudController
             'hint' => 'Par exemple, Professeur ou Professeur-invité,…',
             'wrapperAttributes' => [
                 'class' => 'form-group col-md-6',
-            ]
+            ],
+            'tab' => 'Contenu'
         ]);
-        $this->crud->addField([
-            'name' => 'slug',
-            'label' => "Slug (URL)",
-            'type' => 'text',
-            'hint' => 'Est automatiquement généré à partir du prénom-nom si pas remplit.',
-            'wrapperAttributes' => [
-                'class' => 'form-group col-md-6',
-            ]
-        ]);
-        
         $this->crud->addField([
             'name' => 'description',
             'label' => 'Description',
@@ -95,40 +89,23 @@ class TeacherCrudController extends CrudController
             'hint' => 'Description du professeur qui apparaîtra sur son profile',
             'attributes' => [
                 'style' => 'min-height: 150px'
-            ]
+            ],
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField
         ([
         	'name' => 'email',
         	'label' => 'L’adresse email du professeur',
         	'type' => 'email',
-        ]);
-        $this->crud->addField
-        ([
-        	'name' => 'social',
-        	'label' => 'Réseaux sociaux',
-        	'type' => 'table',
-            'entity_singular' => 'Ajouter un lien',
-            'columns' => [
-                'link' => 'Lien',
-                'name' => 'Nom du réseau social',
-            ],
-            'min' => 0,
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField([
             'name' => 'picture',
             'label' => 'Photo du professeur',
             'type' => 'image',
             'upload' => true,
-            'crop' => true
-        ]);
-        $this->crud->addField
-        ([
-        	'name' => 'status',
-        	'label' => 'Statut',
-        	'type' => 'select_from_array',
-            'hint' => 'Si le professeur n’est plus dans l’école, vous pouvez le masquer sans le supprimer',
-            'options' => ['visible' => 'Visible', 'hidden' => 'Non visible']
+            'crop' => true,
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField
         ([
@@ -139,6 +116,123 @@ class TeacherCrudController extends CrudController
             'attribute' => 'title',
             'model' => "App\Models\Course",
             'pivot' => true,
+            'tab' => 'Contenu'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'social',
+            'label' => 'Réseaux sociaux',
+            'type' => 'table',
+            'entity_singular' => 'un réseau social',
+            'columns' => [
+                'name' => 'Nom du réseau social',
+                'link' => 'Lien vers votre espace'
+            ],
+            'tab' => 'Réseaux sociaux',
+        ]);
+        
+        // Réseaux sociaux
+        /*$this->crud->addField
+        ([
+            'name' => 'facebook',
+            'label' => 'Facebook',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'twitter',
+            'label' => 'Twitter',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'linkedin',
+            'label' => 'Linkedin',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'behance',
+            'label' => 'Behance',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'pinterest',
+            'label' => 'Pinterest',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'dribbble',
+            'label' => 'Dribbble',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'youtube',
+            'label' => 'Youtube',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'vimeo',
+            'label' => 'Viméo',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'site',
+            'label' => 'Site personnel',
+            'type' => 'url',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Réseaux sociaux'
+        ]);*/
+        
+        // Paramètres
+        $this->crud->addField
+        ([
+            'name' => 'status',
+            'label' => 'Statut',
+            'type' => 'select_from_array',
+            'hint' => 'Si le professeur n’est plus dans l’école, vous pouvez le masquer sans le supprimer',
+            'options' => ['visible' => 'Visible', 'hidden' => 'Non visible'],
+            'tab' => 'Paramètres'
+        ]);
+        $this->crud->addField([
+            'name' => 'slug',
+            'label' => "Slug (URL)",
+            'type' => 'text',
+            'hint' => 'Est automatiquement généré à partir du prénom-nom si pas remplit.',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+            'tab' => 'Paramètres'
         ]);
     }
     

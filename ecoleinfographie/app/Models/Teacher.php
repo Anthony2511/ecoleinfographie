@@ -42,7 +42,7 @@ class Teacher extends Model
     // protected $hidden = [];
     // protected $dates = [];
     protected $fakeColumns = ['extras'];
-    protected $translatable = ['role', 'description', 'extras'];
+    protected $translatable = ['role', 'description'];
     
     /**
      * Return the sluggable configuration array for this model.

@@ -32,6 +32,7 @@ class TeacherRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'description' => 'required|min:2',
             'email'       => 'nullable|email',
             'status'      => 'required',
+            'social'      => 'nullable'
         ];
     }
     
