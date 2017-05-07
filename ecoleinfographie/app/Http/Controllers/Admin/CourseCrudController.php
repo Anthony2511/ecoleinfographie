@@ -174,32 +174,6 @@ class CourseCrudController extends CrudController
             'tab' => $content
         ]);
     
-    
-    
-    
-        /*
-          * Fields pour les metas
-          */
-    
-        $this->crud->addField
-        ([
-            'name' => 'metaDescription',
-            'label' => 'Meta description',
-            'fake' => 'true',
-            'store_in' => 'extras',
-            'tab' => $seo
-        ]);
-    
-        $this->crud->addField
-        ([
-            'name' => 'metaKeywords',
-            'type' => 'textarea',
-            'label' => 'Meta Keywords',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => $seo
-        ]);
-    
         /*
          * Fields pour les paramètres
          */

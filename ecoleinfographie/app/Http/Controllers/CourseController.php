@@ -34,6 +34,7 @@ class CourseController extends Controller
         $orientation = ($course->orientation == 'Commun') ? '.' : ' dans l’orientation ' . $course->orientation . '.';
         SEO::setDescription('Le cours de ' . $course->title . ' est dispensé à la Haute École de la Province de Liège lors du bloc ' . $course->bloc . $orientation);
         
+        
         return view('posts.postCourse', [
             'course' => $this->getOneCourse($slug)
         ]);
