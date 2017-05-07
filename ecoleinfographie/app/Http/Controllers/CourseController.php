@@ -10,6 +10,9 @@ class CourseController extends Controller
 {
     protected function indexWeb()
     {
+        SEO::setTitle('Le programme des cours en web');
+        SEO::setDescription('Apprends en plus sur les cours que tu vas apprendre lors de ta formation en infographie dans l’option web');
+        
         return view('pages.web.program', [
             'getAllCoursesBloc1' => $this->getAllCoursesBloc1(),
             'getAllCoursesBloc2' => $this->getAllCoursesBloc2(),

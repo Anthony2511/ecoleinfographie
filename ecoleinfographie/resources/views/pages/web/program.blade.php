@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('class', 'programme-des-cours')
+
 @section('header')
     @include('partials.header-min')
 @endsection
