@@ -29,6 +29,7 @@ class Course extends Model
     protected $fillable = [
         'slug',
         'title',
+        'image',
         'orientation',
         'duration',
         'ects',
@@ -87,11 +88,6 @@ class Course extends Model
         return $this->belongsToMany('App\Models\Teacher');
     }
     
-    public function courses()
-    {
-        return $this;
-    }
-    
     
     
     /*
@@ -127,6 +123,18 @@ class Course extends Model
         $attribute_name = "image";
         $disk = "public_folder";
         $destination_path = "uploads/cours";
+    
+        if (starts_with($value, 'http://lorem'))
+        {
+            // 0. Make the image
+            $image = \Image::make($value);
+            // 1. Generate a filename.
+            $filename = md5($value.time()).'.jpg';
+            // 2. Store the image on disk.
+            \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+            // 3. Save the path to the database
+            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+        }
         
         // if the image was erased
         if ($value==null) {

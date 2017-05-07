@@ -25,7 +25,7 @@ class CourseRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            'title'             => 'required|min:2|max:255',
+            'title'            => 'required|min:2|max:255',
             'slug'             => 'unique:articles,slug,' . \Request::get('id'),
             'orientation'      => 'required',
             'duration'         => 'required|numeric',
@@ -35,6 +35,7 @@ class CourseRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'shortdescription' => 'required|min:2|max:180',
             'description'      => 'required',
             'objectives'       => 'required',
+            'image'            => 'required'
         ];
     }
     
