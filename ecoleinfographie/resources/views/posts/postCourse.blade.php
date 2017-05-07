@@ -12,9 +12,13 @@
 	<section class="course">
 		<div class="course__container-top">
 			<div class="course-card">
-				<div class="course-card__image-container">
-					{{--<img class="course-card__image" src="./img/course-img.jpg" width="1000" height="500" alt="Image de lignes de code CSS">--}}
-				</div>
+
+				<?php $image = Image::make($course->image);
+							$image->fit(360, 417);
+							$image->save(); ?>
+
+				<div class="course-card__image-container" style="background-image: url('../{{ $course->image }}')"></div>
+				{{--<img class="course-card__image" src="./img/course-img.jpg" width="1000" height="500" alt="Image de lignes de code CSS">--}}
 				<div class="course-card__content">
 					<h2 role="heading" aria-level="2" class="course-card__title">{{ $course->title }}</h2>
 

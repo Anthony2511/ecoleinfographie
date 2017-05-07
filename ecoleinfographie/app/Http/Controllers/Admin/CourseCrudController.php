@@ -70,10 +70,17 @@ class CourseCrudController extends CrudController
         ]);
         $this->crud->addField
         ([
+        	'name' => 'image',
+        	'label' => 'Uploadez une image',
+        	'type' => 'image',
+            'upload' => true,
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
             'name' => 'duration',
             'label' => 'Durée du cours en heure',
             'type' => 'number',
-            'attributes' => ["step" => "5"],
             'tab' => $content
         ]);
         $this->crud->addField
@@ -81,7 +88,6 @@ class CourseCrudController extends CrudController
         	'name' => 'ects',
         	'label' => 'Nombre de crédits ECTS',
         	'type' => 'number',
-            'attributes' => ["step" => "5"],
             'tab' => $content
         ]);
         $this->crud->addField
@@ -185,20 +191,6 @@ class CourseCrudController extends CrudController
             'hint' => 'Automatiquement généré à partir du nom si vide.',
             'tab' => $options
         ]);
-    
-        $this->crud->addField
-        ([
-            'name' => 'classBody',
-            'label' => 'Définir une classe sur le body pour la page',
-            'default' => 'course-post',
-            'fake' => 'true',
-            'store_in' => 'extras',
-            'tab' => $options
-        ]);
-        
-        
-        
-        
     }
 
     public function store(StoreRequest $request)
