@@ -16,8 +16,14 @@ class TeacherController extends Controller
     protected function show($slug)
     {
         $teacher = Teacher::where('slug', $slug)->firstOrFail();
+        
+        SEO::setTitle($teacher->title);
+        SEO::setDescription('La page de ' . $teacher->title . ' ' . strtolower($teacher->role) . ' à la Haute École de la Province de Liège en infographie');
+        
         return view('posts.postTeacher', [
             'teacher' => $teacher
         ]);
     }
+    
+    
 }
