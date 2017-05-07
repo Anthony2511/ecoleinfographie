@@ -63,7 +63,7 @@ class TeacherCrudController extends CrudController
         ]);
         $this->crud->addField
         ([
-            'name' => 'fullname',
+            'name' => 'title',
             'label' => 'Nom complet',
             'type' => 'text',
             'hint' => 'Indiquez ici votre nom et prénom',
@@ -93,6 +93,9 @@ class TeacherCrudController extends CrudController
             'label' => 'Description',
             'type' => 'textarea',
             'hint' => 'Description du professeur qui apparaîtra sur son profile',
+            'attributes' => [
+                'style' => 'min-height: 150px'
+            ]
         ]);
         $this->crud->addField
         ([
@@ -123,8 +126,9 @@ class TeacherCrudController extends CrudController
         ([
         	'name' => 'status',
         	'label' => 'Statut',
-        	'type' => 'enum',
+        	'type' => 'select_from_array',
             'hint' => 'Si le professeur n’est plus dans l’école, vous pouvez le masquer sans le supprimer',
+            'options' => ['visible' => 'Visible', 'hidden' => 'Non visible']
         ]);
         $this->crud->addField
         ([
@@ -132,7 +136,7 @@ class TeacherCrudController extends CrudController
             'type' => 'select2_multiple',
             'name' => 'courses',
             'entity' => 'courses',
-            'attribute' => 'name',
+            'attribute' => 'title',
             'model' => "App\Models\Course",
             'pivot' => true,
         ]);
