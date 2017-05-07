@@ -65,6 +65,16 @@ class Course extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
+    public function getPageLink()
+    {
+        return url(trans('url.course') . '/' . $this->slug);
+    }
+    
+    public function getOpenButton()
+    {
+        return '<a class="btn btn-default btn-xs" href="'.$this->getPageLink().'" target="_blank"><i class="fa fa-eye"></i> Visualiser</a>';
+    }
+    
     
     /*
     |--------------------------------------------------------------------------

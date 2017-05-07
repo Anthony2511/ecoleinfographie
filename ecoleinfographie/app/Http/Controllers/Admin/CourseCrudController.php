@@ -51,6 +51,9 @@ class CourseCrudController extends CrudController
         	'label' => 'Durée (heures)',
         ]);
         
+        // ------ CRUD BUTTONS
+        $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
+        
         // ------ CRUD FIELDS
         $this->crud->addField
         ([
