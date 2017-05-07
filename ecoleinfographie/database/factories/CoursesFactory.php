@@ -29,7 +29,7 @@ $factory->define(App\Models\Course::class, function (Faker\Generator $faker) {
         'evaluation' => ['fr' => '[{"type":"Examen écrit"},{"type":"Examen oral"}]'],
         'bloc' => $faker->numberBetween($min = 1, $max = 3),
         'quadrimester' => ['fr' => $faker->randomElement($array = array('1', '2', 'Toute l’année'))],
-        'shortdescription' => $faker->sentences($nbWords = 1, $variableNbWords = true),
+        'shortdescription' => ['fr' => $faker->sentences($nbWords = 1, $variableNbWords = true)],
         'description' => ['fr' => '<p>' . $faker->paragraph($nbSentences = 14, $variableNbSentences = true)],
         'objectives' => ['fr' => '[{"text":"Lorem ipsum dolor sit amet aspilicueta."},{"text":"Donec eu imperdiet tellus. Proin mauris lacus, fermentum vitae quam id, tincidunt faucibus metus."},{"text":"Sed eget sem ac est sagittis scelerisque. Morbi dapibus lorem."},{"text":"Nunc aliquam mi ultricies ligula tincidunt, efficitur laoreet purus efficitur. Morbi tortor orci, tempor vel feugiat ut, sagittis at leo."}]'],
     ];
