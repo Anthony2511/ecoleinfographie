@@ -15,14 +15,16 @@
 // HomePage
 Route::get('/', ['uses' => 'PageController@home']);
 
-// Web program
-Route::get('web/programme-des-cours', 'CourseController@indexWeb');
-Route::get('cours/{slug}', 'CourseController@show');
+
 
 // Redirect slug 'accueil' to '/'
 Route::get('/home', function (){
 	return redirect('/');
 });
+
+// Web program
+Route::get('web/programme-des-cours', 'CourseController@indexWeb');
+Route::get('cours/{slug}', 'CourseController@show');
 
 // Catch-all for Backpack/PageManager
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
@@ -41,10 +43,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('article', 'ArticleCrudController');
     CRUD::resource('category', 'CategoryCrudController');
     CRUD::resource('tag', 'TagCrudController');
-    // Teacher routes
     CRUD::resource('teacher', 'TeacherCrudController');
-    // Courses routes
     CRUD::resource('cours', 'CourseCrudController');
 });
+
 
 
