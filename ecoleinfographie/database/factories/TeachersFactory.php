@@ -17,7 +17,6 @@ $factory->define(App\Models\Teacher::class, function (Faker\Generator $faker) {
     //$aEval = array('1, 2, Toute l’année');
     $firstname = $faker->firstName();
     $lastname = $faker->lastName();
-    $title = $faker->name();
     $role = $faker->randomElement($array = array('Professeur', 'Professeur-invité'));
     $description = ['fr' => $faker->paragraph($nbSentences = 8, $variableNbSentences = true)];
     $picture = $faker->imageUrl($width = 640, $height = 480, 'people');
@@ -28,7 +27,6 @@ $factory->define(App\Models\Teacher::class, function (Faker\Generator $faker) {
     return [
         'firstname' => $firstname,
         'lastname' => $lastname,
-        'title' => $title,
         'role' => ['fr' => $role ],
         'description' => $description,
         'picture' => $picture,

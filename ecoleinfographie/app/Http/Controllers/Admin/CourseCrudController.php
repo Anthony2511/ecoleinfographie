@@ -177,7 +177,7 @@ class CourseCrudController extends CrudController
             'type' => 'select2_multiple',
             'name' => 'teachers',
             'entity' => 'teachers',
-            'attribute' => 'title',
+            'attribute' => 'fullname',
             'model' => "App\Models\Teacher",
             'pivot' => true,
             'tab' => $content

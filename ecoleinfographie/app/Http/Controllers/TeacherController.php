@@ -17,8 +17,8 @@ class TeacherController extends Controller
     {
         $teacher = Teacher::where('slug', $slug)->firstOrFail();
         
-        SEO::setTitle($teacher->title);
-        SEO::setDescription('La page de ' . $teacher->title . ' ' . strtolower($teacher->role) . ' à la Haute École de la Province de Liège en infographie');
+        SEO::setTitle($teacher->fullname);
+        SEO::setDescription('La page de ' . $teacher->fullname . ' ' . strtolower($teacher->role) . ' à la Haute École de la Province de Liège en infographie');
         
         return view('posts.postTeacher', [
             'teacher' => $teacher

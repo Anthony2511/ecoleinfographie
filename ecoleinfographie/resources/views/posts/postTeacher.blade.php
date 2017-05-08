@@ -3,13 +3,20 @@
 @section('class', 'oneTeacher')
 
 <?php
-	$image = Image::make($teacher->picture);
-	$path = pathinfo($teacher->picture, PATHINFO_DIRNAME);
-	$fileName = pathinfo($teacher->picture, PATHINFO_FILENAME);
-	$newImage = $path . '/' . $fileName . '-profilePage';
-	$image->fit(295, 281);
-	$image->save($newImage . '.jpg');
-	$imageProfile = URL::to('/') . '/' . $newImage . '.jpg';
+	if ((preg_match('/no-avatar.jpg/', $teacher->picture) !== 1))
+	    {
+          $image = Image::make($teacher->picture);
+          $path = pathinfo($teacher->picture, PATHINFO_DIRNAME);
+          $fileName = pathinfo($teacher->picture, PATHINFO_FILENAME);
+          $newImage = $path . '/' . $fileName . '-profilePage';
+          $image->fit(295, 281);
+          $image->save($newImage . '.jpg');
+          $imageProfile = URL::to('/') . '/' . $newImage . '.jpg';
+			} else
+			{
+          $imageProfile = $teacher->picture;
+			}
+
 ?>
 
 @section('header')
@@ -42,7 +49,7 @@
 
 				</div>
 				<div class="prof__right">
-					<h2 role="heading" aria-level="2" class="prof__title"><span>Le profile de </span>{{ $teacher->title }}</h2>
+					<h2 role="heading" aria-level="2" class="prof__title"><span>Le profile de </span>{{ $teacher->fullname }}</h2>
 					<span class="prof__role">{{ $teacher->role }}</span>
 					<p class="prof__description">{{ $teacher->description }}</p>
 				</div>
