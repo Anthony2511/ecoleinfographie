@@ -42,6 +42,9 @@ class TeacherCrudController extends CrudController
         	'label' => 'Prénom',
         ]);
     
+        // ------ CRUD BUTTONS
+        $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
+        
         // ------ CRUD FIELDS
         $this->crud->addField
         ([
@@ -234,6 +237,8 @@ class TeacherCrudController extends CrudController
             ],
             'tab' => 'Paramètres'
         ]);
+    
+        
     }
     
     public function store(StoreRequest $request)

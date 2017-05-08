@@ -124,6 +124,7 @@ class Course extends Model
         $disk = "public_folder";
         $destination_path = "uploads/cours";
     
+        // TODO : A supprimer, utilisé uniquement pour le seeding.
         if (starts_with($value, 'http://lorem'))
         {
             // 0. Make the image
