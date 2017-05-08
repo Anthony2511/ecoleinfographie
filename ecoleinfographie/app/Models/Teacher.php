@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\Sluggable;
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\SluggableScopeHelpers;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
+use App\Utils\Utils;
 
 
 class Teacher extends Model
@@ -134,19 +135,24 @@ class Teacher extends Model
     {
         $attribute_name = "picture";
         $disk = "public_folder";
-        $destination_path = "uploads/teachers";
+        $path = "uploads/teachers";
         
         // if a base64 was sent, store it in the db
         if (starts_with($value, 'data:image'))
         {
-            // 0. Make the image
+            // 0. Make the original image size and other sizes
             $image = \Image::make($value);
+            $imageProfile = \Image::make($value)->fit(295,281);
+            $imageCards = \Image::make($value)->fit(350,200);
             // 1. Generate a filename.
-            $filename = md5($value.time()).'.jpg';
-            // 2. Store the image on disk.
-            \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+            $filename = md5($value.time());
+            // 2. Store the image original on disk and new sizes.
+            \Storage::disk($disk)->put($path.'/'.$filename.'.jpg', $image->stream());
+            Utils::storeNewSize($path, $filename, '_profile', $imageProfile);
+            Utils::storeNewSize($path, $filename, '_cards', $imageCards);
+            
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+            $this->attributes[$attribute_name] = $path.'/'.$filename.'.jpg';
         }
         
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
