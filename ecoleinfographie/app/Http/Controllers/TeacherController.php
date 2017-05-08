@@ -23,22 +23,8 @@ class TeacherController extends Controller
         
         return view('posts.postTeacher', [
             'teacher' => $teacher,
-            'imageProfile' => $this->getImageProfile($slug)
+            'imageProfile' => $teacher->getImageProfile()
         ]);
     }
     
-    public function getImageProfile($slug)
-    {
-        $teacher = Teacher::where('slug', $slug)->firstOrFail();
-        
-        $basePath = 'uploads/teachers/';
-        $fullname = pathinfo($teacher->picture, PATHINFO_FILENAME);
-        $imageProfile = $basePath . $fullname . '_profile.jpg';
-    
-        if (file_exists($imageProfile)) {
-            return URL('/') . '/' . $imageProfile;
-        } else {
-            return $imageProfile = URL('/') . '/img/no-avatar.jpg';
-        }
-    }
 }

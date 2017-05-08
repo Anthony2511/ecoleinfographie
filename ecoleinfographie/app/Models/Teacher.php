@@ -74,6 +74,20 @@ class Teacher extends Model
         return '<a class="btn btn-default btn-xs" href="'.$this->getPageLink().'" target="_blank"><i class="fa fa-eye"></i> Visualiser</a>';
     }
     
+    public function getImageProfile()
+    {
+        $basePath = 'uploads/teachers/';
+        $fullname = pathinfo($this->picture, PATHINFO_FILENAME);
+        $imageProfile = $basePath . $fullname . '_profile.jpg';
+    
+        if (file_exists($imageProfile)) {
+            return URL('/') . '/' . $imageProfile;
+        } else {
+            return $imageProfile = URL('/') . '/img/no-avatar.jpg';
+        }
+    }
+    
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
