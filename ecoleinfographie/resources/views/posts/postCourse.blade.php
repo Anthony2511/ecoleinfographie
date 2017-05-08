@@ -13,11 +13,19 @@
 		<div class="course__container-top">
 			<div class="course-card">
 
-				<?php $image = Image::make($course->image);
-							$image->fit(360, 417);
-							$image->save(); ?>
+				<?php
 
-				<div class="course-card__image-container" style="background-image: url('../{{ $course->image }}')"></div>
+							if (!starts_with($course->image, 'http://'))
+								{
+										$image = Image::make($course->image);
+										$image->fit(360, 417);
+										$image->save();
+								}
+							 ?>
+
+				<?php $imageCourse = (starts_with($course->image, 'http://')) ? $course->image : '../' . $course->image ;?>
+
+				<div class="course-card__image-container" style="background-image: url('{{ $imageCourse }}')"></div>
 				{{--<img class="course-card__image" src="./img/course-img.jpg" width="1000" height="500" alt="Image de lignes de code CSS">--}}
 				<div class="course-card__content">
 					<h2 role="heading" aria-level="2" class="course-card__title">{{ $course->title }}</h2>

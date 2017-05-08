@@ -17,7 +17,7 @@ $factory->define(App\Models\Course::class, function (Faker\Generator $faker) {
     //$aEval = array('1, 2, Toute l’année');
     $title = $faker->text($maxNbChars = 30);
     $orientation = $faker->randomElement($array = array('Web', '3D/Vidéo', 'Design graphique', 'Commun'));
-    $image = $faker->imageUrl($width = 640, $height = 480);
+    $image = $faker->imageUrl($width = 360, $height = 417);
     
     return [
         'title' => ['fr' => $title],

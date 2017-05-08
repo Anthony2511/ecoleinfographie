@@ -90,6 +90,8 @@ class Course extends Model
     
     
     
+    
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
@@ -125,16 +127,9 @@ class Course extends Model
         $destination_path = "uploads/cours";
     
         // TODO : A supprimer, utilisé uniquement pour le seeding.
-        if (starts_with($value, 'http://lorem'))
+        if (starts_with($value, 'http://'))
         {
-            // 0. Make the image
-            $image = \Image::make($value);
-            // 1. Generate a filename.
-            $filename = md5($value.time()).'.jpg';
-            // 2. Store the image on disk.
-            \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
-            // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+            $this->attributes[$attribute_name] = $value;
         }
         
         // if the image was erased

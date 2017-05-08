@@ -16,7 +16,6 @@
 			{
           $imageProfile = $teacher->picture;
 			}
-
 ?>
 
 @section('header')

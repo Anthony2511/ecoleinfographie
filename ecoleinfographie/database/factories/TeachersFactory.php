@@ -19,7 +19,7 @@ $factory->define(App\Models\Teacher::class, function (Faker\Generator $faker) {
     $lastname = $faker->lastName();
     $role = $faker->randomElement($array = array('Professeur', 'Professeur-invité'));
     $description = ['fr' => $faker->paragraph($nbSentences = 8, $variableNbSentences = true)];
-    $picture = $faker->imageUrl($width = 640, $height = 480, 'people');
+    //$picture = $faker->imageUrl($width = 640, $height = 480, 'people');
     $email = $faker->safeEmail;
     
    
@@ -29,7 +29,7 @@ $factory->define(App\Models\Teacher::class, function (Faker\Generator $faker) {
         'lastname' => $lastname,
         'role' => ['fr' => $role ],
         'description' => $description,
-        'picture' => $picture,
+        'picture' => '/img/no-avatar.jpg',
         'email' => $email,
         'status' => 'Visible'
     ];
