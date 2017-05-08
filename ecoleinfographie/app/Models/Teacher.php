@@ -161,6 +161,9 @@ class Teacher extends Model
             // 3. Save the path to the database
             $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
         }
-        
+        if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
+        {
+            $this->attributes['picture'] = '/img/no-avatar.jpg';
+        }
     }
 }
