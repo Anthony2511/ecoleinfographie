@@ -151,7 +151,7 @@ class Teacher extends Model
             Utils::storeNewSize($path, $filename, '_profile', $imageProfile);
             Utils::storeNewSize($path, $filename, '_cards', $imageCards);
             
-            // 3. Save the path to the database
+            // 3. Save the path of original image to the database
             $this->attributes[$attribute_name] = $path.'/'.$filename.'.jpg';
         }
         

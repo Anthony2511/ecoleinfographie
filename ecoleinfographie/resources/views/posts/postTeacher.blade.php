@@ -3,7 +3,7 @@
 @section('class', 'oneTeacher')
 
 <?php
-	if ((preg_match('/no-avatar.jpg/', $teacher->picture) !== 1))
+	/*if ((preg_match('/no-avatar.jpg/', $teacher->picture) !== 1))
 	    {
           $image = Image::make($teacher->picture);
           $path = pathinfo($teacher->picture, PATHINFO_DIRNAME);
@@ -15,7 +15,7 @@
 			} else
 			{
           $imageProfile = $teacher->picture;
-			}
+			}*/
 ?>
 
 @section('header')
@@ -30,13 +30,13 @@
 			<div class="prof__top-container">
 				<div class="prof__left">
 					<figure class="prof__figure">
-						<img src="{{ $imageProfile }}" width="295" height="281" alt="La photo de profile de {{ $teacher->title }}, {{ strtolower($teacher->role) }} à la Haute École de la Province de Liège en infographie" class="prof__img">
+						<img src="{{ $imageProfile }}" width="295" height="281" alt="La photo de profile de {{ $teacher->fullname }}, {{ strtolower($teacher->role) }} à la Haute École de la Province de Liège en infographie" class="prof__img">
 					</figure>
-					<a href="mailto:{{ $teacher->email }}" class="prof__email"><span class="prof__email__label">Contacter par email <span class="prof__email__hidden">{{ $teacher->title }}</span></span></a>
+					<a href="mailto:{{ $teacher->email }}" class="prof__email"><span class="prof__email__label">Contacter par email <span class="prof__email__hidden">{{ $teacher->fullname }}</span></span></a>
 
 					<ul class="social-list-circle">
 						<li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link facebook" rel="me"><span>Vers le Facebook de {{ $teacher->title }}</span></a>
+							<a href="" class="social-list-circle__link facebook" rel="me"><span>Vers le Facebook de {{ $teacher->fullname }}</span></a>
 						</li><!--
                     --><li class="social-list-circle__item">
 							<a href="" class="social-list-circle__link twitter" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
