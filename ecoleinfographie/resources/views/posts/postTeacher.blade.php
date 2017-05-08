@@ -53,18 +53,22 @@
 					<p class="prof__description">{{ $teacher->description }}</p>
 				</div>
 			</div>
+
+
+			@if(!empty($teacher->courses) && count($teacher->courses))
 			<section class="profCourse">
 				<h3 role="heading" aria-level="3" class="profCourse__title">Ses cours</h3>
 				<ul class="profCourse__list">
-
 					@foreach($teacher->courses as $course)
 						<li class="profCourse__item">
 							<a href="{{ url('cours/'.$course->slug) }}" class="profCourse__link">{{ $course->title }}</a>
 						</li>
 					@endforeach
-
 				</ul>
 			</section>
+			@endif
+
+
 			<section class="profArticles">
 				<h3 role="heading" aria-level="3" class="profArticles__title">Ses articles publiés</h3>
 
