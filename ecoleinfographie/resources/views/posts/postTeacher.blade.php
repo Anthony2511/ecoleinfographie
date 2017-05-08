@@ -56,15 +56,13 @@
 			<section class="profCourse">
 				<h3 role="heading" aria-level="3" class="profCourse__title">Ses cours</h3>
 				<ul class="profCourse__list">
-					<li class="profCourse__item">
-						<a href="#course" class="profCourse__link">Design web (Bloc 1)</a>
-					</li>
-					<li class="profCourse__item">
-						<a href="#course" class="profCourse__link">Programmation côté serveur (Bloc 2)</a>
-					</li>
-					<li class="profCourse__item">
-						<a href="#course" class="profCourse__link">Projets web (Bloc 3)</a>
-					</li>
+
+					@foreach($teacher->courses as $course)
+						<li class="profCourse__item">
+							<a href="{{ url('cours/'.$course->slug) }}" class="profCourse__link">{{ $course->title }}</a>
+						</li>
+					@endforeach
+
 				</ul>
 			</section>
 			<section class="profArticles">

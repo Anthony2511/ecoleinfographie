@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Teacher;
+use App\Models\Course;
 use SEO;
 
 class TeacherController extends Controller
@@ -21,9 +22,7 @@ class TeacherController extends Controller
         SEO::setDescription('La page de ' . $teacher->fullname . ' ' . strtolower($teacher->role) . ' à la Haute École de la Province de Liège en infographie');
         
         return view('posts.postTeacher', [
-            'teacher' => $teacher
+            'teacher' => $teacher,
         ]);
     }
-    
-    
 }

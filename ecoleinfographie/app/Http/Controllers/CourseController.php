@@ -43,6 +43,7 @@ class CourseController extends Controller
         return $course;
     }
     
+    
     /*
      * Queries for get all courses
      */
