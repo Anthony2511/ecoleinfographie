@@ -197,18 +197,24 @@
 
 .course-post
   .course-teachers
-    @extend .containerGridz
-    margin s(80) auto 0
+    max-width s(1035)
+    margin: s(80) auto
     &__title
       @extend .titleOneLine
     &__list
-      display flex
+      /*display flex
       flex-wrap wrap
-      justify-content space-between
+      justify-content space-between*/
+      &:after
+        @extend .clearfix;
     &__item
-      margin-bottom s(100)
+      margin-bottom s(45)
+      float: left
+      margin-right s(45)
       &:last-child
         margin-bottom: 0
+      &:nth-child( 3n + 3)
+        margin-right: 0
 
 .no-flexbox
   .course-teachers__list
