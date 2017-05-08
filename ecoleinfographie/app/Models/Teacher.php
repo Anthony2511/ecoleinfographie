@@ -30,7 +30,6 @@ class Teacher extends Model
         'slug',
         'lastname',
         'firstname',
-        'title',
         'role',
         'description',
         'picture',
@@ -97,6 +96,21 @@ class Teacher extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function getFirstnameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    
+    public function getLastnameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    
+    public function getFullNameAttribute()
+    {
+        return ucfirst($this->firstname) . ' ' . ucfirst($this->lastname);
+    }
+    
     // The slug is created automatically from the "title" field if no slug exists.
     public function getSlugOrTitleAttribute()
     {
@@ -135,15 +149,6 @@ class Teacher extends Model
             $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
         }
         
-        // if the image was erased
-        if ($value==null) {
-            // delete the image from disk
-            \Storage::disk($disk)->delete($this->image);
-            
-            // set null in the database column
-            $this->attributes[$attribute_name] = null;
-        }
-        
         // if a base64 was sent, store it in the db
         if (starts_with($value, 'data:image'))
         {
@@ -156,5 +161,6 @@ class Teacher extends Model
             // 3. Save the path to the database
             $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
         }
+        
     }
 }
