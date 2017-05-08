@@ -109,7 +109,6 @@ class Teacher extends Model
         
         return $firstname . '-' . $lastname;
     }
-     
     
     /*
     |--------------------------------------------------------------------------
@@ -122,6 +121,19 @@ class Teacher extends Model
         $attribute_name = "picture";
         $disk = "public_folder";
         $destination_path = "uploads/teachers";
+    
+        // TODO : A supprimer, utilisé uniquement pour le seeding.
+        if (starts_with($value, 'http://lorem'))
+        {
+            // 0. Make the image
+            $image = \Image::make($value);
+            // 1. Generate a filename.
+            $filename = md5($value.time()).'.jpg';
+            // 2. Store the image on disk.
+            \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+            // 3. Save the path to the database
+            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+        }
         
         // if the image was erased
         if ($value==null) {
