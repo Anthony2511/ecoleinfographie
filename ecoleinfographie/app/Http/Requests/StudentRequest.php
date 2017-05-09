@@ -29,7 +29,6 @@ class StudentRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'firstname'     => 'required|min:2|max:255',
             'lastname'      => 'required|min:2|max:255',
             'image'         => 'required',
-            'profession'    => 'required',
             'year'          => 'required|numeric',
             'orientation'   => 'required',
             'is_freelance'  => 'required|boolean',

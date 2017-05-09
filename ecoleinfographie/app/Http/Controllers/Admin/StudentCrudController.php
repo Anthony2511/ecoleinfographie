@@ -31,13 +31,13 @@ class StudentCrudController extends CrudController
         // ------ CRUD COLUMNS
         $this->crud->addColumn
         ([
-            'name' => 'lastname',
-            'label' => 'Nom',
+            'name' => 'firstname',
+            'label' => 'Prénom',
         ]);
         $this->crud->addColumn
         ([
-            'name' => 'firstname',
-            'label' => 'Prénom',
+            'name' => 'lastname',
+            'label' => 'Nom',
         ]);
         
         // ------ CRUD FIELDS
