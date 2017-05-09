@@ -23,7 +23,7 @@
                             <a href="{{ route('programWeb') }}" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en web</span></a>
                         </li>
                         <li class="subnav__li">
-                            <a href="les-metiers-du-web-anciens-etudiants" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en web</span></a>
+                            <a href="{{ route('parcoursWeb') }}" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en web</span></a>
                         </li>
                     </div>
                 </ul>
