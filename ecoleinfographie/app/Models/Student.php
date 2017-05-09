@@ -65,6 +65,19 @@ class Student extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function getImageStudent($suffix)
+    {
+        $basePath = 'uploads/students/';
+        $fullname = pathinfo($this->image, PATHINFO_FILENAME);
+        $imageStudent = $basePath . $fullname . $suffix;
+        
+        if (file_exists($imageStudent)) {
+            return URL('/') . '/' . $imageStudent;
+        } else {
+            return $imageStudent = URL('/') . '/img/no-avatar.jpg';
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
@@ -98,11 +111,11 @@ class Student extends Model
         return ucfirst($this->firstname) . ' ' . ucfirst($this->lastname);
     }
     
-    public function getParagraph()
+    /*public function getParagraphAttribute()
     {
         return '<p>' . preg_replace("~[\r\n]+~", '</p><p>', $this->interview) . '</p>';
     }
-    
+    */
     // The slug is created automatically from the "title" field if no slug exists.
     public function getSlugOrTitleAttribute()
     {
