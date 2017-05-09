@@ -44,26 +44,17 @@
     z-index 5
   &__list
     @extend .containerGridz
-    display flex
-    flex-wrap wrap
-    justify-content space-between
+    max-width s(1035)
+    &:after
+      @extend .clearfix;
     padding-bottom s(150)
   &__item
-    margin-bottom s(100)
-
-
-
-
-.no-flexbox
-  .former-students__list
-    display: block
-    &:after
-      @extend .clearfix
-  .former-students__item
     float: left
-    margin-right 11.7%
-    margin-bottom s(100)
-    &:nth-child(3n+3)
+    margin-bottom s(45)
+    margin-right s(45)
+    &:last-child
+      margin-bottom: 0
+    &:nth-child( 3n + 3)
       margin-right: 0
 
 // Redirect
