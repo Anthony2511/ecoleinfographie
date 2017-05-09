@@ -148,6 +148,17 @@ class StudentCrudController extends CrudController
             'type' => 'ckeditor',
             'tab' => $tab2
         ]);
+        $this->crud->addField
+        ([
+            'name' => 'interview',
+            'label' => 'L’interview de l’étudiant (sous forme de question/réponse)',
+            'type' => 'interview',
+            'columns' => [
+                'question' => 'La question posée',
+                'response' => 'La réponse donnée',
+            ],
+            'tab' => $tab2
+        ]);
         
         
         
