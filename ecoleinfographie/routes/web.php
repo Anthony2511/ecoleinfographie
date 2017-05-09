@@ -24,7 +24,7 @@ Route::get('/home', function (){
 
 // WEB
 Route::get('web/programme-des-cours', 'CourseController@indexWeb')->name('programWeb');
-Route::get('web/parcours-de-nos-diplomes', 'InterviewController@indexWeb')->name('parcoursWeb');
+Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('parcoursWeb');
 // All
 Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
