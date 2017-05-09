@@ -31,7 +31,7 @@
 					<span class="former-info__name--hidden">@lang('students.someInfos') </span>
 					<span itemprop="name">{{ $student->fullname }}</span></h2>
 				<span class="former-info__job" itemprop="jobTitle">{{ $student->profession }}</span>
-				<span class="former-info__diploma">@lang('students.graduateIn') {{ $student->year }} - {{ $orientations[$student->orientation] }}</span>
+				<span class="former-info__diploma">@lang('students.graduadeIn') {{ $student->year }} - {{ $orientations[$student->orientation] }}</span>
 
 
 				<?php $ratio = json_decode($student->company, true); ?>
