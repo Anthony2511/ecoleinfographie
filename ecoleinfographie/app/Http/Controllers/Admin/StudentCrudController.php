@@ -27,22 +27,146 @@ class StudentCrudController extends CrudController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
-
-        $this->crud->setFromDb();
-
-        // ------ CRUD FIELDS
-        // $this->crud->addField($options, 'update/create/both');
-        // $this->crud->addFields($array_of_arrays, 'update/create/both');
-        // $this->crud->removeField('name', 'update/create/both');
-        // $this->crud->removeFields($array_of_names, 'update/create/both');
-
+        
         // ------ CRUD COLUMNS
-        // $this->crud->addColumn(); // add a single column, at the end of the stack
-        // $this->crud->addColumns(); // add multiple columns, at the end of the stack
-        // $this->crud->removeColumn('column_name'); // remove a column from the stack
-        // $this->crud->removeColumns(['column_name_1', 'column_name_2']); // remove an array of columns from the stack
-        // $this->crud->setColumnDetails('column_name', ['attribute' => 'value']); // adjusts the properties of the passed in column (by name)
-        // $this->crud->setColumnsDetails(['column_1', 'column_2'], ['attribute' => 'value']);
+        $this->crud->addColumn
+        ([
+            'name' => 'lastname',
+            'label' => 'Nom',
+        ]);
+        $this->crud->addColumn
+        ([
+            'name' => 'firstname',
+            'label' => 'Prénom',
+        ]);
+        
+        // ------ CRUD FIELDS
+        
+        $tab1 = 'Fiche de l’ancien étudiant';
+        $tab2 = 'Ajouter une interview';
+        $tab3 = 'Réseaux sociaux';
+    
+        $this->crud->addField
+        ([
+            'name' => 'firstname',
+            'label' => 'Prénom',
+            'type' => 'text',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+            'tab' => $tab1
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'lastname',
+            'label' => 'Nom',
+            'type' => 'text',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+            'tab' => $tab1
+        ]);
+        $this->crud->addField([
+            'name' => 'image',
+            'label' => 'Photo de l’étudiant si disponible',
+            'type' => 'image',
+            'upload' => true,
+            'crop' => true,
+            'default' => 'img/no-avatar.jpg',
+            'tab' => $tab1
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'year',
+            'label' => 'Année d’obtention du diplôme',
+            'type' => 'number',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+            'attributes' => ['min' => '1995', 'max' => '2050'],
+            'tab' => $tab1
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'orientation',
+            'label' => 'L’orientation ou l’étudiant a obtenu son diplôme ?',
+            'type' => 'select_from_array',
+            'options' => ["2D" => "Design graphique", "3D" => "3D/Vidéo", "web" => "Web"],
+            'allows_null' => false,
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+            'tab' => $tab1
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'is_freelance',
+        	'label' => 'L’ancien étudiant est-il freelance&nbsp;?',
+        	'type' => 'checkbox',
+            'hint' => 'Si il ne travaille pas dans une entreprise, cochez la case, sinon ignorez.',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+            'tab' => $tab2
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'has_interview',
+            'label' => 'Afficher l’étudiant sur la page "Les parcours de nos anciens étudiants"&nbsp;?',
+            'type' => 'checkbox',
+            'hint' => 'Cocher pour dire oui. Décocher pour dire non.',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+            'tab' => $tab2
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'profession',
+            'label' => 'Profession',
+            'type' => 'text',
+            'hint' => 'Par exemple : Freelance, Réalisateur, Infographiste,…',
+            'tab' => $tab2
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'company',
+        	'label' => 'L’entreprise dans laquelle l’ancien étudiant est en poste s’il n’est pas freelance',
+        	'type' => 'table',
+            'entity_singular' => 'le lien',
+            'columns' => [
+                'name' => 'Nom de l’entreprise',
+                'url' => 'Lien vers le site de l’entreprise',
+            ],
+            'max' => 1,
+            'tab' => $tab2
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'interview',
+            'label' => 'L’interview de l’étudiant (sous forme de question/réponse)',
+            'type' => 'ckeditor',
+            'tab' => $tab2
+        ]);
+        
+        
+        
+        $this->crud->addField
+        ([
+        	'name' => 'separator',
+        	'type' => 'custom_html',
+            'value' => '<p>Si l’étudiant dispose d’une interview, vous pouvez remplir tous les champs pour lesquels vous disposez d’un réseau social.</p><p>Autrement, ne remplissez que le champ "<strong>Portfolio</strong>" si disponible (les autres sont ignorés).</p>',
+            'tab' => $tab3
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'social',
+        	'label' => 'Réseaux sociaux et portfolio',
+        	'type' => 'text',
+            'tab' => $tab3
+        ]);
+        
+        
 
         // ------ CRUD BUTTONS
         // possible positions: 'beginning' and 'end'; defaults to 'beginning' for the 'line' stack, 'end' for the others;

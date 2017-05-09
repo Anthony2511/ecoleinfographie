@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\Sluggable;
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\SluggableScopeHelpers;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 class Student extends Model
 {

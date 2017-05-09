@@ -39,7 +39,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('menu-item', 'MenuItemCrudController');
 });
 
-// Admin articles blog
+// Admin
 Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function()
 {
     // Backpack\NewsManager routes
@@ -48,6 +48,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('tag', 'TagCrudController');
     CRUD::resource('teacher', 'TeacherCrudController');
     CRUD::resource('cours', 'CourseCrudController');
+    CRUD::resource('student', 'StudentCrudController');
 });
 
 
