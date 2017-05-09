@@ -20,7 +20,7 @@ $factory->define(App\Models\Student::class, function (Faker\Generator $faker) {
     $year = $faker->numberBetween($min = 1995, $max = 2017);
     $orientation = $faker->randomElement($array = array('web', '3D', '2D', 'all'));
     $isFreelance = $faker->boolean($chanceOfGettingTrue = 10);
-    $company = '[{"name":"' . $faker->company . '","url":"' . $faker->email . '"}]';
+    $company = '[{"name":"' . $faker->company . '","url":"' . $faker->url . '"}]';
     $has_interview = $faker->boolean($chanceOfGettingTrue = 10);
     
     
