@@ -13,7 +13,7 @@ class CreateStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Students', function(Blueprint $table) {
+        Schema::create('students', function(Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('slug', 255);
