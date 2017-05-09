@@ -161,7 +161,7 @@ class Teacher extends Model
             // 0. Make the original image size and other sizes
             $image = \Image::make($value);
             $imageProfile = \Image::make($value)->fit(295,281);
-            $imageCards = \Image::make($value)->fit(313,179);
+            $imageCards = \Image::make($value)->fit(313,180);
             // 1. Generate a filename.
             $filename = md5($value.time());
             // 2. Store the image original on disk and new sizes.
