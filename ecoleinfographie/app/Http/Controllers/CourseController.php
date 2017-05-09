@@ -20,29 +20,34 @@ class CourseController extends Controller
             'getWebCoursesBloc1' => $this->getWebCoursesBloc1(),
             'getWebCoursesBloc2' => $this->getWebCoursesBloc2(),
             'getWebCoursesBloc3' => $this->getWebCoursesBloc3(),
+            $this->setMetasIndex()
         ]);
     }
     
-    protected function show($slug)
+    protected function show(Course $course)
     {
-        $course = Course::where('slug', $slug)->firstOrFail();
+        return view('posts.postCourse', [
+            'course' => $course,
+            $this->setMetasShow($course)
+        ]);
+    }
     
+    /*
+     * Metas descriptions
+     */
+    
+    public function setMetasIndex()
+    {
+        SEO::setTitle('Le programme des cours en web');
+        SEO::setDescription('Apprends en plus sur les cours que tu vas apprendre lors de ta formation en infographie dans l’option web');
+    }
+    
+    public function setMetasShow(Course $course)
+    {
         SEO::setTitle($course->title);
         $orientation = ($course->orientation == 'Commun') ? '.' : ' dans l’orientation ' . $course->orientation . '.';
         SEO::setDescription('Le cours de ' . $course->title . ' est dispensé à la Haute École de la Province de Liège lors du bloc ' . $course->bloc . $orientation);
-        
-        
-        return view('posts.postCourse', [
-            'course' => $this->getOneCourse($slug)
-        ]);
     }
-    
-    public function getOneCourse($slug)
-    {
-        $course = Course::where('slug', $slug)->first();
-        return $course;
-    }
-    
     
     /*
      * Queries for get all courses

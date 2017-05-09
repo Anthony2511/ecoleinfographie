@@ -61,6 +61,11 @@ class Course extends Model
         ];
     }
     
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
@@ -75,7 +80,6 @@ class Course extends Model
     {
         return '<a class="btn btn-default btn-xs" href="'.$this->getPageLink().'" target="_blank"><i class="fa fa-eye"></i> Visualiser</a>';
     }
-    
     
     /*
     |--------------------------------------------------------------------------

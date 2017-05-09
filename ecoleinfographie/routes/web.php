@@ -25,7 +25,7 @@ Route::get('/home', function (){
 // Web program
 Route::get('web/programme-des-cours', 'CourseController@indexWeb');
 // All
-Route::get('cours/{slug}', 'CourseController@show');
+Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
 
 // Catch-all for Backpack/PageManager
