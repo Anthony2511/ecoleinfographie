@@ -23,15 +23,14 @@ class TeacherRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            'slug'        => 'unique:articles,slug,' . \Request::get('id'),
+            'slug'        => 'unique:teachers,slug,' . \Request::get('id'),
             'lastname'    => 'required|min:2|max:255',
             'firstname'   => 'required|min:2|max:255',
             'role'        => 'required',
             //'picture'     => 'required',
             'description' => 'required|min:2',
-            'email'       => 'nullable|email',
+            'email'       => 'email',
             'status'      => 'required',
-            'social'      => 'nullable'
         ];
     }
     
