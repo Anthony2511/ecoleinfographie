@@ -1,6 +1,6 @@
 <section class="former-students">
     <div class="former-students__top-wrapper">
-        <img src="./img/anciens-etudiants.png" width="629" height="464" alt="" class="former-students__img">
+        <img src="{{ asset('./img/anciens-etudiants.png') }}" width="629" height="464" alt="" class="former-students__img">
         <div class="former-students__text-wrapper">
             <h2 role="heading" aria-level="2" class="former-students__title">
                 <span>Le parcours </span>
