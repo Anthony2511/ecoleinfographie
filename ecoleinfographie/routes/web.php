@@ -28,6 +28,7 @@ Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('
 // All
 Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
+Route::get('etudiants/{student}', 'StudentController@show');
 
 // Catch-all for Backpack/PageManager
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])

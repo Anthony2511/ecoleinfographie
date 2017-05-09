@@ -20,6 +20,7 @@ class TeacherController extends Controller
         return view('posts.postTeacher', [
             'teacher' => $teacher,
             'imageProfile' => $teacher->getImageProfile('_profile.jpg'),
+            'imageCard' => $teacher->getImageProfile('_card.jpg'),
             $this->setMetas($teacher)
         ]);
     }

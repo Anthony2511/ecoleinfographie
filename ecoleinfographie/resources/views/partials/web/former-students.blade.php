@@ -19,7 +19,7 @@
         <ul class="former-students__list">
             @foreach($getStudentsWebWithInterview as $key => $student)
             <li class="former-students__item">
-                <a href="{{ url('students/'.$student->slug) }}" class="card_student">
+                <a href="{{ url('etudiants/'.$student->slug) }}" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
                             <img class="card_student__picture" src="{{ $student->getImageStudent('_cards.jpg') }}" width="350" height="200" alt="@lang('students.alt1') {{ $student->fullname }}, @lang('students.alt2') {{ strtolower($student->orientation) }}" >

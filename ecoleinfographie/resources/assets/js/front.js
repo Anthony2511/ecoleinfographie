@@ -32,7 +32,7 @@ var w = {
             if (w.$body.hasClass('home')) return 'home';
             if (w.$body.hasClass('les-metiers-du-web')) return 'metiersDuWeb';
             if (w.$body.hasClass('programme-des-cours')) return 'programCourses';
-            if (w.$body.hasClass('former-students-interview')) return 'oneFormerStudent';
+            if (w.$body.hasClass('course-post')) return 'oneFormerStudent';
             if (w.$body.hasClass('oneRea')) return 'oneRea';
             if (w.$body.hasClass('blog')) return 'blog';
             if (w.$body.hasClass('postBlog')) return 'postBlog';

@@ -59,6 +59,11 @@ class Student extends Model
         ];
     }
     
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
