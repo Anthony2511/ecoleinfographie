@@ -23,7 +23,7 @@ Route::get('/home', function (){
 });
 
 // WEB
-Route::get('web/programme-des-cours', 'CourseController@indexWeb');
+Route::get('web/programme-des-cours', 'CourseController@indexWeb')->name('programWeb');
 // All
 Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
