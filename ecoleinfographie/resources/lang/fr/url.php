@@ -9,5 +9,6 @@ return [
     */
     
     'course' => 'cours',
-    'teachers' => 'professeurs'
+    'teachers' => 'professeurs',
+    'students' => 'etudiants'
 ];

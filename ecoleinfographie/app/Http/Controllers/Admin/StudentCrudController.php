@@ -39,6 +39,9 @@ class StudentCrudController extends CrudController
             'name' => 'lastname',
             'label' => 'Nom',
         ]);
+    
+        // ------ CRUD BUTTONS
+        $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
         
         // ------ CRUD FIELDS
         

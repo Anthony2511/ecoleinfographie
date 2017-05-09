@@ -83,6 +83,19 @@ class Student extends Model
         }
     }
     
+    public function getPageLink()
+    {
+        return url(trans('url.students') . '/' . $this->slug);
+    }
+    
+    public function getOpenButton()
+    {
+        if($this->has_interview == 1)
+        {
+        return '<a class="btn btn-default btn-xs" href="'.$this->getPageLink().'" target="_blank"><i class="fa fa-eye"></i> Voir son interview</a>';
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
