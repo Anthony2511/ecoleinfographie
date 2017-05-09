@@ -2,22 +2,6 @@
 
 @section('class', 'oneTeacher')
 
-<?php
-	/*if ((preg_match('/no-avatar.jpg/', $teacher->picture) !== 1))
-	    {
-          $image = Image::make($teacher->picture);
-          $path = pathinfo($teacher->picture, PATHINFO_DIRNAME);
-          $fileName = pathinfo($teacher->picture, PATHINFO_FILENAME);
-          $newImage = $path . '/' . $fileName . '-profilePage';
-          $image->fit(295, 281);
-          $image->save($newImage . '.jpg');
-          $imageProfile = URL::to('/') . '/' . $newImage . '.jpg';
-			} else
-			{
-          $imageProfile = $teacher->picture;
-			}*/
-?>
-
 @section('header')
 	@include('partials.header-min')
 @endsection
