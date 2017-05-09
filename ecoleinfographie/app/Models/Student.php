@@ -116,11 +116,6 @@ class Student extends Model
         return ucfirst($this->firstname) . ' ' . ucfirst($this->lastname);
     }
     
-    /*public function getParagraphAttribute()
-    {
-        return '<p>' . preg_replace("~[\r\n]+~", '</p><p>', $this->interview) . '</p>';
-    }
-    */
     // The slug is created automatically from the "title" field if no slug exists.
     public function getSlugOrTitleAttribute()
     {

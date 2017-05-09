@@ -19,7 +19,7 @@
 				@foreach($interview as $row)
 				<section class="former-interview__question">
 					<h3>{{ $row['question'] }}</h3>
-					{{ $row['response'] }}
+					<?php echo '<p>' . preg_replace("~[\r\n]+~", '</p><p>', $row['response']) . '</p>' ;?>
 				</section>
 				@endforeach
 			</div>
