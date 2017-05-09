@@ -14,5 +14,10 @@ return [
     'intro2' => 'N’hésite pas à cliquer sur un profil qui t’intéresse, tu pourras découvrir une interview y correspondant.',
     'alt1' => 'Photo de',
     'alt2' => 'un ancien étudiant en',
-    'view1' => 'Voir son parcours'
+    'view1' => 'Voir son parcours',
+    'titlePost' => 'Le parcours de',
+    'workFor' => 'Travaille chez',
+    'workAs' => 'Travaille comme',
+    'graduadeIn' => 'Diplômé en',
+    'someInfos' => 'Quelques informations sur'
 ];

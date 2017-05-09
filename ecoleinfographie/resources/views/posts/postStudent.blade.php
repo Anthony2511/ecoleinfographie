@@ -11,7 +11,7 @@
 	<div class="former-interview__container" >
 		<article class="former-interview">
 			<h2 role="heading" aria-level="2" class="former-interview__title">
-				<span>Le parcours de </span>
+				<span>@lang('students.titlePost') </span>
 				<strong>{{ $student->fullname  }}</strong>
 			</h2>
 			<div class="former-interview__question-container">
@@ -28,25 +28,25 @@
 			<aside class="former-info" id="sticky-sidebar" itemscope itemtype="http://schema.org/Person">
 				<img class="former-info__pics" src="{{ $studentImageAside }}" width="200" height="200" alt="@lang('students.alt1') {{ $student->fullname }}, @lang('students.alt2') {{ $orientations[$student->orientation] }}">
 				<h2 role="heading" aria-level="2" class="former-info__name">
-					<span class="former-info__name--hidden">Quelques informations sur </span>
+					<span class="former-info__name--hidden">@lang('students.someInfos') </span>
 					<span itemprop="name">{{ $student->fullname }}</span></h2>
 				<span class="former-info__job" itemprop="jobTitle">{{ $student->profession }}</span>
-				<span class="former-info__diploma">Diplômé en {{ $student->year }} - {{ $orientations[$student->orientation] }}</span>
+				<span class="former-info__diploma">@lang('students.graduateIn') {{ $student->year }} - {{ $orientations[$student->orientation] }}</span>
 
 
 				<?php $ratio = json_decode($student->company, true); ?>
 				@foreach($ratio as $row)
 					@if($student->is_freelance == 1)
 						<span class="former-info__company">
-							Travaille comme freelance
+							@lang('students.workAs') freelance
 						</span>
 					@elseif(empty($row['url']))
 						<span class="former-info__company">
-							Travaille chez <span itemprop="worksFor">{{ $row['name'] }}</span>
+							@lang('students.workFor') <span itemprop="worksFor">{{ $row['name'] }}</span>
 						</span>
 					@else
 						<span class="former-info__company">
-							Travaille chez <a href="{{ $row['url'] }}"><span itemprop="worksFor">{{ $row['name'] }}</span></a>
+							@lang('students.workFor') <a href="{{ $row['url'] }}"><span itemprop="worksFor">{{ $row['name'] }}</span></a>
 						</span>
 					@endif
 				@endforeach
