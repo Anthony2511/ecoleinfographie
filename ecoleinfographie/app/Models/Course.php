@@ -147,7 +147,7 @@ class Course extends Model
         if (starts_with($value, 'data:image'))
         {
             // 0. Make the image
-            $image = \Image::make($value);
+            $image = \Image::make($value)->fit(360, 417);
             // 1. Generate a filename.
             $filename = md5($value.time()).'.jpg';
             // 2. Store the image on disk.

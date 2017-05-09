@@ -13,15 +13,6 @@
 		<div class="course__container-top">
 			<div class="course-card">
 
-				<?php
-
-							if (!starts_with($course->image, 'http://'))
-								{
-										$image = Image::make($course->image);
-										$image->fit(360, 417);
-										$image->save();
-								}
-							 ?>
 
 				<?php $imageCourse = (starts_with($course->image, 'http://')) ? $course->image : '../' . $course->image ;?>
 
@@ -108,7 +99,7 @@
 					<a href="{{ url('professeurs/' . $teacher->slug ) }}" class="card_student">
 						<figure class="card_student__figure">
 							<div class="card_student__picture-wrapper">
-								<img class="card_student__picture" src="{{ URL('/') . '/' . $teacher->picture }}" width="350" height="200" alt="#" >
+								<img class="card_student__picture" src="{{ $teacher->getImageProfile('_cards.jpg') }}" width="313" height="179" alt="#" >
 							</div>
 							<figcaption class="card_student__figcaption">
 								<strong class="card_student__name">

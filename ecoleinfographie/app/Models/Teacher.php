@@ -79,11 +79,11 @@ class Teacher extends Model
         return '<a class="btn btn-default btn-xs" href="'.$this->getPageLink().'" target="_blank"><i class="fa fa-eye"></i> Visualiser</a>';
     }
     
-    public function getImageProfile()
+    public function getImageProfile($suffix)
     {
         $basePath = 'uploads/teachers/';
         $fullname = pathinfo($this->picture, PATHINFO_FILENAME);
-        $imageProfile = $basePath . $fullname . '_profile.jpg';
+        $imageProfile = $basePath . $fullname . $suffix;
     
         if (file_exists($imageProfile)) {
             return URL('/') . '/' . $imageProfile;
@@ -91,7 +91,6 @@ class Teacher extends Model
             return $imageProfile = URL('/') . '/img/no-avatar.jpg';
         }
     }
-    
     
     /*
     |--------------------------------------------------------------------------
@@ -162,7 +161,7 @@ class Teacher extends Model
             // 0. Make the original image size and other sizes
             $image = \Image::make($value);
             $imageProfile = \Image::make($value)->fit(295,281);
-            $imageCards = \Image::make($value)->fit(350,200);
+            $imageCards = \Image::make($value)->fit(313,179);
             // 1. Generate a filename.
             $filename = md5($value.time());
             // 2. Store the image original on disk and new sizes.
