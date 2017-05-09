@@ -58,6 +58,11 @@ class Teacher extends Model
         ];
     }
     
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS

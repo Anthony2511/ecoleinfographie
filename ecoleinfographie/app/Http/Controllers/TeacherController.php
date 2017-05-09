@@ -14,17 +14,20 @@ class TeacherController extends Controller
         
     }
     
-    protected function show($slug)
+    protected function show(Teacher $teacher)
     {
-        $teacher = Teacher::where('slug', $slug)->firstOrFail();
-        
-        SEO::setTitle($teacher->fullname);
-        SEO::setDescription('La page de ' . $teacher->fullname . ' ' . strtolower($teacher->role) . ' à la Haute École de la Province de Liège en infographie');
         
         return view('posts.postTeacher', [
             'teacher' => $teacher,
-            'imageProfile' => $teacher->getImageProfile()
+            'imageProfile' => $teacher->getImageProfile(),
+            $this->setMetas($teacher)
         ]);
+    }
+    
+    protected function setMetas(Teacher $teacher)
+    {
+        SEO::setTitle($teacher->fullname);
+        SEO::setDescription('La page de ' . $teacher->fullname . ' ' . strtolower($teacher->role) . ' à la Haute École de la Province de Liège en infographie');
     }
     
 }
