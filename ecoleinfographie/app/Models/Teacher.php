@@ -84,7 +84,7 @@ class Teacher extends Model
         $basePath = 'uploads/teachers/';
         $fullname = pathinfo($this->picture, PATHINFO_FILENAME);
         $imageProfile = $basePath . $fullname . $suffix;
-    
+        
         if (file_exists($imageProfile)) {
             return URL('/') . '/' . $imageProfile;
         } else {

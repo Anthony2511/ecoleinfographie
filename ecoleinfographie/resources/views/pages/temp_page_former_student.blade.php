@@ -28,7 +28,7 @@
                 <p>Historiquement, j'ai débuté en tant que web designer avec penchant intégrateur. J'ai fait le design de 2 sites, des newsletters, je déclinais des designs de mes collègues-patrons, etc.
                 </p>
                 <p>Ensuite je suis assez rapidement passé du côté obscur, du côté du code. Pendant cette phase "intégrateur", nous étions 6 dans l'équipe. Il m'arrivait de continuer quelques déclinaisons de design, en plus petite proportion, et par moment je touchais même à du back-end assez root.
-                </p>
+                </p>u
                 <p>C'est seulement récemment (et d'ailleurs c'est toujours un point en constante évolution) où avec l'arrivée de nouveaux collègues pour renforcer chaque poste, que je peux me concentrer plus exclusivement au "front". Le design, je n'y touche plus (hormis par réflexions avec mes collègues, j'y reviendrai). Le back-end, il m'arrive encore régulièrement de trifouiller mais je dois avouer que c'est plus par envie/curiosité (sans perdre de temps) que par réel besoin car je peux faire appel à mes 2 collègues back-end.</p>
             </section>
                 <section class="former-interview__question">

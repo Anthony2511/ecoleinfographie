@@ -17,18 +17,19 @@
 
     <div class="former-students__content">
         <ul class="former-students__list">
+            @foreach($getStudentsWebWithInterview as $key => $student)
             <li class="former-students__item">
-                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
+                <a href="{{ url('students/'.$student->slug) }}" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
+                            <img class="card_student__picture" src="{{ $student->getImageStudent('_cards.jpg') }}" width="350" height="200" alt="Photo de {{ $student->fullname }}, un ancien étudiant en {{ strtolower($student->orientation) }}" >
                         </div>
                         <figcaption class="card_student__figcaption">
                             <strong class="card_student__name">
-                                Kévin <span>Dessouroux</span>
+                                {{ $student->firstname }} <span>{{ $student->lastname }}</span>
                             </strong>
                             <span class="card_student__profession">
-                                Développeur front-end
+                                {{ $student->profession }}
                             </span>
                         </figcaption>
                     </figure>
@@ -37,126 +38,7 @@
                     </div>
                 </a>
             </li>
-            <li class="former-students__item">
-                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/men3.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Frank <span>Sinatra</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
-            <li class="former-students__item">
-                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/men2.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Calvin <span>Wade</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
-            <li class="former-students__item">
-                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/men3.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Frank <span>Sinatra</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
-            <li class="former-students__item">
-                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Kévin <span>Dessouroux</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
-            <li class="former-students__item">
-                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/men2.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Calvin <span>Wade</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
-            <li class="former-students__item">
-                <a href="les-metiers-du-web-kevin-dessouroux" class="card_student">
-                    <figure class="card_student__figure">
-                        <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="./img/kevin-dessouroux.jpg" width="350" height="200" alt="#" >
-                        </div>
-                        <figcaption class="card_student__figcaption">
-                            <strong class="card_student__name">
-                                Kévin <span>Dessouroux</span>
-                            </strong>
-                            <span class="card_student__profession">
-                                Développeur front-end
-                            </span>
-                        </figcaption>
-                    </figure>
-                    <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
-                    </div>
-                </a>
-            </li>
+            @endforeach
 
             <!-- TODO : En PHP, compter le nombre d’anciens étudiants avec un modulo, si le nombre de li%3 == 2, ajouter un li vide, sinon rien
             <li class="former-students__item" style="width: 19.6875em"></li>-->
