@@ -10,9 +10,6 @@ class CourseController extends Controller
 {
     protected function indexWeb()
     {
-        SEO::setTitle('Le programme des cours en web');
-        SEO::setDescription('Apprends en plus sur les cours que tu vas apprendre lors de ta formation en infographie dans l’option web');
-        
         return view('pages.web.program', [
             'getAllCoursesBloc1' => $this->getAllCoursesBloc1(),
             'getAllCoursesBloc2' => $this->getAllCoursesBloc2(),
@@ -26,6 +23,7 @@ class CourseController extends Controller
     
     protected function show(Course $course)
     {
+        
         return view('posts.postCourse', [
             'course' => $course,
             $this->setMetasShow($course)
@@ -58,7 +56,6 @@ class CourseController extends Controller
         $courses = Course::where('bloc', 1)
                          ->OrderBy('title', 'ASC')
                          ->get();
-        
         return $courses;
     }
     

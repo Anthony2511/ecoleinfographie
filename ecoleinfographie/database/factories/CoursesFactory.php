@@ -16,13 +16,13 @@ $factory->define(App\Models\Course::class, function (Faker\Generator $faker) {
     
     //$aEval = array('1, 2, Toute l’année');
     $title = $faker->text($maxNbChars = 30);
-    $orientation = $faker->randomElement($array = array('Web', '3D/Vidéo', 'Design graphique', 'Commun'));
+    $orientation = $faker->randomElement($array = array('web', '3D', '2D', 'all'));
     $image = $faker->imageUrl($width = 360, $height = 417);
     
     return [
         'title' => ['fr' => $title],
         'image' => $image,
-        'orientation' => ['fr' => $orientation ],
+        'orientation' => $orientation,
         'duration' => $faker->numberBetween($min = 15, $max = 120),
         'ects' => $faker->numberBetween($min = 1, $max = 20),
         'ratio' => ['fr' => '[{"type":"Travaux dirigés","hour":"15"},{"type":"Travaux pratique","hour":"30"}]'],

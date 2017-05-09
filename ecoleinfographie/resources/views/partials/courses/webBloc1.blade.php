@@ -2,7 +2,8 @@
 	<thead class="program-table__thead">
 	<tr>
 		<th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
-		<th class="program-table__course" data-sort="string" data-sort-default="desc"><span>@lang('programCourse.nameOfCourse')</span></th>
+		<th class="program-table__course" data-sort="string" data-sort-default="desc">
+			<span>@lang('programCourse.nameOfCourse')</span></th>
 		<th class="program-table__hour" data-sort="int"><span>@lang('programCourse.hours')</span></th>
 		<th class="program-table__ects" data-sort="int"><span>@lang('programCourse.credits')</span></th>
 		<th class="program-table__quad"><span>@lang('programCourse.quadrimester')</span></th>
@@ -11,8 +12,8 @@
 	<tbody class="program-table__tbody">
 
 	@foreach($getWebCoursesBloc1 as $key => $course)
-		<tr class="link-row" data-href="{{ $course->slug }}" >
-			<td class="program-table__orientation">{{ url('cours/'.$course->slug) }}</td>
+		<tr class="link-row" data-href="{{ $course->slug }}">
+			<td class="program-table__orientation">{{ $course->orientation }}</td>
 			<td class="program-table__course">
 				<a href="{{ url('cours/'.$course->slug) }}" class="program-table__course__link">
 					<span class="program-table__course__name">{{ $course->title }}</span>

@@ -22,7 +22,7 @@ Route::get('/home', function (){
 	return redirect('/');
 });
 
-// Web program
+// WEB
 Route::get('web/programme-des-cours', 'CourseController@indexWeb');
 // All
 Route::get('cours/{course}', 'CourseController@show');

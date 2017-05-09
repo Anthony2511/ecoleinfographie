@@ -28,5 +28,9 @@ return [
     'nameOfCourse' => 'Nom du cours',
     'hours' => 'Heures',
     'credits' => 'Crédits',
-    'quadrimester' => 'Quadrimestre'
+    'quadrimester' => 'Quadrimestre',
+    'all' => 'Commun',
+    'web' => 'Web',
+    '2D' => 'Design graphique',
+    '3D' => '3D/Vidéo'
 ];

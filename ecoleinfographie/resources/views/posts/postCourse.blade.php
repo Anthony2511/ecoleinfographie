@@ -116,10 +116,6 @@
 					</a>
 				</li>
 				@endforeach
-
-				<!-- TODO : En PHP, compter le nombre d’anciens étudiants avec un modulo, si le nombre de li%3 == 2, ajouter un li vide, sinon rien
-				<li class="former-students__item" style="width: 19.6875em"></li>-->
-
 			</ul>
 		</section>
 	</section>

@@ -45,7 +45,7 @@ class Course extends Model
     // protected $hidden = [];
     // protected $dates = [];
     protected $fakeColumns = ['extras'];
-    protected $translatable = ['title', 'orientation', 'ratio', 'evaluation', 'quadrimester', 'shortdescription', 'description', 'objectives'];
+    protected $translatable = ['title', 'ratio', 'evaluation', 'quadrimester', 'shortdescription', 'description', 'objectives'];
     
     /**
      * Return the sluggable configuration array for this model.
@@ -79,6 +79,24 @@ class Course extends Model
     public function getOpenButton()
     {
         return '<a class="btn btn-default btn-xs" href="'.$this->getPageLink().'" target="_blank"><i class="fa fa-eye"></i> Visualiser</a>';
+    }
+    
+    public function getOrientation($course)
+    {
+        switch ($course->orientation) {
+            case 'all':
+                echo 'Commun';
+                break;
+            case '2D':
+                echo 'Design graphique';
+                break;
+            case '3D':
+                echo '3D/Vidéo';
+                break;
+            case 'web':
+                echo 'Web';
+                break;
+        }
     }
     
     /*
