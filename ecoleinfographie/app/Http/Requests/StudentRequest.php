@@ -16,7 +16,7 @@ class StudentRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
         // only allow updates if the user is logged in
         return \Auth::check();
     }
-
+    
     /**
      * Get the validation rules that apply to the request.
      *
@@ -25,10 +25,18 @@ class StudentRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'slug'          => 'unique|students,slug' . \Request::get('id'),
+            'firstname'     => 'required|min:2|max:255',
+            'lastname'      => 'required|min:2|max:255',
+            'image'         => 'required',
+            'profession'    => 'required',
+            'year'          => 'required|numeric',
+            'orientation'   => 'required',
+            'is_freelance'  => 'required|boolean',
+            'has_interview' => 'required|boolean',
         ];
     }
-
+    
     /**
      * Get the validation attributes that apply to the request.
      *
@@ -40,7 +48,7 @@ class StudentRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             //
         ];
     }
-
+    
     /**
      * Get the validation messages that apply to the request.
      *
