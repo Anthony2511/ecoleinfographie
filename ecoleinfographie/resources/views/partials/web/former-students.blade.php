@@ -3,14 +3,14 @@
         <img src="{{ asset('./img/anciens-etudiants.png') }}" width="629" height="464" alt="" class="former-students__img">
         <div class="former-students__text-wrapper">
             <h2 role="heading" aria-level="2" class="former-students__title">
-                <span>Le parcours </span>
-                <strong>de nos anciens diplômés</strong>
+                <span>@lang('students.title1') </span>
+                <strong>@lang('students.title2')</strong>
             </h2>
             <p class="former-students__text-intro">
-                Dans notre école, nous te formons à exercer un métier. Pour te le prouver, quoi de mieux que de te montrer une sélection de nos anciens bacheliers qui exercent aujourd’hui un métier dans le web.
+                @lang('students.intro1')
             </p>
             <p class="former-students__text-intro">
-                N’hésite pas à cliquer sur un profil qui t’intéresse, tu pourras découvrir une interview y correspondant.
+                @lang('students.intro2')
             </p>
         </div>
     </div>
@@ -22,7 +22,7 @@
                 <a href="{{ url('students/'.$student->slug) }}" class="card_student">
                     <figure class="card_student__figure">
                         <div class="card_student__picture-wrapper">
-                            <img class="card_student__picture" src="{{ $student->getImageStudent('_cards.jpg') }}" width="350" height="200" alt="Photo de {{ $student->fullname }}, un ancien étudiant en {{ strtolower($student->orientation) }}" >
+                            <img class="card_student__picture" src="{{ $student->getImageStudent('_cards.jpg') }}" width="350" height="200" alt="@lang('students.alt1') {{ $student->fullname }}, @lang('students.alt2') {{ strtolower($student->orientation) }}" >
                         </div>
                         <figcaption class="card_student__figcaption">
                             <strong class="card_student__name">
@@ -34,7 +34,7 @@
                         </figcaption>
                     </figure>
                     <div class="card_student__fake-link">
-                        <span class="card_student__fake-link__text">Voir son parcours</span>
+                        <span class="card_student__fake-link__text">@lang('students.view1')</span>
                     </div>
                 </a>
             </li>
