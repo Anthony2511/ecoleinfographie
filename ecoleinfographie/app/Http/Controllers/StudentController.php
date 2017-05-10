@@ -18,8 +18,45 @@ class StudentController extends Controller
         ]);
     }
     
+    public function indexGraduated(Request $request)
+    {
+        SEO::setTitle('Nos diplômés');
+        SEO::setDescription('Nous tenons une liste de tous les étudiants qui ont été diplômés à la Haute École de la Province de Liège');
+        
+        $students = Student::orderBy('year', 'desc')->inRandomOrder()->paginate(12);
+        
+        if($request->ajax())
+        {
+            /*return [
+                'students' => view('ajax.graduate')->with(compact('students'))->render(),
+                'next_page' => $students->nextPageUrl(),
+                'orientations' => $this->getOrientation()
+            ];*/
+            return [
+                'students' => view('ajax.graduate',
+                    [
+                        'students' => $students,
+                        'orientations' => $this->getOrientation()
+                    ])->render(),
+                'next_page' => $students->nextPageUrl()
+            ];
+        }
+        
+        return view('pages.graduate', [
+            'students' => $students,
+            'orientations' => $this->getOrientation()
+        ]);
+    }
+    
+    public function fetchNextPostsSet($page) {
+    }
+    
     public function show(Student $student)
     {
+    
+        SEO::setTitle('Le parcours de ' . $student->fullname);
+        SEO::setDescription( $student->fullname . ' est un ancien étudiant de la Haute École de la Province de Liège et a accepté de répondre à quelques questions sur son parcours professionnel');
+        
         return view('posts.postStudent', [
             'student' => $student,
             'studentImageAside' => $student->getImageStudent('_aside.jpg'),
