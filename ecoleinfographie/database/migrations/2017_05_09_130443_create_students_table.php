@@ -20,9 +20,10 @@ class CreateStudentsTable extends Migration
             $table->string('firstname', 255);
             $table->string('lastname', 255);
             $table->string('image', 255)->nullable();
-            $table->string('profession', 255);
-            $table->integer('year');
+            $table->string('profession', 255)->nullable();
+            $table->integer('year')->nullable();
             $table->string('orientation', 1000);
+            $table->boolean('is_graduated');
             $table->boolean('is_freelance');
             $table->string('company', 255)->nullable();
             $table->string('social', 5000)->nullable();

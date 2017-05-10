@@ -45,7 +45,7 @@ class StudentCrudController extends CrudController
         
         // ------ CRUD FIELDS
         
-        $tab1 = 'Fiche de l’ancien étudiant';
+        $tab1 = 'Fiche de l’étudiant';
         $tab2 = 'Ajouter une interview';
         $tab3 = 'Réseaux sociaux';
     
@@ -80,27 +80,45 @@ class StudentCrudController extends CrudController
         ]);
         $this->crud->addField
         ([
-            'name' => 'year',
-            'label' => 'Année d’obtention du diplôme',
-            'type' => 'number',
-            'wrapperAttributes' => [
-                'class' => 'form-group col-md-6',
-            ],
-            'attributes' => ['min' => '1995', 'max' => '2050'],
+            'name' => 'orientation',
+            'label' => 'Orientation choisie',
+            'type' => 'select_from_array',
+            'options' => ["2D" => "Design graphique", "3D" => "3D/Vidéo", "web" => "Web"],
+            'allows_null' => false,
             'tab' => $tab1
         ]);
         $this->crud->addField
         ([
-            'name' => 'orientation',
-            'label' => 'L’orientation ou l’étudiant a obtenu son diplôme ?',
-            'type' => 'select_from_array',
-            'options' => ["2D" => "Design graphique", "3D" => "3D/Vidéo", "web" => "Web"],
-            'allows_null' => false,
+            'name' => 'is_graduated',
+            'label' => 'L’étudiant est-il diplômé ?',
+            'type' => 'checkbox',
+            'hint' => 'Cocher pour dire oui, décocher pour dire non..',
             'wrapperAttributes' => [
-                'class' => 'form-group col-md-6',
+                'class' => 'form-group col-md-4',
             ],
             'tab' => $tab1
         ]);
+        $this->crud->addField
+        ([
+            'name' => 'year',
+            'label' => 'Année d’obtention du diplôme',
+            'type' => 'number',
+            'hint' => 'Si l’étudiant est diplômé, indiquez l’année d’obtention de son diplôme',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-8',
+            ],
+            'attributes' => ['min' => '1995', 'max' => '2050'],
+            'tab' => $tab1
+        ]);
+    
+        $this->crud->addField
+        ([
+            'name' => 'info_interview',
+            'type' => 'custom_html',
+            'value' => '<h3>Vous disposez d’une interview du parcours de l’étudiant ? Remplissez les champs suivant, sinon, ignorez.</h3><hr>',
+            'tab' => $tab2
+        ]);
+        
         $this->crud->addField
         ([
         	'name' => 'is_freelance',
@@ -112,6 +130,7 @@ class StudentCrudController extends CrudController
             ],
             'tab' => $tab2
         ]);
+        
         $this->crud->addField
         ([
             'name' => 'has_interview',

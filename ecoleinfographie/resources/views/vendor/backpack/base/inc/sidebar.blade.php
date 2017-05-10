@@ -66,7 +66,7 @@
 
           <!-- étudiants -->
           <li>
-            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/student') }}"><i class="fa fa-graduation-cap"></i><span>Étudiants diplômés</span></a></li>
+            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/student') }}"><i class="fa fa-graduation-cap"></i><span>Étudiants et anciens</span></a></li>
 
 
           <!-- item MenuCRUD -->

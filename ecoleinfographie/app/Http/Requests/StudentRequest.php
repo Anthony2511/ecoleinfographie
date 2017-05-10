@@ -28,9 +28,10 @@ class StudentRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'slug'          => 'unique|students,slug' . \Request::get('id'),
             'firstname'     => 'required|min:2|max:255',
             'lastname'      => 'required|min:2|max:255',
-            'year'          => 'required|numeric',
+            'year'          => 'numeric',
             'orientation'   => 'required',
             'is_freelance'  => 'required|boolean',
+            'is_graduated'  => 'required|boolean',
             'has_interview' => 'required|boolean',
         ];
     }

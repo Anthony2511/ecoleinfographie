@@ -36,6 +36,7 @@ class Student extends Model
         'year',
         'orientation',
         'is_freelance',
+        'is_graduated',
         'company',
         'social',
         'has_interview',
