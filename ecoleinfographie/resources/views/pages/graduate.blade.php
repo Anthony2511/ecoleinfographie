@@ -54,8 +54,14 @@
         </ul>
 
         {{--{!! $students->render() !!}--}}
-
-        <a href="{{ $students->nextPageUrl() }}" id="load-more"  style="padding: .6em 1.5em; color: #FFF; background-color: lightslategrey; text-transform: uppercase; text-align: center">Charger plus</a>
+        <div class="load-more__container">
+        	<a href="{{ $students->nextPageUrl() }}" class="load-more" id="load-more">
+						<span class="load-more__label">
+							<span class="load-more__label-text">Charger plus</span>
+							<span class="load-more__hidden">d’anciens étudiants diplômés</span>
+						</span>
+					</a>
+        </div>
 
     </section>
 @endsection

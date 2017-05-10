@@ -13,18 +13,19 @@ w.ajaxGraduated = {
                     $.ajax({
                         url: page,
                         beforeSend: function () {
-                            $('#load-more').addClass('test');
+                            $('#load-more').addClass('loading');
                         },
                         success: function (data) {
                             $('.former-students__list').append(data.students);
                             $('#load-more').attr('href', data.next_page);
-                            $('#load-more').removeClass('test');
+                            $('#load-more').removeClass('loading');
                         },
                     })
                 }
             })
         })
-    }
+    },
+
 
 
 
