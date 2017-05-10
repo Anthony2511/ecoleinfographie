@@ -55,36 +55,7 @@
 
         {{--{!! $students->render() !!}--}}
 
-        <button id="load-more" data-next-page="{{ $students->nextPageUrl() }}" style="padding: .6em 1.5em; color: #FFF; background-color: lightslategrey; text-transform: uppercase; text-align: center">Charger plus</button>
+        <a href="{{ $students->nextPageUrl() }}" id="load-more"  style="padding: .6em 1.5em; color: #FFF; background-color: lightslategrey; text-transform: uppercase; text-align: center">Charger plus</a>
 
     </section>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#load-more').on('click', function(e){
-                e.preventDefault();
-                var page = $(this).data('next-page');
-                if (page !== null){
-                    /*$.get(page, function (data) {
-                        $('.former-students__list').append(data.students);
-                        $('#load-more').data('next-page', data.next_page);
-                    })*/
-                    $.ajax({
-                        url: page,
-                        beforeSend: function () {
-                            $('#load-more').addClass('test');
-                        },
-												success: function (data) {
-                            $('.former-students__list').append(data.students);
-                            $('#load-more').data('next-page', data.next_page);
-                            $('#load-more').removeClass('test');
-                        },
-										})
-                }
-            })
-        })
-    </script>
-
 @endsection
