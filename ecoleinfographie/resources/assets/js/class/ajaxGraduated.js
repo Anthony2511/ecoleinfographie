@@ -2,6 +2,7 @@ w.ajaxGraduated = {
 
     init: function () {
         this.initAjax();
+        this.initGrid();
     },
 
     initAjax: function () {
@@ -19,12 +20,18 @@ w.ajaxGraduated = {
                             $('.former-students__list').append(data.students);
                             $('#load-more').attr('href', data.next_page);
                             $('#load-more').removeClass('loading');
+                            w.ajaxGraduated.initGrid();
                         },
                     })
                 }
             })
         })
     },
+
+    initGrid: function () {
+        var grid = document.querySelector('.former-students__list');
+        waterfall(grid);
+    }
 
 
 

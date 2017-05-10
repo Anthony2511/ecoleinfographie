@@ -23,15 +23,10 @@ class StudentController extends Controller
         SEO::setTitle('Nos diplômés');
         SEO::setDescription('Nous tenons une liste de tous les étudiants qui ont été diplômés à la Haute École de la Province de Liège');
         
-        $students = Student::orderBy('year', 'desc')->inRandomOrder()->paginate(12);
+        $students = Student::orderBy('year', 'desc')->paginate(12);
         
         if($request->ajax())
         {
-            /*return [
-                'students' => view('ajax.graduate')->with(compact('students'))->render(),
-                'next_page' => $students->nextPageUrl(),
-                'orientations' => $this->getOrientation()
-            ];*/
             return [
                 'students' => view('ajax.graduate',
                     [

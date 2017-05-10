@@ -17,6 +17,23 @@
 					</span>
 				</figcaption>
 			</figure>
+			@if($student->has_interview === 1)
+				<div class="card_student__fake-link">
+					<span class="card_student__fake-link__text">@lang('students.view1')</span>
+				</div>
+				<a href="{{ $student->interview }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
+
+			@elseif(!empty($student->social))
+				@foreach($student->social as $row)
+
+					@if( $row['type'] === 'portfolio')
+						<div class="card_student__fake-link">
+							<span class="card_student__fake-link__text">@lang('students.view2')</span>
+						</div>
+						<a href="{{ $student->interview }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
+					@endif
+				@endforeach
+			@endif
 		</div>
 	</li>
 @endforeach

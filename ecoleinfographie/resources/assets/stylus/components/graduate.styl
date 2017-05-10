@@ -23,8 +23,28 @@
     padding-bottom: 5em
   & .former-students__list
     padding 0
-  & .former-students__item
-    margin-bottom: s(45)
+  /*& .former-students__item
+    margin-bottom: s(45)*/
+
+
+.graduate
+  .former-students
+    &__list
+      &:before
+      &:after
+        content: '';
+        display: table;
+      &:after
+        clear both
+
+.wf-column
+  float: left
+
+&__item
+      display: inline-block
+      float none
+      //margin-bottom: s(45)
+
 
 
 .graduate
@@ -40,6 +60,7 @@
     z-index 1
     transition .3s background;
     &__container
+      margin-top: s(80)
       text-align: center
     &__hidden
       @extend .hidden
