@@ -45,6 +45,9 @@ class Student extends Model
     // protected $hidden = [];
     // protected $dates = [];
     protected $translatable = ['profession', 'interview'];
+    protected $casts = [
+        'social' => 'array'
+    ];
     
     /**
      * Return the sluggable configuration array for this model.
