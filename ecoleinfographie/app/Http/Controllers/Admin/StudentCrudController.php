@@ -195,7 +195,14 @@ class StudentCrudController extends CrudController
         ([
         	'name' => 'social',
         	'label' => 'Réseaux sociaux et portfolio',
-        	'type' => 'text',
+        	'type' => 'social',
+            'entity_singular' => 'un réseau social',
+            'columns' => [
+                'type' => 'Nom du réseau social',
+                'url' => 'Lien',
+            ],
+            'max' => 9,
+            'min' => 0,
             'tab' => $tab3
         ]);
         
