@@ -1,11 +1,11 @@
 <!-- array input -->
 
 <?php
-$max = isset($field['max']) && (int) $field['max'] > 0 ? $field['max'] : -1;
-$min = isset($field['min']) && (int) $field['min'] > 0 ? $field['min'] : -1;
-$item_name = strtolower(isset($field['entity_singular']) && !empty($field['entity_singular']) ? $field['entity_singular'] : $field['label']);
+$max = isset($field['max']) && (int)$field['max'] > 0 ? $field['max'] : -1;
+$min = isset($field['min']) && (int)$field['min'] > 0 ? $field['min'] : -1;
+$item_name = strtolower(isset($field['entity_singular']) && ! empty($field['entity_singular']) ? $field['entity_singular'] : $field['label']);
 
-$items = old($field['name']) ? (old($field['name'])) : (isset($field['value']) ? ($field['value']) : (isset($field['default']) ? ($field['default']) : '' ));
+$items = old($field['name']) ? (old($field['name'])) : (isset($field['value']) ? ($field['value']) : (isset($field['default']) ? ($field['default']) : ''));
 
 // make sure not matter the attribute casting
 // the $items variable contains a properly defined JSON
@@ -15,7 +15,7 @@ if (is_array($items)) {
     } else {
         $items = '[]';
     }
-} elseif (is_string($items) && !is_array(json_decode($items))) {
+} elseif (is_string($items) && ! is_array(json_decode($items))) {
     $items = '[]';
 }
 
@@ -29,7 +29,8 @@ if (is_array($items)) {
 
 	<div class="array-container form-group">
 
-		<div class="table table-bordered table-striped m-b-0" ng-init="field = '#{{ $field['name'] }}'; items = {{ $items }}; max = {{$max}}; min = {{$min}}; maxErrorTitle = '{{trans('backpack::crud.table_cant_add', ['entity' => $item_name])}}'; maxErrorMessage = '{{trans('backpack::crud.table_max_reached', ['max' => $max])}}'">
+		<div class="table table-bordered table-striped m-b-0"
+				 ng-init="field = '#{{ $field['name'] }}'; items = {{ $items }}; max = {{$max}}; min = {{$min}}; maxErrorTitle = '{{trans('backpack::crud.table_cant_add', ['entity' => $item_name])}}'; maxErrorMessage = '{{trans('backpack::crud.table_max_reached', ['max' => $max])}}'">
 
 			<div>
 				<div>
@@ -64,10 +65,15 @@ if (is_array($items)) {
 					</div>
 					<div style="position: absolute; right: 0;">
 						<div ng-if="max == -1 || max > 1" style="display: inline-block;">
-							<span class="btn btn-sm btn-default sort-handle" style="width: 32px; height: 32px;"><span class="sr-only">sort item</span><i class="fa fa-sort" role="presentation" aria-hidden="true"></i></span>
+							<span class="btn btn-sm btn-default sort-handle" style="width: 32px; height: 32px;"><span class="sr-only">sort
+																																																												item</span><i
+												class="fa fa-sort" role="presentation" aria-hidden="true"></i></span>
 						</div>
 						<div ng-if="max == -1 || max > 1" style="display: inline-block;">
-							<button ng-hide="min > -1 && $index < min" class="btn btn-sm btn-default" type="button" ng-click="removeItem(item);" style="width: 32px; height: 32px;" ><span class="sr-only">delete item</span><i class="fa fa-trash" role="presentation" aria-hidden="true"></i></button>
+							<button ng-hide="min > -1 && $index < min" class="btn btn-sm btn-default" type="button"
+											ng-click="removeItem(item);" style="width: 32px; height: 32px;"><span class="sr-only">delete
+																																																						item</span><i
+												class="fa fa-trash" role="presentation" aria-hidden="true"></i></button>
 						</div>
 					</div>
 				</div>
@@ -77,7 +83,8 @@ if (is_array($items)) {
 		</div>
 
 		<div class="array-controls btn-group m-t-10">
-			<button ng-if="max == -1 || items.length < max" class="btn btn-sm btn-default" type="button" ng-click="addItem()"><i class="fa fa-plus"></i> {{trans('backpack::crud.add')}} {{ $item_name }}</button>
+			<button ng-if="max == -1 || items.length < max" class="btn btn-sm btn-default" type="button" ng-click="addItem()">
+				<i class="fa fa-plus"></i> {{trans('backpack::crud.add')}} {{ $item_name }}</button>
 		</div>
 
 	</div>
@@ -104,24 +111,25 @@ if (is_array($items)) {
 	{{-- YOUR JS HERE --}}
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.14.3/sortable.min.js"></script>
+	<script type="text/javascript"
+					src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.14.3/sortable.min.js"></script>
 	<script>
 
-      window.angularApp = window.angularApp || angular.module('backPackTableApp', ['ui.sortable'], function($interpolateProvider){
+      window.angularApp = window.angularApp || angular.module('backPackTableApp', ['ui.sortable'], function ($interpolateProvider) {
               $interpolateProvider.startSymbol('<%');
               $interpolateProvider.endSymbol('%>');
           });
 
-      window.angularApp.controller('tableController', function($scope){
+      window.angularApp.controller('tableController', function ($scope) {
 
           $scope.sortableOptions = {
               handle: '.sort-handle'
           };
 
-          $scope.addItem = function(){
+          $scope.addItem = function () {
 
-              if( $scope.max > -1 ){
-                  if( $scope.items.length < $scope.max ){
+              if ($scope.max > -1) {
+                  if ($scope.items.length < $scope.max) {
                       var item = {};
                       $scope.items.push(item);
                   } else {
@@ -138,41 +146,41 @@ if (is_array($items)) {
               }
           }
 
-          $scope.removeItem = function(item){
+          $scope.removeItem = function (item) {
               var index = $scope.items.indexOf(item);
               $scope.items.splice(index, 1);
           }
 
-          $scope.$watch('items', function(a, b){
+          $scope.$watch('items', function (a, b) {
 
-              if( $scope.min > -1 ){
-                  while($scope.items.length < $scope.min){
+              if ($scope.min > -1) {
+                  while ($scope.items.length < $scope.min) {
                       $scope.addItem();
                   }
               }
 
-              if( typeof $scope.items != 'undefined' && $scope.items.length ){
+              if (typeof $scope.items != 'undefined' && $scope.items.length) {
 
-                  if( typeof $scope.field != 'undefined'){
-                      if( typeof $scope.field == 'string' ){
+                  if (typeof $scope.field != 'undefined') {
+                      if (typeof $scope.field == 'string') {
                           $scope.field = $($scope.field);
                       }
-                      $scope.field.val( angular.toJson($scope.items) );
+                      $scope.field.val(angular.toJson($scope.items));
                   }
               }
           }, true);
 
-          if( $scope.min > -1 ){
-              for(var i = 0; i < $scope.min; i++){
+          if ($scope.min > -1) {
+              for (var i = 0; i < $scope.min; i++) {
                   $scope.addItem();
               }
           }
       });
 
-      angular.element(document).ready(function(){
-          angular.forEach(angular.element('[ng-app]'), function(ctrl){
+      angular.element(document).ready(function () {
+          angular.forEach(angular.element('[ng-app]'), function (ctrl) {
               var ctrlDom = angular.element(ctrl);
-              if( !ctrlDom.hasClass('ng-scope') ){
+              if (!ctrlDom.hasClass('ng-scope')) {
                   angular.bootstrap(ctrl, [ctrlDom.attr('ng-app')]);
               }
           });

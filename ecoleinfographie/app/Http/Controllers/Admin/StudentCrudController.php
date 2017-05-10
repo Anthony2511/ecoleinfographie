@@ -201,8 +201,8 @@ class StudentCrudController extends CrudController
                 'type' => 'Nom du réseau social',
                 'url' => 'Lien',
             ],
-            'max' => 9,
             'min' => 0,
+            'max' => 9,
             'tab' => $tab3
         ]);
         

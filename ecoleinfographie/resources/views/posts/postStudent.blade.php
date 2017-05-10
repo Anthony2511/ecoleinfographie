@@ -52,33 +52,16 @@
 				@endforeach
 
 				<ul class="social-list-circle">
-					<li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link facebook" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link twitter" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link pinterest" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link behance" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link dribble" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link youtube" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link vimeo" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link linkedin" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li><!--
-                --><li class="social-list-circle__item">
-						<a href="" class="social-list-circle__link portfolio" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-					</li>
+
+
+					@if(!empty($student->social))
+						@foreach($student->social as $row)
+							<li class="social-list-circle__item">
+								<a href="{{ $row['url'] }}" class="social-list-circle__link {{ $row['type'] }}" rel="me"><span>Vers le {{ strtoupper($row['type']) }} de {{ $student->fullname }}</span></a>
+							</li>
+						@endforeach
+					@endif
+
 				</ul>
 			</aside>
 		</div>
