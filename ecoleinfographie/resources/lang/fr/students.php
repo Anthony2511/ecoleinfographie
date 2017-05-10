@@ -15,6 +15,7 @@ return [
     'alt1' => 'Photo de',
     'alt2' => 'un ancien étudiant en',
     'view1' => 'Voir son parcours',
+    'view2' => 'Voir son portfolio',
     'titlePost' => 'Le parcours de',
     'workFor' => 'Travaille chez',
     'workAs' => 'Travaille comme',

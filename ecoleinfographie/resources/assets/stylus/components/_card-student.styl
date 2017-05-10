@@ -1,4 +1,5 @@
 .card_student
+  position: relative
   display: block
   width s(315);
   background-color $cWhite
@@ -53,6 +54,7 @@
   &__fake-link
     position: relative
     text-align: center
+    display: block
     &:before
       content ''
       display: block
@@ -83,7 +85,13 @@
       font-weight 600
       text-transform: uppercase
       letter-spacing 0.5px
-      transition .2s ease color
+      transition .2s ease height
+  &__real-link
+    display: block
+    @extend .cover
+    z-index 100
+    & span
+      @extend .hidden
 
 // hover
 
@@ -98,9 +106,4 @@
     height 100%
     transition .3s ease height
 
-div.card_student:hover
-  & .card_student__picture
-  & .card_student__fake-link__text
-  & .card_student__fake-link:after
-    transition 0s ease all
-    transform scale(1)
+
