@@ -43,6 +43,7 @@ class Work extends Model
     // protected $hidden = [];
     // protected $dates = [];
     protected $translatable = ['title', 'description', 'other_description'];
+    protected $casts = ['orientation'];
     
     public function sluggable()
     {
