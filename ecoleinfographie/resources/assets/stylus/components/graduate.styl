@@ -26,6 +26,11 @@
   /*& .former-students__item
     margin-bottom: s(45)*/
 
+.index-rea__filter__item.no-effect
+  margin-left: s(29)
+  &:after
+  &:before
+    display none
 
 .graduate
   .former-students
@@ -110,3 +115,57 @@
   &:hover
   &:focus
     background-color $cGrey2
+
+
+/************************************\
+		Style chosen select
+\************************************/
+
+.graduate
+  .select-form
+    position: relative
+    top s(-3)
+    .select-submit
+      @extend .hidden
+    .chosen-container
+      width 140px
+    .chosen-single
+      background $cWhite
+      height s(50)
+      text-align: center
+      & span
+        display: inline-block
+        text-align: center
+        font-size s($sz8)
+        font-weight 900
+        text-transform: uppercase
+        letter-spacing 1.2px
+        line-height s(50, $sz8)
+        &:after
+          margin-left s(10, $sz8)
+          position relative
+          top 2px
+          icon('triangle-double');
+    .active-result
+      font-size s($sz8)
+      padding s(15, $sz8) 0
+      font-weight 700
+    .active-result.highlighted
+      background-color $cGreyLight
+    .chosen-results::-webkit-scrollbar
+      width: 12px;
+    .chosen-results::-webkit-scrollbar-thumb
+      background-color $cBlueCiel
+    .chosen-drop
+      transform translateY(-10px)
+      opacity 0
+      transition .3s ease all
+      transition-property transform, opacity
+
+.graduate
+  .chosen-with-drop
+    .chosen-drop
+      transform translateY(0)
+      opacity 1
+      transition .3s ease all
+      transition-property transform, opacity

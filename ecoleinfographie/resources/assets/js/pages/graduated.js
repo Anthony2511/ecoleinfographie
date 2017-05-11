@@ -3,6 +3,8 @@ w.graduated = {
 
     init: function () {
         w.ajaxGraduated.init();
+        this.select();
+
 
     },
 
@@ -13,7 +15,20 @@ w.graduated = {
 
     // },
 
+
     // EVENTS
 
     // FUNCTIONS
+
+    select: function () {
+        $('.select-year').chosen(
+            {
+                width: "140px",
+                disable_search_threshold: 80
+            }
+            );
+    }
+
+
+
 }

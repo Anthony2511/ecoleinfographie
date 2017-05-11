@@ -25,15 +25,15 @@
             <li class="index-rea__filter__item <?php echo (Request::get('orientation') == 'web') ? 'active' : '' ;?>">
                 <a href="?orientation=web" class="index-rea__filter__link">Web</a>
             </li>
-            <li class="index-rea__filter__item <?php echo (Request::get('request') == '') ? 'active' : '' ;?>">
-                <form action="{{ Request::url() }}" method="get">
-                    <select name="year" id="year" onchange="this.form.submit()">
-                        <option value="">Toutes</option>
+            <li class="index-rea__filter__item no-effect <?php echo (Request::get('request') == '') ? 'active' : '' ;?>">
+                <form action="{{ Request::url() }}" method="get" class="select-form">
+                    <select name="year" id="year" class="select-year" onchange="this.form.submit()" >
+                        <option value="">Années</option>
                         @foreach($selectYear as $year)
                             <option value="{{ $year->year }}"  <?php if($year->year == Request::get('year')){echo 'selected'; } ;?>  >{{ $year->year }}</option>
                         @endforeach
                     </select>
-                    <input type="submit" value="Envoyer">
+                    <input type="submit" value="Envoyer" class="select-submit">
                     <input type="hidden" name="orientation" value="{{ Request::get('orientation') }}">
                 </form>
             </li>
