@@ -76,6 +76,16 @@ class Work extends Model
     | ACCESORS
     |--------------------------------------------------------------------------
     */
+    
+    // The slug is created automatically from the "title" field if no slug exists.
+    public function getSlugOrTitleAttribute()
+    {
+        if ($this->slug != '') {
+            return $this->slug;
+        }
+        
+        return $this->title;
+    }
 
     /*
     |--------------------------------------------------------------------------
