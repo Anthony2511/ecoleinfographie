@@ -25,7 +25,16 @@ class WorkRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'title' => 'required|min:2|max:255',
+            'slug' => 'unique:works,slug,' . \Request::get('id'),
+            'orientation' => 'required',
+            'year' => 'required|numeric',
+            'project_link' => 'url',
+            'view3d' => 'url',
+            'video' => 'url',
+            'cover' => 'required',
+            'description' => 'required|min:255',
+            'other_description' => 'required|min:255',
         ];
     }
 
