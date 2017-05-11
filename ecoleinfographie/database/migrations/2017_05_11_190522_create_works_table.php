@@ -22,7 +22,7 @@ class CreateWorksTable extends Migration
             $table->integer('year');
             $table->string('project_link', 255)->nullable();
             $table->string('view3d', 512)->nullable();
-            $table->string('video', 512);
+            $table->string('video', 512)->nullable();
             $table->string('cover', 255);
             $table->text('images')->nullable();
             $table->text('description');

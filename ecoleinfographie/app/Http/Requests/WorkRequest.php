@@ -32,7 +32,6 @@ class WorkRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'year'              => 'required|numeric',
             'project_link'      => 'nullable|url',
             'view3d'            => 'nullable|url',
-            'video'             => 'nullable|url',
             'cover'             => 'required',
             'description'       => 'required|min:255',
             'other_description' => 'required|min:255',
