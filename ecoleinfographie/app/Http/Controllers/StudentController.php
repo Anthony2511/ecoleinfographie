@@ -23,37 +23,6 @@ class StudentController extends Controller
         SEO::setTitle('Nos diplômés');
         SEO::setDescription('Nous tenons une liste de tous les étudiants qui ont été diplômés à la Haute École de la Province de Liège');
         
-        
-        /*switch ($request->get('request')){
-            case '3dvideo':
-                $students = Student::orderBy('year', 'desc')->where('orientation', '3D')->inRandomOrder()->paginate(12);
-                break;
-            case '2d':
-                $students = Student::orderBy('year', 'desc')->where('orientation', '2D')->inRandomOrder()->paginate(12);
-                break;
-            case 'web':
-                $students = Student::orderBy('year', 'desc')->where('orientation', 'web')->inRandomOrder()->paginate(12);
-                break;
-            case 'all':
-                $students = Student::orderBy('year', 'desc')->inRandomOrder()->paginate(12);
-                break;
-            default:
-                $students = Student::orderBy('year', 'desc')->inRandomOrder()->paginate(12);
-                break;
-        }*/
-        
-        /*$students = Student::query();
-    
-        if (in_array($request->request, ['3dvideo', '2d', 'web'])) {
-            $students = $students->where('orientation', $request->request);
-        }
-    
-        if ($request->has('year')) {
-            $students = $students->where('year', $request->year);
-        }
-    
-        $students = $students->latest('year')->inRandomOrder()->paginate(12);*/
-        
         $query = Student::orderBy('year', 'desc')->inRandomOrder();
         
         if ($request->has('orientation')) {
@@ -81,7 +50,7 @@ class StudentController extends Controller
             'students'        => $students,
             'orientations'    => $this->getOrientation(),
             'getLoadMoreLink' => $this->getLoadMoreLink($request),
-            'selectYear' => $this->selectYear()
+            'selectYear'      => $this->selectYear()
         ]);
     }
     
@@ -129,6 +98,7 @@ class StudentController extends Controller
     public function selectYear()
     {
         $selectYear = Student::select('year')->distinct()->orderBy('year', 'desc')->get();
+        
         return $selectYear;
     }
     

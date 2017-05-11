@@ -66,6 +66,7 @@
     cursor pointer
     transition .3s background;
     &__container
+      margin-top: s(30)
       text-align: center
     &__hidden
       @extend .hidden
@@ -168,3 +169,15 @@
       opacity 1
       transition .3s ease all
       transition-property transform, opacity
+
+
+/************************************\
+		NO-JS
+\************************************/
+
+.no-js
+  .graduate
+    .load-more
+      display: none
+    .select-submit
+      position static

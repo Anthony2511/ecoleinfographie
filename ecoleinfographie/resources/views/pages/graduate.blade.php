@@ -82,9 +82,11 @@
             @endforeach
         </ul>
 
-        {{--{!! $students->render() !!}--}}
+
         <div class="load-more__container">
-            {{--<a href="{{ $students->nextPageUrl().'&orientation='.Request::get('orientation') }} " class="load-more" id="load-more">--}}
+            <noscript>
+                {!! $students->render() !!}
+            </noscript>
             <a href="{{ $students->nextPageUrl() . $getLoadMoreLink }} " class="load-more" id="load-more">
 						<span class="load-more__label">
 							<span class="load-more__label-text">Charger plus</span>
