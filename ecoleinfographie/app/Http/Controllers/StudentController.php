@@ -23,7 +23,20 @@ class StudentController extends Controller
         SEO::setTitle('Nos diplômés');
         SEO::setDescription('Nous tenons une liste de tous les étudiants qui ont été diplômés à la Haute École de la Province de Liège');
         
-        $students = Student::orderBy('year', 'desc')->paginate(12);
+        
+        
+        
+        if ($request->get('request') == '3dvideo')
+        {
+            $students = Student::orderBy('year', 'desc')->where('orientation', '3D')->inRandomOrder()->paginate(12);
+        } else
+        {
+            $students = Student::orderBy('year', 'desc')->inRandomOrder()->paginate(12);
+        }
+        
+        
+        
+        /*$students = Student::orderBy('year', 'desc')->inRandomOrder()->paginate(12);*/
         
         if($request->ajax())
         {
@@ -33,8 +46,9 @@ class StudentController extends Controller
                         'students' => $students,
                         'orientations' => $this->getOrientation()
                     ])->render(),
-                'next_page' => $students->nextPageUrl()
+                'next_page' => $students->nextPageUrl() . '&request='. $request->get('request'),
             ];
+            
         }
         
         return view('pages.graduate', [
@@ -43,8 +57,6 @@ class StudentController extends Controller
         ]);
     }
     
-    public function fetchNextPostsSet($page) {
-    }
     
     public function show(Student $student)
     {
