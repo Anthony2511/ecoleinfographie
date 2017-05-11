@@ -16,7 +16,7 @@ class WorkRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
         // only allow updates if the user is logged in
         return \Auth::check();
     }
-
+    
     /**
      * Get the validation rules that apply to the request.
      *
@@ -25,19 +25,20 @@ class WorkRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:2|max:255',
-            'slug' => 'unique:works,slug,' . \Request::get('id'),
-            'orientation' => 'required',
-            'year' => 'required|numeric',
-            'project_link' => 'url',
-            'view3d' => 'url',
-            'video' => 'url',
-            'cover' => 'required',
-            'description' => 'required|min:255',
+            'title'             => 'required|min:2|max:255',
+            'slug'              => 'unique:works,slug,' . \Request::get('id'),
+            'orientation'       => 'required',
+            'type'              => 'required',
+            'year'              => 'required|numeric',
+            'project_link'      => 'url',
+            'view3d'            => 'url',
+            'video'             => 'url',
+            'cover'             => 'required',
+            'description'       => 'required|min:255',
             'other_description' => 'required|min:255',
         ];
     }
-
+    
     /**
      * Get the validation attributes that apply to the request.
      *
@@ -49,7 +50,7 @@ class WorkRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             //
         ];
     }
-
+    
     /**
      * Get the validation messages that apply to the request.
      *

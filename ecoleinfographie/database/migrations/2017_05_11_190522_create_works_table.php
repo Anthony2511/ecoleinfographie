@@ -18,6 +18,7 @@ class CreateWorksTable extends Migration
             $table->string('slug')->unique();
             $table->string('title', 255);
             $table->string('orientation', 255);
+            $table->string('type', 255);
             $table->integer('year');
             $table->string('project_link', 255)->nullable();
             $table->string('view3d', 512)->nullable();

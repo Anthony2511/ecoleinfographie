@@ -29,6 +29,7 @@ class Work extends Model
         'slug',
         'title',
         'orientation',
+        'type',
         'year',
         'project_link',
         'view3D',
