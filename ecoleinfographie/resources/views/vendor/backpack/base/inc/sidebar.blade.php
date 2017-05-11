@@ -68,6 +68,13 @@
           <li>
             <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/student') }}"><i class="fa fa-graduation-cap"></i><span>Étudiants et anciens</span></a></li>
 
+          <!-- réalisations -->
+          <li class="treeview">
+            <a href="#"><i class="fa fa-briefcase"></i> <span>Réalisations des étudiants</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a href="{{ url('admin/work') }}"><i class="fa fa-paint-brush"></i> <span>Travaux</span></a></li>
+            </ul>
+          </li>
 
           <!-- item MenuCRUD -->
           <li><a href="{{ url('admin/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
