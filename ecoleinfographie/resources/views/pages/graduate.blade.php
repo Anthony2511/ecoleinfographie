@@ -13,7 +13,7 @@
         <h2 role="heading" aria-level="2" class="graduateList__title">Nos anciens diplômés</h2>
 
         <ul class="index-rea__filter">
-            <li class="index-rea__filter__item <?php echo (Request::get('request') == 'all') ? 'active' : '' ;?>">
+            <li class="index-rea__filter__item <?php echo (Request::get('orientation') == '') ? 'active' : '' ;?>">
                 <a href="{{ url(trans('url.graduated')) }}" class="index-rea__filter__link">Tous</a>
             </li>
             <li class="index-rea__filter__item <?php echo (Request::get('orientation') == '3D') ? 'active' : '' ;?>">
