@@ -27,6 +27,7 @@ Route::get('web/programme-des-cours', 'CourseController@indexWeb')->name('progra
 Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('parcoursWeb');
 // Pages
 Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('nos-diplomes');
+Route::get('realisations', 'WorkController@index')->name('realisations');
 // Posts
 Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');

@@ -127,7 +127,7 @@
             </div>
         </li>
         <li class="menu__item">
-            <a href="realisations" class="menu__link">Réalisations</a>
+            <a href="{{ route('realisations') }}" class="menu__link">Réalisations</a>
         </li>
         <li class="menu__item">
             <a href="{{ route('nos-diplomes') }}" class="menu__link">Nos diplômés</a>
