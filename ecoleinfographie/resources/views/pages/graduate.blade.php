@@ -16,21 +16,21 @@
             <li class="index-rea__filter__item <?php echo (Request::get('request') == 'all') ? 'active' : '' ;?>">
                 <a href="{{ url(trans('url.graduated')) }}" class="index-rea__filter__link">Tous</a>
             </li>
-            <li class="index-rea__filter__item <?php echo (Request::get('request') == '3dvideo') ? 'active' : '' ;?>">
+            <li class="index-rea__filter__item <?php echo (Request::get('orientation') == '3D') ? 'active' : '' ;?>">
                 <a href="?orientation=3D" class="index-rea__filter__link">3D/Vidéo</a>
             </li>
-            <li class="index-rea__filter__item <?php echo (Request::get('request') == '2d') ? 'active' : '' ;?>">
+            <li class="index-rea__filter__item <?php echo (Request::get('orientation') == '2D') ? 'active' : '' ;?>">
                 <a href="?orientation=2D" class="index-rea__filter__link">Design graphique</a>
             </li>
-            <li class="index-rea__filter__item <?php echo (Request::get('request') == 'web') ? 'active' : '' ;?>">
+            <li class="index-rea__filter__item <?php echo (Request::get('orientation') == 'web') ? 'active' : '' ;?>">
                 <a href="?orientation=web" class="index-rea__filter__link">Web</a>
             </li>
-            <li class="index-rea__filter__item <?php echo (Request::get('request') == 'web') ? 'active' : '' ;?>">
+            <li class="index-rea__filter__item <?php echo (Request::get('request') == '') ? 'active' : '' ;?>">
                 <form action="{{ Request::url() }}" method="get">
                     <select name="year" id="year" onchange="this.form.submit()">
-                        <option value="all">Toutes</option>
+                        <option value="">Toutes</option>
                         @foreach($selectYear as $year)
-                            <option value="{{ $year->year }}">{{ $year->year }}</option>
+                            <option value="{{ $year->year }}"  <?php if($year->year == Request::get('year')){echo 'selected'; } ;?>  >{{ $year->year }}</option>
                         @endforeach
                     </select>
                     <input type="submit" value="Envoyer">
