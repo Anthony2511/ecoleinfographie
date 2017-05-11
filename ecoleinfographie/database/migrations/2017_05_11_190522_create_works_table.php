@@ -38,6 +38,6 @@ class CreateWorksTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('works');
     }
 }
