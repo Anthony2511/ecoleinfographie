@@ -17,7 +17,7 @@
                 <a href="#tous" class="index-rea__filter__link">Tous</a>
             </li>
             <li class="index-rea__filter__item">
-                <a href="#3D" class="index-rea__filter__link">3D/Vidéo</a>
+                <a href="?request=3dvideo" class="index-rea__filter__link">3D/Vidéo</a>
             </li>
             <li class="index-rea__filter__item">
                 <a href="#dg" class="index-rea__filter__link">Design graphique</a>
@@ -72,12 +72,12 @@
 
         {{--{!! $students->render() !!}--}}
         <div class="load-more__container">
-        	<a href="{{ $students->nextPageUrl() }}" class="load-more" id="load-more">
+            <a href="{{ $students->nextPageUrl().'&request='.Request::get('request') }} " class="load-more" id="load-more">
 						<span class="load-more__label">
 							<span class="load-more__label-text">Charger plus</span>
 							<span class="load-more__hidden">d’anciens étudiants diplômés</span>
 						</span>
-					</a>
+					  </a>
         </div>
 
     </section>
