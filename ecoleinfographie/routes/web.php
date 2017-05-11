@@ -53,6 +53,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('teacher', 'TeacherCrudController');
     CRUD::resource('cours', 'CourseCrudController');
     CRUD::resource('student', 'StudentCrudController');
+    CRUD::resource('work', 'WorkCrudController');
 });
 
 
