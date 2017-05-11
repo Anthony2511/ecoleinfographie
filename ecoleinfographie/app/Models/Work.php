@@ -23,7 +23,7 @@ class Work extends Model
 
     protected $table = 'works';
     protected $primaryKey = 'id';
-    public $timestamps = false;
+    public $timestamps = true;
     // protected $guarded = ['id'];
     protected $fillable = [
         'slug',
