@@ -36,7 +36,7 @@ w.ajaxGraduated = {
     },
 
 
-    
+
     initGrid: function () {
         var grid = document.querySelector('.former-students__list');
         waterfall(grid);

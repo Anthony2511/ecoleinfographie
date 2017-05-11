@@ -13,17 +13,29 @@
         <h2 role="heading" aria-level="2" class="graduateList__title">Nos anciens diplômés</h2>
 
         <ul class="index-rea__filter">
-            <li class="index-rea__filter__item active">
-                <a href="#tous" class="index-rea__filter__link">Tous</a>
+            <li class="index-rea__filter__item <?php echo (Request::get('request') == 'all') ? 'active' : '' ;?>">
+                <a href="{{ url(trans('url.graduated')) }}" class="index-rea__filter__link">Tous</a>
             </li>
-            <li class="index-rea__filter__item">
-                <a href="?request=3dvideo" class="index-rea__filter__link">3D/Vidéo</a>
+            <li class="index-rea__filter__item <?php echo (Request::get('request') == '3dvideo') ? 'active' : '' ;?>">
+                <a href="?orientation=3D" class="index-rea__filter__link">3D/Vidéo</a>
             </li>
-            <li class="index-rea__filter__item">
-                <a href="#dg" class="index-rea__filter__link">Design graphique</a>
+            <li class="index-rea__filter__item <?php echo (Request::get('request') == '2d') ? 'active' : '' ;?>">
+                <a href="?orientation=2D" class="index-rea__filter__link">Design graphique</a>
             </li>
-            <li class="index-rea__filter__item">
-                <a href="#web" class="index-rea__filter__link">Web</a>
+            <li class="index-rea__filter__item <?php echo (Request::get('request') == 'web') ? 'active' : '' ;?>">
+                <a href="?orientation=web" class="index-rea__filter__link">Web</a>
+            </li>
+            <li class="index-rea__filter__item <?php echo (Request::get('request') == 'web') ? 'active' : '' ;?>">
+                <form action="{{ Request::url() }}" method="get">
+                    <select name="year" id="year" onchange="this.form.submit()">
+                        <option value="all">Toutes</option>
+                        @foreach($selectYear as $year)
+                            <option value="{{ $year->year }}">{{ $year->year }}</option>
+                        @endforeach
+                    </select>
+                    <input type="submit" value="Envoyer">
+                    <input type="hidden" name="orientation" value="{{ Request::get('orientation') }}">
+                </form>
             </li>
         </ul>
 
@@ -52,7 +64,7 @@
                         <div class="card_student__fake-link">
                             <span class="card_student__fake-link__text">@lang('students.view1')</span>
                         </div>
-                        <a href="{{ $student->interview }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
+                        <a href="{{ url(trans('url.students')) . '/' . $student->slug }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
 
                     @elseif(!empty($student->social))
                         @foreach($student->social as $row)
@@ -61,7 +73,7 @@
                                 <div class="card_student__fake-link">
                                     <span class="card_student__fake-link__text">@lang('students.view2')</span>
                                 </div>
-                                <a href="{{ $student->interview }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
+                                <a href="{{ $row['url'] }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
                             @endif
                         @endforeach
                     @endif
@@ -72,7 +84,8 @@
 
         {{--{!! $students->render() !!}--}}
         <div class="load-more__container">
-            <a href="{{ $students->nextPageUrl().'&request='.Request::get('request') }} " class="load-more" id="load-more">
+            {{--<a href="{{ $students->nextPageUrl().'&orientation='.Request::get('orientation') }} " class="load-more" id="load-more">--}}
+            <a href="{{ $students->nextPageUrl() . $getLoadMoreLink }} " class="load-more" id="load-more">
 						<span class="load-more__label">
 							<span class="load-more__label-text">Charger plus</span>
 							<span class="load-more__hidden">d’anciens étudiants diplômés</span>

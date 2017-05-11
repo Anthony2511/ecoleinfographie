@@ -21,7 +21,7 @@
 				<div class="card_student__fake-link">
 					<span class="card_student__fake-link__text">@lang('students.view1')</span>
 				</div>
-				<a href="{{ $student->interview }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
+				<a href="{{ url(trans('url.students')) . '/' . $student->slug }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
 
 			@elseif(!empty($student->social))
 				@foreach($student->social as $row)
@@ -30,7 +30,7 @@
 						<div class="card_student__fake-link">
 							<span class="card_student__fake-link__text">@lang('students.view2')</span>
 						</div>
-						<a href="{{ $student->interview }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
+						<a href="{{ $row['url'] }}" class="card_student__real-link"><span>Voir le parcours de {{ $student->fullname }}</span></a>
 					@endif
 				@endforeach
 			@endif
