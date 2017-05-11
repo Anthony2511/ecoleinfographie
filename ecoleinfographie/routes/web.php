@@ -26,7 +26,7 @@ Route::get('/home', function (){
 Route::get('web/programme-des-cours', 'CourseController@indexWeb')->name('programWeb');
 Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('parcoursWeb');
 // Pages
-Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('graduated');
+Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('nos-diplomes');
 // Posts
 Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
