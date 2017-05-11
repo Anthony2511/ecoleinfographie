@@ -46,6 +46,117 @@ class WorkCrudController extends CrudController
         ]);
         
         /// DONT FORGET : ADD COLUMN AUTHOR
+    
+        
+        // ------ CRUD FIELDS
+        $content = 'Fiche';
+        $media = 'Médias';
+        $link = 'Liens';
+    
+        $this->crud->addField
+        ([
+            'name' => 'title',
+            'label' => 'Nom de la réalisation',
+            'type' => 'text',
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'orientation',
+            'label' => 'Orientation',
+            'type' => 'select2_from_array',
+            'options' => ["2D" => "Design graphique", "3D" => "3D/Vidéo", "web" => "Web"],
+            'allows_null' => false,
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'type',
+            'label' => 'Type de projet',
+            'type' => 'select2_from_array',
+            'options' => [
+                "site" => "Site web",
+                "video" => "Réalisation vidéographique",
+                "appmob" => "Application mobile",
+                "mag" => "Magazine",
+                "idvisu" => "Identité visuelle",
+                "animation" => "Animation 3D"
+            ],
+            'allows_null' => false,
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'year',
+            'label' => 'Année de réalisation',
+            'type' => 'number',
+            'attributes' => ['min' => '1995', 'max' => '2050'],
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'view3d',
+            'label' => 'Lien du projet sur Sketchfab',
+            'type' => 'url',
+            'hint' => 'Pour avoir une visualisation 3D de chez Sketchfab, indiquez le lien du projet sur ce site ici',
+            'tab' => $media
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'video',
+            'label' => 'Lien vers une vidéo',
+            'type' => 'url',
+            'hint' => 'Si le projet dispose d’une vidéo (sur Youtube), indiquez le ici',
+            'tab' => $media
+        ]);
+        $this->crud->addField([
+            'name' => 'cover',
+            'label' => 'Photo de couverture',
+            'hint' => 'La photo qui apparait dans la liste',
+            'type' => 'image',
+            'upload' => true,
+            'crop' => true,
+            'default' => 'img/no-avatar.jpg',
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'images',
+        	'label' => 'La gallerie d’image',
+        	'type' => 'upload_multiple',
+            'hint' => 'Selectionnez les photos du projet à mettre en ligne',
+            'tab' => $media
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'description',
+        	'label' => 'Description du projet',
+        	'type' => 'ckeditor',
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'other_description',
+        	'label' => 'Le mot des profs',
+        	'type' => 'ckeditor',
+            'hint' => 'Expliquez en quoi ce projet est bien',
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
+            'name' => 'project_link',
+            'label' => 'Lien vers le projet',
+            'type' => 'url',
+            'hint' => 'Si le projet est disponible à une adresse, indiquez le lien',
+            'tab' => $link
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'other_link',
+        	'label' => 'Si le code source sur Github est disponible, précisez-le ici',
+        	'type' => 'url',
+            'tab' => $link
+        ]);
         
         
         

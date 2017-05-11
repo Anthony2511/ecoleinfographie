@@ -28,7 +28,6 @@ class CourseCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $content = 'La fiche du cours';
-        $seo = 'S.E.O';
         $options = 'Paramètres';
         
         // ------ CRUD COLUMNS
