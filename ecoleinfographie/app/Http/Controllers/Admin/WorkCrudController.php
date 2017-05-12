@@ -133,6 +133,7 @@ class WorkCrudController extends CrudController
             'type' => 'dropzone',
             'prefix' => 'public_folder',
             'upload-url' => '/' . config('backpack.base.route_prefix') . '/media-dropzone',
+            'tab' => $media
         ]);
         $this->crud->addField
         ([
@@ -184,7 +185,7 @@ class WorkCrudController extends CrudController
         // your additional operations before save here
         $redirect_location = parent::updateCrud();
         // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
+        // use $this->data['entry']f or $this->crud->entry
         return $redirect_location;
     }
     
