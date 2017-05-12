@@ -7,6 +7,10 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\WorkRequest as StoreRequest;
 use App\Http\Requests\WorkRequest as UpdateRequest;
+use Storage;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use App\Http\Requests\DropzoneRequest;
 
 class WorkCrudController extends CrudController
 {
@@ -123,14 +127,12 @@ class WorkCrudController extends CrudController
             'default' => 'img/no-avatar.jpg',
             'tab' => $content
         ]);
-        $this->crud->addField
-        ([
-        	'name' => 'images',
-        	'label' => 'La gallerie d’image',
-        	'type' => 'upload_multiple',
-            'hint' => 'Selectionnez les photos du projet à mettre en ligne',
-            'upload' => 'true',
-            'tab' => $media
+        $this->crud->addField([
+            'name' => 'images',
+            'label' => 'Photos',
+            'type' => 'dropzone',
+            'prefix' => 'public_folder',
+            'upload-url' => '/' . config('backpack.base.route_prefix') . '/media-dropzone',
         ]);
         $this->crud->addField
         ([
@@ -163,10 +165,6 @@ class WorkCrudController extends CrudController
             'tab' => $link
         ]);
         
-        
-        
-
-        
     }
 
     public function store(StoreRequest $request)
@@ -180,10 +178,39 @@ class WorkCrudController extends CrudController
 
     public function update(UpdateRequest $request)
     {
+        if (empty ($request->get('images'))) {
+            $this->crud->update(\Request::get($this->crud->model->getKeyName()), ['images' => '[]']);
+        }
         // your additional operations before save here
         $redirect_location = parent::updateCrud();
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
         return $redirect_location;
     }
+    
+    public function handleDropzoneUpload(DropzoneRequest $request)
+    {
+        $disk = "public_folder"; //
+        $destination_path =  "uploads/works/gallery";
+        $destination_thumb = "thumbs/dropzone";
+        $file = $request->file('file');
+        
+        try
+        {
+            $image = \Image::make($file);
+            $filename = md5($file->getClientOriginalName().time()).'.jpg';
+            \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+            \Storage::disk($disk)->put($destination_thumb.'/'.$filename, $image->fit(120,120)->stream());
+            return response()->json(['success' => true, 'filename' => $destination_path . '/' . $filename]);
+        }
+        catch (\Exception $e)
+        {
+            if (empty ($image)) {
+                return response('Le type d’image est invalide', 412);
+            } else {
+                return response('Unknown error', 412);
+            }
+        }
+    }
+    
 }
