@@ -65,7 +65,11 @@ class WorkCrudController extends CrudController
             'name' => 'orientation',
             'label' => 'Orientation',
             'type' => 'select2_from_array',
-            'options' => ["2D" => "Design graphique", "3D" => "3D/Vidéo", "web" => "Web"],
+            'options' => [
+                "2D" => "Design graphique",
+                "3D" => "3D/Vidéo",
+                "web" => "Web"
+            ],
             'allows_null' => false,
             'tab' => $content
         ]);
@@ -109,7 +113,7 @@ class WorkCrudController extends CrudController
             'hint' => 'Si le projet dispose d’une vidéo (sur Youtube), indiquez le ici',
             'tab' => $media
         ]);
-        /*$this->crud->addField([
+        $this->crud->addField([
             'name' => 'cover',
             'label' => 'Photo de couverture',
             'hint' => 'La photo qui apparait dans la liste',
@@ -118,15 +122,16 @@ class WorkCrudController extends CrudController
             'crop' => true,
             'default' => 'img/no-avatar.jpg',
             'tab' => $content
-        ]);*/
-        /*$this->crud->addField
+        ]);
+        $this->crud->addField
         ([
         	'name' => 'images',
         	'label' => 'La gallerie d’image',
         	'type' => 'upload_multiple',
             'hint' => 'Selectionnez les photos du projet à mettre en ligne',
+            'upload' => 'true',
             'tab' => $media
-        ]);*/
+        ]);
         $this->crud->addField
         ([
         	'name' => 'description',
