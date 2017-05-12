@@ -16,7 +16,7 @@ return array(
     |
     */
    
-    'route' => null,
+    //'route' => '/thumbs/dropzone',
 
     /*
     |--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ return array(
     |
     | The following paths will be searched for the image filename, submited 
     | by URI. 
-    | 
+    | s
     | Define as many directories as you like.
     |
     */
