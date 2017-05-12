@@ -6,6 +6,9 @@ use Backpack\CRUD\CrudTrait;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Storage;
+use Illuminate\Http\Request;
+
 
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\Sluggable;
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable
@@ -125,27 +128,5 @@ class Work extends Model
             $this->attributes[$attribute_name] = $destination_path . '/' . $filename;
         }
     }
-    
-    public function setImagesAttribute($value)
-    {
-        $attribute_name   = "images";
-        $disk             = "public_folder";
-        $destination_path = "uploads/works/gallery";
-        
-        $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
-    }
-    
-    public static function boot()
-    {
-        parent::boot();
-        static::deleting(function($obj) {
-            if (count((array)$obj->images)) {
-                foreach ($obj->images as $file_path) {
-                    \Storage::disk('public_folder')->delete($file_path);
-                }
-            }
-        });
-    }
-    
     
 }
