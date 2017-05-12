@@ -43,6 +43,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('menu-item', 'MenuItemCrudController');
 });
 
+
+
 // Admin
 Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function()
 {
@@ -54,7 +56,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('cours', 'CourseCrudController');
     CRUD::resource('student', 'StudentCrudController');
     CRUD::resource('work', 'WorkCrudController');
+    Route::post('media-dropzone', ['uses' => 'WorkCrudController@handleDropzoneUpload']);
 });
-
-
 
