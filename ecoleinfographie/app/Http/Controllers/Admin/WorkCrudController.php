@@ -103,6 +103,17 @@ class WorkCrudController extends CrudController
         ]);
         $this->crud->addField
         ([
+            'label' => 'Le/les auteur(s) de la réalisation',
+            'type' => 'select2_multiple',
+            'name' => 'students',
+            'entity' => 'students',
+            'attribute' => 'fullname',
+            'model' => "App\Models\Student",
+            'pivot' => true,
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
             'name' => 'view3d',
             'label' => 'Lien du projet sur Sketchfab',
             'type' => 'url',
