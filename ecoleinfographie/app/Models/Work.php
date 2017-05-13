@@ -124,7 +124,7 @@ class Work extends Model
         // if a base64 was sent, store it in the db
         if (starts_with($value, 'data:image')) {
             // 0. Make the image
-            $image = \Image::make($value)->widen(550);
+            $image = \Image::make($value)->fit(400, 623);
             // 1. Generate a filename.
             $filename = md5($value . time()) . '.jpg';
             // 2. Store the image on disk.
