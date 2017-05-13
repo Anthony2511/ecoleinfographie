@@ -166,6 +166,7 @@ class WorkCrudController extends CrudController
             'tab' => $link
         ]);
         
+        
     }
 
     public function store(StoreRequest $request)
