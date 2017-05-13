@@ -70,6 +70,11 @@ class Work extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function students()
+    {
+        return $this->belongsToMany('App\Models\Student');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
