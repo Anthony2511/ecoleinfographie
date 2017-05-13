@@ -17,7 +17,6 @@ var w = {
             w.accessibleMenuConfig.init(); // Charge config Accessible Menu
             w.loadPage();
             w.isLoaded = true;
-            console.log('front.js charged');
       },
       loadPage: function () {
             if (w.sCurrent) w[w.sCurrent].init();
@@ -37,6 +36,7 @@ var w = {
             if (w.$body.hasClass('blog')) return 'blog';
             if (w.$body.hasClass('postBlog')) return 'postBlog';
             if (w.$body.hasClass('graduate')) return 'graduated';
+            if (w.$body.hasClass('realisations')) return 'realisations';
 
             return false;
       }
