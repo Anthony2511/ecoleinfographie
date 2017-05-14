@@ -8,6 +8,7 @@ w.oneRea = {
       // getElements: function () {
 
       // },
+
       // setEvents: function () {
 
       // },
@@ -15,9 +16,5 @@ w.oneRea = {
       // EVENTS
 
       // FUNCTIONS
-
-
-
-
 
 }
