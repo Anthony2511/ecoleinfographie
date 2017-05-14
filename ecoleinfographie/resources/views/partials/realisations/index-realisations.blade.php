@@ -20,3 +20,15 @@
         </ul>
     </section>
 </div>
+
+<div class="load-more__container">
+    <noscript>
+        {!! $works->render() !!}
+    </noscript>
+    <a href="{{ $works->nextPageUrl() }} " class="load-more" id="load-more">
+        <span class="load-more__label">
+            <span class="load-more__label-text">Charger plus</span>
+            <span class="load-more__hidden">d’anciens étudiants diplômés</span>
+        </span>
+    </a>
+</div>

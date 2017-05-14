@@ -35,13 +35,12 @@ class WorkController extends Controller
         return view('pages.realisations', [
             'works' => $works,
             'orientations' => $this->getOrientation()
-        ]) ;
+        ]);
     }
     
     public function getOrientation()
     {
         $orientations = [
-            'all' => trans('programCourse.all'),
             '2D'  => trans('programCourse.2D'),
             '3D'  => trans('programCourse.3D'),
             'web' => trans('programCourse.web')
