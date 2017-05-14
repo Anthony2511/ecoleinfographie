@@ -6,6 +6,7 @@ use App\Models\Work;
 use Illuminate\Http\Request;
 use SEO;
 
+
 class WorkController extends Controller
 {
     public function index(Request $request)

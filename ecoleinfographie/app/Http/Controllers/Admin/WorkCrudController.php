@@ -11,6 +11,7 @@ use Storage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Http\Requests\DropzoneRequest;
+use App\Utils\Utils;
 
 class WorkCrudController extends CrudController
 {
@@ -211,17 +212,25 @@ class WorkCrudController extends CrudController
         try
         {
             $image = \Image::make($file);
-            $filename = md5($file->getClientOriginalName().time()).'.jpg';
-            \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
-            \Storage::disk($disk)->put($destination_thumb.'/'.$filename, $image->fit(120,120)->stream());
-            return response()->json(['success' => true, 'filename' => $destination_path . '/' . $filename]);
+            $workSliderMin = \Image::make($file)->fit(945, 531);
+            $workSliderMax = \Image::make($file)->widen(1280);
+            
+            $filename = md5($file->getClientOriginalName().time());
+            
+            \Storage::disk($disk)->put($destination_path.'/'.$filename.'.jpg', $image->stream());
+            \Storage::disk($disk)->put($destination_thumb.'/'.$filename.'.jpg', $image->fit(120,120)->stream());
+            
+            Utils::storeNewSize($destination_path, $filename, '_sliderMin', $workSliderMin);
+            Utils::storeNewSize($destination_path, $filename, '_sliderMax', $workSliderMax);
+            
+            return response()->json(['success' => true, 'filename' => $destination_path . '/' . $filename.'.jpg']);
         }
         catch (\Exception $e)
         {
             if (empty ($image)) {
                 return response('Le type d’image est invalide', 412);
             } else {
-                return response('Unknown error', 412);
+                return response('Erreur inconnue (désolé…)', 412);
             }
         }
     }
