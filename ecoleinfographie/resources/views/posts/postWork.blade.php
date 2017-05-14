@@ -107,77 +107,88 @@
 
 			</div>
 		</article>
+
+
 		<section class="rea-others">
 			<h2 role="heading" aria-level="2" class="rea-others__title">Découvrir d’autre projets</h2>
-			<ul class="reas">
-				<li class="reas__item">
-					<a href="#reas" class="reas__link">
-						<figure class="reas__figure">
-							<img class="reas__img" src="./img/reas-test.png" width="940" height="938" alt="">
-							<figcaption class="reas__figcaption">
-								<div class="reas__section">
-									<span class="reas__section__name">
-										<span class="reas__section__name-text">Web</span>
-									</span>
-								</div>
-								<div class="reas__desc">
-									<div class="reas__desc-wrapper">
-										<strong class="reas__desc__name">Sur un Baobab</strong>
-										<span class="reas__desc__author">Par Jimmy Letecheur</span>
+			<ul class="reas" id="reas">
+					<li class="reas__item">
+						<a href='{{ Url('/') . '/'  . trans('url.works') . '/' . $get3dWork->slug }}' class="reas__link">
+							<figure class="reas__figure">
+								<img class="reas__img" src="{{ $get3dWork->getImageWork('_workMore.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $get3dWork->title }} » réalisée dans l’orientation {{ $orientations[$get3dWork->orientation] }} en {{ $get3dWork->year }} à la Haute École de la Province de Liège.">
+								<figcaption class="reas__figcaption">
+									<div class="reas__section">
+										<span class="reas__section__name">
+											<span class="reas__section__name-text">{{ $orientations[$get3dWork->orientation] }}</span>
+										</span>
 									</div>
-								</div>
-							</figcaption>
-						</figure>
-					</a>
-				</li><!--
-                --><li class="reas__item">
-					<a href="#reas" class="reas__link">
-						<figure class="reas__figure">
-							<img class="reas__img" src="./img/reas-test3.png" width="671" height="662" alt="">
-							<figcaption class="reas__figcaption">
-								<div class="reas__section">
-									<span class="reas__section__name">
-										<span class="reas__section__name-text">Design graphique</span>
-									</span>
-								</div>
-								<div class="reas__desc">
-									<div class="reas__desc-wrapper">
-										<strong class="reas__desc__name">Sur un Baobab</strong>
-										<span class="reas__desc__author">Par Jimmy Letecheur</span>
+									<div class="reas__desc">
+										<div class="reas__desc-wrapper">
+											<strong class="reas__desc__name">{{ $get3dWork->title }}</strong>
+
+												<span class="reas__desc__author">
+													Par @foreach($get3dWork->students as $student)
+																{{ $student->fullname }}
+															@endforeach
+												</span>
+										</div>
 									</div>
-								</div>
-							</figcaption>
-						</figure>
-					</a>
-				</li><!--
-                --><li class="reas__item">
-					<a href="#reas" class="reas__link">
-						<figure class="reas__figure">
-							<img class="reas__img" src="./img/reas-test7.png" width="805" height="770" alt="">
-							<figcaption class="reas__figcaption">
-								<div class="reas__section">
-									<span class="reas__section__name">
-										<span class="reas__section__name-text">3D et audiovisuel</span>
-									</span>
-								</div>
-								<div class="reas__desc">
-									<div class="reas__desc-wrapper">
-										<strong class="reas__desc__name">Lorem ipsum dolor sit amet aspilicuita</strong>
-										<span class="reas__desc__author">Par Henri Dalum et Jessica Daufel</span>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li class="reas__item">
+						<a href='{{ Url('/') . '/'  . trans('url.works') . '/' . $get2dWork->slug }}' class="reas__link">
+							<figure class="reas__figure">
+								<img class="reas__img" src="{{ $get2dWork->getImageWork('_workMore.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $get2dWork->title }} » réalisée dans l’orientation {{ $orientations[$get2dWork->orientation] }} en {{ $get2dWork->year }} à la Haute École de la Province de Liège.">
+								<figcaption class="reas__figcaption">
+									<div class="reas__section">
+										<span class="reas__section__name">
+											<span class="reas__section__name-text">{{ $orientations[$get2dWork->orientation] }}</span>
+										</span>
 									</div>
-								</div>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
+									<div class="reas__desc">
+										<div class="reas__desc-wrapper">
+											<strong class="reas__desc__name">{{ $get2dWork->title }}</strong>
+
+											<span class="reas__desc__author">
+												Par @foreach($get2dWork->students as $student)
+													{{ $student->fullname }}
+												@endforeach
+											</span>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li class="reas__item">
+						<a href='{{ Url('/') . '/'  . trans('url.works') . '/' . $getWebWork->slug }}' class="reas__link">
+							<figure class="reas__figure">
+								<img class="reas__img" src="{{ $getWebWork->getImageWork('_workMore.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $getWebWork->title }} » réalisée dans l’orientation {{ $orientations[$getWebWork->orientation] }} en {{ $getWebWork->year }} à la Haute École de la Province de Liège.">
+								<figcaption class="reas__figcaption">
+									<div class="reas__section">
+										<span class="reas__section__name">
+											<span class="reas__section__name-text">{{ $orientations[$getWebWork->orientation] }}</span>
+										</span>
+									</div>
+									<div class="reas__desc">
+										<div class="reas__desc-wrapper">
+											<strong class="reas__desc__name">{{ $getWebWork->title }}</strong>
+
+											<span class="reas__desc__author">
+												Par @foreach($getWebWork->students as $student)
+													{{ $student->fullname }}
+												@endforeach
+											</span>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+
 			</ul>
 		</section>
-
-
 	</div>
-
-
-
-
-
 @endsection
