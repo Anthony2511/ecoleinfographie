@@ -1,6 +1,6 @@
 @foreach($works as $work)
 	<li class="reas__item">
-		<a href="#" class="reas__link">
+		<a href="{{ url(trans('url.works')) . '/' . $work->slug }}" class="reas__link">
 			<figure class="reas__figure">
 				{{--<img class="reas__img" src="{{ $work->cover }}" width="" height="" alt="">--}}
 				<div class="reas__img" role="img" style="background-image: url('{{ $work->cover }}');"></div>
