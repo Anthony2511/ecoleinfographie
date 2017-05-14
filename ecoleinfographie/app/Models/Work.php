@@ -8,6 +8,8 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Storage;
 use Illuminate\Http\Request;
+use App\Utils\Utils;
+
 
 
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\Sluggable;
@@ -69,6 +71,19 @@ class Work extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function getImageWork($suffix)
+    {
+        $basePath = 'uploads/works/';
+        $fullname = pathinfo($this->cover, PATHINFO_FILENAME);
+        $imageWork = $basePath . $fullname . $suffix;
+        
+        if (file_exists($imageWork)) {
+            return URL('/') . '/' . $imageWork;
+        } else {
+            return $imageWork = URL('/') . '/img/no-avatar.jpg';
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
@@ -129,13 +144,21 @@ class Work extends Model
         // if a base64 was sent, store it in the db
         if (starts_with($value, 'data:image')) {
             // 0. Make the image
-            $image = \Image::make($value)->fit(400, 623);
+            $image = \Image::make($value);
+            $workIndex = \Image::make($value)->fit(400, 623);
+            $workMore = \Image::make($value)->fit(385, 223);
             // 1. Generate a filename.
-            $filename = md5($value . time()) . '.jpg';
+            $filename = md5($value.time());
             // 2. Store the image on disk.
-            \Storage::disk($disk)->put($destination_path . '/' . $filename, $image->stream());
+            \Storage::disk($disk)->put($destination_path.'/'.$filename.'.jpg', $image->stream());
+            Utils::storeNewSize($destination_path, $filename, '_workIndex', $workIndex);
+            Utils::storeNewSize($destination_path, $filename, '_more', $workMore);
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path . '/' . $filename;
+            $this->attributes[$attribute_name] = $destination_path.'/'.$filename.'.jpg';
+        }
+        if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
+        {
+            $this->attributes['picture'] = '/img/no-avatar.jpg';
         }
     }
     
