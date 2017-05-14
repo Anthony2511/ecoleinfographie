@@ -46,7 +46,10 @@ class WorkController extends Controller
         
         return view('posts.postWork', [
             'work' => $work,
-            'orientations' => $this->getOrientation()
+            'orientations' => $this->getOrientation(),
+            'get3dWork' => $this->get3dWork($work->id),
+            'get2dWork' => $this->get2dWork($work->id),
+            'getWebWork' => $this->getWebWork($work->id)
         ]);
     }
     
@@ -66,6 +69,24 @@ class WorkController extends Controller
         if ($request->has('orientation')) {
             return '&orientation=' . $request->get('orientation');
         }
+    }
+    
+    public function get3dWork($id)
+    {
+        $workFrom3D = Work::whereNotIn('id', [$id])->where('orientation', '3D')->inRandomOrder()->limit(1)->first();
+        return $workFrom3D;
+    }
+    
+    public function get2dWork($id)
+    {
+        $workFrom2D = Work::whereNotIn('id', [$id])->where('orientation', '2D')->inRandomOrder()->limit(1)->first();
+        return $workFrom2D;
+    }
+    
+    public function getWebWork($id)
+    {
+        $workFromWeb = Work::whereNotIn('id', [$id])->where('orientation', 'web')->inRandomOrder()->limit(1)->first();
+        return $workFromWeb;
     }
     
 }
