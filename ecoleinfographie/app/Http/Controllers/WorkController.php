@@ -39,6 +39,17 @@ class WorkController extends Controller
         ]);
     }
     
+    public function show(Work $work)
+    {
+        SEO::setTitle( $work->title );
+        SEO::setDescription( $work->title . ', une réalisation dans le cadre de la formation dispensée à la Haute École de la Province de Liège' );
+        
+        return view('posts.postWork', [
+            'work' => $work,
+            'orientations' => $this->getOrientation()
+        ]);
+    }
+    
     public function getOrientation()
     {
         $orientations = [
