@@ -7,6 +7,7 @@ w.sliderRea = {
         this.runIframe();
         this.addWrapper();
         this.addClassToGallery();
+        this.deleteBlackImg();
     },
 
     config: function () {
@@ -16,11 +17,19 @@ w.sliderRea = {
             slideMargin: 0,
             keypress: true,
             thumbItem:5,
+            enableDrag: true,
             galleryMargin: 0,
             thumbMargin: 15,
             useCSS: true,
             cssEasing: 'ease',
             speed: '400',
+
+            onSliderLoad: function (el) {
+              el.lightGallery({
+                  selector: '.rSlider .rSlider__item--visible',
+                  download: false
+              });
+            },
 
             onAfterSlide: function () {
                 $('.rSlider iframe').remove();
@@ -54,5 +63,12 @@ w.sliderRea = {
                 }
             });
         });
+    },
+
+    deleteBlackImg: function () {
+
+        $('.lslide').on('click', function () {
+            $('.lg-item:last-child').remove();
+        })
     }
 }
