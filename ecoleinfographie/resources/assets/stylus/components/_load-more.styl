@@ -1,0 +1,62 @@
+.load-more
+  position: relative
+  display: inline-block
+  padding s(18.5) s(57)
+  background-color $cBlueCiel
+  color $cWhite
+  text-transform: uppercase
+  letter-spacing 1.15px
+  font-weight: 900
+  z-index 1
+  cursor pointer
+  transition .3s background;
+  &__container
+    margin-top: s(30)
+    text-align: center
+  &__hidden
+    @extend .hidden
+  &:hover
+    background $cBlueCiel + 15%
+    transition .3s background;
+  &__label-text
+    color $cWhite
+    display: inline-block
+    transform translateX(0)
+    transition .25s ease transform
+  &__label
+    position: relative
+    display: inline-block
+    &:after
+      position: absolute
+      right: -5px
+      top: 50%
+      transform: translateY(-50%) translateX(0)
+      display: inline-block
+      content ''
+      opacity 0
+      width 0px
+      height 0px
+      background-image none
+      transition .25s ease all
+      transition-property opacity, transform
+
+
+.load-more.loading
+  .load-more__label-text
+    transform translateX(s(-15))
+    transition .25s ease transform
+  .load-more__label:after
+    opacity 1
+    width 20px
+    height 20px
+    transform translateY(-50%)  translateX(s(10))
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgY2xhc3M9InVpbC1yaW5nIj4gIDxwYXRoIGZpbGw9Im5vbmUiIGNsYXNzPSJiayIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+ICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgc3Ryb2tlLWRhc2hhcnJheT0iMTYzLjk5MTEzNjUxNzM4NzIgMTE4Ljc1MjIwMjMwNTY5NDIiIHN0cm9rZT0iI2ZmZiIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxMCI+ICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiB2YWx1ZXM9IjAgNTAgNTA7MTgwIDUwIDUwOzM2MCA1MCA1MDsiIGtleVRpbWVzPSIwOzAuNTsxIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBiZWdpbj0iMHMiLz4gIDwvY2lyY2xlPjwvc3ZnPg==')
+    transition .25s ease all
+    transition-property opacity, transform
+
+.finish
+  background-color $cGrey2
+  cursor not-allowed
+  &:hover
+  &:focus
+    background-color $cGrey2
