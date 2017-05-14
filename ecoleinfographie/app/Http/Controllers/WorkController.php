@@ -34,7 +34,8 @@ class WorkController extends Controller
         
         return view('pages.realisations', [
             'works' => $works,
-            'orientations' => $this->getOrientation()
+            'orientations' => $this->getOrientation(),
+            'getLoadMoreLink' => $this->getLoadMoreLink($request)
         ]);
     }
     
@@ -47,6 +48,13 @@ class WorkController extends Controller
         ];
         
         return $orientations;
+    }
+    
+    public function getLoadMoreLink(Request $request)
+    {
+        if ($request->has('orientation')) {
+            return '&orientation=' . $request->get('orientation');
+        }
     }
     
 }

@@ -11,5 +11,6 @@ return [
     'course' => 'cours',
     'teachers' => 'professeurs',
     'students' => 'etudiants',
-    'graduated' => 'nos-diplomes'
+    'graduated' => 'nos-diplomes',
+    'works' => 'realisations'
 ];
