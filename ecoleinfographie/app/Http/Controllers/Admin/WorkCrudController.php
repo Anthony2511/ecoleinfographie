@@ -41,11 +41,6 @@ class WorkCrudController extends CrudController
         ]);
         $this->crud->addColumn
         ([
-        	'name' => 'type',
-        	'label' => 'Type de projet',
-        ]);
-        $this->crud->addColumn
-        ([
         	'name' => 'orientation',
         	'label' => 'Orientation',
         ]);
@@ -74,22 +69,6 @@ class WorkCrudController extends CrudController
                 "2D" => "Design graphique",
                 "3D" => "3D/Vidéo",
                 "web" => "Web"
-            ],
-            'allows_null' => false,
-            'tab' => $content
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'type',
-            'label' => 'Type de projet',
-            'type' => 'select2_from_array',
-            'options' => [
-                "site" => "Site web",
-                "video" => "Réalisation vidéographique",
-                "appmob" => "Application mobile",
-                "mag" => "Magazine",
-                "idvisu" => "Identité visuelle",
-                "animation" => "Animation 3D"
             ],
             'allows_null' => false,
             'tab' => $content

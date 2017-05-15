@@ -16,9 +16,8 @@ $factory->define(App\Models\Work::class, function (Faker\Generator $faker) {
     
     $title = ['fr' => $faker->text($maxNbChars = 30)];
     $orientation = $faker->randomElement($array = array('web', '3D', '2D'));
-    $type = $faker->randomElement($array = array('site', 'video', 'appmob', 'mag', 'idvisu', 'animation'));
     $year = $faker->numberBetween($min = 1995, $max = 2017);
-    $projectLink = $faker->optional($weight = 0.66, $default = null)->url();
+    $projectLink = $faker->optional($weight = 0.33, $default = null)->url();
     $video = 'https://www.youtube.com/watch?v=iNJdPyoqt8U';
     $cover = $faker->imageUrl(400, 623, 'nature');
     $description = ['fr' => $faker->paragraph($nbSentences = 14, $variableNbSentences = true)];
@@ -29,13 +28,12 @@ $factory->define(App\Models\Work::class, function (Faker\Generator $faker) {
     return [
         'title' => $title,
         'orientation' => $orientation,
-        'type' => $type,
         'year' => $year,
         'project_link' => $projectLink,
-        'video' => $video,
         'cover' => $cover,
         'description' => $description,
         'other_description' => $other_description,
-        'other_link' => $otherLink
+        'other_link' => $otherLink,
+        'type_id' => $faker->randomElement($array = array(1, 2, 3, 4, 5, 6))
     ];
 });

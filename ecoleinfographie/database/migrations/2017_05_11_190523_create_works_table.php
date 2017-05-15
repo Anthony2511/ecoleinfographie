@@ -18,7 +18,6 @@ class CreateWorksTable extends Migration
             $table->string('slug')->unique();
             $table->string('title', 255);
             $table->string('orientation', 255);
-            $table->string('type', 255);
             $table->integer('year');
             $table->string('project_link', 255)->nullable();
             $table->string('view3d', 512)->nullable();
@@ -28,6 +27,7 @@ class CreateWorksTable extends Migration
             $table->text('description');
             $table->text('other_description');
             $table->string('other_link', 255)->nullable();
+            $table->integer('type_id')->unsigned();
             $table->timestamps();
         });
     }

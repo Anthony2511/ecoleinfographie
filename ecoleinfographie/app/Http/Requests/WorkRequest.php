@@ -28,7 +28,6 @@ class WorkRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'title'             => 'required|min:2|max:255',
             'slug'              => 'unique:works,slug,' . \Request::get('id'),
             'orientation'       => 'required',
-            'type'              => 'required',
             'year'              => 'required|numeric',
             'project_link'      => 'nullable|url',
             'view3d'            => 'nullable|url',
