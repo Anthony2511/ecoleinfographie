@@ -73,6 +73,7 @@
             <a href="#"><i class="fa fa-briefcase"></i> <span>Réalisations des étudiants</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
               <li><a href="{{ url('admin/work') }}"><i class="fa fa-paint-brush"></i> <span>Travaux</span></a></li>
+              <li><a href="{{ url('admin/skill') }}"><i class="fa fa-cogs"></i> <span>Compétences technique</span></a></li>
             </ul>
           </li>
 
