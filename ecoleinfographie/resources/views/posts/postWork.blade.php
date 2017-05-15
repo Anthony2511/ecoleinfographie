@@ -53,11 +53,14 @@
 					<h3 role="heading" aria-level="3" class="rea-infos__title">Détails sur le projet</h3>
 					<dl class="rea-infos__list">
 						<dt class="rea-infos__term">Orentation</dt>
-						<dd class="rea-infos__data">{{ $orientations[$work->orientation] }}</dd>
+						<dd class="rea-infos__data">
+							<a href="#" class="rea-infos__link">{{ $orientations[$work->orientation] }}</a></dd>
 						<dt class="rea-infos__term">Année de réalisation</dt>
-						<dd class="rea-infos__data">{{ $work->year }}</dd>
+						<dd class="rea-infos__data">
+							<a href="" class="rea-infos__link">{{ $work->year }}</a></dd>
 						<dt class="rea-infos__term">Type de projet</dt>
-						<dd class="rea-infos__data">{{ $work->type }}</dd>
+						<dd class="rea-infos__data">
+							<a href="#" class="rea-infos__link">{{ $work->type }}</a></dd>
 						<dt class="rea-infos__term">Compétences/Outils</dt>
 						<dd class="rea-infos__data">
 							@foreach($work->skills as $skill)

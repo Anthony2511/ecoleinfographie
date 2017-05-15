@@ -101,6 +101,26 @@
       margin-right s(10, $sz7)
       background $cGrey-lineMenu
       vertical-align middle
+    & .rea-infos__link
+      display: inline-block
+      font-size inherit
+      @extend .linkInText
+      line-height: 1.45em
+      font-weight 400
+  &__skill
+    display: inline-block
+    font-size s($sz7, $sz7)
+    line-height: 1.45em
+    @extend .linkInText
+    font-weight: 400
+    margin-right: s(3, $sz7)
+    &:before
+      content ','
+      position: absolute
+      right: s(-3, $sz7)
+      bottom: 0
+    &:last-child:before
+      content ''
 
 .rea-share
   padding 0 s(35) 0 s(35)
