@@ -104,6 +104,17 @@ class WorkCrudController extends CrudController
         ]);
         $this->crud->addField
         ([
+            'label' => 'Les compétences utilisées',
+            'type' => 'select2_multiple',
+            'name' => 'skills',
+            'entity' => 'skills',
+            'attribute' => 'name',
+            'model' => "App\Models\Skill",
+            'pivot' => true,
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
             'label' => 'Le/les auteur(s) de la réalisation',
             'type' => 'select2_multiple',
             'name' => 'students',
