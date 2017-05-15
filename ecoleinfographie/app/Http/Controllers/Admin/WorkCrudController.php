@@ -83,6 +83,16 @@ class WorkCrudController extends CrudController
         ]);
         $this->crud->addField
         ([
+        	'name' => 'type_id',
+        	'label' => 'Type de projet',
+        	'type' => 'select2',
+            'entity' => 'types',
+            'attribute' => 'name',
+            'model' => 'App\Models\Type',
+            'tab' => $content
+        ]);
+        $this->crud->addField
+        ([
             'label' => 'Les compétences utilisées',
             'type' => 'select2_multiple',
             'name' => 'skills',
