@@ -171,7 +171,6 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-
         /*
          * Application Service Providers...
          */

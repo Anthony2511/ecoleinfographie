@@ -44,15 +44,17 @@ class WorkController extends Controller
     public function show(Work $work)
     {
         SEO::setTitle( $work->title );
-        SEO::setDescription( $work->title . ', une réalisation dans le cadre de la formation dispensée à la Haute École de la Province de Liège' );
+        $description = $work->title . ', une réalisation dans le cadre de la formation dispensée à la Haute École de la Province de Liège';
+        SEO::setDescription( $description );
+        SEO::opengraph()->addImage($work->cover);
+        SEO::opengraph()->setDescription( $description );
         
         return view('posts.postWork', [
             'work' => $work,
             'orientations' => $this->getOrientation(),
             'get3dWork' => $this->get3dWork($work->id),
             'get2dWork' => $this->get2dWork($work->id),
-            'getWebWork' => $this->getWebWork($work->id),
-            'share' => $this->share()
+            'getWebWork' => $this->getWebWork($work->id)
         ]);
     }
     
@@ -91,10 +93,4 @@ class WorkController extends Controller
         $workFromWeb = Work::whereNotIn('id', [$id])->where('orientation', 'web')->inRandomOrder()->limit(1)->first();
         return $workFromWeb;
     }
-    
-    public function share()
-    {
-        return Share::load(url('/'), 'Description de test')->services('facebook', 'twitter', 'pinterest');
-    }
-    
 }

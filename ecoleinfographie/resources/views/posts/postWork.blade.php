@@ -72,13 +72,13 @@
 						<span class="rea-share__label">Partager sur les réseaux sociaux</span>
 						<ul class="social-list-circle">
 							<li class="social-list-circle__item">
-								<a href="{{ $share['facebook'] }}" class="social-list-circle__link facebook" rel="me"><span>Partager le projet « {{ $work->title }} » sur Facebook</span></a>
+								<a href="https://www.facebook.com/sharer/sharer.php?u={{URL::current()}}&display=page" target="_blank" class="social-list-circle__link facebook" rel="me"><span>Partager le projet « {{ $work->title }} » sur Facebook</span></a>
 							</li><!--
                 --><li class="social-list-circle__item">
-								<a href="{{ $share['twitter'] }}" class="social-list-circle__link twitter" rel="me"><span>Partager le projet « {{ $work->title }} » sur Twitter</span></a>
+								<a href="https://twitter.com/home?status={{URL::current()}}" target="_blank" class="social-list-circle__link twitter" rel="me"><span>Partager le projet « {{ $work->title }} » sur Twitter</span></a>
 							</li><!--
                 --><li class="social-list-circle__item">
-								<a href="{{ $share['pinterest'] }}" class="social-list-circle__link pinterest" rel="me"><span>Partager le projet « {{ $work->title }} » sur Pinterest</span></a>
+								<a href="http://pinterest.com/pin/create/link/?url={{URL::current()}}" target="_blank" class="social-list-circle__link pinterest" rel="me"><span>Partager le projet « {{ $work->title }} » sur Pinterest</span></a>
 							</li>
 						</ul>
 					</div>
