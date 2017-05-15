@@ -4,22 +4,23 @@
     @extend .hidden
   &__item
     display: inline-block
+    &:after
+      icon('chevron-right')
+      font-size 8px
+      margin 0 s(10, 8)
+      color $cBlueCiel
+  &__item:last-child:after
+    display: none
   &__link--home
     &:before
       icon('house')
       font-size 14px
-      margin-right s(10, 14)
       color $cBlueCiel
       transition .2s ease color
     &:hover:before
     &:focus:before
       color $cBlueCiel
       transition .3s ease color
-    &:after
-      icon('chevron-right')
-      font-size 8px
-      margin-right s(10, 8)
-      color $cBlueCiel
     & span
       @extend .hidden
   &__link
