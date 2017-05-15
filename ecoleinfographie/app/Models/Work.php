@@ -95,6 +95,11 @@ class Work extends Model
         return $this->belongsToMany('App\Models\Student');
     }
     
+    public function skills()
+    {
+        return $this->belongsToMany('App\Models\Skill');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
