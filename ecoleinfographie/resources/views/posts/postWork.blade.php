@@ -59,7 +59,11 @@
 						<dt class="rea-infos__term">Type de projet</dt>
 						<dd class="rea-infos__data">{{ $work->type }}</dd>
 						<dt class="rea-infos__term">Compétences/Outils</dt>
-						<dd class="rea-infos__data">HTML, CSS, JavaScript, PHP, Wordpress, Sketch, Balsamiq</dd>
+						<dd class="rea-infos__data">
+							@foreach($work->skills as $skill)
+								<a href="{{ $skill->slug }}" class="rea-infos__skill">{{ $skill->name }}</a>
+							@endforeach
+						</dd>
 					</dl>
 					<div class="rea-share">
 						<span class="rea-share__label">Partager sur les réseaux sociaux</span>
