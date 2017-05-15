@@ -161,5 +161,4 @@ class Work extends Model
             $this->attributes['picture'] = '/img/no-avatar.jpg';
         }
     }
-    
 }

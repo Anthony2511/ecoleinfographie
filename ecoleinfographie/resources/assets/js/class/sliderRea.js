@@ -4,7 +4,6 @@ w.sliderRea = {
 
     init: function () {
         this.config();
-        this.runIframe();
         this.addWrapper();
         this.addClassToGallery();
         this.deleteBlackImg();
@@ -27,7 +26,8 @@ w.sliderRea = {
             onSliderLoad: function (el) {
               el.lightGallery({
                   selector: '.rSlider .rSlider__item--visible',
-                  download: false
+                  download: false,
+                  videoMaxWidth: '1280px'
               });
             },
 
@@ -38,17 +38,7 @@ w.sliderRea = {
         });
     },
 
-    runIframe: function () {
-        $('.rSlider__item--withIframe').on('click', function () {
 
-
-            if($(this).hasClass('hasIframe')){
-                // nothing
-            } else {
-                $(this).addClass('hasIframe').append('<iframe width="945" height="531" src="' + $(this).attr('data-iframe') + '" frameborder="0" allowfullscreen></iframe>');
-            }
-        });
-    },
 
     addWrapper: function () {
         $('.rSlider__container .lSGallery').wrap("<div class='lSGallery__container'></div>");
