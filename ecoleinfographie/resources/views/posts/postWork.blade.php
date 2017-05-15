@@ -16,7 +16,7 @@
 			<span class="rea__author">
 				Par
 				@foreach($work->students as $student)
-					<a href="#jimmyletecheur" class="rea__link" rel="author" title="Voir les autre projets de Jimmy Letecheur">{{  $student->fullname }}</a></span>
+					<a href="{{ Route('realisations-filter').'?author='. $student->slug }}" class="rea__link" rel="author" title="Voir les autre projets de Jimmy Letecheur">{{  $student->fullname }}</a></span>
 				@endforeach
 
 			<div class="rea__wrapper-top">
@@ -40,11 +40,13 @@
 							{!! file_get_contents(public_path('svg/inline-play-button.svg')) !!}
 						</li>
 						@endif
+						@if(!empty($work->images))
 						@foreach($work->images as $image)
 							<li class="rSlider__item rSlider__item--visible" data-thumb="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMin.jpg') }}" data-src="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMax.jpg') }}">
 								<img class="rSlider__img" src="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMin.jpg') }}" width="947" height="532" alt="#alt">
 							</li>
 						@endforeach
+						@endif
 						<li class="rSlider__item" data-thumb="" data-src=""></li>
 					</ul>
 				</div>
@@ -54,19 +56,19 @@
 					<dl class="rea-infos__list">
 						<dt class="rea-infos__term">Orentation</dt>
 						<dd class="rea-infos__data">
-							<a href="#" class="rea-infos__link">{{ $orientations[$work->orientation] }}</a></dd>
+							<a href="{{ Route('realisations-filter').'?orientation='. $work->orientation }}" class="rea-infos__link">{{ $orientations[$work->orientation] }}</a></dd>
 						<dt class="rea-infos__term">Année de réalisation</dt>
 						<dd class="rea-infos__data">
-							<a href="" class="rea-infos__link">{{ $work->year }}</a></dd>
+							<a href="{{ Route('realisations-filter').'?year='. $work->year }}" class="rea-infos__link">{{ $work->year }}</a></dd>
 						<dt class="rea-infos__term">Type de projet</dt>
 						<dd class="rea-infos__data">
-							<a href="#" class="rea-infos__link">
+							<a href="{{ Route('realisations-filter').'?type='. $work->type->slug }}" class="rea-infos__link">
 								{{ $work->type->name }}
 							</a></dd>
 						<dt class="rea-infos__term">Compétences/Outils</dt>
 						<dd class="rea-infos__data">
 							@foreach($work->skills as $skill)
-								<a href="{{ $skill->slug }}" class="rea-infos__skill">{{ $skill->name }}</a>
+								<a href="{{ Route('realisations-filter').'?skill='. $skill->slug }}" class="rea-infos__skill">{{ $skill->name }}</a>
 							@endforeach
 						</dd>
 					</dl>
