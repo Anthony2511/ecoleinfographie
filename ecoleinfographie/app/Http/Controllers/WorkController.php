@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Work;
 use Illuminate\Http\Request;
 use SEO;
+use Share;
 
 
 class WorkController extends Controller
@@ -50,7 +51,8 @@ class WorkController extends Controller
             'orientations' => $this->getOrientation(),
             'get3dWork' => $this->get3dWork($work->id),
             'get2dWork' => $this->get2dWork($work->id),
-            'getWebWork' => $this->getWebWork($work->id)
+            'getWebWork' => $this->getWebWork($work->id),
+            'share' => $this->share()
         ]);
     }
     
@@ -88,6 +90,11 @@ class WorkController extends Controller
     {
         $workFromWeb = Work::whereNotIn('id', [$id])->where('orientation', 'web')->inRandomOrder()->limit(1)->first();
         return $workFromWeb;
+    }
+    
+    public function share()
+    {
+        return Share::load(url('/'), 'Description de test')->services('facebook', 'twitter', 'pinterest');
     }
     
 }

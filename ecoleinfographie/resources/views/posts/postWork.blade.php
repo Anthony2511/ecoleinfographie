@@ -72,13 +72,13 @@
 						<span class="rea-share__label">Partager sur les réseaux sociaux</span>
 						<ul class="social-list-circle">
 							<li class="social-list-circle__item">
-								<a href="" class="social-list-circle__link facebook" rel="me"><span>Partager le projet « Sur un Baobab » sur Facebook</span></a>
+								<a href="{{ $share['facebook'] }}" class="social-list-circle__link facebook" rel="me"><span>Partager le projet « {{ $work->title }} » sur Facebook</span></a>
 							</li><!--
                 --><li class="social-list-circle__item">
-								<a href="" class="social-list-circle__link twitter" rel="me"><span>Partager le projet « Sur un Baobab » sur Twitter</span></a>
+								<a href="{{ $share['twitter'] }}" class="social-list-circle__link twitter" rel="me"><span>Partager le projet « {{ $work->title }} » sur Twitter</span></a>
 							</li><!--
                 --><li class="social-list-circle__item">
-								<a href="" class="social-list-circle__link pinterest" rel="me"><span>Partager le projet « Sur un Baobab » sur Pinterest</span></a>
+								<a href="{{ $share['pinterest'] }}" class="social-list-circle__link pinterest" rel="me"><span>Partager le projet « {{ $work->title }} » sur Pinterest</span></a>
 							</li>
 						</ul>
 					</div>
