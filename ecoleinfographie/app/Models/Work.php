@@ -100,6 +100,11 @@ class Work extends Model
         return $this->belongsToMany('App\Models\Skill');
     }
     
+    public function types()
+    {
+        return $this->belongsTo('App\Models\Type');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
