@@ -86,7 +86,7 @@ class WorkCrudController extends CrudController
         	'name' => 'type_id',
         	'label' => 'Type de projet',
         	'type' => 'select2',
-            'entity' => 'types',
+            'entity' => 'type',
             'attribute' => 'name',
             'model' => 'App\Models\Type',
             'tab' => $content

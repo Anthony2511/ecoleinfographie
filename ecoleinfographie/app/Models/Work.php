@@ -100,7 +100,7 @@ class Work extends Model
         return $this->belongsToMany('App\Models\Skill');
     }
     
-    public function types()
+    public function type()
     {
         return $this->belongsTo('App\Models\Type');
     }

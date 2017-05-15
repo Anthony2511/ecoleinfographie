@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Type;
 use App\Models\Work;
 use Illuminate\Http\Request;
 use SEO;
@@ -49,12 +50,15 @@ class WorkController extends Controller
         SEO::opengraph()->addImage($work->cover);
         SEO::opengraph()->setDescription( $description );
         
+        $type = Type::with('works')->get();
+        
         return view('posts.postWork', [
             'work' => $work,
             'orientations' => $this->getOrientation(),
             'get3dWork' => $this->get3dWork($work->id),
             'get2dWork' => $this->get2dWork($work->id),
-            'getWebWork' => $this->getWebWork($work->id)
+            'getWebWork' => $this->getWebWork($work->id),
+            'getType' => $type
         ]);
     }
     

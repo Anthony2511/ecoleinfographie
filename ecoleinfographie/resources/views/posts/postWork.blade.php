@@ -60,7 +60,9 @@
 							<a href="" class="rea-infos__link">{{ $work->year }}</a></dd>
 						<dt class="rea-infos__term">Type de projet</dt>
 						<dd class="rea-infos__data">
-							<a href="#" class="rea-infos__link">{{ $work->type }}</a></dd>
+							<a href="#" class="rea-infos__link">
+								{{ $work->type->name }}
+							</a></dd>
 						<dt class="rea-infos__term">Compétences/Outils</dt>
 						<dd class="rea-infos__data">
 							@foreach($work->skills as $skill)
