@@ -74,6 +74,7 @@
             <ul class="treeview-menu">
               <li><a href="{{ url('admin/work') }}"><i class="fa fa-paint-brush"></i> <span>Travaux</span></a></li>
               <li><a href="{{ url('admin/skill') }}"><i class="fa fa-cogs"></i> <span>Compétences technique</span></a></li>
+              <li><a href="{{ url('admin/type') }}"><i class="fa fa-folder"></i> <span>Type de projet</span></a></li>
             </ul>
           </li>
 
