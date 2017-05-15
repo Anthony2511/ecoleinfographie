@@ -28,6 +28,7 @@ Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('
 // Pages
 Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('nos-diplomes');
 Route::get('realisations', 'WorkController@index')->name('realisations');
+Route::get('realisations/filter', 'WorkController@filter')->name('realisations-filter');
 // Posts
 Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
