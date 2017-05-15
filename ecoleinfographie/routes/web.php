@@ -58,5 +58,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('student', 'StudentCrudController');
     CRUD::resource('work', 'WorkCrudController');
     Route::post('media-dropzone', ['uses' => 'WorkCrudController@handleDropzoneUpload']);
+    CRUD::resource('skill', 'SkillCrudController');
 });
 
