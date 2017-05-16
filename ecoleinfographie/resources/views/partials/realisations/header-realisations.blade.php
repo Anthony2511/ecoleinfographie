@@ -5,7 +5,29 @@
         </h1>
         <a href="/" class="logo">Logo</a>
         @include('partials.navigation')
-        @include('partials.breadcrumb')
+
+        <div class="breadcrumb breadcrumb--header">
+            <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+                    itemtype="http://schema.org/ListItem">
+                    <a href="#" class="breadcrumb__link breadcrumb__link--home" itemscope itemtype="http://schema.org/Thing"
+                       itemprop="item">
+                        <span itemprop="name">Page d’accueil</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+                    itemtype="http://schema.org/ListItem">
+                    <a href="#" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+                       itemprop="item">
+                        <span itemprop="name">Les travaux de nos étudiants</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+
+
         <div class="header-rea">
             <strong class="header-rea__title">Les travaux de nos étudiants</strong>
             <p class="header-rea__intro">Chaque années, nos étudiants réalisent au cours de leur formation des travaux dispensés par leurs professeurs ou des clients. En voici une sélection afin de vous montrer ce qu’il est possible d’accomplir grâce à la formation en Infographie.</p>
