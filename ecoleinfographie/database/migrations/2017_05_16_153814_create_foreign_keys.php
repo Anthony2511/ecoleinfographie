@@ -8,7 +8,7 @@ class CreateForeignKeys extends Migration {
 
 	public function up()
 	{
-		/*Schema::table('course_teacher', function(Blueprint $table) {
+		Schema::table('course_teacher', function(Blueprint $table) {
 			$table->foreign('teacher_id')->references('id')->on('teachers')
 						->onDelete('restrict')
 						->onUpdate('restrict');
@@ -17,7 +17,7 @@ class CreateForeignKeys extends Migration {
 			$table->foreign('course_id')->references('id')->on('courses')
 						->onDelete('restrict')
 						->onUpdate('restrict');
-		});*/
+		});
         Schema::table('skill_work', function(Blueprint $table) {
             $table->foreign('work_id')->references('id')->on('works')
                   ->onDelete('restrict')
@@ -43,6 +43,27 @@ class CreateForeignKeys extends Migration {
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
+        Schema::table('articles', function(Blueprint $table) {
+            $table->foreign('category_id')->references('id')->on('categories')
+                  ->onDelete('restrict')
+                  ->onUpdate('restrict');
+        });
+        Schema::table('articles', function(Blueprint $table) {
+            $table->foreign('author_id')->references('id')->on('authors')
+                  ->onDelete('restrict')
+                  ->onUpdate('restrict');
+        });
+        Schema::table('articles', function(Blueprint $table) {
+            $table->foreign('teacher_id')->references('id')->on('teachers')
+                  ->onDelete('restrict')
+                  ->onUpdate('restrict');
+        });
+        Schema::table('comments', function(Blueprint $table) {
+            $table->foreign('post_id')->references('id')->on('articles')
+                  ->onDelete('restrict')
+                  ->onUpdate('restrict');
+        });
+        
 	}
 
 	public function down()
@@ -68,5 +89,17 @@ class CreateForeignKeys extends Migration {
         Schema::table('works', function(Blueprint $table) {
             $table->dropForeign('works_type_id_foreign');
         });
-	}
+        Schema::table('articles', function(Blueprint $table) {
+            $table->dropForeign('articles_category_id_foreign');
+        });
+        Schema::table('articles', function(Blueprint $table) {
+            $table->dropForeign('articles_author_id_foreign');
+        });
+        Schema::table('articles', function(Blueprint $table) {
+            $table->dropForeign('articles_teacher_id_foreign');
+        });
+        Schema::table('comments', function(Blueprint $table) {
+            $table->dropForeign('comments_post_id_foreign');
+        });
+    }
 }
