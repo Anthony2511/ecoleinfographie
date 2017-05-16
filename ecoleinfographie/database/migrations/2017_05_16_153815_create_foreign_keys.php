@@ -8,7 +8,7 @@ class CreateForeignKeys extends Migration {
 
 	public function up()
 	{
-		Schema::table('course_teacher', function(Blueprint $table) {
+		/*Schema::table('course_teacher', function(Blueprint $table) {
 			$table->foreign('teacher_id')->references('id')->on('teachers')
 						->onDelete('restrict')
 						->onUpdate('restrict');
@@ -42,7 +42,7 @@ class CreateForeignKeys extends Migration {
             $table->foreign('type_id')->references('id')->on('types')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
-        });
+        });*/
         Schema::table('articles', function(Blueprint $table) {
             $table->foreign('category_id')->references('id')->on('categories')
                   ->onDelete('restrict')

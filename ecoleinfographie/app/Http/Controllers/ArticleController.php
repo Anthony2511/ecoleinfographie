@@ -15,6 +15,4 @@ class ArticleController extends Controller
         
         return view('pages.blog');
     }
-    
-    
 }
