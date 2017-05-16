@@ -73,15 +73,6 @@ class ArticleCrudController extends CrudController
             'type'  => 'date'
         ], 'update');
         
-        $this->crud->addField
-        ([
-            'name'        => 'orientation',
-            'label'       => 'Catégorie principale (orientation)',
-            'type'        => 'select2_from_array',
-            'options'     => ['web' => 'Web', '2D' => 'Design graphique', '3D' => '3D/Vidéo'],
-            'allows_null' => false
-        ]);
-        
         $this->crud->addField([
             'name'    => 'image',
             'label'   => 'Image de couverture',
@@ -101,8 +92,20 @@ class ArticleCrudController extends CrudController
             'label' => 'Contenu de l’article',
             'type'  => 'ckeditor',
         ]);
+        $this->crud->addField
+        ([
+            'name' => 'orientation',
+            'label' => 'Orientation',
+            'type' => 'select2_from_array',
+            'options' => [
+                "2D" => "Design graphique",
+                "3D" => "3D/Vidéo",
+                "web" => "Web"
+            ],
+            'allows_null' => false,
+        ]);
         $this->crud->addField([    // SELECT
-            'label'     => "Catégorie",
+            'label'     => "Sous-catégorie",
             'type'      => 'select2',
             'name'      => 'category_id',
             'entity'    => 'category',
