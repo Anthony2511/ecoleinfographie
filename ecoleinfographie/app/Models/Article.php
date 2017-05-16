@@ -40,8 +40,7 @@ class Article extends Model
     // protected $dates = [];
     protected $casts = [
         'featured' => 'boolean',
-        'date'     => 'date',
-        'orientation' => 'array'
+        'date'     => 'date'
     ];
     
     /**
