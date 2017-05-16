@@ -15,13 +15,15 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table){
             $table->increments('id');
-            $table->integer('category_id')->unsigned();
-            $table->string('title');
-            $table->string('slug')->default('');
+            $table->string('title', 255);
+            $table->string('slug', 255);
+            $table->text('introduction')->nullable();
             $table->text('content');
             $table->string('image')->nullable();
-            $table->enum('status', ['PUBLIÉ', 'BROUILLON'])->default('BROUILLON');
-            $table->date('date');
+            $table->enum('status', array('PUBLIÉ', 'BROUILLON'))->default('BROUILLON');
+            $table->integer('category_id')->unsigned();
+            $table->integer('author_id')->unsigned()->nullable();
+            $table->integer('teacher_id')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
