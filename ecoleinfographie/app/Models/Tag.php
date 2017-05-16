@@ -53,7 +53,7 @@ class Tag extends Model
     
     public function articles()
     {
-        return $this->hasMany('App\Models\Article');
+        return $this->belongsToMany('App\Models\Article');
     }
     
     /*
