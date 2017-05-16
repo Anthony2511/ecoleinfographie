@@ -62,6 +62,19 @@ class Article extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function getImageArticle($suffix)
+    {
+        $basePath = 'uploads/articles/';
+        $fullname = pathinfo($this->image, PATHINFO_FILENAME);
+        $imageArticle = $basePath . $fullname . $suffix;
+        
+        if (file_exists($imageArticle)) {
+            return URL('/') . '/' . $imageArticle;
+        } else {
+            return $imageArticle = URL('/') . '/img/no-avatar.jpg';
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
