@@ -121,11 +121,21 @@ class ArticleCrudController extends CrudController
             'model'     => "App\Models\Tag",
             'pivot'     => true,
         ]);
+        $this->crud->addField
+        ([
+            'name' => 'teacher_id',
+            'label' => 'Auteur de l’article (si professeur)',
+            'type' => 'select2',
+            'entity' => 'teacher',
+            'attribute' => 'fullname',
+            'model' => 'App\Models\Teacher'
+        ]);
         $this->crud->addField([    // ENUM
             'name'  => 'status',
             'label' => "Statut de l’article",
             'type'  => 'enum'
         ]);
+        
     }
     
     public function store(StoreRequest $request)
