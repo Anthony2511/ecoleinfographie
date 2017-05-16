@@ -73,7 +73,10 @@ class ArticleCrudController extends CrudController {
         $this->crud->addField([
             'name' => 'image',
             'label' => 'Image de couverture',
-            'type' => 'image'
+            'type' => 'image',
+            'upload' => true,
+            'crop' => true,
+            'default' => 'img/cover-blog.jpg',
         ]);
         $this->crud->addField
         ([
