@@ -103,6 +103,11 @@ class Teacher extends Model
         return $this->belongsToMany('App\Models\Course');
     }
     
+    public function articles()
+    {
+        return $this->hasMany('App\Models\Article');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
