@@ -44,6 +44,9 @@ class WorkCrudController extends CrudController
         	'name' => 'orientation',
         	'label' => 'Orientation',
         ]);
+    
+        // ------ CRUD BUTTONS
+        $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
         
         /// DONT FORGET : ADD COLUMN AUTHOR
     
