@@ -52,45 +52,42 @@ class ArticleCrudController extends CrudController {
         ]);
         
         // ------ CRUD FIELDS
-        $this->crud->addField([    // TEXT
+        $this->crud->addField([
             'name' => 'title',
-            'label' => 'Title',
+            'label' => 'Titre de l’article',
             'type' => 'text',
-            'placeholder' => 'Your title here'
+            'placeholder' => 'Votre titre ici'
         ]);
         $this->crud->addField([
-            'name' => 'slug',
-            'label' => "Slug (URL)",
-            'type' => 'text',
-            'hint' => 'Will be automatically generated from your title, if left empty.'
-            // 'disabled' => 'disabled'
-        ]);
-        
-        $this->crud->addField([    // TEXT
             'name' => 'date',
-            'label' => 'Date',
+            'label' => 'Date de publication',
             'type' => 'date',
             'value' => date('Y-m-d')
         ], 'create');
-        $this->crud->addField([    // TEXT
+        $this->crud->addField([
             'name' => 'date',
-            'label' => 'Date',
+            'label' => 'Date de publication',
             'type' => 'date'
         ], 'update');
-        
-        $this->crud->addField([    // WYSIWYG
-            'name' => 'content',
-            'label' => 'Content',
-            'type' => 'ckeditor',
-            'placeholder' => 'Your textarea text here'
-        ]);
-        $this->crud->addField([    // Image
+    
+        $this->crud->addField([
             'name' => 'image',
-            'label' => 'Image',
-            'type' => 'browse'
+            'label' => 'Image de couverture',
+            'type' => 'image'
+        ]);
+        $this->crud->addField
+        ([
+        	'name' => 'introduction',
+        	'label' => 'Texte d’introduction de l’article',
+        	'type' => 'textarea',
+        ]);
+        $this->crud->addField([
+            'name' => 'content',
+            'label' => 'Contenu de l’article',
+            'type' => 'ckeditor',
         ]);
         $this->crud->addField([    // SELECT
-            'label' => "Category",
+            'label' => "Catégorie",
             'type' => 'select2',
             'name' => 'category_id',
             'entity' => 'category',
@@ -108,7 +105,7 @@ class ArticleCrudController extends CrudController {
         ]);
         $this->crud->addField([    // ENUM
             'name' => 'status',
-            'label' => "Status",
+            'label' => "Statut de l’article",
             'type' => 'enum'
         ]);
     }
