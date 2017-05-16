@@ -25,6 +25,7 @@ class Article extends Model
     protected $fillable = [
         'slug',
         'title',
+        'orientation',
         'content',
         'image',
         'introduction',
@@ -40,6 +41,7 @@ class Article extends Model
     protected $casts = [
         'featured' => 'boolean',
         'date'     => 'date',
+        'orientation' => 'array'
     ];
     
     /**
@@ -99,7 +101,7 @@ class Article extends Model
     
     public function scopePublished($query)
     {
-        return $query->where('status', 'PUBLISHED')
+        return $query->where('status', 'PUBLIÉ')
                      ->where('date', '<=', date('Y-m-d'))
                      ->orderBy('date', 'DESC');
     }
