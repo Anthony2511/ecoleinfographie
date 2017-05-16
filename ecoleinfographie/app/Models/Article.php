@@ -92,6 +92,11 @@ class Article extends Model
         return $this->belongsToMany('App\Models\Tag', 'article_tag');
     }
     
+    public function teacher()
+    {
+        return $this->belongsTo('App\Models\Teacher');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
