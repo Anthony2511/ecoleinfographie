@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\ArticleRequest as StoreRequest;
+use App\Http\Requests\ArticleRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\ArticleRequest as StoreRequest;
-use App\Http\Requests\ArticleRequest as UpdateRequest;
 
-class ArticleCrudController extends CrudController {
+class ArticleCrudController extends CrudController
+{
     
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         
         /*
@@ -30,86 +32,96 @@ class ArticleCrudController extends CrudController {
         
         // ------ CRUD COLUMNS
         $this->crud->addColumn([
-            'name' => 'date',
+            'name'  => 'date',
             'label' => 'Date',
-            'type' => 'date'
+            'type'  => 'date'
         ]);
         $this->crud->addColumn([
-            'name' => 'status',
+            'name'  => 'status',
             'label' => "Status"
         ]);
         $this->crud->addColumn([
-            'name' => 'title',
+            'name'  => 'title',
             'label' => "Title"
         ]);
         $this->crud->addColumn([
-            'label' => "Category",
-            'type' => 'select',
-            'name' => 'category_id',
-            'entity' => 'category',
+            'label'     => "Category",
+            'type'      => 'select',
+            'name'      => 'category_id',
+            'entity'    => 'category',
             'attribute' => 'name',
-            'model' => "App\Models\Category"
+            'model'     => "App\Models\Category"
         ]);
         
         // ------ CRUD FIELDS
         $this->crud->addField([
-            'name' => 'title',
-            'label' => 'Titre de l’article',
-            'type' => 'text',
+            'name'        => 'title',
+            'label'       => 'Titre de l’article',
+            'type'        => 'text',
             'placeholder' => 'Votre titre ici'
         ]);
         $this->crud->addField([
-            'name' => 'date',
+            'name'  => 'date',
             'label' => 'Date de publication',
-            'type' => 'date',
+            'type'  => 'date',
             'value' => date('Y-m-d')
         ], 'create');
+        
         $this->crud->addField([
-            'name' => 'date',
+            'name'  => 'date',
             'label' => 'Date de publication',
-            'type' => 'date'
+            'type'  => 'date'
         ], 'update');
-    
+        
+        $this->crud->addField
+        ([
+            'name'        => 'orientation',
+            'label'       => 'Catégorie principale (orientation)',
+            'type'        => 'select2_from_array',
+            'options'     => ['web' => 'Web', '2D' => 'Design graphique', '3D' => '3D/Vidéo'],
+            'allows_null' => false
+        ]);
+        
         $this->crud->addField([
-            'name' => 'image',
-            'label' => 'Image de couverture',
-            'type' => 'image',
-            'upload' => true,
-            'crop' => true,
+            'name'    => 'image',
+            'label'   => 'Image de couverture',
+            'type'    => 'image',
+            'upload'  => true,
+            'crop'    => true,
             'default' => 'img/cover-blog.jpg',
         ]);
         $this->crud->addField
         ([
-        	'name' => 'introduction',
-        	'label' => 'Texte d’introduction de l’article',
-        	'type' => 'textarea',
+            'name'  => 'introduction',
+            'label' => 'Texte d’introduction de l’article',
+            'type'  => 'textarea',
         ]);
         $this->crud->addField([
-            'name' => 'content',
+            'name'  => 'content',
             'label' => 'Contenu de l’article',
-            'type' => 'ckeditor',
+            'type'  => 'ckeditor',
         ]);
         $this->crud->addField([    // SELECT
-            'label' => "Catégorie",
-            'type' => 'select2',
-            'name' => 'category_id',
-            'entity' => 'category',
+            'label'     => "Catégorie",
+            'type'      => 'select2',
+            'name'      => 'category_id',
+            'entity'    => 'category',
             'attribute' => 'name',
-            'model' => "App\Models\Category"
+            'model'     => "App\Models\Category"
         ]);
         $this->crud->addField([    // Select2Multiple = n-n
-            'label' => 'Tags',
-            'type' => 'select2_multiple',
-            'name' => 'tags',
-            'entity' => 'tags',
+            'label'     => 'Tags',
+            'type'      => 'select2_multiple',
+            'name'      => 'tags',
+            'entity'    => 'tags',
             'attribute' => 'name',
-            'model' => "App\Models\Tag",
-            'pivot' => true,
+            'model'     => "App\Models\Tag",
+            'pivot'     => true,
         ]);
         $this->crud->addField([    // ENUM
-            'name' => 'status',
+            'name'  => 'status',
             'label' => "Statut de l’article",
-            'type' => 'enum'
+            'type'  => 'enum'
         ]);
     }
     
