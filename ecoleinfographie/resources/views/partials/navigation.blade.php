@@ -133,7 +133,7 @@
             <a href="{{ route('nos-diplomes') }}" class="menu__link">Nos diplômés</a>
         </li>
         <li class="menu__item" >
-            <a href="blog" class="menu__link">Blog</a>
+            <a href="{{ Route('blog') }}" class="menu__link">Blog</a>
         </li>
         <li class="menu__item">
             <a href="inscription" class="menu__link menu__link--cta">Je veux m’inscrire</a>
