@@ -13,32 +13,33 @@
         </div>
     </section>
 
+
     <section class="blog-category">
         <h3 role="heading" aria-level="3" class="blog-category__title">Catégories</h3>
         <ul class="blog-category__list">
             <li class="blog-category__main-item blog-category__main-item--web"><span>Web</span></li>
             <ul class="blog-category__sublist">
-                <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
+                @foreach($subCategoriesWeb as $category)
+                    <a href="{{ Route('blog') . '?category=web&subcategory=' . $category->slug  . '#anchor'}}"><li class="blog-category__subitem">{{ $category->name }}</li></a>
+                @endforeach
                 <a href="{{ Route('blog') . '?category=web#anchor' }}"><li class="blog-category__subitem">Tous les articles</li></a>
             </ul>
         </ul>
         <ul class="blog-category__list">
             <li class="blog-category__main-item blog-category__main-item--2D"><span>Design graphique</span></li>
             <ul class="blog-category__sublist">
-                <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
+                @foreach($subCategories2d as $category)
+                    <a href="{{ Route('blog') . '?category=2D&subcategory=' . $category->slug . '#anchor'}}"><li class="blog-category__subitem">{{ $category->name }}</li></a>
+                @endforeach
                 <a href="{{ Route('blog') . '?category=2D#anchor' }}"><li class="blog-category__subitem">Tous les articles</li></a>
             </ul>
         </ul>
         <ul class="blog-category__list">
             <li class="blog-category__main-item blog-category__main-item--3D"><span>3D/Vidéo</span></li>
             <ul class="blog-category__sublist">
-                <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
+                @foreach($subCategories3d as $category)
+                    <a href="{{ Route('blog') . '?category=3D&subcategory=' . $category->slug . '#anchor'}}"><li class="blog-category__subitem">{{ $category->name }}</li></a>
+                @endforeach
                 <a href="{{ Route('blog') . '?category=3D#anchor' }}"><li class="blog-category__subitem">Tous les articles</li></a>
             </ul>
         </ul>
