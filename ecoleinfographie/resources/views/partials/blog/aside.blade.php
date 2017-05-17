@@ -21,7 +21,7 @@
                 <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
                 <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
                 <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Tous les articles</li></a>
+                <a href="{{ Route('blog') . '?category=web#anchor' }}"><li class="blog-category__subitem">Tous les articles</li></a>
             </ul>
         </ul>
         <ul class="blog-category__list">
@@ -30,7 +30,7 @@
                 <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
                 <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
                 <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Tous les articles</li></a>
+                <a href="{{ Route('blog') . '?category=2D#anchor' }}"><li class="blog-category__subitem">Tous les articles</li></a>
             </ul>
         </ul>
         <ul class="blog-category__list">
@@ -39,7 +39,7 @@
                 <a href="#subitem"><li class="blog-category__subitem">Tutoriels</li></a>
                 <a href="#subitem"><li class="blog-category__subitem">Articles de veille</li></a>
                 <a href="#subitem"><li class="blog-category__subitem">Cours</li></a>
-                <a href="#subitem"><li class="blog-category__subitem">Tous les articles</li></a>
+                <a href="{{ Route('blog') . '?category=3D#anchor' }}"><li class="blog-category__subitem">Tous les articles</li></a>
             </ul>
         </ul>
     </section>
