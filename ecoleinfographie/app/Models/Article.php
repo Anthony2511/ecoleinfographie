@@ -5,12 +5,16 @@ namespace App\Models;
 use Backpack\CRUD\CrudTrait;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+//use Backpack\CRUD\ModelTraits\SpatieTranslatable\Sluggable;
+//use Backpack\CRUD\ModelTraits\SpatieTranslatable\SluggableScopeHelpers;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use App\Utils\Utils;
 
 class Article extends Model
 {
     use CrudTrait;
     use Sluggable;
+    use HasTranslations;
     
     /*
     |--------------------------------------------------------------------------
@@ -42,6 +46,7 @@ class Article extends Model
         'featured' => 'boolean',
         'date'     => 'date'
     ];
+    protected $translatable = ['title', 'content', 'introduction'];
     
     /**
      * Return the sluggable configuration array for this model.
