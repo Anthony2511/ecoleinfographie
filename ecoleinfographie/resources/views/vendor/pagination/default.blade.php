@@ -1,10 +1,38 @@
+<div class="blog-pagination">
+    {{-- Previous Page Link --}}
+    @if ($paginator->onFirstPage())
+        <span class="blog-pagination__button blog-pagination__button--prev blog-pagination__button--noclick" rel="prev">
+            <span class="blog-pagination__button--hidden">Page </span><span>Précédent</span>
+        </span>
+    @else
+        <a href="{{ $paginator->previousPageUrl() . '#anchor' }}" class="blog-pagination__button blog-pagination__button--prev" rel="prev">
+            <span class="blog-pagination__button--hidden">Page </span><span>Précédent</span>
+        </a>
+    @endif
+
+    {{-- Next Page Link --}}
+    @if ($paginator->hasMorePages())
+        <a href="{{ $paginator->nextPageUrl() . '#anchor'}}" class="blog-pagination__button blog-pagination__button--next" rel="prev">
+            <span class="blog-pagination__button--hidden">Page </span><span>Suivant</span>
+        </a>
+    @else
+        <span class="blog-pagination__button blog-pagination__button--next blog-pagination__button--noclick" rel="prev">
+            <span class="blog-pagination__button--hidden">Page </span><span>Précédent</span>
+        </span>
+    @endif
+
+
+
 @if ($paginator->hasPages())
-    <ul class="pagination">
+    <ul class="blog-pagination__list">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li class="disabled"><span>&laquo;</span></li>
         @else
-            <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+            <li class="blog-pagination__item">
+                <a class="blog-pagination__link" href="{{ Route(Route::currentRouteName()) .'?page=1#anchor'}}" rel="prev">
+                    &laquo;
+                </a>
+            </li>
         @endif
 
         {{-- Pagination Elements --}}
@@ -18,9 +46,9 @@
             @if (is_array($element))
                 @foreach ($element as $page => $url)
                     @if ($page == $paginator->currentPage())
-                        <li class="active"><span>{{ $page }}</span></li>
+                        <li class="blog-pagination__item"><span class="blog-pagination__link blog-pagination__link--active">{{ $page }}</span></li>
                     @else
-                        <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        <li class="blog-pagination__item"><a class="blog-pagination__link" href="{{ $url }}#anchor">{{ $page }}</a></li>
                     @endif
                 @endforeach
             @endif
@@ -28,9 +56,14 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li><a href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
-        @else
-            <li class="disabled"><span>&raquo;</span></li>
+            <li class="blog-pagination__item">
+                <a class="blog-pagination__link" href="{{ Route(Route::currentRouteName()) .'?page=' . $paginator->lastPage() . '#anchor' }}" rel="next">
+                    &raquo;
+                </a>
+            </li>
         @endif
     </ul>
 @endif
+
+
+</div>

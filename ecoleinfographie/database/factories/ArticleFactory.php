@@ -17,8 +17,7 @@ $factory->define(App\Models\Article::class, function (Faker\Generator $faker) {
     $title = $faker->sentence($nbWords = 7, $variableNbWords = true);
     $image = $faker->imageUrl($width = 358, $height = 264);
     $introduction = $faker->paragraph($nbSentences = 4, $variableNbSentences = true);
-    $orientation = $faker->randomElement($array = array('web', '3D', '2D'clear));
-    
+    $orientation = $faker->randomElement($array = array('web', '3D', '2D'));
     
     return [
         'title' => ['fr' => $title],
