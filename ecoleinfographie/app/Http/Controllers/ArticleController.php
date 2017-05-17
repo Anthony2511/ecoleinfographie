@@ -16,7 +16,11 @@ class ArticleController extends Controller
         if ($request->has('search'))
         {
             $search = $request->get('search');
-            $articles = Article::published()->where('title', 'LIKE', '%' . $search . '%')->paginate(8);
+            $articles = Article::published()
+                ->where('title', 'LIKE', '%' . $search . '%')
+                ->orWhere('content', 'LIKE', '%' . $search . '%')
+                ->orWhere('introduction', 'LIKE', '%' . $search . '%')
+                ->paginate(8);
         
             return view('pages.blog', [
                 'articles' => $articles,
