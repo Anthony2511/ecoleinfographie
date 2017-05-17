@@ -17,6 +17,21 @@
     padding s(50, $sz5) 0 s(30, $sz5)
   & .blog-card
     margin-bottom s(85)
+  &__result
+    display: block
+    margin-top s(15, $sz5)
+    & strong
+      display: inline-block
+      padding 10px 15px
+      color $cBlueCiel
+      background-color $cWhite
+
+.no-articles
+  font-size s($sz6)
+  line-height: 1.62em
+  & a
+    font-size inherit
+    @extend .linkInText
 
 // Modernizez no-flexbox
 .no-flexbox

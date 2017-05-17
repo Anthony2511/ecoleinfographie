@@ -70,8 +70,7 @@
         color #BFBFBF
       &:before
         color #BFBFBF
-      &:after
-        display: none
+
   &__list
     display: block
     text-align: center
@@ -93,3 +92,11 @@
       font-weight 700
       color $cBlack
 
+.blog-pagination__button--prev.blog-pagination__button--noclick
+  &:after
+    display: none
+.blog-pagination__button--next.blog-pagination__button--noclick
+  &:before
+    display: none
+  &:after
+    color #BFBFBF
