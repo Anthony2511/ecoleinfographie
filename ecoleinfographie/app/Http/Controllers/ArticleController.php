@@ -3,33 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use App\Models\Teacher;
 use Illuminate\Http\Request;
 use SEO;
 
 
 class ArticleController extends Controller
 {
-    protected function index(Article $article)
+    protected function index(Request $request)
     {
         $articles = Article::published()->paginate(8);
-        /*$teacher = Article::with('teacher')->first();*/
-        /*$teacher = Article::whereHas('teacher', function ($query) use ($article){
-            $query->where('id', $article->id)->get('teacher');
-        });*/
+    
+        if ($request->has('search'))
+        {
+            $search = $request->get('search');
+            $articles = Article::published()->where('title', 'LIKE', '%' . $search . '%')->paginate(8);
+        
+            return view('pages.blog', [
+                'articles' => $articles,
+                'orientation' => $this->getOrientation()
+            ]);
+        }
         
         return view('pages.blog', [
-            'articles' => $articles,
+            'articles'    => $articles,
             'orientation' => $this->getOrientation(),
-            /*'teacher' => $teacher*/
         ]);
     }
     
-    /*public function getTeacher($id)
-    {
-        $teacher = Teacher::with('articles')->where('id', $id )->first();
-        return $teacher;
-    }*/
+    
+
     
     public function getOrientation()
     {
@@ -42,7 +44,20 @@ class ArticleController extends Controller
         return $orientations;
     }
     
-    
+    public function autocomplete(Request $request)
+    {
+        $term = $request->get('term');
+        
+        $results = array();
+        
+        $queries = Article::where('title', 'LIKE', '%' . $term . '%')->published()->take(5)->get();
+        
+        foreach ($queries as $query) {
+            $results[] = ['slug' => $query->slug, 'value' => $query->title];
+        }
+        
+        return \Response::json($results);
+    }
     
     
 }
