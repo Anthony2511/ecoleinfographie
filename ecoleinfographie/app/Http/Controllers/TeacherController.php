@@ -21,7 +21,8 @@ class TeacherController extends Controller
             'teacher' => $teacher,
             'imageProfile' => $teacher->getImageProfile('_profile.jpg'),
             'imageCard' => $teacher->getImageProfile('_card.jpg'),
-            $this->setMetas($teacher)
+            $this->setMetas($teacher),
+            'orientation' => $this->getOrientation()
         ]);
     }
     
@@ -29,6 +30,17 @@ class TeacherController extends Controller
     {
         SEO::setTitle($teacher->fullname);
         SEO::setDescription('La page de ' . $teacher->fullname . ' ' . strtolower($teacher->role) . ' à la Haute École de la Province de Liège en infographie');
+    }
+    
+    public function getOrientation()
+    {
+        $orientations = [
+            '2D'  => trans('programCourse.2D'),
+            '3D'  => trans('programCourse.3D'),
+            'web' => trans('programCourse.web')
+        ];
+        
+        return $orientations;
     }
     
 }
