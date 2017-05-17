@@ -1,5 +1,13 @@
 <div class="blog-pagination">
     {{-- Previous Page Link --}}
+    <?php if (Request::has('search'))
+    {
+        $search = '&search=' . Request::get('search');
+    }  else {
+        $search = '';
+    }
+    ?>
+
     @if ($paginator->onFirstPage())
         <span class="blog-pagination__button blog-pagination__button--prev blog-pagination__button--noclick" rel="prev">
             <span class="blog-pagination__button--hidden">Page </span><span>Précédent</span>
@@ -29,7 +37,7 @@
         @if ($paginator->onFirstPage())
         @else
             <li class="blog-pagination__item">
-                <a class="blog-pagination__link" href="{{ Route(Route::currentRouteName()) .'?page=1#anchor'}}" rel="prev">
+                <a class="blog-pagination__link" href="{{ Route(Route::currentRouteName()) .'?page=1' . $search . '#anchor'}}" rel="prev">
                     &laquo;
                 </a>
             </li>
@@ -48,16 +56,19 @@
                     @if ($page == $paginator->currentPage())
                         <li class="blog-pagination__item"><span class="blog-pagination__link blog-pagination__link--active">{{ $page }}</span></li>
                     @else
-                        <li class="blog-pagination__item"><a class="blog-pagination__link" href="{{ $url }}#anchor">{{ $page }}</a></li>
+                        <li class="blog-pagination__item"><a class="blog-pagination__link" href="{{ $url . $search }}#anchor">{{ $page }}</a></li>
                     @endif
                 @endforeach
             @endif
         @endforeach
 
         {{-- Next Page Link --}}
+
         @if ($paginator->hasMorePages())
             <li class="blog-pagination__item">
-                <a class="blog-pagination__link" href="{{ Route(Route::currentRouteName()) .'?page=' . $paginator->lastPage() . '#anchor' }}" rel="next">
+                <a class="blog-pagination__link"
+                   href="
+                    {{ Route(Route::currentRouteName()) . '?page=' . $paginator->lastPage() . $search . '#anchor' }}" rel="next">
                     &raquo;
                 </a>
             </li>
