@@ -167,12 +167,16 @@ class Teacher extends Model
             $image = \Image::make($value);
             $imageProfile = \Image::make($value)->fit(295,281);
             $imageCards = \Image::make($value)->fit(313,180);
+            $image60x60 = \Image::make($value)->fit(60,60);
+            $image30x30 = \Image::make($value)->fit(30,30);
             // 1. Generate a filename.
             $filename = md5($value.time());
             // 2. Store the image original on disk and new sizes.
             \Storage::disk($disk)->put($path.'/'.$filename.'.jpg', $image->stream());
             Utils::storeNewSize($path, $filename, '_profile', $imageProfile);
             Utils::storeNewSize($path, $filename, '_cards', $imageCards);
+            Utils::storeNewSize($path, $filename, '_60x60', $image60x60);
+            Utils::storeNewSize($path, $filename, '_30x30', $image30x30);
             
             // 3. Save the path of original image to the database
             $this->attributes[$attribute_name] = $path.'/'.$filename.'.jpg';
