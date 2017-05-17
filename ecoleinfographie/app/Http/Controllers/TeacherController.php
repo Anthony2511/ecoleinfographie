@@ -16,7 +16,6 @@ class TeacherController extends Controller
     
     protected function show(Teacher $teacher)
     {
-        
         return view('posts.postTeacher', [
             'teacher' => $teacher,
             'imageProfile' => $teacher->getImageProfile('_profile.jpg'),

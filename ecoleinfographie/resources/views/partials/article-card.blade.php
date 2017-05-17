@@ -1,7 +1,7 @@
 <article class="blog-card">
 	<a href="{{ Route('blog').'/'.$article->slug }}" class="blog-card__go-article"><span>Lire l’article {{ $article->title }}</span></a>
 	<header class="blog-card__header">
-		<a href="{{ Route('blog').'/'.strtolower($article->orientation) }}" class="blog-card__category blog-card__category--{{ $article->orientation }}">{{ $orientation[$article->orientation] }}</a>
+		<a href="{{ Route('blog'). '?category=' . $article->orientation }}#anchor" class="blog-card__category blog-card__category--{{ $article->orientation }}">{{ $orientation[$article->orientation] }}</a>
 		<img src="{{ $article->getImageArticle('_cards.jpg') }}" width="358" height="264" alt="Image illustrant l’article « {{ $article->title }} »" class="blog-card__img">
 	</header>
 	<h3 role="heading" aria-level="3" class="blog-card__title">{{ str_limit($article->title, 50, '…') }}</h3>
