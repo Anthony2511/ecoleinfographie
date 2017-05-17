@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use SEO;
 
@@ -18,17 +19,25 @@ class ArticleController extends Controller
             return $this->search($request);
         }
         
-        if ($request->has('category')) {
-            return $this->getCategory($request);
+        if ($request->has('category') && !$request->has('subcategory')) {
+            return $this->searchCategory($request);
         }
+    
+        if ($request->has('category') && ('subcategory')) {
+            return $this->searchSubCategories($request);
+        }
+        
         
         return view('pages.blog', [
             'articles'    => $articles,
-            'orientation' => $this->getOrientation()
+            'orientation' => $this->getOrientation(),
+            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
+            'subCategories2d' => $this->getSubCategories2d(),
+            'subCategories3d' => $this->getSubCategories3d()
         ]);
     }
     
-    public function getCategory($request)
+    public function searchCategory($request)
     {
         $search = $request->get('category');
         
@@ -38,7 +47,10 @@ class ArticleController extends Controller
         
         return view('pages.blog', [
             'articles'    => $articles,
-            'orientation' => $this->getOrientation()
+            'orientation' => $this->getOrientation(),
+            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
+            'subCategories2d' => $this->getSubCategories2d(),
+            'subCategories3d' => $this->getSubCategories3d()
         ]);
     }
     
@@ -53,10 +65,57 @@ class ArticleController extends Controller
         
         return view('pages.blog', [
             'articles'    => $articles,
-            'orientation' => $this->getOrientation()
+            'orientation' => $this->getOrientation(),
+            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
+            'subCategories2d' => $this->getSubCategories2d(),
+            'subCategories3d' => $this->getSubCategories3d()
         ]);
     }
     
+    public function searchSubCategories($request)
+    {
+        $category = $request->get('category');
+   
+        $articles = Article::published()->whereHas('category', function ($query){
+           $query->where('slug', 'LIKE', Request('subcategory'));
+        })->where('orientation', 'LIKE', '%' . $category . '%')->paginate(8);
+    
+        return view('pages.blog', [
+            'articles'    => $articles,
+            'orientation' => $this->getOrientation(),
+            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
+            'subCategories2d' => $this->getSubCategories2d(),
+            'subCategories3d' => $this->getSubCategories3d()
+        ]);
+    }
+    
+    public function getSubCategoriesWeb()
+    {
+        $subCategoriesWeb = Category::whereHas('articles', function ($query){
+            $query->where('orientation', 'web');
+        })->orderBy('name', 'ASC')->get();
+        
+        return $subCategoriesWeb;
+    }
+    
+    public function getSubCategories2d()
+    {
+        $subCategories2d = Category::whereHas('articles', function ($query){
+            $query->where('orientation', '2d');
+        })->orderBy('name', 'ASC')->get();
+    
+        return $subCategories2d;
+    }
+    
+    public function getSubCategories3d()
+    {
+        $subCategories3d = Category::whereHas('articles', function ($query){
+            $query->where('orientation', '3d');
+        })->orderBy('name', 'ASC')->get();
+        
+        return $subCategories3d;
+    }
+       
     public function getOrientation()
     {
         $orientations = [
