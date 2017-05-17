@@ -30,7 +30,10 @@ Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('nos-diplom
 Route::get('realisations', 'WorkController@index')->name('realisations');
 Route::get('realisations/filter', 'WorkController@filter')->name('realisations-filter');
 Route::get('blog', 'ArticleController@index')->name('blog');
-Route::get('blog/{category}', 'ArticleController@index')->name('category');
+Route::get('blog/search/autocomplete', 'ArticleController@autocomplete');
+
+
+
 // Posts
 Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
