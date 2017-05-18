@@ -34,6 +34,8 @@ class ArticleRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'date'         => 'required|date',
             'status'       => 'required',
             'category_id'  => 'required',
+            'author_id'    => 'required_if:teacher_id,""',
+            'teacher_id'   => 'required_if:author_id,""'
         ];
     }
     
