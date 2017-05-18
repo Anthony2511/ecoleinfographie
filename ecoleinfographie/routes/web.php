@@ -30,7 +30,7 @@ Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('nos-diplom
 Route::get('realisations', 'WorkController@index')->name('realisations');
 Route::get('realisations/filter', 'WorkController@filter')->name('realisations-filter');
 Route::get('blog', 'ArticleController@index')->name('blog');
-Route::get('blog/search/autocomplete', 'ArticleController@autocomplete');
+Route::get('blog/search/autocomplete', 'ArticleController@autocomplete')->name('blog-autocomplete');
 
 
 
@@ -39,6 +39,7 @@ Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
 Route::get('etudiants/{student}', 'StudentController@show');
 Route::get('realisations/{work}', 'WorkController@show');
+Route::get('blog/{article}', 'ArticleController@show');
 
 // Catch-all for Backpack/PageManager
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
