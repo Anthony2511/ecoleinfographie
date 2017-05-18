@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Request;
 
 class Author extends Model
 {
@@ -32,6 +33,19 @@ class Author extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function getImageAuthor($suffix)
+    {
+        $basePath = 'uploads/authors/';
+        $fullname = pathinfo($this->image, PATHINFO_FILENAME);
+        $imageStudent = $basePath . $fullname . $suffix;
+        
+        if (file_exists($imageStudent)) {
+            return URL('/') . '/' . $imageStudent;
+        } else {
+            return $this->picture;
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
@@ -40,7 +54,7 @@ class Author extends Model
     
     public function articles()
     {
-        return $this->hasMany('App\Models\Article');
+        return $this->hasMany('App\Models\Article', 'id');
     }
     
     /*
@@ -102,7 +116,7 @@ class Author extends Model
         
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
         {
-            $this->attributes['picture'] = 'https://api.adorable.io/avatars/60/' . $this->attributes['email'] . '.png';
+            $this->attributes['picture'] = 'https://api.adorable.io/avatars/60/' . Request::get('email') . '.png';;
         }
     }
 }
