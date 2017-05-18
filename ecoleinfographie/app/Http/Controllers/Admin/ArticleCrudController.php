@@ -130,6 +130,15 @@ class ArticleCrudController extends CrudController
             'attribute' => 'fullname',
             'model' => 'App\Models\Teacher'
         ]);
+        $this->crud->addField
+        ([
+            'name' => 'author_id',
+            'label' => 'Si l’auteur n’est pas un professeur, sélectionnez le ici',
+            'type' => 'select2',
+            'entity' => 'author',
+            'attribute' => 'fullname',
+            'model' => 'App\Models\Author'
+        ]);
         $this->crud->addField([    // ENUM
             'name'  => 'status',
             'label' => "Statut de l’article",
