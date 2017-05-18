@@ -37,6 +37,19 @@ class ArticleController extends Controller
         ]);
     }
     
+    
+    public function show(Article $article)
+    {
+        return view('posts.postBlog', [
+            'article'          => $article,
+            'orientation'      => $this->getOrientation(),
+            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
+            'subCategories2d'  => $this->getSubCategories2d(),
+            'subCategories3d'  => $this->getSubCategories3d()
+        ]);
+    }
+    
+    
     public function searchCategory($request)
     {
         $search = $request->get('category');
@@ -56,18 +69,18 @@ class ArticleController extends Controller
     
     public function search($request)
     {
-      
         
-        $search = $request->get('search');
+        
+        $search   = $request->get('search');
         $keywords = explode(" ", $search);
-    
+        
         $article = Article::query();
-        foreach($keywords as $word){
+        foreach ($keywords as $word) {
             $article->where('title', 'LIKE', '%' . $word . '%');
-                  /*  ->orWhere('content', 'LIKE', '%' . $word . '%')
-                    ->orWhere('introduction', 'LIKE', '%' . $word . '%');*/
+            /*  ->orWhere('content', 'LIKE', '%' . $word . '%')
+              ->orWhere('introduction', 'LIKE', '%' . $word . '%');*/
         }
-    
+        
         $articles = $article->published()->paginate(8);
         
         
@@ -140,7 +153,7 @@ class ArticleController extends Controller
     {
         
         $filterItem = array("le", "la", "les", "un", "une", 'avec', 'sur');
-        $term = $request->get('term');
+        $term       = $request->get('term');
         
         $results = array();
         
