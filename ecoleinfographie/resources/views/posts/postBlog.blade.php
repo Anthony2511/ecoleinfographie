@@ -50,23 +50,46 @@
 
 
 			<header class="blogArticle__header">
-				<h2 role="heading" aria-level="2" class="blogArticle__title" itemprop="headline">Automatisez votre workflow avec Grunt</h2>
+				<h2 role="heading" aria-level="2" class="blogArticle__title" itemprop="headline">{{ $article->title }}</h2>
 
 				<div class="blogArticle__informations">
-					<a href="#goAuthor" class="blogArticle__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-						<img src="./img/blog-author-30x30.jpg" width="30" height="30" alt="" class="blogArticle__author__img">
+
+					@if($article->teacher)
+					<a href="{{ Url('/professeurs') . '/' . $article->teacher->slug }}"
+						 class="blogArticle__author"
+						 itemprop="author" itemscope itemtype="https://schema.org/Person">
+
+						<img src="{{ $article->teacher->getImageProfile('_30x30.jpg') }}"
+								 width="30" height="30"
+								 alt="Photo de {{ $article->teacher->fullname }}"
+								 class="blogArticle__author__img"
+								 srcset="{{ $article->teacher->getImageProfile('_60x60.jpg') }} 2x">
 						<span class="preposition">Par</span>
-						<span  class="blogArticle__author__name" itemprop="name url">Dominique Vilain</span>
+						<span  class="blogArticle__author__name" itemprop="name url">{{ $article->teacher->fullname }}</span>
 					</a>
+					@endif
+					@if($article->author)
+						<span
+							 class="blogArticle__author"
+							 itemprop="author" itemscope itemtype="https://schema.org/Person">
+
+							<img src="{{ $article->author->picture }}"
+									 width="30" height="30"
+									 alt="Photo de {{ $article->author->fullname }}"
+									 class="blogArticle__author__img">
+							<span class="preposition">Par</span>
+							<span  class="blogArticle__author__name blogArticle__author__name--noprofil" itemprop="name url">{{ $article->author->fullname }}</span>
+						</span>
+					@endif
 
 					<span class="blogArticle__pubdate">
 						<span class="preposition"> le</span>
-						<time class="time" datetime="2017-10-08">08 octobre 2017</time>
+						<time class="time" datetime="{{ $article->date }}">{{ $article->date }}</time>
 					</span>
 
 					<span class="blogArticle__category">
 						<span class="preposition"> dans </span>
-						<a href="#GoCategory" class="blogArticle__category-link" itemprop="articleSection">Tutoriels (Web)</a>
+						<a href="{{ Route('blog') }}{{ $article->categoryUrl($article) . $article->category->slug . '#anchor' }}" class="blogArticle__category-link" itemprop="articleSection">{{ $article->category->name }} ({{ $orientation[$article->orientation] }})</a>
 					</span>
 				</div>
 
