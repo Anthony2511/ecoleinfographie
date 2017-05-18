@@ -93,6 +93,15 @@
     & span
       @extend .hidden
 
+.blog-card .blog-card__author--noprofil
+  z-index 1
+.blog-card__author .blog-card__author__name--noprofile
+  & .blog-card__author__name
+    &--name
+      color $cBlue2
+    &--name:after
+      display: none
+
 
 /************************************\
 		HOVER AUTHOR
