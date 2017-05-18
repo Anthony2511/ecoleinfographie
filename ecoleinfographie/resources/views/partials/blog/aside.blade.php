@@ -4,7 +4,7 @@
         <h3 role="heading" aria-level="3" class="blog-search__title">Chercher un article</h3>
         <div class="blog-search__container-form">
 
-            {{ Form::open(['action' => ['ArticleController@autocomplete'], 'method' => 'GET', 'class' => 'blog-search__form', 'url' => Route('blog'), 'role' => 'search']) }}
+            {{ Form::open(['action' => ['ArticleController@autocomplete'], 'method' => 'GET', 'class' => 'blog-search__form', 'url' => Route('blog').'#anchor', 'role' => 'search']) }}
                 <label for="search-blog" class="blog-search__label">Je recherche...</label>
                 <input type="search" class="blog-search__input" name="search" id="search-blog">
                 <button class="blog-search__submit"><span>Lancer la recherche</span></button>
