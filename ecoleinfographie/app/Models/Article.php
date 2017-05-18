@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\SluggableScopeHelpers;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use App\Utils\Utils;
+use App;
+use Carbon\Carbon;
 
 class Article extends Model
 {
@@ -99,6 +101,13 @@ class Article extends Model
                 echo '?category=3D&subcategory=';
                 break;
         }
+    }
+    
+    public function getDateForHuman()
+    {
+        $locale = App::getLocale();
+        setlocale(LC_TIME, $locale);
+        return Carbon::parse($this->date)->formatLocalized('%d %B %Y');
     }
     
     /*
