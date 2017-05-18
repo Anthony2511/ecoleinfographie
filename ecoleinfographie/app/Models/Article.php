@@ -171,7 +171,7 @@ class Article extends Model
             // 3. Save the path to the database
             $this->attributes[$attribute_name] = $destination_path.'/'.$filename.'.jpg';
         }
-    
+        
         if(strpos($value, 'cover-blog.jpg') !== false || $value == null)
         {
             $this->attributes['image'] = '/img/cover-blog.jpg';
