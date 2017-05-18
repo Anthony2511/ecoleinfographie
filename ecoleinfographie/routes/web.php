@@ -58,6 +58,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('article', 'ArticleCrudController');
     CRUD::resource('category', 'CategoryCrudController');
     CRUD::resource('tag', 'TagCrudController');
+    CRUD::resource('author', 'AuthorCrudController');
     CRUD::resource('teacher', 'TeacherCrudController');
     CRUD::resource('cours', 'CourseCrudController');
     CRUD::resource('student', 'StudentCrudController');

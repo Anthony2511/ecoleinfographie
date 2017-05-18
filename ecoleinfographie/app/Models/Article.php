@@ -102,6 +102,11 @@ class Article extends Model
         return $this->belongsTo('App\Models\Teacher');
     }
     
+    public function author()
+    {
+        return $this->belongsTo('App\Models\Author');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
