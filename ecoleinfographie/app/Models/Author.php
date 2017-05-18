@@ -52,6 +52,21 @@ class Author extends Model
     |--------------------------------------------------------------------------
     */
     
+    public function getFirstnameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    
+    public function getLastnameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    
+    public function getFullNameAttribute()
+    {
+        return ucfirst($this->firstname) . ' ' . ucfirst($this->lastname);
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | MUTATORS
