@@ -22,6 +22,9 @@ class Author extends Model
     protected $fillable = ['firstname', 'lastname', 'picture', 'email', 'social'];
     // protected $hidden = [];
     // protected $dates = [];
+    protected $casts = [
+        'social' => 'array'
+    ];
     
     /*
     |--------------------------------------------------------------------------
