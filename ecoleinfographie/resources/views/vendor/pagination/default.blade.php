@@ -3,9 +3,11 @@
     <?php
     if (Request::has('search')) {
         $param = '&search=' . Request::get('search');
-    } elseif (Request::has('category')) {
+    } elseif (Request::has('category') && !Request::has('subcategory')) {
         $param = '&category=' . Request::get('category');
-    } else {
+    } elseif (Request::has('category') && Request::has('subcategory')){
+				$param = '&category=' . Request::get('category') . '&subcategory=' . Request::get('subcategory');
+		} else {
         $param = '';
     }
     ;?>
