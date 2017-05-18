@@ -86,6 +86,21 @@ class Article extends Model
         }
     }
     
+    public function categoryUrl($article)
+    {
+        switch ($article->orientation) {
+            case "web":
+                echo '?category=web&subcategory=';
+                break;
+            case "2D":
+                echo '?category=2D&subcategory=';
+                break;
+            case "3D":
+                echo '?category=3D&subcategory=';
+                break;
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
