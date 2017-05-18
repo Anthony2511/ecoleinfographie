@@ -29,20 +29,4 @@ w.blog = {
         });
     }
 
-    /*autocomplete: function () {
-     console.log('autocomplete charged');
-     var options = {
-     url: 'search/autocomplete',
-     getValue: 'title',
-     list: {
-     match: {
-     enabled: true
-     }
-     },
-
-     }
-
-     $( "#q" ).easyAutocomplete(options);
-     }*/
-
 }
