@@ -9,7 +9,7 @@
     </h2>
   @elseif(Request::has('category') && Request::has('subcategory'))
     <h2 role="heading" aria-level="2" id="anchor" class="blog-list__title">Les articles de la catégorie <strong>{{$orientation[Request::get('category')]}}</strong>
-      <span class="blog-list__result">Dans la sous-catégorie&nbsp;: <strong>{{Request::get('subcategory')}}</strong></span>
+      <span class="blog-list__result">Dans la sous-catégorie&nbsp;: <strong>{{str_replace('-', ' ', Request::get('subcategory'))}}</strong></span>
     </h2>
   @else
     <h2 role="heading" aria-level="2" id="anchor" class="blog-list__title">Nos derniers articles</h2>
