@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->text('content');
             $table->string('user_name', 255);
             $table->string('email', 255);
-            $table->integer('post_id')->unsigned();
+            $table->integer('article_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
         });

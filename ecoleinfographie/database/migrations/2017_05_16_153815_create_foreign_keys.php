@@ -59,7 +59,7 @@ class CreateForeignKeys extends Migration {
                   ->onUpdate('restrict');
         });
         Schema::table('comments', function(Blueprint $table) {
-            $table->foreign('post_id')->references('id')->on('articles')
+            $table->foreign('article_id')->references('id')->on('articles')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -99,7 +99,7 @@ class CreateForeignKeys extends Migration {
             $table->dropForeign('articles_teacher_id_foreign');
         });
         Schema::table('comments', function(Blueprint $table) {
-            $table->dropForeign('comments_post_id_foreign');
+            $table->dropForeign('comments_article_id_foreign');
         });
     }
 }
