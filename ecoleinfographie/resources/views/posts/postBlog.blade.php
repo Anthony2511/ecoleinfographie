@@ -238,6 +238,17 @@
 				</div>
 				@endforeach
 
+				{{ Form::open(['route' => ['comment.store', $article->id], 'method' => 'POST', 'class' => 'postComment', 'id' => 'comment']) }}
+					<label for="user_name" class="postComment__label">Nom ou pseudo</label>
+					<?php echo $errors->first('user_name'); ?>
+					<input type="text" name="user_name" id="user_name" class="postInput">
+					<label for="email" class="postComment__label">Adresse email (ne sera pas publiée)</label>
+					<input type="email" name="email" id="email" class="postInput">
+					<label for="content" class="postComment__label">Commentaire&nbsp;:</label>
+					<textarea name="content" id="content" cols="30" rows="10"></textarea>
+					<button class="postComment__submit">Poster</button>
+				{{ Form::close() }}
+
 				@if($comments->count() >= 12)
 					{!! $comments->fragment('anchor')->links('partials.pagination-comments') !!}
 				@endif

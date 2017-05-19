@@ -32,6 +32,8 @@ Route::get('realisations/filter', 'WorkController@filter')->name('realisations-f
 Route::get('blog', 'ArticleController@index')->name('blog');
 Route::get('blog/search/autocomplete', 'ArticleController@autocomplete')->name('blog-autocomplete');
 
+// Comments
+Route::post('comments/{article_id}', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
 
 
 // Posts
@@ -39,7 +41,7 @@ Route::get('cours/{course}', 'CourseController@show');
 Route::get('professeurs/{teacher}', 'TeacherController@show');
 Route::get('etudiants/{student}', 'StudentController@show');
 Route::get('realisations/{work}', 'WorkController@show');
-Route::get('blog/{article}', 'ArticleController@show');
+Route::get('blog/{article}', 'ArticleController@show')->name('article.single');
 
 // Catch-all for Backpack/PageManager
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
