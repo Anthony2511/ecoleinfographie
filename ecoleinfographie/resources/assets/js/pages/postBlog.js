@@ -6,7 +6,7 @@ w.postBlog = {
         w.articleBlog.init();
         this.autocomplete();
         this.disableWrappingImgCkeditor();
-
+        w.floatLabel.init();
     },
 
     // getElements: function () {
@@ -20,7 +20,6 @@ w.postBlog = {
 
     // FUNCTIONS
     autocomplete: function () {
-        console.log('jqueryUiAutomplete Charged');
         $(function () {
             $("#search-blog").autocomplete({
                 source: "search/autocomplete",
@@ -35,5 +34,6 @@ w.postBlog = {
     disableWrappingImgCkeditor: function () {
         $('.blogArticle__body p > img').unwrap();
     },
+
 
 }
