@@ -7,6 +7,7 @@ use App\Models\Comment;
 use Illuminate\Http\Request;
 use Session;
 use Validator;
+use Cookie;
 
 class CommentController extends Controller
 {
@@ -63,6 +64,9 @@ class CommentController extends Controller
         $comment->save();
     
         \Session::flash('success','Votre message a été posté. Merci !');
+        
+        Cookie::queue(Cookie::forever('user_name',$comment->user_name));
+        Cookie::queue(Cookie::forever('email',$comment->email));
     
         return redirect()->to(route('article.single', [$article->slug]) . '#comment');
     }
