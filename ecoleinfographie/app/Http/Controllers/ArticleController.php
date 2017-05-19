@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use SEO;
 
@@ -40,12 +41,16 @@ class ArticleController extends Controller
     
     public function show(Article $article)
     {
+        
+        $comments = $article->comments()->paginate(2);
+        
         return view('posts.postBlog', [
             'article'          => $article,
             'orientation'      => $this->getOrientation(),
             'subCategoriesWeb' => $this->getSubCategoriesWeb(),
             'subCategories2d'  => $this->getSubCategories2d(),
             'subCategories3d'  => $this->getSubCategories3d(),
+            'comments' => $comments
         ]);
     }
     
