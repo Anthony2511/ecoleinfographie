@@ -91,6 +91,7 @@ class ArticleCrudController extends CrudController
             'name'  => 'content',
             'label' => 'Contenu de l’article',
             'type'  => 'ckeditor',
+            'extra_plugins' => ['image2', 'syntaxhighlight']
         ]);
         $this->crud->addField
         ([
