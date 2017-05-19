@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 @endsection
 
+@section('highlightJS')
+	<script type="text/javascript" src="{{ asset('syntaxhighlighter/syntaxhighlighter.js') }}"></script>
+	<link rel="stylesheet" href="{{ asset('syntaxhighlighter/theme.css') }}">
+@endsection
+
 @section('content')
 
 	<!-- Breadcrumb -->
@@ -84,7 +89,10 @@
 
 					<span class="blogArticle__pubdate">
 						<span class="preposition"> le</span>
-						<time class="time" datetime="{{ $article->date }}">{{ $article->date }}</time>
+						<time class="time"
+									datetime="{{ $article->date }}">
+									{{ $article->getDateForHuman() }}
+						</time>
 					</span>
 
 					<span class="blogArticle__category">
@@ -93,54 +101,15 @@
 					</span>
 				</div>
 
-				<p class="blogArticle__description" itemprop="description">Grunt est simplement un JavaScript Task Runner, un outil vous permettant de créer des tâches automatisées en JavaScript. Forcément ce n'est pas très parlant mais c'est tout l'intérêt de cet article.</p>
+				<p class="blogArticle__description" itemprop="description">
+					{{ $article->introduction }}
+				</p>
 			</header>
 
 			<div class="blogArticle__body" itemprop="articleBody">
-				<section class="blogArticle__section">
-					<h3 role="heading" aria-level="3" class="blogArticle__subtitle">Sous-titre de l’article</h3>
-					<p class="blogArticle__paragraph">Vous avez sûrement déjà entendu parler de Grunt à droite à gauche, en conférence, voire votre boite l'utilise déjà mais vous ne savez toujours pas trop ce qui se cache derrière ce terme saugrenu digne d'un personnage de Warcraft. Soit, ce n'est pas bien grave.
-					</p>
-					<p class="blogArticle__paragraph">Vous est-il déjà arrivé de devoir régulièrement lancer, lancer et relancer des processus tels que <a class="blogArticle__link">Sass</a>, <a class="blogArticle__link">LESS</a>, <a class="blogArticle__link">uglify</a> - <i>en somme des préprocesseurs ou des minifiers</i> - régulièrement à la main ? N'est-ce pas pénible ? N'est-ce pas aussi pénible de devoir indiquer à tous ses collègues comment ils doivent bosser pour que vous soyez tous cohérents ? Oui ? <b>Grunt permet de résoudre ce genre de choses</b> :</p>
 
-					<ul class="blogArticle__list">
-						<li class="blogArticle__item">Respecter un putain de workflow en s'assurant que le parcours soit le même pour tout le monde et vice-versa.</li>
-						<li class="blogArticle__item">Exécuter tout ça en lançant une seule commande.</li>
-					</ul>
+				{!! $article->content  !!}
 
-					<p class="blogArticle__paragraph">N'est-ce pas fucking aweeeeesome dude ? Bref</p>
-					<p class="blogArticle__paragraph">Nulla ut nibh quis ligula consequat porta. Suspendisse auctor orci urna, sit amet pulvinar magna mattis pellentesque. Cras vitae iaculis mi. <i>In elit leo, vestibulum eu leo vel, tincidunt hendrerit erat</i>. Cras commodo, urna sed consequat consectetur, lacus orci congue ante, ac fringilla mi lorem ac lectus. Donec vestibulum tempor velit sit amet lacinia. In non est pharetra, porta erat vitae, fermentum erat. Sed gravida, est vel hendrerit facilisis, libero orci varius massa, vel viverra nisl purus accumsan justo.
-					</p>
-
-					<figure class="blogArticle__figure">
-						<img src="./img/blog-img.jpg" width="736" height="414" alt="" class="blogArticle__figure__img">
-						<figcaption class="blogArticle__figcaption">
-							Donec consequat sit amet ante ultrices molestie. Maecenas ipsum eros, tincidunt eu suscipit id, rhoncus eu quam. Donec vulputate eros eu tincidunt fringilla.
-						</figcaption>
-					</figure>
-
-					<p class="blogArticle__paragraph">Nulla ut nibh quis ligula consequat porta. Suspendisse auctor orci urna, sit amet pulvinar magna mattis pellentesque. Cras vitae iaculis mi. In elit leo, vestibulum eu leo vel, tincidunt hendrerit erat. <a class="blogArticle__link">Cras commodo, urna sed consequat</a> consectetur, lacus orci congue ante, ac fringilla mi lorem ac lectus. Donec vestibulum tempor velit sit amet lacinia. In non est pharetra, porta erat vitae, fermentum erat. Sed gravida, est vel hendrerit facilisis, libero orci varius massa, vel viverra nisl purus accumsan justo.
-					</p>
-				</section>
-
-				<section class="blogArticle__section">
-					<h3 role="heading" aria-level="3" class="blogArticle__subtitle">Sous-titre de l’article</h3>
-					<p class="blogArticle__paragraph">
-						Duis elementum lorem id quam hendrerit lobortis. Aliquam iaculis dictum sagittis. Quisque molestie orci ut quam maximus placerat. Donec diam ante, venenatis non elit eu, mollis interdum lectus. Quisque semper tincidunt ante, in fringilla tortor <b>aliquet a. Nam blandit, elit eget fringilla commodo, purus quam vulputate leo, eget euismod ligula lectus at velit</b>. Cras faucibus accumsan pharetra. Mauris eros lacus, porttitor non pulvinar vel, rhoncus et velit. Phasellus egestas tortor lacus, ut blandit magna iaculis sed.
-					</p>
-
-					<blockquote class="blogArticle__blockquote">
-						<p class="blogArticle__blockquote__text">Cras pharetra leo nisi, eget facilisis odio rhoncus nec. Vestibulum pretium, erat finibus maximus rutrum, lectus orci iaculis sapien, at fermentum leo felis.</p>
-					</blockquote>
-
-					<p class="blogArticle__paragraph">
-						Ut et vehicula enim. Nulla sodales metus eu tellus aliquam consectetur. Phasellus eget enim sed risus rhoncus porttitor. Morbi vitae vulputate quam. Donec iaculis, nisi eget posuere iaculis, est elit bibendum orci, eget efficitur ex lacus id nulla.
-					</p>
-
-					<p class="blogArticle__paragraph">
-						Aliquam sollicitudin, justo in iaculis porttitor, libero ante eleifend ante, et luctus enim elit quis magna. Nullam hendrerit est purus, quis porttitor neque consectetur eget. Ut faucibus nunc vitae est porta rhoncus. Morbi a quam sed sapien facilisis sagittis.
-					</p>
-				</section>
 			</div>
 
 			<footer class="footerArticle">
