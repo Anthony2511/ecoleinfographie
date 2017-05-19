@@ -11,8 +11,11 @@ w.floatLabel = {
                     $this.focus(function(){
                         $this.prev().addClass("active");
                     });
+                    if ($this.attr('value') !== ''){
+                        $this.prev().addClass("active");
+                    }
                     $this.blur(function(){
-                        if($this.val() === '' || $this.val() === 'blank'){
+                        if($this.val() === '' || $this.val() === 'blank') {
                             $this.prev().removeClass('active');
                         }
                     });
