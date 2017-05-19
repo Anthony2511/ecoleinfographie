@@ -128,3 +128,98 @@
 
 .comment--3.comment--withoutImg
   margin-left s(285)
+
+
+/************************************\
+		FORM POST
+\************************************/
+
+.postComment
+  &__section
+    margin s(100) auto 0
+    max-width 80%
+  &__title
+    font-size s($sz6)
+    margin-bottom s(40, $sz6)
+    font-weight 900
+    text-transform: uppercase
+    letter-spacing 1.4px
+    color $cBlueTitles
+  &__wrapper
+    position: relative
+    width: 48.47%
+    &--1
+      float: left
+    &--2
+      float: right
+  &__input
+    height: s(52);
+    width: 100%
+    display: block
+    padding: 0 0.75em;
+    color: $cBlack
+    font-weight: 600;
+    border: 1px solid $cWhite2;
+    -webkit-appearance: none;
+    transition .25s ease border
+    &:focus
+      border 1px solid $cGrey2
+      transition .25s ease border
+  &__label
+    position: absolute
+    top: s(17)
+    padding: 0 0.75em;
+    display: block;
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+    -webkit-transition-property: top, font-size;
+    transition-property: top, font-size;
+  &__fieldset
+    position: relative
+    &:after
+      @extend .clearfix
+  &__textarea
+    display: block
+    width: 100%
+    margin-top s(20)
+    border: 1px solid $cWhite2;
+    padding: s(50) 0.75em 0.75em 0.75em
+    color: $cBlack
+    font-weight: 600;
+    line-height: 1.3em
+    transition .25s ease border
+    &:focus
+      outline none
+      border 1px solid $cGrey2
+      transition .25s ease border
+  &__wrapperTextarea
+    position: relative
+  &__label--textarea
+    top 5%
+  &__submit
+    margin-top s(20, $sz8)
+    @extend .buttonLeftToRight
+    font-size s($sz8)
+    font-weight: 900
+    letter-spacing 1.3px
+
+.postComment__label.active
+  top s(5, $sz9)
+  font-size s($sz9)
+  padding 0 s(12, $sz9)
+  transition .3s ease all
+  transition-property top, font-size
+.postComment__label.active ~  .floatLabel
+  padding-top s(12)
+  line-height 0;
+
+
+/************************************\
+		STYLE ERRORS
+\************************************/
+.form-error
+  display: block
+  margin-top s(6)
+  color $cError
+  line-height 1.3em
+

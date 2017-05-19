@@ -56,13 +56,11 @@ class CommentController extends Controller
         if ($validator->fails())
         {
             return redirect()->to(route('article.single', [$article->slug]) . '#comment')
-                ->withErrors($validator)
-                ->withInput();
+                ->withInput()
+                ->withErrors($validator);
         }
         
         $comment->save();
-        
-        Session::flash('success', 'Votre commentaire a été ajouté');
     
         return redirect()->to(route('article.single', [$article->slug]) . '#comment');
     }

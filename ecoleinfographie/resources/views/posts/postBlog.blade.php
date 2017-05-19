@@ -237,17 +237,48 @@
 					</footer>--}}
 				</div>
 				@endforeach
+				<section class="postComment__section">
+
+				<h3 role="heading" aria-level="3" class="postComment__title">Écrire un commentaire&nbsp;:</h3>
 
 				{{ Form::open(['route' => ['comment.store', $article->id], 'method' => 'POST', 'class' => 'postComment', 'id' => 'comment']) }}
-					<label for="user_name" class="postComment__label">Nom ou pseudo</label>
-					<?php echo $errors->first('user_name'); ?>
-					<input type="text" name="user_name" id="user_name" class="postInput">
-					<label for="email" class="postComment__label">Adresse email (ne sera pas publiée)</label>
-					<input type="email" name="email" id="email" class="postInput">
-					<label for="content" class="postComment__label">Commentaire&nbsp;:</label>
-					<textarea name="content" id="content" cols="30" rows="10"></textarea>
-					<button class="postComment__submit">Poster</button>
+
+					<fieldset class="postComment__fieldset">
+						<div class="postComment__wrapper postComment__wrapper--1">
+							<label for="user_name" class="postComment__label">Nom ou pseudo</label>
+							<input type="text" name="user_name" id="user_name" class="postComment__input floatLabel" required value="{{ old('user_name') }}">
+                <span class="form-error">{{ $errors->first('user_name') }}</span>
+						</div>
+						<div class="postComment__wrapper postComment__wrapper--2">
+							<?php $oldEmail = old('email'); ?>
+							<label
+											for="email"
+											class="postComment__label">
+											Adresse email (ne sera pas publiée)
+							</label>
+
+							<input
+											type="email"
+											name="email"
+											id="email"
+											class="postComment__input floatLabel <?php if(old('value', null) != null){echo 'active';} ;?>"
+											required
+											value="{{ old('email') }}"
+							>
+
+							<span class="form-error">
+								{{ $errors->first('email') }}
+							</span>
+						</div>
+					</fieldset>
+					<div class="postComment__wrapperTextarea">
+						<label for="content" class="postComment__label postComment__label--textarea">Commentaire&nbsp;:</label>
+						<textarea name="content" id="content" class="postComment__textarea" cols="30" rows="10" required >{{ old('content') }}</textarea>
+						<span class="form-error">{{ $errors->first('content') }}</span>
+					</div>
+					<button class="postComment__submit">Poster le message</button>
 				{{ Form::close() }}
+				</section>
 
 				@if($comments->count() >= 12)
 					{!! $comments->fragment('anchor')->links('partials.pagination-comments') !!}
