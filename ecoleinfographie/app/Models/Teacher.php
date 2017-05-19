@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\SluggableScopeHelpers;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use App\Utils\Utils;
+use Request;
 
 
 class Teacher extends Model
@@ -43,6 +44,9 @@ class Teacher extends Model
     // protected $dates = [];
     protected $fakeColumns = ['extras'];
     protected $translatable = ['role', 'description'];
+    protected $casts = [
+        'social' => 'array'
+    ];
     
     /**
      * Return the sluggable configuration array for this model.
@@ -88,7 +92,7 @@ class Teacher extends Model
         if (file_exists($imageProfile)) {
             return URL('/') . '/' . $imageProfile;
         } else {
-            return $imageProfile = URL('/') . '/img/no-avatar.jpg';
+            return $this->picture;
         }
     }
     
@@ -167,6 +171,7 @@ class Teacher extends Model
             $image = \Image::make($value);
             $imageProfile = \Image::make($value)->fit(295,281);
             $imageCards = \Image::make($value)->fit(313,180);
+            $image120x120 = \Image::make($value)->fit(120,120);
             $image60x60 = \Image::make($value)->fit(60,60);
             $image30x30 = \Image::make($value)->fit(30,30);
             // 1. Generate a filename.
@@ -175,6 +180,7 @@ class Teacher extends Model
             \Storage::disk($disk)->put($path.'/'.$filename.'.jpg', $image->stream());
             Utils::storeNewSize($path, $filename, '_profile', $imageProfile);
             Utils::storeNewSize($path, $filename, '_cards', $imageCards);
+            Utils::storeNewSize($path, $filename, '_120x120', $image120x120);
             Utils::storeNewSize($path, $filename, '_60x60', $image60x60);
             Utils::storeNewSize($path, $filename, '_30x30', $image30x30);
             
@@ -184,7 +190,25 @@ class Teacher extends Model
         
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
         {
-            $this->attributes['picture'] = '/img/no-avatar.jpg';
+            $fakeAvatar = 'https://api.adorable.io/avatars/600/' . Request::get('email') . '.png';
+            $image = \Image::make($fakeAvatar);
+            $imageProfile = \Image::make($fakeAvatar)->fit(295,281);
+            $imageCards = \Image::make($fakeAvatar)->fit(313,180);
+            $fakeAvatar30x30 = \Image::make($fakeAvatar)->fit(30,30);
+            $fakeAvatar60x60 = \Image::make($fakeAvatar)->fit(60,60);
+            $fakeAvatar120x120 = \Image::make($fakeAvatar)->fit(120,120);
+    
+            $filename = md5($fakeAvatar.time());
+    
+            \Storage::disk($disk)->put($path.'/'.$filename.'.jpg', $image->stream());
+            Utils::storeNewSize($path, $filename, '_profile', $imageProfile);
+            Utils::storeNewSize($path, $filename, '_cards', $imageCards);
+            Utils::storeNewSize($path, $filename, '_120x120', $fakeAvatar120x120);
+            Utils::storeNewSize($path, $filename, '_60x60', $fakeAvatar60x60);
+            Utils::storeNewSize($path, $filename, '_30x30', $fakeAvatar30x30);
+            
+            
+            $this->attributes['picture'] = $path.'/'.$filename.'.jpg';
         }
     }
 }
