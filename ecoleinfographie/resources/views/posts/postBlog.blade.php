@@ -115,20 +115,23 @@
 			<footer class="footerArticle">
 				<div class="footerArticle__author">
 					<div class="footerArticle__author__wrapper">
-						<a href="#author" class="footerArticle__author__link">
-							<img src="./img/blog-author-30x30.jpg" width="60" height="60" alt="" class="footerArticle__author__img">
-							<span class="footerArticle__author__name"><span class="hidden">Écrit par&nbsp;:</span>Dominique Vilain</span>
+						<a href="{{ Url('/professeurs') . '/' . $article->teacher->slug }}" class="footerArticle__author__link">
+							<img src="{{ $article->teacher->getImageProfile('_60x60.jpg') }}"
+									 width="60"
+									 height="60"
+									 alt="Photo de {{ $article->teacher->fullname }}"
+									 class="footerArticle__author__img"
+									 srcset="{{ $article->teacher->getImageProfile('_120x120.jpg') }} 2x"
+							>
+							<span class="footerArticle__author__name"><span class="hidden">Écrit par&nbsp;:</span>{{ $article->teacher->fullname }}</span>
 						</a>
 						<div class="footerArticle__follow">
 							<ul class="footerArticle__follow__list">
-								<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--facebook"><span>Facebook</span></a></li>
-								<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--twitter"><span>Twitter</span></a></li>
-								{{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--behance"><span>Behance</span></a></li>--}}
-								{{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--dribble"><span>Dribble</span></a></li>--}}
-								<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--linkedin"><span>Linkedin</span></a></li>
-								{{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--pinterest"><span>Pinterest</span></a></li>--}}
-								{{--<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--vimeo"><span>Vimeo</span></a></li>--}}
-								<li class="footerArticle__follow__item"><a href="#goSocialDOM" class="footerArticle__follow__link footerArticle__follow__link--youtube"><span>Youtube</span></a></li>
+								@if(!empty($article->teacher->social))
+									@foreach($article->teacher->social as $social)
+										<li class="footerArticle__follow__item"><a href="{{ $social['url'] }}" target="_blank&" class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers le {{ strtoupper($social['type']) }} de {{ $article->teacher->fullname }}</span></a></li>
+									@endforeach
+								@endif
 							</ul>
 						</div>
 					</div>
@@ -186,13 +189,12 @@
 		@include('partials.blog.aside');
 	</div>
 
-
-	<section class="comments">
+	<section class="comments" id="anchor">
 		<div class="comments__wrapper">
 			<div class="comments__header">
 				<div class="comments__count">
 					<h2 role="heading" aria-level="2" class="comments__count__title">Commentaires</h2>
-					<strong class="comments__count__number"><span>9</span></strong>
+					<strong class="comments__count__number"><span>{{ $article->comments->count() }}</span></strong>
 				</div>
 
 				<div class="comments__share">
@@ -217,51 +219,29 @@
 				</div>
 			</div>
 
+
+
 			<div class="comments__container">
-				<div class="comment comment--1 {{--comment--withoutImg--}}">
-					<div class="comment__header">
-						<img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
-						<strong class="comment__name">Dominique Vilain</strong>
-						<time datetime="#" class="comment__date">Il y a un jour</time>
-					</div>
-					<p class="comment__text">Man's technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously raising more children, as infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy.</p>
-					<footer class="comment__footer">
-						<a href="#rep" class="comment__footer__respond">Répondre</a>
-					</footer>
-				</div>
-				<div class="comment comment--2">
-					<div class="comment__header">
-						<img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
-						<strong class="comment__name">Toon Van den Bos</strong>
-						<time datetime="#" class="comment__date">Il y a un jour</time>
-					</div>
-					<p class="comment__text">Infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy. The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms.</p>
-					<footer class="comment__footer">
-						<a href="#rep" class="comment__footer__respond">Répondre</a>
-					</footer>
-				</div>
-				<div class="comment comment--3 {{--comment--withoutImg--}}">
-					<div class="comment__header">
-						<img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
-						<strong class="comment__name">Toon Van den Bos</strong>
-						<time datetime="#" class="comment__date">Il y a un jour</time>
-					</div>
-					<p class="comment__text">Infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy. The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms.</p>
-					<footer class="comment__footer">
-						<a href="#rep" class="comment__footer__respond">Répondre</a>
-					</footer>
-				</div>
+				@foreach($comments as $key => $comment)
 				<div class="comment comment--1">
 					<div class="comment__header">
-						<img src="./img/blog-author-30x30.jpg" width="65" height="65" alt="" class="comment__img">
-						<strong class="comment__name">Jérémy Dubois</strong>
-						<time datetime="#" class="comment__date">Il y a un jour</time>
+						<img src="https://api.adorable.io/avatars/65/{{ md5($comment->email) }}.png" width="65" height="65" alt="Avatar généré automatiquement pour l’utilisateur {{ $comment->user_name }}" class="comment__img">
+						<strong class="comment__name">{{ $comment->user_name }}</strong>
+						<time datetime="#" class="comment__date">{{ $comment->getDate() }}</time>
 					</div>
-					<p class="comment__text">Man's technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously raising more children, as infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy.</p>
-					<footer class="comment__footer">
+					<p class="comment__text">
+						{{ $comment->content }}
+					</p>
+					{{--<footer class="comment__footer">
 						<a href="#rep" class="comment__footer__respond">Répondre</a>
-					</footer>
+					</footer>--}}
 				</div>
+				@endforeach
+
+				@if($comments->count() >= 12)
+					{!! $comments->fragment('anchor')->links('partials.pagination-comments') !!}
+				@endif
+
 			</div>
 		</div>
 

@@ -42,7 +42,7 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
         
-        $comments = $article->comments()->paginate(2);
+        $comments = $article->comments()->paginate(12);
         
         return view('posts.postBlog', [
             'article'          => $article,

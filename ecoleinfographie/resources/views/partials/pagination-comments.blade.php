@@ -32,7 +32,7 @@
 			@if ($paginator->onFirstPage())
 			@else
 				<li class="blog-pagination__item">
-					<a class="blog-pagination__link" href="{{ Request::url() .'?page=1'}}"
+					<a class="blog-pagination__link" href="{{ Request::url() .'?page=1#anchor'}}"
 						 rel="prev">
 						&laquo;
 					</a>
