@@ -1,4 +1,6 @@
 <!-- CKeditor -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 <div @include('crud::inc.field_wrapper_attributes') >
     <label>{!! $field['label'] !!}</label>
     @include('crud::inc.field_translatable_icon')
@@ -18,6 +20,7 @@
 {{-- ########################################## --}}
 {{-- Extra CSS and JS for this particular field --}}
 {{-- If a field type is shown multiple times on a form, the CSS and JS will only be loaded once --}}
+
 @if ($crud->checkIfFieldIsFirstOfItsType($field, $fields))
 
     {{-- FIELD CSS - will be loaded in the after_styles section --}}
