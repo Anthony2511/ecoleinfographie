@@ -278,6 +278,7 @@
 					</div>
 					<button class="postComment__submit">Poster le message</button>
 				{{ Form::close() }}
+					<p class="form-success">{!! session('success') !!}</p>
 				</section>
 
 				@if($comments->count() >= 12)

@@ -62,6 +62,8 @@ class CommentController extends Controller
         
         $comment->save();
     
+        \Session::flash('success','Votre message a été posté. Merci !');
+    
         return redirect()->to(route('article.single', [$article->slug]) . '#comment');
     }
 
