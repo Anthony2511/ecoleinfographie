@@ -2,19 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App;
 use Backpack\CRUD\CrudTrait;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
     use CrudTrait;
-
-     /*
-    |--------------------------------------------------------------------------
-    | GLOBAL VARIABLES
-    |--------------------------------------------------------------------------
-    */
-
+    
+    /*
+   |--------------------------------------------------------------------------
+   | GLOBAL VARIABLES
+   |--------------------------------------------------------------------------
+   */
+    
     protected $table = 'comments';
     protected $primaryKey = 'id';
     public $timestamps = true;
@@ -22,13 +24,25 @@ class Comment extends Model
     protected $fillable = ['content', 'user_name', 'email', 'article_id'];
     // protected $hidden = [];
     // protected $dates = [];
-
+    
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-
+    
+    public function getDate()
+    {
+        if (App::getLocale() == 'fr') {
+            Carbon::setLocale('fr');
+            
+            return $this->created_at->diffForHumans();
+        } else {
+            return $this->created_at->diffForHumans();
+        }
+    }
+    
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
@@ -39,19 +53,19 @@ class Comment extends Model
     {
         return $this->belongsTo('App\Models\Article');
     }
-
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
     |--------------------------------------------------------------------------
     */
-
+    
     /*
     |--------------------------------------------------------------------------
     | ACCESORS
     |--------------------------------------------------------------------------
     */
-
+    
     /*
     |--------------------------------------------------------------------------
     | MUTATORS
