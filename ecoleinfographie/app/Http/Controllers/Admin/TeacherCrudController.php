@@ -118,97 +118,11 @@ class TeacherCrudController extends CrudController
         ([
             'name' => 'social',
             'label' => 'Réseaux sociaux',
-            'type' => 'table',
+            'type' => 'social',
             'entity_singular' => 'un réseau social',
-            'columns' => [
-                'name' => 'Nom du réseau social',
-                'link' => 'Lien vers votre espace'
-            ],
             'tab' => 'Réseaux sociaux',
         ]);
         
-        // Réseaux sociaux
-        /*$this->crud->addField
-        ([
-            'name' => 'facebook',
-            'label' => 'Facebook',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'twitter',
-            'label' => 'Twitter',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'linkedin',
-            'label' => 'Linkedin',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'behance',
-            'label' => 'Behance',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'pinterest',
-            'label' => 'Pinterest',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'dribbble',
-            'label' => 'Dribbble',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'youtube',
-            'label' => 'Youtube',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'vimeo',
-            'label' => 'Viméo',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);
-        $this->crud->addField
-        ([
-            'name' => 'site',
-            'label' => 'Site personnel',
-            'type' => 'url',
-            'fake' => true,
-            'store_in' => 'extras',
-            'tab' => 'Réseaux sociaux'
-        ]);*/
         
         // Paramètres
         $this->crud->addField
