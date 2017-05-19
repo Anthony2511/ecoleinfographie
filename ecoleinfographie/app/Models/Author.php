@@ -101,12 +101,14 @@ class Author extends Model
         {
             // 0. Make the original image size and other sizes
             $image = \Image::make($value);
+            $image120x120 = \Image::make($value)->fit(120,120);
             $image60x60 = \Image::make($value)->fit(60,60);
             $image30x30 = \Image::make($value)->fit(30,30);
             // 1. Generate a filename.
             $filename = md5($value.time());
             // 2. Store the image original on disk and new sizes.
             \Storage::disk($disk)->put($path.'/'.$filename.'.jpg', $image->stream());
+            Utils::storeNewSize($path, $filename, '_120x120', $image120x120);
             Utils::storeNewSize($path, $filename, '_60x60', $image60x60);
             Utils::storeNewSize($path, $filename, '_30x30', $image30x30);
             
