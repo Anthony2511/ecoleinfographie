@@ -5,6 +5,7 @@ w.postBlog = {
         w.asideBlog.init();
         w.articleBlog.init();
         this.autocomplete();
+        this.disableWrappingImgCkeditor();
 
     },
 
@@ -29,5 +30,10 @@ w.postBlog = {
                 }
             });
         });
-    }
+    },
+
+    disableWrappingImgCkeditor: function () {
+        $('.blogArticle__body p > img').unwrap();
+    },
+
 }

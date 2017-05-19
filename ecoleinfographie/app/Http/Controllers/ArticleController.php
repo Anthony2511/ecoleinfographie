@@ -45,7 +45,7 @@ class ArticleController extends Controller
             'orientation'      => $this->getOrientation(),
             'subCategoriesWeb' => $this->getSubCategoriesWeb(),
             'subCategories2d'  => $this->getSubCategories2d(),
-            'subCategories3d'  => $this->getSubCategories3d()
+            'subCategories3d'  => $this->getSubCategories3d(),
         ]);
     }
     
@@ -114,7 +114,7 @@ class ArticleController extends Controller
     public function getSubCategoriesWeb()
     {
         $subCategoriesWeb = Category::whereHas('articles', function ($query) {
-            $query->where('orientation', 'web');
+            $query->where('orientation', 'web')->published();
         })->orderBy('name', 'ASC')->get();
         
         return $subCategoriesWeb;
@@ -123,7 +123,7 @@ class ArticleController extends Controller
     public function getSubCategories2d()
     {
         $subCategories2d = Category::whereHas('articles', function ($query) {
-            $query->where('orientation', '2d');
+            $query->where('orientation', '2d')->published();
         })->orderBy('name', 'ASC')->get();
         
         return $subCategories2d;
@@ -132,11 +132,12 @@ class ArticleController extends Controller
     public function getSubCategories3d()
     {
         $subCategories3d = Category::whereHas('articles', function ($query) {
-            $query->where('orientation', '3d');
+            $query->where('orientation', '3d')->published();
         })->orderBy('name', 'ASC')->get();
         
         return $subCategories3d;
     }
+    
     
     public function getOrientation()
     {

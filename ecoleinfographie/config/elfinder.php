@@ -76,6 +76,20 @@ return [
     |
     */
 
-    'options' => [],
+    'options' => [
+        'bind' => array(
+            'upload.presave' => array(
+                'Plugin.AutoResize.onUpLoadPreSave'
+            )
+        ),
+        'plugin' => array(
+            'AutoResize' => array(
+                'enable' => true,
+                'maxWidth'  => 736,
+                'maxHeight'  => 1000,
+                'quality' => 95
+            )
+        ),
+    ],
 
 ];
