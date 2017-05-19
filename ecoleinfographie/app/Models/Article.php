@@ -136,6 +136,11 @@ class Article extends Model
         return $this->belongsTo('App\Models\Author');
     }
     
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES
