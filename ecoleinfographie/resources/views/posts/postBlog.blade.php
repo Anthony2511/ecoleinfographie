@@ -245,15 +245,17 @@
 
 					<fieldset class="postComment__fieldset">
 						<div class="postComment__wrapper postComment__wrapper--1">
-							<label for="user_name" class="postComment__label">Nom ou pseudo</label>
-							<input type="text" name="user_name" id="user_name" class="postComment__input floatLabel" required value="{{ old('user_name') }}">
+							<label for="user_name" class="postComment__label {{ old('user_name') ? ' active' : '' }}">Nom ou pseudo</label>
+							<input type="text"
+										 name="user_name"
+										 id="user_name" class="postComment__input floatLabel" required
+										 value="{{ $comment->setValueCommentFormUsername() }}">
                 <span class="form-error">{{ $errors->first('user_name') }}</span>
 						</div>
 						<div class="postComment__wrapper postComment__wrapper--2">
-							<?php $oldEmail = old('email'); ?>
 							<label
 											for="email"
-											class="postComment__label">
+											class="postComment__label {{ (old('email')) ? ' active' : '' }}">
 											Adresse email (ne sera pas publiée)
 							</label>
 
@@ -261,9 +263,9 @@
 											type="email"
 											name="email"
 											id="email"
-											class="postComment__input floatLabel <?php if(old('value', null) != null){echo 'active';} ;?>"
+											class="postComment__input floatLabel"
 											required
-											value="{{ old('email') }}"
+											value="{{ $comment->setValueCommentFormEmail() }}"
 							>
 
 							<span class="form-error">

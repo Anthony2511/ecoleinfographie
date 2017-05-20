@@ -54,7 +54,6 @@ class ArticleController extends Controller
         ]);
     }
     
-    
     public function searchCategory($request)
     {
         $search = $request->get('category');
@@ -72,10 +71,9 @@ class ArticleController extends Controller
         ]);
     }
     
+    
     public function search($request)
     {
-        
-        
         $search   = $request->get('search');
         $keywords = explode(" ", $search);
         
