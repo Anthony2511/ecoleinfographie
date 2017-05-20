@@ -28,6 +28,10 @@ class ArticleController extends Controller
             return $this->searchSubCategories($request);
         }
         
+        if ($request->has('tag')) {
+            return $this->getTags();
+        }
+        
         
         return view('pages.blog', $this->getViewData($articles));
     }
@@ -127,6 +131,15 @@ class ArticleController extends Controller
         })->orderBy('name', 'ASC')->get();
         
         return $subCategories3d;
+    }
+    
+    public function getTags()
+    {
+        $articles = Article::published()->whereHas('tags', function ($query) {
+            $query->where('slug', 'LIKE', Request('tag'));
+        })->paginate(8);
+    
+        return view('pages.blog', $this->getViewData($articles));
     }
     
     

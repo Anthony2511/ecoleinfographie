@@ -117,7 +117,7 @@
 					<ul class="tags">
 						@foreach($article->tags as $key => $tag )
 							<li class="tags__item">
-								<a href="{{ $tag->slug }}" class="tags__link">{{ ucfirst($tag->name) }}</a>
+								<a href="{{ Route('blog') . '?tag=' . $tag->slug . '#anchor' }}" class="tags__link">{{ ucfirst($tag->name) }}</a>
 							</li>
 						@endforeach
 					</ul>

@@ -11,6 +11,10 @@
     <h2 role="heading" aria-level="2" id="anchor" class="blog-list__title">Les articles de la catégorie <strong>{{$orientation[Request::get('category')]}}</strong>
       <span class="blog-list__result">Dans la sous-catégorie&nbsp;: <strong>{{str_replace('-', ' ', Request::get('subcategory'))}}</strong></span>
     </h2>
+  @elseif(Request::has('tag'))
+    <h2 role="heading" aria-level="2" id="anchor" class="blog-list__title">Nos derniers articles</strong>
+      <span class="blog-list__result">Qui ont le mot clé&nbsp;: <strong>{{str_replace('-', ' ', Request::get('tag'))}}</strong></span>
+    </h2>
   @else
     <h2 role="heading" aria-level="2" id="anchor" class="blog-list__title">Nos derniers articles</h2>
   @endif
