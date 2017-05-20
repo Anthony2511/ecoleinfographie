@@ -27,8 +27,37 @@ class CommentCrudController extends CrudController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
+    
+        $this->crud->denyAccess('update');
+    
+        // ------ CRUD COLUMNS
+        $this->crud->addColumn
+        ([
+        	'name' => 'user_name',
+        	'label' => 'Nom/Pseudo',
+        ]);
+        $this->crud->addColumn
+        ([
+        	'name' => 'email',
+        	'label' => 'Adresse e-mail',
+        ]);
+        $this->crud->addColumn
+        ([
+            'label' => "Sur l’article",
+            'type' => "select",
+            'name' => 'article_id',
+            'entity' => 'article',
+            'attribute' => "title",
+            'model' => "App\Models\Comment"
 
-        $this->crud->setFromDb();
+        ]);
+        $this->crud->addColumn
+        ([
+        	'name' => 'content',
+        	'label' => 'Commentaire',
+            'type' => 'text'
+        ]);
+        
 
         // ------ CRUD FIELDS
         // $this->crud->addField($options, 'update/create/both');
@@ -36,13 +65,7 @@ class CommentCrudController extends CrudController
         // $this->crud->removeField('name', 'update/create/both');
         // $this->crud->removeFields($array_of_names, 'update/create/both');
 
-        // ------ CRUD COLUMNS
-        // $this->crud->addColumn(); // add a single column, at the end of the stack
-        // $this->crud->addColumns(); // add multiple columns, at the end of the stack
-        // $this->crud->removeColumn('column_name'); // remove a column from the stack
-        // $this->crud->removeColumns(['column_name_1', 'column_name_2']); // remove an array of columns from the stack
-        // $this->crud->setColumnDetails('column_name', ['attribute' => 'value']); // adjusts the properties of the passed in column (by name)
-        // $this->crud->setColumnsDetails(['column_1', 'column_2'], ['attribute' => 'value']);
+        
 
         // ------ CRUD BUTTONS
         // possible positions: 'beginning' and 'end'; defaults to 'beginning' for the 'line' stack, 'end' for the others;
@@ -107,7 +130,7 @@ class CommentCrudController extends CrudController
         // use $this->data['entry'] or $this->crud->entry
         return $redirect_location;
     }
-
+    
     public function update(UpdateRequest $request)
     {
         // your additional operations before save here
