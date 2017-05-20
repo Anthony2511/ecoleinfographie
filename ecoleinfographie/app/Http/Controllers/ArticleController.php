@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
-use App\Models\Comment;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use SEO;
 
@@ -32,15 +32,15 @@ class ArticleController extends Controller
             return $this->getTags();
         }
         
-        
-        return view('pages.blog', $this->getViewData($articles));
+        return view('pages.blog', [
+        ], $this->getViewData($articles));
     }
     
     
     protected function show(Article $article)
     {
         
-        $comments = $article->comments()->paginate(12);
+        $comments         = $article->comments()->paginate(12);
         $numberOfComments = $article->comments()->count();
         
         return view('posts.postBlog', [
@@ -49,7 +49,7 @@ class ArticleController extends Controller
             'subCategoriesWeb' => $this->getSubCategoriesWeb(),
             'subCategories2d'  => $this->getSubCategories2d(),
             'subCategories3d'  => $this->getSubCategories3d(),
-            'comments' => $comments,
+            'comments'         => $comments,
             'numberOfComments' => $numberOfComments
         ]);
     }
@@ -57,11 +57,12 @@ class ArticleController extends Controller
     protected function getViewData($articles)
     {
         return [
-            'articles'          => $articles,
+            'articles'         => $articles,
             'orientation'      => $this->getOrientation(),
             'subCategoriesWeb' => $this->getSubCategoriesWeb(),
             'subCategories2d'  => $this->getSubCategories2d(),
             'subCategories3d'  => $this->getSubCategories3d(),
+            'getAllTags'       => $this->getAllTags()
         ];
     }
     
@@ -138,8 +139,15 @@ class ArticleController extends Controller
         $articles = Article::published()->whereHas('tags', function ($query) {
             $query->where('slug', 'LIKE', Request('tag'));
         })->paginate(8);
-    
+        
         return view('pages.blog', $this->getViewData($articles));
+    }
+    
+    public function getAllTags()
+    {
+        $getAllTags = Tag::select('name', 'slug')->whereHas('articles')->inRandomOrder()->get();
+        
+        return $getAllTags;
     }
     
     
@@ -153,6 +161,7 @@ class ArticleController extends Controller
         
         return $orientations;
     }
+    
     
     public function autocomplete(Request $request)
     {

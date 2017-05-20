@@ -87,24 +87,11 @@
     </section>
 
     <section class="blog-tags">
-        <h3 role="heading" aria-level="3" class="blog-tags__title">Tags populaire</h3>
+        <h3 role="heading" aria-level="3" class="blog-tags__title">Quelques tags</h3>
         <ul class="blog-tags__list">
-            <li class="blog-tags__item"><a href="#goTag">HTML</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Photoshop</a></li>
-            <li class="blog-tags__item"><a href="#goTag">CSS</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Hover</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Illustrator</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Tutoriel</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Lorem</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Ipsum</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Dolor</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Sit</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Amet</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Creation</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Framework</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Creative</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Beautiful</a></li>
-            <li class="blog-tags__item"><a href="#goTag">Technique</a></li>
+            @foreach($getAllTags as $key => $tag)
+                <li class="blog-tags__item"><a href="{{ Route('blog') . '?tag=' . $tag->slug . '#anchor' }}">{{ $tag->name }}</a></li>
+            @endforeach
         </ul>
         <button class="blog-tags__button">Voir tous les tags</button>
     </section>

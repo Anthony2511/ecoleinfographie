@@ -1,5 +1,4 @@
 <section class="blog__container">
-
   @if(Request::has('search'))
     <h2 role="heading" aria-level="2" id="anchor" class="blog-list__title">Résultats pour votre recherche
       <span class="blog-list__result">Pour le terme <strong>{{Request::get('search')}}</strong></span>
