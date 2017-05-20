@@ -111,7 +111,7 @@
 
 				{!! $article->content  !!}
 
-				{{--@if(!empty($article->tags))
+				@if(!empty($article->tags->count() !== 0 ))
 				<div class="tags__wrapper">
 					<span class="tags__label">Mots-clés :</span>
 					<ul class="tags">
@@ -122,7 +122,7 @@
 						@endforeach
 					</ul>
 				</div>
-				@endif--}}
+				@endif
 
 			</div>
 
