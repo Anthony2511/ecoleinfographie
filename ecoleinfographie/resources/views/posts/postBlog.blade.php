@@ -60,23 +60,23 @@
 				<div class="blogArticle__informations">
 
 					@if($article->teacher)
-					<a href="{{ Url('/professeurs') . '/' . $article->teacher->slug }}"
-						 class="blogArticle__author"
-						 itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<a href="{{ Url('/professeurs') . '/' . $article->teacher->slug }}"
+							 class="blogArticle__author"
+							 itemprop="author" itemscope itemtype="https://schema.org/Person">
 
-						<img src="{{ $article->teacher->getImageProfile('_30x30.jpg') }}"
-								 width="30" height="30"
-								 alt="Photo de {{ $article->teacher->fullname }}"
-								 class="blogArticle__author__img"
-								 srcset="{{ $article->teacher->getImageProfile('_60x60.jpg') }} 2x">
-						<span class="preposition">Par</span>
-						<span  class="blogArticle__author__name" itemprop="name url">{{ $article->teacher->fullname }}</span>
-					</a>
+							<img src="{{ $article->teacher->getImageProfile('_30x30.jpg') }}"
+									 width="30" height="30"
+									 alt="Photo de {{ $article->teacher->fullname }}"
+									 class="blogArticle__author__img"
+									 srcset="{{ $article->teacher->getImageProfile('_60x60.jpg') }} 2x">
+							<span class="preposition">Par</span>
+							<span  class="blogArticle__author__name" itemprop="name url">{{ $article->teacher->fullname }}</span>
+						</a>
 					@endif
 					@if($article->author)
 						<span
-							 class="blogArticle__author"
-							 itemprop="author" itemscope itemtype="https://schema.org/Person">
+										class="blogArticle__author"
+										itemprop="author" itemscope itemtype="https://schema.org/Person">
 
 							<img src="{{ $article->author->picture }}"
 									 width="30" height="30"
@@ -91,7 +91,7 @@
 						<span class="preposition"> le</span>
 						<time class="time"
 									datetime="{{ $article->date }}">
-									{{ $article->getDateForHuman() }}
+							{{ $article->getDateForHuman() }}
 						</time>
 					</span>
 
@@ -110,7 +110,21 @@
 
 				{!! $article->content  !!}
 
+				{{--@if(!empty($article->tags))
+				<div class="tags__wrapper">
+					<span class="tags__label">Mots-clés :</span>
+					<ul class="tags">
+						@foreach($article->tags as $key => $tag )
+							<li class="tags__item">
+								<a href="{{ $tag->slug }}" class="tags__link">{{ ucfirst($tag->name) }}</a>
+							</li>
+						@endforeach
+					</ul>
+				</div>
+				@endif--}}
+
 			</div>
+
 
 			<footer class="footerArticle">
 				<div class="footerArticle__author">
@@ -182,8 +196,8 @@
 
 			</footer>
 
-			<meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00"/>
-			<meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>
+			<meta itemprop="datePublished" content="{{ $article->created_at }}"/>
+			<meta itemprop="dateModified" content="{{ $article->updated_at }}"/>
 		</article>
 
 		@include('partials.blog.aside');
@@ -224,19 +238,19 @@
 			<div class="comments__container">
 
 				@foreach($comments as $key => $comment)
-				<div class="comment comment--1">
-					<div class="comment__header">
-						<img src="https://api.adorable.io/avatars/65/{{ md5($comment->email) }}.png" width="65" height="65" alt="Avatar généré automatiquement pour l’utilisateur {{ $comment->user_name }}" class="comment__img">
-						<strong class="comment__name">{{ $comment->user_name }}</strong>
-						<time datetime="#" class="comment__date">{{ $comment->getDate() }}</time>
+					<div class="comment comment--1">
+						<div class="comment__header">
+							<img src="https://api.adorable.io/avatars/65/{{ md5($comment->email) }}.png" width="65" height="65" alt="Avatar généré automatiquement pour l’utilisateur {{ $comment->user_name }}" class="comment__img">
+							<strong class="comment__name">{{ $comment->user_name }}</strong>
+							<time datetime="#" class="comment__date">{{ $comment->getDate() }}</time>
+						</div>
+						<p class="comment__text">
+							{{ $comment->content }}
+						</p>
+						{{--<footer class="comment__footer">
+							<a href="#rep" class="comment__footer__respond">Répondre</a>
+						</footer>--}}
 					</div>
-					<p class="comment__text">
-						{{ $comment->content }}
-					</p>
-					{{--<footer class="comment__footer">
-						<a href="#rep" class="comment__footer__respond">Répondre</a>
-					</footer>--}}
-				</div>
 				@endforeach
 
 
@@ -248,9 +262,9 @@
 
 				<section class="postComment__section">
 
-				<h3 role="heading" aria-level="3" class="postComment__title">Écrire un commentaire&nbsp;:</h3>
+					<h3 role="heading" aria-level="3" class="postComment__title">Écrire un commentaire&nbsp;:</h3>
 
-				{{ Form::open(['route' => ['comment.store', $article->id], 'method' => 'POST', 'class' => 'postComment', 'id' => 'comment']) }}
+					{{ Form::open(['route' => ['comment.store', $article->id], 'method' => 'POST', 'class' => 'postComment', 'id' => 'comment']) }}
 
 					<fieldset class="postComment__fieldset">
 						<div class="postComment__wrapper postComment__wrapper--1">
@@ -259,13 +273,13 @@
 										 name="user_name"
 										 id="user_name" class="postComment__input floatLabel" required
 										 value="{{ $article->setValueCommentForm('user_name') }}">
-                <span class="form-error">{{ $errors->first('user_name') }}</span>
+							<span class="form-error">{{ $errors->first('user_name') }}</span>
 						</div>
 						<div class="postComment__wrapper postComment__wrapper--2">
 							<label
 											for="email"
 											class="postComment__label {{ (old('email')) ? ' active' : '' }}">
-											Adresse email (ne sera pas publiée)
+								Adresse email (ne sera pas publiée)
 							</label>
 
 							<input
@@ -289,7 +303,7 @@
 						<span class="form-error">{{ $errors->first('content') }}</span>
 					</div>
 					<button class="postComment__submit">Poster le message</button>
-				{{ Form::close() }}
+					{{ Form::close() }}
 					<p class="form-success">{!! session('success') !!}</p>
 				</section>
 
