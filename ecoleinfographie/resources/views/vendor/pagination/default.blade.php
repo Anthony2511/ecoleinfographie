@@ -7,6 +7,8 @@
         $param = '&category=' . Request::get('category');
     } elseif (Request::has('category') && Request::has('subcategory')){
 				$param = '&category=' . Request::get('category') . '&subcategory=' . Request::get('subcategory');
+		} elseif (Request::has('tag')) {
+        $param = '&tag=' . Request::get('tag');
 		} else {
         $param = '';
     }
