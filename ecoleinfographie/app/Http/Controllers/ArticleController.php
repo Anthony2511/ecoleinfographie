@@ -43,6 +43,7 @@ class ArticleController extends Controller
     {
         
         $comments = $article->comments()->paginate(12);
+        $numberOfComments = $article->comments()->count();
         
         return view('posts.postBlog', [
             'article'          => $article,
@@ -50,7 +51,8 @@ class ArticleController extends Controller
             'subCategoriesWeb' => $this->getSubCategoriesWeb(),
             'subCategories2d'  => $this->getSubCategories2d(),
             'subCategories3d'  => $this->getSubCategories3d(),
-            'comments' => $comments
+            'comments' => $comments,
+            'numberOfComments' => $numberOfComments
         ]);
     }
     

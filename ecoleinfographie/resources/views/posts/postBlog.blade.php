@@ -237,6 +237,11 @@
 					</footer>--}}
 				</div>
 				@endforeach
+
+				@if($numberOfComments > 12)
+					{!! $comments->fragment('anchor')->links('partials.pagination-comments') !!}
+				@endif
+
 				<section class="postComment__section">
 
 				<h3 role="heading" aria-level="3" class="postComment__title">Écrire un commentaire&nbsp;:</h3>
@@ -283,9 +288,7 @@
 					<p class="form-success">{!! session('success') !!}</p>
 				</section>
 
-				@if($comments->count() >= 12)
-					{!! $comments->fragment('anchor')->links('partials.pagination-comments') !!}
-				@endif
+
 
 			</div>
 		</div>
