@@ -78,10 +78,11 @@
 										class="blogArticle__author"
 										itemprop="author" itemscope itemtype="https://schema.org/Person">
 
-							<img src="{{ $article->author->picture }}"
+							<img src="{{ $article->author->getImageAuthor('_30x30.jpg') }}"
 									 width="30" height="30"
 									 alt="Photo de {{ $article->author->fullname }}"
-									 class="blogArticle__author__img">
+									 class="blogArticle__author__img"
+									 srcset="{{ $article->author->getImageAuthor('_60x60.jpg') }} 2x">
 							<span class="preposition">Par</span>
 							<span  class="blogArticle__author__name blogArticle__author__name--noprofil" itemprop="name url">{{ $article->author->fullname }}</span>
 						</span>
@@ -127,6 +128,9 @@
 
 
 			<footer class="footerArticle">
+
+				{{-- IF AUTHOR IS A TEACHER --}}
+				@if($article->teacher)
 				<div class="footerArticle__author">
 					<div class="footerArticle__author__wrapper">
 						<a href="{{ Url('/professeurs') . '/' . $article->teacher->slug }}" class="footerArticle__author__link">
@@ -150,7 +154,38 @@
 						</div>
 					</div>
 				</div>
+				@endif
 
+				{{-- IF AUTHOR IS AN EXTERN --}}
+				@if($article->author)
+					<div class="footerArticle__author">
+						<div class="footerArticle__author__wrapper">
+							<span class="footerArticle__author__link">
+								<img src="{{ $article->author->getImageAuthor('_60x60.jpg') }}"
+										 width="60"
+										 height="60"
+										 alt="Photo de {{ $article->author->fullname }}"
+										 class="footerArticle__author__img"
+										 srcset="{{ $article->author->getImageAuthor('_120x120.jpg') }} 2x"
+								>
+								<span class="footerArticle__author__name"><span class="hidden">Écrit par&nbsp;:</span>{{ $article->author->fullname }}</span>
+							</span>
+							<div class="footerArticle__follow">
+								<ul class="footerArticle__follow__list">
+									@if(!empty($article->author->social))
+										@foreach($article->author->social as $social)
+											<li class="footerArticle__follow__item"><a href="{{ $social['url'] }}" target="_blank" class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers le {{ strtoupper($social['type']) }} de {{ $article->author->fullname }}</span></a></li>
+										@endforeach
+									@endif
+								</ul>
+							</div>
+						</div>
+					</div>
+				@endif
+
+
+
+				{{-- SHARE ARTICLE --}}
 				<div class="footerArticle__sharer">
 					<div class="footerArticle__sharer__wrapper">
 						<span class="footerArticle__sharer__label-top">Cet article t’as plût&nbsp;?</span>

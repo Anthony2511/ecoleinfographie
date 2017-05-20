@@ -5,6 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use Request;
+use App\Utils\Utils;
 
 class Author extends Model
 {
@@ -36,7 +37,7 @@ class Author extends Model
     public function getImageAuthor($suffix)
     {
         $basePath = 'uploads/authors/';
-        $fullname = pathinfo($this->image, PATHINFO_FILENAME);
+        $fullname = pathinfo($this->picture, PATHINFO_FILENAME);
         $imageStudent = $basePath . $fullname . $suffix;
         
         if (file_exists($imageStudent)) {
@@ -118,7 +119,21 @@ class Author extends Model
         
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
         {
-            $this->attributes['picture'] = 'https://api.adorable.io/avatars/60/' . Request::get('email') . '.png';;
+            $fakeAvatar = 'https://api.adorable.io/avatars/600/' . Request::get('email') . '.png';
+            $image = \Image::make($fakeAvatar);
+            $fakeAvatar30x30 = \Image::make($fakeAvatar)->fit(30,30);
+            $fakeAvatar60x60 = \Image::make($fakeAvatar)->fit(60,60);
+            $fakeAvatar120x120 = \Image::make($fakeAvatar)->fit(120,120);
+    
+            $filename = md5($fakeAvatar.time());
+    
+            \Storage::disk($disk)->put($path.'/'.$filename.'.jpg', $image->stream());
+            Utils::storeNewSize($path, $filename, '_120x120', $fakeAvatar120x120);
+            Utils::storeNewSize($path, $filename, '_60x60', $fakeAvatar60x60);
+            Utils::storeNewSize($path, $filename, '_30x30', $fakeAvatar30x30);
+    
+    
+            $this->attributes['picture'] = $path.'/'.$filename.'.jpg';
         }
     }
 }
