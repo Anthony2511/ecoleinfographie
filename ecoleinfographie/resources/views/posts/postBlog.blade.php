@@ -222,6 +222,7 @@
 
 
 			<div class="comments__container">
+
 				@foreach($comments as $key => $comment)
 				<div class="comment comment--1">
 					<div class="comment__header">
@@ -238,8 +239,11 @@
 				</div>
 				@endforeach
 
+
 				@if($numberOfComments > 12)
 					{!! $comments->fragment('anchor')->links('partials.pagination-comments') !!}
+				@elseif($numberOfComments == 0)
+					<p>Il n’y a pas encore de commentaires sur cet article. Écris le premier !</p>
 				@endif
 
 				<section class="postComment__section">
@@ -254,7 +258,7 @@
 							<input type="text"
 										 name="user_name"
 										 id="user_name" class="postComment__input floatLabel" required
-										 value="{{ $comment->setValueCommentFormUsername() }}">
+										 value="{{ $article->setValueCommentForm('user_name') }}">
                 <span class="form-error">{{ $errors->first('user_name') }}</span>
 						</div>
 						<div class="postComment__wrapper postComment__wrapper--2">
@@ -270,8 +274,9 @@
 											id="email"
 											class="postComment__input floatLabel"
 											required
-											value="{{ $comment->setValueCommentFormEmail() }}"
+											value="{{ $article->setValueCommentForm('email') }}"
 							>
+
 
 							<span class="form-error">
 								{{ $errors->first('email') }}

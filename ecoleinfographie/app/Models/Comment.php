@@ -44,25 +44,6 @@ class Comment extends Model
         }
     }
     
-    public function setValueCommentFormEmail()
-    {
-        if (Request::old('email') && Cookie::get('email') == null)
-        {
-            echo Request::old('email');
-        } elseif (Cookie::get('email') !== null){
-            echo Request::cookie('email');
-        }
-    }
-    
-    public function setValueCommentFormUsername()
-    {
-        if (Request::old('user_name') && Cookie::get('user_name') == null)
-        {
-            echo Request::old('user_name');
-        } elseif (Cookie::get('user_name') !== null){
-            echo Request::cookie('user_name');
-        }
-    }
     
     
     /*

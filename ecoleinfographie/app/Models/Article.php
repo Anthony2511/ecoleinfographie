@@ -11,6 +11,8 @@ use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use App\Utils\Utils;
 use App;
 use Carbon\Carbon;
+use Request;
+use Cookie;
 
 class Article extends Model
 {
@@ -109,6 +111,17 @@ class Article extends Model
         setlocale(LC_TIME, $locale);
         return Carbon::parse($this->date)->formatLocalized('%d %B %Y');
     }
+    
+    public function setValueCommentForm($data)
+    {
+        if (Request::old($data) && Cookie::get($data) == null)
+        {
+            echo Request::old($data);
+        } elseif (Cookie::get($data) !== null){
+            echo Request::cookie($data);
+        }
+    }
+    
     
     /*
     |--------------------------------------------------------------------------
