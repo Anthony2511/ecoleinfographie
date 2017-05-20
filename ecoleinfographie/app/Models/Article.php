@@ -214,12 +214,14 @@ class Article extends Model
             $image = \Image::make($value);
             $imageCards = \Image::make($value)->fit(358, 264);
             $imagePopular = \Image::make($value)->fit(56, 54);
+            $imagePopular2x = \Image::make($value)->fit(112, 108);
             // 1. Generate a filename.
             $filename = md5($value.time());
             // 2. Store the image on disk.
             \Storage::disk($disk)->put($destination_path.'/'.$filename.'.jpg', $image->stream());
             Utils::storeNewSize($destination_path, $filename, '_cards', $imageCards);
             Utils::storeNewSize($destination_path, $filename, '_popular', $imagePopular);
+            Utils::storeNewSize($destination_path, $filename, '_popular2x', $imagePopular2x);
             // 3. Save the path to the database
             $this->attributes[$attribute_name] = $destination_path.'/'.$filename.'.jpg';
         }

@@ -50,7 +50,9 @@ class ArticleController extends Controller
             'subCategories2d'  => $this->getSubCategories2d(),
             'subCategories3d'  => $this->getSubCategories3d(),
             'comments'         => $comments,
-            'numberOfComments' => $numberOfComments
+            'numberOfComments' => $numberOfComments,
+            'getMostPopularArticles' => $this->getMostPopularArticles(),
+            'getAllTags'       => $this->getAllTags()
         ]);
     }
     
@@ -62,7 +64,8 @@ class ArticleController extends Controller
             'subCategoriesWeb' => $this->getSubCategoriesWeb(),
             'subCategories2d'  => $this->getSubCategories2d(),
             'subCategories3d'  => $this->getSubCategories3d(),
-            'getAllTags'       => $this->getAllTags()
+            'getAllTags'       => $this->getAllTags(),
+            'getMostPopularArticles' => $this->getMostPopularArticles()
         ];
     }
     
@@ -148,6 +151,19 @@ class ArticleController extends Controller
         $getAllTags = Tag::select('name', 'slug')->whereHas('articles')->inRandomOrder()->get();
         
         return $getAllTags;
+    }
+    
+    public function getMostPopularArticles()
+    {
+        $getMostPopularArticles = Article::published()
+            ->whereHas('comments')
+            ->withCount('comments')
+            ->where('created_at', '>', \Carbon\Carbon::now()->subWeek())
+            ->orderBy('comments_count', 'DESC')
+            ->take(5)
+            ->get();
+        
+        return $getMostPopularArticles;
     }
     
     

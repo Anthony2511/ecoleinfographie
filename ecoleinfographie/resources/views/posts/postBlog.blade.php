@@ -123,8 +123,9 @@
 					</ul>
 				</div>
 				@endif
-
 			</div>
+
+
 
 
 			<footer class="footerArticle">
