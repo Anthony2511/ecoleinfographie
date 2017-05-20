@@ -29,17 +29,11 @@ class ArticleController extends Controller
         }
         
         
-        return view('pages.blog', [
-            'articles'         => $articles,
-            'orientation'      => $this->getOrientation(),
-            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
-            'subCategories2d'  => $this->getSubCategories2d(),
-            'subCategories3d'  => $this->getSubCategories3d()
-        ]);
+        return view('pages.blog', $this->getViewData($articles));
     }
     
     
-    public function show(Article $article)
+    protected function show(Article $article)
     {
         
         $comments = $article->comments()->paginate(12);
@@ -56,6 +50,17 @@ class ArticleController extends Controller
         ]);
     }
     
+    protected function getViewData($articles)
+    {
+        return [
+            'articles'          => $articles,
+            'orientation'      => $this->getOrientation(),
+            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
+            'subCategories2d'  => $this->getSubCategories2d(),
+            'subCategories3d'  => $this->getSubCategories3d(),
+        ];
+    }
+    
     public function searchCategory($request)
     {
         $search = $request->get('category');
@@ -64,15 +69,8 @@ class ArticleController extends Controller
                            ->where('orientation', 'LIKE', '%' . $search . '%')
                            ->paginate(8);
         
-        return view('pages.blog', [
-            'articles'         => $articles,
-            'orientation'      => $this->getOrientation(),
-            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
-            'subCategories2d'  => $this->getSubCategories2d(),
-            'subCategories3d'  => $this->getSubCategories3d()
-        ]);
+        return view('pages.blog', $this->getViewData($articles));
     }
-    
     
     public function search($request)
     {
@@ -89,13 +87,7 @@ class ArticleController extends Controller
         $articles = $article->published()->paginate(8);
         
         
-        return view('pages.blog', [
-            'articles'         => $articles,
-            'orientation'      => $this->getOrientation(),
-            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
-            'subCategories2d'  => $this->getSubCategories2d(),
-            'subCategories3d'  => $this->getSubCategories3d()
-        ]);
+        return view('pages.blog', $this->getViewData($articles));
     }
     
     public function searchSubCategories($request)
@@ -107,13 +99,7 @@ class ArticleController extends Controller
         })->where('orientation', 'LIKE', '%' . $category . '%')->paginate(8);
         
         
-        return view('pages.blog', [
-            'articles'         => $articles,
-            'orientation'      => $this->getOrientation(),
-            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
-            'subCategories2d'  => $this->getSubCategories2d(),
-            'subCategories3d'  => $this->getSubCategories3d()
-        ]);
+        return view('pages.blog', $this->getViewData($articles));
     }
     
     public function getSubCategoriesWeb()
