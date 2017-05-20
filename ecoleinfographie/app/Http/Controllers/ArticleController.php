@@ -44,27 +44,27 @@ class ArticleController extends Controller
         $numberOfComments = $article->comments()->count();
         
         return view('posts.postBlog', [
-            'article'          => $article,
-            'orientation'      => $this->getOrientation(),
-            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
-            'subCategories2d'  => $this->getSubCategories2d(),
-            'subCategories3d'  => $this->getSubCategories3d(),
-            'comments'         => $comments,
-            'numberOfComments' => $numberOfComments,
+            'article'                => $article,
+            'orientation'            => $this->getOrientation(),
+            'subCategoriesWeb'       => $this->getSubCategoriesWeb(),
+            'subCategories2d'        => $this->getSubCategories2d(),
+            'subCategories3d'        => $this->getSubCategories3d(),
+            'comments'               => $comments,
+            'numberOfComments'       => $numberOfComments,
             'getMostPopularArticles' => $this->getMostPopularArticles(),
-            'getAllTags'       => $this->getAllTags()
+            'getAllTags'             => $this->getAllTags()
         ]);
     }
     
     protected function getViewData($articles)
     {
         return [
-            'articles'         => $articles,
-            'orientation'      => $this->getOrientation(),
-            'subCategoriesWeb' => $this->getSubCategoriesWeb(),
-            'subCategories2d'  => $this->getSubCategories2d(),
-            'subCategories3d'  => $this->getSubCategories3d(),
-            'getAllTags'       => $this->getAllTags(),
+            'articles'               => $articles,
+            'orientation'            => $this->getOrientation(),
+            'subCategoriesWeb'       => $this->getSubCategoriesWeb(),
+            'subCategories2d'        => $this->getSubCategories2d(),
+            'subCategories3d'        => $this->getSubCategories3d(),
+            'getAllTags'             => $this->getAllTags(),
             'getMostPopularArticles' => $this->getMostPopularArticles()
         ];
     }
@@ -156,12 +156,12 @@ class ArticleController extends Controller
     public function getMostPopularArticles()
     {
         $getMostPopularArticles = Article::published()
-            ->whereHas('comments')
-            ->withCount('comments')
-            ->where('created_at', '>', \Carbon\Carbon::now()->subWeek())
-            ->orderBy('comments_count', 'DESC')
-            ->take(5)
-            ->get();
+                                         ->whereHas('comments')
+                                         ->withCount('comments')
+                                         ->where('created_at', '>', \Carbon\Carbon::now()->subWeek())
+                                         ->orderBy('comments_count', 'DESC')
+                                         ->take(5)
+                                         ->get();
         
         return $getMostPopularArticles;
     }

@@ -54,7 +54,7 @@
                     <img src="{{ $article->getImageArticle('_popular.jpg') }}" width="56" height="54" alt="" class="blog-popular__img" srcset="{{ $article->getImageArticle('_popular2x.jpg') }} 2x">
                     <figcaption class="blog-popular__figcaption">{{ str_limit($article->title, 45, '…') }}</figcaption>
                 </figure>
-                <a href="{{ Route('blog') . $article->slug }}" class="blog-popular__link"><span>Vers l’article populaire « {{ $article->title }} »</span></a>
+                <a href="{{ Route('blog') . '/' . $article->slug }}" class="blog-popular__link"><span>Vers l’article populaire « {{ $article->title }} »</span></a>
             </li>
             @endforeach
         </ul>

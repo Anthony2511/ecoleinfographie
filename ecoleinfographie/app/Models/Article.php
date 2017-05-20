@@ -107,8 +107,7 @@ class Article extends Model
     
     public function getDateForHuman()
     {
-        $locale = App::getLocale();
-        setlocale(LC_TIME, $locale);
+        setlocale(LC_TIME, 'fr_FR');
         return Carbon::parse($this->date)->formatLocalized('%d %B %Y');
     }
     
