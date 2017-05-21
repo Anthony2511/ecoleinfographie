@@ -48,8 +48,8 @@
 			</span>
 		@endif
 
-		<a href="#comments" class="blog-card__comments">
-			<span class="blog-card__comments__number">5</span>
+		<a href="{{ Route('blog') . '/' . $article->slug . '#anchor' }}" class="blog-card__comments">
+			<span class="blog-card__comments__number">{{ $article->comments->count() }}</span>
 			<span class="blog-card__comments__hidden"> commentaires à voir sur l’article {{ $article->title }}</span>
 		</a>
 	</footer>
