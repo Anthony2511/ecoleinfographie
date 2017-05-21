@@ -19,7 +19,7 @@
 			</li>
 			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
 					itemtype="http://schema.org/ListItem">
-				<a href="#" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+				<a href="{{ Route('teachers') }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
 					 itemprop="item">
 					<span itemprop="name">@lang('teachers.title')</span>
 				</a>

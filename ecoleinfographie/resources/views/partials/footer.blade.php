@@ -56,7 +56,7 @@
                 <a href="{{ Route('blog') }}" class="section__link">@lang('footer.blog')</a>
             </li>
             <li class="section__item">
-                <a href="#web" class="section__link">@lang('footer.internship')</a>
+                <a href="{{ Route('internship') }}" class="section__link">@lang('footer.internship')</a>
             </li>
             <li class="section__item">
                 <a href="{{ Route('teachers') }}" class="section__link">@lang('footer.teachers')</a>

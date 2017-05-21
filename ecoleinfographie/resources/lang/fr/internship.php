@@ -8,10 +8,5 @@ return [
     |--------------------------------------------------------------------------
     */
     
-    'course' => 'cours',
-    'teachers' => 'professeurs',
-    'students' => 'etudiants',
-    'graduated' => 'nos-diplomes',
-    'works' => 'realisations',
-    'internship' => 'proposer-une-offre-de-stage',
+    'title' => 'Proposer une offre de stage'
 ];

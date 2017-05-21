@@ -29,16 +29,14 @@ Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('
 Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('nos-diplomes');
 Route::get('realisations', 'WorkController@index')->name('realisations');
 Route::get('realisations/filter', 'WorkController@filter')->name('realisations-filter');
+Route::get(trans('url.teachers'), 'TeacherController@index')->name('teachers');
+Route::get(trans('url.internship'), 'InternshipController@index')->name('internship');
+
+// Blog
 Route::get('blog', 'ArticleController@index')->name('blog');
 Route::get('blog/search/autocomplete', 'ArticleController@autocomplete')->name('blog-autocomplete');
-Route::get(trans('url.teachers'), 'TeacherController@index')->name('teachers');
-
-// Comments
 Route::post('comments/{article_id}', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
 
-// Likes
-Route::get('blog/{article_id}/islikedbyme', 'ArticleController@isLikedByMe');
-Route::post('blog/like', 'ArticleController@like');
 
 // Posts
 Route::get('cours/{course}', 'CourseController@show');
