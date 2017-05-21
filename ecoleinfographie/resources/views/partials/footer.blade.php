@@ -44,38 +44,38 @@
             <span>Belgique</span>
         </address>
         <a href="tel:085211113" class="section__tel">085 21 11 13</a>
-        <a href="#contact" class="section__contact">Nous contacter</a>
+        <a href="#contact" class="section__contact">@lang('footer.contact-us')</a>
     </section>
     <section class="section section--explorez">
-        <h3 role="heading" aria-level="3" class="section__title">Explorez</h3>
+        <h3 role="heading" aria-level="3" class="section__title">@lang('footer.explore')</h3>
         <ul class="section__list">
             <li class="section__item">
-                <a href="#web" class="section__link">L’actualité de l’école</a>
+                <a href="#web" class="section__link">@lang('footer.news')</a>
             </li>
             <li class="section__item">
-                <a href="#web" class="section__link">Nos articles de blog et tutos</a>
+                <a href="{{ Route('blog') }}" class="section__link">@lang('footer.blog')</a>
             </li>
             <li class="section__item">
-                <a href="#web" class="section__link">Proposer une offre de stage</a>
+                <a href="#web" class="section__link">@lang('footer.internship')</a>
             </li>
             <li class="section__item">
-                <a href="{{ Route('teachers') }}" class="section__link">La liste des profresseurs</a>
+                <a href="{{ Route('teachers') }}" class="section__link">@lang('footer.teachers')</a>
             </li>
         </ul>
     </section>
     <section class="section section--formations">
-        <h3 role="heading" aria-level="3" class="section__title">Nos formations</h3>
+        <h3 role="heading" aria-level="3" class="section__title">@lang('footer.training')</h3>
         <ul class="section__list">
             <li class="section__item">
-                <a href="#web" class="section__link">La formation en web</a>
+                <a href="#web" class="section__link">@lang('footer.webtraining')</a>
             </li>
             <li class="section__item">
-                <a href="#web" class="section__link">La formation en design graphique</a>
+                <a href="#web" class="section__link">@lang('footer.2Dtraining')</a>
             </li>
             <li class="section__item">
-                <a href="#web" class="section__link">La formation en 3D/audiovisuel</a>
+                <a href="#web" class="section__link">@lang('footer.3Dtraining')</a>
             </li>
         </ul>
-        <a href="#inscription" class="section__cta">S’inscrire en infographie</a>
+        <a href="#inscription" class="section__cta">@lang('footer.inscription')</a>
     </section>
 </section>
