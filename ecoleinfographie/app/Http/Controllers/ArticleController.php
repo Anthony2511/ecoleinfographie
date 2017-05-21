@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Like;
 use Illuminate\Http\Request;
 use SEO;
 
@@ -14,6 +15,9 @@ class ArticleController extends Controller
     protected function index(Request $request)
     {
         $articles = Article::published()->paginate(8);
+    
+        SEO::setTitle('Le blog de l’infographie');
+        SEO::setDescription('Découvrez des articles sur l’infographie, que ce soit sur le web, sur le design graphique ou la 3D/Vidéo, il y a de tout.');
         
         
         if ($request->has('search')) {
@@ -42,6 +46,9 @@ class ArticleController extends Controller
         
         $comments         = $article->comments()->paginate(12);
         $numberOfComments = $article->comments()->count();
+    
+        SEO::setTitle($article->title);
+        SEO::setDescription($article->introduction);
         
         return view('posts.postBlog', [
             'article'                => $article,
@@ -165,7 +172,6 @@ class ArticleController extends Controller
         
         return $getMostPopularArticles;
     }
-    
     
     public function getOrientation()
     {

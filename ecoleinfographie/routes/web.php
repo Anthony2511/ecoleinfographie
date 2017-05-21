@@ -35,6 +35,12 @@ Route::get('blog/search/autocomplete', 'ArticleController@autocomplete')->name('
 // Comments
 Route::post('comments/{article_id}', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
 
+// Likes
+Route::get('blog/{article_id}/islikedbyme', 'ArticleController@isLikedByMe');
+Route::post('blog/like', 'ArticleController@like');
+
+
+
 
 // Posts
 Route::get('cours/{course}', 'CourseController@show');

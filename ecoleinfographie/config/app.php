@@ -171,9 +171,10 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Conner\Likeable\LikeableServiceProvider::class,
         /*
-         * Application Service Providers...
-         */
+        * Application Service Providers...
+        */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
