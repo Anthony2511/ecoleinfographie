@@ -125,6 +125,60 @@
 		</div>
 		{{ Form::close() }}
 
+		{{ Form::open([ 'method' => 'POST', 'class' => 'form-pdf']) }}
+		<div class="form__container">
+			<div class="form__block">
+				<div class="form__wrapper form__wrapper--col2 form__wrapper--left">
+					<label for="name-pdf" class="form__label">Votre nom</label>
+					<input type="text" name="name-pdf" id="name-pdf" class="form__input floatLabel" value="">
+				</div>
+				<div class="form__wrapper form__wrapper--col2 form__wrapper--right">
+					<label for="company-pdf" class="form__label">Nom de l’entreprise concernée</label>
+					<input type="text" name="company-pdf" id="company-pdf" class="form__input floatLabel" value="">
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapper">
+					<label for="subject-pdf" class="form__label">Quel est le sujet de votre demande ?</label>
+					<input type="text" name="subject-pdf" id="subject-pdf" class="form__input floatLabel" value="">
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapper">
+					<label for="email-pdf" class="form__label">Quel est votre adresse e-mail ?</label>
+					<input type="email" name="email-pdf" id="email-pdf" class="form__input floatLabel" value="">
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapper">
+					<span for="recipient" class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
+					<div class="form__checkbox-btn">
+						<label for="cbox1-pdf" class="form__labelCheckbox">
+							<span class="form__labelCheckbox__span">3D et Audiovisuel</span>
+							<input type="checkbox" name="cbox1" id="cbox1-pdf" value="" class="form__checkbox">
+							<div class="form__control-indicator"></div>
+						</label>
+					</div>
+					<div class="form__checkbox-btn">
+						<label for="cbox2-pdf" class="form__labelCheckbox">
+							<span class="form__labelCheckbox__span">Design graphique</span>
+							<input type="checkbox" name="cbox2" id="cbox2-pdf" value="" class="form__checkbox">
+							<div class="form__control-indicator"></div>
+						</label>
+					</div>
+					<div class="form__checkbox-btn">
+						<label for="cbox3-pdf" class="form__labelCheckbox">
+							<span class="form__labelCheckbox__span">Web</span>
+							<input type="checkbox" id="cbox3-pdf" value="" name="cbox3" class="form__checkbox">
+							<div class="form__control-indicator"></div>
+						</label>
+					</div>
+				</div>
+			</div>
+			<button class="form__submit">Envoyer l’offre de stage</button>
+		</div>
+		{{ Form::close() }}
+
 	</section>
 
 
