@@ -107,6 +107,10 @@
         float: left
       &--right
         float: right
+    &__block
+      margin-bottom s(15)
+      &:after
+        @extend .clearfix
     &__input
       height: s(52)
       width: 100%
@@ -127,6 +131,66 @@
       display: block
       transition: 0.3s ease all
       transition-property: top, font-size
+    &__fakeLabel
+      display: block
+      font-weight 700
+      color: $cBlack
+      text-align left
+      margin-top s(20)
+      margin-bottom s(15)
+    /*&__checkbox
+      -webkit-appearance: checkbox;*/
+    &__checkbox-btn
+      position: relative
+      float: left
+      background $cWhite
+      margin-right s(32)
+      &:last-child
+        margin-right: 0
+    &__labelCheckbox
+      display: block
+      padding s(20, $sz7) s(20, $sz7) s(18, $sz7) s(20, $sz7)
+      font-weight: 900
+      text-transform: uppercase
+      letter-spacing 1px
+      border: 1px solid $cWhite2
+      cursor pointer
+      transition .3s ease border
+      font-size s($sz7)
+      &:hover
+      &:focus
+        border: 1px solid $cGrey2
+        transition .3s ease border
+      & span
+        position: relative
+        top s(-4)
+        padding-left s(40)
+        color $cBlack
+    &__control-indicator
+      position: absolute;
+      top: s(18)
+      left: s(20)
+      height: s(22)
+      width: s(22)
+      background: $cGrey3
+      transition .3s ease background
+      &:after
+        content: ''
+        position: absolute
+        display: none
+        left: s(9)
+        top: s(6)
+        width: s(5)
+        height: s(10)
+        border: solid $cWhite
+        border-width: 0 s(2) s(2) 0
+        transform: rotate(45deg)
+        transition .3s ease border
+    &__checkbox:checked ~ .form__control-indicator
+      background $cBlueCiel
+      transition .3s ease background
+    &__checkbox:checked ~ .form__control-indicator:after
+      display: block
 
   .form__label.active
     top s(5, $sz9)

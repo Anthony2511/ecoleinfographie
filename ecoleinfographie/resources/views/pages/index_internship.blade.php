@@ -52,7 +52,57 @@
 				</button>
 			</div>
 		</div>
+
+		{{ Form::open([ 'method' => 'POST', 'class' => 'form-full']) }}
+		<div class="form__container">
+			<div class="form__block">
+				<div class="form__wrapper form__wrapper--col2 form__wrapper--left">
+					<label for="name" class="form__label">Votre nom</label>
+					<input type="text" name="name" id="name" class="form__input floatLabel" value="">
+				</div>
+				<div class="form__wrapper form__wrapper--col2 form__wrapper--right">
+					<label for="company" class="form__label">Nom de l’entreprise concernée</label>
+					<input type="text" name="company" id="company" class="form__input floatLabel" value="">
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapper">
+					<label for="subject" class="form__label">Quel est le sujet de votre demande ?</label>
+					<input type="text" name="subject" id="subject" class="form__input floatLabel" value="">
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapper">
+					<span for="recipient" class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
+					<div class="form__checkbox-btn">
+						<label for="cbox1" class="form__labelCheckbox">
+							<span class="form__labelCheckbox__span">3D et Audiovisuel</span>
+							<input type="checkbox" id="cbox1" value="" class="form__checkbox">
+							<div class="form__control-indicator"></div>
+						</label>
+					</div>
+					<div class="form__checkbox-btn">
+						<label for="cbox2" class="form__labelCheckbox">
+							<span class="form__labelCheckbox__span">Design graphique</span>
+							<input type="checkbox" id="cbox2" value="" class="form__checkbox">
+							<div class="form__control-indicator"></div>
+						</label>
+					</div>
+					<div class="form__checkbox-btn">
+						<label for="cbox3" class="form__labelCheckbox">
+							<span class="form__labelCheckbox__span">Web</span>
+							<input type="checkbox" id="cbox3" value="" class="form__checkbox">
+							<div class="form__control-indicator"></div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{ Form::close() }}
+
 	</section>
+
+
 
 
 
