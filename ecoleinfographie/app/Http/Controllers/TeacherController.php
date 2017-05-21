@@ -11,7 +11,11 @@ class TeacherController extends Controller
 {
     protected function index()
     {
+        $teachers = Teacher::orderBy('lastname', 'ASC');
         
+        return view('pages.index_teachers', [
+            'teachers' => $teachers
+        ]);
     }
     
     protected function show(Teacher $teacher)
