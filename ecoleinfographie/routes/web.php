@@ -31,6 +31,7 @@ Route::get('realisations', 'WorkController@index')->name('realisations');
 Route::get('realisations/filter', 'WorkController@filter')->name('realisations-filter');
 Route::get('blog', 'ArticleController@index')->name('blog');
 Route::get('blog/search/autocomplete', 'ArticleController@autocomplete')->name('blog-autocomplete');
+Route::get(trans('url.teachers'), 'TeacherController@index')->name('teachers');
 
 // Comments
 Route::post('comments/{article_id}', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
@@ -39,12 +40,9 @@ Route::post('comments/{article_id}', ['uses' => 'CommentController@store', 'as' 
 Route::get('blog/{article_id}/islikedbyme', 'ArticleController@isLikedByMe');
 Route::post('blog/like', 'ArticleController@like');
 
-
-
-
 // Posts
 Route::get('cours/{course}', 'CourseController@show');
-Route::get('professeurs/{teacher}', 'TeacherController@show');
+Route::get(trans('url.teachers') . '/{teacher}', 'TeacherController@show');
 Route::get('etudiants/{student}', 'StudentController@show');
 Route::get('realisations/{work}', 'WorkController@show');
 Route::get('blog/{article}', 'ArticleController@show')->name('article.single');

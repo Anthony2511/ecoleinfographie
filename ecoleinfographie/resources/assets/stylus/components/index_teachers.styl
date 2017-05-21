@@ -1,0 +1,43 @@
+.index_teachers &
+  .teachers
+    @extend .containerGridz
+    margin-top s(60)
+    &__title
+      @extend .titleExtraBold26
+      color $cBlueTitles
+    /*&__item
+      display: block
+      margin-bottom s(15)
+      &:last-child
+        margin-bottom: 0
+    &__img
+      border-radius 50%
+      margin-right s(10)
+    &__link
+      display: inline-block;
+    &__link:hover .teachers__name:after
+    &__link:focus .teachers__name:after
+      width: 100%
+      transition .2s $ease-out-quart width
+    &__name
+      display: inline-block;
+      vertical-align: middle;
+      @extend .linkInText
+      font-size s($sz7)
+      &:after
+        bottom -3px
+    &__img
+      display: inline-block;
+      vertical-align: middle;*/
+    &__list
+      max-width: 64.6875em
+      margin: s(80) auto 0 auto
+      &:after
+        @extend .clearfix
+    & .course-teachers__item
+      float: left
+      margin-right s(45)
+      margin-bottom s(45)
+      &:nth-child(3n + 3)
+        margin-right: 0
+

@@ -11,7 +11,7 @@ class TeacherController extends Controller
 {
     protected function index()
     {
-        $teachers = Teacher::orderBy('lastname', 'ASC');
+        $teachers = Teacher::select('firstname', 'lastname', 'slug', 'picture', 'role')->orderBy('lastname', 'ASC')->get();
         
         return view('pages.index_teachers', [
             'teachers' => $teachers
