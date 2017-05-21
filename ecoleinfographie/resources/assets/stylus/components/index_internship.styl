@@ -1,0 +1,101 @@
+.internship &
+  .propose
+    max-width s(735)
+    margin s(75) auto 0 auto
+    text-align: center
+    &__title
+      @extend .titleExtraBold26
+      color $cBlueTitles
+      &:after
+        margin s(11, $sz5) auto 0 auto
+    &__paragraph
+      @extend .paragraph21
+    &__infos
+      max-width s(538)
+      margin s(50) auto s(120) auto
+      &:after
+        @extend .clearfix
+    &__info
+      display: block
+      max-width s(146)
+      float: left
+      margin-right s(36, $sz8)
+      font-size s($sz8)
+      letter-spacing 1px
+      color $cBlueTitles
+      line-height: 1.3em
+      &:last-child
+        margin-right: 0
+      &:before
+        setIconBase()
+        display: block
+        font-size s(45, $sz8)
+        margin-bottom s(10, 45)
+        color $cBlue2
+      &--duration:before
+        setIconInclude('duration')
+      &--date:before
+        setIconInclude('date')
+      &--convention:before
+        setIconInclude('formcomplete')
+      & strong
+        font-size s(20, $sz8)
+        font-weight 900
+        color $cBlueTitles
+
+
+  .form
+    background $cBackgroundGrey2
+    &__container
+      max-width s(735)
+      padding-top s(120)
+      margin 0 auto
+      text-align: center
+    &__title
+      @extend .titleExtraBold26
+      color $cBlueTitles
+      &:after
+        margin s(11, $sz5) auto 0 auto
+    &__paragraph
+      width 90%
+      margin 0 auto s(60, $sz6) auto
+      @extend .paragraph21
+    &__button-container
+      &:after
+        @extend .clearfix
+    &__button
+      display: block
+      width s(345)
+      height s(143)
+      border 1px solid $cGrey5
+      border-radius 2px
+      &__label
+        font-size s($sz10)
+        font-weight: 700
+        letter-spacing .3px
+        color $cGrey5
+        &:before
+          setIconBase()
+          display: block
+          font-size s(47, $sz10)
+          margin-bottom s(3, $sz10)
+    &__button--detail
+      float: left
+      & .form__button__label:before
+        setIconInclude('formcomplete')
+    &__button--pdf
+      float: right
+      & .form__button__label:before
+        setIconInclude('pdf')
+    &__button--active
+      border 1px solid $cBlueCiel
+      transition .3s ease border
+      & .form__button__label
+        color $cBlueCiel
+        transition .3s ease color
+
+
+        
+
+
+
