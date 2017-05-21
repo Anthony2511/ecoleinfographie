@@ -37,6 +37,7 @@ var w = {
             if (w.$body.hasClass('postBlog')) return 'postBlog';
             if (w.$body.hasClass('graduate')) return 'graduated';
             if (w.$body.hasClass('realisations')) return 'realisations';
+            if (w.$body.hasClass('internship')) return 'internship';
 
             return false;
       }
