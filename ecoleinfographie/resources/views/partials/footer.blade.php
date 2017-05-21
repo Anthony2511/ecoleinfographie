@@ -59,7 +59,7 @@
                 <a href="#web" class="section__link">Proposer une offre de stage</a>
             </li>
             <li class="section__item">
-                <a href="#web" class="section__link">La liste des profresseurs</a>
+                <a href="{{ Route('teachers') }}" class="section__link">La liste des profresseurs</a>
             </li>
         </ul>
     </section>
