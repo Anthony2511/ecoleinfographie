@@ -1,4 +1,5 @@
 .internship &
+  background-color $cGreyLight
   .propose
     max-width s(735)
     margin s(75) auto 0 auto
@@ -48,10 +49,10 @@
     background $cBackgroundGrey2
     &__container
       max-width s(735)
-      padding-top s(120)
       margin 0 auto
       text-align: center
     &__title
+      padding-top s(120, $sz5)
       @extend .titleExtraBold26
       color $cBlueTitles
       &:after
@@ -153,8 +154,14 @@
       text-align left
       margin-top s(20)
       margin-bottom s(15)
-    /*&__checkbox
-      -webkit-appearance: checkbox;*/
+    &__checkbox
+      -webkit-appearance: checkbox;
+      width: 0.1px
+      height: 0.1px
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      z-index: -1
     &__checkbox-btn
       position: relative
       float: left
@@ -246,6 +253,45 @@
       font-weight: 900
       letter-spacing 1.3px
 
+  .form-wrapper--file
+    text-align left
+  .form__inputFile
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+    &:focus ~ .form__labelFile
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+      background-color #e91e29 - 20%
+  .form__labelFile
+    display: inline-block;
+    padding s(20) s(40)
+    text-transform: uppercase
+    letter-spacing 1px
+    font-weight: 900;
+    color: white;
+    background-color: #E91E29
+    transition .3s ease background-color
+    cursor pointer
+    &:hover
+    &:focus
+      background-color #e91e29 - 20%
+      transition .3s ease background-color
+    &:before
+      icon('pdf-btn')
+      font-size s($sz6)
+      margin-right s(10, $sz6)
+      vertical-align middle
+    & span
+      position: relative
+      font-size s($sz10)
+      color $cWhite
+      top 2px
+
+
   .form__label.active
     top s(5, $sz9)
     font-size s($sz9)
@@ -256,3 +302,21 @@
     padding-top s(12)
     line-height 0
 
+
+/************************************\
+		TABS
+\************************************/
+
+  .tab-wrapper
+    position: relative
+    margin-top s(40)
+
+  .tab
+    display: none
+  .tab.active
+    display block
+
+.no-js
+  .internship &
+    .tab
+      display: block
