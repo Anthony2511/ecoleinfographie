@@ -73,6 +73,12 @@
 			</div>
 			<div class="form__block">
 				<div class="form__wrapper">
+					<label for="email" class="form__label">Quel est votre adresse e-mail ?</label>
+					<input type="email" name="email" id="email" class="form__input floatLabel" value="">
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapper">
 					<span for="recipient" class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
 					<div class="form__checkbox-btn">
 						<label for="cbox1" class="form__labelCheckbox">
@@ -97,6 +103,25 @@
 					</div>
 				</div>
 			</div>
+			<div class="form__block">
+				<div class="form__wrapperTextarea">
+					<label for="description" class="form__labelTextarea">Décrivez votre entreprise en quelques mots ?</label>
+					<textarea name="description" id="description" class="form__textarea"></textarea>
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapperTextarea">
+					<label for="profils" class="form__labelTextarea">Quels sont les profils que vous recherchez&nbsp;?</label>
+					<textarea name="profils" id="profils" class="form__textarea"></textarea>
+				</div>
+			</div>
+			<div class="form__block">
+				<div class="form__wrapperTextarea">
+					<label for="proposition" class="form__labelTextarea">Que proposez-vous&nbsp;?</label>
+					<textarea name="proposition" id="proposition" class="form__textarea"></textarea>
+				</div>
+			</div>
+			<button class="form__submit">Envoyer l’offre de stage</button>
 		</div>
 		{{ Form::close() }}
 
