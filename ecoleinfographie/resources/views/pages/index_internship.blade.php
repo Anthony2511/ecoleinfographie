@@ -66,7 +66,7 @@
 							@endif
 						<div class="form__wrapper form__wrapper--col2 form__wrapper--left">
 							<label for="name" class="form__label">Votre nom</label>
-							<input type="text" name="name" id="name" required class="form__input floatLabel {{ $errors->has('name') ? 'error-input' : '' }}" value="">
+							<input type="text" name="name" required id="name" class="form__input floatLabel {{ $errors->has('name') ? 'error-input' : '' }}" value="{{ old('name') }}">
 						</div>
 						</div>
 						<div class="form-float-right">
@@ -77,7 +77,7 @@
 							@endif
 						<div class="form__wrapper form__wrapper--col2 form__wrapper--right">
 							<label for="company" class="form__label">Nom de l’entreprise concernée</label>
-							<input type="text" name="company" required id="company" class="form__input floatLabel {{ $errors->has('company') ? 'error-input' : '' }}" value="">
+							<input type="text" name="company" required id="company" class="form__input floatLabel {{ $errors->has('company') ? 'error-input' : '' }}" value="{{ old('company') }}">
 						</div>
 						</div>
 					</div>
@@ -89,7 +89,7 @@
 						@endif
 						<div class="form__wrapper">
 							<label for="subject" class="form__label">Quel est le sujet de votre demande ?</label>
-							<input type="text" name="subject" required id="subject" class="form__input floatLabel {{ $errors->has('subject') ? 'error-input' : '' }}" value="">
+							<input type="text" name="subject" required id="subject" class="form__input floatLabel {{ $errors->has('subject') ? 'error-input' : '' }}" value="{{ old('subject') }}">
 						</div>
 					</div>
 					<div class="form__block">
@@ -100,7 +100,7 @@
 						@endif
 						<div class="form__wrapper">
 							<label for="email" class="form__label">Quel est votre adresse e-mail ?</label>
-							<input type="email" name="email" id="email" required class="form__input floatLabel {{ $errors->has('email') ? 'error-input' : '' }}" value="">
+							<input type="email" name="email" required id="email" class="form__input floatLabel {{ $errors->has('email') ? 'error-input' : '' }}" value="{{ old('email') }}">
 						</div>
 					</div>
 					<div class="form__block">
@@ -140,7 +140,7 @@
 					<div class="form__block">
 						<div class="form__wrapperTextarea">
 							<label for="description" class="form__labelTextarea">Décrivez votre entreprise en quelques mots ?</label>
-							<textarea name="description" required id="description" class="form__textarea {{ $errors->has('description') ? 'error-input' : '' }}"></textarea>
+							<textarea name="description" id="description" required class="form__textarea {{ $errors->has('description') ? 'error-input' : '' }}">{{ old('description') }}</textarea>
 						</div>
 					</div>
 					@if ($errors->has('profils'))
@@ -151,7 +151,7 @@
 					<div class="form__block">
 						<div class="form__wrapperTextarea">
 							<label for="profils" class="form__labelTextarea">Quels sont les profils que vous recherchez&nbsp;?</label>
-							<textarea name="profils" required id="profils" class="form__textarea {{ $errors->has('profils') ? 'error-input' : '' }}"></textarea>
+							<textarea name="profils" id="profils" required class="form__textarea {{ $errors->has('profils') ? 'error-input' : '' }}">{{ old('profils') }}</textarea>
 						</div>
 					</div>
 					@if ($errors->has('proposition'))
@@ -162,7 +162,7 @@
 					<div class="form__block">
 						<div class="form__wrapperTextarea">
 							<label for="proposition" class="form__labelTextarea">Que proposez-vous&nbsp;?</label>
-							<textarea name="proposition" required id="proposition" class="form__textarea {{ $errors->has('proposition') ? 'error-input' : '' }}"></textarea>
+							<textarea name="proposition" required id="proposition" class="form__textarea {{ $errors->has('proposition') ? 'error-input' : '' }}">{{ old('proposition') }}</textarea>
 						</div>
 					</div>
 					<button class="form__submit">Envoyer l’offre de stage</button>
