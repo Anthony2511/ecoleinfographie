@@ -121,7 +121,21 @@ return [
         ],
         'email' => [
             'required' => 'Veuillez indiquer une adresse e-mail valide'
+        ],
+        'cbox1-pdf' => [
+            'required_without_all' => 'Veuillez sélectionner au moins une option pour laquelle votre offre est destinée'
+        ],
+        'cbox2-pdf' => [
+            'required_without_all' => 'Veuillez sélectionner au moins une option pour laquelle votre offre est destinée'
+        ],
+        'cbox3-pdf' => [
+            'required_without_all' => 'Veuillez sélectionner au moins une option pour laquelle votre offre est destinée'
+        ],
+        'file-pdf' => [
+            'required' => 'Veuillez mettre en ligne un fichier au format PDF',
+            'mimes' => 'Le fichier que vous voulez envoyer doit être au format PDF'
         ]
+        
     ],
 
     /*
@@ -168,11 +182,20 @@ return [
         'size'                  => 'taille',
         'company' => 'nom pour l’entreprise concernée',
         'subject' => 'sujet pour votre message',
-        'profils' => 'profies',
+        'profils' => 'profiles',
         'proposition' => 'proposition',
         'cbox1' => 'option',
         'cbox2' => 'option',
-        'cbox3' => 'option'
+        'cbox3' => 'option',
+        'name-pdf' => 'nom',
+        'company-pdf' => 'nom pour l’entreprise concernée',
+        'subject-id' => 'sujet pour votre message',
+        'profils-pdf' => 'profiles',
+        'proposition-pdf' => 'proposition',
+        'cbox1-pdf' => 'option',
+        'cbox2-pdf' => 'option',
+        'cbox3-pdf' => 'option',
+        'file-pdf' => 'fichier pdf'
         
     ],
 

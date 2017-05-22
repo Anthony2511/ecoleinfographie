@@ -57,6 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
 
 // Mails
 Route::post('/send-internship-full', 'InternshipController@sendFull')->name('mail-internship-full');
+Route::post('/send-internship-file', 'InternshipController@sendFile')->name('mail-internship-file');
 
 
 // Admin

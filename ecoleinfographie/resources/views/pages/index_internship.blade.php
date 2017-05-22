@@ -43,18 +43,18 @@
 		<div class="form__container">
 			<h2 role="heading" aria-level="2" class="form__title">Déposer une offre</h2>
 			<p class="form__paragraph">Vous reçevrez un email de confirmation de la part du professeur responsable une fois que votre offre aura été validée. Elle sera ensuite transmise aux élèves.</p>
-			<div class="form__button-container">
-				<button class="form__button form__button--detail form__button--active">
+			<div class="form__button-container" id="form">
+				<button class="form__button form__button--detail {{ Request::get('form') !== 'pdf' ? 'form__button--active' : '' }}">
 					<span class="form__button__label">Je remplis un formulaire détaillé</span>
 				</button>
-				<button class="form__button form__button--pdf">
+				<button class="form__button form__button--pdf {{ Request::get('form') == 'pdf' ? 'form__button--active' : '' }}">
 					<span class="form__button__label">J’envoie une offre au format PDF</span>
 				</button>
 			</div>
 		</div>
 
-		<div class="tab-wrapper" id="form">
-			<div class="tab tab--1 active">
+		<div class="tab-wrapper">
+			<div class="tab tab--1 {{ Request::get('form') !== 'pdf' ? 'active' : '' }}">
 				{{ Form::open([ 'method' => 'POST', 'class' => 'form-full', 'route' => ['mail-internship-full']]) }}
 				<div class="form__container">
 					<div class="form__block">
@@ -170,61 +170,104 @@
 				{{ Form::close() }}
 			</div>
 
-			<div class="tab tab--2">
-				{{ Form::open([ 'method' => 'POST', 'class' => 'form-pdf']) }}
+			<div class="tab tab--2 {{ Request::get('form') == 'pdf' ? 'active' : '' }}">
+				{{ Form::open([ 'method' => 'POST', 'class' => 'form-pdf', 'route' => ['mail-internship-file'], 'files' => true]) }}
 				<div class="form__container">
 					<div class="form__block">
-						<div class="form__wrapper form__wrapper--col2 form__wrapper--left">
-							<label for="name-pdf" class="form__label">Votre nom</label>
-							<input type="text" name="name-pdf" id="name-pdf" class="form__input floatLabel" value="">
+						<div class="form-float-left">
+							@if ($errors->has('name-pdf'))
+								<span class="form-error">
+									{{ $errors->first('name-pdf') }}
+								</span>
+							@endif
+							<div class="form__wrapper form__wrapper--col2 form__wrapper--left">
+								<label for="name-pdf" class="form__label">Votre nom</label>
+								<input type="text" name="name-pdf" required  id="name-pdf" class="form__input floatLabel {{ $errors->has('name-pdf') ? 'error-input' : '' }}" value="{{ old('name-pdf') }}">
+							</div>
 						</div>
-						<div class="form__wrapper form__wrapper--col2 form__wrapper--right">
-							<label for="company-pdf" class="form__label">Nom de l’entreprise concernée</label>
-							<input type="text" name="company-pdf" id="company-pdf" class="form__input floatLabel" value="">
+						<div class="form-float-right">
+							@if ($errors->has('company-pdf'))
+								<span class="form-error">
+									{{ $errors->first('company-pdf') }}
+								</span>
+							@endif
+							<div class="form__wrapper form__wrapper--col2 form__wrapper--right">
+								<label for="company-pdf" class="form__label">Nom de l’entreprise concernée</label>
+								<input type="text" name="company-pdf" required  id="company-pdf" class="form__input floatLabel {{ $errors->has('company-pdf') ? 'error-input' : '' }}" value="{{ old('company-pdf') }}">
+							</div>
 						</div>
 					</div>
 					<div class="form__block">
+						@if ($errors->has('subject-pdf'))
+							<span class="form-error">
+								{{ $errors->first('subject-pdf') }}
+							</span>
+						@endif
 						<div class="form__wrapper">
 							<label for="subject-pdf" class="form__label">Quel est le sujet de votre demande ?</label>
-							<input type="text" name="subject-pdf" id="subject-pdf" class="form__input floatLabel" value="">
+							<input type="text" name="subject-pdf" required  id="subject-pdf" class="form__input floatLabel {{ $errors->has('subject-pdf') ? 'error-input' : '' }}" value="{{ old('subject-pdf') }}">
 						</div>
 					</div>
 					<div class="form__block">
+						@if ($errors->has('email-pdf'))
+							<span class="form-error">
+								{{ $errors->first('email-pdf') }}
+							</span>
+						@endif
 						<div class="form__wrapper">
 							<label for="email-pdf" class="form__label">Quel est votre adresse e-mail ?</label>
-							<input type="email" name="email-pdf" id="email-pdf" class="form__input floatLabel" value="">
+							<input type="email" name="email-pdf" id="email-pdf" class="form__input floatLabel {{ $errors->has('email-pdf') ? 'error-input' : '' }}" value="{{ old('email-pdf') }}" required value="{{ old('email-pdf') }}">
 						</div>
 					</div>
 					<div class="form__block">
+						@if ($errors->has('file-pdf'))
+							<span class="form-error">
+								{{ $errors->first('file-pdf') }}
+							</span>
+						@endif
 						<div class="form__wrapper form-wrapper--file">
-							<input type="file" name="file-pdf" id="file-pdf" class="form__inputFile" value="">
-							<label for="file-pdf" class="form__labelFile"><span>Choisissez un fichier</span></label>
+							<input type="file" name="file-pdf" id="file-pdf" class="form__inputFile">
+							<label for="file-pdf" class="form__labelFile"><span>Choisissez un fichier PDF</span></label>
 						</div>
 					</div>
 					<div class="form__block">
 						<div class="form__wrapper">
 							<span for="recipient" class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
+							<span class="form-error">
+								{{ $errors->first('cbox1-pdf') }}
+							</span>
 							<div class="form__checkbox-btn">
 								<label for="cbox1-pdf" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">3D et Audiovisuel</span>
-									<input type="checkbox" name="cbox1" id="cbox1-pdf" value="" class="form__checkbox">
+									<input type="checkbox" name="cbox1-pdf" id="cbox1-pdf" value="3D-pdf" class="form__checkbox">
 									<div class="form__control-indicator"></div>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox2-pdf" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Design graphique</span>
-									<input type="checkbox" name="cbox2" id="cbox2-pdf" value="" class="form__checkbox">
+									<input type="checkbox" name="cbox2-pdf" id="cbox2-pdf" value="2D-pdf" class="form__checkbox">
 									<div class="form__control-indicator"></div>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox3-pdf" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Web</span>
-									<input type="checkbox" id="cbox3-pdf" value="" name="cbox3" class="form__checkbox">
+									<input type="checkbox" id="cbox3-pdf" value="WEB-pdf" name="cbox3-pdf" class="form__checkbox">
 									<div class="form__control-indicator"></div>
 								</label>
 							</div>
+						</div>
+					</div>
+					@if ($errors->has('description-pdf'))
+						<span class="form-error">
+							{{ $errors->first('description-pdf') }}
+						</span>
+					@endif
+					<div class="form__block">
+						<div class="form__wrapperTextarea">
+							<label for="description-pdf" class="form__labelTextarea">Vous désirez ajouter quelque chose&nbsp;?</label>
+							<textarea name="description-pdf" id="description-pdf" class="form__textarea {{ $errors->has('description-pdf') ? 'error-input' : '' }}">{{ old('description-pdf') }}</textarea>
 						</div>
 					</div>
 					<button class="form__submit">Envoyer l’offre de stage</button>
