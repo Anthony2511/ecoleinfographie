@@ -165,6 +165,7 @@
 							<textarea name="proposition" required id="proposition" class="form__textarea {{ $errors->has('proposition') ? 'error-input' : '' }}">{{ old('proposition') }}</textarea>
 						</div>
 					</div>
+					<p class="form-success">{!! session('success') !!}</p>
 					<button class="form__submit">Envoyer l’offre de stage</button>
 				</div>
 				{{ Form::close() }}
@@ -270,6 +271,7 @@
 							<textarea name="description-pdf" id="description-pdf" class="form__textarea {{ $errors->has('description-pdf') ? 'error-input' : '' }}">{{ old('description-pdf') }}</textarea>
 						</div>
 					</div>
+					<p class="form-success">{!! session('success') !!}</p>
 					<button class="form__submit">Envoyer l’offre de stage</button>
 				</div>
 				{{ Form::close() }}

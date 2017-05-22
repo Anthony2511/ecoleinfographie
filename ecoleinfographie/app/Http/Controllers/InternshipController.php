@@ -59,6 +59,8 @@ class InternshipController extends Controller
         }
         
         Mail::to($emails)->send(new InternshipMailFull($request));
+    
+        \Session::flash('success','Votre message a été posté. Merci !');
         
         return redirect()->to(route('internship'));
     }
@@ -105,6 +107,8 @@ class InternshipController extends Controller
         
         Mail::to($emails)
             ->send(new InternshipMailFile($request));
+    
+        \Session::flash('success','Votre message a été posté. Merci !');
         
         return redirect()->to(route('internship', 'form=pdf#form'));
     }
