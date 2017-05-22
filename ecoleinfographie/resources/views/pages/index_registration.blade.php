@@ -78,15 +78,6 @@
     <section class="insBottom">
         <h2 role="heading" aria-level="2" class="insBottom__title">Besoin d’informations supplémentaire ?</h2>
         <section class="insDossier">
-            <div class="insDossier__wrapper">
-                <h3 role="heading" aria-level="2" class="insDossier__title">Constitution du dossier d’inscription de première année</h3>
-                <p class="insDossier__paragraph">De manière à pouvoir récupérer les différentes données qui y sont stockées, nous vous invitons à vous présenter, au moment de votre inscription, muni de votre <b>carte d'identité électronique.</b></p>
-                <p class="insDossier__paragraph">Les autres documents à fournir pour constituer votre dossier d'inscription varient selon les circonstances.</p>
-                <p class="insDossier__paragraph">Un <b>bulletin de versement</b> vous sera remis au moment de l'inscription. Le paiement du droit d'inscription est un des éléments conditionnant la régularité de votre inscription.
-                </p>
-                <p class="insDossier__paragraph">Par ailleurs, si vous n'avez pas suivi vos études en Fédération Wallonie-Bruxelles, le Service Inscriptions vous dira, sur base de l'analyse de votre dossier, si vous devez ou non présenter l'examen de maîtrise suffisante de la langue française.
-                </p>
-            </div>
             <section class="insHelp">
                 <div class="insHelp__wrapper">
                     <h3 role="heading" aria-level="3" class="insHelp__title">Besoin d’aide&nbsp;?</h3>
@@ -96,8 +87,17 @@
 
                     <strong class="insHelp__subtitle">Viens nous rencontrer</strong>
                     <p class="insHelp__paragraph">Chaque année, nous organisons une <a href="#">journée porte ouverte</a> aux alentours du XX/XX/XX ainsi que deux <a href="#">journée d’immersion</a>. Pour rester informé, visites régulièrement ce site ou <a href="#">contacte nous</a>.</p>
-                    </div>
+                </div>
             </section>
+            <div class="insDossier__wrapper">
+                <h3 role="heading" aria-level="2" class="insDossier__title">Constitution du dossier d’inscription de première année</h3>
+                <p class="insDossier__paragraph">De manière à pouvoir récupérer les différentes données qui y sont stockées, nous vous invitons à vous présenter, au moment de votre inscription, muni de votre <b>carte d'identité électronique.</b></p>
+                <p class="insDossier__paragraph">Les autres documents à fournir pour constituer votre dossier d'inscription varient selon les circonstances.</p>
+                <p class="insDossier__paragraph">Un <b>bulletin de versement</b> vous sera remis au moment de l'inscription. Le paiement du droit d'inscription est un des éléments conditionnant la régularité de votre inscription.
+                </p>
+                <p class="insDossier__paragraph">Par ailleurs, si vous n'avez pas suivi vos études en Fédération Wallonie-Bruxelles, le Service Inscriptions vous dira, sur base de l'analyse de votre dossier, si vous devez ou non présenter l'examen de maîtrise suffisante de la langue française.
+                </p>
+            </div>
         </section>
     </section>
 
