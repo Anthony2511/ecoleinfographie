@@ -55,7 +55,7 @@
 
 		<div class="tab-wrapper">
 			<div class="tab tab--1 active">
-				{{ Form::open([ 'method' => 'POST', 'class' => 'form-full']) }}
+				{{ Form::open([ 'method' => 'POST', 'class' => 'form-full', 'route' => ['mail-internship-full']]) }}
 				<div class="form__container">
 					<div class="form__block">
 						<div class="form__wrapper form__wrapper--col2 form__wrapper--left">

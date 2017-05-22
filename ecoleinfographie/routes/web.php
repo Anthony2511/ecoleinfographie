@@ -55,6 +55,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('menu-item', 'MenuItemCrudController');
 });
 
+// Mails
+Route::post('/send-internship-full', 'InternshipController@sendFull')->name('mail-internship-full');
 
 
 // Admin
