@@ -4,8 +4,29 @@
     @include('partials.header-min')
 @endsection
 
+@section('class', 'registration')
+
 @section('content')
-    @include('partials.breadcrumb')
+    <div class="breadcrumb">
+        <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+                itemtype="http://schema.org/ListItem">
+                <a href="{{ Url('/') }}" class="breadcrumb__link breadcrumb__link--home" itemscope itemtype="http://schema.org/Thing"
+                   itemprop="item">
+                    <span itemprop="name">Page d’accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+                itemtype="http://schema.org/ListItem">
+                <a href="{{ Route('registration') }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+                   itemprop="item">
+                    <span itemprop="name">@lang('registration.button')</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </div>
 
     <section class="insIntro">
         <div class="insIntro__wrapper">
@@ -20,31 +41,38 @@
     </section>
     <section class="insLocation">
         <div class="insLocation__wrapper">
-            <h2 role="heading" aria-level="2" class="insLocation__title">Quand puis-je m’inscrire et à quel endroit ?</h2>
             <div class="insLocation__when">
-                <strong class="insLocation__when__title">Quand&nbsp;?</strong>
+                <h2 class="insLocation__when__title">Quand&nbsp;?</h2>
                 <p class="insLocation__paragraph">Vivamus elementum sapien vitae erat efficitur faucibus ? Pellentesque sed leo blandit, pulvinar leo sed, scelerisque arcu. Sed bibendum consectetur viverra. </p>
             </div>
-            <div class="insLocation__where">
-                <img src="./img/map-inscription.png" width="" height="" alt="">
-                <div class="insLocation__where__textWrapper">
-                    <strong class="insLocation__where__title">À quel endroit&nbsp;?</strong>
-                    <p class="insLocation__paragraph">Afin de compléter votre inscription, vous devez vous rendre à l’adresse indiquée ci-dessous.</p>
-                    <p class="insLocation__paragraph"><b>Attention&nbsp;:</b> Ce n’est pas l’adresse de l’école</p>
-                    <div class="insLocation__where__addressWrapper">
+        </div>
+    </section>
+    <section class="map">
+        <div class="map__container">
+            <div class="map__textWrapperContainer">
+                <div class="map__textWrapper">
+                <h2 class="map__title">À quel endroit&nbsp;?</h2>
+                <p class="insLocation__paragraph">Afin de compléter votre inscription, vous devez vous rendre à l’adresse indiquée ci-dessous.</p>
+                <p class="insLocation__paragraph"><b>Attention&nbsp;:</b> Ce n’est pas l’adresse de l’école</p>
+                <div class="map__addressWrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 35">
+                        <path fill="#4990E2" fill-rule="evenodd" d="M11 .02C4.92.02 0 4.9 0 10.94 0 21.38 11 35 11 35s11-13.62 11-24.07C22 4.9 17.08.03 11 .03zm0 16.95c-3.28 0-5.94-2.64-5.94-5.9 0-3.26 2.66-5.9 5.94-5.9 3.28 0 5.94 2.64 5.94 5.9 0 3.26-2.66 5.9-5.94 5.9z"/>
+                    </svg>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 35">
-                            <path fill="#4990E2" fill-rule="evenodd" d="M11 .02C4.92.02 0 4.9 0 10.94 0 21.38 11 35 11 35s11-13.62 11-24.07C22 4.9 17.08.03 11 .03zm0 16.95c-3.28 0-5.94-2.64-5.94-5.9 0-3.26 2.66-5.9 5.94-5.9 3.28 0 5.94 2.64 5.94 5.9 0 3.26-2.66 5.9-5.94 5.9z"/>
-                        </svg>
-
-                        <address class="insLocation__where__address">
-                            Quai Gloesner, 6</br>
-                            4020 - Liège</br>
-                            Belgique
-                        </address>
-                    </div>
+                    <address class="map__address">
+                        Quai Gloesner, 6</br>
+                        4020 - Liège</br>
+                        Belgique
+                    </address>
                 </div>
             </div>
+            </div>
+            <div class="map__canvas" id="map__canvas" data-map-lat="50.6206482" data-map-lgt="5.5791016"></div>
+
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuE1aAL7WbDtG7mQ94AfUNaRay-tR_5Sk">
+            </script>
+
         </div>
     </section>
     <section class="insBottom">

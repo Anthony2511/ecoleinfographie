@@ -34,7 +34,7 @@
 		</p>
 		<div class="propose__infos">
 			<span class="propose__info propose__info--duration">Durée de <strong>12</strong> semaines</span>
-			<span class="propose__info propose__info--date">Du <strong>13</strong> janvier au <strong>30</strong> mars</span>
+			<span class="propose__info propose__info--date">Du <strong>6</strong> février au </br><strong>28</strong> avril</span>
 			<span class="propose__info propose__info--convention"><strong>Signature</strong><br/> d’une convention</span>
 		</div>
 	</section>

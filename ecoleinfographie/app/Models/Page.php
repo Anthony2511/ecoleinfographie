@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 
 class Page extends OriginalPageModel
@@ -15,6 +16,7 @@ class Page extends OriginalPageModel
     use CrudTrait;
     use Sluggable;
     use SluggableScopeHelpers;
+    use HasTranslations;
     
     /*
    |--------------------------------------------------------------------------

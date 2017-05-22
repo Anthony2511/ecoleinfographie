@@ -14,4 +14,5 @@ return [
     'graduated' => 'nos-diplomes',
     'works' => 'realisations',
     'internship' => 'proposer-une-offre-de-stage',
+    'registration' => 'inscription',
 ];

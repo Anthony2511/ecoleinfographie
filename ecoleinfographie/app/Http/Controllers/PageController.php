@@ -2,38 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Backpack\PageManager\app\Models\Page;
+use SEO;
 
 class PageController extends Controller
 {
-	public function home()
-	{
-		$page = Page::findBySlug('home');
-		if (!$page)
-		{
-			abort(404, 'Please go back to our <a href="'.url('').'">homepage</a>.');
-		}
-		
-		$this->data['title'] = $page->title;
-		$this->data['page'] = $page->withFakes();
-		
-		return view('pages.home', $this->data);
-	}
-	
-	public function index($slug)
-	{
-		$page = Page::findBySlug($slug);
-		
-		if (!$page)
-		{
-			abort(404, 'Please go back to our <a href="'.url('').'">homepage</a>.');
-		}
-		
-		$this->data['title'] = $page->title;
-		$this->data['page'] = $page->withFakes();
-		
-		return view('pages.'.$page->template, $this->data);
-	}
+	public function registration()
+    {
+        SEO::setTitle(trans('registration.button'));
+        SEO::setDescription(trans('registration.metaDescription'));
+        
+        return view('pages.index_registration');
+    }
     
     
 }

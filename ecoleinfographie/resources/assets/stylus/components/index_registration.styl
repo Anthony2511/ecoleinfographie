@@ -1,4 +1,4 @@
-.inscription
+.registration
   background-color $cBackgroundGrey
   .header__wrapper
     position relative
@@ -57,35 +57,55 @@
       color $cBlueTitles
     & .insLocation__paragraph
       width col(6,12)
-  &__where
-    width col(9,12) + (gutter(12)*2)
-    margin-left col(1,12)
+
+.map
+  &__container
+    position: relative
+    padding 6.25em 0 3.75em
+  &__textWrapperContainer
+    box-sizing content-box
+    @extend .containerGridz
     &:after
-      @extend .containerGridz
-    &__textWrapper
-      float: right
-      width 35.233160622%  // 340/965*100
-    &__title
-      display: block
-      @extend .titleExtraBold26
-      margin-bottom s(25, $sz5)
-      color $cBlueTitles
-    & b
-      font-weight: 700
-      font-size inherit
-    &__addressWrapper
-      &:after
-        @extend .clearfix
-      & svg
-        width s(22)
-        float: left
-        margin-right s(20)
-        position: relative
-        top s(8)
-    &__address
-      display: inline-block
-      font-size s($sz7)
-      line-height: 1.62em
+      @extend .clearfix
+  &__textWrapper
+    float: right
+    position: relative
+    max-width s(450)
+    padding s(55) s(50)
+    box-sizing border-box
+    background $cWhite
+    box-shadow 0 0 s(14) 0 rgba(206,206,206,0.70)
+    z-index 1
+  &__title
+    display: block
+    @extend .titleExtraBold26
+    margin-bottom s(25, $sz5)
+    color $cBlueTitles
+  & b
+    font-weight: 700
+    font-size inherit
+  &__addressWrapper
+    &:after
+      @extend .clearfix
+    & svg
+      width s(22)
+      float: left
+      margin-right s(20)
+      position: relative
+      top s(8)
+  &__address
+    display: inline-block
+    font-size s($sz7)
+    line-height: 1.62em
+  &__canvas
+    overflow: hidden
+    position: absolute
+    top: 0
+    bottom: 0
+    left -480px
+    right -480px
+    margin-left -830px
+    z-index 0
 
 //insBottom
 .insBottom
@@ -95,6 +115,7 @@
 
 .insDossier
   @extend .containerGridz
+  box-sizing border-box
   position: relative
   &:after
     @extend .clearfix

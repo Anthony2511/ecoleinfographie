@@ -38,6 +38,7 @@ var w = {
             if (w.$body.hasClass('graduate')) return 'graduated';
             if (w.$body.hasClass('realisations')) return 'realisations';
             if (w.$body.hasClass('internship')) return 'internship';
+            if (w.$body.hasClass('registration')) return 'registration';
 
             return false;
       }

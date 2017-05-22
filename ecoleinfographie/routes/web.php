@@ -31,6 +31,7 @@ Route::get('realisations', 'WorkController@index')->name('realisations');
 Route::get('realisations/filter', 'WorkController@filter')->name('realisations-filter');
 Route::get(trans('url.teachers'), 'TeacherController@index')->name('teachers');
 Route::get(trans('url.internship'), 'InternshipController@index')->name('internship');
+Route::get(trans('url.registration'), 'PageController@registration')->name('registration');
 
 // Blog
 Route::get('blog', 'ArticleController@index')->name('blog');
@@ -45,9 +46,9 @@ Route::get('etudiants/{student}', 'StudentController@show');
 Route::get('realisations/{work}', 'WorkController@show');
 Route::get('blog/{article}', 'ArticleController@show')->name('article.single');
 
-// Catch-all for Backpack/PageManager
+/*// Catch-all for Backpack/PageManager
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
-     ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);
+     ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);*/
 
 // MenuCrud
 Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function () {
