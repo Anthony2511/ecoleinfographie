@@ -85,21 +85,21 @@
 							<div class="form__checkbox-btn">
 								<label for="cbox1" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">3D et Audiovisuel</span>
-									<input type="checkbox" id="cbox1" value="" class="form__checkbox">
+									<input type="checkbox" id="cbox1" name="cbox1" value="3D" class="form__checkbox">
 									<div class="form__control-indicator"></div>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox2" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Design graphique</span>
-									<input type="checkbox" id="cbox2" value="" class="form__checkbox">
+									<input type="checkbox" id="cbox2" name="cbox2" value="2D" class="form__checkbox">
 									<div class="form__control-indicator"></div>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox3" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Web</span>
-									<input type="checkbox" id="cbox3" value="" class="form__checkbox">
+									<input type="checkbox" id="cbox3" name="cbox3" value="WEB" class="form__checkbox">
 									<div class="form__control-indicator"></div>
 								</label>
 							</div>
