@@ -101,6 +101,27 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'profils' => [
+            'required' => 'Veuillez indiquer les profiles que vous recherchez'
+        ],
+        'proposition' => [
+            'required' => 'Veuillez indiquer ce que vous proposer comme stage'
+        ],
+        'description' => [
+            'required' => 'Veuillez indiquer une description'
+        ],
+        'cbox1' => [
+            'required_without_all' => 'Veuillez sélectionner au moins une option pour laquelle votre offre est destinée'
+        ],
+        'cbox2' => [
+            'required_without_all' => 'Veuillez sélectionner au moins une option pour laquelle votre offre est destinée'
+        ],
+        'cbox3' => [
+            'required_without_all' => 'Veuillez sélectionner au moins une option pour laquelle votre offre est destinée'
+        ],
+        'email' => [
+            'required' => 'Veuillez indiquer une adresse e-mail valide'
+        ]
     ],
 
     /*
@@ -145,6 +166,14 @@ return [
         'time'                  => 'heure',
         'available'             => 'disponible',
         'size'                  => 'taille',
+        'company' => 'nom pour l’entreprise concernée',
+        'subject' => 'sujet pour votre message',
+        'profils' => 'profies',
+        'proposition' => 'proposition',
+        'cbox1' => 'option',
+        'cbox2' => 'option',
+        'cbox3' => 'option'
+        
     ],
 
 ];
