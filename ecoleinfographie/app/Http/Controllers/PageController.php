@@ -14,13 +14,7 @@ class PageController extends Controller
         return view('pages.index_registration');
     }
     
-    public function contact()
-    {
-        SEO::setTitle(trans('contact.title'));
-        SEO::setDescription(trans('contact.metaDescription'));
-        
-        return view('pages.index_contact');
-    }
+    
     
     
 }

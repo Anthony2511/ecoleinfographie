@@ -32,7 +32,7 @@ Route::get('realisations/filter', 'WorkController@filter')->name('realisations-f
 Route::get(trans('url.teachers'), 'TeacherController@index')->name('teachers');
 Route::get(trans('url.internship'), 'InternshipController@index')->name('internship');
 Route::get(trans('url.registration'), 'PageController@registration')->name('registration');
-Route::get(trans('url.contact'), 'PageController@contact')->name('contact');
+Route::get(trans('url.contact'), 'ContactController@index')->name('contact');
 
 // Blog
 Route::get('blog', 'ArticleController@index')->name('blog');
@@ -60,6 +60,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
 // Mails
 Route::post('/send-internship-full', 'InternshipController@sendFull')->name('mail-internship-full');
 Route::post('/send-internship-file', 'InternshipController@sendFile')->name('mail-internship-file');
+Route::post('/send-contact-form', 'ContactController@contactForm')->name('mail-contact-form');
 
 
 // Admin
