@@ -98,7 +98,7 @@
                         <a href="">Le matériel et les batiments</a>
                     </li>
                     <li>
-                        <a href="">Contactez-nous</a>
+                        <a href="{{ Route('contact') }}">Contactez-nous</a>
                     </li>
                 </ul>
                 <svg class="subnav__school__cloud" width="28" height="20" xmlns="http://www.w3.org/2000/svg">

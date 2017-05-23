@@ -38,40 +38,35 @@
 					<li class="responsible__item">
 						<strong class="responsible__label">@lang('contact.res2d')</strong>
 						<span class="responsible__name">Véronique Etienne</span>
-						<a href="mailto:dominique.vilain@hepl.be" class="responsible__mail">etienne.veronique@hepl.be</a>
+						<a href="mailto:{{ Config::get('settings.email_2d') }}" class="responsible__mail">{{ Config::get('settings.email_2d') }}</a>
 					</li>
 					<li class="responsible__item">
 						<strong class="responsible__label">@lang('contact.res3d')</strong>
 						<span class="responsible__name">Nicolas Claisses</span>
-						<a href="mailto:claisses.nicolas@hepl.be" class="responsible__mail">claisses.nicolas@hepl.be</a>
+						<a href="mailto:{{ Config::get('settings.email_3d') }}" class="responsible__mail">{{ Config::get('settings.email_3d') }}</a>
 					</li>
 					<li class="responsible__item">
 						<strong class="responsible__label">@lang('contact.resWeb')</strong>
 						<span class="responsible__name">Dominique Vilain</span>
-						<a href="mailto:dominique.vilain@hepl.be" class="responsible__mail">dominique.vilain@hepl.be</a>
+						<a href="mailto:{{ Config::get('settings.email_web') }}" class="responsible__mail">{{ Config::get('settings.email_web') }}</a>
 					</li>
 				</ul>
 
 				<ul class="social-list-circle">
 					<li class="social-list-circle__item">
-						<a href="#fb" class="social-list-circle__link facebook" rel="me"><span>Vers la page Facebook de l’école
-								d’infographie de la Province de Liège</span></a>
+						<a href="{{ Config::get('settings.social_fb') }}" title="@lang('contact.to') Facebook" class="social-list-circle__link facebook" rel="me"><span>@lang('contact.goPage') Facebook @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="#fb" class="social-list-circle__link twitter" rel="me"><span>Vers la page Wwitter de l’école
-								d’infographie de la Province de Liège</span></a>
+						<a href="{{ Config::get('settings.social_tw') }}" title="@lang('contact.to') Twitter" class="social-list-circle__link twitter" rel="me"><span>@lang('contact.goPage') Twitter @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="#fb" class="social-list-circle__link pinterest" rel="me"><span>Vers la page Pinterest de l’école
-								d’infographie de la Province de Liège</span></a>
+						<a href="{{ Config::get('settings.social_pinterest') }}" title="@lang('contact.to') Pinterest" class="social-list-circle__link pinterest" rel="me"><span>@lang('contact.goPage') Pinterest @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="#fb" class="social-list-circle__link behance" rel="me"><span>Vers la page Behance de l’école
-								d’infographie de la Province de Liège</span></a>
+						<a href="{{ Config::get('settings.social_behance') }}" title="@lang('contact.to') Behance" class="social-list-circle__link behance" rel="me"><span>@lang('contact.goPage') Behance @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="#fb" class="social-list-circle__link dribble" rel="me"><span>Vers la page Dribbble de l’école
-								d’infographie de la Province de Liège</span></a>
+						<a href="{{ Config::get('settings.social_dribble') }}" class="social-list-circle__link dribble" title="@lang('contact.to') Dribble" rel="me"><span>@lang('contact.goPage') Dribbble @lang('contact.linkSchool')</span></a>
 					</li>
 				</ul>
 			</div>
@@ -94,7 +89,7 @@
 
 			<div class="contact-form__wrapper" id="form">
 				<section class="contact-form">
-					<h3 role="heading" aria-level="3" class="contact-form__title">Envoie un message</h3>
+					<h3 role="heading" aria-level="3" class="contact-form__title">@lang('form.sendMsg')</h3>
 					{{ Form::open([ 'method' => 'POST', 'class' => 'contact-form__form', 'route' => ['mail-contact-form']]) }}
 					<div class="form__container">
 						<div class="form__block">
@@ -105,7 +100,7 @@
 									</span>
 								@endif
 								<div class="form__wrapper form__wrapper--col2 form__wrapper--left">
-									<label for="firstname" class="form__label">Prénom</label>
+									<label for="firstname" class="form__label">@lang('form.firstname')</label>
 									<input type="text" name="firstname" required id="firstname"
 												 class="form__input floatLabel {{ $errors->has('firstname') ? 'error-input' : '' }}"
 												 value="{{ old('firstname') }}">
@@ -118,7 +113,7 @@
 									</span>
 								@endif
 								<div class="form__wrapper form__wrapper--col2 form__wrapper--right">
-									<label for="lastname" class="form__label">Nom</label>
+									<label for="lastname" class="form__label">@lang('form.lastname')</label>
 									<input type="text" name="lastname" required id="lastname"
 												 class="form__input floatLabel {{ $errors->has('lastname') ? 'error-input' : '' }}"
 												 value="{{ old('lastname') }}">
@@ -132,7 +127,7 @@
 								</span>
 							@endif
 							<div class="form__wrapper">
-								<label for="email" class="form__label">Votre adresse e-mail</label>
+								<label for="email" class="form__label">@lang('form.youremail')</label>
 								<input type="email" name="email" id="email"
 											 class="form__input floatLabel {{ $errors->has('email') ? 'error-input' : '' }}"
 											 value="{{ old('email') }}" required value="{{ old('email') }}">
@@ -145,33 +140,33 @@
 						@endif
 						<div class="form__block">
 							<div class="form__wrapperTextarea">
-								<label for="content" class="form__labelTextarea">Votre message&nbsp;:</label>
+								<label for="content" class="form__labelTextarea">@lang('form.yourMsg')&nbsp;:</label>
 								<textarea name="content" id="content"
 													class="form__textarea {{ $errors->has('content') ? 'error-input' : '' }}">{{ old('content') }}</textarea>
 							</div>
 						</div>
 						<p class="form-success">{!! session('success') !!}</p>
-						<button class="form__submit">Envoyer le message</button>
+						<button class="form__submit">@lang('form.sendTheMsg')</button>
 					</div>
 					{{ Form::close() }}
 
 				</section>
 				<section class="contact-more">
-					<h3 role="heading" aria-level="3" class="contact-more__title">Informations de contact</h3>
+					<h3 role="heading" aria-level="3" class="contact-more__title">@lang('contact.infoContact')</h3>
 					<ul class="contact-more__list">
 						<li class="contact-more__item address">
 							<address class="contact-more__address">
-								Rue Peetermans, 80<br/>
-								4000 - Seraing<br/>
-								Belgique<br/>
+								{{ Config::get('settings.address_street') }}, {{ Config::get('settings.address_num') }}<br/>
+								{{ Config::get('settings.address_cp') }} - {{ Config::get('settings.address_town') }}<br/>
+								{{ Config::get('settings.address_country') }}<br/>
 							</address>
 						</li>
 						<li class="contact-more__item tel">
-							<a href="tel:085211113" class="contact-more__link contact-more__link--tel">085 21 12 14</a>
+							<a href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="contact-more__link contact-more__link--tel">{{ Config::get('settings.contact_tel') }}</a>
 						</li>
 						<li class="contact-more__item mail">
-							<a href="mailto:hello@ecoleinfographie.be" class="contact-more__link contact-more__link--mail">
-								hello@ecoleinfographie.be
+							<a href="mailto:{{ Config::get('settings.contact_email') }}" class="contact-more__link contact-more__link--mail">
+								{{ Config::get('settings.contact_email') }}
 							</a>
 						</li>
 						<li class="contact-more__item timetable">
