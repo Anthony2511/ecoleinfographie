@@ -26,6 +26,8 @@
       position absolute
       display: inline-block
       z-index 100
+      top 0
+      transition .3s ease top
     &__date
       display: block
       text-align: right
@@ -52,6 +54,25 @@
       cursor pointer
       &:after
         font-size s(12, $sz8)
+    &__link
+      @extend .cover
+      z-index 150
+      & span
+        @extend .hidden
+
+  .featured:hover .featured__img
+  .featured:focus .featured__img
+    top -25px
+    transition .3s ease top
+  .featured:hover .featured__fakelink
+  .featured:focus .featured__fakelink
+    color $cBlack
+    transition .3s ease color
+    outline none
+    &:after
+    &:after
+      transform translateX(s(4, 12))
+      transition .3s ease transform
 
 
 

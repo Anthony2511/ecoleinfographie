@@ -43,6 +43,7 @@
 				</p>
 				<span class="featured__fakelink">Lire l’article</span>
 			</div>
+			<a href="#monarticle" class="featured__link"><span>Lire l’article NOM ARTICLE</span></a>
 		</article>
 
 </header>
