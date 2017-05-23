@@ -32,6 +32,7 @@ Route::get('realisations/filter', 'WorkController@filter')->name('realisations-f
 Route::get(trans('url.teachers'), 'TeacherController@index')->name('teachers');
 Route::get(trans('url.internship'), 'InternshipController@index')->name('internship');
 Route::get(trans('url.registration'), 'PageController@registration')->name('registration');
+Route::get(trans('url.contact'), 'PageController@contact')->name('contact');
 
 // Blog
 Route::get('blog', 'ArticleController@index')->name('blog');
