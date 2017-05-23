@@ -92,10 +92,10 @@
 
 		<div class="contact-form__container">
 
-			<div class="contact-form__wrapper">
+			<div class="contact-form__wrapper" id="form">
 				<section class="contact-form">
 					<h3 role="heading" aria-level="3" class="contact-form__title">Envoie un message</h3>
-					{{ Form::open([ 'method' => 'POST', 'class' => 'contact-form__form', 'route' => ['mail-internship-file']]) }}
+					{{ Form::open([ 'method' => 'POST', 'class' => 'contact-form__form', 'route' => ['mail-contact-form']]) }}
 					<div class="form__container">
 						<div class="form__block">
 							<div class="form-float-left">
@@ -138,16 +138,16 @@
 											 value="{{ old('email') }}" required value="{{ old('email') }}">
 							</div>
 						</div>
-						@if ($errors->has('description'))
+						@if ($errors->has('content'))
 							<span class="form-error">
-								{{ $errors->first('description') }}
+								{{ $errors->first('content') }}
 							</span>
 						@endif
 						<div class="form__block">
 							<div class="form__wrapperTextarea">
-								<label for="description" class="form__labelTextarea">Votre message&nbsp;:</label>
-								<textarea name="description" id="description"
-													class="form__textarea {{ $errors->has('description') ? 'error-input' : '' }}">{{ old('description') }}</textarea>
+								<label for="content" class="form__labelTextarea">Votre message&nbsp;:</label>
+								<textarea name="content" id="content"
+													class="form__textarea {{ $errors->has('content') ? 'error-input' : '' }}">{{ old('content') }}</textarea>
 							</div>
 						</div>
 						<p class="form-success">{!! session('success') !!}</p>
