@@ -82,13 +82,108 @@
 
 		<div class="map">
 			<div class="map__container">
-				<div class="map__canvas" id="map__canvas" data-url="https://goo.gl/maps/CHa2UzKkaJ92" data-map-lat="50.6108382" data-map-lgt="5.509964699999955"></div>
+				<div class="map__canvas" id="map__canvas" data-url="https://goo.gl/maps/CHa2UzKkaJ92" data-map-lat="50.6108382"
+						 data-map-lgt="5.509964699999955"></div>
 				<script async defer
 								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuE1aAL7WbDtG7mQ94AfUNaRay-tR_5Sk">
 				</script>
 			</div>
 		</div>
 
+		<div class="contact-form__container">
+
+			<div class="contact-form__wrapper">
+				<section class="contact-form">
+					<h3 role="heading" aria-level="3" class="contact-form__title">Envoie un message</h3>
+					{{ Form::open([ 'method' => 'POST', 'class' => 'contact-form__form', 'route' => ['mail-internship-file']]) }}
+					<div class="form__container">
+						<div class="form__block">
+							<div class="form-float-left">
+								@if ($errors->has('firstname'))
+									<span class="form-error">
+										{{ $errors->first('firstname') }}
+									</span>
+								@endif
+								<div class="form__wrapper form__wrapper--col2 form__wrapper--left">
+									<label for="firstname" class="form__label">Prénom</label>
+									<input type="text" name="firstname" required id="firstname"
+												 class="form__input floatLabel {{ $errors->has('firstname') ? 'error-input' : '' }}"
+												 value="{{ old('firstname') }}">
+								</div>
+							</div>
+							<div class="form-float-right">
+								@if ($errors->has('lastname'))
+									<span class="form-error">
+										{{ $errors->first('lastname') }}
+									</span>
+								@endif
+								<div class="form__wrapper form__wrapper--col2 form__wrapper--right">
+									<label for="lastname" class="form__label">Nom</label>
+									<input type="text" name="lastname" required id="lastname"
+												 class="form__input floatLabel {{ $errors->has('lastname') ? 'error-input' : '' }}"
+												 value="{{ old('lastname') }}">
+								</div>
+							</div>
+						</div>
+						<div class="form__block">
+							@if ($errors->has('email'))
+								<span class="form-error">
+									{{ $errors->first('email') }}
+								</span>
+							@endif
+							<div class="form__wrapper">
+								<label for="email" class="form__label">Votre adresse e-mail</label>
+								<input type="email" name="email" id="email"
+											 class="form__input floatLabel {{ $errors->has('email') ? 'error-input' : '' }}"
+											 value="{{ old('email') }}" required value="{{ old('email') }}">
+							</div>
+						</div>
+						@if ($errors->has('description'))
+							<span class="form-error">
+								{{ $errors->first('description') }}
+							</span>
+						@endif
+						<div class="form__block">
+							<div class="form__wrapperTextarea">
+								<label for="description" class="form__labelTextarea">Votre message&nbsp;:</label>
+								<textarea name="description" id="description"
+													class="form__textarea {{ $errors->has('description') ? 'error-input' : '' }}">{{ old('description') }}</textarea>
+							</div>
+						</div>
+						<p class="form-success">{!! session('success') !!}</p>
+						<button class="form__submit">Envoyer le message</button>
+					</div>
+					{{ Form::close() }}
+
+				</section>
+				<section class="contact-more">
+					<h3 role="heading" aria-level="3" class="contact-more__title">Informations de contact</h3>
+					<ul class="contact-more__list">
+						<li class="contact-more__item address">
+							<address class="contact-more__address">
+								Rue Peetermans, 80<br/>
+								4000 - Seraing<br/>
+								Belgique<br/>
+							</address>
+						</li>
+						<li class="contact-more__item tel">
+							<a href="tel:085211113" class="contact-more__link contact-more__link--tel">085 21 12 14</a>
+						</li>
+						<li class="contact-more__item mail">
+							<a href="mailto:hello@ecoleinfographie.be" class="contact-more__link contact-more__link--mail">
+								hello@ecoleinfographie.be
+							</a>
+						</li>
+						<li class="contact-more__item timetable">
+							<dl class="contact-more__timetable contact-more__timetable">
+								<dt class="contact-more__day">Lundi&nbsp;-&nbsp;Vendredi</dt>
+								<dd class="contact-more__hour">9h-12h30&nbsp;/&nbsp;/13h30-16h</dd>
+							</dl>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
 
 	</section>
 

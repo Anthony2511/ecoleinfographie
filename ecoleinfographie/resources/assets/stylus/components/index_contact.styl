@@ -60,5 +60,84 @@
       bottom: 0;
       left: 750px
       right: 0
-      //margin-left: -830px;
       z-index: 0;
+
+
+  .contact-form
+    width s(565)
+    padding s(50) s(45)
+    background $cWhite
+    &__container
+      background $cBackgroundGrey2
+      padding-bottom s(100)
+    &__wrapper
+      position: relative
+      max-width s(945)
+      top s(-100)
+      margin 0 auto
+      box-shadow: 0 2px 11px 0 rgba(187,187,187,0.50)
+      border-radius: 1px
+    &__title
+      @extend .titleExtraBold
+      color $cBlueTitles
+
+  .contact-more
+    position: absolute
+    top: 0
+    right: 0
+    height 100%
+    width s(380)
+    padding s(50) s(45)
+    background $cBlueCiel
+    &__title
+      @extend .titleExtraBold
+      color $cWhite
+      &:after
+        background $cWhite
+    &__address
+    &__link
+    &__timetable
+      display: inline-block
+      color $cWhite
+      font-size s($sz8)
+    &__item
+      position: relative
+      margin-bottom s(40)
+      &:before
+        position: relative
+        top 2px
+        float: left
+        margin-right s(10)
+        setIconBase()
+        color rgba(255,255,255,0.8)
+        font-size 18px
+      &:after
+        @extend .clearfix
+    &__item.address:before
+      setIconInclude('location-contact')
+      top 6px
+    &__item.tel:before
+      setIconInclude('phone-contact')
+      margin-right 14px
+    &__item.mail:before
+      setIconInclude('mail-contact')
+      margin-right 8px
+    &__item.timetable:before
+      setIconInclude('date')
+      margin-right 8px
+      top 4px
+    &__address
+      color $cWhite
+      line-height 1.4em
+      position: relative
+    &__timetable
+      & dt
+      & dd
+        font-size s($sz8, $sz8)
+        color $cWhite
+      & dt
+        font-weight: 700
+        margin-bottom s(5, $sz8)
+
+  .footer__container
+    margin-top: 0

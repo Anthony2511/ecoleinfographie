@@ -1,0 +1,212 @@
+.form
+  &__container
+    &:after
+      @extend .clearfix
+  &__wrapper
+    position: relative
+    &--col2
+      width: 47.2%
+    &--left
+      float: left
+    &--right
+      float: right
+  &__block
+    position: relative
+    margin-bottom s(15)
+    &:after
+      @extend .clearfix
+  &__input
+    height: s(52)
+    width: 100%
+    display: block
+    padding: 0 s(20)
+    color: $cBlack
+    font-weight: 600
+    border: 1px solid $cWhite2
+    -webkit-appearance: none
+    transition .25s ease border
+    &:focus
+      border 1px solid $cGrey2
+      transition .25s ease border
+  &__label
+    position: absolute
+    top: s(17)
+    padding: 0 s(20)
+    display: block
+    transition: 0.3s ease all
+    transition-property: top, font-size
+  &__fakeLabel
+    display: block
+    font-weight 700
+    color: $cBlack
+    text-align left
+    margin-top s(20)
+    margin-bottom s(15)
+  &__checkbox
+    -webkit-appearance: checkbox;
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+  &__checkbox-btn
+    position: relative
+    float: left
+    background $cWhite
+    margin-right s(32)
+    &:last-child
+      margin-right: 0
+  &__labelCheckbox
+    display: block
+    padding s(20, $sz7) s(20, $sz7) s(18, $sz7) s(20, $sz7)
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing 1px
+    border: 1px solid $cWhite2
+    cursor pointer
+    transition .3s ease border
+    font-size s($sz7)
+    &:hover
+    &:focus
+      border: 1px solid $cGrey2
+      transition .3s ease border
+    & span
+      position: relative
+      top s(-4)
+      padding-left s(40)
+      color $cBlack
+  &__control-indicator
+    position: absolute;
+    top: s(18)
+    left: s(20)
+    height: s(22)
+    width: s(22)
+    background: $cGrey3
+    transition .3s ease background
+    &:after
+      content: ''
+      position: absolute
+      display: none
+      left: s(9)
+      top: s(6)
+      width: s(5)
+      height: s(10)
+      border: solid $cWhite
+      border-width: 0 s(2) s(2) 0
+      transform: rotate(45deg)
+      transition .3s ease border
+  &__checkbox:checked ~ .form__control-indicator
+    background $cBlueCiel
+    transition .3s ease background
+  &__checkbox:checked ~ .form__control-indicator:after
+    display: block
+  &__labelTextarea
+    position: absolute
+    top: s(18)
+    left s(20)
+  &__textarea
+    width: 100%
+    height s(180)
+    border: 1px solid $cWhite2;
+    padding: s(50) s(20) s(20)
+    color: $cBlack
+    font-weight: 600;
+    line-height: 1.3em
+    transition .25s ease border
+    &:focus
+      outline none
+      border 1px solid $cGrey2
+      transition .25s ease border
+  &__wrapperTextarea
+    &:before
+      content ''
+      position: absolute
+      display: block
+      top 1px
+      width 100% - 1px
+      height 40px
+      background-color $cWhite
+      margin-left: auto
+      margin-right: auto
+      left 0
+      right: 0
+  &__submit-container
+    position: relative
+  &__submit
+    margin-top s(20, $sz8)
+    @extend .buttonLeftToRight
+    position: relative
+    font-size s($sz8)
+    font-weight: 900
+    letter-spacing 1.3px
+
+.form-wrapper--file
+  text-align left
+.form__inputFile
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+  &:focus ~ .form__labelFile
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+    background-color #e91e29 - 20%
+.form__labelFile
+  display: inline-block;
+  padding s(20) s(40)
+  text-transform: uppercase
+  letter-spacing 1px
+  font-weight: 900;
+  color: white;
+  background-color: #E91E29
+  transition .3s ease background-color
+  cursor pointer
+  &:hover
+  &:focus
+    background-color #e91e29 - 20%
+    transition .3s ease background-color
+  &:before
+    icon('pdf-btn')
+    font-size s($sz6)
+    margin-right s(10, $sz6)
+    vertical-align middle
+  & span
+    position: relative
+    font-size s($sz10)
+    color $cWhite
+    top 2px
+
+
+.form__label.active
+  top s(5, $sz9)
+  font-size s($sz9)
+  padding 0 s(20, $sz9)
+  transition .3s ease all
+  transition-property top, font-size
+.form__label.active ~  .floatLabel
+  padding-top s(12)
+  line-height 0
+
+
+/************************************\
+		ERRORS
+\************************************/
+
+.form-error
+  text-align left
+  margin-bottom 5px
+.error-input
+.error-input:focus
+  border 1px solid $cError
+.form-float-left
+  .form-error
+    position: absolute
+    top: -31px
+.form-float-right
+  .form-error
+    position: absolute
+    top: -31px
+    right 0
