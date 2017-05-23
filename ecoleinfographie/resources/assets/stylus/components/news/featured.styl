@@ -1,0 +1,57 @@
+.news
+  & .breadcrumb--header
+    top 24%
+
+.header-news
+  .featured
+    position absolute
+    height s(520)
+    left 0
+    right: 0
+    bottom 0
+    max-width s(1030)
+    margin 0 auto
+    background $cWhite
+    padding s(70) s(85)
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.50)
+    border-radius: 2px
+    &:after
+      @extend .clearfix
+    &__content
+      width s(420)
+      float: right
+    &__figure
+      position relative
+    &__img
+      position absolute
+      display: inline-block
+      z-index 100
+    &__date
+      display: block
+      text-align: right
+      margin-bottom s(27)
+      color $cSchool - 25%
+      font-size s($sz8)
+      & date
+        font-size s($sz8, $sz8)
+        color $cSchool - 25%
+    &__title
+      font-size s($sz4)
+      margin-bottom s(20, $sz4)
+      color $cBlueTitles
+      font-weight 900
+      letter-spacing 1.11px
+      line-height: 1.1em
+    &__excerpt
+      font-size s($sz8)
+      line-height: 1.62em
+      margin-bottom s(30, $sz8)
+    &__fakelink
+      @extend .linkArrowLarge
+      font-size s($sz8)
+      cursor pointer
+      &:after
+        font-size s(12, $sz8)
+
+
+
