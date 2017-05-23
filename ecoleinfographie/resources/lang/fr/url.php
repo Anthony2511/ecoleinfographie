@@ -15,5 +15,6 @@ return [
     'works' => 'realisations',
     'internship' => 'proposer-une-offre-de-stage',
     'registration' => 'inscription',
-    'contact' => 'contact'
+    'contact' => 'contact',
+    'news' => 'actualites'
 ];
