@@ -33,7 +33,7 @@
 			</figure>
 			<div class="featured__content">
 				<span class="featured__date">Le
-					<date datetime="">13 janvier 2017</date>
+					<time datetime="2017-01-13" pubdate>13 janvier 2017</time>
 				</span>
 				<h2 role="heading" aria-level="2" class="featured__title">Inscrivez-vous à la journée d’immersion</h2>
 				<p class="featured__excerpt">
