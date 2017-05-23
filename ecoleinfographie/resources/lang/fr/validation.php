@@ -195,7 +195,9 @@ return [
         'cbox1-pdf' => 'option',
         'cbox2-pdf' => 'option',
         'cbox3-pdf' => 'option',
-        'file-pdf' => 'fichier pdf'
+        'file-pdf' => 'fichier pdf',
+        'firstname' => 'prénom',
+        'lastname' => 'nom'
         
     ],
 
