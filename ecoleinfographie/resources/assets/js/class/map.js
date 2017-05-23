@@ -23,7 +23,7 @@ w.maps = {
             position: uluru,
             icon: icon,
             map: map,
-            url: "https://goo.gl/maps/F6DqSzVe3HC2"
+            url: mapId.dataset.url
         });
 
         google.maps.event.addListener(marker, 'click', function() {

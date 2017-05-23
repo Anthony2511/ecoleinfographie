@@ -78,8 +78,18 @@
 
 			<img class="contact__img" src="{{ asset('img/contact-img.jpg') }}" width="610" height="662" alt="">
 		</div>
-
 		</div>
+
+		<div class="map">
+			<div class="map__container">
+				<div class="map__canvas" id="map__canvas" data-url="https://goo.gl/maps/CHa2UzKkaJ92" data-map-lat="50.6108382" data-map-lgt="5.509964699999955"></div>
+				<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuE1aAL7WbDtG7mQ94AfUNaRay-tR_5Sk">
+				</script>
+			</div>
+		</div>
+
+
 	</section>
 
 

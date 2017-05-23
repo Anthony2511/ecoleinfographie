@@ -67,7 +67,7 @@
                 </div>
             </div>
             </div>
-            <div class="map__canvas" id="map__canvas" data-map-lat="50.6206482" data-map-lgt="5.581290299999978"></div>
+            <div class="map__canvas" id="map__canvas" data-url="https://goo.gl/maps/F6DqSzVe3HC2" data-map-lat="50.6206482" data-map-lgt="5.581290299999978"></div>
 
             <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuE1aAL7WbDtG7mQ94AfUNaRay-tR_5Sk">

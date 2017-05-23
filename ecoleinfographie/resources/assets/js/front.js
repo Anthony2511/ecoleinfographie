@@ -39,6 +39,7 @@ var w = {
             if (w.$body.hasClass('realisations')) return 'realisations';
             if (w.$body.hasClass('internship')) return 'internship';
             if (w.$body.hasClass('registration')) return 'registration';
+            if (w.$body.hasClass('contact-us')) return 'contact';
 
             return false;
       }
