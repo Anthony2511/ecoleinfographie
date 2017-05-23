@@ -37,6 +37,6 @@ class InternshipMailFull extends Mailable
         
         return $this->view('mails.sendFull')
                     ->subject($this->subject)
-                    ->from('letecheur.j@gmail.com', 'Jimmy letecheur');
+                    ->from($this->email, $this->name);
     }
 }
