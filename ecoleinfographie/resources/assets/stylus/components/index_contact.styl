@@ -1,3 +1,50 @@
-/*
 .contact-us &
-*/
+  .contact
+    &__top-wrapper
+      margin-top s(50)
+      @extend .containerGridz
+      &:after
+        @extend .clearfix
+    &__title
+      @extend .titleExtraBold33
+      color $cBlueTitles
+    &__paragraph
+      font-size s($sz7)
+      line-height: 1.4em
+    &__content-wrapper
+      width col(5,12) + gutter(12)
+      float: left
+    &__img
+      float: right
+      //width col(6,12)
+
+  .responsible
+    margin-top s(35, $sz7)
+    &__label
+      display: block
+      margin-bottom s(13, $sz6)
+      font-weight 700
+      color $cBlueTitles
+      font-size s($sz6)
+    &__name
+    &__mail
+      display: block
+      font-size s($sz8)
+      line-height: 1.4em
+    &__mail
+      margin-bottom s(25, $sz8)
+      margin-top s(5, $sz8)
+      &:before
+        icon('mail')
+        font-size 12px
+        color $cBlueCiel
+        margin-right s(10, 12)
+
+
+  .social-list-circle
+    margin-top s(50)
+    &__item
+      display: inline-block
+      margin-right s(10)
+      &:last-child
+        margin-right: 0

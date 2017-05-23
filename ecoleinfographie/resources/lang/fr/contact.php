@@ -12,7 +12,7 @@ return [
     
     'title' => 'Contactez-nous',
     'intro' => 'Vous avez une question&nbsp;?<br /> N’hésitez pas à nous envoyer un email ou à nous téléphoner. Nous vous répondrons dans les plus bref délai.',
-    'resp2d' => 'Résponsable de l’option design graphique',
+    'res2d' => 'Résponsable de l’option design graphique',
     'res3d' => 'Résponsable de l’option 3D et audiovisuel',
     'resWeb' => 'Résponsable de l’option web'
 ];
