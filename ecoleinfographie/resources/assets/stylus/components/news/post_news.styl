@@ -1,2 +1,33 @@
-/*
-.postNews &*/
+.postNews
+  background-color $cBackgroundGrey2
+  .container
+  .container:before
+    background-color $cBackgroundGrey2
+
+
+  .news
+    max-width s(1030)
+    margin s(100) auto 0
+    &__top-wrapper
+      position: relative
+      margin-bottom s(150)
+    &__title-wrapper
+      position: absolute
+      right: 0
+      top s(295)
+      max-width s(735)
+      background $cWhite
+      padding s(50)
+    &__title
+      @extend .titleExtraBold33
+      color $cBlueTitles
+      line-height: 1.1em
+      margin-bottom s(20, $sz4)
+      &:after
+        height s(1, $sz4)
+        background #EAEAEA
+        margin-top s(20, $sz4)
+    &__content
+      max-width s(684)
+      margin-left auto
+      padding-right s(50)

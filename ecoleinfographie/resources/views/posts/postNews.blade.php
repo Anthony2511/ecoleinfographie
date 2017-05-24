@@ -40,12 +40,24 @@
 	<!-- End Breadcrumb -->
 
 
+		<article class="news">
+			<div class="news__top-wrapper">
+				<figure class="news__figure">
+					<img src="{{ asset('img/news-post.jpg') }}" width="715" height="447" alt="#" class="news__img">
+				</figure>
+				<div class="news__title-wrapper">
+					<h2 role="heading" aria-level="2" class="news__title">Inscrivez-vous à la journée d’immersion</h2>
+					<time class="news__date" datetime="" pubdate>Publié le 12 janvier 2017</time>
+				</div>
+			</div>
+			<div class="news__content">
 
-	<div class="blogArticle__container">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis consequuntur, cum eius est eum ex expedita itaque, molestiae nesciunt nobis quam quia soluta suscipit velit? Assumenda itaque quos similique.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci eius expedita, fuga impedit incidunt inventore ipsum laborum maxime modi nobis officia, quae quia quisquam ratione repudiandae rerum, sit voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam animi aspernatur assumenda consequatur esse est iste iusto laboriosam laudantium, maiores natus nesciunt quae quisquam saepe sapiente soluta tenetur voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit harum ipsum magni nesciunt sint. Adipisci amet blanditiis cumque delectus ducimus eos illum ipsa natus quaerat. Alias consequuntur deleniti perferendis unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam beatae distinctio dolor dolore eveniet fuga id, impedit in ipsa iure maiores mollitia obcaecati perferendis, perspiciatis placeat, similique temporibus totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci dolores doloribus excepturi harum ipsum pariatur quia reiciendis sed voluptas? Alias illum minus repellat soluta vero voluptatem! Placeat, reiciendis unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias amet consectetur delectus dolore dolorum eligendi facere harum id omnis perspiciatis possimus quis rerum suscipit vero. Consequatur numquam tempora voluptatibus.</p>
+
+			</div>
+		</article>
 
 
-
-	</div>
 
 	{{--<section class="comments" id="anchor">
 		<div class="comments__wrapper">
