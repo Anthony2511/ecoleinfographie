@@ -34,6 +34,7 @@ Route::get(trans('url.internship'), 'InternshipController@index')->name('interns
 Route::get(trans('url.registration'), 'PageController@registration')->name('registration');
 Route::get(trans('url.contact'), 'ContactController@index')->name('contact');
 Route::get(trans('url.news'), 'NewsController@index')->name('news');
+Route::post(trans('url.news') . '/{news_id}', ['uses' => 'CommentNewsController@store', 'as' => 'commentnews.store']);
 
 // Blog
 Route::get('blog', 'ArticleController@index')->name('blog');
