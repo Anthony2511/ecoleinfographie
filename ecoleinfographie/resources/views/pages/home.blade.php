@@ -4,6 +4,8 @@
     @include('partials.header-home')
 @endsection
 
+@section('class', 'home')
+
 @section('content')
     @include('partials.home.intro')
     @include('partials.home.location')

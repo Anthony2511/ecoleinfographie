@@ -1,8 +1,8 @@
 <header class="header header-shawl" role="banner">
     <div class="header__wrapper">
         <h1 class="header-shawl__title" role="heading" aria-level="1">
-            <span class="header-shawl__title__strong">L’école d’infographie</span>
-            <span class="header-shawl__title__small">de la Province de Liège</span>
+            <span class="header-shawl__title__strong">@lang('home.headerTitle')</span>
+            <span class="header-shawl__title__small">@lang('home.headerSubtitle')</span>
         </h1>
         <a href="/" class="logo">Logo</a>
         @include('partials.navigation')

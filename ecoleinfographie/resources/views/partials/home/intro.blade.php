@@ -1,20 +1,20 @@
 <section class="intro">
     <div class="intro__content">
-        <h2 aria-level="2" role="heading" class="intro__title">titleIntro</h2>
+        <h2 aria-level="2" role="heading" class="intro__title">@lang('home.becomeGraphicDesigner')</h2>
         <p class="intro__text">
-            intro
+            @lang('home.introDesc')
         </p>
         <ul class="intro__list">
             <li class="intro__item">
-                <a href="" class="intro__link">La formation en web</a>
+                <a href="" class="intro__link">@lang('home.webTraining')</a>
             </li>
             <li class="intro__item">
-                <a href="#" class="intro__link">La formation en design graphique</a>
+                <a href="#" class="intro__link">@lang('home.2dTraining')</a>
             </li>
             <li class="intro__item">
-                <a href="#" class="intro__link">La formation en 3D et audiovisuel</a>
+                <a href="#" class="intro__link">@lang('home.3dTraining')</a>
             </li>
         </ul>
     </div>
-    <img class="intro__img" src="../img/image-infographiste.jpg" width="570" height="638" alt="Une homme à lunettes assis sur son bureau qui est entrain de lire une feuille qu’il tient dans sa main gauche en étant face à son ordinateur">
+    <img class="intro__img" src="../img/image-infographiste.jpg" width="570" height="638" alt="@lang('home.altIntro')">
 </section>
