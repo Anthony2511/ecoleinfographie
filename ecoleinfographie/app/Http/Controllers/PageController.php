@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use SEO;
+use App\Models\News;
 
 class PageController extends Controller
 {
@@ -11,7 +12,10 @@ class PageController extends Controller
         SEO::setTitle(trans('home.title'));
         SEO::setDescription(trans('home.metaDescription'));
         
-        return view('pages.home');
+        $news = News::published()->first();
+        return view('pages.home', [
+            'news' => $news
+        ]);
     }
     
 	public function registration()

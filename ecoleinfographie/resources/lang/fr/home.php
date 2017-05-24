@@ -19,8 +19,10 @@ return [
     '2dTraining'            => 'La formation en design graphique',
     '3dTraining'           => 'La formation en 3D et audiovisuel',
     'altIntro'              => 'Une homme à lunettes assis sur son bureau qui est entrain de lire une feuille qu’il tient dans sa main gauche en étant face à son ordinateur',
-    'ourLocation' => 'Notre situtation',
+    'ourLocation' => 'Notre situation',
     'viewMap' => 'Voir sur la carte',
-    'contactus' => 'Nous contacter'
+    'contactus' => 'Nous contacter',
+    'readArticle' => 'Lire l’article',
+    'readAll' => 'Lire tous les articles'
     
 ];
