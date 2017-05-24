@@ -64,6 +64,19 @@ class News extends Model
             return Carbon::parse($this->date)->formatLocalized('%d %B %Y');
         }
     }
+    
+    public function getImageNews($suffix)
+    {
+        $basePath = 'uploads/news/';
+        $fullname = pathinfo($this->image, PATHINFO_FILENAME);
+        $imageNews = $basePath . $fullname . $suffix;
+        
+        if (file_exists($imageNews)) {
+            return URL('/') . '/' . $imageNews;
+        } else {
+            return $imageNews = URL('/') . '/img/no-avatar.jpg';
+        }
+    }
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
