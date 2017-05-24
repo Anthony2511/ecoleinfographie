@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Artesaos\SEOTools\Facades\SEOMeta;
-use Illuminate\Http\Request;
-
 use App\Models\News;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use SEO;
 
 class NewsController extends Controller
@@ -14,14 +12,18 @@ class NewsController extends Controller
     {
         SEO::setTitle('L’actualité');
         SEO::setDescription('Découvrez ce qu’il se passe à l’école et les prochains évènements.');
+    
+        $articleFeaturedID = News::published()
+                                 ->where('featured', true)
+                                 ->first()->id;
         
         $articles = News::published()
-            ->where('featured', false)
-            ->paginate(5);
+                        ->where('id', '<>', $articleFeaturedID)
+                        ->paginate(5);
         
         return view('pages.index_news', [
             'articleFeatured' => $this->getLastFeatured(),
-            'articles' => $articles
+            'articles'        => $articles
         ]);
     }
     
