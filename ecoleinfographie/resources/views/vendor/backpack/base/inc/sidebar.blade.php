@@ -46,9 +46,19 @@
             </a>
           </li>
 
+          <!-- News -->
+          <li class="treeview">
+            <a href="#"><i class="fa fa-newspaper-o"></i> <span>Actualités</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a href="{{ url('admin/news') }}"><i class="fa fa-newspaper-o"></i> <span>Articles</span></a></li>
+              <li><a href="{{ url('admin/news-comment') }}"><i class="fa fa-comments-o"></i> <span>Commentaires</span></a></li>
+            </ul>
+          </li>
+
+
           <!-- blog -->
           <li class="treeview">
-            <a href="#"><i class="fa fa-newspaper-o"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <a href="#"><i class="fa fa-rss"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
               <li><a href="{{ url('admin/article') }}"><i class="fa fa-newspaper-o"></i> <span>Articles</span></a></li>
               <li><a href="{{ url('admin/category') }}"><i class="fa fa-list"></i> <span>Categories</span></a></li>
