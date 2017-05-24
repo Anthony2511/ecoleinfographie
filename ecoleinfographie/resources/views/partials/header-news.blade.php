@@ -29,8 +29,6 @@
 
 		@include('partials.news.featured')
 
-	</div>
-
 </header>
 
 <div class="container">
