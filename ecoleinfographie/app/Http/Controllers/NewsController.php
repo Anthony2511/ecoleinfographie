@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 
 use App\Models\News;
@@ -28,7 +29,11 @@ class NewsController extends Controller
     {
         SEO::setTitle($article->title);
         SEO::setDescription($article->metadescription);
-        SEO::setKeywords($article->keywords);
+        SEOMeta::setKeywords($article->keywords);
+        
+        return view('posts.postNews', [
+            'article' => $article
+        ]);
     }
     
     public function getLastFeatured()

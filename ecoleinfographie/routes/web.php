@@ -47,6 +47,7 @@ Route::get(trans('url.teachers') . '/{teacher}', 'TeacherController@show');
 Route::get('etudiants/{student}', 'StudentController@show');
 Route::get('realisations/{work}', 'WorkController@show');
 Route::get('blog/{article}', 'ArticleController@show')->name('article.single');
+Route::get(trans('url.news') . '/{article}', 'NewsController@show')->name('news.single');
 
 
 
