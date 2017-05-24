@@ -3,8 +3,9 @@ w.home = {
 
       init: function () {
         console.log('home charged');
-        w.sliderBlogHome.init();
         w.sliderProsHome.init();
+        this.randomizeBlog();
+
       },
 
       // getElements: function () {
@@ -17,4 +18,8 @@ w.home = {
       // EVENTS
 
       // FUNCTIONS
+
+    randomizeBlog: function () {
+        $("#blog-home").randomize("article.blog-card");
+    }
 }
