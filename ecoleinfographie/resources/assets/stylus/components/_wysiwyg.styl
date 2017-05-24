@@ -1,0 +1,129 @@
+$paddLArticle = 52
+/************************************\
+    ARTICLE SUBTITLE
+\************************************/
+.blogArticle__body h3
+.news__content h3
+  margin-bottom s(20, $sz7)
+  margin-top: s(40, $sz7)
+  font-size s($sz7)
+  font-weight 900
+  color $cBlueTitles
+  text-transform: uppercase
+  letter-spacing 1.38px
+  &:after
+    content ''
+    display: block
+    width s(30, $sz7)
+    height s(5, $sz7)
+    margin-top s(5)
+    background $cBorderTitles
+  &:first-child
+    margin-top: 0
+
+.blogArticle__body h3
+  padding-left s($paddLArticle, $sz7)
+
+/************************************\
+      PARAGRAPH
+\************************************/
+.blogArticle__body p
+.news__content p
+  font-size inherit
+  margin s(20, $sz7) 0
+  font-size s($sz7)
+  line-height 1.62em
+  &:last-child
+    margin-bottom:s(100, $sz7)
+
+.blogArticle__body p
+  padding-left s($paddLArticle, $sz7)
+
+/************************************\
+      FIGURE
+\************************************/
+.blogArticle__body figure
+.news__content figure
+  position: relative
+  margin s(30) 0
+/* &:after
+   @extend .clearfix*/ // Pas nécessaire, comportement voulu
+
+.blogArticle__body figcaption
+.news__content figcaption
+  position: relative
+  float: right
+  top s(-20, $sz10)
+  right s(-20, $sz10)
+  width 90%
+  padding s(15, $sz10) s(25, $sz10)
+  background $cWhite
+  font-size s($sz10)
+  font-weight 300
+  color $cBlack
+  line-height 1.5em
+  box-shadow 0 0 2px 0 rgba(169,169,169,0.5)
+
+/************************************\
+      BLOCKQUOTE
+\************************************/
+.postBlog .blogArticle__body blockquote
+.postNews .news__content blockquote
+  position: relative
+  padding-left s($paddLArticle)
+  margin s(30) 0
+  &:after
+    @extend .clearfix
+  &:before
+    float: left
+    display: block
+    position: relative
+    top s(9, 51)
+    icon('blockquote');
+    font-size s(51)
+  & p
+    margin-left s(82, $sz7)
+    font-size s($sz7)
+    font-weight 600
+    color $cBlack
+    line-height: 1.62em
+    margin 0
+    padding-left: s(85, $sz7)
+
+/************************************\
+		SOME TEXT
+\************************************/
+
+.blogArticle__body a
+.news__content a
+  @extend .linkInText
+
+.blogArticle__body strong
+.news__content strong
+  font-weight 700
+  font-size inherit
+
+.blogArticle__body em
+.news__content em
+  font-style italic
+  font-size inherit
+
+/************************************\
+		BULLET LIST
+\************************************/
+
+.blogArticle__body ul
+.news__content ul
+  padding-left s($paddLArticle)
+  & li
+    font-size s($sz7)
+    line-height 1.6em
+    margin-bottom s(10, $sz7)
+    &:before
+      content ''
+      display inline-block
+      width 8px
+      height 8px
+      border-radius 50%
+      margin-right 14px
+      background $cBlack
