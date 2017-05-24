@@ -31,7 +31,9 @@ class NewsRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'content'  => 'required|min:255',
             'image'    => 'required',
             'status'   => 'required',
-            'featured' => 'required|boolean'
+            'featured' => 'required|boolean',
+            'metadescription' => 'required|max:255',
+            'keywords' => 'required|max:1000'
         
         ];
     }

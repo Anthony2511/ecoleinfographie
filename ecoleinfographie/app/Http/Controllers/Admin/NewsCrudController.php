@@ -48,30 +48,35 @@ class NewsCrudController extends CrudController
             'name'        => 'title',
             'label'       => 'Titre de l’article',
             'type'        => 'text',
-            'placeholder' => 'Votre titre ici'
+            'placeholder' => 'Votre titre ici',
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField([
             'name'  => 'date',
             'label' => 'Date de publication',
             'type'  => 'date',
-            'value' => date('Y-m-d')
+            'value' => date('Y-m-d'),
+            'tab' => 'Contenu'
         ], 'create');
     
         $this->crud->addField([
             'name'  => 'date',
             'label' => 'Date de publication',
-            'type'  => 'date'
+            'type'  => 'date',
+            'tab' => 'Contenu'
         ], 'update');
     
         $this->crud->addField([
             'name'  => 'status',
             'label' => "Statut de l’article",
-            'type'  => 'enum'
+            'type'  => 'enum',
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField([
             'name'  => 'featured',
             'label' => "Mettre l’article à la une ?",
-            'type'  => 'checkbox'
+            'type'  => 'checkbox',
+            'tab' => 'Contenu'
         ]);
     
         $this->crud->addField([
@@ -81,12 +86,26 @@ class NewsCrudController extends CrudController
             'upload'  => true,
             'crop'    => true,
             'default' => 'img/cover-blog.jpg',
+            'tab' => 'Contenu'
         ]);
         $this->crud->addField([
             'name'  => 'content',
             'label' => 'Contenu de l’article',
             'type'  => 'ckeditor',
-            'extra_plugins' => ['image2']
+            'extra_plugins' => ['image2'],
+            'tab' => 'Contenu'
+        ]);
+        $this->crud->addField([
+            'name'  => 'metadescription',
+            'label' => 'Indiquez une description pour Google (max: 255 caractères)',
+            'type'  => 'textarea',
+            'tab' => 'S.E.O'
+        ]);
+        $this->crud->addField([
+            'name'  => 'keywords',
+            'label' => 'Mettez quelques mots clés pour votre article (séparé par une virgule, ex: évenement,cours,récompenses,…',
+            'type'  => 'textarea',
+            'tab' => 'S.E.O'
         ]);
     }
 

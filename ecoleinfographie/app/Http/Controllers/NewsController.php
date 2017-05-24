@@ -24,6 +24,13 @@ class NewsController extends Controller
         ]);
     }
     
+    public function show(News $article)
+    {
+        SEO::setTitle($article->title);
+        SEO::setDescription($article->metadescription);
+        SEO::setKeywords($article->keywords);
+    }
+    
     public function getLastFeatured()
     {
         $articleFeatured = News::published()

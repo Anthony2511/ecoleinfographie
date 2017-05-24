@@ -22,6 +22,8 @@ class CreateNewsTable extends Migration
             $table->string('image', 255);
             $table->enum('status', array('BROUILLON', 'PUBLIÉ'))->default('BROUILLON');
             $table->boolean('featured')->default(false);
+            $table->string('metadescription', 255);
+            $this->string('keywords', 1000);
             $table->timestamps();
         });
     }
