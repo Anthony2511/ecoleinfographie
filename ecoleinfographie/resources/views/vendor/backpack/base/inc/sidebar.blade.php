@@ -55,7 +55,6 @@
             </ul>
           </li>
 
-
           <!-- blog -->
           <li class="treeview">
             <a href="#"><i class="fa fa-rss"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>

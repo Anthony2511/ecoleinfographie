@@ -6,6 +6,14 @@ use SEO;
 
 class PageController extends Controller
 {
+    public function home()
+    {
+        SEO::setTitle(trans('home.title'));
+        SEO::setDescription(trans('home.metaDescription'));
+        
+        return view('pages.home');
+    }
+    
 	public function registration()
     {
         SEO::setTitle(trans('registration.button'));

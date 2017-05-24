@@ -12,20 +12,9 @@
 */
 
 
-// HomePage
-Route::get('/', ['uses' => 'PageController@home']);
 
-
-
-// Redirect slug 'accueil' to '/'
-Route::get('/home', function (){
-	return redirect('/');
-});
-
-// WEB
-Route::get('web/programme-des-cours', 'CourseController@indexWeb')->name('programWeb');
-Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('parcoursWeb');
 // Pages
+Route::get('/', 'PageController@home')->name('home');
 Route::get('nos-diplomes', 'StudentController@indexGraduated')->name('nos-diplomes');
 Route::get('realisations', 'WorkController@index')->name('realisations');
 Route::get('realisations/filter', 'WorkController@filter')->name('realisations-filter');
@@ -35,6 +24,11 @@ Route::get(trans('url.registration'), 'PageController@registration')->name('regi
 Route::get(trans('url.contact'), 'ContactController@index')->name('contact');
 Route::get(trans('url.news'), 'NewsController@index')->name('news');
 Route::post(trans('url.news') . '/{news_id}', ['uses' => 'CommentNewsController@store', 'as' => 'commentnews.store']);
+
+
+// WEB
+Route::get('web/programme-des-cours', 'CourseController@indexWeb')->name('programWeb');
+Route::get('web/parcours-de-nos-diplomes', 'StudentController@indexWeb')->name('parcoursWeb');
 
 // Blog
 Route::get('blog', 'ArticleController@index')->name('blog');
