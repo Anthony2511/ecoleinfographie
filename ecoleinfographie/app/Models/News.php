@@ -8,6 +8,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use App\Utils\Utils;
 use Carbon\Carbon;
+use App;
 
 
 class News extends Model
