@@ -2,7 +2,6 @@ w.home = {
       oConf: {},
 
       init: function () {
-        console.log('home charged');
         w.sliderProsHome.init();
         this.randomizeBlog();
 

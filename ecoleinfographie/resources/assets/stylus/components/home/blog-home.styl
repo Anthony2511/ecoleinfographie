@@ -1,0 +1,29 @@
+.home
+  .blog-home
+    background $cBackgroundGrey2
+    margin-bottom s(300)
+    padding-bottom s(150)
+    &__title
+      @extend .titleExtraBold26
+      color $cBlueTitles
+      text-align center
+      margin-bottom s(50, $sz5)
+      &:after
+        margin s(11, $sz5) auto
+    &__container
+      max-width s(1134)
+      margin 0 auto
+      &:after
+        @extend .clearfix
+      & .blog-card
+        float left
+        margin-right s(30)
+        &:last-child
+          margin-right: 0
+    &__cta-container
+      @extend .containerGridz
+      text-align: center
+      margin-top s(60)
+    &__cta
+      @extend .buttonLeftToRight
+      text-align: center
