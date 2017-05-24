@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\Utils\Utils;
 use Carbon\Carbon;
 use App;
+use Request;
+use Cookie;
 
 
 class News extends Model
@@ -78,11 +80,27 @@ class News extends Model
             return $imageNews = URL('/') . '/img/no-avatar.jpg';
         }
     }
+    
+    public function setValueCommentForm($data)
+    {
+        if (Request::old($data) && Cookie::get($data) == null)
+        {
+            echo Request::old($data);
+        } elseif (Cookie::get($data) !== null){
+            echo Request::cookie($data);
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
     |--------------------------------------------------------------------------
     */
+    
+    public function commentNews()
+    {
+        return $this->hasMany('App\Models\CommentNews', 'news_id');
+    }
     
     /*
     |--------------------------------------------------------------------------
