@@ -78,5 +78,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('skill', 'SkillCrudController');
     CRUD::resource('type', 'TypeCrudController');
     CRUD::resource('comment', 'CommentCrudController');
+    CRUD::resource('news', 'NewsCrudController');
 });
 
