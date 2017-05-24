@@ -1,0 +1,94 @@
+.news-card
+  position: relative
+  margin-bottom s(120)
+  min-height s(500)
+  &:last-child
+    margin-bottom 0
+  &__content
+    background $cWhite
+    width col(7,12) + gutter(12)
+    min-height s(415)
+    padding s(50) col(1,12)
+  &__title
+    width 68.144% // 385px
+    margin-bottom s(35, $sz4)
+    font-size s($sz4)
+    line-height: 1.1em
+    letter-spacing 2px
+    color $cBlueTitles
+    font-weight 900
+  &__excerpt
+    width 68.144% // 385px
+    font-size s($sz8)
+    line-height: 1.62em
+    margin-bottom s(30, $sz8)
+  &__fakelink
+    @extend .linkArrowLarge
+    font-size s($sz8)
+    cursor pointer
+    &:after
+      font-size s(12, $sz8)
+  &__image
+    position absolute
+    top s(50)
+    right: s(190)
+  &__time
+    position: absolute
+    bottom s(25)
+    right: 0
+    padding s(14) s(15)
+    display: inline-block
+    background $cWhite
+    color $cBlueTitles
+    font-size s($sz8)
+    font-weight bold
+  &__link
+    @extend .cover
+    z-index 2
+    & span
+      @extend .hidden
+
+.news-card:nth-child(even)
+  .news-card
+    &__content
+      margin-left auto
+    &__title
+    &__excerpt
+    &__fakelink
+      display: block
+      text-align: right
+      margin-left auto
+    &__image
+      right auto
+      left s(190)
+      transition .3s ease left
+    &__time
+      right auto
+      left 0
+      transition .3s ease left
+
+.news-card:hover .news-card__fakelink
+.news-card:focus .news-card__fakelink
+  color $cBlack
+  transition .3s ease color
+  outline none
+  &:after
+  &:after
+    transform translateX(s(4, 12))
+    transition .3s ease transform
+
+.news-card:hover .news-card__image
+  right s(210)
+  transition .3s ease right
+.news-card:hover .news-card__time
+  right s(-20)
+  left auto
+  transition .3s ease right
+
+.news-card:nth-child(even):hover .news-card__image
+  left s(210)
+  transition .3s ease left
+.news-card:nth-child(even):hover .news-card__time
+  right auto
+  left s(-20)
+  transition .3s ease left
