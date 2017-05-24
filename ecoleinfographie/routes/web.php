@@ -81,5 +81,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('type', 'TypeCrudController');
     CRUD::resource('comment', 'CommentCrudController');
     CRUD::resource('news', 'NewsCrudController');
+    CRUD::resource('commentnews', 'CommentNewsCrudController');
 });
 
