@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use SEO;
+use App\Models\Request;
 
 class NewsController extends Controller
 {
@@ -33,8 +34,13 @@ class NewsController extends Controller
         SEO::setDescription($article->metadescription);
         SEOMeta::setKeywords($article->keywords);
         
+        $comments         = $article->commentNews()->paginate(12);
+        $numberOfComments = $article->commentNews()->count();
+        
         return view('posts.postNews', [
-            'article' => $article
+            'article'          => $article,
+            'comments'         => $comments,
+            'numberOfComments' => $numberOfComments,
         ]);
     }
     
@@ -45,6 +51,16 @@ class NewsController extends Controller
                                ->first();
         
         return $articleFeatured;
+    }
+    
+    public function setValueCommentForm($data)
+    {
+        if (Request::old($data) && Cookie::get($data) == null)
+        {
+            echo Request::old($data);
+        } elseif (Cookie::get($data) !== null){
+            echo Request::cookie($data);
+        }
     }
     
 }
