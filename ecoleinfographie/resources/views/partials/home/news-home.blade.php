@@ -1,18 +1,21 @@
-<article class="news-home" role="article">
-    <img src="./img/news-home.jpg" width="737" height="412" alt="#" class="news-home__img">
-    <div class="news-home__wrap-text">
-        <a href="" title="Vers la page où il y a la liste de toutes les actualités" class="news-home__category">Actualités</a>
-        <div class="news-home__title-wrap">
-            <h2 aria-level="2" role="heading" class="news-home__title">
-                <span>Saint-Nicolas est passé à l’école&nbsp;!</span>
-            </h2>
-        </div>
-        <p class="news-home__excerpt">
-            Ce 6 décembre, le grand Saint a décidé de faire une visite surprises aux élèves, aux professeurs et à toute l’équipe. Il n’est pas venu les mains vide, il a apporté pour les plus sages des friandises et a...
-        </p>
-        <a href="#" title="Lire l’article sur Saint-Nicolas est passé à l’école" class="news-home__link">
-            Lire l’article
-            <span>Saint-Nicolas est passé à l’école</span>
-        </a>
-    </div>
-</article>
+<div class="news-home">
+	<div class="news-home__container">
+		<article class="news-card">
+			<div class="news-card__content">
+				<h2 role="heading" aria-level="2" class="news-card__title">Aenean porta ex augue</h2>
+				<p class="news-card__excerpt">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper arcu eget elit efficitur, nec luctus enim facilisis. Maecenas dapibus, urna id bibendum fermentum, metus dui sollicitudin...
+				</p>
+				<span class="news-card__fakelink">Lire l’article</span>
+			</div>
+			<div class="news-card__image">
+				<figure class="news-card__figure">
+					<img src="{{ asset('img/news1.jpg') }}" width="503" height="447" alt="" class="news-card__img">
+				</figure>
+				<time class="news-card__time" datetime="" pubdate>3 mail 2018</time>
+			</div>
+			<a href="#" class="news-card__link"><span>Lire l’article NOM ARTICLE</span></a>
+			<a href="allNews" class="news-home__allNews">Voir tous les articles</a>
+		</article>
+	</div>
+</div>

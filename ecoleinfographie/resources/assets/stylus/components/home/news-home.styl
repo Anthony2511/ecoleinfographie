@@ -1,49 +1,36 @@
 .home
   .news-home
     position: relative
-    containerGridz()
-    box-sizing content-box
-    padding 0 s($paddingSideGlobal)
-    margin-bottom s(310)
-    &__img
-      position: relative
-      overflow hidden
-      /*width col(7,$ws_iGridzColumns) + gutter(12)*/
-      max-width 735px
-      height auto
-    &__wrap-text
-      position: absolute
-      top: s(50)
-      right: s(50)
-      max-width col(6,$ws_iGridzColumns)
-      background-color $cBackgroundBlueGrey
-      padding s(40) s(65) s(90)
-    &__category
-      CategoryStyle()
-      margin-bottom s(40, 13)
-      background-color $cSchool
-    &__title-wrap
-      position: absolute
-      right: 0
-      left s(-70)
-    &__title
-      position relative
-      background-color $cWhite
-      min-height s(120)
-      padding 0 s(33)
-      & span
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        @extend .titleXXL
-        color $cBlueTitles
-        letter-spacing 0.75px
-    &__excerpt
-      @extend .paragraph21
-      margin-top s(155, $text-L)
-      max-width s(445, $text-L)
-    &__link
-      position: absolute
-      bottom -20px
-      right -30px
-      @extend .buttonLeftToRight
+    background $cBackgroundGrey2
+    &__container
+      max-width s(1050)
+      margin 0 auto
+      padding s(150) s($paddingSideGlobal)
+      baseShawl($cBackgroundGrey2, 4.5deg)
+      box-sizing content-box
+    .news-card
+      &__content
+        width s(735)
+      &__image
+        right s(12)
+      &__title
+        max-width s(385, $sz4)
+        width auto
+      &__excerpt
+        max-width s(385, $sz8)
+        width auto
+    .news-card:hover .news-card__image
+      right s(32)
+      transition .3s ease right
+      .news-card:hover .news-card__time
+        right s(-20)
+        left auto
+        transition .3s ease right
+
+.home
+  .news-home__allNews
+    @extend .buttonLeftToRight
+    position: relative
+    top s(30, $sz10)
+    margin-left s(170, $sz10)
+    z-index 10
