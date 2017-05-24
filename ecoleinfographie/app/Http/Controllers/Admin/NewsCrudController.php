@@ -69,7 +69,7 @@ class NewsCrudController extends CrudController
             'type'  => 'enum'
         ]);
         $this->crud->addField([
-            'name'  => 'checkbox',
+            'name'  => 'featured',
             'label' => "Mettre l’article à la une ?",
             'type'  => 'checkbox'
         ]);
