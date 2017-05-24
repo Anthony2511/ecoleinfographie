@@ -59,12 +59,14 @@
 
 
 
-	{{--<section class="comments" id="anchor">
+
+
+	<section class="comments" id="anchor">
 		<div class="comments__wrapper">
 			<div class="comments__header">
 				<div class="comments__count">
 					<h2 role="heading" aria-level="2" class="comments__count__title">Commentaires</h2>
-					<strong class="comments__count__number"><span>{{ $article->comments->count() }}</span></strong>
+					<strong class="comments__count__number"><span>{{ $article->commentNews->count() }}</span></strong>
 				</div>
 
 				<div class="comments__share">
@@ -103,9 +105,9 @@
 						<p class="comment__text">
 							{{ $comment->content }}
 						</p>
-						--}}{{--<footer class="comment__footer">
+						{{--<footer class="comment__footer">
 							<a href="#rep" class="comment__footer__respond">Répondre</a>
-						</footer>--}}{{--
+						</footer>--}}
 					</div>
 				@endforeach
 
@@ -120,7 +122,7 @@
 
 					<h3 role="heading" aria-level="3" class="postComment__title">Écrire un commentaire&nbsp;:</h3>
 
-					{{ Form::open(['route' => ['comment.store', $article->id], 'method' => 'POST', 'class' => 'postComment', 'id' => 'comment']) }}
+					{{ Form::open(['route' => ['commentnews.store', $article->id], 'method' => 'POST', 'class' => 'postCommentNews', 'id' => 'comment']) }}
 
 					<fieldset class="postComment__fieldset">
 						<div class="postComment__wrapper postComment__wrapper--1">
@@ -168,7 +170,7 @@
 			</div>
 		</div>
 
-	</section>--}}
+	</section>
 
 
 
