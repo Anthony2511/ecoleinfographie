@@ -41,13 +41,11 @@ class Article extends Model
         'teacher_id',
         'status',
         'category_id',
-        'featured',
         'date'
     ];
     // protected $hidden = [];
     // protected $dates = [];
     protected $casts = [
-        'featured' => 'boolean',
         'date'     => 'date'
     ];
     protected $translatable = ['title', 'content', 'introduction'];
@@ -107,8 +105,13 @@ class Article extends Model
     
     public function getDateForHuman()
     {
-        setlocale(LC_TIME, 'fr_FR');
-        return Carbon::parse($this->date)->formatLocalized('%d %B %Y');
+        if (App::getLocale() == 'fr') {
+            setlocale(LC_TIME, 'fr_FR');
+    
+            return Carbon::parse($this->date)->formatLocalized('%d %B %Y');
+        } else {
+            return Carbon::parse($this->date)->formatLocalized('%d %B %Y');
+        }
     }
     
     public function setValueCommentForm($data)
@@ -177,7 +180,6 @@ class Article extends Model
     |--------------------------------------------------------------------------
     */
     
-    // The slug is created automatically from the "title" field if no slug exists.
     public function getSlugOrTitleAttribute()
     {
         if ($this->slug != '') {
