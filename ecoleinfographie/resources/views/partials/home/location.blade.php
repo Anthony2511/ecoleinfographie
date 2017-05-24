@@ -1,17 +1,17 @@
 <section class="location">
     <div class="location__wrapper">
-        <h2 aria-level="2" role="heading" class="location__title">Notre situation</h2>
+        <h2 aria-level="2" role="heading" class="location__title">@lang('home.ourLocation')</h2>
         <div class="location__address-wrapper">
             <address class="location__address">
                 {{ Config::get('settings.address_street') }}, {{ Config::get('settings.address_num') }}<br />
                 {{ Config::get('settings.address_cp') }} - {{ Config::get('settings.address_town') }}<br />
                 {{ Config::get('settings.address_country') }}
             </address>
-            <a href="{{ Config::get('settings.address_map') }}" target="_blank" class="location__link" rel="external">Voir sur la carte</a>
+            <a href="{{ Config::get('settings.address_map') }}" target="_blank" class="location__link" rel="external">@lang('home.viewMap')</a>
         </div>
         <div class="location__coordinates">
             <a href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="location__tel">{{ Config::get('settings.contact_tel') }}</a>
-            <a href="#contact" class="location__mail">Nous contacter</a>
+            <a href="#contact" class="location__mail">@lang('home.contactus')</a>
             <div class="location__social">
                 <a href="{{ Config::get('settings.social_fb') }}" rel="external" class="location__social-link location__social-facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">

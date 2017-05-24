@@ -18,5 +18,9 @@ return [
     'webTraining'           => 'La formation en web',
     '2dTraining'            => 'La formation en design graphique',
     '3dTraining'           => 'La formation en 3D et audiovisuel',
-    'altIntro'              => 'Une homme à lunettes assis sur son bureau qui est entrain de lire une feuille qu’il tient dans sa main gauche en étant face à son ordinateur'
+    'altIntro'              => 'Une homme à lunettes assis sur son bureau qui est entrain de lire une feuille qu’il tient dans sa main gauche en étant face à son ordinateur',
+    'ourLocation' => 'Notre situtation',
+    'viewMap' => 'Voir sur la carte',
+    'contactus' => 'Nous contacter'
+    
 ];
