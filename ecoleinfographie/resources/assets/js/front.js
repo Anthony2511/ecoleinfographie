@@ -40,6 +40,7 @@ var w = {
             if (w.$body.hasClass('internship')) return 'internship';
             if (w.$body.hasClass('registration')) return 'registration';
             if (w.$body.hasClass('contact-us')) return 'contact';
+            if (w.$body.hasClass('postNews')) return 'postNews';
 
             return false;
       }
