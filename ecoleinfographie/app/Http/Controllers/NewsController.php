@@ -13,8 +13,14 @@ class NewsController extends Controller
     {
         SEO::setTitle('L’actualité');
         SEO::setDescription('Découvrez ce qu’il se passe à l’école et les prochains évènements.');
+        
+        $articles = News::published()
+            ->where('featured', false)
+            ->paginate(5);
+        
         return view('pages.index_news', [
-            'articleFeatured' => $this->getLastFeatured()
+            'articleFeatured' => $this->getLastFeatured(),
+            'articles' => $articles
         ]);
     }
     

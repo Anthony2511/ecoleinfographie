@@ -4,7 +4,7 @@
 	</figure>
 	<div class="featured__content">
 		<span class="featured__date">Le
-			<time datetime="2017-01-13" pubdate>{{ $articleFeatured->getDateForHuman() }}</time>
+			<time datetime="{{ $articleFeatured->date }}" pubdate>{{ $articleFeatured->getDateForHuman() }}</time>
 		</span>
 		<h2 role="heading" aria-level="2" class="featured__title">{{ $articleFeatured->title }}</h2>
 		<p class="featured__excerpt">{{ strip_tags(str_limit($articleFeatured->content, 270, '...')) }}</p>

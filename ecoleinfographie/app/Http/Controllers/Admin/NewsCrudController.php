@@ -94,6 +94,7 @@ class NewsCrudController extends CrudController
     {
         // your additional operations before save here
         $redirect_location = parent::storeCrud();
+        
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
         return $redirect_location;
