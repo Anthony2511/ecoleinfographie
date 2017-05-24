@@ -63,6 +63,11 @@ class CreateForeignKeys extends Migration {
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
+        Schema::table('comments-news', function(Blueprint $table) {
+            $table->foreign('news_id')->references('id')->on('news')
+                  ->onDelete('restrict')
+                  ->onUpdate('restrict');
+        });
         
 	}
 
@@ -100,6 +105,9 @@ class CreateForeignKeys extends Migration {
         });
         Schema::table('comments', function(Blueprint $table) {
             $table->dropForeign('comments_article_id_foreign');
+        });
+        Schema::table('comments-news', function(Blueprint $table) {
+            $table->dropForeign('comments-news_news_id_foreign');
         });
     }
 }

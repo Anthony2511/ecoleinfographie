@@ -24,6 +24,14 @@ $paddLArticle = 52
 .blogArticle__body h3
   padding-left s($paddLArticle, $sz7)
 
+.news__content h3
+  font-size s($sz6)
+  margin-bottom s(20, $sz6)
+  margin-top: s(40, $sz6)
+  &:after
+    width s(30, $sz6)
+    height s(5, $sz6)
+
 /************************************\
       PARAGRAPH
 \************************************/
@@ -64,6 +72,10 @@ $paddLArticle = 52
   line-height 1.5em
   box-shadow 0 0 2px 0 rgba(169,169,169,0.5)
 
+.news__content figcaption
+  top s(-60, $sz10)
+  left s(-120, $sz10)
+
 /************************************\
       BLOCKQUOTE
 \************************************/
@@ -89,6 +101,9 @@ $paddLArticle = 52
     line-height: 1.62em
     margin 0
     padding-left: s(85, $sz7)
+
+.postNews .news__content blockquote
+  padding-left: 0
 
 /************************************\
 		SOME TEXT
@@ -127,3 +142,6 @@ $paddLArticle = 52
       border-radius 50%
       margin-right 14px
       background $cBlack
+
+.news__content ul
+  padding-left: 0
