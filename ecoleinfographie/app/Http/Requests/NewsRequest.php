@@ -16,7 +16,7 @@ class NewsRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
         // only allow updates if the user is logged in
         return \Auth::check();
     }
-
+    
     /**
      * Get the validation rules that apply to the request.
      *
@@ -25,10 +25,17 @@ class NewsRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'title'    => 'required|min:20|max:255',
+            'slug'     => 'unique:news,slug,' . \Request::get('id'),
+            'date'     => 'required|date',
+            'content'  => 'required|min:255',
+            'image'    => 'required',
+            'status'   => 'required',
+            'featured' => 'required|boolean'
+        
         ];
     }
-
+    
     /**
      * Get the validation attributes that apply to the request.
      *
@@ -40,7 +47,7 @@ class NewsRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             //
         ];
     }
-
+    
     /**
      * Get the validation messages that apply to the request.
      *
