@@ -25,7 +25,7 @@
 			</figure>
 			<time class="news-card__time" datetime="{{ $article->date }}" pubdate>{{ $article->getDateForHuman() }}</time>
 		</div>
-		<a href="{{ Route('news') . '/' . $article->slug }} }}" class="news-card__link"><span>Lire l’article {{ $article->title }}</span></a>
+		<a href="{{ Route('news') . '/' . $article->slug }}" class="news-card__link"><span>Lire l’article {{ $article->title }}</span></a>
 	</article>
 	@endforeach
 

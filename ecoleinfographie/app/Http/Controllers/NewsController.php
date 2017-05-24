@@ -12,7 +12,7 @@ class NewsController extends Controller
     {
         SEO::setTitle('L’actualité');
         SEO::setDescription('Découvrez ce qu’il se passe à l’école et les prochains évènements.');
-    
+        
         $articleFeaturedID = News::published()
                                  ->where('featured', true)
                                  ->first()->id;
@@ -41,8 +41,8 @@ class NewsController extends Controller
     public function getLastFeatured()
     {
         $articleFeatured = News::published()
-            ->where('featured', true)
-            ->first();
+                               ->where('featured', true)
+                               ->first();
         
         return $articleFeatured;
     }

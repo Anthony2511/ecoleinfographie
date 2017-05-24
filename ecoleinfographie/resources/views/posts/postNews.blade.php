@@ -44,6 +44,7 @@
 	<div class="blogArticle__container">
 
 
+
 	</div>
 
 	{{--<section class="comments" id="anchor">
