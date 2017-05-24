@@ -71,7 +71,7 @@ class NewsCrudController extends CrudController
         $this->crud->addField([
             'name'  => 'checkbox',
             'label' => "Mettre l’article à la une ?",
-            'type'  => 'boolean'
+            'type'  => 'checkbox'
         ]);
     
         $this->crud->addField([
