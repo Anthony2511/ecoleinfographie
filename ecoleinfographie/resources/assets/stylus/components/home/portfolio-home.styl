@@ -2,13 +2,14 @@
   .portfolio-home
     position: relative
     &__intro
-      baseShawl($cBackgroundBlueGrey, 4.5deg)
-      padding-top s(350)
+      background $cBackgroundGrey2
+      //padding-top s(350)
       &:before
         bottom 0
       &__wrapper
         containerGridz()
         position: relative
+        top s(40)
         box-sizing initial
         padding 0 s($paddingSideGlobal)
       &__title
@@ -52,15 +53,15 @@
       position: relative
       top 1px
       clearfix()
-    &--web
+    &--big
       width 60.694444444%
       float: right
-    &--2D
+    &--middle
       width 39.305555556%
       float: left;
       position: absolute;
       bottom: 0;
-    &--3D
+    &--small
       width 100%
     &__infos-wrapper
       position: absolute

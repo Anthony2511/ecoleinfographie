@@ -167,12 +167,18 @@ class Work extends Model
             $image = \Image::make($value);
             $workIndex = \Image::make($value)->fit(400, 623);
             $workMore = \Image::make($value)->fit(385, 223);
+            $workHomeSmall = \Image::make($value)->fit(556, 355);
+            $workHomeMiddle = \Image::make($value)->fit(522, 436);
+            $workHomeBig = \Image::make($value)->fit(875, 502);
             // 1. Generate a filename.
             $filename = md5($value.time());
             // 2. Store the image on disk.
             \Storage::disk($disk)->put($destination_path.'/'.$filename.'.jpg', $image->stream());
             Utils::storeNewSize($destination_path, $filename, '_workIndex', $workIndex);
             Utils::storeNewSize($destination_path, $filename, '_more', $workMore);
+            Utils::storeNewSize($destination_path, $filename, '_small', $workHomeSmall);
+            Utils::storeNewSize($destination_path, $filename, '_middle', $workHomeMiddle);
+            Utils::storeNewSize($destination_path, $filename, '_big', $workHomeBig);
             // 3. Save the path to the database
             $this->attributes[$attribute_name] = $destination_path.'/'.$filename.'.jpg';
         }
