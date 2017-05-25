@@ -9,7 +9,7 @@
     </div>
     <div class="slider-pros__wrapper" data-pos="0">
         {{--<div class="slider-pros__bg"></div>--}}
-        <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article01">
+        <article class="slider-pros__article slider-pros__article--anim" id="articleSlide-0">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
                     <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $pWeb->fullname }}</h3>
@@ -31,7 +31,7 @@
                 <img src="{{ $pWeb->getImageStudent('_slider.jpg') }}" width="338" height="359" alt="Photo de {{ $pWeb->fullname }}">
             </figure>
         </article>
-        <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article02">
+        <article class="slider-pros__article slider-pros__article--anim" id="articleSlide-1">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
                     <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $p3d->fullname }}</h3>
@@ -50,7 +50,7 @@
                 <img src="{{ $p3d->getImageStudent('_slider.jpg') }}" width="338" height="359" alt="Photo de {{ $p3d->fullname }}">
             </figure>
         </article>
-        <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article03">
+        <article class="slider-pros__article slider-pros__article--anim" id="articleSlide-2">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
                     <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $p2d->fullname }}</h3>
@@ -81,20 +81,20 @@
         </div>
         <div class="dots slider-pros-dots" id="dots">
             <ul class="dots__list">
-                <li class="dots__li sliderBlog__dots-item--1 current" data-pos="0">
-                    <button class="dots__item">
+                <li class="dots__li sliderBlog__dots-item--1" data-pos="0">
+                    <a href="#articleSlide-0" class="dots__item">
                         <span>Voir l’article #1</span>
-                    </button>
+                    </a>
                 </li>
                 <li class="dots__li sliderBlog__dots-item--2" data-pos="1">
-                    <button class="dots__item">
+                    <a href="#articleSlide-1" class="dots__item">
                         <span>Voir l’article #2</span>
-                    </button>
+                    </a>
                 </li>
                 <li class="dots__li sliderBlog__dots-item--3" data-pos="2">
-                    <button class="dots__item">
+                    <a href="#articleSlide-2" class="dots__item">
                         <span>Voir l’article #3</span>
-                    </button>
+                    </a>
                 </li>
             </ul>
         </div>
