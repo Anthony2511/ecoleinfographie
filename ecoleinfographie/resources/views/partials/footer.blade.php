@@ -1,35 +1,36 @@
-<section class="footer__wrapper">
+<section class="footer__wrapper" itemscope itemtype="http://schema.org/Organization">
     <header class="footer__header">
         <h2 role="heading" aria-level="2" class="footer__title">
             <span>Bas de page de l’</span>École d’infographie<br /> de la Province de Liège
         </h2>
+        <link itemprop="url" href="http://ecoleinfographie.be">
         <ul class="social">
             <li class="social__item">
-                <a href="" rel="external" title="Vers Facebook" class="social__link social__link--facebook">
+                <a href="" itemprop="sameAs" rel="external" title="Vers Facebook" class="social__link social__link--facebook">
                     {!! file_get_contents(asset('svg/facebook.svg')) !!}
                     <span>Vers Facebook</span>
                 </a>
             </li>
             <li class="social__item">
-                <a href="" rel="external" title="Vers Twitter" class="social__link social__link--twitter">
+                <a href="" itemprop="sameAs" rel="external" title="Vers Twitter" class="social__link social__link--twitter">
                     {!! file_get_contents(asset('svg/twitter.svg')) !!}
                     <span>Vers Twitter</span>
                 </a>
             </li>
             <li class="social__item">
-                <a href="" rel="external" title="Vers Pinterest" class="social__link social__link--pinterest">
+                <a href="" itemprop="sameAs" rel="external" title="Vers Pinterest" class="social__link social__link--pinterest">
                     {!! file_get_contents(asset('svg/pinterest.svg')) !!}
                     <span>Vers Pinterest</span>
                 </a>
             </li>
             <li class="social__item">
-                <a href="" rel="external" title="Vers Behance" class="social__link social__link--behance">
+                <a href="" itemprop="sameAs" rel="external" title="Vers Behance" class="social__link social__link--behance">
                     {!! file_get_contents(asset('svg/behance.svg')) !!}
                     <span>Vers Behance</span>
                 </a>
             </li>
             <li class="social__item">
-                <a href="" rel="external" title="Vers Dribble" class="social__link social__link--dribble">
+                <a href="" itemprop="sameAs" rel="external" title="Vers Dribble" class="social__link social__link--dribble">
                     {!! file_get_contents(asset('svg/dribble.svg')) !!}
                     <span>Vers Dribble</span>
                 </a>
@@ -38,12 +39,13 @@
     </header>
     <section class="section section--contact">
         <h3 role="heading" aria-level="3" class="section__title">Contact</h3>
-        <address class="section__address">
-            <span>Rue Peetermans, 80</span>
-            <span>4100 - Seraing</span>
-            <span>Belgique</span>
+        <address class="section__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">Rue Peetermans, 80</span>
+            <span><span itemprop="postalCode">4100</span> - <span itemprop="addressLocality">Seraing</span></span>
+            <span itemprop="addressCountry">Belgique</span>
         </address>
-        <a href="tel:085211113" class="section__tel">085 21 11 13</a>
+        <meta itemprop="name" content="Haute École de la Province de Liège - Infographie" />
+        <a href="tel:085211113" class="section__tel" itemprop="telephone" itemprop="faxNumber">085 21 11 13</a>
         <a href="#contact" class="section__contact">@lang('footer.contact-us')</a>
     </section>
     <section class="section section--explorez">
