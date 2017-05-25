@@ -2,7 +2,7 @@
     <h2 aria-level="2" class="nav__title">
         Menu de navigation principal
     </h2>
-    <button  class="hamburger">
+    <button  class="hamburger" onclick="this.blur();">
         <span></span>
         <span></span>
         <span></span>
