@@ -1,6 +1,6 @@
 <section class="web-what">
     <div class="web-what__wrapper">
-        <img class="web-what__img" src="./img/macbook-web-what.png" width="764" height="879" alt="" data-type="parallax"
+        <img class="web-what__img" src="{{ asset('img/macbook-web-what.png') }}" width="764" height="879" alt="" data-type="parallax"
              data-depth="-0.07">
         <div class="web-what__wrapper-text">
             <h2 role="heading" aria-level="2" class="web-what__title">
@@ -25,14 +25,14 @@
             </p>
             <a href="#webdesigner" class="webdesigner__link">Voir un ancien diplômé qui est designer web</a>
         </div>
-        <img class="webdesigner__img" src="./img/web-designerweb.png" srcset="./img/web-designerweb@2x.png 2x" width="749" height="646" alt="">
+        <img class="webdesigner__img" src="{{ asset('img/web-designerweb.png') }}" srcset="{{ asset('img/web-designerweb@2x.png') }} 2x" width="749" height="646" alt="">
     </div>
 </section>
 
 <section class="webintegrator">
     <div class="webintegrator__wrapper">
-        <img class="webintegrator__img" src="./img/webintegrator-desktop.png" srcset="./img/webintegrator-desktop@2x.png 2x" width="1145" height="559" alt="">
-        <img class="webintegrator__img--2" src="./img/webintegrator-ipad.png" srcset="./img/webintegrator-ipad@2x.png 2x" width="442" height="218" alt="">
+        <img class="webintegrator__img" src="{{ asset('img/webintegrator-desktop.png') }}" srcset="{{ asset('img/webintegrator-desktop@2x.png') }} 2x" width="1145" height="559" alt="">
+        <img class="webintegrator__img--2" src="{{ asset('img/webintegrator-ipad.png') }}" srcset="{{ asset('img/webintegrator-ipad@2x.png') }} 2x" width="442" height="218" alt="">
         <div class="webintegrator__wrapper-text">
             <h2 role="heading" aria-level="2" class="webintegrator__title">
                 L’intégrateur web
@@ -52,7 +52,7 @@
                 <div class="frontend__overflowh">
                     {!! file_get_contents(asset('svg/frontend.svg')) !!}
                 </div>
-                <img class="frontend__img" src="./img/web-frontend.png" srcset="./img/web-frontend@2x.png 2x" width="818" height="479" alt="">
+                <img class="frontend__img" src="{{ asset('img/web-frontend.png') }}" srcset="{{ asset('img/web-frontend@2x.png') }} 2x" width="818" height="479" alt="">
             </div>
         </div>
         <div class="frontend__wrapper-text">
@@ -69,8 +69,8 @@
 
 <section class="devbackend">
     <div class="devbackend__wrapper">
-        <img class="devbackend__img" src="./img/backend_imac.png" srcset="./img/backend_imac@2x.png 2x" width="1264" height="765" alt="">
-        <img class="devbackend__img--2" src="./img/backend__code.png" srcset="./img/backend__code@2x.png 2x" width="1026" height="488" alt="">
+        <img class="devbackend__img" src="{{ asset('img/backend_imac.png') }}" srcset="{{ asset('img/backend_imac@2x.png') }} 2x" width="1264" height="765" alt="">
+        <img class="devbackend__img--2" src="{{ asset('img/backend__code.png') }}" srcset="{{ asset('img/backend__code@2x.png') }} 2x" width="1026" height="488" alt="">
         <div class="devbackend__wrapper-text">
             <h2 role="heading" aria-level="2" class="devbackend__title">
                 Le développeur backend
@@ -94,10 +94,10 @@
             </p>
             <a href="#webmobile" class="webmobile__link">Voir un ancien diplômé qui est développeur mobile</a>
         </div>
-        <img class="webmobile__img--1" src="./img/webmobile-sketch.png" srcset="./img/webmobile-sketch@2x.png 2x" width="760" height="398" alt="">
-        <img class="webmobile__img--2" src="./img/webmobile-connexiopn.png" srcset="./img/webmobile-connexion@2x.png 2x" width="760" height="398" alt="">
-        <img class="webmobile__img--3" src="./img/webmobile-padlock.png" srcset="./img/webmobile-padlock@2x.png 2x" width="760" height="398" alt="">
-        <img class="webmobile__img--4" src="./img/webmobile-code.png" srcset="./img/webmobile-code@2x.png 2x" width="760" height="398" alt="">
+        <img class="webmobile__img--1" src="{{ asset('img/webmobile-sketch.png') }}" srcset="{{ asset('img/webmobile-sketch@2x.png') }} 2x" width="760" height="398" alt="">
+        <img class="webmobile__img--2" src="{{ asset('img/webmobile-connexion.png') }}" srcset="{{ asset('img/webmobile-connexion@2x.png') }} 2x" width="760" height="398" alt="">
+        <img class="webmobile__img--3" src="{{ asset('img/webmobile-padlock.png') }}" srcset="{{ asset('img/webmobile-padlock@2x.png') }} 2x" width="760" height="398" alt="">
+        <img class="webmobile__img--4" src="{{ asset('img/webmobile-code.png') }}" srcset="{{ asset('img/webmobile-code@2x.png') }} 2x" width="760" height="398" alt="">
     </div>
 </section>
 

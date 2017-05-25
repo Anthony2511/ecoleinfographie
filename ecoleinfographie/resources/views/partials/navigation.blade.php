@@ -135,7 +135,7 @@
             </div>
         </li>
         <li class="menu__item">
-            <div><span class="menu__title-responsive">Explorez</span></div>
+            <div class="menu__item--fakeBox"><span class="menu__title-responsive">Explorez</span></div>
             <a href="{{ route('realisations') }}" class="menu__link menu__link-res">Réalisations</a>
         </li>
         <li class="menu__item">
