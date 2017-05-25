@@ -2,6 +2,8 @@
   .blog-home
     background $cBackgroundGrey2
     padding-bottom s(150)
+    @media screen and (max-width: 1024px)
+      padding-bottom s(50)
     &__title
       @extend .titleExtraBold26
       color $cBlueTitles
@@ -12,17 +14,45 @@
     &__container
       max-width s(1134)
       margin 0 auto
+      @media screen and (max-width: 1190px)
+        max-width s(745)
+      @media screen and (max-width: 780px)
+        padding 0 s(20)
       &:after
         @extend .clearfix
       & .blog-card
         float left
         margin-right s(30)
+        &:first-child
+          margin-right s(30)
         &:last-child
           margin-right: 0
+        @media screen and (max-width: 1190px)
+          margin-right 0
+          margin-bottom s(30)
+          &:last-child
+            float none
+            margin 0 auto
+        @media screen and (max-width: 780px)
+          width 100%
+          height auto
+          &__img
+            width 100%
+        @media screen and (max-width: 376px)
+          &__title
+            height auto
+          &__comments
+            display: block
+            margin-top s(15)
+            float: none
     &__cta-container
       @extend .containerGridz
       text-align: center
       margin-top s(60)
+      @media screen and (max-width: 780px)
+        margin-top s(20)
     &__cta
       @extend .buttonLeftToRight
       text-align: center
+      @media screen and (max-width: 350px)
+        padding s(25, $sz9) s(30, $sz9)
