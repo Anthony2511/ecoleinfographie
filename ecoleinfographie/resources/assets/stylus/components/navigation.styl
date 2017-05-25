@@ -305,9 +305,11 @@
   .menu
     display: none
   .hamburger
+    display: block
     width: s(35)
     height: s(24)
     position: relative
+    margin-top s(15)
     transform: rotate(0deg)
     transition: .5s ease-in-out
     cursor: pointer
@@ -337,9 +339,10 @@
         top s(20)
         right 0
         left initial
-        width 100%
+        width 90%
 
   .hamburger:hover
+  .hamburger:focus
     & span
       width 100%
 
@@ -350,7 +353,7 @@
     opacity: 0
     right auto
     background rgba(255,255,255,0)
-    top 12px
+    top s(12)
   .hamburger.open span:nth-child(2)
     transform: rotate(45deg)
     left 0

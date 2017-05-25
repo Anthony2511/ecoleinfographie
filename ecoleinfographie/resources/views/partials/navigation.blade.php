@@ -2,12 +2,12 @@
     <h2 aria-level="2" class="nav__title">
         Menu de navigation principal
     </h2>
-    <div class="hamburger">
+    <button  class="hamburger">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
     <ul class="menu">
         <li class="menu__item">
             <a href="#lesmetiersduweb" class="menu__link">Les métiers</a>
