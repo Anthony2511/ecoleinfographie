@@ -1,10 +1,10 @@
 <section class="pros-home">
     <div class="pros-home__container">
         <h2 role="heading" aria-level="2" class="pros-home__title">
-            Nous formons des professionnels
+            @lang('home.proTitle')
         </h2>
         <p class="pros-home__text">
-            Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.
+            @lang('home.proIntro')
         </p>
     </div>
     <div class="slider-pros__wrapper" data-pos="0">
@@ -12,46 +12,61 @@
         <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article01">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
-                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">Toon Van den Bos</h3>
-                    <span class="slider-pros__description__subtitle">Co-fondateur de
-                        <a href="#whitecube" rel="ext">WhiteCube</a>
+                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $pWeb->fullname }}</h3>
+                    <span class="slider-pros__description__subtitle">
+                        @foreach($pWeb->company as $row)
+                        Co-fondateur de
+                            <a href="{{ $row['url'] }}" rel="ext">
+                                {{ $row['name'] }}
+                            </a>
+                        @endforeach
                     </span>
-                    <p class="slider-pros__description__excerpt">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. Eletium distoc etan rafiney logitec nono darvers.</p>
+                    <p class="slider-pros__description__excerpt">
+                        In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. Eletium distoc etan rafiney logitec nono darvers.
+                    </p>
                 </div>
-                <a class="slider-pros__description__link" href="#">En savoir plus sur Toon</a>
+                <a class="slider-pros__description__link" href="{{ Url('/etudiants') . '/' . $pWeb->slug }}">En savoir plus sur {{ $pWeb->firstname }}</a>
             </div>
             <figure class="slider-pros__image">
-                <img src="./img/slider-pros__img1.jpg" width="338" height="359" alt="#">
+                <img src="{{ $pWeb->getImageStudent('_slider.jpg') }}" width="338" height="359" alt="Photo de {{ $pWeb->fullname }}">
             </figure>
         </article>
         <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article02">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
-                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">Tristan Lilien</h3>
-                    <span class="slider-pros__description__subtitle">Spécialiste effets spéciaux chez
-                        <a href="#benuts" rel="ext">Benuts</a>
+                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $p3d->fullname }}</h3>
+                    <span class="slider-pros__description__subtitle">{{ $p3d->profession }} chez
+                        @foreach($p3d->company as $row)
+                            <a href="{{ $row['url'] }}" rel="ext">
+                                {{ $row['name'] }}
+                            </a>
+                        @endforeach
                     </span>
                     <p class="slider-pros__description__excerpt">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. Eletium distoc etan rafiney logitec nono darvers.</p>
                 </div>
-                <a class="slider-pros__description__link" href="#">En savoir plus sur Tristan</a>
+                <a class="slider-pros__description__link" href="{{ Url('/etudiants') . '/' . $p3d->slug }}">En savoir plus sur {{ $p3d->firstname }}</a>
             </div>
             <figure class="slider-pros__image">
-                <img src="./img/slider-pros__img2.jpg" width="338" height="359" alt="#">
+                <img src="{{ $p3d->getImageStudent('_slider.jpg') }}" width="338" height="359" alt="Photo de {{ $p3d->fullname }}">
             </figure>
         </article>
         <article class="slider-pros__article slider-pros__article--anim" id="slider-pros__article03">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
-                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">Machin Chose</h3>
-                    <span class="slider-pros__description__subtitle">Co-fondateur de
-                        <a href="#herasimiu" rel="ext">Herasmiu</a>
+                    <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $p2d->fullname }}</h3>
+                    <span class="slider-pros__description__subtitle">{{ $p2d->profession }} chez
+                        @foreach($p2d->company as $row)
+                            <a href="{{ $row['url'] }}" rel="ext">
+                                {{ $row['name'] }}
+                            </a>
+                        @endforeach
                     </span>
                     <p class="slider-pros__description__excerpt">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. Eletium distoc etan rafiney logitec nono darvers.</p>
                 </div>
-                <a class="slider-pros__description__link" href="#">En savoir plus sur Machin</a>
+                <a class="slider-pros__description__link" href="{{ Url('/etudiants') . '/' . $p2d->slug }}">En savoir plus sur {{ $p2d->firstname }}</a>
             </div>
             <figure class="slider-pros__image">
-                <img src="./img/slider-pros__img3.jpg" width="338" height="359" alt="#">
+                <img src="{{ $p2d->getImageStudent('_slider.jpg') }}" width="338" height="359" alt="Photo de {{ $p2d->fullname }}">
             </figure>
         </article>
         <div class="slideButtons slider-pros-buttons">

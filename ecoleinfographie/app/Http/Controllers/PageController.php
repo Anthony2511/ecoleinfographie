@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\News;
+use App\Models\Student;
 use App\Models\Work;
 use DB;
 use SEO;
@@ -22,10 +23,15 @@ class PageController extends Controller
         $a2d  = Article::published()->where('orientation', '2d')->first();
         $a3d  = Article::published()->where('orientation', '3d')->first();
         
-        // Get a work for each category with a specific ID
+        // Get a work for with a specific ID
         $wWeb = Work::where('id', 1)->first();
         $w2d  = Work::where('id', 4)->first();
         $w3d  = Work::where('id', 3)->first();
+        
+        // Get former studenst with interview with a specific ID
+        $pWeb = Student::where('id', 153)->where('has_interview', true)->first();
+        $p2d  = Student::where('id', 155)->where('has_interview', true)->first();
+        $p3d  = Student::where('id', 154)->where('has_interview', true)->first();
         
         return view('pages.home', [
             'news'        => $news,
@@ -35,7 +41,10 @@ class PageController extends Controller
             'a3d'         => $a3d,
             'wWeb'        => $wWeb,
             'w2d'         => $w2d,
-            'w3d'         => $w3d
+            'w3d'         => $w3d,
+            'pWeb'        => $pWeb,
+            'p2d'         => $p2d,
+            'p3d'         => $p3d
         ]);
     }
     

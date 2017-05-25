@@ -46,7 +46,8 @@ class Student extends Model
     // protected $dates = [];
     protected $translatable = ['profession', 'interview'];
     protected $casts = [
-        'social' => 'array'
+        'social' => 'array',
+        'company' => 'array'
     ];
     
     /**

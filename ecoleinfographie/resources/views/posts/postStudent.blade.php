@@ -34,8 +34,7 @@
 				<span class="former-info__diploma">@lang('students.graduadeIn') {{ $student->year }} - {{ $orientations[$student->orientation] }}</span>
 
 
-				<?php $ratio = json_decode($student->company, true); ?>
-				@foreach($ratio as $row)
+				@foreach($student->company as $row)
 					@if($student->is_freelance == 1)
 						<span class="former-info__company">
 							@lang('students.workAs') freelance
