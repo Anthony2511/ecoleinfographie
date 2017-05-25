@@ -15,6 +15,7 @@ var w = {
             w.sCurrent = w.getCurrentPage();
             //w.mobileMenu.init();
             w.accessibleMenuConfig.init(); // Charge config Accessible Menu
+            w.menuRes();
             w.loadPage();
             w.isLoaded = true;
       },
@@ -25,6 +26,14 @@ var w = {
       // functions
       getElements: function () {
             w.$body = $('body');
+      },
+
+      menuRes: function () {
+          $(document).ready(function(){
+              $('.hamburger').click(function(){
+                  $(this).toggleClass('open');
+              });
+          });
       },
 
       getCurrentPage: function () {
