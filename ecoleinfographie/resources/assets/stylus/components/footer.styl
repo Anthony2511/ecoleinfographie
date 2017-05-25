@@ -6,6 +6,8 @@
 .footer
   @extend .containerGridz
   padding s(100) s($paddingSideGlobal)
+  @media screen and (max-width: 435px)
+    padding s(50) s(20)
   &__header
     position: relative
     margin-bottom s(70)
@@ -17,6 +19,10 @@
     @extend .titleXXL
     max-width s(360, $text-XXL)
     line-height 1.3em
+    @media screen and (max-width: 813px)
+      max-width none
+      & br
+        display: none
     & span
       @extend .hidden
 
@@ -25,15 +31,22 @@
     position: absolute
     right 0
     bottom 0 + s(25)
+    @media screen and (max-width: 990px)
+      position static
+      margin-top s(20)
     &__link span
         @extend .hidden
     &__item
       display: inline-block
       margin-right s(16)
+      @media screen and (max-width: 435px)
+        margin-right 0
       &:last-child
         margin-right 0
     &__link
       display: inline-block
+      @media screen and (max-width: 435px)
+        transform scale(0.8)
     &__link svg circle + circle
       fill #135777
       transform translate(26px, 26px) scale(6)
@@ -60,18 +73,29 @@
   .section
     position: relative
     width 33.3333%
+    @media screen and (max-width: 760px)
+      text-align: center
+      width 100%
+      margin-bottom s(50)
     &--contact
       float: left
+      @media screen and (max-width: 760px)
+        float: none
     &--explorez
       float: right
       width 33.3333%
       padding-left 11%
+      @media screen and (max-width: 760px)
+        width 100%
+        float none
+        padding-left: 0
     &--formations
       margin: 0 auto
     &__title
       @extend .titleXL
       color $cWhite
       margin-bottom s(30, $text-XL)
+
     &__link
       @extend .linkArrowLarge
       color $cGreyFooter
@@ -87,6 +111,8 @@
         transition .2s ease
     &__address
       margin-bottom s(35)
+      @media screen and (max-width: 760px)
+        margin-bottom s(15)
       span
         display: block
         font-size: s($text-L)
@@ -123,6 +149,15 @@
       border 2px solid $cWhite
       position: relative
       margin-top s(20)
+      @media screen and (max-width: 1179px)
+        padding 30px 25px
+      @media screen and (max-width: 990px)
+        max-width 180px
+        line-height: 1.2em
+      @media screen and (max-width: 760px)
+        max-width none
+        width: 100%
+        margin-top 50px
       &:before
         background $cWhite
         opacity 0.2
