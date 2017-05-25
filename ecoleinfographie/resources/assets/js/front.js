@@ -35,7 +35,13 @@ var w = {
               $('.hamburger').click(function(){
                   $(this).toggleClass('open');
                   $('body').toggleClass('menu-responsive')
+                  $('html').toggleClass('no-scroll');
               });
+              $('.overlay').click(function () {
+                  $('body').removeClass('menu-responsive');
+                  $('.hamburger').removeClass('open');
+                  $('html').removeClass('no-scroll');
+              })
           });
       },
 
