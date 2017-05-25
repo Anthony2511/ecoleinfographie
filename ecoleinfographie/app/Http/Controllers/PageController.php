@@ -56,6 +56,11 @@ class PageController extends Controller
         return view('pages.index_registration');
     }
     
+    public function webTrades()
+    {
+        return view('pages.web.web_home');
+    }
+    
     
     public function getOrientation()
     {

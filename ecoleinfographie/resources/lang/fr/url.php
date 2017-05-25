@@ -16,5 +16,6 @@ return [
     'internship' => 'proposer-une-offre-de-stage',
     'registration' => 'inscription',
     'contact' => 'contact',
-    'news' => 'actualites'
+    'news' => 'actualites',
+    'webTrades' => 'les-metiers-du-web'
 ];
