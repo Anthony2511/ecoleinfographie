@@ -10,7 +10,7 @@
     </button>
     <ul class="menu">
         <li class="menu__item">
-            <span class="menu__title-responsive menu__title-responsive--first">L’école</span>
+            <span class="menu__title-responsive menu__title-responsive--first">Nos formations</span>
             <a href="#lesmetiersduweb" class="menu__link menu__fake">Les métiers</a>
             <div class="subnav subnav__jobs">
                 <ul class="subnav__group">
@@ -92,7 +92,7 @@
             </div>
         </li>
         <li class="menu__item">
-            <span class="menu__title-responsive">Nos formations</span>
+            <span class="menu__title-responsive">L’école</span>
             <a href="#actualité" class="menu__link menu__fake">L’école</a>
             <div class="subnav subnav__school">
                 <ul class="subnav__group">
