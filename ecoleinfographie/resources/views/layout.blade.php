@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr" class="no-js">
 @include('partials.head')
-<body class=" @yield('class') <?php /*if (isset($page->classBody)) echo $page->classBody;*/ ?> <?php /*echo $page->classBody; */?>">
+<body class=" @yield('class')">
+<div class="overlay"></div>
+
 
 @yield('header')
 
