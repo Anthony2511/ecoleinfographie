@@ -171,6 +171,7 @@
   transition .1s ease all
   &:before
     transform translateY(s(8, 16)) rotate(45deg)
+    opacity 0
     transition .1s .1s ease transform
   &.open
     visibility visible
@@ -179,6 +180,7 @@
     opacity 1;
     transition-property transform, opacity
     &:before
+      opacity 1
       transform translate3D(0,0,0) rotate(45deg)
       transition .1s .1s ease-in transform
   &__jobs__cloud
@@ -287,6 +289,11 @@
       transition .3s ease transform
 
 
+.menu__title-responsive
+div .menu__title-responsive
+.hamburger
+  display: none
+
 /************************************\
 		RESPONSIVE
 \************************************/
@@ -301,9 +308,10 @@
       &:before
         margin-left s(22)
 
+
+
+// Create button hamburger & animation
 @media screen and (max-width: 1080px)
-  .menu
-    display: none
   .hamburger
     display: block
     width: s(35)
@@ -364,3 +372,155 @@
     left 0
     right auto
     width 100%
+
+
+// Create navigation responsive from right to left
+@media screen and (max-width: 1080px)
+  body.menu-responsive
+    position relative
+    .header
+      position static
+
+  .menu
+    display: block
+    position: fixed
+    right: 0
+    top: 0
+    bottom: 0
+    height 100%
+    width s(300)
+    padding 0
+    text-align: center
+    background $cBlueTitles
+    &__item
+      display block
+      &:after
+        display: none
+    &__link
+    &__fake
+      display: none
+    &__title-responsive
+      display: block
+      margin-bottom s(15, $sz8)
+      margin-top s(15, $sz8)
+      padding s(30, $sz8) 0
+      text-align: center
+      color $cWhite
+      font-size s($sz8)
+      font-weight: 900
+      letter-spacing s(3, $sz8)
+      text-transform: uppercase
+      border-bottom 1px solid #1A2C3F
+      border-top 1px solid #1A2C3F
+      &:after
+        content ''
+        display: block
+        width s(20, $sz8)
+        height s(3, $sz8)
+        background $cWhite
+        opacity 40%
+        margin s(7, $sz8) auto 0
+    &__title-responsive--first
+      border-top none
+      margin-top: 0
+
+  .subnav
+    position static
+    padding 0
+    visibility visible
+    opacity 1
+    background none
+    box-shadow none
+    transition 0s 0s all ease
+    transform none
+    left 0
+    &:before
+      display: none
+    & *
+    & a
+      color $cWhite
+    & svg
+    & img
+      display none
+    &__group
+      display: block
+      padding: 0
+      margin 0
+    &__link-wrapper
+      display: none
+    &__jobs__job:hover span
+    &__jobs__job:focus span
+      color $cWhite
+    &__jobs__job
+      width: 100%
+      padding s(20) 0
+    &__jobs__job__title
+    &__school li a
+      display: block
+      font-size s($sz9)
+      width 100%
+      padding 0 s(60, $sz9)
+      font-weight: 900
+      text-transform: uppercase
+      color $cWhite
+      letter-spacing .6px
+    &__school li a:after
+      display: none
+    &__school li
+      margin-bottom 0
+
+  .subnav__school
+    border-bottom: 0
+  .subnav__school li a
+    padding 20px 0
+
+  .menu__link-res
+    display block
+    width: 100%
+    padding s(20, $sz9) s(60, $sz9)
+    font-size s($sz9)
+    font-weight: 900
+    text-transform: uppercase
+    color $cWhite
+    letter-spacing .6px
+
+  .menu__link--cta
+    display: block
+    width: 100%
+    background $cBlueCiel
+    margin s(15, $sz9) 0 0 0
+    border none
+    padding s(25, $sz9) 0
+    transition .3s ease background
+    &:hover
+    &:focus
+      background $cBlueCiel + 10%
+      transition .3s ease background
+
+
+  // Hover links in menu responsive
+  .subnav__jobs__job
+  .subnav__school li
+  .menu__link-res
+    transition .3s ease background-color
+  .subnav__jobs__job:hover
+  .subnav__jobs__job:focus
+  .subnav__school li:hover
+  .subnav__school li:focus
+  .menu__link-res:hover
+  .menu__link-res:focus
+    background-color $cBlueTitles - 20%
+    transition .3s ease background-color
+
+  .subnav__school a:hover
+  .subnav__school a:focus
+  .menu__link-res:hover
+  .menu__link-res:focus
+    color $cWhite
+    opacity 1
+
+  .subnav.open
+    transform none
+    transition 0s 0s all ease
+
+

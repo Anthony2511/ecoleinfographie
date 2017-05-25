@@ -14,7 +14,9 @@ var w = {
             w.getElements();
             w.sCurrent = w.getCurrentPage();
             //w.mobileMenu.init();
-            w.accessibleMenuConfig.init(); // Charge config Accessible Menu
+              /*if ($(window).width() >= 1080) {*/
+                  w.accessibleMenuConfig.init(); // Charge config Accessible Menu
+              /*}*/
             w.menuRes();
             w.loadPage();
             w.isLoaded = true;
@@ -32,6 +34,7 @@ var w = {
           $(document).ready(function(){
               $('.hamburger').click(function(){
                   $(this).toggleClass('open');
+                  $('body').toggleClass('menu-responsive')
               });
           });
       },

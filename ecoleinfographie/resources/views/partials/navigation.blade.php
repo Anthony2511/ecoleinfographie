@@ -10,7 +10,8 @@
     </button>
     <ul class="menu">
         <li class="menu__item">
-            <a href="#lesmetiersduweb" class="menu__link">Les métiers</a>
+            <span class="menu__title-responsive menu__title-responsive--first">L’école</span>
+            <a href="#lesmetiersduweb" class="menu__link menu__fake">Les métiers</a>
             <div class="subnav subnav__jobs">
                 <ul class="subnav__group">
                     <li>
@@ -91,7 +92,8 @@
             </div>
         </li>
         <li class="menu__item">
-            <a href="#actualité" class="menu__link">L’école</a>
+            <span class="menu__title-responsive">Nos formations</span>
+            <a href="#actualité" class="menu__link menu__fake">L’école</a>
             <div class="subnav subnav__school">
                 <ul class="subnav__group">
                     <li>
@@ -133,13 +135,14 @@
             </div>
         </li>
         <li class="menu__item">
-            <a href="{{ route('realisations') }}" class="menu__link">Réalisations</a>
+            <div><span class="menu__title-responsive">Explorez</span></div>
+            <a href="{{ route('realisations') }}" class="menu__link menu__link-res">Réalisations</a>
         </li>
         <li class="menu__item">
-            <a href="{{ route('nos-diplomes') }}" class="menu__link">Nos diplômés</a>
+            <a href="{{ route('nos-diplomes') }}" class="menu__link menu__link-res">Nos diplômés</a>
         </li>
         <li class="menu__item" >
-            <a href="{{ Route('blog') }}" class="menu__link">Blog</a>
+            <a href="{{ Route('blog') }}" class="menu__link menu__link-res">Blog</a>
         </li>
         <li class="menu__item">
             <a href="inscription" class="menu__link menu__link--cta">Je veux m’inscrire</a>
