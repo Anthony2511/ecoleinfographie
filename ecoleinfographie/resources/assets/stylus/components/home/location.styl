@@ -3,6 +3,8 @@
     position: relative
     min-height s(300)
     containerGridz()
+    @media screen and (max-width 980px)
+      display: none
     &__wrapper
       position: absolute
       height 100%
@@ -12,6 +14,8 @@
       padding s(70, 16) s(100, 16)
       background $cBlueTitles
       clearfix()
+      @media screen and (max-width 1024px)
+        margin-left 0
     &__title
       float: left
       position: relative
