@@ -63,6 +63,7 @@
       bottom: 0;
     &--small
       width 100%
+
     &__infos-wrapper
       position: absolute
       top: 0
@@ -183,3 +184,64 @@
         &:after
           transform scaleX(1) translateZ(0)
           transition .4s ease transform
+
+
+@media screen and (max-width: 1350px)
+  .home .project--small .project__title
+    font-size s($sz5)
+  .home .project--small .project__description
+    font-size s($sz7)
+
+@media screen and (max-width: 1200px)
+  .home .project__container-all
+    top auto
+    max-width s(1100)
+    margin 0 auto
+  .home .portfolio-home__intro__wrapper
+    top auto
+  .home .portfolio-home__intro__title
+  .home .portfolio-home__intro__text
+    width 100%
+  .home .project
+  .home .project__wrapper-top
+    width 50%
+  .home .project--middle
+  .home .project--big
+  .home .project__wrapper-top
+    position relative
+    top auto
+    bottom auto
+    float: none
+  .home .project.project--small
+    width 100%
+  .home .portfolio-home__intro__wrapper
+    margin-bottom s(60)
+  .home .project__wrapper-top-inner
+  .home .project__wrapper
+    width s(989)
+    width 100%
+    text-align: center
+  .home .project .project__title
+    font-size s($sz5)
+  .home .project .project__description
+    font-size s($sz7)
+
+@media screen and (max-width: 1024px)
+  .home .project, .home .project__wrapper-top
+    width 70%
+  .home .portfolio-home__intro__title
+    font-size s($sz11)
+@media screen and (max-width: 1024px)
+  .home .project, .home .project__wrapper-top
+    width: 100%
+  .home .project__category
+    display: none
+@media screen and (max-width: 550px)
+  .home .project .project__title
+    font-size 18px
+  .home .project.project__description
+  .home .project .project__description
+    font-size 15px
+    line-height 1.4em
+  .home .project__author
+    font-size 15px
