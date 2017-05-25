@@ -8,7 +8,6 @@
         </p>
     </div>
     <div class="slider-pros__wrapper" data-pos="0">
-        {{--<div class="slider-pros__bg"></div>--}}
         <article class="slider-pros__article slider-pros__article--anim" id="articleSlide-0">
             <div class="slider-pros__description">
                 <div class="slider-pros__description__inside">
