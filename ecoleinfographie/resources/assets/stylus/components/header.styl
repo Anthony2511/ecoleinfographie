@@ -3,6 +3,8 @@
 \************************************/
 .header-shawl
   background linear-gradient(138deg, rgba(12,81,107,0.92) 0%, rgba(5,43,56,0.96) 80%), url("../img/header-home-background.jpg") no-repeat center center/cover
+  @media screen and (max-width 500px)
+    min-height s(550)
   &__title
     position: absolute
     left: 0
@@ -25,12 +27,24 @@
       padding-top 250px
       margin-bottom s(30, 64.85)
       letter-spacing 2px
+      @media screen and (max-width 670px)
+        max-width s(600, $text-XXXXL)
+        padding-top s(200, $text-XXXXL)
+      @media screen and (max-width 500px)
+        font-size s(41.5)
+        margin 0 auto
+        padding-top 200px
     &__small
       font-weight 400
       padding-top 350px
       font-size s($text-XL = 26.56, 16)
       text-transform: uppercase
       letter-spacing 2px
+      @media screen and (max-width 670px)
+        padding-top s(400, $text-XL)
+      @media screen and (max-width 500px)
+        padding-top s(320, $sz6)
+        font-size s($sz6)
   &__gobottom
     position absolute
     bottom 30%
@@ -38,6 +52,10 @@
     right 0
     margin-left: auto
     margin-right: auto
+    @media screen and (max-width 670px)
+      bottom 35%
+    @media screen and (max-width 500px)
+      bottom 22%
     &-arrow
       transition .3s ease transform
     &-arrow2
