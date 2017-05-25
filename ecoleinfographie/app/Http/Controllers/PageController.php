@@ -58,6 +58,9 @@ class PageController extends Controller
     
     public function webTrades()
     {
+        SEO::setTitle('Les métiers du web');
+        SEO::setDescription('Découvres la formation en web et les métiers dont qu’elle permet de cibler');
+        
         return view('pages.web.web_home');
     }
     
