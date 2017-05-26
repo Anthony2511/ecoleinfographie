@@ -9,7 +9,11 @@
     position: relative
     @extend .containerGridz
     padding 0 s($paddingSideGlobal)
-    clearfix(right)
+    @media screen and (max-width 375px)
+      padding 0 s(20)
+    &:after
+      @extend .clearfix
+
   &__title
     @extend .titleXXXL
     margin-bottom s(30, $text-XXXL)
@@ -21,11 +25,20 @@
 
 .web-what
   min-height s(950)
+  @media screen and (max-width 767px)
+    min-height auto
+    padding-bottom s(150)
   &__wrapper
     &-text
       float: right
       width 45%
       margin-top s(350)
+      @media screen and (max-width 1024px)
+        width: 60%
+      @media screen and (max-width 768px)
+        width: 100%
+        margin-top s(100)
+        text-align: center
   &__title
     & span
       @extend .hidden
@@ -38,22 +51,41 @@
     top: s(-50)
     left s(-250)
     z-index 10
+    @media screen and (max-width 1024px)
+      left s(-450)
+    @media screen and (max-width 768px)
+      display none
 
 .webdesigner
   min-height s(740)
   background-color $cBackgroundBlueGrey
   margin-bottom s(250)
   baseShawl($cBackgroundBlueGrey, 4.5deg)
+  @media screen and (max-width 768px)
+    min-height s(0)
+    padding s(2) 0 s(100) 0
+    margin-bottom s(100)
   &__wrapper-text
     float: left
     width 36%
     margin-top s(200)
+    @media screen and (max-width 1024px)
+      width: 50%
+    @media screen and (max-width 768px)
+      width: 100%
+      text-align: center
+      margin-top s(100)
+      float: none
   &__img
     position: absolute
     right: s(-150)
     top s(170)
     opacity 0
     transform translateX(250px)
+    @media screen and (max-width 1024px)
+      right s(-380)
+    @media screen and (max-width 768px)
+      display: none
 
 .no-js .webdesigner__img
   opacity 1
@@ -68,6 +100,9 @@
 
 .webintegrator
   min-height s(740)
+  @media screen and (max-width 768px)
+    min-height 0
+    padding-bottom s(150)
   &__wrapper-text
     position: relative
     float: right
@@ -75,6 +110,14 @@
     margin-top s(35)
     text-align: right
     z-index 3
+    @media screen and (max-width 1024px)
+      max-width s(496)
+    @media screen and (max-width 768px)
+      width: 100%
+      max-width none
+      float none
+      text-align: center
+      margin-top 0
   &__img
     position: absolute
     left: s(-350)
@@ -83,12 +126,20 @@
     max-width none
     transform translateX(-70px)
     opacity 0
+    @media screen and (max-width 1024px)
+      left: s(-550)
+    @media screen and (max-width 768px)
+      display: none
   &__img--2
     position: absolute
     top s(270)
     left s(165)
     z-index 2
     transform translateY(50px)
+    @media screen and (max-width 1024px)
+      left: s(-35)
+    @media screen and (max-width 768px)
+      display: none
 
 .no-js
   .webintegrator__img
@@ -109,11 +160,16 @@
 
 .frontend
   min-height s(1000)
-  padding-top s(120)
+  padding-top s(100)
+  @media screen and (max-width 768px)
+    min-height 0
+    padding-bottom s(230)
   &:before
     @extend .baseshawl
     z-index 0
     bottom s(100)
+    @media screen and (max-width 768px)
+      z-index -1
   &__overflowh
     position absolute
     top s(29)
@@ -122,21 +178,36 @@
     width 609px
     height 381px
     overflow hidden
+    @media screen and (max-width 768px)
+      display: none
   &__wrapper-text
     float: left
     max-width 41%
     margin-top s(51)
+    @media screen and (max-width 1024px)
+      max-width 55%
+    @media screen and (max-width 768px)
+      max-width 100%
+      float none
+      margin 0
+      text-align center
   &__link
     width 90%
   &__wrapper
     position absolute
     left 0
     right 0
+    @media screen and (max-width 768px)
+      position static
   &__anim-container
     position absolute
     right s(-200)
     width s(818)
     height 100%
+    @media screen and (max-width 1024px)
+      right s(-450)
+    @media screen and (max-width 768px)
+      display: none
   &__anim-wrapper
     position: relative
     & .anim-front
@@ -159,12 +230,22 @@
 
 .devbackend
   min-height s(740)
+  @media screen and (max-width 768px)
+    min-height auto
+    padding-bottom s(150)
   &__wrapper-text
     position: relative
     float: right
     max-width s(560)
     text-align: right
     z-index 3
+    @media screen and (max-width 1174px)
+      max-width 60%
+    @media screen and (max-width 768px)
+      max-width none
+      width: 100%
+      text-align: center
+      float: none
   &__img
     position: absolute
     left: s(-250)
@@ -172,12 +253,20 @@
     z-index 1
     max-width none
     transform rotateY(25deg)
+    @media screen and (max-width 1174px)
+      left s(-480)
+    @media screen and (max-width 768px)
+      display: none
   &__img--2
     position: absolute
     top s(50)
     left s(-250)
     z-index 2
     transform translateX(50px)
+    @media screen and (max-width 1174px)
+      left s(-450)
+    @media screen and (max-width 932px)
+      display: none
 
 .no-js .devbackend .devbackend__img
 .no-js .devbackend .devbackend__img--2
@@ -194,6 +283,9 @@
 .webmobile
   min-height s(740)
   z-index 1
+  @media screen and (max-width 768px)
+    min-height 0
+    padding-bottom s(150)
   &:before
     content: "";
     position: absolute;
@@ -208,30 +300,51 @@
   &__wrapper-text
     width 38%
     padding-top s(100)
+    @media screen and (max-width 1024px)
+      width 58%
+    @media screen and (max-width 768px)
+      width: 100%
+      text-align: center
   &__img--1
     position absolute
     top s(-180)
     right s(-70)
     transform translate(200px, -100px);
     opacity 0
+    @media screen and (max-width 1024px)
+      right s(-370)
+    @media screen and (max-width 768px)
+      display: none
   &__img--2
     position absolute
     top s(40)
     right s(-320)
     transform translate(200px, -100px);
     opacity 0
+    @media screen and (max-width 1024px)
+      right s(-620)
+    @media screen and (max-width 768px)
+      display: none
   &__img--3
     position absolute
     top s(360)
     right s(150)
     transform translate(-200px, 100px);
     opacity 0
+    @media screen and (max-width 1024px)
+      right s(-150)
+    @media screen and (max-width 768px)
+      display: none
   &__img--4
     position absolute
     top s(400)
     right s(-460)
     transform translate(200px, -100px);
     opacity 0
+    @media screen and (max-width 1024px)
+      display none
+    @media screen and (max-width 768px)
+      display: none
 
 .no-js .webmobile__img--1
 .no-js .webmobile__img--2
