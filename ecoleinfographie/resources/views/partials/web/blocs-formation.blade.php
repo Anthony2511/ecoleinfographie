@@ -1,4 +1,4 @@
-<section class="bloc bloc--1">
+<section class="bloc bloc--1" id="web-course">
     <div class="bloc__container">
         <h2 role="heading" aria-level="2" class="bloc__title">
             <span>Les cours en web </span>

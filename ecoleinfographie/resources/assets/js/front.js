@@ -49,6 +49,7 @@ var w = {
             if (w.$body.hasClass('home')) return 'home';
             if (w.$body.hasClass('les-metiers-du-web')) return 'metiersDuWeb';
             if (w.$body.hasClass('programme-des-cours')) return 'programCourses';
+            if (w.$body.hasClass('les-metiers-du-web-formation')) return 'training';
             if (w.$body.hasClass('student-post')) return 'oneFormerStudent';
             if (w.$body.hasClass('work')) return 'oneRea';
             if (w.$body.hasClass('blog')) return 'blog';
