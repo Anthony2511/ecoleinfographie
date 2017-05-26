@@ -31,7 +31,7 @@ Route::group(['prefix' => 'web'], function ()
 {
     Route::get(trans('url.webTrades'), 'PageController@webTrades')->name('webTrades');
     Route::get(trans('url.webTraining'), 'PageController@webTraining')->name('webTraining');
-    Route::get(trans('url.programWeb'), 'CourseController@indexWeb')->name('programWeb');
+    Route::get(trans('url.program'), 'CourseController@indexWeb')->name('programWeb');
     Route::get(trans('url.parcours'), 'StudentController@indexWeb')->name('parcoursWeb');
 });
 
