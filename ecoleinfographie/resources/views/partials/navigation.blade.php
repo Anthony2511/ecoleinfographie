@@ -15,7 +15,7 @@
             <div class="subnav subnav__jobs">
                 <ul class="subnav__group">
                     <li>
-                        <a href="les-metiers-du-web" id="lesmetiersduweb" class="subnav__jobs__job">
+                        <a href="{{ Route('webTrades') }}" id="lesmetiersduweb" class="subnav__jobs__job">
                             <span class="subnav__jobs__job__title">Les métiers du web</span>
                             <img class="subnav__jobs__menuicon" src="../img/web-menu.png"
                                  srcset="../img/web-menu@2x.png 2x"
