@@ -22,17 +22,17 @@
                                  width="30" height="30" alt="">
                         </a>
                     </li>
-                    <div class="subnav__link-wrapper">
-                        <li class="subnav__li">
+                    <li class="subnav__link-wrapper">
+                        <div class="subnav__li">
                             <a href="les-metiers-du-web-formation" class="subnav__jobs__link"><span>Voir </span>La formation <span>en web</span></a>
-                        </li>
-                        <li class="subnav__li">
+                        </div>
+                        <div class="subnav__li">
                             <a href="{{ route('programWeb') }}" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en web</span></a>
-                        </li>
-                        <li class="subnav__li">
+                        </div>
+                        <div class="subnav__li">
                             <a href="{{ route('parcoursWeb') }}" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en web</span></a>
-                        </li>
-                    </div>
+                        </div>
+                    </li>
                 </ul>
                 <ul class="subnav__group">
                     <li>
@@ -45,17 +45,17 @@
                                  width="30" height="30" alt="" >
                         </a>
                     </li>
-                    <div class="subnav__link-wrapper">
-                        <li class="subnav__li">
+                    <li class="subnav__link-wrapper">
+                        <div class="subnav__li">
                             <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en design graphique</span></a>
-                        </li>
-                        <li class="subnav__li">
+                        </div>
+                        <div class="subnav__li">
                             <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en design graphique</span></a>
-                        </li>
-                        <li class="subnav__li">
+                        </div>
+                        <div class="subnav__li">
                             <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en design graphique</span></a>
-                        </li>
-                    </div>
+                        </div>
+                    </li>
                 </ul>
                 <ul class="subnav__group">
                     <li>
@@ -68,17 +68,17 @@
                                  width="30" height="30" alt="" >
                         </a>
                     </li>
-                    <div class="subnav__link-wrapper">
-                        <li class="subnav__li">
+                    <li class="subnav__link-wrapper">
+                        <div class="subnav__li">
                             <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en 3D et audiovisuel</span></a>
-                        </li>
-                        <li class="subnav__li">
+                        </div>
+                        <div class="subnav__li">
                             <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme<span> en 3D et audiovisuel</span></a>
-                        </li>
-                        <li class="subnav__li">
+                        </div>
+                        <div class="subnav__li">
                             <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens<span> en 3D et audiovisuel</span></a>
-                        </li>
-                    </div>
+                        </div>
+                    </li>
                 </ul>
                 <svg class="subnav__jobs__cloud" width="58" height="32" xmlns="http://www.w3.org/2000/svg">
                     <path d="M46.6 11c-1.5 0-3 .2-4.2.7v-.5c0-6.2-5-11.2-11-11.2-5.7 0-10.3 4.2-11 9.7l-1.7-.2c-2.7 0-5 1.5-6.2 3.7-.7-.2-1.5-.3-2.4-.3-5.3 0-10 4-10 9.3C0 27.7 4.6 32 10 32h38c.3 0 .6 0 .8-.2 5-1 9-5.3 9-10.3 0-6-5-10.6-11.2-10.6z" fill="#F5F5FA"/>

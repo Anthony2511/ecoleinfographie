@@ -1,5 +1,5 @@
 <section class="footer__wrapper" itemscope itemtype="http://schema.org/Organization">
-    <header class="footer__header">
+    <div class="footer__header">
         <h2 role="heading" aria-level="2" class="footer__title">
             <span>Bas de page de l’</span>École d’infographie<br /> de la Province de Liège
         </h2>
@@ -36,7 +36,7 @@
                 </a>
             </li>
         </ul>
-    </header>
+    </div>
     <section class="section section--contact">
         <h3 role="heading" aria-level="3" class="section__title">Contact</h3>
         <address class="section__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -45,7 +45,7 @@
             <span itemprop="addressCountry">Belgique</span>
         </address>
         <meta itemprop="name" content="Haute École de la Province de Liège - Infographie" />
-        <a href="tel:085211113" class="section__tel" itemprop="telephone" itemprop="faxNumber">085 21 11 13</a>
+        <a href="tel:085211113" class="section__tel" itemprop="telephone">085 21 11 13</a>
         <a href="#contact" class="section__contact">@lang('footer.contact-us')</a>
     </section>
     <section class="section section--explorez">

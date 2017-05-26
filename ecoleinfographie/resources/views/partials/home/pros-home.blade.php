@@ -15,7 +15,7 @@
                     <span class="slider-pros__description__subtitle">
                         @foreach($pWeb->company as $row)
                         Co-fondateur de
-                            <a href="{{ $row['url'] }}" rel="ext">
+                            <a href="{{ $row['url'] }}">
                                 {{ $row['name'] }}
                             </a>
                         @endforeach
@@ -36,7 +36,7 @@
                     <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $p3d->fullname }}</h3>
                     <span class="slider-pros__description__subtitle">{{ $p3d->profession }} chez
                         @foreach($p3d->company as $row)
-                            <a href="{{ $row['url'] }}" rel="ext">
+                            <a href="{{ $row['url'] }}">
                                 {{ $row['name'] }}
                             </a>
                         @endforeach
@@ -55,7 +55,7 @@
                     <h3 role="heading" aria-level="3" class="slider-pros__description__title">{{ $p2d->fullname }}</h3>
                     <span class="slider-pros__description__subtitle">{{ $p2d->profession }} chez
                         @foreach($p2d->company as $row)
-                            <a href="{{ $row['url'] }}" rel="ext">
+                            <a href="{{ $row['url'] }}">
                                 {{ $row['name'] }}
                             </a>
                         @endforeach

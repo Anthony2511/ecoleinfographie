@@ -12,7 +12,7 @@
 				<figure class="news-card__figure">
 					<img src="{{ $news->getImageNews('_cards.jpg') }}" width="503" height="447" alt="" class="news-card__img">
 				</figure>
-				<time class="news-card__time" datetime="{{ $news->date }}" pubdate>{{ $news->getDateForHuman() }}</time>
+				<time class="news-card__time" datetime="{{ $news->date }}">{{ $news->getDateForHuman() }}</time>
 			</div>
 			<a href="{{ Route('news') . '/' . $news->slug }}" class="news-card__link"><span>@lang('home.readArticle') {{ $news->title }}</span></a>
 			<a href="{{ Route('news') }}" class="news-home__allNews">@lang('home.readAll')</a>
