@@ -57,10 +57,13 @@
     display: block
     margin-top s(5, $sz4)
     font-size: s($sz4)
-    font-weight: 700
+    font-weight: 900
     color: $cBlueTitles
     text-transform: uppercase
     letter-spacing: 0.5px
+    line-height: 1.2em
+    @media screen and (max-width 550px)
+      font-size s($sz4)
     &:after
       content ''
       display: block

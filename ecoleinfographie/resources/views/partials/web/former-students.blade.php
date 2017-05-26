@@ -39,10 +39,6 @@
                 </a>
             </li>
             @endforeach
-
-            <!-- TODO : En PHP, compter le nombre d’anciens étudiants avec un modulo, si le nombre de li%3 == 2, ajouter un li vide, sinon rien
-            <li class="former-students__item" style="width: 19.6875em"></li>-->
-
         </ul>
     </div>
 </section>
@@ -52,7 +48,7 @@
         <strong class="redirect__title">Pour pouvoir exercer l’un de ces métiers, n’hésites pas à t’inscrire dans notre école pour y recevoir la formation nécessaire..</strong>
         <ul class="redirect__list">
             <li class="redirect__item">
-                <a href="#" class="redirect__link" title="">S’inscrire à la HEPL en infographie</a>
+                <a href="{{ Route('registration') }}" class="redirect__link" title="">S’inscrire à la HEPL en infographie</a>
             </li>
         </ul>
     </div>

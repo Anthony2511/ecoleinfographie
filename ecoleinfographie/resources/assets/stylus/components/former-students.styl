@@ -10,6 +10,8 @@
     position: absolute
     width 47.81111111%
     left: s(40)
+    @media screen and (max-width 1116px)
+      display: none
   &__text-wrapper
     float: right
     margin-top s(30)
@@ -17,12 +19,22 @@
     padding-left col(2,12)
     padding-bottom s(60)
     background-color $cWhite
+    @media screen and (max-width 1116px)
+      float none
+      width 100%
+      padding-left 0
+      text-align: center
   &__title
     @extend .titleDubbleLine
+    & strong:after
+      @media screen and (max-width 1116px)
+        margin s(15, $sz4) auto s(40, $sz4) auto
   &__text-intro
     @extend .paragraph21
     width 85%
     margin-bottom s(30, $sz6)
+    @media screen and (max-width 1116px)
+      margin 0 auto s(30, $sz6) auto
     &:last-child
       margin-bottom 0
       &:after
@@ -32,6 +44,8 @@
         width s(160, $sz6)
         height 1px
         background-color $cGreyFooter
+        @media screen and (max-width 1116px)
+          display: none
 
 
 .former-students
@@ -42,9 +56,13 @@
     margin-top -220px
     position: relative
     z-index 5
+    @media screen and (max-width 1116px)
+      padding s(280) 0 0
   &__list
     @extend .containerGridz
     max-width s(1035)
+    @media screen and (max-width 1116px)
+      width s(675)
     &:after
       @extend .clearfix;
     padding-bottom s(150)
@@ -56,6 +74,11 @@
       margin-bottom: 0
     &:nth-child( 3n + 3)
       margin-right: 0
+      @media screen and (max-width 1116px)
+        margin-right s(45)
+    @media screen and (max-width 1116px)
+      &:nth-child(2n + 2)
+        margin-right 0
 
 // Redirect
 .les-metiers-du-web-anciens-etudiants
@@ -74,3 +97,24 @@
     @extend .containerGridz
 
 
+@media screen and (max-width 750px)
+  .parcours
+    .card_student
+      width 100%
+      &__picture
+        width: 100%
+    .former-students__item
+      float: none
+      padding 0 s(20)
+      margin-right 0
+    .former-students__list
+      width: 100%
+      padding 0
+    .former-students__content
+      padding s(270) 0 s(100) 0
+
+@media screen and (max-width 340px)
+  .parcours
+    .card_student__picture
+      width: 313px
+      height 180px
