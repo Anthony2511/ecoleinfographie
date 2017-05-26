@@ -1,6 +1,8 @@
 .footer__container
   background-color $cBlueTitles
   margin-top s(200)
+  @media screen and (max-width 768px)
+    margin-top s(100)
 .footer__wrapper
   clearfix()
 .footer
@@ -23,6 +25,8 @@
       max-width none
       & br
         display: none
+    @media screen and (max-width: 435px)
+      font-size s($sz5)
     & span
       @extend .hidden
 
