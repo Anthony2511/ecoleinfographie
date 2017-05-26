@@ -31,13 +31,13 @@
             <h2 role="heading" aria-level="2" class="header-trades__subnav__title">Navigation secondaire pour la page des métiers du web</h2>
             <ul class="header-trades__subnav__list">
                 <li class="header-trades__subnav__item">
-                    <a href="#" class="header-trades__subnav__link">La formation</a>
+                    <a href="{{ Route('webTraining') }}" class="header-trades__subnav__link">La formation</a>
                 </li>
                 <li class="header-trades__subnav__item">
-                    <a href="" class="header-trades__subnav__link">Le programme des cours</a>
+                    <a href="{{ Route('programWeb') }}" class="header-trades__subnav__link">Le programme des cours</a>
                 </li>
                 <li class="header-trades__subnav__item">
-                    <a href="" class="header-trades__subnav__link">Les anciens bacheliers du web</a>
+                    <a href="{{ Route('parcoursWeb') }}" class="header-trades__subnav__link">Les anciens bacheliers du web</a>
                 </li>
             </ul>
         </div>
