@@ -18,5 +18,7 @@ return [
     'contact' => 'contact',
     'news' => 'actualites',
     'webTrades' => 'les-metiers-du-web',
-    'webTraining' => 'la-formation'
+    'webTraining' => 'la-formation',
+    'program' => 'programme-des-cours',
+    'parcours' => 'parcours-de-nos-anciens-diplomes'
 ];
