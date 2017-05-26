@@ -17,9 +17,18 @@ w.realisations = {
 
     // FUNCTIONS
     initGrids: function () {
+        var globalResizeTimer = null;
         var grid = document.querySelector('.reas');
+
+        $(window).resize(function() {
+            if(globalResizeTimer != null) window.clearTimeout(globalResizeTimer);
+            globalResizeTimer = window.setTimeout(function() {
+                waterfall(grid);
+            }, 200);
+        });
         waterfall(grid);
     },
+
 
     initAjax: function () {
 
