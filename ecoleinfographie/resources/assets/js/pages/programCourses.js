@@ -3,6 +3,7 @@ w.programCourses = {
 
       init: function () {
         w.tableProgram.init();
+        w.scroll.init();
       },
 
       // getElements: function () {
