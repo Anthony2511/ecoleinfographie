@@ -97,7 +97,7 @@
             <div class="subnav subnav__school">
                 <ul class="subnav__group">
                     <li>
-                        <a href="" id="actualité">L’actualité</a>
+                        <a href="{{ Route('news') }}" id="actualité">L’actualité</a>
                     </li>
                     <li>
                         <a href="">Les commodités</a>
