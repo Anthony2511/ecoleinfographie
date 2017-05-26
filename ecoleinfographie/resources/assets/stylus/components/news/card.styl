@@ -2,6 +2,8 @@
   position: relative
   margin-bottom s(120)
   min-height s(500)
+  max-width s(1050)
+  margin-right auto
   &:last-child
     margin-bottom 0
   &__content
@@ -9,6 +11,7 @@
     width col(7,12) + gutter(12)
     min-height s(415)
     padding s(50) col(1,12)
+    width s(735)
   &__title
     width 68.144% // 385px
     margin-bottom s(35, $sz4)
@@ -31,7 +34,7 @@
   &__image
     position absolute
     top s(50)
-    right: s(190)
+    right s(12)
     transition .3s ease right
   &__time
     position: absolute
@@ -51,6 +54,7 @@
       @extend .hidden
 
 .news-card:nth-child(even)
+  margin-left auto
   .news-card
     &__content
       margin-left auto
@@ -62,7 +66,7 @@
       margin-left auto
     &__image
       right auto
-      left s(190)
+      left s(32)
       transition .3s ease left
     &__time
       right auto
@@ -80,7 +84,7 @@
     transition .3s ease transform
 
 .news-card:hover .news-card__image
-  right s(210)
+  right s(32)
   transition .3s ease right
 .news-card:hover .news-card__time
   right s(-20)
@@ -88,9 +92,107 @@
   transition .3s ease right
 
 .news-card:nth-child(even):hover .news-card__image
-  left s(210)
+  left s(52)
   transition .3s ease left
 .news-card:nth-child(even):hover .news-card__time
   right auto
   left s(-20)
   transition .3s ease left
+
+
+/************************************\
+		RESPONSIVE
+\************************************/
+@media screen and (max-width: 1030px)
+  .news
+    .featured
+      left s(20)
+      right s(20)
+      &__figure
+        width 38%
+    .breadcrumb--header
+      left s(20)
+    .news-card
+      &__image
+        display: none
+      &__content
+        width: 100%
+
+@media screen and (max-width: 950px)
+  .news
+    .featured
+      &__figure
+        display: none
+      &__content
+        width: 100%
+
+@media screen and (max-width: 550px)
+  .news
+    .featured
+      padding s(50) s(30)
+      text-align: center
+      &__date
+        text-align: center
+      &__title
+        font-size s($sz5)
+    .header-news
+      min-height s(700)
+    .breadcrumb--header
+      top 18%
+      left: 0
+      right: 0
+      text-align: center
+
+@media screen and (max-width: 550px)
+  .news
+    .featured
+      padding s(30) s(20)
+      left s(10)
+      right s(10)
+
+@media screen and (max-width: 1150px)
+  .news
+    .news-card
+      &__image
+        top -15px
+      &__content
+        width 70%
+
+@media screen and (max-width: 1030px)
+  .news
+    .news-card
+      min-height 0
+      margin-bottom s(50)
+      &__image
+        display: none
+      &__content
+        width: 100%
+        min-height 0
+      &__title
+        width: 100%
+        text-align: center
+      &__excerpt
+        width: 100%
+        text-align: center
+      &__fakelink
+        display: block
+        text-align: center
+      &:nth-child(even)
+        .news-card__title
+        .news-card__content
+        .news-card__excerpt
+        .news-card__fakelink
+          display: block
+          text-align: center
+    .blog-pagination
+      width: 100%
+      max-width none
+      &__button
+        border none
+        width: 50%
+        &--prev
+          border-right 1px solid $cBackgroundGrey2
+
+      &__list
+        display: none
+
