@@ -64,6 +64,13 @@ class PageController extends Controller
         return view('pages.web.web_home');
     }
     
+    public function webTraining()
+    {
+        SEO::setTitle('La formation en web');
+        SEO::setDescription('Apprends en plus sur ce que tu feras lors de la formation en web dans le bachelier en infographie');
+    
+        return view('pages.web.web_training');
+    }
     
     public function getOrientation()
     {

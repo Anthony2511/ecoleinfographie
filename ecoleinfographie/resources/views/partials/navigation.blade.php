@@ -24,7 +24,7 @@
                     </li>
                     <li class="subnav__link-wrapper">
                         <div class="subnav__li">
-                            <a href="les-metiers-du-web-formation" class="subnav__jobs__link"><span>Voir </span>La formation <span>en web</span></a>
+                            <a href="{{ Route('webTraining') }}" class="subnav__jobs__link"><span>Voir </span>La formation <span>en web</span></a>
                         </div>
                         <div class="subnav__li">
                             <a href="{{ route('programWeb') }}" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en web</span></a>
