@@ -17,5 +17,6 @@ return [
     'registration' => 'inscription',
     'contact' => 'contact',
     'news' => 'actualites',
-    'webTrades' => 'les-metiers-du-web'
+    'webTrades' => 'les-metiers-du-web',
+    'webTraining' => 'la-formation'
 ];

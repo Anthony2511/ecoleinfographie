@@ -30,6 +30,7 @@ Route::post(trans('url.news') . '/{news_id}', ['uses' => 'CommentNewsController@
 Route::group(['prefix' => 'web'], function ()
 {
     Route::get(trans('url.webTrades'), 'PageController@webTrades')->name('webTrades');
+    Route::get(trans('url.webTraining'), 'PageController@webTraining')->name('webTraining');
 });
 
 Route::get('web/programme-des-cours', 'CourseController@indexWeb')->name('programWeb');
