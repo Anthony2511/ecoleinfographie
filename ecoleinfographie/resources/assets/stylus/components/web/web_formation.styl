@@ -3,7 +3,6 @@
     background-color $cBackgroundGrey
     &:before
       background-color $cBackgroundGrey
-      top s(-60)
   .redirect-container
     background-color $cWhite
   .redirect
@@ -17,25 +16,28 @@
     color $cBlueTitles
     text-transform uppercase
   &__title
-    margin s(60) 0 s(85) col(1,12) + gutter(12)
+    margin s(60) 0 s(60) col(1,12) + gutter(12)
+    @media screen and (max-width 550px)
+      margin s(60) 0 s(20) 0
   &__title span
-    font-size s($sz4)
-    margin-bottom s(5, $sz4)
+    font-size s($sz6)
+    margin-bottom s(5, $sz6)
   &__title strong
     position: relative
     display: inline-block
-    font-size s($sz2)
-    font-weight 700
-    letter-spacing 0.5px
+    font-size s($sz11)
+    font-weight 900
+    letter-spacing 1.3px
+    @media screen and (max-width 550px)
+      font-size s($sz4)
     &:after
       content ''
       display: block
-      width s(180, $sz2)
-      height s(5, $sz2)
+      width s(60, $sz2)
+      height s(9, $sz2)
       margin-top s(20, $sz2)
       background-color $cBlueTitles
-      position absolute
-      right: 0
+
 
 .formation-quality
   position: relative
@@ -45,6 +47,9 @@
     right: 0
     width col(7,12)
     background-color $cWhite
+    @media screen and (max-width 1024px)
+      position static
+      width: 100%
   &__container-text
     margin 0 auto
     padding s(50) 0 s(64)
@@ -78,6 +83,8 @@
       height 1px
       width 88.5%
       background-color $cGrey1
+      @media screen and (max-width 550px)
+        display: none
   &__link
     position absolute
     right 0
@@ -98,6 +105,10 @@
       padding-right s(60)
       color $cBlueCiel
       letter-spacing 0.2px
+      @media screen and (max-width 550px)
+        line-height: 1.3em
+        position: relative
+        top -16px
       &:after // Arrow
       &:before // Arrow
         position: absolute
@@ -107,6 +118,8 @@
         top 5px
         font-size:13px;
         color rgba(36,61,89,0.60);
+        @media screen and (max-width 550px)
+          top 20px
       &:after // Arrow
         transform translateY(-12px)
         opacity 0
@@ -129,11 +142,19 @@
     transition .3s $ease-out-quart all
     transition-property transform, opacity
 
+@media screen and (max-width 1024px)
+  .formation-quality img
+    display none
+
 .skills-web
   width col(10,12) + (gutter(12) * 2)
   margin s(55) auto s(200)
   padding s(50) 0
   background-color $cBlue1
+  @media screen and (max-width 1024px)
+    width: 100%
+  @media screen and (max-width 768px)
+    margin s(55) auto s(55)
   &__container
     width 80.3738317757009%
     margin: 0 auto
@@ -148,6 +169,10 @@
     font-weight 700
     text-transform: uppercase
     letter-spacing 0.4px
+    @media screen and (max-width 1024px)
+      width: 100%
+    @media screen and (max-width 700px)
+      text-align: center
   &__list
     clearfix(left)
   &__item
@@ -156,8 +181,13 @@
     margin-bottom s(60)
     float left
     text-align: center
+    @media screen and (max-width 700px)
+      width: 100%
+      margin-right: 0
     &:nth-last-child(-n+3)
       margin-bottom 0
+      @media screen and (max-width 700px)
+        margin-bottom s(60)
     &:nth-child(3n+3)
       margin-right: 0
     &:nth-child(4n+4)
@@ -190,36 +220,59 @@
     color: $cWhite
     letter-spacing .5px
     line-height: 1.2
+    @media screen and (max-width 1024px)
+      width: 100%
+      text-align: center
+      font-size s($sz4)
   &__img1
     position: absolute
     top: s(-40)
     right: s(40)
+    @media screen and (max-width 1300px)
+      width: 30%
+    @media screen and (max-width 1024px)
+      display: none
   &__img2
     position: absolute
     top s(200)
     right s(250) // 2 col + 2 gutter + padding-right
+    @media screen and (max-width 1300px)
+      width: 30%
+    @media screen and (max-width 1024px)
+      display: none
   &__text1
     @extend .containerGridz
     margin-top s(60)
+    @media screen and (max-width 1024px)
+      text-align: center
     &__title
       display: block
       width col(4,12) + gutter(12)
       margin-bottom s(10)
       @extend .titleXXL
+      @media screen and (max-width 1024px)
+        width: 100%
       letter-spacing .3px
     &__text
       width col(5,12) + gutter(12)
       @extend .paragraph21
       margin-bottom s(120, $sz6)
+      @media screen and (max-width 1024px)
+        width: 100%
+        margin-bottom s(60, $sz6)
       & a
         @extend .linkInText
 
 .formation-choice
   @extend .containerGridz
   margin-bottom s(315)
+  @media screen and (max-width 1024px)
+    margin-bottom s(150)
   &__wrapper
     position: relative
     background-color $cWhite
+    @media screen and (max-width 1024px)
+      background-color none
   &__title
     @extend .titleXXL
     width col(3,12)
@@ -227,6 +280,13 @@
     box-sizing content-box
     letter-spacing 0.3px
     line-height: 1.25
+    @media screen and (max-width 1024px)
+      width: 100%
+      padding 0
+      background-color #f7f7f9
+      padding-bottom s(30)
+      text-align: center
+
   &__text
     @extend .paragraph21
     position: absolute
@@ -236,6 +296,12 @@
     padding s(60, $sz6)
     background $cBlue1 url("../img/formation-chairs.jpg") no-repeat center center/cover
     color $cWhite
+    @media screen and (max-width 1024px)
+      position static
+      width: 100%
+      text-align: center
+    @media screen and (max-width 550px)
+      padding s(20, $sz6)
     & b
       color inherit
       font-size inherit
@@ -253,18 +319,23 @@
   &__container
     @extend .containerGridz
     padding s(25) 0 0 0
+    @media screen and (max-width: 1024px)
+      padding-top s(80)
   &__title *
     display: block
     color $cBlueTitles
     text-transform uppercase
   &__title
     margin 0 0 0 col(1,12)
+    @media screen and (max-width: 1024px)
+      text-align: center
+      margin 0
   &__title span
     font-size s($sz5)
     margin-bottom s(5, $sz5)
   &__title strong
     position: relative
-    display: inline-block
+    display: block
     font-size s($sz4)
     font-weight 700
     letter-spacing 0.5px
@@ -278,10 +349,18 @@
       background-color $cBlueTitles
       position absolute
       left: 0
+      @media screen and (max-width: 1024px)
+        position static
+        margin s(20, $sz4) auto 0 auto
   &__intro
     margin 0 0 s(75) col(1,12)
     width col(6,12) + (gutter(12)*2)
     @extend .paragraph21
+    @media screen and (max-width: 1024px)
+      width 100%
+      padding 0 s(20) s(30) s(20)
+      margin 0
+      text-align: center
 
 .bloc--2
   background-color $cGreyLight
@@ -289,6 +368,8 @@
     background-color $cGreyLight
 
 .bloc .course
+  @media screen and (max-width: 1024px)
+    text-align: center
   clearfix(left)
   &__item
     float: left
@@ -296,19 +377,33 @@
     margin-left col(1,12)
     margin-right col(2,12)
     margin-bottom s(110)
+    @media screen and (max-width: 1024px)
+      float none
+      width 100%
+      margin 0 0 s(80)
+      padding 0 s(20)
     &:last-child
       margin-bottom s(200)
+      @media screen and (max-width: 1024px)
+        margin-bottom 0
+        padding-bottom s(120)
     &:nth-child(2n+2)
       margin-left 0
       margin-right 0
   &__title-wrapper
     position: relative
     margin-bottom s(20)
+    @media screen and (max-width: 1024px)
+      text-align: center
+      margin-bottom 0
     clearfix()
     & svg
       width 40px
       height auto
       float: left;
+      @media screen and (max-width: 1024px)
+        float none
+        margin-bottom s(20)
   &__title
     position absolute
     left s(60, $sz6)
@@ -320,10 +415,15 @@
     letter-spacing 0.7px
     line-height: 1.1
     font-weight 600
+    @media screen and (max-width: 1024px)
+      position static
+      display: block
   &__text
     font-size s($sz7)
     line-height: 1.62em
     margin-bottom s(20, $sz7)
+    @media screen and (max-width: 1024px)
+      margin-bottom: 0
   &__link
     @extend .linkArrowLarge
     margin-top s(15, $sz7)
