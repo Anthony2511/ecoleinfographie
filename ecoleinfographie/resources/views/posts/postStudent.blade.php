@@ -56,7 +56,7 @@
 					@if(!empty($student->social))
 						@foreach($student->social as $row)
 							<li class="social-list-circle__item">
-								<a href="{{ $row['url'] }}" class="social-list-circle__link {{ $row['type'] }}" rel="me"><span>Vers le {{ strtoupper($row['type']) }} de {{ $student->fullname }}</span></a>
+								<a href="{{ $row['url'] }}" class="social-list-circle__link {{ $row['type'] }}" rel="me" title="Vers le {{ $row['type'] }} de {{ $student->fullname }}"><span>Vers le {{ strtoupper($row['type']) }} de {{ $student->fullname }}</span></a>
 							</li>
 						@endforeach
 					@endif

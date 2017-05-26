@@ -8,6 +8,9 @@
 .former-interview
   width col(7,12)
   float left
+  @media screen and (max-width 1120px)
+    width 100%
+    float none
   &:after
     @extend .clearfix
   &__container
@@ -28,6 +31,7 @@
       font-size s($sz6)
       color $cBlueTitles
       font-weight 600
+      line-height: 1.2em
       &:after
         content ''
         display block
@@ -46,12 +50,17 @@
   float right
   width s(420)
   margin-top s(134)
+  @media screen and (max-width: 1120px)
+    width 100%
+    margin-top s(30)
 .former-info
   width s(420) //31.8181818% // 420/1324
   padding s(50) 0
   background-color $cWhite
   text-align: center
   border 1px solid $cGrey1
+  @media screen and (max-width: 1120px)
+    width: 100%
   &__pics
     display: block
     margin: 0 auto s(35) auto
@@ -108,3 +117,7 @@
       &:last-child
         margin-right: 0
 
+@media screen and (max-width: 1120px)
+  #sticky-sidebar
+    position static !important
+    top 0 !important
