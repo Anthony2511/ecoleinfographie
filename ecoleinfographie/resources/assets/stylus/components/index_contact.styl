@@ -8,15 +8,23 @@
     &__title
       @extend .titleExtraBold33
       color $cBlueTitles
+      @media screen and (max-width 400px)
+        font-size s($sz5)
     &__paragraph
       font-size s($sz7)
       line-height: 1.4em
     &__content-wrapper
       width col(5,12) + gutter(12)
       float: left
+      @media screen and (max-width 1180px)
+        width: 100%
+        float: none
+        padding-bottom: s(50)
     &__img
       float: right
       //width col(6,12)
+      @media screen and (max-width 1180px)
+        display: none
 
   .responsible
     margin-top s(35, $sz7)
@@ -26,6 +34,7 @@
       font-weight 700
       color $cBlueTitles
       font-size s($sz6)
+      line-height: 1.2em
     &__name
     &__mail
       display: block
@@ -50,6 +59,8 @@
         margin-right: 0
 
   .map
+    @media screen and (max-width 768px)
+      display: none
     &__container
       position: relative;
       padding: 6.25em 0 3.75em;
@@ -67,9 +78,16 @@
     width s(565)
     padding s(50) s(45)
     background $cWhite
+    @media screen and (max-width 1024px)
+      width: 100%
+      padding s(40) s(40)
+    @media screen and (max-width 1024px)
+      padding s(40) s(20)
     &__container
       background $cBackgroundGrey2
       padding-bottom s(100)
+      @media screen and (max-width 1024px)
+        padding-bottom: 0
     &__wrapper
       position: relative
       max-width s(945)
@@ -77,6 +95,11 @@
       margin 0 auto
       box-shadow: 0 2px 11px 0 rgba(187,187,187,0.50)
       border-radius: 1px
+      @media screen and (max-width 1024px)
+        position static
+        max-width none
+        box-shadow none
+        border-radius 0
     &__title
       @extend .titleExtraBold
       color $cBlueTitles
@@ -89,6 +112,9 @@
     width s(380)
     padding s(50) s(45)
     background $cBlueCiel
+    @media screen and (max-width 1024px)
+      position static
+      width: 100%
     &__title
       @extend .titleExtraBold
       color $cWhite

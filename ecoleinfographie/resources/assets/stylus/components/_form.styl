@@ -8,8 +8,12 @@
       width: 47.2%
     &--left
       float: left
+      @media screen and (max-width 690px)
+        margin-bottom s(20)
     &--right
       float: right
+    @media screen and (max-width 690px)
+      width 100%
   &__block
     position: relative
     margin-bottom s(15)
@@ -140,6 +144,9 @@
     font-size s($sz8)
     font-weight: 900
     letter-spacing 1.3px
+    @media screen and (max-width 690px)
+      width 100%
+      padding s(25) 0
 
 .form-wrapper--file
   text-align left
@@ -210,3 +217,4 @@
     position: absolute
     top: -31px
     right 0
+
