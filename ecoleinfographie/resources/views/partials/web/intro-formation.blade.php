@@ -5,7 +5,7 @@
             <strong>la formation en web</strong>
         </h2>
         <section class="formation-quality">
-            <img src="./img/formation-web-intro.jpg" width="610" height="399" alt="Une personne de dos entrain d’écrire sur un ordinateur portable qui a un fond d’écran ou il est écrit webdesign" class="formation-intro__img">
+            <img src="{{ asset('img/formation-web-intro.jpg') }}" width="610" height="399" alt="Une personne de dos entrain d’écrire sur un ordinateur portable qui a un fond d’écran ou il est écrit webdesign" class="formation-intro__img">
             <div class="formation-quality__intro-container">
                 <div class="formation-quality__container-text">
                     <h3 role="heading" aria-level="3" class="formation-quality__title">
@@ -65,8 +65,8 @@
         <div class="formation-infos__container-top">
             <div class="formation-infos__title-wrap">
                 <h2 role="heading" aria-level="2" class="formation-infos__title">Une formation en deux étapes</h2>
-                <img src="./img/formation-web-infos-img1.jpg" width="421" height="381" alt="Deux étudiantes entrain de travailler sur un ordinateur" class="formation-infos__img1">
-                <img src="./img/formation-web-infos-img2.jpg" width="421" height="381" alt="Une photo tenue par une personne devant un ordinateur" class="formation-infos__img2">
+                <img src="{{ asset('img/formation-web-infos-img1.jpg') }}" width="421" height="381" alt="Deux étudiantes entrain de travailler sur un ordinateur" class="formation-infos__img1">
+                <img src="{{ asset('img/formation-web-infos-img2.jpg') }}" width="421" height="381" alt="Une photo tenue par une personne devant un ordinateur" class="formation-infos__img2">
             </div>
         </div>
         <div class="formation-infos__text1">
