@@ -11,20 +11,19 @@
 	</thead>
 	<tbody class="program-table__tbody">
 
-	@foreach($getWebCoursesBloc1 as $key => $course)
-		<tr class="link-row" data-href="{{ $course->slug }}">
-			<td class="program-table__orientation">{{ $course->orientation }}</td>
-			<td class="program-table__course">
-				<a href="{{ url('cours/'.$course->slug) }}" class="program-table__course__link">
-					<span class="program-table__course__name">{{ $course->title }}</span>
-				</a>
-				<span class="program-table__course__desc">{{ $course->shortdescription }}</span>
-			</td>
-			<td class="program-table__hour"><span>{{ $course->duration }}</span></td>
-			<td class="program-table__ects"><span>{{ $course->ects }}</span></td>
-			<td class="program-table__quad"><span>{{ $course->quadrimester }}</span></td>
-		</tr>
-	@endforeach
-
+		@foreach($getWebCoursesBloc1 as $key => $course)
+			<tr class="link-row" data-href="{{ $course->slug }}">
+				<td class="program-table__orientation">{{ $course->orientation }}</td>
+				<td class="program-table__course">
+					<a href="{{ url('cours/'.$course->slug) }}" class="program-table__course__link">
+						<span class="program-table__course__name">{{ $course->title }}</span>
+					</a>
+					<span class="program-table__course__desc">{{ $course->shortdescription }}</span>
+				</td>
+				<td class="program-table__hour"><span>{{ $course->duration }}</span></td>
+				<td class="program-table__ects"><span>{{ $course->ects }}</span></td>
+				<td class="program-table__quad"><span>{{ $course->quadrimester }}</span></td>
+			</tr>
+		@endforeach
 	</tbody>
 </table>

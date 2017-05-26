@@ -15,20 +15,22 @@
   &__title
     margin s(60) 0
   &__title span
-    font-size s($sz5)
-    margin-bottom s(5, $sz5)
+    font-size s($sz6)
+    margin-bottom s(5, $sz6)
   &__title strong
     position: relative
     display: inline-block
     font-size s($sz4)
-    font-weight 700
-    letter-spacing 0.5px
+    font-weight 900
+    letter-spacing 1.3px
+    @media screen and (max-width 550px)
+      font-size s($sz4)
     &:after
       content ''
       display: block
-      width 100%
-      height s(5, $sz4)
-      margin-top s(20, $sz4)
+      width s(60, $sz2)
+      height s(9, $sz2)
+      margin-top s(20, $sz2)
       background-color $cBlueTitles
 
 
@@ -39,6 +41,8 @@
 .program__redirect
   width col(10,12) + (gutter(12)*2)
   margin 0 auto
+  @media screen and (max-width: 768px)
+    width: 100%
   &:after
     @extend .clearfix
   &-link
@@ -46,6 +50,11 @@
     float left
     width 29.439252336% // ((315/1070)*100)
     margin-right 5.799812909%
+    @media screen and (max-width: 768px)
+      width 100%
+      float none
+      margin-right: 0
+      margin-bottom s(20)
     &:last-child
       margin-right: 0
   &__figure
@@ -58,6 +67,8 @@
   &__img-wrapper
     position: relative
     overflow hidden
+    @media screen and (max-width: 768px)
+      display: none
     &:before
       icon('arrow-bottom-2')
       position: absolute
@@ -127,14 +138,21 @@
   &:last-child
     padding-bottom 0
   @extend .containerGridz
+  @media screen and (max-width 768px)
+    padding 0 s(20)
   &__wrapper
     width col(10,12) + (gutter(12)*2)
     margin s(125) auto 0
+    @media screen and (max-width: 768px)
+      width 100%
   &__title
     @extend .title4
     display: inline-block
     text-transform: uppercase
     margin-bottom s(25, $sz4)
+    @media screen and (max-width: 768px)
+      display: block
+      text-align: center
     &:after
       content ''
       display: block
@@ -142,18 +160,25 @@
       height s(5, $sz4)
       background-color $cBlueTitles
       margin-top s(10, $sz4)
+      @media screen and (max-width: 768px)
+        margin s(10, $sz4) auto 0 auto
   &__text
     display: block
     font-size s($sz8)
     margin-bottom s(10, $sz8)
+    @media screen and (max-width: 768px)
+      text-align: center
 
 .program-bloc
   &__container
+    margin 0
     &:before
       @extend .clearfix
   &__filter
     margin s(25) 0 s(30) 0
     text-align right
+    @media screen and (max-width: 768px)
+      text-align: center
   &__filter-title
     color $cBlue2
     font-weight 700
@@ -161,6 +186,10 @@
     letter-spacing: 0.5px
     text-transform: uppercase
     margin-right s(25, $sz10)
+    @media screen and (max-width: 768px)
+      display: block
+      margin-right: 0
+      margin s(40) 0 s(20)
   &__button
     display: inline-block
     margin-right s(10, $sz9)
@@ -175,8 +204,14 @@
     background-color rgba(255,255,255,.0)
     transition .3s ease background-color
     outline none
+    @media screen and (max-width 465px)
+      display: block
+      width s(200)
+      margin 0 auto s(15) auto
     &:last-child
       margin-right: 0
+      @media screen and (max-width 465px)
+        margin-right auto
   &__button--active
     background-color $cWhite
     color $cGreen
@@ -275,6 +310,12 @@
 .program-table__tbody tr:focus
   background-color $cWhite - 3%
   transition .3s ease background-color
+
+@media screen and (max-width: 768px)
+  .program-table__container-table
+    overflow-x: auto
+  .program-table
+    width s(728)
 
 // sorting icons
 .program-table__thead th

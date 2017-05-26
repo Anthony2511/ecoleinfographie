@@ -8,7 +8,7 @@
     ); ?>
 
 
-	<section class="program-bloc program-bloc--1 option-visible">
+	<section class="program-bloc program-bloc--1 option-visible" id="b1">
 		<div class="program-bloc__wrapper">
 			<h3 role="heading" aria-level="3" class="program-bloc__title">@lang('programCourse.thefirstbloc')</h3>
 			<span class="program-bloc__text">@lang('programCourse.thefirstblocintro')</span>
@@ -22,15 +22,19 @@
 				</div>
 
 				<div class="program-table__container">
-					@include('partials.courses.webBloc1')
-					@include('partials.courses.allBloc1')
+					<div class="program-table__container-table">
+						@include('partials.courses.webBloc1')
+					</div>
+					<div class="program-table__container-table">
+						@include('partials.courses.allBloc1')
+					</div>
 				</div>
 
 			</div>
 		</div>
 	</section>
 
-	<section class="program-bloc program-bloc--2 option-visible">
+	<section class="program-bloc program-bloc--2 option-visible" id="b2">
 		<div class="program-bloc__wrapper">
 			<h3 role="heading" aria-level="3" class="program-bloc__title">@lang('programCourse.thesecondbloc')</h3>
 			<span class="program-bloc__text">@lang('programCourse.thesecondblocintro')</span>
@@ -44,15 +48,19 @@
 				</div>
 
 				<div class="program-table__container">
-					@include('partials.courses.webBloc2')
-					@include('partials.courses.allBloc2')
+					<div class="program-table__container-table">
+						@include('partials.courses.webBloc2')
+					</div>
+					<div class="program-table__container-table">
+						@include('partials.courses.allBloc2')
+					</div>
 				</div>
 
 			</div>
 		</div>
 	</section>
 
-	<section class="program-bloc program-bloc--3 option-visible">
+	<section class="program-bloc program-bloc--3 option-visible" id="b3">
 		<div class="program-bloc__wrapper">
 			<h3 role="heading" aria-level="3" class="program-bloc__title">@lang('programCourse.thethirdbloc')</h3>
 			<span class="program-bloc__text">@lang('programCourse.thethirdblocintro')</span>
@@ -66,8 +74,12 @@
 				</div>
 
 				<div class="program-table__container">
-					@include('partials.courses.webBloc3')
-					@include('partials.courses.allBloc3')
+					<div class="program-table__container-table">
+						@include('partials.courses.webBloc3')
+					</div>
+					<div class="program-table__container-table">
+						@include('partials.courses.allBloc3')
+					</div>
 				</div>
 
 			</div>
@@ -77,7 +89,7 @@
 
 <div class="redirect">
 	<strong class="redirect__title">Ce programme t'as plus&nbsp;? N’hésites pas à t’inscrire ou à consulter le programme
-																	des autres options.</strong>
+		des autres options.</strong>
 	<ul class="redirect__list">
 		<li class="redirect__item">
 			<a href="#" class="redirect__link" title="">S’inscrire à la HEPL en infographie</a>
