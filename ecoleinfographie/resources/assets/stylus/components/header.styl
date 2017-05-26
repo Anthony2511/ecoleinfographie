@@ -92,15 +92,38 @@
   position: relative
   min-height 50em
   padding s(35, 16) s(40,16) 0 s(40,16)
+  @media screen and (max-width 500px)
+    min-height s(550, 41.5)
+    font-size s(41.5)
+    padding s(35, 41.5) s(40,41.5) 0 s(40,41.5)
   &__title
     @extend .title-bigTitleHome
     position: absolute
     top 33%
     color $cWhite
     text-shadow: 0 1px 1px rgba(0,0,0,0.50);
+    @media screen and (max-width: 900px)
+      left 0
+      right: 0
+      text-align: center
+    @media screen and (max-width 500px)
+      font-size (s($sz4))
+      top 40%
+      padding 0 s(20, $sz4)
+      line-height: 1em
+    @media screen and (max-width 350px)
+      font-size s($sz5)
+      top 41.5%
   &__subnav
     position: absolute
     top 46%
+    @media screen and (max-width: 900px)
+      left: 0
+      right: 0
+      text-align: center
+    @media screen and (max-width 500px)
+      top 52%
+      padding 0 s(20)
     &__title
       @extend .hidden
     &__item
@@ -113,6 +136,8 @@
       transition .2s ease all
       transform translate3D(0, 0, 0)
       transition-property color, transform
+      @media screen and (max-width 500px)
+        font-size 18px
       &:after
         margin-left  s(15, 12)
       &:hover
@@ -121,7 +146,18 @@
         transform translate3D(3px, 0, 0)
         transition-property color, transform
 
+@media screen and (max-width: 900px)
+  .header-trades
+    .breadcrumb.breadcrumb--header
+      left: 0
+      right: 0
+      text-align: center
 
+@media screen and (max-width: 500px)
+  .header-trades
+    .breadcrumb.breadcrumb--header
+      top 35%
+      padding 0 s(20)
 
 /************************************\
 		HEADER-WEBHOME
@@ -142,6 +178,8 @@
   bottom s(-100)
   right: s(65)
   z-index 10
+  @media screen and (max-width: 900px)
+    display: none
   &__img-container
     display inline-block
   &__parallax-wrapper
