@@ -8,9 +8,16 @@
   .news
     max-width s(1030)
     margin s(100) auto 0
+    @media screen and (max-width 550px)
+      margin s(40) auto 0
     &__top-wrapper
       position: relative
       margin-bottom s(150)
+      @media screen and (max-width 1090px)
+        margin-bottom s(50)
+      @media screen and (max-width 550px)
+        padding 0 s(20)
+        margin-bottom s(40)
     &__title-wrapper
       position: absolute
       right: 0
@@ -18,11 +25,25 @@
       max-width s(735)
       background $cWhite
       padding s(50)
+      @media screen and (max-width 1090px)
+        position static
+        max-width s(716)
+        margin 0 auto
+      @media screen and (max-width 550px)
+        padding s(20)
+    &__figure
+      display: block
+      @media screen and (max-width 1090px)
+        margin 0 auto
+        text-align: center
     &__title
       @extend .titleExtraBold33
       color $cBlueTitles
       line-height: 1.1em
       margin-bottom s(20, $sz4)
+      @media screen and (max-width 550px)
+        font-size s($sz5)
+        line-height: 1.2em
       &:after
         height s(1, $sz4)
         background #EAEAEA
@@ -31,10 +52,22 @@
       max-width s(684)
       margin-left auto
       padding-right s(50)
+      @media screen and (max-width 1090px)
+        max-width none
+        padding-right: 0
+        margin 0 auto
+        padding 0 s(40)
+      @media screen and (max-width 550px)
+        padding 0 s(20)
       & img
         position relative
         margin s(40) 0
         left -200px
+        @media screen and (max-width 1090px)
+          margin 0
+          left 0
+        @media screen and (max-width 550px)
+          margin 0
 
   .comments
     margin-top s(200)
@@ -43,3 +76,60 @@
   .blog-pagination
     margin s(70) auto 0 auto
     max-width 100%
+  figcaption
+    @media screen and (max-width 1090px)
+      display: block
+      position static
+      width: 100%
+      background none
+      box-shadow none
+
+@media screen and (max-width 1090px)
+  .postNews .news__content figure img
+    margin 0
+
+@media screen and (max-width 1090px)
+  .postNews
+    .comments
+      &__header
+      &__container
+        width: 100%
+    .postComment__section
+      width: 100%
+      max-width none
+
+
+@media screen and (max-width 1090px)
+  .postNews
+    .comments
+      &__share
+      &__count
+        display: block
+        float: none
+      &__count
+        margin-bottom s(25)
+
+@media screen and (max-width 690px)
+  .postNews
+    .comments
+      margin-top: s(120)
+      padding-top s(60)
+      &__container
+        padding-bottom s(100)
+    .postComment__wrapper
+      width: 100%
+      &--1
+        margin-bottom s(20)
+    .postComment__title
+      line-height: 1.2em
+    .postComment__submit
+      width: 100%
+      padding s(25) 0
+
+@media screen and (max-width 610px)
+  .postNews
+    .comment__img
+      display: none
+    .comment__text
+      max-width 100%
+      margin 0
