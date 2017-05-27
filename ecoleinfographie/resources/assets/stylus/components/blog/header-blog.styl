@@ -9,6 +9,13 @@
   .breadcrumb.breadcrumb--header
     top 0
     margin-top s(192)
+    @media screen and (max-width 1024px)
+      display: block
+      width: 100%
+      text-align: center
+      margin-top s(220)
+    @media screen and (max-width 500px)
+      margin-top s(115)
   .container
     background-color $cBackgroundGrey
     &:before
@@ -16,19 +23,32 @@
 
   .header-home
     margin-top s(210)
+    @media screen and (max-width 1024px)
+      margin-top s(240)
+    @media screen and (max-width 500px)
+      margin-top s(120)
     &__title
       @extend .title51
       display: block
       color $cWhite
       text-shadow: 0 1px 1px rgba(0,0,0,0.50);
       margin-bottom s(30, $sz2)
+      @media screen and (max-width 1024px)
+        text-align: center
+      @media screen and (max-width 500px)
+        font-size s($sz11)
     &__intro
       @extend .paragraph21
       color $cWhite
       max-width s(570, $sz6)
+      @media screen and (max-width 1024px)
+        max-width none
+        text-align: center
 
 .blog-home-img
   position relative
+  @media screen and (max-width 1024px)
+    display: none
   @extend .containerGridz
   .blog-svg
     position absolute

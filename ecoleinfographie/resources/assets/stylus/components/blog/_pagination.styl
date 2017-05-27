@@ -102,7 +102,27 @@
     color #BFBFBF
 
 
+.blog-home
+  .blog-pagination
+    width 100%
+    max-width none
+    @media screen and (max-width 1260px)
+      margin-top s(20)
+
+@media screen and (max-width 700px)
+  .blog-home
+    .blog-pagination
+      &__list
+        display: none
+      &__button
+        border none
+        width: 50%
+        &--prev
+          border-right 1px solid $cBackgroundGrey2
+
 .postBlog
   .blog-pagination
     max-width none
     margin-top s(80)
+
+

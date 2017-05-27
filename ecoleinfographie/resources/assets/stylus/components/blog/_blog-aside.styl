@@ -5,6 +5,11 @@
 .blog-aside
   width s(354)
   float: right
+  @media screen and (max-width 1186px)
+    float none
+    margin s(40) auto 0 auto
+    width auto
+    max-width s(737)
   &__title
     @extend .hidden
   & section

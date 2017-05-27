@@ -31,16 +31,11 @@
           <p class="no-articles">Réessayez ou retourner à <a href="{{ Route('blog') }}">l’accueil du blog</a>.</p>
         @endif
 
+          {!! $articles->render() !!}
     </div>
 
+    @include('partials.blog.aside')
 
-
-    @include('partials.blog.aside');
-
-
-
-
-      {!! $articles->render() !!}
 
 
 

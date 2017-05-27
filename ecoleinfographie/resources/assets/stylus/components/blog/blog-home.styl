@@ -2,14 +2,26 @@
   @extend .containerGridz
   &:after
     @extend .clearfix
+.blog-list__container
+  position relative
+  float left
+  max-width s(800)
+  @media screen and (max-width 1260px)
+    max-width s(735)
+  @media screen and (max-width 1186px)
+    margin 0 auto
+    float: none
+  &:after
+    @extend .clearfix
 
 .blog-list
-  display flex
-  flex-wrap wrap
-  justify-content space-between
-  &__container
-    float: left
-    width 64.596774194% // 801/1240*100
+  &:after
+    @extend .clearfix
+  .blog-card
+    float left
+    margin-right s(85)
+    &:nth-child(2n +2 )
+      margin-right: 0
 
   &__title
     @extend .titleExtraBold26

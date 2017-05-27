@@ -183,3 +183,43 @@
     opacity 1
     transition .3s ease all
     transition-property transform, opacity
+
+
+@media screen and (max-width 1260px)
+  .blog-home
+    .blog-list .blog-card
+      margin-bottom s(20)
+      margin-right s(20)
+      &:nth-child(2n+2)
+        margin-right: 0
+    .blog-card
+      float left
+
+@media screen and (max-width: 1200px)
+  .blog-home
+    .blog-list__container
+      display block
+      max-width s(737)
+      margin 0 auto
+      &:after
+        @extend .clearfix
+
+@media screen and (max-width 820px)
+  .blog-home
+    .blog-list
+      .blog-card
+        width 47%
+        height auto
+      .blog-card__title
+        height auto
+
+@media screen and (max-width 768px)
+  .blog-home
+    .blog-list
+      width: 100%
+      max-width none
+      .blog-card
+        width 100%
+        margin-right 0
+      .blog-card__img
+        width: 100%
