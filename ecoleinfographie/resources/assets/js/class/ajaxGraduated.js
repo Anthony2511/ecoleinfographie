@@ -1,8 +1,21 @@
 w.ajaxGraduated = {
 
     init: function () {
+        this.initGrids();
         this.initAjax();
-        this.initGrid();
+    },
+
+    initGrids: function () {
+        var globalResizeTimer = null;
+        var grid = document.querySelector('.former-students__list');
+
+        $(window).resize(function() {
+            if(globalResizeTimer != null) window.clearTimeout(globalResizeTimer);
+            globalResizeTimer = window.setTimeout(function() {
+                waterfall(grid);
+            }, 200);
+        });
+        waterfall(grid);
     },
 
     initAjax: function () {
@@ -23,7 +36,15 @@ w.ajaxGraduated = {
                             $('.former-students__list').append(data.students);
                             button.attr('href', data.next_page);
                             button.removeClass('loading');
-                            w.ajaxGraduated.initGrid();
+                            $(this).delay(200).queue(function() {
+
+                                waterfall('.former-students__list')
+
+                                $(this).dequeue();
+
+                            });
+
+
                         }
                     })
                 } else {
@@ -34,15 +55,5 @@ w.ajaxGraduated = {
             })
         })
     },
-
-
-
-    initGrid: function () {
-        var grid = document.querySelector('.former-students__list');
-        waterfall(grid);
-    }
-
-
-
 
 }

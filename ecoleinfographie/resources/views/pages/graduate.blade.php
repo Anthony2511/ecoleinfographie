@@ -6,7 +6,27 @@
 @section('class', 'graduate')
 
 @section('content')
-    @include('partials.breadcrumb')
+    <div class="breadcrumb">
+        <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+                itemtype="http://schema.org/ListItem">
+                <a href="{{ Url('/') }}" class="breadcrumb__link breadcrumb__link--home" itemscope itemtype="http://schema.org/Thing"
+                   itemprop="item">
+                    <span itemprop="name">Page d’accueil</span>
+                </a>
+                <meta itemprop="position" content="1"/>
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+                itemtype="http://schema.org/ListItem">
+                <a href="{{ Url()->current() }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+                   itemprop="item">
+                    <span itemprop="name">Nos diplômés</span>
+                </a>
+                <meta itemprop="position" content="2"/>
+            </li>
+        </ol>
+    </div>
+
 
 
     <section class="graduateList">
@@ -25,7 +45,7 @@
             <li class="index-rea__filter__item <?php echo (Request::get('orientation') == 'web') ? 'active' : '' ;?>">
                 <a href="?orientation=web" class="index-rea__filter__link">Web</a>
             </li>
-            <li class="index-rea__filter__item no-effect <?php echo (Request::get('request') == '') ? 'active' : '' ;?>">
+            <li class="index-rea__filter__item no-effect">
                 <form action="{{ Request::url() }}" method="get" class="select-form">
                     <select name="year" id="year" class="select-year" onchange="this.form.submit()" >
                         <option value="">Années</option>

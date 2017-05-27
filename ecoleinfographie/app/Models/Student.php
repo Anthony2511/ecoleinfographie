@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 //use Backpack\CRUD\ModelTraits\SpatieTranslatable\SluggableScopeHelpers;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use App\Utils\Utils;
+use Request;
 
 class Student extends Model
 {
@@ -182,10 +183,24 @@ class Student extends Model
             // 3. Save the path of original image to the database
             $this->attributes[$attribute_name] = $path.'/'.$filename.'.jpg';
         }
-        
+    
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
         {
-            $this->attributes['image'] = '/img/no-avatar.jpg';
+            $fakeAvatar = 'https://api.adorable.io/avatars/600/' . Request::get('lastname') . '.png';
+            $image = \Image::make($fakeAvatar);
+            $studentCards = \Image::make($fakeAvatar)->fit(313,180);
+            $studentAside = \Image::make($fakeAvatar)->fit(200,200);
+            $studentSlider = \Image::make($fakeAvatar)->fit(338,359);
+        
+            $filename = md5($fakeAvatar.time());
+        
+            \Storage::disk($disk)->put($path.'/'.$filename.'.jpg', $image->stream());
+            Utils::storeNewSize($path, $filename, '_cards', $studentCards);
+            Utils::storeNewSize($path, $filename, '_aside', $studentAside);
+            Utils::storeNewSize($path, $filename, '_slider', $studentSlider);
+        
+        
+            $this->attributes['image'] = $path.'/'.$filename.'.jpg';
         }
     }
 }
