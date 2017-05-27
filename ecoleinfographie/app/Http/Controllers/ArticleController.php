@@ -163,12 +163,13 @@ class ArticleController extends Controller
     public function getMostPopularArticles()
     {
         $getMostPopularArticles = Article::published()
-                                         ->whereHas('comments')
-                                         ->withCount('comments')
-                                         ->where('created_at', '>', \Carbon\Carbon::now()->subWeek())
-                                         ->orderBy('comments_count', 'DESC')
-                                         ->take(5)
-                                         ->get();
+                                  ->has('comments')
+                                  ->withCount(['comments' => function ($q) {
+                                      $q->where('created_at', '>', \Carbon\Carbon::now()->subWeek(2));
+                                  }])
+                                  ->latest('comments_count')
+                                  ->take(5)
+                                  ->get();
         
         return $getMostPopularArticles;
     }
