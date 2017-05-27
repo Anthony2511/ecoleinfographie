@@ -4,20 +4,25 @@
   &__container
     width col(9,12) + gutter(12)
     overflow hidden
+    @media screen and (max-width 1024px)
+      width 100% !important
   &__item
     position relative
     display: block
     float: left
     cursor grab
     background:url('http://www.smuggs.com/pages/resort_welcome/images/universal/page/gallery-loading.gif') no-repeat scroll center center transparent;
+    /*&:last-child
+      @media screen and (max-width 1024px)
+        display none !important*/
     &--withIframe
       position: relative
       cursor pointer
   &__img
     display: block
-    height s(531)
-    object-fit cover
-    object-position center
+    height auto
+    /*object-fit cover
+    object-position center*/
 
 .rSlider li.hasIframe img
 .rSlider li.hasIframe svg
@@ -104,14 +109,20 @@
 .rSlider__container
   & .lSSlideOuter
     & .lSGallery
+      @media screen and (max-width 768px)
+        display: none
       &__container
         width 81.164021164% !important // 767/945*100
         overflow hidden
         margin-top s(25)
+        @media screen and (max-width 1024px)
+          width: 100% !important
       & li
         float left
         &:last-child
           margin-right 0 !important
+          /*@media screen and (max-width 1024px)
+            display none !important*/
       &:after
         @extend .clearfix
 

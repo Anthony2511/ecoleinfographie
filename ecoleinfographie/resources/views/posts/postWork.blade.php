@@ -7,7 +7,37 @@
 @endsection
 
 @section('content')
-	@include('partials.breadcrumb')
+
+	<!-- Breadcrumb -->
+	<div class="breadcrumb">
+		<ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
+					itemtype="http://schema.org/ListItem">
+				<a href="{{ Url('/') }}" class="breadcrumb__link breadcrumb__link--home" itemscope itemtype="http://schema.org/Thing"
+					 itemprop="item">
+					<span itemprop="name">Page d’accueil</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
+					itemtype="http://schema.org/ListItem">
+				<a href="{{ Route('realisations') }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+					 itemprop="item">
+					<span itemprop="name">Réalisations</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
+					itemtype="http://schema.org/ListItem">
+				<a href="{{ url()->current() }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+					 itemprop="item">
+					<span itemprop="name">{{ $work->title }}</span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</li>
+		</ol>
+	</div>
+	<!-- End Breadcrumb -->
 
 	<div class="rea__container">
 		<article class="rea">
@@ -20,36 +50,6 @@
 				@endforeach
 
 			<div class="rea__wrapper-top">
-
-				<div class="rSlider__container">
-					<ul class="rSlider">
-						@if(!empty($work->view3d))
-							<?php
-								$oEmbedUrl = 'https://sketchfab.com/oembed?url=' . $work->view3d;
-								$obj = json_decode(file_get_contents($oEmbedUrl), true);
-							;?>
-							<li class="rSlider__item rSlider__item--withIframe rSlider__item--visible" data-src="{{ $work->view3d }}" data-thumb="{{ $obj['thumbnail_url'] }}">
-								<img class="rSlider__img" src="{{ $obj['thumbnail_url'] }}" width="947" height="532" alt="#alt">
-								{!! file_get_contents(public_path('svg/inline-play-button3D.svg')) !!}
-							</li>
-						@endif
-						@if(!empty($work->video))
-						<?php $video = json_decode($work->video); ?>
-						<li class="rSlider__item rSlider__item--withIframe rSlider__item--visible" data-src="{{$video->url}}" data-thumb="{{ $video->image }}" >
-							<img class="rSlider__img" src="{{ $video->image }}" width="947" height="532" alt="Miniature de la vidéo du projet">
-							{!! file_get_contents(public_path('svg/inline-play-button.svg')) !!}
-						</li>
-						@endif
-						@if(!empty($work->images))
-						@foreach($work->images as $image)
-							<li class="rSlider__item rSlider__item--visible" data-thumb="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMin.jpg') }}" data-src="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMax.jpg') }}">
-								<img class="rSlider__img" src="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMin.jpg') }}" width="947" height="532" alt="#alt">
-							</li>
-						@endforeach
-						@endif
-						<li class="rSlider__item" data-thumb="" data-src=""></li>
-					</ul>
-				</div>
 
 				<aside class="rea-infos rea-infos<?php if(!empty($work->project_link)) {echo '--with-button'; } ;?>">
 					<h3 role="heading" aria-level="3" class="rea-infos__title">Détails sur le projet</h3>
@@ -87,13 +87,43 @@
 						</ul>
 					</div>
 					@if(!empty($work->project_link))
-					<div class="rea-button__wrapper">
-						<a href="{{ $work->project_link }}" class="rea-button">
-							<span class="rea-button__label">Voir le site web du projet <span class="rea-button__hidden">« {{ $work->title }} »</span></span>
-						</a>
-					</div>
+						<div class="rea-button__wrapper">
+							<a href="{{ $work->project_link }}" class="rea-button">
+								<span class="rea-button__label">Voir le site web du projet <span class="rea-button__hidden">« {{ $work->title }} »</span></span>
+							</a>
+						</div>
 					@endif
 				</aside>
+
+				<div class="rSlider__container">
+					<ul class="rSlider">
+						@if(!empty($work->view3d))
+							<?php
+								$oEmbedUrl = 'https://sketchfab.com/oembed?url=' . $work->view3d;
+								$obj = json_decode(file_get_contents($oEmbedUrl), true);
+							;?>
+							<li class="rSlider__item rSlider__item--withIframe rSlider__item--visible" data-src="{{ $work->view3d }}" data-thumb="{{ $obj['thumbnail_url'] }}">
+								<img class="rSlider__img" src="{{ $obj['thumbnail_url'] }}" width="947" height="532" alt="#alt">
+								{!! file_get_contents(public_path('svg/inline-play-button3D.svg')) !!}
+							</li>
+						@endif
+						@if(!empty($work->video))
+						<?php $video = json_decode($work->video); ?>
+						<li class="rSlider__item rSlider__item--withIframe rSlider__item--visible" data-src="{{$video->url}}" data-thumb="{{ $video->image }}" >
+							<img class="rSlider__img" src="{{ $video->image }}" width="947" height="532" alt="Miniature de la vidéo du projet">
+							{!! file_get_contents(public_path('svg/inline-play-button.svg')) !!}
+						</li>
+						@endif
+						@if(!empty($work->images))
+						@foreach($work->images as $image)
+							<li class="rSlider__item rSlider__item--visible" data-thumb="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMin.jpg') }}" data-src="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMax.jpg') }}">
+								<img class="rSlider__img" src="{{ url('uploads/works/gallery/'.basename($image, '.jpg') . '_sliderMin.jpg') }}" width="947" height="532" alt="">
+							</li>
+						@endforeach
+						@endif
+						<li class="rSlider__item rSlider__item--hidden" data-thumb="" data-src=""></li>
+					</ul>
+				</div>
 
 			</div>
 

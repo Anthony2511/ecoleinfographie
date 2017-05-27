@@ -19,10 +19,8 @@ w.oneRea = {
     // FUNCTIONS
 
     removeHidden: function () {
-
         var resizeTimer;
         var rmvEl = $('.rSlider__item--hidden');
-
         $(window).on('resize', function (e) {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function () {
@@ -33,11 +31,8 @@ w.oneRea = {
                 }
             }, 250);
         });
-
-        if($(window).width() <= 1024){
+        if ($(window).width() <= 1024) {
             $('.rSlider__item--hidden').detach();
         };
-
-
     }
 }

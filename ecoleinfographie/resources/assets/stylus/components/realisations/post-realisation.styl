@@ -9,14 +9,20 @@
   &__container
     @extend .containerGridz
     margin-top s(100)
+    @media screen and (max-width 550px)
+      margin-top s(50)
   &__wrapper-top
     position: relative
     margin-bottom s(150)
+    @media screen and (max-width 1024px)
+      margin-bottom s(50)
     &:after
       @extend .clearfix
   &__name
     @extend .title51
     text-align: center
+    @media screen and (max-width 550px)
+      font-size s($sz5)
     &:after
       content ''
       height s(30, $sz2)
@@ -36,6 +42,9 @@
     transform translateY(-20px)
     opacity 0
     animation authorAnimation .5s .7s ease forwards
+    @media screen and (max-width 550px)
+      font-size s($sz7)
+      margin-bottom s(50)
   &__link
     display: inline-block
     font-size: s($sz6, $sz6);
@@ -71,6 +80,11 @@
   background $cWhite
   padding-bottom s(35)
   box-shadow: 0 0 6px 0 rgba(185,185,185,0.50);
+  z-index 2
+  @media screen and (max-width 1024px)
+    position static
+    width 100%
+    margin-bottom s(50)
   &__title
     margin-bottom s(35, $sz6)
     padding s(35, $sz6) s(20, $sz6)
@@ -81,8 +95,12 @@
     text-transform: uppercase
     text-align: center
     border-bottom 1px solid $cGrey-lineMenu2
+    @media screen and (max-width 550px)
+      font-size s($sz7)
   &__list
     padding 0 s(35) 0 s(35)
+    @media screen and (max-width 1024px)
+      text-align: center
   &__term
     margin s(30, $sz10) 0 s(15, $sz10)
     font-size: s($sz10)
@@ -101,6 +119,8 @@
       margin-right s(10, $sz7)
       background $cGrey-lineMenu
       vertical-align middle
+      @media screen and (max-width 1024px)
+        display: none
     & .rea-infos__link
       display: inline-block
       font-size inherit
@@ -131,6 +151,8 @@
   &__label
     display: block
     @extend .rea-infos__term
+    @media screen and (max-width 1024px)
+      text-align: center
     margin s(30, $sz10) 0 s(10, $sz10)
   & .social-list-circle__item
     display: inline-block
@@ -175,6 +197,10 @@
     background $cWhite
     width 61.74193548387096%
     padding s(60) s(70) s(60) 8%
+    @media screen and (max-width 1024px)
+      width 100%
+      @media screen and (max-width 550px)
+        padding s(30) s(20)
     & .rea-content__title
       color $cBlueTitles
   &__title
@@ -183,6 +209,10 @@
     background $cBlue1
     width col(5,12) + gutter(12)
     padding s(60) s(50)
+    @media screen and (max-width 1024px)
+      width: 100%
+    @media screen and (max-width 550px)
+      padding s(30) s(20)
     & .rea-content__title
       color $cWhite
       &:after
@@ -199,10 +229,15 @@
         margin-bottom: 0
   &__desc
     float: right
+    @media screen and (max-width 1024px)
+      float none
   &__prof
     position: relative
     top s(100)
     z-index 2
+    @media screen and (max-width 1024px)
+      position static
+      margin-top s(50)
 .rea-content__button
   position: absolute
   right 40px
@@ -227,6 +262,8 @@
 
 .rea-others
   margin-top s(180)
+  @media screen and (max-width 1024px)
+    margin-top s(50)
   &__title
     @extend .titleExtraBold
     color $cBlueTitles
@@ -234,15 +271,30 @@
 
 .work
   .reas
+    @media screen and (max-width 1024px)
+      width 100%
     .reas__item
       width 31.048387097% // (385/1240) * 100
       float: left
       height 100%
       margin 0 3.410967742% 0 0 // 48/1240*100
+      @media screen and (max-width 550px)
+        float none
+        width: 100%
+        margin 0 0 s(30) 0
       &:last-child
         margin 0 0 0 0
+        @media screen and (max-width 550px)
+          margin 0 0 s(30) 0
     .reas__img
-      height 223px
+      height auto
+      @media screen and (max-width 550px)
+        width 100%
     .reas__desc__name
       font-size s($sz5)
       line-height 1.1em
+
+.work
+  .social-list-circle
+    @media screen and (max-width 1024px)
+      text-align center
