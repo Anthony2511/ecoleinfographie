@@ -1,9 +1,13 @@
 .oneTeacher
   background $cBackgroundGrey
+  .footer__container
+    margin-top s(200)
 
 .prof
   &__container
     margin-top s(100)
+    @media screen and (max-width 768px)
+      margin-top s(50)
     @extend .containerGridz
 
 .oneTeacher
@@ -44,6 +48,9 @@
   &__img
     width 295px
     height 281px
+    @media screen and (max-width 330px)
+      width 100%
+      height auto
   &__email
     position: relative
     display: block
@@ -53,6 +60,8 @@
     padding s(20) 0
     background-color $cBlueCiel
     z-index 1
+    @media screen and (max-width 330px)
+      width: 100%
     &:before
       content: '';
       position: absolute;
@@ -87,6 +96,8 @@
   @media screen and (max-width 939px)
     float none
     margin 0 auto
+  @media screen and (max-width 330px)
+    width: 100%
   & .social-list-circle
     text-align: center
     margin-top s(15)
