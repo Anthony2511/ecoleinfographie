@@ -22,27 +22,37 @@
     margin-right s(85)
     &:nth-child(2n +2 )
       margin-right: 0
-
   &__title
     @extend .titleExtraBold26
     color $cBlueTitles
     padding s(50, $sz5) 0 s(30, $sz5)
+    line-height: 1.2em
+    @media screen and (max-width 768px)
+      font-size s($sz6)
     & strong
       font-size inherit
       display: inline-block
       padding 10px 15px
       color $cBlueCiel
       background-color $cWhite
+      @media screen and (max-width 768px)
+        padding 0
+        margin-left 5px
+        background-color $cBackgroundGrey2
   & .blog-card
     margin-bottom s(85)
   &__result
     display: block
     margin-top s(15, $sz5)
+    line-height: 1.2em
     & strong
       display: inline-block
       padding 10px 15px
       color $cBlueCiel
       background-color $cWhite
+      @media screen and (max-width 768px)
+        padding 0
+        background-color $cBackgroundGrey2
 
 .no-articles
   font-size s($sz6)

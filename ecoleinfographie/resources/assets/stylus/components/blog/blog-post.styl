@@ -12,19 +12,44 @@
 
 
 
-.postBlog
-  .blog-aside
-    margin-top s(100)
-
 .blogArticle__container
   @extend .containerGridz
   &:after
     @extend .clearfix
 
+@media screen and (max-width 1024px)
+  .postBlog
+    .blogArticle
+      float none
+      width 100%
+
+@media screen and (max-width 768px)
+  .postBlog
+    .blogArticle
+      &__container
+        padding 0 s(20)
+      & p
+      & h2
+      & h3
+      &__informations
+      & ul
+      & blockquote
+      .tags__wrapper
+        padding 0
+      & figcaption
+        display: block
+        position static
+        text-align: center
+        width: 100%
+        background none
+        box-shadow none
+
 .blogArticle
   float: left
   width col(7,12) + gutter(12)
   margin-top s(100)
+  @media screen and (max-width 768px)
+    margin-top s(40)
 
 .postBlog .footer__container
   margin-top: 0

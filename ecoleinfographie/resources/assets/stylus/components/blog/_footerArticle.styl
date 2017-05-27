@@ -10,6 +10,13 @@
   display: flex
   align-items center
   z-index 2
+  @media screen and (max-width 768px)
+    display block
+    min-width 0
+    height auto
+    width 100%
+    //padding s(30) s(20)
+    text-align: center
 
   &:after
     @extend .clearfix
@@ -21,6 +28,12 @@
   padding 0 s(50)
   text-align center
   border-right 1px solid $cGrey-lineMenu2
+  @media screen and (max-width 768px)
+    display: block
+    text-align: center
+    padding s(30) s(20)
+    border-bottom 1px solid $cGrey-lineMenu2
+    border-right none
   &__link
     display: block
   &__img
@@ -102,6 +115,13 @@
   height 100%
   padding 0 s(50)
   border-right 1px solid $cGrey-lineMenu2
+  @media screen and (max-width 768px)
+    display block
+    text-align: center
+    margin 0 auto
+    padding s(30) s(20)
+    border-bottom 1px solid $cGrey-lineMenu2
+    border-right none
   &__label-top
     display: block
     font-size s($sz7)
@@ -129,6 +149,11 @@
 // Footer article like
 .footerArticle__like
   float: left
+  @media screen and (max-width 768px)
+    float none
+    display: block
+    margin 0 auto
+    text-align: center
   & .fav
     position: relative;
     outline none
@@ -183,6 +208,8 @@
   position: relative
   padding 0 s(50)
   margin 0 auto
+  @media screen and (max-width 768px)
+    padding s(30) s(20)
   &-wrapper
     position: relative
   &__counter

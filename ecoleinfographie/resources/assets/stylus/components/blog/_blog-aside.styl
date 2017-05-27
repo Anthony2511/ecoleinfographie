@@ -5,20 +5,42 @@
 .blog-aside
   width s(354)
   float: right
-  @media screen and (max-width 1186px)
-    float none
-    margin s(40) auto 0 auto
-    width auto
-    max-width s(737)
   &__title
     @extend .hidden
   & section
     margin-bottom s(50)
     box-shadow 0 0 2px 0 rgba(169,169,169,0.50)
 
+.postBlog
+  .blog-aside
+    margin-top s(100)
 
+@media screen and (max-width 1186px)
+  .blog-home
+    .blog-aside
+      float none
+      margin s(40) auto 0 auto
+      width auto
+      max-width s(737)
 
+@media screen and (max-width 1024px)
+  .postBlog
+    .blog-aside
+      float none
 
+@media screen and (max-width 1024px)
+  .postBlog
+    .blog-aside
+      width: 100%
+      margin-top s(30)
+      padding-bottom s(100)
+      & section
+        margin-bottom s(30)
+
+@media screen and (max-width 650px)
+  .postBlog
+    .blog-aside
+      padding-bottom 0
 // Generic
 .title-section-aside
   padding s(25) s(30)
@@ -59,6 +81,8 @@
     border 1px solid $cWhite2
     border-right none
     -webkit-appearance: none;
+    appearance none
+    border-radius 0px
   &__submit
     position: relative
     display: block
