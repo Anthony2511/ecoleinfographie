@@ -2,33 +2,16 @@
   .teachers
     @extend .containerGridz
     margin-top s(60)
+    @media screen and (max-width 1115px)
+      max-width s(676)
+    @media screen and (max-width 756px)
+      max-width none
+      width 100%
     &__title
       @extend .titleExtraBold26
       color $cBlueTitles
-    /*&__item
-      display: block
-      margin-bottom s(15)
-      &:last-child
-        margin-bottom: 0
-    &__img
-      border-radius 50%
-      margin-right s(10)
-    &__link
-      display: inline-block;
-    &__link:hover .teachers__name:after
-    &__link:focus .teachers__name:after
-      width: 100%
-      transition .2s $ease-out-quart width
-    &__name
-      display: inline-block;
-      vertical-align: middle;
-      @extend .linkInText
-      font-size s($sz7)
-      &:after
-        bottom -3px
-    &__img
-      display: inline-block;
-      vertical-align: middle;*/
+      @media screen and (max-width 550px)
+        font-size s($sz6)
     &__list
       max-width: 64.6875em
       margin: s(80) auto 0 auto
@@ -40,4 +23,29 @@
       margin-bottom s(45)
       &:nth-child(3n + 3)
         margin-right: 0
+        @media screen and (max-width 1115px)
+          margin-right s(45)
+      &:nth-child(2n + 2)
+        @media screen and (max-width 1115px)
+          margin-right: 0
 
+
+@media screen and (max-width 756px)
+  .index_teachers &
+    .teachers
+      max-width none
+      width auto
+    .teachers__list
+      margin-top s(40)
+    .course-teachers__item
+      width: 100%
+    .card_student
+      width: 100%
+    .card_student__picture-wrapper
+      height auto
+    .card_student
+      width 100%
+      height auto
+    .card_student__picture
+      position static
+      width: 100%
