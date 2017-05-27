@@ -2,8 +2,10 @@
   background-color $cGreyLight
   .propose
     max-width s(735)
+    box-sizing content-box
     margin s(75) auto 0 auto
     text-align: center
+    padding s(0) s(20)
     &__title
       @extend .titleExtraBold26
       color $cBlueTitles
@@ -25,8 +27,14 @@
       letter-spacing 1px
       color $cBlueTitles
       line-height: 1.3em
+      @media screen and (max-width 550px)
+        float none
+        max-width none
+        margin 0 auto s(40) auto
       &:last-child
         margin-right: 0
+        @media screen and (max-width 550px)
+          margin-bottom 0
       &:before
         setIconBase()
         display: block
@@ -47,6 +55,8 @@
 
   .form
     background $cBackgroundGrey2
+    padding s(0) s(20)
+    box-sizing content-box
     &__container
       max-width s(735)
       margin 0 auto
@@ -71,6 +81,12 @@
       border 1px solid $cGrey5
       border-radius 2px
       transition .3s ease border
+      @media screen and (max-width 768px)
+        width 100%
+        margin 0 0 s(30) 0
+      &:last-child
+        @media screen and (max-width 768px)
+          margin-bottom 0
       &__label
         font-size s($sz10)
         font-weight: 700
