@@ -84,6 +84,9 @@
 .prof__left
   width: s(295)
   float: left
+  @media screen and (max-width 939px)
+    float none
+    margin 0 auto
   & .social-list-circle
     text-align: center
     margin-top s(15)
@@ -100,6 +103,12 @@
   float: left
   width 59.8% // 525/860
   margin-left s(50)
+  @media screen and (max-width 939px)
+    float: none
+    text-align: center
+    width 100%
+    margin s(30) auto 0 auto
+
 
 .prof
   &__role
@@ -124,9 +133,15 @@
   z-index: 2
   max-width s(860)
   margin: s(70) auto 0 auto
+  @media screen and (max-width 939px)
+    max-width none
+    margin s(50) auto 0 auto
+    text-align: center
   &__title
     color $cBlueTitles
     @extend .titleExtraBold26
+    &:after
+      margin 15px auto 0 auto
   &__list
     margin-top s(40)
   &__item
@@ -141,6 +156,8 @@
       margin-right s(5)
       border-radius 50%
       background $cBlueTitles
+      @media screen and (max-width 939px)
+        display: none
   &__link
     @extend .linkArrowLarge
 
@@ -152,17 +169,40 @@
   max-width s(860)
   margin: 0 auto
   z-index 2
+  @media screen and (max-width 939px)
+    max-width none
+    text-align: center
   &:after
     @extend .clearfix
   &__title
     @extend .titleExtraBold26
     margin s(70, $sz5) 0 s(50, $sz5) 0
     color $cBlueTitles
+    @media screen and (max-width 939px)
+      text-align: center
+    &:after
+      margin 15px auto 0 auto
   & .blog-card
     float: left
     margin-right s(100)
     margin-bottom s(80)
+    @media screen and (max-width 939px)
+      float none
+      margin 0 auto s(50) auto
+    @media screen and (max-width 425px)
+      width 100%
+      height auto
     &:nth-child(2n + 1)
       margin-right: 0
+      @media screen and (max-width 939px)
+        margin-right auto
     &:nth-last-of-type(-n+2)
       margin-bottom 0
+      @media screen and (max-width 939px)
+        margin-bottom s(50)
+    .blog-card__img
+      @media screen and (max-width 425px)
+        width 100%
+    .blog-card__title
+      @media screen and (max-width 425px)
+        height auto

@@ -41,6 +41,9 @@
         font-size s(45, $sz8)
         margin-bottom s(10, 45)
         color $cBlue2
+      & br
+        @media screen and (max-width 550px)
+          display: none
       &--duration:before
         setIconInclude('duration')
       &--date:before

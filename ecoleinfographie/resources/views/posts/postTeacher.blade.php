@@ -7,7 +7,35 @@
 @endsection
 
 @section('content')
-	@include('partials.breadcrumb')
+	<div class="breadcrumb">
+		<ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
+					itemtype="http://schema.org/ListItem">
+				<a href="{{ Url('/') }}" class="breadcrumb__link breadcrumb__link--home" itemscope itemtype="http://schema.org/Thing"
+					 itemprop="item">
+					<span itemprop="name">Page d’accueil</span>
+				</a>
+				<meta itemprop="position" content="1"/>
+			</li>
+			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
+					itemtype="http://schema.org/ListItem">
+				<a href="{{ Route('teachers') }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+					 itemprop="item">
+					<span itemprop="name">Professeurs</span>
+				</a>
+				<meta itemprop="position" content="2"/>
+			</li>
+			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
+					itemtype="http://schema.org/ListItem">
+				<a href="{{ Url()->current() }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+					 itemprop="item">
+					<span itemprop="name">{{ $teacher->fullname }}</span>
+				</a>
+				<meta itemprop="position" content="3"/>
+			</li>
+		</ol>
+	</div>
+
 
 	<div class="prof__container">
 		<section class="prof">
