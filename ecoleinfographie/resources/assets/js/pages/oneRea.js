@@ -2,6 +2,7 @@ w.oneRea = {
       oConf: {},
 
       init: function () {
+        this.removeHidden();
         w.sliderRea.init();
       },
 
@@ -17,4 +18,9 @@ w.oneRea = {
 
       // FUNCTIONS
 
+        removeHidden: function () {
+            if($(window).width() <= 1024) {
+                $('.rSlider__item--hidden').remove();
+            }
+        }
 }
