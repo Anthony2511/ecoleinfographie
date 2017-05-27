@@ -46,13 +46,13 @@
         </address>
         <meta itemprop="name" content="Haute École de la Province de Liège - Infographie" />
         <a href="tel:085211113" class="section__tel" itemprop="telephone">085 21 11 13</a>
-        <a href="#contact" class="section__contact">@lang('footer.contact-us')</a>
+        <a href="{{ Route('contact') }}" class="section__contact">@lang('footer.contact-us')</a>
     </section>
     <section class="section section--explorez">
         <h3 role="heading" aria-level="3" class="section__title">@lang('footer.explore')</h3>
         <ul class="section__list">
             <li class="section__item">
-                <a href="#web" class="section__link">@lang('footer.news')</a>
+                <a href="{{ Route('news') }}" class="section__link">@lang('footer.news')</a>
             </li>
             <li class="section__item">
                 <a href="{{ Route('blog') }}" class="section__link">@lang('footer.blog')</a>
@@ -69,7 +69,7 @@
         <h3 role="heading" aria-level="3" class="section__title">@lang('footer.training')</h3>
         <ul class="section__list">
             <li class="section__item">
-                <a href="#web" class="section__link">@lang('footer.webtraining')</a>
+                <a href="{{ Route('webTraining') }}" class="section__link">@lang('footer.webtraining')</a>
             </li>
             <li class="section__item">
                 <a href="#web" class="section__link">@lang('footer.2Dtraining')</a>
@@ -78,6 +78,6 @@
                 <a href="#web" class="section__link">@lang('footer.3Dtraining')</a>
             </li>
         </ul>
-        <a href="#inscription" class="section__cta">@lang('footer.inscription')</a>
+        <a href="{{ Route('registration') }}" class="section__cta">@lang('footer.inscription')</a>
     </section>
 </section>
