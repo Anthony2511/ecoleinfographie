@@ -3,11 +3,18 @@
   .header-shawl
     background: #136A8A;
     background: linear-gradient(135deg, rgba(38,120,113,1) 0%, rgba(31,114,122,1) 40%, rgba(25,111,130,1) 58%, rgba(19,106,138,1) 100%);
+    @media screen and (max-width: 500px)
+      padding s(35) s(20) 0
   .header__wrapper
     position relative
   .breadcrumb.breadcrumb--header
     top 0
     margin-top s(192)
+    @media screen and (max-width: 1100px)
+      width 100%
+      text-align: center
+    @media screen and (max-width: 500px)
+      margin-top s(100)
   .container
     background-color $cBackgroundGrey
     &:before
@@ -15,16 +22,25 @@
 
   .header-rea
     margin-top s(210)
+    @media screen and (max-width: 500px)
+      margin-top s(120)
     &__title
       @extend .title51
       display: block
       color $cWhite
       text-shadow: 0 1px 1px rgba(0,0,0,0.50);
       margin-bottom s(30, $sz2)
+      @media screen and (max-width: 1100px)
+        text-align: center
+      @media screen and (max-width: 768px)
+        font-size s($sz4)
     &__intro
       @extend .paragraph21
       color $cWhite
       max-width s(630)
+      @media screen and (max-width: 1100px)
+        text-align: center
+        max-width none
     &__tablet
       position: absolute
       top: s(280)
@@ -32,6 +48,8 @@
       z-index 1
       transform translateX(100px) translateY(-50px) rotate(-5deg)
       animation .7s ease rea-tablet forwards
+      @media screen and (max-width: 1100px)
+        display: none
     &__phone
       position: absolute
       top s(340)
@@ -39,6 +57,8 @@
       z-index 2
       transform translateX(60px) translateY(-30px) rotate(3deg)
       animation .7s ease rea-phone forwards
+      @media screen and (max-width: 1100px)
+        display: none
 
 .rea-printer-wrapper
   position relative
@@ -47,6 +67,8 @@
   left: 54%
   transform: translateY(60px);
   animation .7s ease rea-printer forwards
+  @media screen and (max-width: 1100px)
+    display: none
   & .rea-printer__A4-wrapper
     position: absolute
     overflow hidden
