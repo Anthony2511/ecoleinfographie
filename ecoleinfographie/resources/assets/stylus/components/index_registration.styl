@@ -23,9 +23,13 @@
       @extend .clearfix
   &__textWrapper
     width col(6,12)
+    @media screen and (max-width 940px)
+      width: 100%
   &__title
     @extend .titleExtraBold26
     color $cBlueTitles
+    @media screen and (max-width 500px)
+      font-size s($sz6)
   &__paragraph
     font-size s($sz7)
     line-height 1.62em
@@ -33,6 +37,13 @@
     position: absolute
     top 0
     right s($paddingSideGlobal)
+  &__img
+    @media screen and (max-width 1200px)
+      display: block
+      width 70%
+      margin-left auto
+    @media screen and (max-width 940px)
+      display: none
   
 // location
 .insLocation
@@ -54,13 +65,19 @@
       @extend .titleExtraBold26
       margin-bottom s(25, $sz5)
       color $cBlueTitles
+      @media screen and (max-width 500px)
+        font-size s($sz6)
     & .insLocation__paragraph
       width col(6,12)
+      @media screen and (max-width 940px)
+        width: 100%
 
 .map
   &__container
     position: relative
     padding 6.25em 0 3.75em
+    @media screen and (max-width 768px)
+      padding s(50) 0
   &__textWrapperContainer
     box-sizing content-box
     @extend .containerGridz
@@ -75,11 +92,18 @@
     background $cWhite
     box-shadow 0 0 s(14) 0 rgba(206,206,206,0.70)
     z-index 1
+    @media screen and (max-width 768px)
+      max-width none
+      float none
+    @media screen and (max-width 768px)
+      padding s(20)
   &__title
     display: block
     @extend .titleExtraBold26
     margin-bottom s(25, $sz5)
     color $cBlueTitles
+    @media screen and (max-width 500px)
+      font-size s($sz6)
   & b
     font-weight: 700
     font-size inherit
@@ -105,6 +129,8 @@
     right -480px
     margin-left -830px
     z-index 0
+    @media screen and (max-width 768px)
+      display: none
 
 //insBottom
 .insBottom
@@ -118,9 +144,11 @@
   &:after
     @extend .clearfix
   &__wrapper
-    max-width s(610)
+    width 50%
     float: right
     padding s(60) 0
+    @media screen and (max-width 768px)
+      width: 100%
   &__title
     display: block
     @extend .titleExtraBold26
@@ -143,14 +171,21 @@
   top: 0
   left: 0
   height: 100%
-  width s(570)
   background $cBlue1
   padding s(60) s(60)
+  width 45%
+  @media screen and (max-width 768px)
+    position static
+    width 100%
+  @media screen and (max-width 500px)
+    padding s(20)
   &__title
     display: block
     @extend .titleExtraBold26
     margin-bottom s(25, $sz5)
     color $cWhite
+    @media screen and (max-width 500px)
+      font-size s($sz6)
     &:after
       background $cWhite
   &__paragraph
@@ -180,6 +215,8 @@
     @extend .titleExtraBold26
     color $cWhite
     margin s(45, $sz5) 0 s(25, $sz5)
+    @media screen and (max-width 500px)
+      font-size s($sz6)
     &:after
       background $cWhite
 

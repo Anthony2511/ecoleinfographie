@@ -145,7 +145,7 @@
             <a href="{{ Route('blog') }}" class="menu__link menu__link-res">Blog</a>
         </li>
         <li class="menu__item">
-            <a href="inscription" class="menu__link menu__link--cta">Je veux m’inscrire</a>
+            <a href="{{ Route('registration') }}" class="menu__link menu__link--cta">Je veux m’inscrire</a>
         </li>
     </ul>
 </nav>
