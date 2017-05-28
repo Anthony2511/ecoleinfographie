@@ -157,14 +157,14 @@
 					<h3 role="heading" aria-level="3" class="contact-more__title">@lang('contact.infoContact')</h3>
 					<ul class="contact-more__list">
 						<li class="contact-more__item address">
-							<address class="contact-more__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-								<span itemprop="streetAddress">{{ Config::get('settings.address_street') }}, {{ Config::get('settings.address_num') }}</span><br/>
-								<span itemprop="postalCode">{{ Config::get('settings.address_cp') }}</span> - <span itemprop="addressLocality">{{ Config::get('settings.address_town') }}</span><br/>
-								<span itemprop="addressCountry">{{ Config::get('settings.address_country') }}</span><br/>
+							<address class="contact-more__address" itemprop="address adr" itemscope itemtype="http://schema.org/PostalAddress">
+								<span class="street-address" itemprop="streetAddress">{{ Config::get('settings.address_street') }}, {{ Config::get('settings.address_num') }}</span><br/>
+								<span class="postal-code" itemprop="postalCode">{{ Config::get('settings.address_cp') }}</span> - <span class="locality" itemprop="addressLocality">{{ Config::get('settings.address_town') }}</span><br/>
+								<span class="country-name" itemprop="addressCountry">{{ Config::get('settings.address_country') }}</span><br/>
 							</address>
 						</li>
 						<li class="contact-more__item tel">
-							<a itemprop="telephone" href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="contact-more__link contact-more__link--tel">{{ Config::get('settings.contact_tel') }}</a>
+							<a itemprop="telephone" href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="contact-more__link contact-more__link--tel tel">{{ Config::get('settings.contact_tel') }}</a>
 						</li>
 						<li class="contact-more__item mail">
 							<a itemprop="email" href="mailto:{{ Config::get('settings.contact_email') }}" class="contact-more__link contact-more__link--mail">
