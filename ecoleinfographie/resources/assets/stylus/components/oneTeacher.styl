@@ -152,7 +152,8 @@
     color $cBlueTitles
     @extend .titleExtraBold26
     &:after
-      margin 15px auto 0 auto
+      @media screen and (max-width 939px)
+        margin 15px auto 0 auto
   &__list
     margin-top s(40)
   &__item
@@ -192,7 +193,8 @@
     @media screen and (max-width 939px)
       text-align: center
     &:after
-      margin 15px auto 0 auto
+      @media screen and (max-width 939px)
+        margin 15px auto 0 auto
   & .blog-card
     float: left
     margin-right s(100)
