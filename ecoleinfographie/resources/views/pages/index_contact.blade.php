@@ -28,45 +28,47 @@
 		</ol>
 	</div>
 
-	<section class="contact">
+	<section itemscope itemtype="http://schema.org/Organization" class="contact">
+		<meta name="name" content="École d’infographie de la Province de Liège">
 		<div class="contact__top-wrapper">
 			<div class="contact__content-wrapper">
 				<h2 role="heading" aria-level="2" class="contact__title">@lang('contact.title')</h2>
 				<p class="contact__paragraph">@lang('contact.intro')</p>
 
 				<ul class="responsible">
-					<li class="responsible__item">
+					<li class="responsible__item" itemprop="alumni" itemscope itemtype="http://schema.org/Person">
 						<strong class="responsible__label">@lang('contact.res2d')</strong>
-						<span class="responsible__name">Véronique Etienne</span>
-						<a href="mailto:{{ Config::get('settings.email_2d') }}" class="responsible__mail">{{ Config::get('settings.email_2d') }}</a>
+						<span class="responsible__name" itemprop="name">Véronique Etienne</span>
+						<a href="mailto:{{ Config::get('settings.email_2d') }}" class="responsible__mail" itemprop="email">{{ Config::get('settings.email_2d') }}</a>
 					</li>
-					<li class="responsible__item">
+					<li class="responsible__item" itemprop="alumni" itemscope itemtype="http://schema.org/Person">
 						<strong class="responsible__label">@lang('contact.res3d')</strong>
-						<span class="responsible__name">Nicolas Claisses</span>
-						<a href="mailto:{{ Config::get('settings.email_3d') }}" class="responsible__mail">{{ Config::get('settings.email_3d') }}</a>
+						<span class="responsible__name" itemprop="name">Nicolas Claisses</span>
+						<a href="mailto:{{ Config::get('settings.email_3d') }}" class="responsible__mail" itemprop="email">{{ Config::get('settings.email_3d') }}</a>
 					</li>
-					<li class="responsible__item">
+					<li class="responsible__item" itemprop="alumni" itemscope itemtype="http://schema.org/Person">
 						<strong class="responsible__label">@lang('contact.resWeb')</strong>
-						<span class="responsible__name">Dominique Vilain</span>
-						<a href="mailto:{{ Config::get('settings.email_web') }}" class="responsible__mail">{{ Config::get('settings.email_web') }}</a>
+						<span class="responsible__name" itemprop="name">Dominique Vilain</span>
+						<a href="mailto:{{ Config::get('settings.email_web') }}" class="responsible__mail" itemprop="email">{{ Config::get('settings.email_web') }}</a>
 					</li>
 				</ul>
 
+				<link itemprop="url" href="http://ecoleinfographie.be">
 				<ul class="social-list-circle">
 					<li class="social-list-circle__item">
-						<a href="{{ Config::get('settings.social_fb') }}" title="@lang('contact.to') Facebook" class="social-list-circle__link facebook" rel="me"><span>@lang('contact.goPage') Facebook @lang('contact.linkSchool')</span></a>
+						<a href="{{ Config::get('settings.social_fb') }}" title="@lang('contact.to') Facebook" class="social-list-circle__link facebook" rel="me" itemprop="sameAs"><span>@lang('contact.goPage') Facebook @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="{{ Config::get('settings.social_tw') }}" title="@lang('contact.to') Twitter" class="social-list-circle__link twitter" rel="me"><span>@lang('contact.goPage') Twitter @lang('contact.linkSchool')</span></a>
+						<a href="{{ Config::get('settings.social_tw') }}" title="@lang('contact.to') Twitter" class="social-list-circle__link twitter" rel="me" itemprop="sameAs"><span>@lang('contact.goPage') Twitter @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="{{ Config::get('settings.social_pinterest') }}" title="@lang('contact.to') Pinterest" class="social-list-circle__link pinterest" rel="me"><span>@lang('contact.goPage') Pinterest @lang('contact.linkSchool')</span></a>
+						<a href="{{ Config::get('settings.social_pinterest') }}" title="@lang('contact.to') Pinterest" class="social-list-circle__link pinterest" rel="me" itemprop="sameAs"><span>@lang('contact.goPage') Pinterest @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="{{ Config::get('settings.social_behance') }}" title="@lang('contact.to') Behance" class="social-list-circle__link behance" rel="me"><span>@lang('contact.goPage') Behance @lang('contact.linkSchool')</span></a>
+						<a href="{{ Config::get('settings.social_behance') }}" title="@lang('contact.to') Behance" class="social-list-circle__link behance" rel="me" itemprop="sameAs"><span>@lang('contact.goPage') Behance @lang('contact.linkSchool')</span></a>
 					</li>
 					<li class="social-list-circle__item">
-						<a href="{{ Config::get('settings.social_dribble') }}" class="social-list-circle__link dribble" title="@lang('contact.to') Dribble" rel="me"><span>@lang('contact.goPage') Dribbble @lang('contact.linkSchool')</span></a>
+						<a href="{{ Config::get('settings.social_dribble') }}" class="social-list-circle__link dribble" title="@lang('contact.to') Dribble" rel="me" itemprop="sameAs"><span>@lang('contact.goPage') Dribbble @lang('contact.linkSchool')</span></a>
 					</li>
 				</ul>
 			</div>
@@ -155,17 +157,17 @@
 					<h3 role="heading" aria-level="3" class="contact-more__title">@lang('contact.infoContact')</h3>
 					<ul class="contact-more__list">
 						<li class="contact-more__item address">
-							<address class="contact-more__address">
-								{{ Config::get('settings.address_street') }}, {{ Config::get('settings.address_num') }}<br/>
-								{{ Config::get('settings.address_cp') }} - {{ Config::get('settings.address_town') }}<br/>
-								{{ Config::get('settings.address_country') }}<br/>
+							<address class="contact-more__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+								<span itemprop="streetAddress">{{ Config::get('settings.address_street') }}, {{ Config::get('settings.address_num') }}</span><br/>
+								<span itemprop="postalCode">{{ Config::get('settings.address_cp') }}</span> - <span itemprop="addressLocality">{{ Config::get('settings.address_town') }}</span><br/>
+								<span itemprop="addressCountry">{{ Config::get('settings.address_country') }}</span><br/>
 							</address>
 						</li>
 						<li class="contact-more__item tel">
-							<a href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="contact-more__link contact-more__link--tel">{{ Config::get('settings.contact_tel') }}</a>
+							<a itemprop="telephone" href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="contact-more__link contact-more__link--tel">{{ Config::get('settings.contact_tel') }}</a>
 						</li>
 						<li class="contact-more__item mail">
-							<a href="mailto:{{ Config::get('settings.contact_email') }}" class="contact-more__link contact-more__link--mail">
+							<a itemprop="email" href="mailto:{{ Config::get('settings.contact_email') }}" class="contact-more__link contact-more__link--mail">
 								{{ Config::get('settings.contact_email') }}
 							</a>
 						</li>
