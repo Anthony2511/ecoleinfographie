@@ -1,0 +1,31 @@
+.header,
+.breadcrumb,
+.blog-aside,
+.comments,
+.footer,
+.footerArticle,
+.tags__wrapper{
+    display: none;
+}
+
+.blogArticle{
+    width: 100%;
+}
+
+.blogArticle ul li{
+    list-style: circle;
+}
+
+.blogArticle ul li:before{
+    display: none;
+}
+
+.blogArticle *,
+.blogArticle p,
+.blogArticle blockquote,
+.blogArticle ul,
+.blogArticle h3{
+    padding-left: 0;
+}
+
+
