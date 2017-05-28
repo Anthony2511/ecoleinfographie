@@ -21,7 +21,7 @@ class TeacherCrudController extends CrudController
 		*/
         $this->crud->setModel("App\Models\Teacher");
         $this->crud->setRoute("admin/teacher");
-        $this->crud->setEntityNameStrings('professeur', 'professeurs');
+        $this->crud->setEntityNameStrings('un professeur', 'professeurs');
         
     
         /*

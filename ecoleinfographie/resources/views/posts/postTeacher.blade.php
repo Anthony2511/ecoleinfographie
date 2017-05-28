@@ -47,16 +47,12 @@
 					<a href="mailto:{{ $teacher->email }}" class="prof__email"><span class="prof__email__label">Contacter par email <span class="prof__email__hidden">{{ $teacher->fullname }}</span></span></a>
 
 					<ul class="social-list-circle">
-						<li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link facebook" rel="me"><span>Vers le Facebook de {{ $teacher->fullname }}</span></a>
-						</li><!--
-                    --><li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link twitter" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-						</li><!--
-                    --><li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link pinterest" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-						</li><!--
-                    --></ul>
+						@foreach($teacher->social as $row)
+							<li class="social-list-circle__item">
+								<a href="{{ $row['url'] }}" class="social-list-circle__link {{ $row['type'] }}" rel="me"><span>Vers le Facebook de {{ $teacher->fullname }}</span></a>
+							</li>
+						@endforeach
+					</ul>
 
 				</div>
 				<div class="prof__right">
@@ -80,7 +76,7 @@
 			</section>
 			@endif
 
-
+			@if(!empty($teacher->articles) && count($teacher->articles))
 			<section class="profArticles">
 				<h3 role="heading" aria-level="3" class="profArticles__title">Ses articles publiés</h3>
 
@@ -90,6 +86,7 @@
 
 				</article>
 			</section>
+			@endif
 		</section>
 
 	</div>
