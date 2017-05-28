@@ -14,10 +14,8 @@
 			<div class="course-card">
 
 
-				<?php $imageCourse = (starts_with($course->image, 'http://')) ? $course->image : '../' . $course->image ;?>
-
-				<div class="course-card__image-container" style="background-image: url('{{ $imageCourse }}')"></div>
-				{{--<img class="course-card__image" src="./img/course-img.jpg" width="1000" height="500" alt="Image de lignes de code CSS">--}}
+				{{--<div class="course-card__image-container" style="background-image: url('{{ $imageCourse }}')"></div>--}}
+				<img class="course-card__image" src="{{ $course->getImageCourse('.jpg') }}" width="360" height="417" alt="">
 				<div class="course-card__content">
 					<h2 role="heading" aria-level="2" class="course-card__title">{{ $course->title }}</h2>
 

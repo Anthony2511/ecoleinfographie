@@ -17,6 +17,8 @@
   margin-top s(100)
   background $cBlue1
   overflow hidden
+  @media screen and (max-width 1075px)
+    width: 100%
   &:after
     @extend .clearfix
   & *
@@ -24,9 +26,11 @@
   &__content
     position: relative
     z-index 5
-    padding s(45) s(70) s(70) 41%
+    padding s(45) s(70) s(70)
     float: left
     overflow hidden
+    @media screen and (max-width 550px)
+      padding s(25) s(30) s(70)
   &__title
     margin-bottom s(10, $sz4)
     font-size s($sz4)
@@ -102,31 +106,14 @@
   margin-bottom s(10, $sz8)
 
 .course-card
-  &__image-container
-    overflow hidden
-    width s(360) //35%
+  &__image
+    display: block
     float left
-    position absolute
-    left 0
-    top 0
-    bottom 0
-    //background url('../img/course-img.jpg') no-repeat center center/cover
-    background-repeat no-repeat
-    background-position center center
-    background-size cover
+    @media screen and (max-width 905px)
+      display: none
 
-/*.course-card
-  &__content:before
-    content ''
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: s(185)
-    bottom: s(-1px);
-    transform: skewY(-1.5deg) rotate(275deg);
-    transform-origin: 50% 50%;
-    background-color: $cBlue1
-    z-index: -1;*/
+
+
 
 /************************************\
 		DESCRIPTION DU COURS
@@ -140,6 +127,10 @@
   padding s(90) col(1,12)
   background-color $cWhite
   z-index 10
+  @media screen and (max-width 905px)
+    width: 100%
+  @media screen and (max-width 550px)
+    padding s(35) s(30)
   &__title
     @extend .titleOneLine
   & p
@@ -199,6 +190,8 @@
   .course-teachers
     max-width s(1035)
     margin: s(80) auto
+    @media screen and (max-width 1024px)
+      padding 0 s(20)
     &__title
       @extend .titleOneLine
     &__list
@@ -224,3 +217,14 @@
     margin-bottom s(100)
     &:nth-child(3n+3)
       margin-right: 0
+
+@media screen and (max-width 400px)
+  .course-post
+    .course-teachers__item
+      margin 0 auto s(30) auto
+    .card_student
+      width: 100%
+    .card_student__picture-wrapper
+      height auto
+    .card_student__picture
+      position static

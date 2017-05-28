@@ -99,6 +99,19 @@ class Course extends Model
         }
     }
     
+    public function getImageCourse($suffix)
+    {
+        $basePath = 'uploads/cours/';
+        $fullname = pathinfo($this->image, PATHINFO_FILENAME);
+        $imageCourse = $basePath . $fullname . $suffix;
+        
+        if (file_exists($imageCourse)) {
+            return URL('/') . '/' . $imageCourse;
+        } else {
+            return $this->image;
+        }
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
