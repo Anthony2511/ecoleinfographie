@@ -191,7 +191,7 @@ class ArticleController extends Controller
         $term = $request->get('term');
         $keywords = explode(" ", $term);
     
-        $filtered = ["avec", "an", "the"];
+        $filtered = ['avec', 'le', 'la', 'les', 'mon', 'ton', 'son', 'ma', 'ta', 'ça', 'mets', 'tes', 'ses', 'du', 'de', 'leur', 'on', 'an', 'a', 'the'];
         $filteredKeywords = array_diff($keywords, $filtered);
         
         
