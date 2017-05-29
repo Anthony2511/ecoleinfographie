@@ -188,22 +188,19 @@ class ArticleController extends Controller
     
     public function autocomplete(Request $request)
     {
+        $term = $request->get('term');
+        $keywords = explode(" ", $term);
+    
+        $filtered = ["avec", "an", "the"];
+        $filteredKeywords = array_diff($keywords, $filtered);
         
-        $filterItem = array("le", "la", "les", "un", "une", 'avec', 'sur');
-        $term       = $request->get('term');
         
-        $results = array();
-        
-        $arr = explode(' ', $term);
-        
-        foreach ($arr as $val) {
-            //you can ignore words like a,an,in,on etc
-            if ( ! in_array($val, $filterItem)) {
-                $ids[] = Article::where('title', 'LIKE', '%' . $val . '%')->published()->pluck('id');
-            }
+        $article = Article::query();
+        foreach($filteredKeywords as $word){
+            $article->orWhere('title', 'LIKE', '%'.$word.'%');
         }
         
-        $queries = Article::whereIn('id', $ids)->get();
+        $queries = $article->published()->get();
         
         
         foreach ($queries as $query) {
