@@ -601,7 +601,7 @@ div .menu__title-responsive
 .no-js
   .subnav
     visibility visible
-    opacity 1
+    animation nojsmenu 1.5s ease forwards
     &:before
       display: none
     &__school
@@ -622,21 +622,15 @@ div .menu__title-responsive
         display: none
       & .subnav__group
         margin-bottom 10px
-/*  .subnav
-    visibility visible
+
+@keyframes nojsmenu{
+  0% {
+    opacity 0
+  }
+  70% {
+    opacity 0
+  }
+  100%{
     opacity 1
-    & li
-    & a
-    & span
-      color $cWhite
-    &__jobs
-    &__school
-      border none
-      background none
-      box-shadow none
-    & svg
-    & img
-      display: none
-  .subnav.open
-    transition 0s
-    transform none*/
+  }
+}
