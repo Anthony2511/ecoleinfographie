@@ -16,7 +16,7 @@ class WorkController extends Controller
         SEO::setTitle('Les travaux de nos étudiants');
         SEO::setDescription('Découvres les travaux que nos étudiants réalisent chaque année au cours de leur formation');
         
-        $query = Work::inRandomOrder();
+        $query = Work::query();
         
         if ($request->has('orientation')) {
             $query->where('orientation', $request->get('orientation'));
@@ -68,7 +68,7 @@ class WorkController extends Controller
         SEO::setTitle('Les travaux de nos étudiants');
         SEO::setDescription('Découvres les travaux que nos étudiants réalisent chaque année au cours de leur formation');
         
-        $query = Work::inRandomOrder();
+        $query = Work::query();
         
         if ($request->has('year')) {
             $query->where('year', $request->get('year'));
