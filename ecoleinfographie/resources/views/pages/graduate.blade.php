@@ -60,6 +60,7 @@
         </ul>
 
 
+        @if($students->count() > 0)
         <ul class="former-students__list">
             @foreach($students as $student)
             <li class="former-students__item">
@@ -101,19 +102,22 @@
             </li>
             @endforeach
         </ul>
-
-
         <div class="load-more__container">
             <noscript>
                 {!! $students->render() !!}
             </noscript>
             <a href="{{ $students->nextPageUrl() . $getLoadMoreLink }} " class="load-more" id="load-more">
-						<span class="load-more__label">
-							<span class="load-more__label-text">Charger plus</span>
-							<span class="load-more__hidden">d’anciens étudiants diplômés</span>
-						</span>
-					  </a>
+                <span class="load-more__label">
+                    <span class="load-more__label-text">Charger plus</span>
+                    <span class="load-more__hidden">d’anciens étudiants diplômés</span>
+                </span>
+            </a>
         </div>
+        @else
+        <div class="no-former-students">
+            <p>Il n’y a pas d’étudiants diplômé à afficher pour votre selection</p>
+        </div>
+        @endif
 
     </section>
 @endsection
