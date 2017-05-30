@@ -29,7 +29,7 @@
 	</div>
 
 	<section itemscope itemtype="http://schema.org/Organization" class="contact">
-		<meta name="name" content="École d’infographie de la Province de Liège">
+		<meta itemprop="name" content="École d’infographie de la Province de Liège">
 		<div class="contact__top-wrapper">
 			<div class="contact__content-wrapper">
 				<h2 role="heading" aria-level="2" class="contact__title">@lang('contact.title')</h2>
@@ -74,7 +74,6 @@
 			</div>
 
 			<img class="contact__img" src="{{ asset('img/contact-img.jpg') }}" width="610" height="662" alt="">
-		</div>
 		</div>
 
 		<div class="map">
@@ -132,7 +131,7 @@
 								<label for="email" class="form__label">@lang('form.youremail')</label>
 								<input type="email" name="email" id="email"
 											 class="form__input floatLabel {{ $errors->has('email') ? 'error-input' : '' }}"
-											 value="{{ old('email') }}" required value="{{ old('email') }}">
+											 required value="{{ old('email') }}">
 							</div>
 						</div>
 						@if ($errors->has('content'))
