@@ -9,13 +9,15 @@ w.ajaxGraduated = {
         var globalResizeTimer = null;
         var grid = document.querySelector('.former-students__list');
 
-        $(window).resize(function() {
-            if(globalResizeTimer != null) window.clearTimeout(globalResizeTimer);
-            globalResizeTimer = window.setTimeout(function() {
-                waterfall(grid);
-            }, 200);
-        });
-        waterfall(grid);
+        if($('.former-students__list').length){
+            $(window).resize(function() {
+                if(globalResizeTimer != null) window.clearTimeout(globalResizeTimer);
+                globalResizeTimer = window.setTimeout(function() {
+                    waterfall(grid);
+                }, 200);
+            });
+            waterfall(grid);
+        }
     },
 
     initAjax: function () {
