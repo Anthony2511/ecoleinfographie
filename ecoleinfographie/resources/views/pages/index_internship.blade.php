@@ -34,8 +34,8 @@
 		</p>
 		<div class="propose__infos">
 			<span class="propose__info propose__info--duration">Durée de <strong>12</strong> semaines</span>
-			<span class="propose__info propose__info--date">Du <strong>6</strong> février au </br><strong>28</strong> avril</span>
-			<span class="propose__info propose__info--convention"><strong>Signature</strong><br/> d’une convention</span>
+			<span class="propose__info propose__info--date">Du <strong>6</strong> février au <br><strong>28</strong> avril</span>
+			<span class="propose__info propose__info--convention"><strong>Signature</strong><br> d’une convention</span>
 		</div>
 	</section>
 
@@ -105,7 +105,7 @@
 					</div>
 					<div class="form__block">
 						<div class="form__wrapper">
-							<span for="recipient" class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
+							<span class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
 							<span class="form-error">
 								{{ $errors->first('cbox1') }}
 							</span>
@@ -113,21 +113,21 @@
 								<label for="cbox1" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">3D et Audiovisuel</span>
 									<input type="checkbox" id="cbox1" name="cbox1" value="3D" class="form__checkbox">
-									<div class="form__control-indicator"></div>
+									<span class="form__control-indicator"></span>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox2" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Design graphique</span>
 									<input type="checkbox" id="cbox2" name="cbox2" value="2D" class="form__checkbox">
-									<div class="form__control-indicator"></div>
+									<span class="form__control-indicator"></span>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox3" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Web</span>
 									<input type="checkbox" id="cbox3" name="cbox3" value="WEB" class="form__checkbox">
-									<div class="form__control-indicator"></div>
+									<span class="form__control-indicator"></span>
 								</label>
 							</div>
 						</div>
@@ -217,7 +217,7 @@
 						@endif
 						<div class="form__wrapper">
 							<label for="email-pdf" class="form__label">Quel est votre adresse e-mail ?</label>
-							<input type="email" name="email-pdf" id="email-pdf" class="form__input floatLabel {{ $errors->has('email-pdf') ? 'error-input' : '' }}" value="{{ old('email-pdf') }}" required value="{{ old('email-pdf') }}">
+							<input type="email" name="email-pdf" id="email-pdf" class="form__input floatLabel {{ $errors->has('email-pdf') ? 'error-input' : '' }}" value="{{ old('email-pdf') }}" required>
 						</div>
 					</div>
 					<div class="form__block">
@@ -233,7 +233,7 @@
 					</div>
 					<div class="form__block">
 						<div class="form__wrapper">
-							<span for="recipient" class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
+							<span class="form__fakeLabel">À quelle option s’adresse votre offre&nbsp;?</span>
 							<span class="form-error">
 								{{ $errors->first('cbox1-pdf') }}
 							</span>
@@ -241,21 +241,21 @@
 								<label for="cbox1-pdf" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">3D et Audiovisuel</span>
 									<input type="checkbox" name="cbox1-pdf" id="cbox1-pdf" value="3D-pdf" class="form__checkbox">
-									<div class="form__control-indicator"></div>
+									<span class="form__control-indicator"></span>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox2-pdf" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Design graphique</span>
 									<input type="checkbox" name="cbox2-pdf" id="cbox2-pdf" value="2D-pdf" class="form__checkbox">
-									<div class="form__control-indicator"></div>
+									<span class="form__control-indicator"></span>
 								</label>
 							</div>
 							<div class="form__checkbox-btn">
 								<label for="cbox3-pdf" class="form__labelCheckbox">
 									<span class="form__labelCheckbox__span">Web</span>
 									<input type="checkbox" id="cbox3-pdf" value="WEB-pdf" name="cbox3-pdf" class="form__checkbox">
-									<div class="form__control-indicator"></div>
+									<span class="form__control-indicator"></span>
 								</label>
 							</div>
 						</div>

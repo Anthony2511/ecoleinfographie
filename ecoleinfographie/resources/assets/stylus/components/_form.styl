@@ -75,17 +75,18 @@
     &:focus
       border: 1px solid $cGrey2
       transition .3s ease border
-    & span
+    &__span
       position: relative
       top s(-4)
       padding-left s(40)
       color $cBlack
   &__control-indicator
     position: absolute;
+    display block
     top: s(18)
     left: s(20)
-    height: s(22)
-    width: s(22)
+    height: 22px
+    width: 22px
     background: $cGrey3
     transition .3s ease background
     &:after
