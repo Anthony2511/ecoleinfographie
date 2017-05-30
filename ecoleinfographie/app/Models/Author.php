@@ -114,7 +114,7 @@ class Author extends Model
             Utils::storeNewSize($path, $filename, '_30x30', $image30x30);
             
             // 3. Save the path of original image to the database
-            $this->attributes[$attribute_name] = $path.'/'.$filename.'.jpg';
+            $this->attributes[$attribute_name] = Url('/') . '/' . $path.'/'.$filename.'.jpg';
         }
         
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
@@ -133,7 +133,7 @@ class Author extends Model
             Utils::storeNewSize($path, $filename, '_30x30', $fakeAvatar30x30);
     
     
-            $this->attributes['picture'] = $path.'/'.$filename.'.jpg';
+            $this->attributes['picture'] = Url('/') . '/' . $path.'/'.$filename.'.jpg';
         }
     }
 }

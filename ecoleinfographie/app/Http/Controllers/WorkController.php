@@ -49,7 +49,7 @@ class WorkController extends Controller
         SEO::setDescription($description);
     
         SEO::OpenGraph()->addProperty('type', 'article');
-        SEO::OpenGraph()->addImage($work->image, ['width' => \Image::make($work->image)->width(), 'height' => \Image::make($work->image)->height()]);
+        SEO::OpenGraph()->addImage($work->cover, ['width' => \Image::make($work->cover)->width(), 'height' => \Image::make($work->cover)->height()]);
         
         $type = Type::with('works')->get();
         

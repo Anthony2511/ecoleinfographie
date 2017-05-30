@@ -184,7 +184,7 @@ class Course extends Model
             // 2. Store the image on disk.
             \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+            $this->attributes[$attribute_name] = Url('/') . '/' . $destination_path.'/'.$filename.'.jpg';
         }
     }
     

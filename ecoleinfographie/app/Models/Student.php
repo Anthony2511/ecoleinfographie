@@ -181,7 +181,7 @@ class Student extends Model
             Utils::storeNewSize($path, $filename, '_slider', $studentSlider);
             
             // 3. Save the path of original image to the database
-            $this->attributes[$attribute_name] = $path.'/'.$filename.'.jpg';
+            $this->attributes[$attribute_name] = Url('/') . '/' . $path.'/'.$filename.'.jpg';
         }
     
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
@@ -200,7 +200,7 @@ class Student extends Model
             Utils::storeNewSize($path, $filename, '_slider', $studentSlider);
         
         
-            $this->attributes['image'] = $path.'/'.$filename.'.jpg';
+            $this->attributes['image'] = Url('/') . '/' . $path.'/'.$filename.'.jpg';
         }
     }
 }
