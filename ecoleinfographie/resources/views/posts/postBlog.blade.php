@@ -206,17 +206,13 @@
 								<a href="https://www.facebook.com/sharer/sharer.php?u={{ Url()->current() }}" class="social-list-circle__link facebook" rel="me"><span>Partager l’article sur Facebook</span></a>
 							</li><!--
                     --><li class="social-list-circle__item">
-								<a href="" class="social-list-circle__link twitter" rel="me"><span>Partager l’article sur Twitter</span></a>
+								<a href="https://twitter.com/home?status={{ Url()->current() }}" class="social-list-circle__link twitter" rel="me"><span>Partager l’article sur Twitter</span></a>
 							</li><!--
                     --><li class="social-list-circle__item">
-								<a href="" class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
+								<a href="https://pinterest.com/pin/create/bookmarklet/?media={{ $article->image }}&url={{ Url()->current() }}&description={{ $article->introduction }}" class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
 							</li><!--
                     --><li class="social-list-circle__item">
-								<a href="" class="social-list-circle__link behance" rel="me"><span>Partager l’article sur Behance</span></a>
-							</li><!--
-                    --><li class="social-list-circle__item">
-								<a href="" class="social-list-circle__link dribble" rel="me"><span>Partager l’article sur Dribbble</span></a>
-							</li>
+								<a href="https://www.linkedin.com/shareArticle?url={{ Url()->current() }}&title={{ $article->title }}" class="social-list-circle__link linkedin" rel="me"><span>Partager l’article sur Linkedin</span></a>
 						</ul>
 					</div>
 				</div>
@@ -261,20 +257,16 @@
 					<span class="comments__share__title">Partager&nbsp;:</span>
 					<ul class="social-list-circle">
 						<li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link facebook" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+							<a href="https://www.facebook.com/sharer/sharer.php?u={{ Url()->current() }}" class="social-list-circle__link facebook" rel="me"><span>Partager l’article sur Facebook</span></a>
 						</li><!--
                     --><li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link twitter" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+							<a href="https://twitter.com/home?status={{ Url()->current() }}" class="social-list-circle__link twitter" rel="me"><span>Partager l’article sur Twitter</span></a>
 						</li><!--
                     --><li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link pinterest" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
+							<a href="https://pinterest.com/pin/create/bookmarklet/?media={{ $article->image }}&url={{ Url()->current() }}&description={{ $article->introduction }}" class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
 						</li><!--
                     --><li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link behance" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-						</li><!--
-                    --><li class="social-list-circle__item">
-							<a href="" class="social-list-circle__link dribble" rel="me"><span>Vers le Facebook de Kévin Dessouroux</span></a>
-						</li>
+							<a href="https://www.linkedin.com/shareArticle?url={{ Url()->current() }}&title={{ $article->title }}" class="social-list-circle__link linkedin" rel="me"><span>Partager l’article sur Linkedin</span></a>
 					</ul>
 				</div>
 			</div>
