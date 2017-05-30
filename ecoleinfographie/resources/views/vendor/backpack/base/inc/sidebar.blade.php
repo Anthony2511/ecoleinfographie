@@ -29,6 +29,7 @@
             </a>
           </li>
 
+          @role('administrateur')
           <!-- Item LangFileManager -->
           <li class="treeview">
             <a href="#"><i class="fa fa-globe"></i> <span>Translations</span> <i class="fa fa-angle-left pull-right"></i></a>
@@ -37,6 +38,7 @@
               <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/language/texts') }}"><i class="fa fa-language"></i> Site texts</a></li>
             </ul>
           </li>
+          @endrole
 
           <!-- item PagesManager -->
           <li>
@@ -47,6 +49,7 @@
           </li>
 
           <!-- News -->
+          @if(auth()->user()->hasRole('administrateur') || auth()->user()->hasRole('professeur'))
           <li class="treeview">
             <a href="#"><i class="fa fa-newspaper-o"></i> <span>Actualités</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
@@ -54,6 +57,7 @@
               <li><a href="{{ url('admin/commentnews') }}"><i class="fa fa-comments-o"></i> <span>Commentaires</span></a></li>
             </ul>
           </li>
+          @endif
 
           <!-- blog -->
           <li class="treeview">
@@ -67,6 +71,7 @@
             </ul>
           </li>
 
+          @if(auth()->user()->hasRole('administrateur') || auth()->user()->hasRole('professeur'))
           <!-- professeurs -->
           <li>
             <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/teacher') }}"><i class="fa fa-address-card"></i><span>Professeurs</span></a></li>
@@ -88,14 +93,17 @@
               <li><a href="{{ url('admin/type') }}"><i class="fa fa-folder"></i> <span>Type de projet</span></a></li>
             </ul>
           </li>
+          @endif
 
           <!-- item MenuCRUD -->
           <li><a href="{{ url('admin/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
 
+          @role('administrateur')
           <!-- settings website -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}"><i class="fa fa-cog"></i> <span>Options</span></a></li>
-
+          @endrole
           <!-- Users, Roles Permissions -->
+          @role('administrateur')
           <li class="treeview">
             <a href="#"><i class="fa fa-group"></i> <span>Users, Roles, Permissions</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
@@ -104,6 +112,7 @@
               <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
             </ul>
           </li>
+         @endrole
 
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
