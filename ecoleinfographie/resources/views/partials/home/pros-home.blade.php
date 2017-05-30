@@ -82,17 +82,17 @@
             <ul class="dots__list">
                 <li class="dots__li sliderBlog__dots-item--1" data-pos="0">
                     <a href="#articleSlide-0" class="dots__item">
-                        <span>Voir l’article #1</span>
+                        <span>Faire défiler vers le slide du premier professionnel</span>
                     </a>
                 </li>
                 <li class="dots__li sliderBlog__dots-item--2" data-pos="1">
                     <a href="#articleSlide-1" class="dots__item">
-                        <span>Voir l’article #2</span>
+                        <span>Faire défiler vers le slide du deuxième professionnel</span>
                     </a>
                 </li>
                 <li class="dots__li sliderBlog__dots-item--3" data-pos="2">
                     <a href="#articleSlide-2" class="dots__item">
-                        <span>Voir l’article #3</span>
+                        <span>Faire défiler vers le slide du troisième professionnel</span>
                     </a>
                 </li>
             </ul>
