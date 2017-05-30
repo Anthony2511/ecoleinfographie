@@ -75,7 +75,7 @@
 			<section class="course-description">
 				<h3 role="heading" aria-level="3" class="course-description__title">Description du cours</h3>
 				<div itemprop="description">
-					{!! $course->description !!}
+            {!! str_replace('h3', 'h4', $course->description) !!}
 				</div>
 			</section>
 		</div>

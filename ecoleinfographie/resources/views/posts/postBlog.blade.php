@@ -120,7 +120,7 @@
 
 			<div class="blogArticle__body" itemprop="articleBody">
 
-				{!! $article->content  !!}
+				{!! $article->content !!}
 
 				@if(!empty($article->tags->count() !== 0 ))
 				<div class="tags__wrapper">

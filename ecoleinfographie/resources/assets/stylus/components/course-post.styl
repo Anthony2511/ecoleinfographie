@@ -133,12 +133,22 @@
     padding s(35) s(30)
   &__title
     @extend .titleOneLine
+    &:after
+      margin-bottom 20px
   & p
     font-size s($sz7)
     line-height: 1.62em
     margin-bottom s(20, $sz7)
     &:last-child
       margin-bottom: 0
+  & h4
+    font-size s($sz8)
+    font-weight 900
+    text-transform: uppercase
+    letter-spacing .6px
+    color $cBlueTitles
+    margin s(30, $sz8) 0 s(5, $sz8)
+
 
 
 /************************************\
