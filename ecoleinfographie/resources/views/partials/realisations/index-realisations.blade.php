@@ -1,16 +1,16 @@
 <div class="index-rea__container">
-	<ul class="index-rea__filter">
+	<ul class="index-rea__filter" id="anchor">
 		<li class="index-rea__filter__item <?php echo (Request::get('orientation') == '') ? 'active' : '' ;?>">
 			<a href="{{ url(trans('url.works')) }}" class="index-rea__filter__link">Tous</a>
 		</li>
 		<li class="index-rea__filter__item <?php echo (Request::get('orientation') == '3D') ? 'active' : '' ;?>">
-			<a href="?orientation=3D" class="index-rea__filter__link">3D et audiovisuel</a>
+			<a href="?orientation=3D#anchor" class="index-rea__filter__link">3D et audiovisuel</a>
 		</li>
 		<li class="index-rea__filter__item <?php echo (Request::get('orientation') == '2D') ? 'active' : '' ;?>">
-			<a href="?orientation=2D" class="index-rea__filter__link">Design graphique</a>
+			<a href="?orientation=2D#anchor" class="index-rea__filter__link">Design graphique</a>
 		</li>
 		<li class="index-rea__filter__item <?php echo (Request::get('orientation') == 'web') ? 'active' : '' ;?>">
-			<a href="?orientation=web" class="index-rea__filter__link">Web</a>
+			<a href="?orientation=web#anchor" class="index-rea__filter__link">Web</a>
 		</li>
 	</ul>
 	<section class="reas-wrapper">
