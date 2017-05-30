@@ -6,7 +6,7 @@
         </h1>
         <a href="/" class="logo">Logo</a>
         @include('partials.navigation')
-        <a href="#" class="header-shawl__gobottom-link">
+        <a href="#intro" class="header-shawl__gobottom-link">
             <svg class="header-shawl__gobottom" width="25" height="32" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd">
                     <circle fill-opacity=".95" fill="#FFF" cx="12.5" cy="19.5" r="12.5"/>

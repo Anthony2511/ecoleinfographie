@@ -1,4 +1,4 @@
-<section class="intro">
+<section class="intro" id="intro">
     <div class="intro__content">
         <h2 aria-level="2" role="heading" class="intro__title">@lang('home.becomeGraphicDesigner')</h2>
         <p class="intro__text">

@@ -4,6 +4,7 @@ w.home = {
       init: function () {
         w.sliderProsHome.init();
         this.randomizeBlog();
+        w.scroll.init();
 
       },
 
