@@ -47,8 +47,9 @@ class WorkController extends Controller
         SEO::setTitle($work->title);
         $description = $work->title . ', une réalisation dans le cadre de la formation dispensée à la Haute École de la Province de Liège';
         SEO::setDescription($description);
-        SEO::opengraph()->addImage($work->cover);
-        SEO::opengraph()->setDescription($description);
+    
+        SEO::OpenGraph()->addProperty('type', 'article');
+        SEO::OpenGraph()->addImage($work->image, ['width' => \Image::make($work->image)->width(), 'height' => \Image::make($work->image)->height()]);
         
         $type = Type::with('works')->get();
         

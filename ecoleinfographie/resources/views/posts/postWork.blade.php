@@ -76,14 +76,16 @@
 						<span class="rea-share__label">Partager sur les réseaux sociaux</span>
 						<ul class="social-list-circle">
 							<li class="social-list-circle__item">
-								<a href="https://www.facebook.com/sharer/sharer.php?u={{URL::current()}}&display=page" target="_blank" class="social-list-circle__link facebook" rel="me"><span>Partager le projet « {{ $work->title }} » sur Facebook</span></a>
+								<a href="https://www.facebook.com/sharer/sharer.php?u={{ Url()->current() }}" class="social-list-circle__link facebook" rel="me"><span>Partager l’article sur Facebook</span></a>
 							</li><!--
-                --><li class="social-list-circle__item">
-								<a href="https://twitter.com/home?status={{URL::current()}}" target="_blank" class="social-list-circle__link twitter" rel="me"><span>Partager le projet « {{ $work->title }} » sur Twitter</span></a>
+                    --><li class="social-list-circle__item">
+								<a href="https://twitter.com/home?status={{ Url()->current() }}" class="social-list-circle__link twitter" rel="me"><span>Partager l’article sur Twitter</span></a>
 							</li><!--
-                --><li class="social-list-circle__item">
-								<a href="http://pinterest.com/pin/create/link/?url={{URL::current()}}" target="_blank" class="social-list-circle__link pinterest" rel="me"><span>Partager le projet « {{ $work->title }} » sur Pinterest</span></a>
-							</li>
+                    --><li class="social-list-circle__item">
+								<a href="https://pinterest.com/pin/create/bookmarklet/?media={{ $work->cover }}&url={{ Url()->current() }}&description={{ $work->description }}" class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
+							</li><!--
+                    --><li class="social-list-circle__item">
+								<a href="https://www.linkedin.com/shareArticle?url={{ Url()->current() }}&title={{ $work->title }}" class="social-list-circle__link linkedin" rel="me"><span>Partager l’article sur Linkedin</span></a>
 						</ul>
 					</div>
 					@if(!empty($work->project_link))

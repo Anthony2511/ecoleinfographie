@@ -180,7 +180,7 @@ class Work extends Model
             Utils::storeNewSize($destination_path, $filename, '_middle', $workHomeMiddle);
             Utils::storeNewSize($destination_path, $filename, '_big', $workHomeBig);
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path.'/'.$filename.'.jpg';
+            $this->attributes[$attribute_name] = Url('/') . '/' . $destination_path.'/'.$filename.'.jpg';
         }
         if(strpos($value, 'no-avatar.jpg') !== false || $value == null)
         {
