@@ -593,3 +593,50 @@ div .menu__title-responsive
   .menu-responsive
     .hamburger
       display: none
+
+
+/************************************\
+		NO-JS
+\************************************/
+.no-js
+  .subnav
+    visibility visible
+    opacity 1
+    &:before
+      display: none
+    &__school
+      transform none
+      padding s(10)
+      border none
+      left s(270)
+      top s(50)
+      & li:last-child
+      & .subnav__group
+        margin-bottom 0
+    &__jobs
+      transform none
+      left s(-210)
+      padding s(10)
+      top s(20)
+      & img
+        display: none
+      & .subnav__group
+        margin-bottom 10px
+/*  .subnav
+    visibility visible
+    opacity 1
+    & li
+    & a
+    & span
+      color $cWhite
+    &__jobs
+    &__school
+      border none
+      background none
+      box-shadow none
+    & svg
+    & img
+      display: none
+  .subnav.open
+    transition 0s
+    transform none*/
