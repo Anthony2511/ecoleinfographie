@@ -9,15 +9,15 @@
 @section('content')
 	@include('partials.breadcrumb')
 
-	<section class="course">
+	<section class="course" itemscope itemprop="course" itemtype="http://schema.org/Course">
 		<div class="course__container-top">
 			<div class="course-card">
+				<meta itemprop="provider" content="Haute École d’infographie de la Province de Liège">
+				<meta itemprop="url" content="{{ Url()->current() }}">
 
-
-				{{--<div class="course-card__image-container" style="background-image: url('{{ $imageCourse }}')"></div>--}}
 				<img class="course-card__image" src="{{ $course->getImageCourse('.jpg') }}" width="360" height="417" alt="">
 				<div class="course-card__content">
-					<h2 role="heading" aria-level="2" class="course-card__title">{{ $course->title }}</h2>
+					<h2 role="heading" aria-level="2" class="course-card__title" itemprop="name">{{ $course->title }}</h2>
 
 					<span class="course-card__hour">{{ $course->duration }} heures</span>
 					<span class="course-card__credits">{{ $course->ects }} credits <abbr title="Système européen de transfert et d’accumulation de crédits">ECTS</abbr></span>
@@ -74,7 +74,9 @@
 			</div>
 			<section class="course-description">
 				<h3 role="heading" aria-level="3" class="course-description__title">Description du cours</h3>
-				{!! $course->description !!}
+				<div itemprop="description">
+					{!! $course->description !!}
+				</div>
 			</section>
 		</div>
 		<section class="course-obj">
