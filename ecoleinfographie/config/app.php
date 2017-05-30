@@ -188,7 +188,6 @@ return [
 	    Backpack\CRUD\CrudServiceProvider::class,
 	    Backpack\LangFileManager\LangFileManagerServiceProvider::class,
 	    Cviebrock\EloquentSluggable\ServiceProvider::class,
-	    Backpack\PageManager\PageManagerServiceProvider::class,
         Backpack\Settings\SettingsServiceProvider::class,
         Backpack\PermissionManager\PermissionManagerServiceProvider::class,
     ],
