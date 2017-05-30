@@ -60,8 +60,8 @@
                     </svg>
 
                     <address class="map__address">
-                        Quai Gloesner, 6</br>
-                        4020 - Liège</br>
+                        Quai Gloesner, 6<br>
+                        4020 - Liège<br>
                         Belgique
                     </address>
                 </div>
