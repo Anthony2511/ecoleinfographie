@@ -8,6 +8,8 @@ use App\Models\Tag;
 use App\Models\Like;
 use Illuminate\Http\Request;
 use SEO;
+use App\Http\Controllers\Image;
+
 
 
 class ArticleController extends Controller
@@ -49,7 +51,10 @@ class ArticleController extends Controller
     
         SEO::setTitle($article->title);
         SEO::setDescription($article->introduction);
-        
+        SEO::OpenGraph()->addProperty('type', 'article');
+        SEO::OpenGraph()->addImage($article->image, ['width' => \Image::make($article->image)->width(), 'height' => \Image::make($article->image)->height()]);
+    
+    
         return view('posts.postBlog', [
             'article'                => $article,
             'orientation'            => $this->getOrientation(),
