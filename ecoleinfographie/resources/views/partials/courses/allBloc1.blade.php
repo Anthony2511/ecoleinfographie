@@ -1,6 +1,5 @@
 <table class="program-table program-table--all">
 	<thead class="program-table__thead">
-	<thead class="program-table__thead">
 	<tr>
 		<th class="program-table__orientation" data-sort="string"><span>@lang('programCourse.orientation')</span></th>
 		<th class="program-table__course" data-sort="string" data-sort-default="desc">
