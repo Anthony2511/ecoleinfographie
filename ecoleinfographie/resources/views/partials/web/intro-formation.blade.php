@@ -71,7 +71,7 @@
         </div>
         <div class="formation-infos__text1">
             <strong class="formation-infos__text1__title">Des débuts communs à tous</strong>
-            <p class="formation-infos__text1__text">Dans le bachelier en techniques graphiques, les débuts sont communs à tous les étudiants. C’est ce qu’on appelle le <a href="#bloc1">premier</a> bloc de cours. Ensuite, les étudiants peuvent se spécialiser selon leurs affinités en choisissant leurs cours dans le <a href="#bloc2">deuxième</a> et le <a href="#bloc3">troisième</a> bloc.
+            <p class="formation-infos__text1__text">Dans le bachelier en techniques graphiques, les débuts sont communs à tous les étudiants. C’est ce qu’on appelle le <a href="#web-course">premier</a> bloc de cours. Ensuite, les étudiants peuvent se spécialiser selon leurs affinités en choisissant leurs cours dans le <a href="#bloc2">deuxième</a> et le <a href="#bloc3">troisième</a> bloc.
             </p>
         </div>
     </section>

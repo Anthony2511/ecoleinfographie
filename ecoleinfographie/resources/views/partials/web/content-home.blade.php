@@ -105,13 +105,13 @@
     <strong class="redirect__title">La formation web couvre naturellement l’ensemble des techniques et savoir-faire requis pour exercer ces métiers.</strong>
     <ul class="redirect__list">
         <li class="redirect__item">
-            <a href="#" class="redirect__link" title="">Voir la formation en web</a>
+            <a href="{{ Route('webTraining') }}" class="redirect__link" title="">Voir la formation en web</a>
         </li>
         <li class="redirect__item">
-            <a href="#" class="redirect__link" title="">Voir le programme des cours en web</a>
+            <a href="{{ Route('programWeb') }}" class="redirect__link" title="">Voir le programme des cours en web</a>
         </li>
         <li class="redirect__item">
-            <a href="#" class="redirect__link" title="">Voir les anciens bacheliers travaillant dans le web</a>
+            <a href="{{ Route('parcoursWeb') }}" class="redirect__link" title="">Voir les anciens bacheliers travaillant dans le web</a>
         </li>
     </ul>
 </div>

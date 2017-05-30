@@ -92,7 +92,7 @@
 		des autres options.</strong>
 	<ul class="redirect__list">
 		<li class="redirect__item">
-			<a href="#" class="redirect__link" title="">S’inscrire à la HEPL en infographie</a>
+			<a href="{{ Route('registration') }}" class="redirect__link" title="">S’inscrire à la HEPL en infographie</a>
 		</li>
 		<li class="redirect__item">
 			<a href="#" class="redirect__link" title="">Consulter le programme des cours de la 3D et l’audiovisuel</a>

@@ -44,7 +44,7 @@
     </div>
 </section>
 
-<section class="bloc bloc--2">
+<section class="bloc bloc--2" id="bloc2">
     <div class="bloc__container">
         <h2 role="heading" aria-level="2" class="bloc__title">
             <span>Les cours en web </span>
@@ -115,7 +115,7 @@
     </div>
 </section>
 
-<section class="bloc bloc--3">
+<section class="bloc bloc--3" id="bloc3">
     <div class="bloc__container">
         <h2 role="heading" aria-level="2" class="bloc__title">
             <span>Les cours en web </span>
