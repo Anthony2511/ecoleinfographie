@@ -52,14 +52,6 @@ Route::get('blog/{article}', 'ArticleController@show')->name('article.single');
 Route::get(trans('url.news') . '/{article}', 'NewsController@show')->name('news.single');
 
 
-
-
-// MenuCrud
-Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function () {
-    // Backpack\MenuCRUD
-    CRUD::resource('menu-item', 'MenuItemCrudController');
-});
-
 // Mails
 Route::post('/send-internship-full', 'InternshipController@sendFull')->name('mail-internship-full');
 Route::post('/send-internship-file', 'InternshipController@sendFile')->name('mail-internship-file');
