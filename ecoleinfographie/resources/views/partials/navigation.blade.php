@@ -2,6 +2,7 @@
     <h2 aria-level="2" class="nav__title">
         Menu de navigation principal
     </h2>
+    <a href="#contenu" class="hidden">Aller directement au contenu</a>
     <button  class="hamburger" onclick="this.blur();">
         <span></span>
         <span></span>
