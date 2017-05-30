@@ -34,7 +34,7 @@ class InternshipMailFile extends Mailable
     {
         return $this->view('mails.sendFile')
                     ->subject($this->subjectPdf)
-                    ->from($this->email, $this->name)
+                    ->from($this->emailPdf, $this->namePdf)
                     ->attach($this->filePdf->getRealPath(), [
                         'as'   => 'offre-de-stage-' . $this->companyPdf . '.' . $this->filePdf->getClientOriginalExtension(),
                         'mime' => $this->filePdf->getMimeType()
