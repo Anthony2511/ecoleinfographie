@@ -91,12 +91,14 @@ class ArticleController extends Controller
     {
         $search   = $request->get('search');
         $keywords = explode(" ", $search);
+        $filtered = ['avec', 'le', 'la', 'les', 'mon', 'ton', 'son', 'ma', 'ta', 'ça', 'mets', 'tes', 'ses', 'du', 'de', 'leur', 'on', 'an', 'a', 'the'];
+        $filteredKeywords = array_diff($keywords, $filtered);
         
         $article = Article::query();
-        foreach ($keywords as $word) {
-            $article->where('title', 'LIKE', '%' . $word . '%');
-            /*  ->orWhere('content', 'LIKE', '%' . $word . '%')
-              ->orWhere('introduction', 'LIKE', '%' . $word . '%');*/
+        foreach ($filteredKeywords as $word) {
+            $article->where('title', 'LIKE', '%' . $word . '%')
+             ->orWhere('content', 'LIKE', '%' . $word . '%');
+              /*->orWhere('introduction', 'LIKE', '%' . $word . '%');*/
         }
         
         $articles = $article->published()->paginate(8);
