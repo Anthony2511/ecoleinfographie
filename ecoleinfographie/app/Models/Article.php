@@ -229,7 +229,7 @@ class Article extends Model
             Utils::storeNewSize($destination_path, $filename, '_popular', $imagePopular);
             Utils::storeNewSize($destination_path, $filename, '_popular2x', $imagePopular2x);
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path.'/'.$filename.'.jpg';
+            $this->attributes[$attribute_name] = Url('/') . '/' . $destination_path.'/'.$filename.'.jpg';
         }
         
         if(strpos($value, 'cover-blog.jpg') !== false || $value == null)
