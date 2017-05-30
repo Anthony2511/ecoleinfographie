@@ -32,18 +32,18 @@
     <section class="graduateList">
         <h2 role="heading" aria-level="2" class="graduateList__title">Nos anciens diplômés</h2>
 
-        <ul class="index-rea__filter">
+        <ul class="index-rea__filter" id="anchor">
             <li class="index-rea__filter__item <?php echo (Request::get('orientation') == '') ? 'active' : '' ;?>">
                 <a href="{{ url(trans('url.graduated')) }}" class="index-rea__filter__link">Tous</a>
             </li>
             <li class="index-rea__filter__item <?php echo (Request::get('orientation') == '3D') ? 'active' : '' ;?>">
-                <a href="?orientation=3D" class="index-rea__filter__link">3D/Vidéo</a>
+                <a href="?orientation=3D#anchor" class="index-rea__filter__link">3D/Vidéo</a>
             </li>
             <li class="index-rea__filter__item <?php echo (Request::get('orientation') == '2D') ? 'active' : '' ;?>">
-                <a href="?orientation=2D" class="index-rea__filter__link">Design graphique</a>
+                <a href="?orientation=2D#anchor" class="index-rea__filter__link">Design graphique</a>
             </li>
             <li class="index-rea__filter__item <?php echo (Request::get('orientation') == 'web') ? 'active' : '' ;?>">
-                <a href="?orientation=web" class="index-rea__filter__link">Web</a>
+                <a href="?orientation=web#anchor" class="index-rea__filter__link">Web</a>
             </li>
             <li class="index-rea__filter__item no-effect">
                 <form action="{{ Request::url() }}" method="get" class="select-form">
