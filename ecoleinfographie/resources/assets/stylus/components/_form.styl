@@ -142,6 +142,7 @@
     @extend .buttonLeftToRight
     position: relative
     font-size s($sz8)
+    padding s(15, $sz8) s(30, $sz8)
     font-weight: 900
     letter-spacing 1.3px
     @media screen and (max-width 690px)
@@ -239,3 +240,9 @@
     opacity: 1
     overflow visible
     position: static
+  .form__label
+    top s(5, $sz9)
+    font-size s($sz9)
+    padding 0 s(20, $sz9)
+    transition .3s ease all
+    transition-property top, font-size
