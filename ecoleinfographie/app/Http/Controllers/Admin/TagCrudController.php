@@ -18,7 +18,7 @@ class TagCrudController extends CrudController {
 		*/
         $this->crud->setModel("App\Models\Tag");
         $this->crud->setRoute("admin/tag");
-        $this->crud->setEntityNameStrings('tag', 'tags');
+        $this->crud->setEntityNameStrings('un mot-clé', 'mots-clé');
         
         /*
 		|--------------------------------------------------------------------------

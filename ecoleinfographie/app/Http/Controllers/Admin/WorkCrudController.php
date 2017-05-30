@@ -25,7 +25,7 @@ class WorkCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Work');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/work');
-        $this->crud->setEntityNameStrings('work', 'works');
+        $this->crud->setEntityNameStrings('une réalisation', 'réalisations');
 
         /*
         |--------------------------------------------------------------------------

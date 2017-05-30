@@ -20,7 +20,7 @@ class CourseCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Course');
         $this->crud->setRoute('admin/cours');
-        $this->crud->setEntityNameStrings('cours', 'cours');
+        $this->crud->setEntityNameStrings('un cours', 'cours');
 
         /*
         |--------------------------------------------------------------------------

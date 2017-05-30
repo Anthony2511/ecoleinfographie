@@ -22,7 +22,7 @@ class ArticleCrudController extends CrudController
 		*/
         $this->crud->setModel("App\Models\Article");
         $this->crud->setRoute("admin/article");
-        $this->crud->setEntityNameStrings('article', 'articles');
+        $this->crud->setEntityNameStrings('un article', 'articles');
         
         /*
 		|--------------------------------------------------------------------------
