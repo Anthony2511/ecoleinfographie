@@ -40,14 +40,6 @@
           </li>
           @endrole
 
-          <!-- item PagesManager -->
-          <li>
-            <a href="{{ url(config('backpack.base.route_prefix').'/page') }}">
-              <i class="fa fa-file-o"></i>
-              <span>Pages</span>
-            </a>
-          </li>
-
           <!-- News -->
           @if(auth()->user()->hasRole('administrateur') || auth()->user()->hasRole('professeur'))
           <li class="treeview">
@@ -94,9 +86,6 @@
             </ul>
           </li>
           @endif
-
-          <!-- item MenuCRUD -->
-          <li><a href="{{ url('admin/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
 
           @role('administrateur')
           <!-- settings website -->
