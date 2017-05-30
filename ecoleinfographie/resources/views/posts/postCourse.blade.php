@@ -9,7 +9,7 @@
 @section('content')
 	@include('partials.breadcrumb')
 
-	<section class="course" itemscope itemprop="course" itemtype="http://schema.org/Course">
+	<section class="course" itemscope itemtype="http://schema.org/Course">
 		<div class="course__container-top">
 			<div class="course-card">
 				<meta itemprop="provider" content="Haute École d’infographie de la Province de Liège">
