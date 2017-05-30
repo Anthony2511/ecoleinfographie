@@ -51,8 +51,19 @@
 
 	<div class="blogArticle__container">
 		<article class="blogArticle" itemscope itemtype="http://schema.org/BlogPosting">
+			<!-- Microdatas base for articles -->
 			<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage">
-
+			<div class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+				<meta itemprop="name" content="Haute École d’infographie de la Province de Liège">
+				<meta itemprop="logo" content="none.jpg">
+			</div>
+			<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" class="hidden">
+				{{ $image = $article->getImageArticle('.jpg') }}
+				<meta itemprop="image" content="{{ Url('/') . '/' . $image }}">
+				<meta itemprop="url" content="{{ Url('/') . '/' . $image }}">
+				<meta itemprop="width" content="{{ Image::make($image)->width() }}">
+				<meta itemprop="height" content="{{ Image::make($image)->height() }}">
+			</div>
 
 			<header class="blogArticle__header">
 				<h2 role="heading" aria-level="2" class="blogArticle__title" itemprop="headline">{{ $article->title }}</h2>
