@@ -23,7 +23,7 @@
 			<figure class="news-card__figure">
 				<img src="{{ $article->getImageNews('_cards.jpg') }}" width="503" height="447" alt="" class="news-card__img">
 			</figure>
-			<time class="news-card__time" datetime="{{ $article->date }}" pubdate>{{ $article->getDateForHuman() }}</time>
+			<time class="news-card__time" datetime="{{ $article->date }}">{{ $article->getDateForHuman() }}</time>
 		</div>
 		<a href="{{ Route('news') . '/' . $article->slug }}" class="news-card__link"><span>Lire l’article {{ $article->title }}</span></a>
 	</article>

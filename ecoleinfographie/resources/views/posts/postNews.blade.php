@@ -47,7 +47,7 @@
 				</figure>
 				<div class="news__title-wrapper">
 					<h2 role="heading" aria-level="2" class="news__title">{{ $article->title }}</h2>
-					<time class="news__date" datetime="{{ $article->date }}" pubdate>Publié le {{ $article->getDateForHuman() }}</time>
+					<time class="news__date" datetime="{{ $article->date }}">Publié le {{ $article->getDateForHuman() }}</time>
 				</div>
 			</div>
 			<div class="news__content">
@@ -100,7 +100,7 @@
 						<div class="comment__header">
 							<img src="https://api.adorable.io/avatars/65/{{ md5($comment->email) }}.png" width="65" height="65" alt="Avatar généré automatiquement pour l’utilisateur {{ $comment->user_name }}" class="comment__img">
 							<strong class="comment__name">{{ $comment->user_name }}</strong>
-							<time datetime="#" class="comment__date">{{ $comment->getDate() }}</time>
+							<time datetime="{{ $comment->created_at }}" class="comment__date">{{ $comment->getDate() }}</time>
 						</div>
 						<p class="comment__text">
 							{{ $comment->content }}
