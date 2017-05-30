@@ -232,19 +232,16 @@
 
 
 .slider-pros__article--hidden
-  visibility hidden
+  display none
   @media screen and (max-width: 1024px)
     visibility visible
   & .slider-pros__description__inside
     opacity 0
-    transform translate3D(-100%, 0, 0)
+    transform translate3D(0, 0, 0)
     transition .4s ease all
     @media screen and (max-width: 1024px)
       opacity 1
       transform none
-
-
-
 
 .slider-pros__article--right
   & .slider-pros__description__inside
@@ -258,6 +255,8 @@
     transform translate3D(-100%, 0, 0)
     @media screen and (max-width: 1024px)
       transform none
+  & .slider-pros__description__link
+    visibility hidden
 
 .slider-pros__article--left
   & .slider-pros__description__inside
