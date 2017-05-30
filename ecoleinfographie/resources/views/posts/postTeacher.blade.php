@@ -84,7 +84,6 @@
 					@include('partials.article-card')
 				@endforeach
 
-				</article>
 			</section>
 			@endif
 		</section>
