@@ -46,6 +46,7 @@
 					</figure>
 					<a href="mailto:{{ $teacher->email }}" class="prof__email"><span class="prof__email__label">Contacter par email <span class="prof__email__hidden">{{ $teacher->fullname }}</span></span></a>
 
+					@if(!empty($teacher->social) && count($teacher->social))
 					<ul class="social-list-circle">
 						@foreach($teacher->social as $row)
 							<li class="social-list-circle__item">
@@ -53,7 +54,7 @@
 							</li>
 						@endforeach
 					</ul>
-
+					@endif
 				</div>
 				<div class="prof__right">
 					<h2 role="heading" aria-level="2" class="prof__title"><span>Le profile de </span>{{ $teacher->fullname }}</h2>
