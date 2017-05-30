@@ -152,7 +152,7 @@
 					<li class="reas__item">
 						<a href='{{ Url('/') . '/'  . trans('url.works') . '/' . $get3dWork->slug }}' class="reas__link">
 							<figure class="reas__figure">
-								<img class="reas__img" src="{{ $get3dWork->getImageWork('_workMore.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $get3dWork->title }} » réalisée dans l’orientation {{ $orientations[$get3dWork->orientation] }} en {{ $get3dWork->year }} à la Haute École de la Province de Liège.">
+								<img class="reas__img" src="{{ $get3dWork->getImageWork('_more.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $get3dWork->title }} » réalisée dans l’orientation {{ $orientations[$get3dWork->orientation] }} en {{ $get3dWork->year }} à la Haute École de la Province de Liège.">
 								<figcaption class="reas__figcaption">
 									<div class="reas__section">
 										<span class="reas__section__name">
@@ -177,7 +177,7 @@
 					<li class="reas__item">
 						<a href='{{ Url('/') . '/'  . trans('url.works') . '/' . $get2dWork->slug }}' class="reas__link">
 							<figure class="reas__figure">
-								<img class="reas__img" src="{{ $get2dWork->getImageWork('_workMore.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $get2dWork->title }} » réalisée dans l’orientation {{ $orientations[$get2dWork->orientation] }} en {{ $get2dWork->year }} à la Haute École de la Province de Liège.">
+								<img class="reas__img" src="{{ $get2dWork->getImageWork('_more.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $get2dWork->title }} » réalisée dans l’orientation {{ $orientations[$get2dWork->orientation] }} en {{ $get2dWork->year }} à la Haute École de la Province de Liège.">
 								<figcaption class="reas__figcaption">
 									<div class="reas__section">
 										<span class="reas__section__name">
@@ -202,7 +202,7 @@
 					<li class="reas__item">
 						<a href='{{ Url('/') . '/'  . trans('url.works') . '/' . $getWebWork->slug }}' class="reas__link">
 							<figure class="reas__figure">
-								<img class="reas__img" src="{{ $getWebWork->getImageWork('_workMore.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $getWebWork->title }} » réalisée dans l’orientation {{ $orientations[$getWebWork->orientation] }} en {{ $getWebWork->year }} à la Haute École de la Province de Liège.">
+								<img class="reas__img" src="{{ $getWebWork->getImageWork('_more.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $getWebWork->title }} » réalisée dans l’orientation {{ $orientations[$getWebWork->orientation] }} en {{ $getWebWork->year }} à la Haute École de la Province de Liège.">
 								<figcaption class="reas__figcaption">
 									<div class="reas__section">
 										<span class="reas__section__name">
