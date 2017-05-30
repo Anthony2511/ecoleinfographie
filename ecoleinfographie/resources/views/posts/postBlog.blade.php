@@ -52,7 +52,6 @@
 	<div class="blogArticle__container">
 		<article class="blogArticle" itemscope itemtype="http://schema.org/BlogPosting">
 			<!-- Microdatas base for articles -->
-			<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage">
 			<div class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 				<meta itemprop="name" content="Haute École d’infographie de la Province de Liège">
 				<meta itemprop="logo" content="none.jpg">
@@ -159,7 +158,7 @@
 							<ul class="footerArticle__follow__list">
 								@if(!empty($article->teacher->social))
 									@foreach($article->teacher->social as $social)
-										<li class="footerArticle__follow__item"><a href="{{ $social['url'] }}" target="_blank&" class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers le {{ strtoupper($social['type']) }} de {{ $article->teacher->fullname }}</span></a></li>
+										<li class="footerArticle__follow__item"><a href="{{ $social['url'] }}" target="_blank" class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers le {{ strtoupper($social['type']) }} de {{ $article->teacher->fullname }}</span></a></li>
 									@endforeach
 								@endif
 							</ul>
@@ -289,7 +288,7 @@
 						<div class="comment__header">
 							<img src="https://api.adorable.io/avatars/65/{{ md5($comment->email) }}.png" width="65" height="65" alt="Avatar généré automatiquement pour l’utilisateur {{ $comment->user_name }}" class="comment__img">
 							<strong class="comment__name">{{ $comment->user_name }}</strong>
-							<time datetime="#" class="comment__date">{{ $comment->getDate() }}</time>
+							<time datetime="{{ $comment->created_at }}" class="comment__date">{{ $comment->getDate() }}</time>
 						</div>
 						<p class="comment__text">
 							{{ $comment->content }}
