@@ -33,6 +33,9 @@ class NewsController extends Controller
         SEO::setTitle($article->title);
         SEO::setDescription($article->metadescription);
         SEOMeta::setKeywords($article->keywords);
+    
+        SEO::OpenGraph()->addProperty('type', 'article');
+        SEO::OpenGraph()->addImage($article->image, ['width' => \Image::make($article->image)->width(), 'height' => \Image::make($article->image)->height()]);
         
         $comments         = $article->commentNews()->paginate(12);
         $numberOfComments = $article->commentNews()->count();
