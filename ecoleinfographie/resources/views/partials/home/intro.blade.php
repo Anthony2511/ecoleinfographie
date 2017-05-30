@@ -6,13 +6,13 @@
         </p>
         <ul class="intro__list">
             <li class="intro__item">
-                <a href="" class="intro__link">@lang('home.webTraining')</a>
+                <a href="{{ Route('webTrades') }}" class="intro__link">@lang('home.webTraining')</a>
             </li>
             <li class="intro__item">
-                <a href="#" class="intro__link">@lang('home.2dTraining')</a>
+                <a href="{{ Route('webTrades') }}" class="intro__link">@lang('home.2dTraining')</a>
             </li>
             <li class="intro__item">
-                <a href="#" class="intro__link">@lang('home.3dTraining')</a>
+                <a href="{{ Route('webTrades') }}" class="intro__link">@lang('home.3dTraining')</a>
             </li>
         </ul>
     </div>

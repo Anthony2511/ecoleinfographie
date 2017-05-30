@@ -11,7 +11,7 @@
         </div>
         <div class="location__coordinates">
             <a href="tel:{{ str_replace(' ', '', Config::get('settings.contact_tel')) }}" class="location__tel">{{ Config::get('settings.contact_tel') }}</a>
-            <a href="#contact" class="location__mail">@lang('home.contactus')</a>
+            <a href="{{ Route('contact') }}" class="location__mail">@lang('home.contactus')</a>
             <div class="location__social">
                 <a href="{{ Config::get('settings.social_fb') }}" rel="external" class="location__social-link location__social-facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35">
