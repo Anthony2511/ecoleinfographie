@@ -171,7 +171,7 @@ class News extends Model
             Utils::storeNewSize($destination_path, $filename, '_featured', $imageFeatured);
             Utils::storeNewSize($destination_path, $filename, '_cards', $imageCards);
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path.'/'.$filename.'.jpg';
+            $this->attributes[$attribute_name] = Url('/') . '/' . $destination_path.'/'.$filename.'.jpg';
         }
         
         if(strpos($value, 'cover-blog.jpg') !== false || $value == null)
