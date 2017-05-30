@@ -29,17 +29,6 @@
             </a>
           </li>
 
-          @role('administrateur')
-          <!-- Item LangFileManager -->
-          <li class="treeview">
-            <a href="#"><i class="fa fa-globe"></i> <span>Translations</span> <i class="fa fa-angle-left pull-right"></i></a>
-            <ul class="treeview-menu">
-              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/language') }}"><i class="fa fa-flag-checkered"></i> Languages</a></li>
-              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/language/texts') }}"><i class="fa fa-language"></i> Site texts</a></li>
-            </ul>
-          </li>
-          @endrole
-
           <!-- News -->
           @if(auth()->user()->hasRole('administrateur') || auth()->user()->hasRole('professeur'))
           <li class="treeview">
@@ -64,14 +53,6 @@
           </li>
 
           @if(auth()->user()->hasRole('administrateur') || auth()->user()->hasRole('professeur'))
-          <!-- professeurs -->
-          <li>
-            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/teacher') }}"><i class="fa fa-address-card"></i><span>Professeurs</span></a></li>
-
-          <!-- cours -->
-          <li>
-            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/cours') }}"><i class="fa fa-puzzle-piece"></i><span>Liste des cours</span></a></li>
-
           <!-- étudiants -->
           <li>
             <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/student') }}"><i class="fa fa-graduation-cap"></i><span>Étudiants et anciens</span></a></li>
@@ -85,6 +66,15 @@
               <li><a href="{{ url('admin/type') }}"><i class="fa fa-folder"></i> <span>Type de projet</span></a></li>
             </ul>
           </li>
+
+            <!-- professeurs -->
+            <li>
+              <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/teacher') }}"><i class="fa fa-address-card"></i><span>Professeurs</span></a></li>
+
+            <!-- cours -->
+            <li>
+              <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/cours') }}"><i class="fa fa-puzzle-piece"></i><span>Liste des cours</span></a></li>
+
           @endif
 
           @role('administrateur')
@@ -94,14 +84,25 @@
           <!-- Users, Roles Permissions -->
           @role('administrateur')
           <li class="treeview">
-            <a href="#"><i class="fa fa-group"></i> <span>Users, Roles, Permissions</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <a href="#"><i class="fa fa-group"></i> <span>Utilisateurs et permissions</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
-              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/user') }}"><i class="fa fa-user"></i> <span>Users</span></a></li>
-              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/role') }}"><i class="fa fa-group"></i> <span>Roles</span></a></li>
-              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/user') }}"><i class="fa fa-user"></i> <span>Utilisateurs</span></a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/role') }}"><i class="fa fa-group"></i> <span>Rôles</span></a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/permission') }}"><i class="fa fa-key"></i> <span>Persmissions</span></a></li>
             </ul>
           </li>
          @endrole
+
+        @role('administrateur')
+        <!-- Item LangFileManager -->
+          <li class="treeview">
+            <a href="#"><i class="fa fa-globe"></i> <span>Traductions</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/language') }}"><i class="fa fa-flag-checkered"></i>Langages</a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/language/texts') }}"><i class="fa fa-language"></i>Texte du site</a></li>
+            </ul>
+          </li>
+        @endrole
 
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
