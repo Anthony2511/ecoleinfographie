@@ -69,11 +69,11 @@
             </figure>
         </article>
         <div class="slideButtons slider-pros-buttons">
-            <button class="slideButtons__next arrow-circle-container">
+            <button class="slideButtons__next arrow-circle-container" onclick="this.blur()">
                 {!! file_get_contents(asset('svg/arrow-circle-right.svg')) !!}
                 <span>Article suivant</span>
             </button>
-            <button class="slideButtons__prev arrow-circle-container">
+            <button class="slideButtons__prev arrow-circle-container" onclick="this.blur()">
                 {!! file_get_contents(asset('svg/arrow-circle-left.svg')) !!}
                 <span>Article précédent</span>
             </button>
