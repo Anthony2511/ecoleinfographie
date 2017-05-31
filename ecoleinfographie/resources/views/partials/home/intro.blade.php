@@ -16,5 +16,5 @@
             </li>
         </ul>
     </div>
-    <img class="intro__img" src="../img/image-infographiste.jpg" width="570" height="638" alt="@lang('home.altIntro')">
+    <img class="intro__img" src="../img/image-infographiste.jpg" width="570" height="638" alt="">
 </section>
