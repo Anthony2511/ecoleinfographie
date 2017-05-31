@@ -3,45 +3,26 @@ w.asideBlog = {
     // Require vendor/lightSlider
 
     init: function () {
-        this.blogSearch();
         this.categoryTrigger();
         this.allTags();
     },
 
-
-
-    blogSearch: function floatLabels() {
-        var inputFields = $('.blog-search__input');
-        inputFields.each(function(){
-            var singleInput = $(this);
-            //check if user is filling one of the form fields
-            checkVal(singleInput);
-            singleInput.on('change keyup click focus', function(){
-                checkVal(singleInput);
-            });
-        });
-
-
-        function checkVal(inputField) {
-            ( inputField.val() == '' ) ? inputField.parent().removeClass('float') : inputField.parent().addClass('float');
-        };
-        inputFields.on('click', (function () {
-            $(this).parent().addClass('float');
-        }));
-    },
-
     categoryTrigger: function () {
-        var buttonCat = $('.blog-category__list'),
+        var btnCat = $('.blog-category__list'),
             sublistCat = $('.blog-category__sublist'),
-            totalHeight = buttonCat.outerHeight() + sublistCat.outerHeight();
+            labelCategory = $('.blog-category__main-item'),
+            btnHeight = 69;
+            /*totalHeight = btnCat.outerHeight() + sublistCat.outerHeight();
+            totalSublit = btnCat.find('#'*/
 
-        buttonCat.click(function () {
+        btnCat.click(function () {
             if($(this).hasClass('triggerOpen')){
                 $(this).removeClass('triggerOpen');
-                $(this).css('height', '69px');
+                $(this).css('height', btnHeight);
             } else{
                 $(this).addClass('triggerOpen');
-                $(this).css('height', totalHeight);
+                var totalHeight = $(this).find(sublistCat).outerHeight() + btnHeight;
+                $(this).css('height', totalHeight );
             }
         });
     },

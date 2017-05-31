@@ -58,5 +58,5 @@ w.realisations = {
                 }
             })
         })
-    },
+    }
 }
