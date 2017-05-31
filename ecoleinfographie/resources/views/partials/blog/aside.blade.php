@@ -6,7 +6,7 @@
 
             {{ Form::open(['action' => ['ArticleController@autocomplete'], 'method' => 'GET', 'class' => 'blog-search__form', 'url' => Route('blog').'#anchor', 'role' => 'search']) }}
                 <label for="search-blog" class="blog-search__label">Je recherche...</label>
-                <input type="search" class="blog-search__input" name="search" id="search-blog">
+                <input type="search" class="blog-search__input floatLabel" name="search" id="search-blog" value="">
                 <button class="blog-search__submit"><span>Lancer la recherche</span></button>
             {{ Form::close() }}
         </div>

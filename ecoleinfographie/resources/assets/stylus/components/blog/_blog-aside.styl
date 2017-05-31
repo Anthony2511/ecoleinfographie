@@ -113,16 +113,15 @@
       @extend .hidden
 
 // Search effect on click
-.float
-  .blog-search__label
-    top 12%
-    font-size s($sz9)
-    padding 0 s(12, $sz9)
-    transition .3s ease all
-    transition-property top, font-size
-  .blog-search__input
-    padding-top s(12)
-    line-height 0;
+.blog-search__label.active
+  top 12%
+  font-size s($sz9)
+  padding 0 s(12, $sz9)
+  transition .3s ease all
+  transition-property top, font-size
+.blog-search__label.active ~ .blog-search__input
+  padding-top s(12)
+  line-height 0;
 
 /************************************\
   CATEGORY

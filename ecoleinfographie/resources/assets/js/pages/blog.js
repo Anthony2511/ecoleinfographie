@@ -4,6 +4,7 @@ w.blog = {
     init: function () {
         w.asideBlog.init();
         this.autocomplete();
+        w.floatLabel.init();
     },
 
     // getElements: function () {
@@ -17,7 +18,6 @@ w.blog = {
 
     // FUNCTIONS
     autocomplete: function () {
-        console.log('jqueryUiAutomplete Charged');
         $(function () {
             $("#search-blog").autocomplete({
                 source: "blog/search/autocomplete",
