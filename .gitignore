@@ -10,3 +10,5 @@ Homestead.yaml
 .DS_Store
 /resources
 /design
+/ecoleinfographie/app/Analytics
+/ecoleinfographie/storage/app/analytics/service-account-credentials.json
