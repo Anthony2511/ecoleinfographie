@@ -9,7 +9,7 @@ class Trending
 {
     public function week()
     {
-        return $this->getResults($limit = 5);
+        return $this->getResults($days = 15, $limit = 5);
     }
     
     protected function getResults($days, $limit = 5)
