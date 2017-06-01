@@ -37,7 +37,7 @@
                 </ul>
                 <ul class="subnav__group">
                     <li>
-                        <a href="" class="subnav__jobs__job">
+                        <a href="#" class="subnav__jobs__job">
                             <span class="subnav__jobs__job__title subnav__jobs__job__title--DG">
                                 Les métiers du design graphique
                             </span>
@@ -48,19 +48,19 @@
                     </li>
                     <li class="subnav__link-wrapper">
                         <div class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en design graphique</span></a>
+                            <a href="#" class="subnav__jobs__link"><span>Voir </span>La formation <span>en design graphique</span></a>
                         </div>
                         <div class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en design graphique</span></a>
+                            <a href="#" class="subnav__jobs__link"><span>Voir </span>Le programme <span>en design graphique</span></a>
                         </div>
                         <div class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en design graphique</span></a>
+                            <a href="#" class="subnav__jobs__link"><span>Voir </span>Les anciens <span>en design graphique</span></a>
                         </div>
                     </li>
                 </ul>
                 <ul class="subnav__group">
                     <li>
-                        <a href="" class="subnav__jobs__job">
+                        <a href="#" class="subnav__jobs__job">
                             <span class="subnav__jobs__job__title subnav__jobs__job__title--3D">
                                 Les métiers de la 3D et de l’ audiovisuel
                             </span>
@@ -71,13 +71,13 @@
                     </li>
                     <li class="subnav__link-wrapper">
                         <div class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>La formation <span>en 3D et audiovisuel</span></a>
+                            <a href="#" class="subnav__jobs__link"><span>Voir </span>La formation <span>en 3D et audiovisuel</span></a>
                         </div>
                         <div class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>Le programme<span> en 3D et audiovisuel</span></a>
+                            <a href="#" class="subnav__jobs__link"><span>Voir </span>Le programme<span> en 3D et audiovisuel</span></a>
                         </div>
                         <div class="subnav__li">
-                            <a href="" class="subnav__jobs__link"><span>Voir </span>Les anciens<span> en 3D et audiovisuel</span></a>
+                            <a href="#" class="subnav__jobs__link"><span>Voir </span>Les anciens<span> en 3D et audiovisuel</span></a>
                         </div>
                     </li>
                 </ul>
@@ -101,10 +101,10 @@
                         <a href="{{ Route('news') }}" id="actualité">L’actualité</a>
                     </li>
                     <li>
-                        <a href="">Les commodités</a>
+                        <a href="#">Les commodités</a>
                     </li>
                     <li>
-                        <a href="">Le matériel et les batiments</a>
+                        <a href="#">Le matériel et les batiments</a>
                     </li>
                     <li>
                         <a href="{{ Route('contact') }}">Contactez-nous</a>
