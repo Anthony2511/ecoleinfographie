@@ -9,6 +9,7 @@ use App\Models\Like;
 use Illuminate\Http\Request;
 use SEO;
 use App\Http\Controllers\Image;
+use Analytics;
 
 
 
@@ -37,6 +38,7 @@ class ArticleController extends Controller
         if ($request->has('tag')) {
             return $this->getTags();
         }
+    
         
         return view('pages.blog', [
         ], $this->getViewData($articles));
@@ -63,8 +65,8 @@ class ArticleController extends Controller
             'subCategories3d'        => $this->getSubCategories3d(),
             'comments'               => $comments,
             'numberOfComments'       => $numberOfComments,
-            'getMostPopularArticles' => $this->getMostPopularArticles(),
-            'getAllTags'             => $this->getAllTags()
+            'getAllTags'             => $this->getAllTags(),
+            'populars' => $this->getMostPopularArticlesAnalytics()
         ]);
     }
     
@@ -77,7 +79,7 @@ class ArticleController extends Controller
             'subCategories2d'        => $this->getSubCategories2d(),
             'subCategories3d'        => $this->getSubCategories3d(),
             'getAllTags'             => $this->getAllTags(),
-            'getMostPopularArticles' => $this->getMostPopularArticles()
+            'populars' => $this->getMostPopularArticlesAnalytics()
         ];
     }
     
@@ -91,6 +93,7 @@ class ArticleController extends Controller
         
         return view('pages.blog', $this->getViewData($articles));
     }
+    
     
     public function search($request)
     {
@@ -167,7 +170,8 @@ class ArticleController extends Controller
         return $getAllTags;
     }
     
-    public function getMostPopularArticles()
+    // Get popular articles by comments
+    /*public function getMostPopularArticles()
     {
         $getMostPopularArticles = Article::published()
                                   ->has('comments')
@@ -179,7 +183,28 @@ class ArticleController extends Controller
                                   ->get();
         
         return $getMostPopularArticles;
+    }*/
+    
+    // Get popular articles by Analytics
+    public function getMostPopularArticlesAnalytics()
+    {
+    
+        $trending = app('App\Services\Trending')->week()->toArray();
+        $allArticles = Article::query()->get()->toArray();
+        $populars = [];
+    
+        foreach ($trending as $ar2){
+            foreach ($allArticles as $ar1){
+                if(basename($ar2['url']) == $ar1['slug']){
+                    $results = array_merge($ar1, $ar2);
+                    array_push($populars, $results);
+                }
+            }
+        }
+        
+        return $populars;
     }
+    
     
     public function getOrientation()
     {
@@ -216,6 +241,8 @@ class ArticleController extends Controller
         
         return \Response::json($results);
     }
+    
+    
     
     
 }
