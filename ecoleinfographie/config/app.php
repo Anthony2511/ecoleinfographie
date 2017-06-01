@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://ecoleinfographie.app'),
+    'url' => env('APP_URL', 'http://ecoleinfographie.be'),
 
     /*
     |--------------------------------------------------------------------------
