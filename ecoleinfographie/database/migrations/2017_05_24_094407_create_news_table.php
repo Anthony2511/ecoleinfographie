@@ -16,14 +16,14 @@ class CreateNewsTable extends Migration
         Schema::create('news', function(Blueprint $table) {
             $table->increments('id');
             $table->string('slug')->unique();
-            $table->string('title', 255);
+            $table->string('title', 191);
             $table->date('date');
             $table->text('content');
-            $table->string('image', 255);
+            $table->string('image', 191);
             $table->enum('status', array('BROUILLON', 'PUBLIÉ'))->default('BROUILLON');
             $table->boolean('featured')->default(false);
-            $table->string('metadescription', 255);
-            $this->string('keywords', 1000);
+            $table->string('metadescription', 191);
+            $this->text('keywords', 1000);
             $table->timestamps();
         });
     }

@@ -16,17 +16,17 @@ class CreateWorksTable extends Migration
         Schema::create('works', function(Blueprint $table) {
             $table->increments('id');
             $table->string('slug')->unique();
-            $table->string('title', 255);
-            $table->string('orientation', 255);
+            $table->string('title', 191);
+            $table->string('orientation', 191);
             $table->integer('year');
-            $table->string('project_link', 255)->nullable();
-            $table->string('view3d', 512)->nullable();
-            $table->string('video', 512)->nullable();
-            $table->string('cover', 255);
+            $table->string('project_link', 191)->nullable();
+            $table->string('view3d', 191)->nullable();
+            $table->text('video', 512)->nullable();
+            $table->string('cover', 191);
             $table->text('images')->nullable();
             $table->text('description');
             $table->text('other_description');
-            $table->string('other_link', 255)->nullable();
+            $table->string('other_link', 191)->nullable();
             $table->integer('type_id')->unsigned();
             $table->timestamps();
         });
