@@ -19,6 +19,7 @@
         "laravel/tinker": "~1.0",
         "rtconner/laravel-likeable": "~1.2",
         "spatie/laravel-analytics": "^3.0",
+        "spatie/laravel-sitemap": "^2.2",
         "spatie/laravel-translatable": "^1.2"
     },
     "require-dev": {

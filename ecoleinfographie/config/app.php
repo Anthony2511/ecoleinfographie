@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://ecoleinfographie.app'),
 
     /*
     |--------------------------------------------------------------------------
@@ -173,6 +173,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Conner\Likeable\LikeableServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
+        Spatie\Sitemap\SitemapServiceProvider::class,
         /*
         * Application Service Providers...
         */
