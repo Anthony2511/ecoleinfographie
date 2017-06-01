@@ -47,13 +47,21 @@
     <section class="blog-popular">
         <h3 role="heading" aria-level="3" class="blog-popular__title">Sujets populaire</h3>
         <ul class="blog-popular__list">
-            @foreach($getMostPopularArticles as $key => $article)
+            @foreach($populars as $most)
+
+            <?php
+                $basePath = 'uploads/articles/';
+                $fullname = pathinfo($most['image'], PATHINFO_FILENAME);
+                $imageArticle1x = $basePath . $fullname . '_popular.jpg';
+                $imageArticle2x = $basePath . $fullname . '_popular2x.jpg';
+            ?>
+
             <li class="blog-popular__item">
                 <figure class="blog-popular__figure">
-                    <img src="{{ $article->getImageArticle('_popular.jpg') }}" width="56" height="54" alt="" class="blog-popular__img" srcset="{{ $article->getImageArticle('_popular2x.jpg') }} 2x">
-                    <figcaption class="blog-popular__figcaption">{{ str_limit($article->title, 45, '…') }}</figcaption>
+                    <img src="{{ URL('/') . '/' . $imageArticle1x }}" width="56" height="54" alt="" class="blog-popular__img" srcset="{{  URL('/') . '/' . $imageArticle2x }} 2x">
+                    <figcaption class="blog-popular__figcaption">{{ str_limit($most['title'][App::getLocale()], 45, '…') }}</figcaption>
                 </figure>
-                <a href="{{ Route('blog') . '/' . $article->slug }}" class="blog-popular__link"><span>Vers l’article populaire « {{ $article->title }} »</span></a>
+                <a href="{{ Route('blog') . '/' . $most['slug'] }}" class="blog-popular__link"><span>Vers l’article populaire « {{ $most['title'][App::getLocale()] }} »</span></a>
             </li>
             @endforeach
         </ul>
