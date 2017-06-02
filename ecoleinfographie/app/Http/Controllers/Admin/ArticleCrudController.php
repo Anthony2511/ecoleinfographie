@@ -52,6 +52,9 @@ class ArticleCrudController extends CrudController
             'attribute' => 'name',
             'model'     => "App\Models\Category"
         ]);
+    
+        // ------ CRUD BUTTONS
+        $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
         
         // ------ CRUD FIELDS
         $this->crud->addField([
