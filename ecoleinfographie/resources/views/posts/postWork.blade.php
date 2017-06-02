@@ -149,6 +149,41 @@
 		</article>
 
 
+
+
+		<section class="rea-others rea-others--same">
+			<h2 role="heading" aria-level="2" class="rea-others__title">Découvrir d’autre {{ $work->type->name }}</h2>
+			<ul class="reas" id="reas">
+				@foreach($getSameType as $sameType)
+				<li class="reas__item">
+					<a href='{{ Url('/') . '/'  . trans('url.works') . '/' . $sameType->slug }}' class="reas__link">
+						<figure class="reas__figure">
+							<img class="reas__img" src="{{ $sameType->getImageWork('_more.jpg') }}" width="385" height="223" alt="Image de la réalisation « {{ $sameType->title }} » réalisée dans l’orientation {{ $orientations[$sameType->orientation] }} en {{ $sameType->year }} à la Haute École de la Province de Liège.">
+							<figcaption class="reas__figcaption">
+								<div class="reas__section">
+									<span class="reas__section__name">
+										<span class="reas__section__name-text">{{ $orientations[$sameType->orientation] }}</span>
+									</span>
+								</div>
+								<div class="reas__desc">
+									<div class="reas__desc-wrapper">
+										<strong class="reas__desc__name">{{ $sameType->title }}</strong>
+
+										<span class="reas__desc__author">
+											Par @foreach($work->students as $student)
+												{{ $student->fullname }}
+											@endforeach
+										</span>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				@endforeach
+
+			</ul>
+		</section>
 		<section class="rea-others">
 			<h2 role="heading" aria-level="2" class="rea-others__title">Découvrir d’autre projets</h2>
 			<ul class="reas" id="reas">

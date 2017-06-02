@@ -52,14 +52,22 @@ class WorkController extends Controller
         SEO::OpenGraph()->addImage($work->cover, ['width' => \Image::make($work->cover)->width(), 'height' => \Image::make($work->cover)->height()]);
         
         $type = Type::with('works')->get();
+        $getWebWork = Work::whereNotIn('id', [$work->id])->where('orientation', 'web')->inRandomOrder()->limit(1)->first();
+        $get2dWork = Work::whereNotIn('id', [$work->id])->where('orientation', '2D')->inRandomOrder()->limit(1)->first();
+        $get3dWork = Work::whereNotIn('id', [$work->id])->where('orientation', '3D')->inRandomOrder()->limit(1)->first();
+        
+        $getSameType = Work::whereHas('type', function ($query) use ($work){
+            $query->where('slug', $work->type->slug);
+        })->whereNotIn('id', [$work->id])->inRandomOrder()->limit(3)->get();
         
         return view('posts.postWork', [
             'work'         => $work,
             'orientations' => $this->getOrientation(),
-            'get3dWork'    => $this->get3dWork($work->id),
-            'get2dWork'    => $this->get2dWork($work->id),
-            'getWebWork'   => $this->getWebWork($work->id),
-            'getType'      => $type
+            'get3dWork'    => $get3dWork,
+            'get2dWork'    => $get2dWork,
+            'getWebWork'   => $getWebWork,
+            'getType'      => $type,
+            'getSameType' => $getSameType
         ]);
     }
     
@@ -130,26 +138,5 @@ class WorkController extends Controller
         } else if ($request->has('skill')) {
             return '&skill=' . $request->get('skill');
         }
-    }
-    
-    public function get3dWork($id)
-    {
-        $workFrom3D = Work::whereNotIn('id', [$id])->where('orientation', '3D')->inRandomOrder()->limit(1)->first();
-        
-        return $workFrom3D;
-    }
-    
-    public function get2dWork($id)
-    {
-        $workFrom2D = Work::whereNotIn('id', [$id])->where('orientation', '2D')->inRandomOrder()->limit(1)->first();
-        
-        return $workFrom2D;
-    }
-    
-    public function getWebWork($id)
-    {
-        $workFromWeb = Work::whereNotIn('id', [$id])->where('orientation', 'web')->inRandomOrder()->limit(1)->first();
-        
-        return $workFromWeb;
     }
 }
