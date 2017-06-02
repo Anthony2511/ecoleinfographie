@@ -36,6 +36,7 @@
             <ul class="treeview-menu">
               <li><a href="{{ url('admin/news') }}"><i class="fa fa-newspaper-o"></i> <span>Articles</span></a></li>
               <li><a href="{{ url('admin/commentnews') }}"><i class="fa fa-comments-o"></i> <span>Commentaires</span></a></li>
+              <li><a href="{{ url('admin/news/create') }}"><i class="fa fa-plus"></i> <span>Ajouter une actualité</span></a></li>
             </ul>
           </li>
           @endif
@@ -49,6 +50,7 @@
               <li><a href="{{ url('admin/tag') }}"><i class="fa fa-tag"></i> <span>Tags</span></a></li>
               <li><a href="{{ url('admin/author') }}"><i class="fa fa-pencil"></i> <span>Auteurs externe</span></a></li>
               <li><a href="{{ url('admin/comment') }}"><i class="fa fa-comments-o"></i> <span>Commentaires</span></a></li>
+              <li><a href="{{ url('admin/article/create') }}"><i class="fa fa-plus"></i> <span>Ajouter un article</span></a></li>
             </ul>
           </li>
 
@@ -64,6 +66,7 @@
               <li><a href="{{ url('admin/work') }}"><i class="fa fa-paint-brush"></i> <span>Travaux</span></a></li>
               <li><a href="{{ url('admin/skill') }}"><i class="fa fa-cogs"></i> <span>Compétences technique</span></a></li>
               <li><a href="{{ url('admin/type') }}"><i class="fa fa-folder"></i> <span>Type de projet</span></a></li>
+              <li><a href="{{ url('admin/work/create') }}"><i class="fa fa-plus"></i> <span>Ajouter une réalisation</span></a></li>
             </ul>
           </li>
 
