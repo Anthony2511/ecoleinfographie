@@ -46,8 +46,9 @@
 			<span class="rea__author">
 				Par
 				@foreach($work->students as $student)
-					<a href="{{ Route('realisations-filter').'?author='. $student->slug }}" class="rea__link" rel="author" title="Voir les autre projets de Jimmy Letecheur">{{  $student->fullname }}</a></span>
+					<a href="{{ Route('realisations-filter').'?author='. $student->slug }}" class="rea__link" rel="author" title="Voir les autre projets de {{ $student->fullname }}">{{  $student->fullname }}</a>
 				@endforeach
+			</span>
 
 			<div class="rea__wrapper-top">
 

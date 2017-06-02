@@ -50,8 +50,17 @@
     font-size: s($sz6, $sz6);
     @extend .linkInText
     font-weight 300
+    margin-right s(5, $sz6)
     &:after
       bottom -4px
+    &:before
+      content ','
+      position absolute
+      right -4px
+      bottom 0
+      color $cBlack
+    &:last-child:before
+      display: none
 
 
 
