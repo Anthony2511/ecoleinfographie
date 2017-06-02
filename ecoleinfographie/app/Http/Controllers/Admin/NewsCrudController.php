@@ -42,6 +42,9 @@ class NewsCrudController extends CrudController
             'name'  => 'title',
             'label' => "Title"
         ]);
+        
+        // ------ CRUD BUTTONS
+        $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
     
         // ------ CRUD FIELDS
         $this->crud->addField([
