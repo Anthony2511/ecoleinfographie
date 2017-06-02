@@ -14,7 +14,7 @@ class Trending
     
     protected function getResults($days, $limit = 5)
     {
-        $data = Analytics::fetchMostVisitedPages(Period::days($days), $limit + 10);
+        $data = Analytics::fetchMostVisitedPages(Period::days($days), $limit + 50);
         return $this->parseResults($data, $limit);
     }
     
