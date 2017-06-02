@@ -15,7 +15,7 @@
 				<meta itemprop="provider" content="Haute École d’infographie de la Province de Liège">
 				<meta itemprop="url" content="{{ Url()->current() }}">
 
-				<img class="course-card__image" src="{{ $course->getImageCourse('.jpg') }}" width="360" height="417" alt="">
+				<img class="course-card__image" src="{{ $course->getImageCourse('') }}" width="360" height="417" alt="">
 				<div class="course-card__content">
 					<h2 role="heading" aria-level="2" class="course-card__title" itemprop="name">{{ $course->title }}</h2>
 
