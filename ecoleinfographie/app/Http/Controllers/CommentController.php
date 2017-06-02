@@ -67,8 +67,10 @@ class CommentController extends Controller
         
         Cookie::queue(Cookie::forever('user_name',$comment->user_name));
         Cookie::queue(Cookie::forever('email',$comment->email));
+        
+        
     
-        return redirect()->to(route('article.single', [$article->slug]) . '#comment');
+        return redirect()->to(route('article.single', [$article->slug]) . '?page=' . '#comment');
     }
 
     /**
