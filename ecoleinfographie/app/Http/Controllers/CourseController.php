@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Course;
 use SEO;
 
@@ -56,6 +55,7 @@ class CourseController extends Controller
         $courses = Course::where('bloc', 1)
                          ->OrderBy('title', 'ASC')
                          ->get();
+        
         return $courses;
     }
     
@@ -83,17 +83,17 @@ class CourseController extends Controller
     
     protected function getWebCoursesBloc1()
     {
-        $courses = Course::where('orientation', 'web')
-                         ->where('bloc', '1')
-                         ->OrderBy('title', 'ASC')
-                         ->get();
+        $courses = Course::whereIn('orientation', ['web', 'all'])
+            ->where('bloc', '1')
+            ->OrderBy('title', 'ASC')
+            ->get();
         
         return $courses;
     }
     
     protected function getWebCoursesBloc2()
     {
-        $courses = Course::where('orientation', 'web')
+        $courses = Course::whereIn('orientation', ['web', 'all'])
                          ->where('bloc', '2')
                          ->OrderBy('title', 'ASC')
                          ->get();
@@ -103,7 +103,7 @@ class CourseController extends Controller
     
     protected function getWebCoursesBloc3()
     {
-        $courses = Course::where('orientation', 'web')
+        $courses = Course::whereIn('orientation', ['web', 'all'])
                          ->where('bloc', '3')
                          ->OrderBy('title', 'ASC')
                          ->get();
