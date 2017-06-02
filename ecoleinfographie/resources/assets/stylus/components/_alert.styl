@@ -1,0 +1,30 @@
+.alert
+  display: none
+.no-js
+  .alert
+    position: absolute
+    top 0
+    width: 100%
+    display: block
+    padding s(10)
+    background-color $cError
+    color $cWhite
+    text-align: center
+    font-size s($sz7)
+    font-weight 700
+    z-index 1000
+    animation 1s ease-in appear-nojs forwards
+
+@keyframes appear-nojs
+  0%{
+    opacity 0
+    display: none
+  }
+  70%{
+    opacity 0
+    display: none
+  }
+  100%{
+    opacity 1
+    display: block
+  }

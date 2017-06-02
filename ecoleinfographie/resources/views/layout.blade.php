@@ -2,6 +2,7 @@
 <html lang="fr" class="no-js">
 @include('partials.head')
 <body class=" @yield('class')">
+<div class="alert">Le javascript de votre navigateur est désactivé. Pour une expérience optimale, activez-le.</div>
 <div class="overlay"></div>
 
 
