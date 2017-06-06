@@ -133,7 +133,7 @@
 			<div class="rea-content">
 				<section class="rea-content__desc">
 					<h3 role="heading" aria-level="3" class="rea-content__title">Description du projet</h3>
-					{!! $work->description !!}
+					{!! str_replace('h3', 'h4', $work->description) !!}
 					@if(!empty($work->other_link))
 						<a href="{{ $work->other_link }}" class="rea-content__button" title="Vers Github">
 							<span>Code source disponible</span>
@@ -142,7 +142,7 @@
 				</section>
 				<section class="rea-content__prof">
 					<h3 role="heading" aria-level="3" class="rea-content__title">Le mot des profs</h3>
-					{!! $work->other_description !!}
+					{!! str_replace('h3', 'h4', $work->other_description) !!}
 				</section>
 
 			</div>
@@ -167,7 +167,7 @@
 								</div>
 								<div class="reas__desc">
 									<div class="reas__desc-wrapper">
-										<strong class="reas__desc__name">{{ $sameType->title }}</strong>
+										<strong class="reas__desc__name">{{ str_limit($sameType->title, 60, '...') }}</strong>
 
 										<span class="reas__desc__author">
 											Par @foreach($work->students as $student)
@@ -199,7 +199,7 @@
 									</div>
 									<div class="reas__desc">
 										<div class="reas__desc-wrapper">
-											<strong class="reas__desc__name">{{ $get3dWork->title }}</strong>
+											<strong class="reas__desc__name">{{ str_limit($get3dWork->title , 60, '...') }}</strong>
 
 												<span class="reas__desc__author">
 													Par @foreach($get3dWork->students as $student)
@@ -224,7 +224,7 @@
 									</div>
 									<div class="reas__desc">
 										<div class="reas__desc-wrapper">
-											<strong class="reas__desc__name">{{ $get2dWork->title }}</strong>
+											<strong class="reas__desc__name">{{ str_limit($get2dWork->title , 60, '...') }}</strong>
 
 											<span class="reas__desc__author">
 												Par @foreach($get2dWork->students as $student)
@@ -249,7 +249,7 @@
 									</div>
 									<div class="reas__desc">
 										<div class="reas__desc-wrapper">
-											<strong class="reas__desc__name">{{ $getWebWork->title }}</strong>
+											<strong class="reas__desc__name">{{ str_limit($getWebWork->title , 60, '...') }}</strong>
 
 											<span class="reas__desc__author">
 												Par @foreach($getWebWork->students as $student)
