@@ -4,6 +4,7 @@ $paddLArticle = 52
 \************************************/
 .blogArticle__body h3
 .news__content h3
+.rea-content h4
   margin-bottom s(20, $sz7)
   margin-top: s(40, $sz7)
   font-size s($sz7)
@@ -32,6 +33,14 @@ $paddLArticle = 52
     width s(30, $sz6)
     height s(5, $sz6)
 
+.rea-content h4
+  &:first-child
+    margin-top s(40, $sz6)
+.rea-content__prof h4
+  color $cWhite
+  margin-top s(40, $sz6)
+  &:after
+    background $cWhite
 /************************************\
       PARAGRAPH
 \************************************/
@@ -111,17 +120,31 @@ $paddLArticle = 52
 
 .blogArticle__body a
 .news__content a
+.rea-content a
   @extend .linkInText
+
+.rea-content__prof a
+  color $cWhite
+  &:after
+    background $cWhite
 
 .blogArticle__body strong
 .news__content strong
+.rea-content strong
   font-weight 700
   font-size inherit
 
+.rea-content__prof strong
+  color $cWhite
+
 .blogArticle__body em
 .news__content em
+.rea-content em
   font-style italic
   font-size inherit
+
+.rea-content__prof em
+  color $cWhite
 
 /************************************\
 		BULLET LIST
@@ -129,6 +152,7 @@ $paddLArticle = 52
 
 .blogArticle__body ul
 .news__content ul
+.rea-content ul
   padding-left s($paddLArticle)
   & li
     font-size s($sz7)
@@ -144,4 +168,29 @@ $paddLArticle = 52
       background $cBlack
 
 .news__content ul
+.rea-content ul
   padding-left: 0
+
+.rea-content ul li
+  color $cWhite
+  margin-bottom s(5, $sz7)
+  &:before
+    background $cWhite
+
+/************************************\
+  ORDONED LIST
+\************************************/
+.rea-content ol
+.news__content ol
+.blogArticle__body ol
+  & li
+    font-size s($sz7)
+    line-height 1.6em
+    margin-bottom s(10, $sz7)
+    list-style decimal
+    margin-left s(15, $sz7)
+
+.rea-content__prof ol
+  & li
+    margin-bottom s(5, $sz7)
+    color $cWhite
