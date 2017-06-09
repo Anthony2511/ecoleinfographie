@@ -34,7 +34,7 @@
 		</a>
 	@else
 		<span class="blog-pagination__button blog-pagination__button--next blog-pagination__button--noclick" rel="prev">
-			<span class="blog-pagination__button--hidden">Page </span><span>Précédent</span>
+			<span class="blog-pagination__button--hidden">Page </span><span>Suivant</span>
 		</span>
 	@endif
 

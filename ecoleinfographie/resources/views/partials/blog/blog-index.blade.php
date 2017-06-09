@@ -30,9 +30,9 @@
           <p class="no-articles">Aucun article ne correspond à votre recherche.</p>
           <p class="no-articles">Réessayez ou retourner à <a href="{{ Route('blog') }}">l’accueil du blog</a>.</p>
         @endif
-        @if($articles->count() > 7)
+        {{--@if($articles->count() > 7)--}}
           {!! $articles->render() !!}
-        @endif
+        {{--@endif--}}
     </div>
 
     @include('partials.blog.aside')
