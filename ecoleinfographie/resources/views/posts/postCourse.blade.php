@@ -59,10 +59,10 @@
 					<span class="course-card__bloc">
 						Dispensé
               <?php switch ($course->quadrimester) {
-                  case '1':
+                  case 'Premier':
                       echo "en 1<sup>er</sup> quadrimestre (de septembre à décembre)";
                       break;
-                  case '2':
+                  case 'Deuxième':
                       echo "en 2<sup>e</sup> quadrimestre (de janvier à juin)";
                       break;
                   case 'Toute l’année':
@@ -106,7 +106,7 @@
 									{{ $teacher->firstname }} <span>{{ $teacher->lastname }}</span>
 								</strong>
 								<span class="card_student__profession">
-									{{ $teacher->role }} en {{ strtolower($course->orientation) }}
+									{{ $teacher->role }}
 								</span>
 							</figcaption>
 						</figure>

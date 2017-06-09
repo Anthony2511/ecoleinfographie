@@ -92,7 +92,7 @@
             <p class="webmobile__text">
                 Spécialiste des téléphones et tablettes, il peut créer de vraies applications pour iOS ou Android en utilisant des outils généralement rencontrés dans le Web traditionnel.
             </p>
-            <a href="#webmobile" class="webmobile__link">Voir un ancien diplômé qui est développeur mobile</a>
+            <a href="http://ecoleinfographie.app/etudiants/larry-lakin" class="webmobile__link">Voir un ancien diplômé qui est développeur mobile</a>
         </div>
         <img class="webmobile__img--1" src="{{ asset('img/webmobile-sketch.png') }}" srcset="{{ asset('img/webmobile-sketch@2x.png') }} 2x" width="760" height="398" alt="">
         <img class="webmobile__img--2" src="{{ asset('img/webmobile-connexion.png') }}" srcset="{{ asset('img/webmobile-connexion@2x.png') }} 2x" width="760" height="398" alt="">

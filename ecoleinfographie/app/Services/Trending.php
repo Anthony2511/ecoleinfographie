@@ -23,7 +23,7 @@ class Trending
         return $data->reject(function ($item){
             return !starts_with($item['url'], '/blog') or
                 $item['url'] == '/blog' or
-                str_contains($item['url'], ['?page', '?category', '&category', '?tag', '&tag']);
+                str_contains($item['url'], ['?page', '?category', '&category', '?tag', '&tag', '?search']);
         })->unique('url')->transform(function ($item){
             $item['pageTitle'] = str_replace(' | École d’infographie de la Province de Liège', '', $item['pageTitle']);
             return $item;

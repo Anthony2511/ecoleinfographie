@@ -25,23 +25,25 @@
 					 itemprop="item">
 					<span itemprop="name">Page d’accueil</span>
 				</a>
-				<meta itemprop="position" content="1" />
+				<meta itemprop="position" content="1"/>
 			</li>
 			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
 					itemtype="http://schema.org/ListItem">
-				<a href="{{ Route('blog') }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+				<a href="{{ Route('blog') }}" class="breadcrumb__link breadcrumb__link--active" itemscope
+					 itemtype="http://schema.org/Thing"
 					 itemprop="item">
 					<span itemprop="name">Le blog de l’infographie</span>
 				</a>
-				<meta itemprop="position" content="2" />
+				<meta itemprop="position" content="2"/>
 			</li>
 			<li class="breadcrumb__item" itemprop="itemListElement" itemscope
 					itemtype="http://schema.org/ListItem">
-				<a href="{{ url()->current() }}" class="breadcrumb__link breadcrumb__link--active" itemscope itemtype="http://schema.org/Thing"
+				<a href="{{ url()->current() }}" class="breadcrumb__link breadcrumb__link--active" itemscope
+					 itemtype="http://schema.org/Thing"
 					 itemprop="item">
 					<span itemprop="name">{{ $article->title }}</span>
 				</a>
-				<meta itemprop="position" content="3" />
+				<meta itemprop="position" content="3"/>
 			</li>
 		</ol>
 	</div>
@@ -80,7 +82,7 @@
 									 class="blogArticle__author__img"
 									 srcset="{{ $article->teacher->getImageProfile('_60x60.jpg') }} 2x">
 							<span class="preposition">Par</span>
-							<span  class="blogArticle__author__name" itemprop="name url">{{ $article->teacher->fullname }}</span>
+							<span class="blogArticle__author__name" itemprop="name url">{{ $article->teacher->fullname }}</span>
 						</a>
 					@endif
 					@if($article->author)
@@ -94,7 +96,8 @@
 									 class="blogArticle__author__img"
 									 srcset="{{ $article->author->getImageAuthor('_60x60.jpg') }} 2x">
 							<span class="preposition">Par</span>
-							<span  class="blogArticle__author__name blogArticle__author__name--noprofil" itemprop="name url">{{ $article->author->fullname }}</span>
+							<span class="blogArticle__author__name blogArticle__author__name--noprofil"
+										itemprop="name url">{{ $article->author->fullname }}</span>
 						</span>
 					@endif
 
@@ -108,7 +111,10 @@
 
 					<span class="blogArticle__category">
 						<span class="preposition"> dans </span>
-						<a href="{{ Route('blog') }}{{ $article->categoryUrl($article) . $article->category->slug . '#anchor' }}" class="blogArticle__category-link" itemprop="articleSection">{{ $article->category->name }} ({{ $orientation[$article->orientation] }})</a>
+						<a href="{{ Route('blog') }}{{ $article->categoryUrl($article) . $article->category->slug . '#anchor' }}"
+							 class="blogArticle__category-link" itemprop="articleSection">{{ $article->category->name }}
+							({{ $orientation[$article->orientation] }})
+						</a>
 					</span>
 				</div>
 
@@ -122,49 +128,53 @@
 				{!! $article->content !!}
 
 				@if(!empty($article->tags->count() !== 0 ))
-				<div class="tags__wrapper">
-					<span class="tags__label">Mots-clés :</span>
-					<ul class="tags">
-						@foreach($article->tags as $key => $tag )
-							<li class="tags__item">
-								<a href="{{ Route('blog') . '?tag=' . $tag->slug . '#anchor' }}" class="tags__link">{{ ucfirst($tag->name) }}</a>
-							</li>
-						@endforeach
-					</ul>
-				</div>
+					<div class="tags__wrapper">
+						<span class="tags__label">Mots-clés :</span>
+						<ul class="tags">
+							@foreach($article->tags as $key => $tag )
+								<li class="tags__item">
+									<a href="{{ Route('blog') . '?tag=' . $tag->slug . '#anchor' }}"
+										 class="tags__link">{{ ucfirst($tag->name) }}</a>
+								</li>
+							@endforeach
+						</ul>
+					</div>
 				@endif
 			</div>
-
-
 
 
 			<footer class="footerArticle">
 
 				{{-- IF AUTHOR IS A TEACHER --}}
 				@if($article->teacher)
-				<div class="footerArticle__author">
-					<div class="footerArticle__author__wrapper">
-						<a href="{{ Url('/professeurs') . '/' . $article->teacher->slug }}" class="footerArticle__author__link">
-							<img src="{{ $article->teacher->getImageProfile('_60x60.jpg') }}"
-									 width="60"
-									 height="60"
-									 alt="Photo de {{ $article->teacher->fullname }}"
-									 class="footerArticle__author__img"
-									 srcset="{{ $article->teacher->getImageProfile('_120x120.jpg') }} 2x"
-							>
-							<span class="footerArticle__author__name"><span class="hidden">Écrit par&nbsp;:</span>{{ $article->teacher->fullname }}</span>
-						</a>
-						<div class="footerArticle__follow">
-							<ul class="footerArticle__follow__list">
-								@if(!empty($article->teacher->social))
-									@foreach($article->teacher->social as $social)
-										<li class="footerArticle__follow__item"><a href="{{ $social['url'] }}" target="_blank" class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers le {{ strtoupper($social['type']) }} de {{ $article->teacher->fullname }}</span></a></li>
-									@endforeach
-								@endif
-							</ul>
+					<div class="footerArticle__author">
+						<div class="footerArticle__author__wrapper">
+							<a href="{{ Url('/professeurs') . '/' . $article->teacher->slug }}" class="footerArticle__author__link">
+								<img src="{{ $article->teacher->getImageProfile('_60x60.jpg') }}"
+										 width="60"
+										 height="60"
+										 alt="Photo de {{ $article->teacher->fullname }}"
+										 class="footerArticle__author__img"
+										 srcset="{{ $article->teacher->getImageProfile('_120x120.jpg') }} 2x"
+								>
+								<span class="footerArticle__author__name"><span class="hidden">Écrit
+										par&nbsp;:</span>{{ $article->teacher->fullname }}</span>
+							</a>
+							<div class="footerArticle__follow">
+								<ul class="footerArticle__follow__list">
+									@if(!empty($article->teacher->social))
+										@foreach($article->teacher->social as $social)
+											<li class="footerArticle__follow__item">
+												<a href="{{ $social['url'] }}" target="_blank"
+													 class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers
+														le {{ strtoupper($social['type']) }} de {{ $article->teacher->fullname }}</span></a>
+											</li>
+										@endforeach
+									@endif
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
 				@endif
 
 				{{-- IF AUTHOR IS AN EXTERN --}}
@@ -179,13 +189,18 @@
 										 class="footerArticle__author__img"
 										 srcset="{{ $article->author->getImageAuthor('_120x120.jpg') }} 2x"
 								>
-								<span class="footerArticle__author__name"><span class="hidden">Écrit par&nbsp;:</span>{{ $article->author->fullname }}</span>
+								<span class="footerArticle__author__name"><span class="hidden">Écrit
+										par&nbsp;:</span>{{ $article->author->fullname }}</span>
 							</span>
 							<div class="footerArticle__follow">
 								<ul class="footerArticle__follow__list">
 									@if(!empty($article->author->social))
 										@foreach($article->author->social as $social)
-											<li class="footerArticle__follow__item"><a href="{{ $social['url'] }}" target="_blank" class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers le {{ strtoupper($social['type']) }} de {{ $article->author->fullname }}</span></a></li>
+											<li class="footerArticle__follow__item">
+												<a href="{{ $social['url'] }}" target="_blank"
+													 class="footerArticle__follow__link footerArticle__follow__link--{{ $social['type'] }}"><span>Vers
+														le {{ strtoupper($social['type']) }} de {{ $article->author->fullname }}</span></a>
+											</li>
 										@endforeach
 									@endif
 								</ul>
@@ -203,16 +218,23 @@
 						<strong class="footerArticle__sharer__label-bottom">Partages-le&nbsp;!</strong>
 						<ul class="social-list-circle">
 							<li class="social-list-circle__item">
-								<a href="https://www.facebook.com/sharer/sharer.php?u={{ Url()->current() }}" class="social-list-circle__link facebook" rel="me"><span>Partager l’article sur Facebook</span></a>
+								<a href="https://www.facebook.com/sharer/sharer.php?u={{ Url()->current() }}"
+									 class="social-list-circle__link facebook" rel="me"><span>Partager l’article sur Facebook</span></a>
 							</li><!--
-                    --><li class="social-list-circle__item">
-								<a href="https://twitter.com/home?status={{ Url()->current() }}" class="social-list-circle__link twitter" rel="me"><span>Partager l’article sur Twitter</span></a>
+                    -->
+							<li class="social-list-circle__item">
+								<a href="https://twitter.com/home?status={{ Url()->current() }}"
+									 class="social-list-circle__link twitter" rel="me"><span>Partager l’article sur Twitter</span></a>
 							</li><!--
-                    --><li class="social-list-circle__item">
-								<a href="https://pinterest.com/pin/create/bookmarklet/?media={{ $article->image }}&url={{ Url()->current() }}&description={{ $article->introduction }}" class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
+                    -->
+							<li class="social-list-circle__item">
+								<a href="https://pinterest.com/pin/create/bookmarklet/?media={{ $article->image }}&url={{ Url()->current() }}&description={{ $article->introduction }}"
+									 class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
 							</li><!--
-                    --><li class="social-list-circle__item">
-								<a href="https://www.linkedin.com/shareArticle?url={{ Url()->current() }}&title={{ $article->title }}" class="social-list-circle__link linkedin" rel="me"><span>Partager l’article sur Linkedin</span></a>
+                    -->
+							<li class="social-list-circle__item">
+								<a href="https://www.linkedin.com/shareArticle?url={{ Url()->current() }}&title={{ $article->title }}"
+									 class="social-list-circle__link linkedin" rel="me"><span>Partager l’article sur Linkedin</span></a>
 						</ul>
 					</div>
 				</div>
@@ -223,12 +245,13 @@
 						<button type="submit" class="fav" id="fav">
 							<svg class="stableHeart" viewBox="-1 0 18 15">
 								<defs>
-									<path d="M16 4.872c0-4.9-6.894-5.8-8 .695C6.81-.928 0-.027 0 5.25c0 5.274 8 9.697 8 9.697s8-5.177 8-10.075z" id="heartPath"></path>
+									<path d="M16 4.872c0-4.9-6.894-5.8-8 .695C6.81-.928 0-.027 0 5.25c0 5.274 8 9.697 8 9.697s8-5.177 8-10.075z"
+												id="heartPath"></path>
 								</defs>
-								<use xlink:href="#heartPath" />
+								<use xlink:href="#heartPath"/>
 							</svg>
 							<svg class="floatHeart" viewBox="-1 0 18 15">
-								<use xlink:href="#heartPath" />
+								<use xlink:href="#heartPath"/>
 							</svg>
 						</button>
 						{{--</form>--}}
@@ -257,20 +280,26 @@
 					<span class="comments__share__title">Partager&nbsp;:</span>
 					<ul class="social-list-circle">
 						<li class="social-list-circle__item">
-							<a href="https://www.facebook.com/sharer/sharer.php?u={{ Url()->current() }}" class="social-list-circle__link facebook" rel="me"><span>Partager l’article sur Facebook</span></a>
+							<a href="https://www.facebook.com/sharer/sharer.php?u={{ Url()->current() }}"
+								 class="social-list-circle__link facebook" rel="me"><span>Partager l’article sur Facebook</span></a>
 						</li><!--
-                    --><li class="social-list-circle__item">
-							<a href="https://twitter.com/home?status={{ Url()->current() }}" class="social-list-circle__link twitter" rel="me"><span>Partager l’article sur Twitter</span></a>
+                    -->
+						<li class="social-list-circle__item">
+							<a href="https://twitter.com/home?status={{ Url()->current() }}" class="social-list-circle__link twitter"
+								 rel="me"><span>Partager l’article sur Twitter</span></a>
 						</li><!--
-                    --><li class="social-list-circle__item">
-							<a href="https://pinterest.com/pin/create/bookmarklet/?media={{ $article->image }}&url={{ Url()->current() }}&description={{ $article->introduction }}" class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
+                    -->
+						<li class="social-list-circle__item">
+							<a href="https://pinterest.com/pin/create/bookmarklet/?media={{ $article->image }}&url={{ Url()->current() }}&description={{ $article->introduction }}"
+								 class="social-list-circle__link pinterest" rel="me"><span>Partager l’article sur Pinterest</span></a>
 						</li><!--
-                    --><li class="social-list-circle__item">
-							<a href="https://www.linkedin.com/shareArticle?url={{ Url()->current() }}&title={{ $article->title }}" class="social-list-circle__link linkedin" rel="me"><span>Partager l’article sur Linkedin</span></a>
+                    -->
+						<li class="social-list-circle__item">
+							<a href="https://www.linkedin.com/shareArticle?url={{ Url()->current() }}&title={{ $article->title }}"
+								 class="social-list-circle__link linkedin" rel="me"><span>Partager l’article sur Linkedin</span></a>
 					</ul>
 				</div>
 			</div>
-
 
 
 			<div class="comments__container">
@@ -278,7 +307,9 @@
 				@foreach($comments as $key => $comment)
 					<div class="comment comment--1">
 						<div class="comment__header">
-							<img src="https://api.adorable.io/avatars/65/{{ md5($comment->email) }}.png" width="65" height="65" alt="Avatar généré automatiquement pour l’utilisateur {{ $comment->user_name }}" class="comment__img">
+							<img src="https://api.adorable.io/avatars/65/{{ md5($comment->email) }}.png" width="65" height="65"
+									 alt="Avatar généré automatiquement pour l’utilisateur {{ $comment->user_name }}"
+									 class="comment__img">
 							<strong class="comment__name">{{ $comment->user_name }}</strong>
 							<time datetime="{{ $comment->created_at }}" class="comment__date">{{ $comment->getDate() }}</time>
 						</div>
@@ -306,7 +337,8 @@
 
 					<fieldset class="postComment__fieldset">
 						<div class="postComment__wrapper postComment__wrapper--1">
-							<label for="user_name" class="postComment__label {{ old('user_name') ? ' active' : '' }}">Nom ou pseudo</label>
+							<label for="user_name" class="postComment__label {{ old('user_name') ? ' active' : '' }}">Nom ou
+								pseudo</label>
 							<input type="text"
 										 name="user_name"
 										 id="user_name" class="postComment__input floatLabel" required
@@ -337,14 +369,14 @@
 					</fieldset>
 					<div class="postComment__wrapperTextarea">
 						<label for="content" class="postComment__label postComment__label--textarea">Commentaire&nbsp;:</label>
-						<textarea name="content" id="content" class="postComment__textarea" cols="30" rows="10" required >{{ old('content') }}</textarea>
+						<textarea name="content" id="content" class="postComment__textarea" cols="30" rows="10"
+											required>{{ old('content') }}</textarea>
 						<span class="form-error">{{ $errors->first('content') }}</span>
 					</div>
 					<button class="postComment__submit">Poster le message</button>
 					{{ Form::close() }}
 					<p class="form-success">{!! session('success') !!}</p>
 				</section>
-
 
 
 			</div>

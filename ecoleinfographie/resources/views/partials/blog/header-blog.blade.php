@@ -30,7 +30,7 @@
 
         <div class="header-home">
             <strong class="header-home__title">Le blog de l’infographie</strong>
-            <p class="header-home__intro">Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis sollicitudin, erat a elementum nsi lum terra...</p>
+            <p class="header-home__intro">Découvre des articles de veille sur l’infographie. Ils ont été rédigés par des professionnels du secteur et par des étudiants passionnés. Ce blog sert aussi à partager des cours et des idées.</p>
         </div>
     </div>
     <div class="blog-home-img">

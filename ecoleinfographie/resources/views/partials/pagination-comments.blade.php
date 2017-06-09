@@ -66,7 +66,7 @@
 			@if ($paginator->hasMorePages())
 				<li class="blog-pagination__item">
 					<a class="blog-pagination__link"
-						 href="{{ Request::url() .'?page=' . $paginator->lastPage()}}"
+						 href="{{ Request::url() .'?page=' . $paginator->lastPage() . '#anchor'}}"
 						 rel="next">
 						&raquo;
 					</a>

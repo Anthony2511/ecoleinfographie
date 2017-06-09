@@ -188,7 +188,7 @@ class ArticleController extends Controller
     // Get popular articles by Analytics
     public function getMostPopularArticlesAnalytics()
     {
-    
+        
         $trending = app('App\Services\Trending')->week()->toArray();
         $allArticles = Article::query()->get()->toArray();
         $populars = [];

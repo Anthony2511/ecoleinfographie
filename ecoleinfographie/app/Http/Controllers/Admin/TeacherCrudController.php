@@ -103,7 +103,7 @@ class TeacherCrudController extends CrudController
             'default' => 'img/no-avatar.jpg',
             'tab' => 'Contenu',
         ]);
-        $this->crud->addField
+        /*$this->crud->addField
         ([
             'label' => 'Sélectionnez les cours du prof',
             'type' => 'select2_multiple',
@@ -113,7 +113,7 @@ class TeacherCrudController extends CrudController
             'model' => "App\Models\Course",
             'pivot' => true,
             'tab' => 'Contenu'
-        ]);
+        ]);*/
         $this->crud->addField
         ([
             'name' => 'social',
