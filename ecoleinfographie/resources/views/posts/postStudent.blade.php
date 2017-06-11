@@ -52,6 +52,7 @@
 				<span>@lang('students.titlePost') </span>
 				<strong>{{ $student->fullname  }}</strong>
 			</h2>
+			@if(!empty($student->interview))
 			<div class="former-interview__question-container">
 				<?php $interview = json_decode($student->interview, true); ?>
 				@foreach($interview as $row)
@@ -61,6 +62,7 @@
 				</section>
 				@endforeach
 			</div>
+			@endif
 		</article>
 		<div class="former-info__container">
 			<aside class="former-info" id="sticky-sidebar" itemscope itemtype="http://schema.org/Person">
