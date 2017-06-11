@@ -2,7 +2,7 @@
     <div class="intro__content">
         <h2 aria-level="2" role="heading" class="intro__title">@lang('home.becomeGraphicDesigner')</h2>
         <p class="intro__text">
-            @lang('home.introDesc')
+            Tu aimerais apprendre ce qu’il faut pour réaliser de superbes affiches, des animations 3D à couper le souffle et réaliser des sites web moderne et dynamique ? Alors, n’hésite plus et découvre les différentes formations que nous te proposons et rejoins le magnifique monde qu’est l’infographie.
         </p>
         <ul class="intro__list">
             <li class="intro__item">

@@ -45,7 +45,7 @@
             <div class="phone-illu" data-type="parallax" data-depth="0.05">
                 <img class="phone-illu__img-container" src="{{ asset('img/phoneweb.png') }}" srcset="{{ asset('img/phoneweb@2x.png') }} 2x" width="351" height="542" alt="">
                 <div class="phone-illu__parallax-wrapper">
-                    <img src="{{ asset('img/image-responsive.jpg') }}" width="800" height="9438" alt="" data-type="parallax" data-depth="0.5" >
+                    <img src="{{ asset('img/image-responsive.jpg') }}" width="800" height="3404" alt="" data-type="parallax" data-depth="0.5" >
                 </div>
             </div>
         </div>

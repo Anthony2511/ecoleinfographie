@@ -4,7 +4,7 @@
             @lang('home.proTitle')
         </h2>
         <p class="pros-home__text">
-            @lang('home.proIntro')
+            Pour découvrir plus en détails les différents métiers que tu pourras exercer grâce à la formation en infographie, nous avons demandé à nos anciens étudiants aujourd’hui professionnel de parler de leur métier.
         </p>
     </div>
     <div class="slider-pros__wrapper" data-pos="0">

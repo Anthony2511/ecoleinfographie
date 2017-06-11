@@ -5,7 +5,7 @@
 				Nos étudiants réalisent des travaux fantastiques
 			</h2>
 			<p class="portfolio-home__intro__text">
-				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500. Le Lorem Ipsum est simplement du faux texte employé dans la composition.
+				Au cours de leur formation, nos étudiants sont amenés à réaliser différents projets, que ce soit dans le cadre de leurs cours ou pour des clients. En voici une sélection pour que tu puisses te rendre compte de ce qu’il te sera possible de réaliser.
 			</p>
 			<a href="{{ Route('realisations') }}" class="portfolio-home__intro__link">Voir les travaux de nos étudiants</a>
 		</div>

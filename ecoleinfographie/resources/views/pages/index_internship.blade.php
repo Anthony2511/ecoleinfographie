@@ -30,7 +30,7 @@
 
 	<section class="propose">
 		<h2 role="heading" aria-level="2" class="propose__title">Proposer une offre de stage</h2>
-		<p class="propose__paragraph">Maecenas tincidunt iaculis consectetur. Quisque quis suscipit orci, et tincidunt nunc. Mauris arcu lorem, aliquam vitae aliquet ac, egestas ut nisl. Sed bibendum ac justo non consectetur. Duis eleifend dolor enim, sed rutrum est dictum ut. Nulla neque risus, mattis pretium vulputate eu, ultrices ac elit. Vivamus in nunc nec ipsum luctus vestibulum. Pellentesque maximus lorem lobortis, vestibulum ante ac, efficitur augue. Quisque varius leo vitae aliquam volutpat.
+		<p class="propose__paragraph">Lors de leur troisième et dernière année, les étudiants de la Haute École d’infographie de la Province de Liège doivent réaliser un stage de douze semaines pour parfaire leur formation. Via cette page, toute entreprise désirant disposer d’un stagiaire en infographie pour la période énoncée ci-dessous peut proposer son offre aux professeurs responsables des différentes catégories.
 		</p>
 		<div class="propose__infos">
 			<span class="propose__info propose__info--duration">Durée de <strong>12</strong> semaines</span>

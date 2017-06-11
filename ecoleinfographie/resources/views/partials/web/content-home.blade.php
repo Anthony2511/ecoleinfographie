@@ -8,7 +8,7 @@
                 {!! file_get_contents(asset('svg/question1.svg')) !!}
             </h2>
             <p class="web-what__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra eget nibh. Duis sollicitudin, dui id semper tempor, quam ante dictum justo, sit amet finibus urna ipsum sit amet tortor. Fusce sit amet tellus volutpat.
+                Le web, c’est un monde fascinant. Grâce à quelques lignes de code, il est possible de réaliser une page web éblouissante qui permettra aux visiteurs d'accéder à l’information de partout dans le monde. Mais pas seulement, les technologies du web permettent de réaliser une multitude de choses, comme des applications mobiles, des applications complexe et même de super jeux en 3D directement dans le navigateur.
             </p>
         </div>
     </div>
