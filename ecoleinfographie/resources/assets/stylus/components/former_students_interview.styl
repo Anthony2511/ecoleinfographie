@@ -16,11 +16,13 @@
   &__container
     position: relative
     @extend .containerGridz
-    margin-top s(100)
+    margin-top s(50)
     &:after
       @extend .clearfix
   &__title
     @extend .titleDubbleLine
+    & span
+      font-size s($sz7)
   &__question
     padding s(35) s(40)
     background-color $cWhite
