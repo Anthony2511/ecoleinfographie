@@ -11,7 +11,7 @@
 	<tbody class="program-table__tbody">
 	@foreach($getAllCoursesBloc3 as $key => $course)
 		<tr class="link-row" data-href="{{ url('cours/'.$course->slug) }}" >
-			<td class="program-table__orientation">{{ $course->orientation }}</td>
+			<td class="program-table__orientation">{{ $orientations[$course->orientation] }}</td>
 			<td class="program-table__course">
 				<a href="{{ url('cours/'.$course->slug) }}" class="program-table__course__link">
 					<span class="program-table__course__name">{{ $course->title }}</span>
