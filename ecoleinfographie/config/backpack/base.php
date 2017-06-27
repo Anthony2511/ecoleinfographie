@@ -12,7 +12,7 @@ return [
     */
 
     // Project name. Shown in the breadcrumbs and a few other places.
-    'project_name' => 'Backpack',
+    'project_name' => 'Ecoleinfographie',
 
     // Menu logos
     'logo_lg'   => 'École <b>d’infographie</b>',
@@ -48,7 +48,7 @@ return [
     */
 
     /*'registration_open' => (env('APP_ENV') == 'local') ? true : false,*/
-    'registration_open' => true,
+    'registration_open' => false,
 
     /*
     |--------------------------------------------------------------------------
