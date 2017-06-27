@@ -23,21 +23,24 @@
 					<span class="course-card__credits">{{ $course->ects }} credits <abbr title="Système européen de transfert et d’accumulation de crédits">ECTS</abbr></span>
 
 					<ul class="course-card__org">
-
+					@if(!empty($course->ratio))
 					<?php $ratio = json_decode($course->ratio, true); ?>
 						@foreach($ratio as $row)
 							<li class="course-card__org__item">
 								<span class="course-card__org__text">{{ $row['type'] }} - {{ $row['hour'] }}<abbr title="heures">h</abbr></span>
 							</li>
 						@endforeach
+					@endif
 					</ul>
 
 					<span class="course-card__eval-title">Évaluation&nbsp;:</span>
 					<ul class="course-card__eval">
+						@if(!empty($course->evaluation))
 						<?php $evaluation = json_decode($course->evaluation, true) ;?>
 						@foreach($evaluation as $row)
 							<li class="course-card__eval__item">{{ $row['type'] }}</li>
 						@endforeach
+						@endif
 					</ul>
 
 
@@ -83,13 +86,16 @@
 			<div class="course-obj__wrapper">
 				<h3 role="heading" aria-level="3" class="course-obj__title">Objectifs du cours</h3>
 				<ul class="course-obj__list">
+					@if(!empty($course->objectives))
             <?php $evaluation = json_decode($course->objectives, true) ;?>
 							@foreach($evaluation as $row)
 								<li class="course-obj__item">{{ $row['text'] }}</li>
 							@endforeach
+					@endif
 				</ul>
 			</div>
 		</section>
+		@if(!empty($course->teachers))
 		<section class="course-teachers">
 			<h3 role="heading" aria-level="3" class="course-teachers__title">Les professeurs</h3>
 			<ul class="course-teachers__list">
@@ -118,6 +124,7 @@
 				@endforeach
 			</ul>
 		</section>
+		@endif
 	</section>
 
 @endsection
